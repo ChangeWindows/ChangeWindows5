@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+
+                    @if (Auth::user()->hasRole('Insider'))
+                        <p>You are an admin</p>
+                    @endif
                 </div>
             </div>
         </div>

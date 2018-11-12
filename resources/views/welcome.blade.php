@@ -13,8 +13,8 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                color: #636363;
+                font-family: 'Segoe UI';
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
@@ -46,6 +46,15 @@
 
             .title {
                 font-size: 84px;
+                text-transform: uppercase;
+            }
+
+            .light {
+                font-weight: 300;
+            }
+
+            .bold {
+                font-weight: 700;
             }
 
             .links > a {
@@ -81,16 +90,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <span class="light">Change</span><span class="bold">Windows</span>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://changewindows.org">ChangeWindows</a>
+                    <a href="https://twitter.com/changewindows">Twitter</a>
+                    <a href="https://changewindows.medium.com">Blog</a>
+                    <a href="https://github.com/changewindows/viv">GitHub</a>
                 </div>
             </div>
         </div>
