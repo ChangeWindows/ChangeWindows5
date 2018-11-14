@@ -4,10 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <title>ChangeWindows</title>
 
         <!-- Styles -->
         <style>
@@ -46,15 +43,16 @@
 
             .title {
                 font-size: 84px;
-                text-transform: uppercase;
             }
 
             .light {
                 font-weight: 300;
+                text-transform: uppercase;
             }
 
             .bold {
                 font-weight: 700;
+                text-transform: uppercase;
             }
 
             .links > a {
@@ -90,7 +88,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <span class="light">Change</span><span class="bold">Windows</span>
+                    <span class="light">Change</span><span class="bold">Windows</span> viv
                 </div>
 
                 <div class="links">
@@ -98,6 +96,7 @@
                     <a href="https://twitter.com/changewindows">Twitter</a>
                     <a href="https://changewindows.medium.com">Blog</a>
                     <a href="https://github.com/changewindows/viv">GitHub</a>
+                    <a href="https://github.com/changewindows/viv/releases">5.0</a>
                 </div>
             </div>
         </div>
