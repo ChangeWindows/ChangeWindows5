@@ -5,4 +5,40 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import 'font';
+@import 'content';
 @import 'nav';
+
+// Hero
+.hero {
+    background-image: url("../header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    display: block;
+    position: relative;
+
+    .text {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 9%,rgba(0,0,0,0.15) 52%,rgba(0,0,0,0.3) 100%);
+        padding: 20px;
+
+        .h2 {
+            display: block;
+            font-weight: 700;
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 0;
+        }
+
+        .h5 {
+            display: block;
+            color: #fff;
+            margin-bottom: 0;
+        }
+    }
+}

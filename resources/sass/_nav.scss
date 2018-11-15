@@ -1,5 +1,5 @@
 .nav {
-    background-color: #eee;
+    background-color: #e8e8e8;
     width: 320px;
     height: 100vh;
     top: 0;
@@ -10,7 +10,7 @@
         width: 100%;
 
         .brand {
-            color: #444;
+            color: #333;
             text-align: center;
             font-size: 24px;
             margin-top: 16px;
@@ -28,7 +28,11 @@
 
             .inner {
                 border-left: 4px solid transparent;
-                padding-left: 12px;
+                
+                .fa-fw {
+                    width: 48px;
+                    text-align: center;
+                }
             }
 
             &.active {
@@ -44,9 +48,11 @@
                 border-color: #ccc;
             }
         }
-    }
-}
 
-.app {
-    margin-left: 320px;
+        .nav-bottom {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    }
 }
