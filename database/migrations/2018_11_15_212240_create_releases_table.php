@@ -23,7 +23,6 @@ class CreateReleasesTable extends Migration
             $table->integer('platform')->unsigned();
             $table->integer('ring')->unsigned();
             $table->date('date');
-            $table->timestamps();
         });
     }
 
