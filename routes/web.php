@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
+Route::get('/', 'TimelineController@index')->name('timeline');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/viv', 'PreviewController@index')->name('viv');

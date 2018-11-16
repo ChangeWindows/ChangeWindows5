@@ -19,13 +19,14 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="brand">
-                <span class="font-light font-uppercase">Change</span><span class="font-bold font-uppercase">Windows</span> viv
+                <!--<span class="font-light font-uppercase">Change</span><span class="font-bold font-uppercase">Windows</span> -->viv
             </div>
 
-            <a class="link" href="/"><span class="inner"><i class="fal fa-fw fa-calendar"></i> Timeline</span></a>
+            <a class="link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('timeline') }}"><span class="inner"><i class="fal fa-fw fa-calendar"></i> Timeline</span></a>
             <a class="link" href="/milestones"><span class="inner"><i class="fal fa-fw fa-map-signs"></i> Milestones</span></a>
             <a class="link" href="/rings"><span class="inner"><i class="fal fa-fw fa-bullseye"></i> Rings</span></a>
-            <a class="link" href="/blog"><span class="inner"><i class="fal fa-fw fa-megaphone"></i> Blog</span></a>
+            <a class="link" href="https://changewindows.medium.org"><span class="inner"><i class="fab fa-fw fa-medium-m"></i> Blog</span></a>
+            <a class="link {{ Request::is('viv') ? 'active' : '' }}" href="{{ route('viv') }}"><span class="inner"><i class="fal fa-fw fa-alicorn"></i> viv</span></a>
 
             <div class="nav-bottom">
                 @auth

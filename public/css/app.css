@@ -9508,6 +9508,10 @@ a.text-dark:hover, a.text-dark:focus {
   text-transform: uppercase;
 }
 
+.lead {
+  font-weight: 600;
+}
+
 .app {
   margin-left: 320px;
   background-color: #f8f8f8;
