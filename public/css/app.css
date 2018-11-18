@@ -9519,13 +9519,13 @@ h1 {
 .app {
   margin-left: 320px;
   background-color: #f8f8f8;
-  height: 100vh;
+  height: calc(100vh - 5px);
   overflow-y: auto;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: calc(100% - 320px);
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
 }
 
@@ -9553,7 +9553,6 @@ h1 {
   font-size: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
-  border: 1px solid transparent;
 }
 
 .nav .nav-container .nav-brand img {
@@ -9567,10 +9566,8 @@ h1 {
 }
 
 .nav .nav-container .nav-brand:hover {
-  background-color: #ddd;
   color: #333;
   text-decoration: none;
-  border-color: #ccc;
 }
 
 .nav .nav-container .link {
@@ -9681,6 +9678,10 @@ h1 {
 
 .timeline .timeline-row .row .ring .label {
   margin-right: 3px;
+}
+
+body {
+  background-color: #e8e8e8;
 }
 
 .hero {

@@ -14,6 +14,19 @@
     <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/light.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/brands.min.css') }}" rel="stylesheet">
+    
+    <script>
+        if ( typeof Windows !== 'undefined' ) {
+            var titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
+
+            titleBar.backgroundColor = {a: 255, r: 232, g: 232, b: 232};
+            titleBar.inactiveBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
+            titleBar.buttonBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
+            titleBar.buttonInactiveBackgroundColor  = {a: 255, r: 232, g: 232, b: 232};
+            titleBar.buttonHoverBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
+            titleBar.buttonPressedBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
+        }
+    </script>
 </head>
 <body>
     <nav class="nav">

@@ -16,7 +16,6 @@
             font-size: 20px;
             padding-top: 16px;
             padding-bottom: 16px;
-            border: 1px solid transparent;
 
             img {
                 width: 20px;
@@ -29,10 +28,8 @@
             }
 
             &:hover {
-                background-color: #ddd;
                 color: #333;
                 text-decoration: none;
-                border-color: #ccc;
             }
         }
 

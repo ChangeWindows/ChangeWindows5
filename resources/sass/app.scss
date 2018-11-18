@@ -9,6 +9,10 @@
 @import 'nav';
 @import 'timeline';
 
+body {
+    background-color: #e8e8e8;
+}
+
 // Hero
 .hero {
     background-image: url("../img/header.png");
