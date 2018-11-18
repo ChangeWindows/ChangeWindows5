@@ -18,14 +18,15 @@
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <div class="brand">
-                <!--<span class="font-light font-uppercase">Change</span><span class="font-bold font-uppercase">Windows</span> -->viv
-            </div>
+            <a href="{{ route('timeline') }}" class="nav-brand">
+                <img src="{{ asset('img/logo_black.png') }}" />
+                <span class="title"><span class="font-light font-uppercase">Change</span><span class="font-bold font-uppercase">Windows</span> <span class="font-light">viv</span></span>
+            </a>
 
             <a class="link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('timeline') }}"><span class="inner"><i class="fal fa-fw fa-calendar"></i> Timeline</span></a>
             <a class="link" href="/milestones"><span class="inner"><i class="fal fa-fw fa-map-signs"></i> Milestones</span></a>
             <a class="link" href="/rings"><span class="inner"><i class="fal fa-fw fa-bullseye"></i> Rings</span></a>
-            <a class="link" href="https://changewindows.medium.org"><span class="inner"><i class="fab fa-fw fa-medium-m"></i> Blog</span></a>
+            <a class="link" href="https://medium.com/changewindows"><span class="inner"><i class="fab fa-fw fa-medium-m"></i> Blog</span></a>
             <a class="link {{ Request::is('viv') ? 'active' : '' }}" href="{{ route('viv') }}"><span class="inner"><i class="fal fa-fw fa-alicorn"></i> viv</span></a>
 
             <div class="nav-bottom">
@@ -46,7 +47,7 @@
         </div>
     </nav>
 
-    <div class="app">
+    <div class="app" id="app">
         @yield('hero')
         <main class="container-fluid">
             @yield('content')

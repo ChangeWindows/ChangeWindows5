@@ -10,7 +10,7 @@
 
 // Hero
 .hero {
-    background-image: url("../header.png");
+    background-image: url("../img/header.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -40,5 +40,33 @@
             color: #fff;
             margin-bottom: 0;
         }
+    }
+}
+
+// About
+.about-header {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-color: $accent;
+    
+    .viv-logo {
+        width: 80px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        color: #fff;
+    }
+
+    h5 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0;
+        color: #fff;
     }
 }

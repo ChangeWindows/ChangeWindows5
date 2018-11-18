@@ -9,12 +9,31 @@
     .nav-container {
         width: 100%;
 
-        .brand {
+        .nav-brand {
+            display: block;
             color: #333;
             text-align: center;
-            font-size: 24px;
-            margin-top: 16px;
-            margin-bottom: 16px;
+            font-size: 20px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border: 1px solid transparent;
+
+            img {
+                width: 20px;
+                height: auto;
+                margin-bottom: 5px;
+            }
+
+            .title {
+                text-align: center;
+            }
+
+            &:hover {
+                background-color: #ddd;
+                color: #333;
+                text-decoration: none;
+                border-color: #ccc;
+            }
         }
 
         .link {
