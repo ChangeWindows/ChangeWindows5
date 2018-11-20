@@ -55,6 +55,7 @@ body {
     padding-top: 70px;
     padding-bottom: 30px;
     background-color: $accent;
+    color: #fff;
     
     .viv-logo {
         width: 80px;
@@ -66,13 +67,27 @@ body {
 
     h1 {
         margin-bottom: 0;
-        color: #fff;
     }
 
     h5 {
         font-weight: 700;
         text-transform: uppercase;
         margin-top: 0;
-        color: #fff;
+    }
+}
+
+// Profile
+.profile-header {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: $accent;
+    color: #fff;
+    
+    .display-1 {
+    }
+
+    h1 {
+        margin-bottom: 0;
     }
 }

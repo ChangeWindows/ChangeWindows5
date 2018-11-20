@@ -37,14 +37,16 @@
             </a>
 
             <a class="link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('timeline') }}"><span class="inner"><i class="fal fa-fw fa-calendar"></i> Timeline</span></a>
+            <!--
             <a class="link" href="/milestones"><span class="inner"><i class="fal fa-fw fa-map-signs"></i> Milestones</span></a>
             <a class="link" href="/rings"><span class="inner"><i class="fal fa-fw fa-bullseye"></i> Rings</span></a>
+            -->
             <a class="link" href="https://medium.com/changewindows"><span class="inner"><i class="fab fa-fw fa-medium-m"></i> Blog</span></a>
-            <a class="link {{ Request::is('viv') ? 'active' : '' }}" href="{{ route('viv') }}"><span class="inner"><i class="fal fa-fw fa-alicorn"></i> viv</span></a>
+            <a class="link {{ Request::is('viv') ? 'active' : '' }}" href="{{ route('viv') }}"><span class="inner"><i class="fal fa-fw fa-alicorn"></i> About viv</span></a>
 
             <div class="nav-bottom">
                 @auth
-                    <a class="link" href="/profile"><span class="inner"><i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}</span></a>
+                    <a class="link" href="{{ route('profile') }}"><span class="inner"><i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}</span></a>
                     <a class="link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="inner"><i class="fal fa-fw fa-sign-out"></i> Logout</span></a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

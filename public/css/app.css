@@ -9916,6 +9916,7 @@ body {
   padding-top: 70px;
   padding-bottom: 30px;
   background-color: #0098df;
+  color: #fff;
 }
 
 .about-header .viv-logo {
@@ -9928,12 +9929,22 @@ body {
 
 .about-header h1 {
   margin-bottom: 0;
-  color: #fff;
 }
 
 .about-header h5 {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
+}
+
+.profile-header {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #0098df;
   color: #fff;
+}
+
+.profile-header h1 {
+  margin-bottom: 0;
 }
