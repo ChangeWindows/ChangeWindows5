@@ -24,12 +24,12 @@
         </div>
     </div>
     <div class="col-lg-5">
-        @foreach ($flights as $platform)
-            <p class="h3">Platform</p>
+        @foreach ($flights as $key => $platform)
+            <p class="h3">{{ $key }}</p>
             <div class="row min-gutter">
                 @foreach ($platform as $flight)
                     <div class="col-4">
-                        <div class="tile">
+                        <div class="tile {{ $flight->class }}">
                             <span class="ring">{{ $flight->flight }}</span>
                             <span class="build">{{ $flight->build }}.{{ $flight->delta }}</span>
                             <span class="date">{{ $flight->format }}</span>

@@ -87,6 +87,27 @@ class Release extends Model
         if ( $this->ring == 7 )
             return 'Broad';
         if ( $this->ring == 8 )
-            return 'LTS';
+            return 'LTSC';
+    }
+
+    public function getClassAttribute() {
+        if ( $this->ring == 0 )
+            return 'leak';
+        if ( $this->ring == 1 )
+            return 'skip';
+        if ( $this->ring == 2 )
+            return 'fast';
+        if ( $this->ring == 3 )
+            return 'slow';
+        if ( $this->ring == 4 )
+            return 'preview';
+        if ( $this->ring == 5 )
+            return 'release';
+        if ( $this->ring == 6 )
+            return 'targeted';
+        if ( $this->ring == 7 )
+            return 'broad';
+        if ( $this->ring == 8 )
+            return 'ltsc';
     }
 }

@@ -1,5 +1,4 @@
 .tile {
-    background-color: $red;
     padding: 10px;
     color: #fff;
     line-height: 1;
@@ -24,6 +23,123 @@
         font-size: 15px;
         padding-top: 10px;
         display: block;
+    }
+
+    &.vnext, &.leak {
+        background-color: $leak;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $leak !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($leak, 4%) !important;
+        }
+    }
+    
+    &.skip {
+        background-color: $skip;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $skip !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($skip, 4%) !important;
+        }
+    }
+    
+    &.fast {
+        background-color: $fast;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $fast !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($fast, 4%) !important;
+        }
+    }
+
+    &.slow {
+        background-color: $slow;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $slow !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($slow, 4%) !important;
+        }
+    }
+
+    &.preview {
+        background-color: $preview;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $preview !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($preview, 4%) !important;
+        }
+    }
+
+    &.release {
+        background-color: $release;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $release !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($release, 4%) !important;
+        }
+    }
+
+    &.targeted {
+        background-color: $targeted;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $targeted !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($targeted, 4%) !important;
+        }
+    }
+
+    &.broad {
+        background-color: $broad;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $broad !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($broad, 4%) !important;
+        }
+    }
+
+    &.ltsc {
+        background-color: $ltsc;
+
+        &:hover {
+            box-shadow: 0 0 10px 2px $ltsc !important;
+            z-index: 9800;
+        }
+        
+        .tile-header {
+            background: darken($ltsc, 4%) !important;
+        }
     }
 }
 
