@@ -9529,6 +9529,13 @@ h1 {
   right: 0;
 }
 
+@media all and (max-width: 1200px) {
+  .app {
+    margin-left: 48px;
+    width: calc(100% - 48px);
+  }
+}
+
 .container-fluid {
   padding: 20px;
 }
@@ -9540,6 +9547,12 @@ h1 {
   top: 0;
   left: 0;
   position: fixed;
+}
+
+@media all and (max-width: 1200px) {
+  .nav {
+    width: 48px;
+  }
 }
 
 .nav .nav-container {
@@ -9561,8 +9574,20 @@ h1 {
   margin-bottom: 5px;
 }
 
+@media all and (max-width: 1200px) {
+  .nav .nav-container .nav-brand img {
+    margin-bottom: 0;
+  }
+}
+
 .nav .nav-container .nav-brand .title {
   text-align: center;
+}
+
+@media all and (max-width: 1200px) {
+  .nav .nav-container .nav-brand .title {
+    display: none;
+  }
 }
 
 .nav .nav-container .nav-brand:hover {
@@ -9579,14 +9604,17 @@ h1 {
   border: 1px solid transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
 }
 
 .nav .nav-container .link .inner {
   border-left: 4px solid transparent;
+  width: 320px;
 }
 
 .nav .nav-container .link .inner .fa-fw {
-  width: 48px;
+  margin-left: 10px;
+  margin-right: 14px;
   text-align: center;
 }
 
@@ -9678,6 +9706,45 @@ h1 {
 
 .timeline .timeline-row .row .ring .label {
   margin-right: 3px;
+}
+
+.tile {
+  background-color: #e3342f;
+  padding: 10px;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.tile .ring {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+  display: block;
+}
+
+.tile .build {
+  font-weight: 600;
+  font-size: 24px;
+  display: block;
+}
+
+.tile .date {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding-top: 10px;
+  display: block;
+}
+
+.min-gutter {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.min-gutter .col-4 {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 body {

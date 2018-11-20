@@ -23,8 +23,8 @@
             titleBar.inactiveBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
             titleBar.buttonBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
             titleBar.buttonInactiveBackgroundColor  = {a: 255, r: 232, g: 232, b: 232};
-            titleBar.buttonHoverBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
-            titleBar.buttonPressedBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
+            titleBar.buttonHoverBackgroundColor = {a: 255, r: 219, g: 219, b: 219};
+            titleBar.buttonPressedBackgroundColor = {a: 255, r: 203, g: 203, b: 203};
         }
     </script>
 </head>

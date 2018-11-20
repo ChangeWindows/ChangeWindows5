@@ -1,0 +1,38 @@
+.tile {
+    background-color: $red;
+    padding: 10px;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4px;
+
+    .ring {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+        display: block;
+    }
+
+    .build {
+        font-weight: 600;
+        font-size: 24px;
+        display: block;
+    }
+
+    .date {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding-top: 10px;
+        display: block;
+    }
+}
+
+.min-gutter {
+    margin-left: -2px;
+    margin-right: -2px;
+
+    .col-4 {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}

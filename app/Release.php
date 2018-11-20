@@ -3,12 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Release extends Model
 {
     protected $table = 'releases';
 
     protected $dates = ['created_at', 'updated_at', 'date'];
+
+    public function getFormatAttribute() {
+        return $this->date->format('d M Y');
+    }
 
     public function getDeviceAttribute() {
         switch ($this->platform) {

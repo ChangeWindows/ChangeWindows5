@@ -6,6 +6,10 @@
     left: 0;
     position: fixed;
 
+    @media all and (max-width:1200px) {
+        width: 48px;
+    }
+
     .nav-container {
         width: 100%;
 
@@ -21,10 +25,18 @@
                 width: 20px;
                 height: auto;
                 margin-bottom: 5px;
+
+                @media all and (max-width:1200px) {
+                    margin-bottom: 0;
+                }
             }
 
             .title {
                 text-align: center;
+
+                @media all and (max-width:1200px) {
+                    display: none;
+                }
             }
 
             &:hover {
@@ -41,12 +53,15 @@
             color: #333;
             border: 1px solid transparent;
             box-sizing: border-box;
+            overflow: hidden;
 
             .inner {
                 border-left: 4px solid transparent;
+                width: 320px;
                 
                 .fa-fw {
-                    width: 48px;
+                    margin-left: 10px;
+                    margin-right: 14px;
                     text-align: center;
                 }
             }
