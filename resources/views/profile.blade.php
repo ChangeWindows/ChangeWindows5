@@ -11,9 +11,15 @@
 <div class="row">
     <div class="col">
         <h2>Details</h2>
-        <p><b>Name</b>: {{ Auth::user()->name }}</p>
-        <p><b>Email</b>: {{ Auth::user()->email }}</p>
-        <p><b>Role</b>: {{ Auth::user()->getRoles()->name }}</p>
+        <p><b>Name</b>: {{ Auth::user()->name }}<br />
+        <b>Email</b>: {{ Auth::user()->email }}<br />
+        <b>Role</b>: {{ Auth::user()->getRoles()->name }}</p>
+        <h2>Settings</h2>
+        <p>There are currently no settings available.</p>
+        @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
+            <h2>Insider features</h2>
+            <p>There are currently no Insider features available. Check back soon!</p>
+        @endif
     </div>
 </div>
 @endsection
