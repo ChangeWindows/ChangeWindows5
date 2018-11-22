@@ -13,6 +13,7 @@
         <h2>Details</h2>
         <p><b>Name</b>: {{ Auth::user()->name }}</p>
         <p><b>Email</b>: {{ Auth::user()->email }}</p>
+        <p><b>Role</b>: {{ Auth::user()->getRoles()->name }}</p>
     </div>
 </div>
 @endsection
