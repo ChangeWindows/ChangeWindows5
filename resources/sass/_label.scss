@@ -1,0 +1,43 @@
+.label {
+    font-size: 100%;
+    font-weight: 600;
+    padding: 1px 0 2px 0 !important;
+    margin-right: 10px !important;
+    text-transform: uppercase;
+
+    &.vnext, &.leak {
+        color: $leak;
+    }
+    
+    &.skip {
+        color: $skip;
+    }
+
+    &.fast {
+        color: $fast;
+    }
+
+    &.slow {
+        color: $slow;
+    }
+
+    &.preview {
+        color: $preview;
+    }
+
+    &.release {
+        color: $release;
+    }
+
+    &.targeted {
+        color: $targeted;
+    }
+
+    &.broad {
+        color: $broad;
+    }
+
+    &.ltsc {
+        color: $ltsc;
+    }
+}

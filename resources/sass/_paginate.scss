@@ -1,0 +1,27 @@
+.pagination {
+    margin-bottom: 0;
+    border-radius: 0;
+
+    .page-item {
+        .page-link {
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: $accent;
+            border-radius: 0;
+            width: 40px;
+            text-align: center;
+        }
+
+        &:not(.disabled) {
+            &.active,
+            &:hover {
+                .page-link {
+                    background-color: transparent;
+                    border-bottom: 3px solid $accent;
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

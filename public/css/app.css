@@ -9872,6 +9872,71 @@ h1 {
   padding-right: 2px;
 }
 
+.label {
+  font-size: 100%;
+  font-weight: 600;
+  padding: 1px 0 2px 0 !important;
+  margin-right: 10px !important;
+  text-transform: uppercase;
+}
+
+.label.vnext, .label.leak {
+  color: #e52262;
+}
+
+.label.skip {
+  color: #e74018;
+}
+
+.label.fast {
+  color: #fb8009;
+}
+
+.label.slow {
+  color: #ffc000;
+}
+
+.label.preview {
+  color: #c0d700;
+}
+
+.label.release {
+  color: #97c800;
+}
+
+.label.targeted {
+  color: #46c429;
+}
+
+.label.broad {
+  color: #10b08f;
+}
+
+.label.ltsc {
+  color: #0098df;
+}
+
+.pagination {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.pagination .page-item .page-link {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #0098df;
+  border-radius: 0;
+  width: 40px;
+  text-align: center;
+}
+
+.pagination .page-item:not(.disabled).active .page-link, .pagination .page-item:not(.disabled):hover .page-link {
+  background-color: transparent;
+  border-bottom: 3px solid #0098df;
+  color: #0098df;
+}
+
 body {
   background-color: #e8e8e8;
 }

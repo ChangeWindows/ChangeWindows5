@@ -17,7 +17,7 @@
                 <div class="timeline-row">
                     <a class="row" href="#">
                         <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.$release->platform_img) }}" class="img-platform img-jump" alt="{{ $release->device }}" />{{ $release->build }}.{{ $release->delta }}</div>
-                        <div class="col-6 col-md-8 ring">{{ $release->flight }}</div>
+                        <div class="col-6 col-md-8 ring"><span class="label {{ $release->class }}">{{ $release->flight }}</span></div>
                     </a>
                 </div>
             @endforeach
