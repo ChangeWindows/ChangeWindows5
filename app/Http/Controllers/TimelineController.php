@@ -50,4 +50,28 @@ class TimelineController extends Controller
 
         return view('timeline', compact('releases', 'flights'));
     }
+
+    public function store(Request $request) {
+        $request->user()->authorizeRoles('Admin');
+        
+        $string = Release::splitString(request()->get('build_string'));
+        $milestone = Release::getMilestoneByString($string);
+
+        foreach(request()->get('flight') as $platform => $ring) {
+            foreach($ring as $key => $value) {
+                Release::create([
+                    'major' => $string['major'],
+                    'minor' => $string['minor'],
+                    'build' => $string['build'],
+                    'delta' => $string['delta'],
+                    'milestone' => $milestone,
+                    'platform' => $platform,
+                    'ring' => $value,
+                    'date' => request()->get('release')
+                ]);
+            }
+        }
+
+        return redirect('/');
+    }
 }

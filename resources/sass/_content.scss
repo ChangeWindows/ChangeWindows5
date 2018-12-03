@@ -2,14 +2,14 @@
     margin-left: 320px;
     background-color: #f8f8f8;
     height: calc(100vh - 5px);
-    overflow-y: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     width: calc(100% - 320px);
     position: fixed;
     bottom: 0;
     right: 0;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 
-    @media all and (max-width:1200px) {
+    @media all and (max-width:1400px) {
         margin-left: 48px;
         width: calc(100% - 48px);
     }

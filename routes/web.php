@@ -14,6 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'TimelineController@index')->name('timeline');
+Route::post('/build', 'TimelineController@store')->name('storeRelease');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
