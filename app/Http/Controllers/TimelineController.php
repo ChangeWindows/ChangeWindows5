@@ -74,4 +74,14 @@ class TimelineController extends Controller
 
         return redirect('/');
     }
+
+    public function show($build, $platform = null) {
+        if ($platform) {
+            $releases = Release::where('build', $build)->where('platform', $platform)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
+        } else {
+            $releases = Release::where('build', $build)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
+        }
+
+        return view('build', compact('releases'));
+    }
 }
