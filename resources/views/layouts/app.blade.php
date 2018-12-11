@@ -36,13 +36,19 @@
                     <span class="title"><span class="font-light font-uppercase">Change</span><span class="font-bold font-uppercase">Windows</span> <span class="font-light">viv</span></span>
                 </a>
 
-                <a class="link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('timeline') }}"><span class="inner"><i class="fal fa-fw fa-calendar"></i> Timeline</span></a>
+                <a class="link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('timeline') }}"><span class="inner"><i class="fal fa-fw fa-calendar-alt"></i> Timeline</span></a>
                 <!--
                 <a class="link" href="/milestones"><span class="inner"><i class="fal fa-fw fa-map-signs"></i> Milestones</span></a>
                 <a class="link" href="/rings"><span class="inner"><i class="fal fa-fw fa-bullseye"></i> Rings</span></a>
                 -->
                 <a class="link" href="https://medium.com/changewindows"><span class="inner"><i class="fab fa-fw fa-medium-m"></i> Blog</span></a>
                 <a class="link {{ Request::is('viv') ? 'active' : '' }}" href="{{ route('viv') }}"><span class="inner"><i class="fal fa-fw fa-alicorn"></i> About viv</span></a>
+                @auth
+                    @if (Auth::user()->hasAnyRole(['Admin']))
+                        <hr />
+                        <a class="link {{ Request::is('changelog') ? 'active' : '' }}" href="{{ route('showChangelogs') }}"><span class="inner"><i class="fal fa-fw fa-align-left"></i> Changelogs</span></a>
+                    @endif
+                @endauth
 
                 <div class="nav-bottom">
                     @auth

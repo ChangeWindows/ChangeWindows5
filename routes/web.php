@@ -17,6 +17,9 @@ Route::get('/', 'TimelineController@index')->name('timeline');
 Route::post('/build', 'TimelineController@store')->name('storeRelease');
 Route::get('/build/{build}/{platform?}', 'TimelineController@show')->name('showRelease');
 
+
+Route::get('/changelog', 'ChangelogController@index')->name('showChangelogs');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/viv', 'PreviewController@index')->name('viv');
