@@ -16,6 +16,7 @@ class CreateChangelogsTable extends Migration
         Schema::create('changelogs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('build');
+            $table->integer('delta');
             $table->integer('platform');
             $table->text('changelog');
             $table->timestamps();
