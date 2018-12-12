@@ -79,6 +79,18 @@
             }
         }
 
+        .subnav {
+            padding-left: 15px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 0;
+
+            @media all and (max-width:1400px) {
+                display: none;
+            }
+        }
+
         .nav-bottom {
             position: fixed;
             bottom: 0;

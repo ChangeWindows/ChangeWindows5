@@ -26,7 +26,7 @@
     <div class="col-lg-5">
         @auth
             @if (Auth::user()->hasAnyRole(['Admin']))
-                <p class="h3">Tools</p>
+                <p class="h3">Admin tools</p>
                 <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New build</a>
             @endif
         @endauth

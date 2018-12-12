@@ -11,14 +11,27 @@ class ChangelogController extends Controller
       $this->middleware('auth');
     }
 
-    public function index(Request $request) {
-        $request->user()->authorizeRoles('Admin');
-        
-        $changelogs = Changelog::orderBy('build', 'desc')->orderBy('delta', 'desc')->paginate(50);
+    public function index(Request $request, $platform = null, $build = null) {
+        if ($platform != null && $build == null) {
+            $changelogs = Changelog::where('platform', $platform)
+                                    ->orderBy('build', 'desc')
+                                    ->orderBy('delta', 'desc')
+                                    ->paginate(50);
+        } elseif ($platform != null && $build != null) {
+            $changelogs = Changelog::where('platform', $platform)
+                                    ->where('build', $build)
+                                    ->orderBy('build', 'desc')
+                                    ->orderBy('delta', 'desc')
+                                    ->paginate(50);
+        } else {
+            $changelogs = Changelog::orderBy('build', 'desc')
+                                    ->orderBy('delta', 'desc')
+                                    ->paginate(50);
+        }
 
-        return view('changelogs', compact('changelogs'));
+        return view('changelogs', compact('changelogs', 'platform', 'build'));
     }
-    
+
     public function create(Request $request) {
         $request->user()->authorizeRoles('Admin');
 
