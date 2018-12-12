@@ -19,6 +19,8 @@ Route::get('/build/{build}/{platform?}', 'TimelineController@show')->name('showR
 
 
 Route::get('/changelog', 'ChangelogController@index')->name('showChangelogs');
+Route::get('/changelog/new', 'ChangelogController@create')->name('createChangelogs');
+Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
