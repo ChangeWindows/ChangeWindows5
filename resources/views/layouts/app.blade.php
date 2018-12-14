@@ -47,7 +47,7 @@
                     @if (Auth::user()->hasAnyRole(['Admin']))
                         <hr />
                         <p class="subnav">Admin</p>
-                        <a class="link {{ Request::is('changelog') ? 'active' : '' }}" href="{{ route('showChangelogs') }}"><span class="inner"><i class="fal fa-fw fa-align-left"></i> Changelogs</span></a>
+                        <a class="link {{ Request::is('changelog/*') ? 'active' : '' }}" href="{{ route('showChangelogs') }}"><span class="inner"><i class="fal fa-fw fa-align-left"></i> Changelogs</span></a>
                     @endif
                 @endauth
 

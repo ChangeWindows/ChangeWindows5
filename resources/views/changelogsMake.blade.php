@@ -12,13 +12,7 @@
         </nav>
     </div>
     {{ csrf_field() }}
-    <div class="col-6">
-        <div class="form-group">
-            <label for="build_string">String</label>
-            <input type="text" class="form-control" id="build_string" name="build_string" aria-describedby="build_string" placeholder="Build string">
-        </div>
-    </div>
-    <div class="col-6">
+    <div class="col-3">
         <div class="form-group">
             <label for="platform">Platform</label>
             <select class="form-control" id="platform" name="platform" aria-describedby="platform">
@@ -34,10 +28,16 @@
             </select>
         </div>
     </div>
+    <div class="col-9">
+        <div class="form-group">
+            <label for="build_string">String</label>
+            <input type="text" class="form-control" id="build_string" name="build_string" aria-describedby="build_string" placeholder="Build string">
+        </div>
+    </div>
     <div class="col-12">
         <div class="form-group">
             <label for="changelog">Changelog</label>
-            <textarea class="form-control" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="20"></textarea>
+            <textarea class="form-control text-monospace" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="20"></textarea>
         </div>
     </div>
     <div class="col-12">
