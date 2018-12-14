@@ -65,6 +65,18 @@
                 }
             }
 
+            @media all and (min-width:1401px) {
+                &.link-has-sub {
+                    display: inline-block;
+                    width: 272px !important;
+                }
+
+                &.link-is-sub {
+                    display: inline-block;
+                    width: 48px !important;
+                }
+            }
+
             &.active {
                 .inner {
                     border-color: $blue;

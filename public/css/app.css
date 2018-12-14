@@ -10348,6 +10348,17 @@ h1 {
   text-align: center;
 }
 
+@media all and (min-width: 1401px) {
+  .nav .nav-container .link.link-has-sub {
+    display: inline-block;
+    width: 272px !important;
+  }
+  .nav .nav-container .link.link-is-sub {
+    display: inline-block;
+    width: 48px !important;
+  }
+}
+
 .nav .nav-container .link.active .inner {
   border-color: #3490dc;
 }

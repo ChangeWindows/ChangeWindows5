@@ -54,8 +54,7 @@
 
                 <div class="nav-bottom">
                     @auth
-                        <a class="link" href="{{ route('profile') }}"><span class="inner"><i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}</span></a>
-                        <a class="link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="inner"><i class="fal fa-fw fa-sign-out"></i> Logout</span></a>
+                        <a class="link link-has-sub {{ Request::is('profile') ? 'active' : '' }}" href="{{ route('profile') }}"><span class="inner"><i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}</span></a><a class="link link-is-sub" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="inner"><i class="fal fa-fw fa-sign-out"></i></span></a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
