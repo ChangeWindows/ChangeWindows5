@@ -30,20 +30,63 @@
                 <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New build</a>
             @endif
         @endauth
-        @foreach ($flights as $key => $platform)
-            <p class="h3">{{ $key }}</p>
-            <div class="row min-gutter">
-                @foreach ($platform as $flight)
-                    <div class="col-4">
-                        <div class="tile {{ $flight->class }}">
-                            <span class="ring">{{ $flight->flight }}</span>
-                            <span class="build">{{ $flight->build }}.{{ $flight->delta }}</span>
-                            <span class="date">{{ $flight->format }}</span>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        @endforeach
+        <p class="h3">PC</p>
+        <div class="row row-gutter">
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['active'] ) ?></div>
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['release'] ) ?></div>
+            <div class="col-sl-4 col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['pc']['target'] ) ?></div>
+            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['broad'] ) ?></div>
+            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['ltsc'] ) ?></div>
+        </div>
+        <p class="h3">Xbox</p>
+        <div class="row row-gutter">
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['skip'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['active'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['slow'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['preview'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['release'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['target'] ) ?></div>
+        </div>
+        <p class="h3">IoT</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['iot']['slow'] ) ?></div>
+            <div class="col"><?php getTile( $flights['iot']['target'] ) ?></div>
+            <div class="col"><?php getTile( $flights['iot']['broad'] ) ?></div>
+        </div>
+        <p class="h3">Server</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['server']['slow'] ) ?></div>
+            <div class="col"><?php getTile( $flights['server']['target'] ) ?></div>
+            <div class="col"><?php getTile( $flights['server']['ltsc'] ) ?></div>
+        </div>
+        <p class="h3">Holographic</p>
+        <div class="row row-gutter">
+            <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['active'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['slow'] ) ?></div>
+            <div class="col-xl-4 col-lg-12 col-sm-4 col-12"><?php getTile( $flights['holo']['target'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['broad'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
+        </div>
+        <p class="h3">Team</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['team']['target'] ) ?></div>
+            <div class="col"><?php getTile( $flights['team']['broad'] ) ?></div>
+        </div>
+        <p class="h3">Mobile</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['mobile']['target'] ) ?></div>
+            <div class="col"><?php getTile( $flights['mobile']['broad'] ) ?></div>
+        </div>
+        <p class="h3">SDK</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['sdk']['target'] ) ?></div>
+        </div>
+        <p class="h3">ISO</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['iso']['target'] ) ?></div>
+        </div>
     </div>
 </div>
 

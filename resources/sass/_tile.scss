@@ -143,11 +143,11 @@
     }
 }
 
-.min-gutter {
+.row-gutter {
     margin-left: -2px;
     margin-right: -2px;
 
-    .col-4 {
+    & > div {
         padding-left: 2px;
         padding-right: 2px;
     }

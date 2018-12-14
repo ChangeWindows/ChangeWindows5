@@ -37,11 +37,11 @@
     <div class="col-12">
         <div class="form-group">
             <label for="changelog">Changelog</label>
-            <textarea class="form-control text-monospace" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="20"></textarea>
+            <textarea class="form-control text-monospace" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="30"></textarea>
         </div>
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-plus"></i> Save</button>
+        <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-plus"></i> Add</button>
     </div>
 </form>
 @endsection
