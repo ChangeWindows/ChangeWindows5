@@ -9950,6 +9950,44 @@ h1 {
   color: #0098df;
 }
 
+.list-group {
+  margin-top: 10px;
+}
+
+.list-group .list-group-item {
+  border: none;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.list-group .list-group-item.active {
+  color: #444;
+  background: #ddd;
+}
+
+.list-group .list-group-item:hover {
+  background-color: #eee;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.breadcrumb {
+  border-radius: 0;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 body {
   background-color: #e8e8e8;
 }

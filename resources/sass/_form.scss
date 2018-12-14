@@ -1,0 +1,7 @@
+.form-control {
+    border-radius: 0;
+
+    &:focus {
+        box-shadow: none;
+    }
+}

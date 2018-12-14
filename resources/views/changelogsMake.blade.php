@@ -1,27 +1,26 @@
 @extends('layouts.app')
 
-@section('hero')
-<a class="hero" href="{{ route('viv') }}">
-    <span class="text">
-        <span class="h2">viv Preview</span>
-        <span class="h5">The ChangeWindows 5 Preview is here, let us walk you through it</span>
-    </span>
-</a>
-@endsection
-
 @section('content')
 
 <form method="POST" action="{{ route('storeChangelogs') }}" class="row row-p-10">
-    {{ csrf_field() }}
     <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('showChangelogs') }}">Changelogs</a></li>
+                <li class="breadcrumb-item">New changelog</li>
+            </ol>
+        </nav>
+    </div>
+    {{ csrf_field() }}
+    <div class="col-6">
         <div class="form-group">
             <label for="build_string">String</label>
             <input type="text" class="form-control" id="build_string" name="build_string" aria-describedby="build_string" placeholder="Build string">
         </div>
     </div>
-    <div class="col-12">
+    <div class="col-6">
         <div class="form-group">
-            <label for="platform">Example select</label>
+            <label for="platform">Platform</label>
             <select class="form-control" id="platform" name="platform" aria-describedby="platform">
                 <option value="1">PC</option>
                 <option value="2">Mobile</option>

@@ -18,9 +18,10 @@ Route::post('/build', 'TimelineController@store')->name('storeRelease');
 Route::get('/build/{build}/{platform?}', 'TimelineController@show')->name('showRelease');
 
 
-Route::get('/changelog', 'ChangelogController@index')->name('showChangelogs');
 Route::get('/changelog/new', 'ChangelogController@create')->name('createChangelogs');
-Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name('showRelease');
+Route::get('/changelog/{id}/edit', 'ChangelogController@edit')->name('editChangelog');
+Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name('showChangelogs');
+Route::patch('/changelog/{id}', 'ChangelogController@update')->name('updateChangelogs');
 Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -5,17 +5,17 @@
     <div class="col-12">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Changelogs</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('showChangelogs') }}">Changelogs</a></li>
                 @if ($platform)
-                    <li class="breadcrumb-item"><a href="#">{{ $platform }}</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('showChangelogs', $platform) }}">{{ getPlatformById($platform) }}</a></li>
                 @endif
                 @if ($build)
-                    <li class="breadcrumb-item"><a href="#">{{ $build }}</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('showChangelogs', [$platform, $build]) }}">{{ $build }}</a></li>
                 @endif
             </ol>
         </nav>
     </div>
-    <div class="col-3">
+    <div class="col-2">
         <a class="btn btn-primary btn-block" href="{{ route('createChangelogs') }}"><i class="fal fa-fw fa-plus"></i> Add changelog</a>
         <div class="list-group">
             <a href="{{ URL::to('changelog/1') }}" class="list-group-item {{ $platform == '1' ? 'active' : ''}}">PC</a>
@@ -29,9 +29,9 @@
             <a href="{{ URL::to('changelog/9') }}" class="list-group-item {{ $platform == '9' ? 'active' : ''}}">SDK</a>
         </div>
     </div>
-    <div class="col-9">
+    <div class="col-10">
         @foreach ($changelogs as $changelog)
-            <p>{{ $changelog->build }}.{{ $changelog->delta }} {{ $changelog->platform }}</p>
+            <p><a href="{{ route('editChangelog', [$changelog->id]) }}">{{ $changelog->build }}.{{ $changelog->delta }} &middot; {{ getPlatformById($changelog->platform) }}</a></p>
         @endforeach
         
         {{ $changelogs->links() }}

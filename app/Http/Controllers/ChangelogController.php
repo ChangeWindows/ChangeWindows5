@@ -29,13 +29,27 @@ class ChangelogController extends Controller
                                     ->paginate(50);
         }
 
-        return view('changelogs', compact('changelogs', 'platform', 'build'));
+        return view('changelogs', compact('changelogs', 'platform', 'build', 'delta'));
     }
 
     public function create(Request $request) {
         $request->user()->authorizeRoles('Admin');
 
         return view('changelogsMake');
+    }
+
+    public function edit(Request $request, $id) {
+        $request->user()->authorizeRoles('Admin');
+
+        $changelog = Changelog::find($id);
+
+        $changelogs = Changelog::where('platform', $changelog->platform)
+                                ->where('build', $changelog->build)
+                                ->orderBy('build', 'desc')
+                                ->orderBy('delta', 'desc')
+                                ->paginate(50);
+
+        return view('changelogsEdit', compact('changelogs', 'changelog'));
     }
 
     public function store(Request $request) {
@@ -49,6 +63,23 @@ class ChangelogController extends Controller
             'platform' => request()->get('platform'),
             'changelog' => request()->get('changelog')
         ]);
+
+        return redirect('/changelog');
+    }
+
+    public function update(Request $request, $id) {
+        $request->user()->authorizeRoles('Admin');
+
+        $changelog = Changelog::find($id);
+        
+        $string = Changelog::splitString(request()->get('build_string'));
+
+        $changelog->build = $string['build'];
+        $changelog->delta = $string['delta'];
+        $changelog->platform = request()->get('platform');
+        $changelog->changelog = request()->get('changelog');
+
+        $changelog->save();
 
         return redirect('/changelog');
     }
