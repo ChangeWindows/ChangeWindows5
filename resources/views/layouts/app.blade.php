@@ -48,7 +48,7 @@
                     @if (Auth::user()->hasAnyRole(['Admin']))
                         <hr />
                         <p class="subnav">Admin</p>
-                        <a class="link {{ Request::is('changelog/*') ? 'active' : '' }}" href="{{ route('showChangelogs') }}"><span class="inner"><i class="fal fa-fw fa-align-left"></i> Changelogs</span></a>
+                        <a class="link {{ Request::is('changelog*') ? 'active' : '' }}" href="{{ route('showChangelogs') }}"><span class="inner"><i class="fal fa-fw fa-align-left"></i> Changelogs</span></a>
                     @endif
                 @endauth
 
@@ -59,11 +59,7 @@
                             @csrf
                         </form>
                     @else
-                        <a class="link" href="{{ route('login') }}"><span class="inner"><i class="fal fa-fw fa-sign-in"></i> Login</span></a>
-
-                        @if (Route::has('register'))
-                            <a class="link" href="{{ route('register') }}"><span class="inner"><i class="fal fa-fw fa-user-plus"></i> Register</span></a>
-                        @endif
+                        <a class="link link-has-sub {{ Request::is('register') ? 'active' : '' }}" href="{{ route('register') }}"><span class="inner"><i class="fal fa-fw fa-user-plus"></i> Register</span></a><a class="link link-is-sub" href="{{ route('login') }}"><span class="inner"><i class="fal fa-fw fa-sign-in"></i></span></a>
                     @endauth
                 </div>
             </div>

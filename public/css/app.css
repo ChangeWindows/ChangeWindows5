@@ -10286,6 +10286,11 @@ h1 {
   }
 }
 
+.nav hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .nav .nav-container {
   width: 100%;
 }
@@ -10388,6 +10393,7 @@ h1 {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 48px;
 }
 
 .date-heading {
