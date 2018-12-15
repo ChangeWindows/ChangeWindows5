@@ -1,7 +1,7 @@
 <?php
 
-function getPlatformById( $id ) {
-    switch ( $id ) {
+function getPlatformById($id) {
+    switch ($id) {
         case 1:     return 'PC';
         case 2:     return 'Mobile';
         case 3:     return 'Xbox';
@@ -11,6 +11,21 @@ function getPlatformById( $id ) {
         case 7:     return 'Team';
         case 8:     return 'ISO';
         case 9:     return 'SDK';
+        default:    return;
+    }
+}
+
+function getPlatformImage($id) {
+    switch ($id) {
+        case 1:     return 'pc.png';
+        case 2:     return 'mobile.png';
+        case 3:     return 'xbox.png';
+        case 4:     return 'server.png';
+        case 5:     return 'holographic.png';
+        case 6:     return 'iot.png';
+        case 7:     return 'team.png';
+        case 8:     return 'iso.png';
+        case 9:     return 'sdk.png';
         default:    return;
     }
 }

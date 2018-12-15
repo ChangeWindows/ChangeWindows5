@@ -10,6 +10,10 @@ class TimelineController extends Controller
     public function index() {
         $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
 
+        foreach($releases as $release) {
+            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
+        }
+
         $flights['pc']['skip'] = Release::where('platform', '1')->where('ring', '1')->orderBy('date', 'desc')->orderBy('build', 'desc')->first();
         $flights['pc']['active'] = Release::where('platform', '1')->where('ring', '2')->orderBy('date', 'desc')->orderBy('build', 'desc')->first();
         $flights['pc']['slow'] = Release::where('platform', '1')->where('ring', '3')->orderBy('date', 'desc')->orderBy('build', 'desc')->first();
@@ -48,7 +52,7 @@ class TimelineController extends Controller
         $flights['sdk']['target'] = Release::where('platform', '9')->where('ring', '6')->orderBy('date', 'desc')->orderBy('build', 'desc')->first();
         $flights['iso']['target'] = Release::where('platform', '8')->where('ring', '6')->orderBy('date', 'desc')->orderBy('build', 'desc')->first();
 
-        return view('timeline', compact('releases', 'flights'));
+        return view('timeline', compact('releases', 'flights', 'timeline'));
     }
 
     public function store(Request $request) {

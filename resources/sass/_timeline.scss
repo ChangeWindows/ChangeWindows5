@@ -4,6 +4,7 @@
     margin-top: 20px;
     margin-bottom: 0;
     padding-bottom: 8px;
+    color: $accent;
     
     &:first-child {
         margin-top: 0 !important;
@@ -21,12 +22,12 @@
         transition: .2s ease-in-out;
         z-index: 9700;
                 
-        &:nth-child(even) {
+        &:nth-child(odd) {
             background-color: #eee;
             border-color: #eee;
         }
         
-        &:nth-child(odd) {
+        &:nth-child(even) {
             background-color: #f8f8f8;
             border-color: #f8f8f8;
         }

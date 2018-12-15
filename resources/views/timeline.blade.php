@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@php
+    $previous = null;
+@endphp
+
 @section('hero')
 <a class="hero" href="{{ route('viv') }}">
     <span class="text">
@@ -13,13 +17,25 @@
 <div class="row">
     <div class="col-lg-7">
         <div class="timeline">
-            @foreach ($releases as $release)
-                <div class="timeline-row">
-                    <a class="row" href="{{ route('showRelease', $release->build, $release->platform) }}">
-                        <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.$release->platform_img) }}" class="img-platform img-jump" alt="{{ $release->device }}" />{{ $release->build }}.{{ $release->delta }}</div>
-                        <div class="col-6 col-md-8 ring"><span class="label {{ $release->class }}">{{ $release->flight }}</span></div>
-                    </a>
-                </div>
+            @foreach ($timeline as $date => $builds)
+                <div class="date-heading">{{ $date }}</div>
+                <div></div>
+                @foreach ($builds as $build => $deltas)
+                    @foreach ($deltas as $delta => $platforms)
+                        @foreach ($platforms as $platform => $rings)
+                            <div class="timeline-row">
+                                <a class="row" href="{{ route('showRelease', $build, $platform) }}">
+                                    <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
+                                    <div class="col-6 col-md-8 ring">
+                                        @foreach ($rings as $ring)
+                                            <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
+                                        @endforeach
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    @endforeach
+                @endforeach
             @endforeach
         </div>
     </div>
