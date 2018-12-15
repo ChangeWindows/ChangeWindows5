@@ -8,7 +8,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('showChangelogs') }}">Changelogs</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('showChangelogs', $changelog->platform) }}">{{ $changelog->device }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('showChangelogs', $changelog->platform) }}">{{ getPlatformById($changelog->platform) }}</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('showChangelogs', [$changelog->platform, $changelog->build]) }}">{{ $changelog->build }}</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('editChangelog', [$changelog->id]) }}">{{ $changelog->delta }}</a></li>
             </ol>

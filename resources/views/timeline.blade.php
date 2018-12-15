@@ -8,7 +8,7 @@
 <a class="hero" href="{{ route('viv') }}">
     <span class="text">
         <span class="h2">viv Preview</span>
-        <span class="h5">The ChangeWindows 5 Preview is here, let us walk you through it</span>
+        <span class="h5">The ChangeWindows 5 Preview is here</span>
     </span>
 </a>
 @endsection
@@ -46,17 +46,17 @@
                 <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New build</a>
             @endif
         @endauth
-        <p class="h3">PC</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> Desktop</p>
         <div class="row row-gutter">
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['active'] ) ?></div>
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['release'] ) ?></div>
-            <div class="col-sl-4 col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['pc']['target'] ) ?></div>
-            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['broad'] ) ?></div>
-            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['ltsc'] ) ?></div>
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['skip'] ) ?></div>
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['active'] ) ?></div>
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['slow'] ) ?></div>
+            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['release'] ) ?></div>
+            <div class="col-sl-4 col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['desktop']['target'] ) ?></div>
+            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['broad'] ) ?></div>
+            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['ltsc'] ) ?></div>
         </div>
-        <p class="h3">Xbox</p>
+        <p class="h3"><i class="fab fa-fw fa-xbox"></i> Xbox</p>
         <div class="row row-gutter">
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['skip'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['active'] ) ?></div>
@@ -65,19 +65,19 @@
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['release'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['target'] ) ?></div>
         </div>
-        <p class="h3">IoT</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> IoT</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iot']['slow'] ) ?></div>
             <div class="col"><?php getTile( $flights['iot']['target'] ) ?></div>
             <div class="col"><?php getTile( $flights['iot']['broad'] ) ?></div>
         </div>
-        <p class="h3">Server</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> Server</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['server']['slow'] ) ?></div>
             <div class="col"><?php getTile( $flights['server']['target'] ) ?></div>
             <div class="col"><?php getTile( $flights['server']['ltsc'] ) ?></div>
         </div>
-        <p class="h3">Holographic</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> Holographic</p>
         <div class="row row-gutter">
             <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['active'] ) ?></div>
             <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['slow'] ) ?></div>
@@ -85,21 +85,21 @@
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['broad'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
         </div>
-        <p class="h3">Team</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['team']['target'] ) ?></div>
             <div class="col"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
-        <p class="h3">Mobile</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['mobile']['target'] ) ?></div>
             <div class="col"><?php getTile( $flights['mobile']['broad'] ) ?></div>
         </div>
-        <p class="h3">SDK</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['sdk']['target'] ) ?></div>
         </div>
-        <p class="h3">ISO</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> ISO</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iso']['target'] ) ?></div>
         </div>
@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label extra-margin">PC</label>
+                                <label for="ring" class="control-label extra-margin">Desktop</label>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][0]" value="0"> <span class="label leak">vNext</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][1]" value="1"> <span class="label skip">Skip Ahead</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][2]" value="2"> <span class="label fast">Fast Ring</span></label></div>

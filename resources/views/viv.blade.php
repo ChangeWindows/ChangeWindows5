@@ -16,7 +16,7 @@
         <p>With <i>viv</i> we're going to do a few things differently. ChangeWindows will receive a new look with our primary goal set to making our website more accessible, easier to use and easier to navigate. Of course, what you're seeing now is only a <b>very early</b> preview of <i>viv</i>, so if you don't want that, feel free to return to <a href="https://changewindows.org">ChangeWindows 4.12</a>. Everything you're looking for is probably there.</p>
         <h2>Patrons</h2>
         <a href="https://www.patreon.com/bePatron?c=1028298" class="btn btn-primary btn-patreon"><i class="fab fa-fw fa-patreon"></i> Become a Patron</a>
-        <p>These are our donators, they help us make ChangeWindows a holographic. If you want to join them in this, feel free to click the 'Become a Patron' button.</p>
+        <p>These are our donators, they help us make ChangeWindows a reality. If you want to join them in this, feel free to click the 'Become a Patron' button.</p>
         <h4>ChangeWindows Insider</h4>
 
         <h4>Contributor +</h4>

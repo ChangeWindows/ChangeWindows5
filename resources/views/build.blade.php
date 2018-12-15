@@ -16,7 +16,7 @@
             @foreach ($releases as $release)
                 <div class="timeline-row">
                     <a class="row" href="#">
-                        <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.$release->platform_img) }}" class="img-platform img-jump" alt="{{ $release->device }}" />{{ $release->build }}.{{ $release->delta }}</div>
+                        <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($release->platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($release->platform) }}" />{{ $release->build }}.{{ $release->delta }}</div>
                         <div class="col-6 col-md-8 ring"><span class="label {{ $release->class }}">{{ $release->flight }}</span></div>
                     </a>
                 </div>

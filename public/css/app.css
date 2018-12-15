@@ -10247,6 +10247,21 @@ h1 {
   line-height: 1;
 }
 
+.h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #0098df;
+}
+
+.h3:first-child {
+  margin-top: 0;
+}
+
+.h3 .fab {
+  font-weight: 500;
+}
+
 .app {
   margin-left: 320px;
   background-color: #f8f8f8;
@@ -10421,8 +10436,6 @@ h1 {
 .timeline .timeline-row {
   padding-left: 15px;
   padding-right: 15px;
-  border-style: solid;
-  border-width: 4px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   z-index: 9700;
@@ -10430,17 +10443,14 @@ h1 {
 
 .timeline .timeline-row:nth-child(odd) {
   background-color: #eee;
-  border-color: #eee;
 }
 
 .timeline .timeline-row:nth-child(even) {
   background-color: #f8f8f8;
-  border-color: #f8f8f8;
 }
 
 .timeline .timeline-row:hover {
   background-color: #e6e6e6;
-  border-color: #e6e6e6;
 }
 
 .timeline .timeline-row a.row .build {
@@ -10449,7 +10459,7 @@ h1 {
 
 .timeline .timeline-row .row {
   color: #000;
-  padding: 8px 0;
+  padding: 12px 0;
   font-size: 100%;
 }
 

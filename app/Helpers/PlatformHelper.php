@@ -2,7 +2,7 @@
 
 function getPlatformById($id) {
     switch ($id) {
-        case 1:     return 'PC';
+        case 1:     return 'Desktop';
         case 2:     return 'Mobile';
         case 3:     return 'Xbox';
         case 4:     return 'Server';
@@ -17,7 +17,7 @@ function getPlatformById($id) {
 
 function getPlatformImage($id) {
     switch ($id) {
-        case 1:     return 'pc.png';
+        case 1:     return 'desktop.png';
         case 2:     return 'mobile.png';
         case 3:     return 'xbox.png';
         case 4:     return 'server.png';

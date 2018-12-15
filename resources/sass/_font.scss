@@ -17,3 +17,18 @@
 h1 {
     line-height: 1;
 }
+
+.h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: $accent;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .fab {
+        font-weight: 500;
+    }
+}
