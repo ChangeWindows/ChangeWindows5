@@ -29,7 +29,7 @@
         </script>
     </head>
     <body>
-        <nav class="nav">
+        <nav class="split">
             <div class="nav-container">
                 <a href="{{ route('timeline') }}" class="nav-brand">
                     <img src="{{ asset('img/logo_black.png') }}" />

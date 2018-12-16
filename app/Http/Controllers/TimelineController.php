@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Release;
+use App\Changelog;
+use Parsedown;
 
 class TimelineController extends Controller
 {
@@ -80,12 +82,25 @@ class TimelineController extends Controller
     }
 
     public function show($build, $platform = null) {
+        $cur_build = $build;
+        $cur_platform = $platform === null ? '1' : $platform;
+
         if ($platform) {
-            $releases = Release::where('build', $build)->where('platform', $platform)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
+            $releases = Release::where('build', $cur_build)->where('platform', $platform)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->get();
         } else {
-            $releases = Release::where('build', $build)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
+            $releases = Release::where('build', $cur_build)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
         }
 
-        return view('build', compact('releases'));
+        foreach($releases as $release) {
+            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
+        }
+
+        $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
+
+        $changelogs = Changelog::where('build', $cur_build)->where('platform', $cur_platform)->get();
+
+        $parsedown = new Parsedown();
+
+        return view('build', compact('timeline', 'platforms', 'changelogs', 'cur_build', 'cur_platform', 'parsedown'));
     }
 }
