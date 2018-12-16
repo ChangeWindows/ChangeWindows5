@@ -15,9 +15,11 @@
 @section('content')
 <div class="row">
     <div class="col-lg-8">
-        @foreach ($changelogs as $changelog)
-            {!! $parsedown->text($changelog->changelog) !!}
-        @endforeach
+        <div class="changelog">
+            @foreach ($changelogs as $changelog)
+                {!! $parsedown->text($changelog->changelog) !!}
+            @endforeach
+        </div>
     </div>
     <div class="col-lg-4">
         <div class="timeline">

@@ -10780,6 +10780,86 @@ h1 {
   margin-right: 20px;
 }
 
+.changelog a + h3 {
+  margin-top: 10px;
+}
+
+.changelog h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.changelog h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.changelog h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.changelog .alert.alert-warning {
+  color: #e74018;
+  border: none;
+  border-left: 5px solid #e74018;
+  background-color: transparent !important;
+  padding: 10px 20px;
+  text-align: left !important;
+  margin: 7px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.changelog .alert.alert-warning h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.changelog .minilog {
+  margin-bottom: 0;
+}
+
+.changelog .date-heading {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.changelog .date-heading small {
+  font-size: 19px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.changelog section {
+  padding-bottom: 10px;
+}
+
+.changelog section .date-heading {
+  padding-bottom: 0;
+}
+
+.changelog section .date-box {
+  margin: -4px 0 5px;
+  color: #aaa;
+}
+
+.changelog section .date-box .label {
+  margin: 0 5px !important;
+}
+
+.changelog section .date-box .label:first-child {
+  margin-left: 0 !important;
+}
+
+.changelog section .date-box .label:last-child {
+  margin-right: 0 !important;
+}
+
+.changelog section:last-child {
+  padding-bottom: 0;
+}
+
 body {
   background-color: #e8e8e8;
 }
