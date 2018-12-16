@@ -53,18 +53,18 @@
         .link {
             display: block;
             height: 48px;
-            line-height: 48px;
+            line-height: 45px;
             color: #333;
             border: 1px solid transparent;
             box-sizing: border-box;
             overflow: hidden;
 
             .inner {
-                border-left: 3px solid transparent;
+                border-left: 4px solid transparent;
                 width: 320px;
                 
                 .fa-fw {
-                    margin-left: 10px;
+                    margin-left: 9px;
                     margin-right: 14px;
                     text-align: center;
                 }

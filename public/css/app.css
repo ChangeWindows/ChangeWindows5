@@ -10349,7 +10349,7 @@ h1 {
 .split .nav-container .link {
   display: block;
   height: 48px;
-  line-height: 48px;
+  line-height: 45px;
   color: #333;
   border: 1px solid transparent;
   -webkit-box-sizing: border-box;
@@ -10358,12 +10358,12 @@ h1 {
 }
 
 .split .nav-container .link .inner {
-  border-left: 3px solid transparent;
+  border-left: 4px solid transparent;
   width: 320px;
 }
 
 .split .nav-container .link .inner .fa-fw {
-  margin-left: 10px;
+  margin-left: 9px;
   margin-right: 14px;
   text-align: center;
 }
@@ -10701,17 +10701,20 @@ h1 {
 .pagination .page-item .page-link {
   background-color: transparent;
   border: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 4px solid transparent;
   color: #0098df;
   border-radius: 0;
-  width: 40px;
   text-align: center;
 }
 
 .pagination .page-item:not(.disabled).active .page-link, .pagination .page-item:not(.disabled):hover .page-link {
   background-color: transparent;
-  border-bottom: 3px solid #0098df;
+  border-bottom: 4px solid #0098df;
   color: #0098df;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #666;
 }
 
 .list-group .list-group-item {

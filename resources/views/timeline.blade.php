@@ -38,6 +38,7 @@
                 @endforeach
             @endforeach
         </div>
+        {{ $releases->links() }}
     </div>
     <div class="col-lg-5">
         @auth
@@ -105,8 +106,6 @@
         </div>
     </div>
 </div>
-
-{{ $releases->links() }}
 @endsection
 
 @section('modals')
