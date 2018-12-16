@@ -43,6 +43,7 @@
                 -->
                 <hr />
                 <a class="link" href="https://medium.com/changewindows"><span class="inner"><i class="fab fa-fw fa-medium-m"></i> Blog</span></a>
+                <a class="link" href="https://github.com/ChangeWindows/Viv/issues/new"><span class="inner"><i class="fab fa-fw fa-github"></i> Give Feedback</span></a>
                 <a class="link {{ Request::is('viv') ? 'active' : '' }}" href="{{ route('viv') }}"><span class="inner"><i class="fal fa-fw fa-alicorn"></i> About viv</span></a>
                 @auth
                     @if (Auth::user()->hasAnyRole(['Admin']))
