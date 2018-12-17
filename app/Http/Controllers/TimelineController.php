@@ -12,7 +12,7 @@ class TimelineController extends Controller
     public function index() {
         $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
 
-        foreach($releases as $release) {
+        foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
         }
 
@@ -86,21 +86,26 @@ class TimelineController extends Controller
         $cur_platform = $platform === null ? '1' : $platform;
 
         if ($platform) {
-            $releases = Release::where('build', $cur_build)->where('platform', $platform)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->get();
+            $releases = Release::where('build', $cur_build)->where('platform', $platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
         } else {
-            $releases = Release::where('build', $cur_build)->orderBy('date', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
-        }
-
-        foreach($releases as $release) {
-            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
+            $releases = Release::where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
         }
 
         $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
 
         $changelogs = Changelog::where('build', $cur_build)->where('platform', $cur_platform)->get();
 
+        foreach ($releases as $release) {
+            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
+            $notes[$release->delta]['rings'][$release->ring] = $release;
+        }
+
+        foreach ($changelogs as $changelog) {
+            $notes[$changelog->delta]['changelog'] = $changelog->changelog;
+        }
+
         $parsedown = new Parsedown();
 
-        return view('build', compact('timeline', 'platforms', 'changelogs', 'cur_build', 'cur_platform', 'parsedown'));
+        return view('build', compact('timeline', 'platforms', 'notes', 'cur_build', 'cur_platform', 'parsedown'));
     }
 }

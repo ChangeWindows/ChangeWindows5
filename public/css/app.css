@@ -10763,7 +10763,7 @@ h1 {
 
 .nav.nav-tabs .nav-item .nav-link {
   border: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 4px solid transparent;
   padding: 12px 0;
   margin: 0 10px;
   color: #333;
@@ -10802,14 +10802,18 @@ h1 {
   font-weight: 700;
 }
 
+.changelog .alert {
+  border-radius: 0;
+}
+
 .changelog .alert.alert-warning {
   color: #e74018;
   border: none;
   border-left: 5px solid #e74018;
   background-color: transparent !important;
-  padding: 10px 20px;
+  padding: 0 15px;
   text-align: left !important;
-  margin: 7px 0;
+  margin: 0 0 7px;
   font-size: 18px;
   font-weight: 600;
 }
@@ -10817,6 +10821,7 @@ h1 {
 .changelog .alert.alert-warning h4 {
   font-size: 24px;
   font-weight: 700;
+  margin: 0;
 }
 
 .changelog .minilog {
@@ -10826,12 +10831,33 @@ h1 {
 .changelog .date-heading {
   font-size: 27px;
   font-weight: 600;
+  padding-bottom: 0;
 }
 
 .changelog .date-heading small {
   font-size: 19px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.changelog .date-box {
+  margin: -4px 0 5px;
+  color: #aaa;
+  padding-bottom: 10px;
+}
+
+.changelog .date-box .label {
+  margin: 0 3px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.changelog .date-box .label:first-child {
+  margin-left: 0 !important;
+}
+
+.changelog .date-box .label:last-child {
+  margin-right: 0 !important;
 }
 
 .changelog section {
@@ -10892,7 +10918,7 @@ body {
   display: block;
   font-weight: 700;
   color: #fff;
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 0;
 }
 

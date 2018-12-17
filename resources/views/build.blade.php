@@ -16,8 +16,30 @@
 <div class="row">
     <div class="col-lg-8">
         <div class="changelog">
-            @foreach ($changelogs as $changelog)
-                {!! $parsedown->text($changelog->changelog) !!}
+            @foreach ($notes as $delta => $info)
+                <h2 class="date-heading text-accent">{{ $cur_build }}.{{ $delta }}</h2>
+                <div class="date-box">
+                    @php
+                        $first = false;
+                    @endphp
+                    @foreach ($info['rings'] as $ring => $release)
+                        @if ($first)
+                            <i class="fal fa-fw fa-angle-right"></i>
+                        @endif
+                        <span class="label {{ getRingClassById($ring) }}">{{ $release->date->format('j M \'y') }}</span>
+                        @if (!$first)
+                            @php
+                                $first = true;
+                            @endphp
+                        @endif
+                    @endforeach
+                </div>
+
+                @if (array_key_exists('changelog', $info))
+                    {!! $parsedown->text($info['changelog']) !!}
+                @else
+                    <h4>No changelog yet</h4>
+                @endif
             @endforeach
         </div>
     </div>
@@ -31,8 +53,8 @@
                         @foreach ($platforms as $platform => $rings)
                             <div class="timeline-row">
                                 <a class="row" href="{{ route('showRelease', $build, $platform) }}">
-                                    <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
-                                    <div class="col-6 col-md-8 ring">
+                                    <div class="col-6 col-md-5 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
+                                    <div class="col-6 col-md-7 ring">
                                         @foreach ($rings as $ring)
                                             <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
                                         @endforeach

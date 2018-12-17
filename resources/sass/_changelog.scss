@@ -19,20 +19,23 @@
     }
 
     .alert {
+        border-radius: 0;
+
         &.alert-warning {
             color: $skip;
             border: none;
             border-left: 5px solid $skip;
             background-color: transparent !important;
-            padding: 10px 20px;
+            padding: 0 15px;
             text-align: left !important;
-            margin: 7px 0;
+            margin: 0 0 7px;
             font-size: 18px;
             font-weight: 600;
 
             h4 {
                 font-size: 24px;
                 font-weight: 700;
+                margin: 0;
             }
         }
     }
@@ -44,11 +47,32 @@
     .date-heading {
         font-size: 27px;
         font-weight: 600;
+        padding-bottom: 0;
 
         small {
             font-size: 19px;
             font-weight: 600;
             text-transform: uppercase;
+        }
+    }
+    
+    .date-box {
+        margin: -4px 0 5px;
+        color: #aaa;
+        padding-bottom: 10px;
+        
+        .label {
+            margin: 0 3px !important;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            &:first-child {
+                margin-left: 0 !important;
+            }
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
         }
     }
 
