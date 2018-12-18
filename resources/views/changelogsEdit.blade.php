@@ -17,6 +17,7 @@
     <div class="col-2">
         <a class="btn btn-primary btn-block" href="{{ route('createChangelogs') }}"><i class="fal fa-fw fa-plus"></i> Add changelog</a>
         <div class="list-group mt-3">
+            <a href="{{ URL::to('changelog/0') }}" class="list-group-item {{ $changelog->platform == '0' ? 'active' : ''}}">Generic</a>
             <a href="{{ URL::to('changelog/1') }}" class="list-group-item {{ $changelog->platform == '1' ? 'active' : ''}}">PC</a>
             <a href="{{ URL::to('changelog/2') }}" class="list-group-item {{ $changelog->platform == '2' ? 'active' : ''}}">Mobile</a>
             <a href="{{ URL::to('changelog/3') }}" class="list-group-item {{ $changelog->platform == '3' ? 'active' : ''}}">Xbox</a>
@@ -35,6 +36,7 @@
                 <div class="form-group">
                     <label for="platform">Platform</label>
                     <select class="form-control" id="platform" name="platform" aria-describedby="platform" value="{{ $changelog->platform }}">
+                        <option value="0">Generic</option>
                         <option value="1">PC</option>
                         <option value="2">Mobile</option>
                         <option value="3">Xbox</option>

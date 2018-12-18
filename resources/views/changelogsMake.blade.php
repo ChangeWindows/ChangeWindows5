@@ -16,6 +16,7 @@
         <div class="form-group">
             <label for="platform">Platform</label>
             <select class="form-control" id="platform" name="platform" aria-describedby="platform">
+                <option value="0">Generic</option>
                 <option value="1">PC</option>
                 <option value="2">Mobile</option>
                 <option value="3">Xbox</option>

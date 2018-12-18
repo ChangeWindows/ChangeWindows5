@@ -2,6 +2,7 @@
 
 function getPlatformById($id) {
     switch ($id) {
+        case 0:     return 'Generic';
         case 1:     return 'Desktop';
         case 2:     return 'Mobile';
         case 3:     return 'Xbox';
