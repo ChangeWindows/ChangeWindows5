@@ -30,3 +30,18 @@ function getPlatformImage($id) {
         default:    return;
     }
 }
+
+function getPlatformClass($id) {
+    switch ($id) {
+        case 1:     return 'desktop';
+        case 2:     return 'mobile';
+        case 3:     return 'xbox';
+        case 4:     return 'server';
+        case 5:     return 'holographic';
+        case 6:     return 'iot';
+        case 7:     return 'team';
+        case 8:     return 'iso';
+        case 9:     return 'sdk';
+        default:    return;
+    }
+}

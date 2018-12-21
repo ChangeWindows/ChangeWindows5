@@ -24,6 +24,8 @@ Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name
 Route::patch('/changelog/{id}', 'ChangelogController@update')->name('updateChangelogs');
 Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
+Route::get('/flight', 'FlightController@index')->name('showFlights');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/viv', 'PreviewController@index')->name('viv');

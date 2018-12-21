@@ -11,9 +11,6 @@
 
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/light.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/brands.min.css') }}" rel="stylesheet">
         
         <script>
             if ( typeof Windows !== 'undefined' ) {
@@ -49,6 +46,7 @@
                     @if (Auth::user()->hasAnyRole(['Admin']))
                         <hr />
                         <p class="subnav">Admin</p>
+                        <a class="link {{ Request::is('flights*') ? 'active' : '' }}" href="{{ route('showFlights') }}"><span class="inner"><i class="fal fa-fw fa-plane"></i> Flights</span></a>
                         <a class="link {{ Request::is('changelog*') ? 'active' : '' }}" href="{{ route('showChangelogs') }}"><span class="inner"><i class="fal fa-fw fa-align-left"></i> Changelogs</span></a>
                     @endif
                 @endauth
