@@ -1,48 +1,55 @@
-.flight {
+.flight-set {
     border: 1px solid #ddd;
-    padding: 5px 10px 8px;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 10px;
-    display: block;
-    transition: all .3s;
-    
+        
     &:hover {
         text-decoration: none;
         box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
     }
 
-    p {
-        margin: 0;
-        line-height: 1;
-
-        &.build {
-            color: #333;
-            font-size: 18px;
-            font-weight: 600;
-            margin: 4px 0;
-        }
-
-        &.ring {
-            .label {
-                text-transform: unset;
+    .flight {
+        display: block;
+        transition: all .3s;
+        padding: 5px 10px 8px;
+    
+        p {
+            margin: 0;
+            line-height: 1;
+    
+            &.build {
+                color: #333;
+                font-size: 18px;
+                font-weight: 600;
+                margin: 4px 0;
+            }
+    
+            &.ring {
+                .label {
+                    text-transform: unset;
+                }
             }
         }
-    }
+        
+        .img {
+            display: inline-block;
+            margin-right: 10px;
+            float: left;
     
-    .img {
-        display: inline-block;
-        margin-right: 10px;
-        float: left;
-
-        img {
-            width: 24px;
-            height: 24px;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    
+        .data {
+            display: inline-block;
         }
     }
 
-    .data {
-        display: inline-block;
+    .btn {
+        border: none;
     }
 }
 

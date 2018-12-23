@@ -20,4 +20,12 @@ class FlightController extends Controller
 
         return view('flights', compact('releases', 'timeline'));
     }
+
+    public function destroy(Request $request, $id) {
+        $request->user()->authorizeRoles('Admin');
+        
+        Release::destroy($id);
+
+        return redirect('flight');
+    }
 }

@@ -18891,43 +18891,48 @@ h1 {
   padding-bottom: 0;
 }
 
-.flight {
+.flight-set {
   border: 1px solid #ddd;
-  padding: 5px 10px 8px;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 10px;
-  display: block;
-  transition: all 0.3s;
 }
-.flight:hover {
+.flight-set:hover {
   text-decoration: none;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
-.flight p {
+.flight-set .flight {
+  display: block;
+  transition: all 0.3s;
+  padding: 5px 10px 8px;
+}
+.flight-set .flight p {
   margin: 0;
   line-height: 1;
 }
-.flight p.build {
+.flight-set .flight p.build {
   color: #333;
   font-size: 18px;
   font-weight: 600;
   margin: 4px 0;
 }
-.flight p.ring .label {
+.flight-set .flight p.ring .label {
   text-transform: unset;
 }
-.flight .img {
+.flight-set .flight .img {
   display: inline-block;
   margin-right: 10px;
   float: left;
 }
-.flight .img img {
+.flight-set .flight .img img {
   width: 24px;
   height: 24px;
 }
-.flight .data {
+.flight-set .flight .data {
   display: inline-block;
+}
+.flight-set .btn {
+  border: none;
 }
 
 .flight-row {

@@ -17,13 +17,20 @@
                             @foreach ($platforms as $platform => $rings)
                                 @foreach ($rings as $ring)
                                     <div class="col-sl-1 col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
-                                        <a class="flight" href="{{ URL::to('build/'.$build.'/'.$platform) }}">
-                                            <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-fluid" alt="{{ getPlatformById($platform) }}" /></div>
-                                            <div class="data">
-                                                <p class="build">{{ $build }}.{{ $delta }}</p>
-                                                <p class="ring"><span class="label {{ $ring->class }}">{{ $ring->flight }}</span></p>
-                                            </div>
-                                        </a>
+                                        <div class="flight-set">
+                                            <a class="flight" href="{{ URL::to('build/'.$build.'/'.$platform) }}">
+                                                <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-fluid" alt="{{ getPlatformById($platform) }}" /></div>
+                                                <div class="data">
+                                                    <p class="build">{{ $build }}.{{ $delta }}</p>
+                                                    <p class="ring"><span class="label {{ $ring->class }}">{{ $ring->flight }}</span></p>
+                                                </div>
+                                            </a>
+                                            <form method="POST" action="{{ URL::to('flight/'.$ring->id) }}">
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-light"><i class="fal fa-fw fa-trash-alt"></i></button>
+                                            </form>
+                                        </div>
                                     </div>
                                 @endforeach
                             @endforeach
