@@ -14,7 +14,7 @@ class CreateMilestonesTable extends Migration
     public function up()
     {
         Schema::create('milestones', function (Blueprint $table) {
-            $table->increments('id');
+            $table->string('id')->unique();
             $table->string('osname');
             $table->string('name');
             $table->string('codename');
