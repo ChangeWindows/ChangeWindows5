@@ -169,7 +169,7 @@
                                 <label for="ring" class="control-label extra-margin">Server</label>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[4][0]" value="0"> <span class="label leak">vNext</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[4][3]" value="3"> <span class="label slow">Preview</span></label></div>
-                                <div class="checkbox"><label><input type="checkbox" name="flight[4][6]" value="7"> <span class="label targeted">Semi-Annual Targeted</span></label></div>
+                                <div class="checkbox"><label><input type="checkbox" name="flight[4][6]" value="6"> <span class="label targeted">Semi-Annual Targeted</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[4][7]" value="7"> <span class="label broad">Semi-Annual Broad</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[4][8]" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></label></div>
                             </div>
