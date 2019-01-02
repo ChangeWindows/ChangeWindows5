@@ -26,6 +26,20 @@ body {
     background-color: #e8e8e8;
 }
 
+@media all and (max-width:1199px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media all and (min-width:1200px) {
+    .container {
+        width: 1170px;
+        max-width: 100%;
+    }
+}
+
 // Hero
 .hero {
     background-image: url("../img/header.png");
@@ -101,5 +115,13 @@ body {
 
     h1 {
         margin-bottom: 0;
+    }
+}
+
+.navbar {
+    img {
+        width: 20px;
+        height: auto;
+        margin-top: -3px;
     }
 }
