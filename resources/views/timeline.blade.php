@@ -49,13 +49,13 @@
         @endauth
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Desktop</p>
         <div class="row row-gutter">
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['skip'] ) ?></div>
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['active'] ) ?></div>
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['slow'] ) ?></div>
-            <div class="col-sl-3 col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['release'] ) ?></div>
-            <div class="col-sl-4 col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['desktop']['target'] ) ?></div>
-            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['broad'] ) ?></div>
-            <div class="col-sl-4 col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['ltsc'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['skip'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['active'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['slow'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['release'] ) ?></div>
+            <div class="col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['desktop']['target'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['broad'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['ltsc'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-xbox"></i> Xbox</p>
         <div class="row row-gutter">

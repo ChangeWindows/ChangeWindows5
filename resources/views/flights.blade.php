@@ -16,7 +16,7 @@
                         @foreach ($deltas as $delta => $platforms)
                             @foreach ($platforms as $platform => $rings)
                                 @foreach ($rings as $ring)
-                                    <div class="col-sl-1 col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
+                                    <div class="col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
                                         <div class="flight-set">
                                             <a class="flight" href="{{ URL::to('build/'.$build.'/'.$platform) }}">
                                                 <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-fluid" alt="{{ getPlatformById($platform) }}" /></div>
