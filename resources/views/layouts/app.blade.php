@@ -66,6 +66,9 @@
                             @auth
                                 <a class="dropdown-item" href="{{ route('profile') }}"><i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fal fa-fw fa-sign-out"></i> Log out</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             @else
                                 
                                 <a class="dropdown-item" href="{{ route('register') }}"><i class="fal fa-fw fa-user-plus"></i> Register</a>
