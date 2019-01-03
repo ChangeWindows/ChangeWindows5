@@ -12,6 +12,8 @@ class ChangelogController extends Controller
     }
 
     public function index(Request $request, $platform = null, $build = null) {
+        $request->user()->authorizeRoles('Admin');
+        
         if ($platform != null && $build == null) {
             $changelogs = Changelog::where('platform', $platform)
                                     ->orderBy('build', 'desc')

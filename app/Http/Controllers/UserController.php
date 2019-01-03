@@ -22,7 +22,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function index(Request $request) {
+        $request->user()->authorizeRoles('Admin');
+
         $users = User::paginate(50);
 
         return view('users', compact('users'));

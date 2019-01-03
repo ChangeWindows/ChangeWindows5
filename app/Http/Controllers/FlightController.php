@@ -12,6 +12,8 @@ class FlightController extends Controller
     }
 
     public function index(Request $request) {
+        $request->user()->authorizeRoles('Admin');
+        
         $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(100);
 
         foreach ($releases as $release) {
