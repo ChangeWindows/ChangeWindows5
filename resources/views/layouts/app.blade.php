@@ -16,10 +16,10 @@
             if ( typeof Windows !== 'undefined' ) {
                 var titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
 
-                titleBar.backgroundColor = {a: 255, r: 232, g: 232, b: 232};
-                titleBar.inactiveBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
-                titleBar.buttonBackgroundColor = {a: 255, r: 232, g: 232, b: 232};
-                titleBar.buttonInactiveBackgroundColor  = {a: 255, r: 232, g: 232, b: 232};
+                titleBar.backgroundColor = {a: 255, r: 248, g: 248, b: 248};
+                titleBar.inactiveBackgroundColor = {a: 255, r: 248, g: 248, b: 248};
+                titleBar.buttonBackgroundColor = {a: 255, r: 248, g: 248, b: 248};
+                titleBar.buttonInactiveBackgroundColor  = {a: 255, r: 248, g: 248, b: 248};
                 titleBar.buttonHoverBackgroundColor = {a: 255, r: 219, g: 219, b: 219};
                 titleBar.buttonPressedBackgroundColor = {a: 255, r: 203, g: 203, b: 203};
             }
@@ -82,7 +82,7 @@
                                     <h6 class="dropdown-header">Manage</h6>
                                     <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="fal fa-fw fa-plane"></i> Flights</a>
                                     <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fal fa-fw fa-align-left"></i> Changelogs</a>
-                                    <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fal fa-fw fa-users"></i> Users</a>
+                                    <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="fal fa-fw fa-users"></i> Users</a>
                                 @endif
                             @endauth
                         </div>
@@ -93,7 +93,7 @@
 
         <div class="container" id="app">
             @yield('hero')
-            <main class="container-fluid">
+            <main class="content">
                 @yield('content')
             </main>
         </div>

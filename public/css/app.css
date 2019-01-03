@@ -17507,14 +17507,29 @@ h1 {
 }
 
 .container {
-  background-color: #f8f8f8;
   padding: 0;
 }
 
-.container-fluid {
-  padding: 20px;
+.content {
+  padding: 10px 0;
 }
 
+@media all and (max-width: 1199px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    max-width: 100%;
+  }
+}
 .split {
   background-color: #e8e8e8;
   width: 320px;
@@ -17647,13 +17662,13 @@ h1 {
   z-index: 9700;
 }
 .timeline .timeline-row:nth-child(odd) {
-  background-color: #eee;
+  background-color: #fff;
 }
 .timeline .timeline-row:nth-child(even) {
   background-color: #f8f8f8;
 }
 .timeline .timeline-row:hover {
-  background-color: #e6e6e6;
+  background-color: #eee;
 }
 .timeline .timeline-row a.row .build {
   color: #000;
@@ -17797,12 +17812,12 @@ h1 {
 }
 
 .row-gutter {
-  margin-left: -2px;
-  margin-right: -2px;
+  margin-left: -2px !important;
+  margin-right: -2px !important;
 }
 .row-gutter > div {
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
 }
 
 .label {
@@ -18057,22 +18072,6 @@ h1 {
   padding-right: 5px;
 }
 
-body {
-  background-color: #e8e8e8;
-}
-
-@media all and (max-width: 1199px) {
-  .container {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-@media all and (min-width: 1200px) {
-  .container {
-    width: 1170px;
-    max-width: 100%;
-  }
-}
 .hero {
   background-image: url("../img/header.png");
   background-repeat: no-repeat;
@@ -18142,4 +18141,14 @@ body {
   width: 20px;
   height: auto;
   margin-top: -3px;
+}
+
+.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.row > .col,
+.row > [class*=col-] {
+  padding-right: 5px;
+  padding-left: 5px;
 }

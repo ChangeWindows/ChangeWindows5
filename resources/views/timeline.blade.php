@@ -14,7 +14,7 @@
 @endsection
 
 @section('content')
-<div class="row">
+<div class="row px-n10">
     <div class="col-lg-7">
         <div class="timeline">
             @foreach ($timeline as $date => $builds)

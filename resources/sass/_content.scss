@@ -1,8 +1,25 @@
 .container {
-    background-color: #f8f8f8;
     padding: 0;
 }
 
-.container-fluid {
-    padding: 20px;
+.content {
+    padding: 10px 0;
+}
+
+@media all and (max-width:1199px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+@media all and (min-width:1200px) {
+    .container {
+        width: 1170px;
+        max-width: 100%;
+    }
 }

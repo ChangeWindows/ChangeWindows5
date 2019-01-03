@@ -21,7 +21,7 @@
         z-index: 9700;
                 
         &:nth-child(odd) {
-            background-color: #eee;
+            background-color: #fff;
         }
         
         &:nth-child(even) {
@@ -29,7 +29,7 @@
         }
     
         &:hover {
-            background-color: #e6e6e6;
+            background-color: #eee;
         }
     
         a.row .build {

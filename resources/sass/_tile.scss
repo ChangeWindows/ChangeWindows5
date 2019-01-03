@@ -144,11 +144,11 @@
 }
 
 .row-gutter {
-    margin-left: -2px;
-    margin-right: -2px;
+    margin-left: -2px !important;
+    margin-right: -2px !important;
 
     & > div {
-        padding-left: 2px;
-        padding-right: 2px;
+        padding-left: 2px !important;
+        padding-right: 2px !important;
     }
 }
