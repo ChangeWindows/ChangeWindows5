@@ -27,6 +27,8 @@ Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 
+Route::get('/users', 'UserController@index')->name('showUsers');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/viv', 'PreviewController@index')->name('viv');
