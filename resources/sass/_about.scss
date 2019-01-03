@@ -1,0 +1,62 @@
+.release-notes {
+    margin-bottom: 2rem;
+
+    h3 {
+        font-weight: 600;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eee;
+
+        small {
+            color: #999;
+            font-weight: 600;
+        }
+    }
+
+    h4 {
+        font-weight: 600;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
+
+    p {
+        line-height: 2;
+        border-left: .1rem solid #ddd;
+        margin-left: .85rem;
+        padding-left: 1.4rem;
+        margin-bottom: 0;
+    }
+
+    .fa-fw {
+        &.fa-plus {
+            color: $green;
+        }
+    
+        &.fa-wrench {
+            color: $teal;
+        }
+    
+        &.fa-server {
+            color: $yellow;
+        }
+    
+        &.fa-exchange {
+            color: $orange;
+        }
+    
+        &.fa-trash-alt {
+            color: $red;
+        }
+    
+        &.fa-bug {
+            color: $blue;
+        }
+
+        &.fa-exclamation-triangle {
+            color: $pink;
+        }
+    }
+}
