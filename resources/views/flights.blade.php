@@ -28,7 +28,7 @@
                                             <form method="POST" action="{{ URL::to('flight/'.$ring->id) }}">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-light"><i class="fal fa-fw fa-trash-alt"></i></button>
+                                                <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>
                                             </form>
                                         </div>
                                     </div>

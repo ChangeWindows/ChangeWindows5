@@ -17893,6 +17893,7 @@ h1 {
 
 .btn {
   border-radius: 0;
+  border-color: transparent;
 }
 
 .breadcrumb {
@@ -18023,6 +18024,7 @@ h1 {
   border: 1px solid #ddd;
   margin-left: 0;
   margin-right: 0;
+  transition: all 0.5s;
   margin-bottom: 10px;
 }
 .flight-set:hover {
@@ -18119,6 +18121,33 @@ h1 {
 }
 .release-notes .fa-fw.fa-exclamation-triangle {
   color: #e52262;
+}
+
+.user {
+  padding: 5px;
+  border: 1px solid #ddd;
+  transition: all 0.5s;
+}
+.user:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.user .fa-user-circle {
+  font-size: 40px;
+  margin-top: 7px;
+}
+.user .h2 {
+  margin: 0 0 6px;
+  line-height: 1;
+}
+.user .h6 {
+  margin: 0 !important;
+}
+.user .options {
+  margin: 10px -5px -5px;
+}
+
+.user-box {
+  padding: 5px 2px;
 }
 
 .hero {

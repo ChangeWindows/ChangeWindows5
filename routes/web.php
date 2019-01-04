@@ -28,6 +28,9 @@ Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 
 Route::get('/users', 'UserController@index')->name('showUsers');
+Route::patch('/users/{id}/promote', 'UserController@promote')->name('promoteUser');
+Route::patch('/users/{id}/demote', 'UserController@demote')->name('demoteUser');
+Route::delete('/users/{id}', 'UserController@destroy')->name('deleteUser');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
