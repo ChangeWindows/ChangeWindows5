@@ -18150,6 +18150,10 @@ h1 {
   padding: 5px 2px;
 }
 
+body {
+  margin-top: 57px;
+}
+
 .hero {
   background-image: url("../img/header.png");
   background-repeat: no-repeat;
