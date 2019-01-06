@@ -27,67 +27,73 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{{ route('timeline') }}">
-                <img src="{{ asset('img/logo_black.png') }}" />
-                <span class="title"><span class="font-light font-uppercase">Change</span><span class="font-bold font-uppercase">Windows</span> <span class="font-light">viv</span></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="container">
+                <a class="navbar-brand" href="{{ route('timeline') }}">
+                    <img src="{{ asset('img/logo_black.png') }}" />
+                    <span class="title"><span class="font-light">viv</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('timeline') }}"><i class="fal fa-fw fa-calendar-alt"></i> Timeline</a>
-                    </li>
-                    <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="/milestones"><i class="fal fa-fw fa-map-signs"></i> Milestones</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('timeline') }}"><i class="fal fa-fw fa-calendar-alt"></i> Timeline</a>
                         </li>
+                        <!--
+                            <li class="nav-item">
+                                <a class="nav-link" href="/milestones"><i class="fal fa-fw fa-map-signs"></i> Milestones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/rings"><i class="fal fa-fw fa-bullseye"></i> Rings</a>
+                            </li>
+                        -->
                         <li class="nav-item">
-                            <a class="nav-link" href="/rings"><i class="fal fa-fw fa-bullseye"></i> Rings</a>
+                            <a class="nav-link" href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                         </li>
-                    -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
-                    </li>
-                    <li class="nav-item {{ Request::is('viv') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            @auth
-                                <i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}
-                            @else
-                                <i class="fal fa-fw fa-sign-in"></i> Login
-                            @endauth
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @auth
-                                <a class="dropdown-item" href="{{ route('profile') }}"><i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fal fa-fw fa-sign-out"></i> Log out</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            @else
-                                
-                                <a class="dropdown-item" href="{{ route('register') }}"><i class="fal fa-fw fa-user-plus"></i> Register</a>
-                                <a class="dropdown-item" href="{{ route('login') }}"><i class="fal fa-fw fa-sign-in"></i> Login</a>
-                            @endauth
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new"><i class="fab fa-fw fa-github"></i> Give Feedback</a>
-                            @auth
-                                @if (Auth::user()->hasAnyRole(['Admin']))
-                                    <div class="dropdown-divider"></div>
-                                    <h6 class="dropdown-header">Manage</h6>
-                                    <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="fal fa-fw fa-plane"></i> Flights</a>
-                                    <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fal fa-fw fa-align-left"></i> Changelogs</a>
-                                    <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="fal fa-fw fa-users"></i> Users</a>
-                                @endif
-                            @endauth
-                        </div>
-                    </li>
-                </ul>
+                        <li class="nav-item {{ Request::is('viv') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @auth
+                                    <i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}
+                                @else
+                                    <i class="fal fa-fw fa-sign-in"></i> Login
+                                @endauth
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @auth
+                                    <a class="dropdown-item" href="{{ route('profile') }}"><i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fal fa-fw fa-sign-out"></i> Log out</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                @else
+                                    
+                                    <a class="dropdown-item" href="{{ route('register') }}"><i class="fal fa-fw fa-user-plus"></i> Register</a>
+                                    <a class="dropdown-item" href="{{ route('login') }}"><i class="fal fa-fw fa-sign-in"></i> Login</a>
+                                @endauth
+                                <div class="dropdown-divider"></div>
+                                <h6 class="dropdown-header">Preview</h6>
+                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=bug&template=bug_report.md&title="><i class="fal fa-fw fa-bug"></i> Report a bug</a>
+                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=&template=feature_request.md&title="><i class="fal fa-fw fa-box-heart"></i> Request a feature</a>
+                                @auth
+                                    @if (Auth::user()->hasAnyRole(['Admin']))
+                                        <div class="dropdown-divider"></div>
+                                        <h6 class="dropdown-header">Manage</h6>
+                                        <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="fal fa-fw fa-plane"></i> Flights</a>
+                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fal fa-fw fa-align-left"></i> Changelogs</a>
+                                        <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="fal fa-fw fa-users"></i> Users</a>
+                                    @endif
+                                @endauth
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
