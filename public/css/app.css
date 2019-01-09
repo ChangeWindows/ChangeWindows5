@@ -17506,18 +17506,18 @@ readers do not read off random characters that represent icons */
   margin-right: 20px;
 }
 
-.list-group .list-group-item {
+.list-group.list-group-changelogs .list-group-item {
   border: none;
   margin: 0;
   padding: 5px 10px;
   background-color: transparent;
   border-radius: 0;
 }
-.list-group .list-group-item.active {
+.list-group.list-group-changelogs .list-group-item.active {
   color: #444;
   background: #ddd;
 }
-.list-group .list-group-item:hover {
+.list-group.list-group-changelogs .list-group-item:hover {
   background-color: #eee;
 }
 

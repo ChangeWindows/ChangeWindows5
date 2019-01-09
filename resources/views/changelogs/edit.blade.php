@@ -16,7 +16,7 @@
     </div>
     <div class="col-2">
         <a class="btn btn-primary btn-block" href="{{ route('createChangelogs') }}"><i class="fal fa-fw fa-plus"></i> Add changelog</a>
-        <div class="list-group mt-3">
+        <div class="list-group list-group-changelogs mt-3">
             <a href="{{ URL::to('changelog/0') }}" class="list-group-item {{ $changelog->platform == '0' ? 'active' : ''}}">Generic</a>
             <a href="{{ URL::to('changelog/1') }}" class="list-group-item {{ $changelog->platform == '1' ? 'active' : ''}}">PC</a>
             <a href="{{ URL::to('changelog/2') }}" class="list-group-item {{ $changelog->platform == '2' ? 'active' : ''}}">Mobile</a>
