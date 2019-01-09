@@ -41,10 +41,12 @@
                         <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('timeline') }}"><i class="fal fa-fw fa-calendar-alt"></i> Timeline</a>
                         </li>
-                        <!--
+                        @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
                             <li class="nav-item">
                                 <a class="nav-link" href="/milestones"><i class="fal fa-fw fa-map-signs"></i> Milestones</a>
                             </li>
+                        @endif
+                        <!--
                             <li class="nav-item">
                                 <a class="nav-link" href="/rings"><i class="fal fa-fw fa-bullseye"></i> Rings</a>
                             </li>

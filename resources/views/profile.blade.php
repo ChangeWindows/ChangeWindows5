@@ -14,7 +14,15 @@
         <p>There are currently no settings available.</p>
         @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
             <h2>Insider features</h2>
-            <p>There are currently no Insider features available. Check back soon!</p>
+            <div class="list-group">
+                <div class="list-group-item list-group-item-success">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1"><i class="fal fa-fw fa-check"></i> Milestones beta</h5>
+                    </div>
+                    <p class="mb-1">The milestones page gives an overview off all builds within a milestone.</p>
+                    <small>You can't turn this feature of right now.</small>
+                </div>
+            </div>
         @endif
     </div>
     <div class="col-3">
