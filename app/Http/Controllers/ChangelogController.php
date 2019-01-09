@@ -31,13 +31,13 @@ class ChangelogController extends Controller
                                     ->paginate(50);
         }
 
-        return view('changelogs', compact('changelogs', 'platform', 'build', 'delta'));
+        return view('changelogs.all', compact('changelogs', 'platform', 'build', 'delta'));
     }
 
     public function create(Request $request) {
         $request->user()->authorizeRoles('Admin');
 
-        return view('changelogsMake');
+        return view('changelogs.create');
     }
 
     public function edit(Request $request, $id) {
@@ -51,7 +51,7 @@ class ChangelogController extends Controller
                                 ->orderBy('delta', 'desc')
                                 ->paginate(50);
 
-        return view('changelogsEdit', compact('changelogs', 'changelog'));
+        return view('changelogs.edit', compact('changelogs', 'changelog'));
     }
 
     public function store(Request $request) {
