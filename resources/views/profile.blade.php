@@ -9,17 +9,21 @@
 
 @section('content')
 <div class="row">
-    <div class="col">
-        <h2>Details</h2>
-        <p><b>Name</b>: {{ Auth::user()->name }}<br />
-        <b>Email</b>: {{ Auth::user()->email }}<br />
-        <b>Role</b>: {{ Auth::user()->getRoles()->name }}</p>
+    <div class="col-9">
         <h2>Settings</h2>
         <p>There are currently no settings available.</p>
         @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
             <h2>Insider features</h2>
             <p>There are currently no Insider features available. Check back soon!</p>
         @endif
+    </div>
+    <div class="col-3">
+        <h2>Details</h2>
+        <p>
+            <b>Name</b>: {{ Auth::user()->name }}<br />
+            <b>Email</b>: {{ Auth::user()->email }}<br />
+            <b>Role</b>: {{ Auth::user()->getRoles()->name }}
+        </p>
     </div>
 </div>
 @endsection
