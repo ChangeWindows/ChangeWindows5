@@ -17701,6 +17701,12 @@ h1 {
   color: #fff;
   line-height: 1;
   margin-bottom: 4px;
+  display: block;
+  transition: all 0.5s;
+}
+.tile:hover {
+  color: #fff;
+  text-decoration: none;
 }
 .tile .ring {
   font-weight: 600;

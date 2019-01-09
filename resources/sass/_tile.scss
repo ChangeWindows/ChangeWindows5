@@ -3,6 +3,13 @@
     color: #fff;
     line-height: 1;
     margin-bottom: 4px;
+    display: block;
+    transition: all .5s;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
 
     .ring {
         font-weight: 600;

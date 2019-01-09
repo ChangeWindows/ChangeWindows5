@@ -20,6 +20,7 @@
         <section class="release-notes">
             <h3>5.0-alpha.2 <small>January 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+            <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <h4><i class="fal fa-fw fa-server"></i> System</h4>
             <p>Minor restructuring of our files</p>
@@ -27,7 +28,6 @@
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
-            <p>Tiles on the timeline show a hover effect but aren't yet clickable</p>
             <p>Patrons are currently not listed on About</p>
         </section>
         <section class="release-notes">
