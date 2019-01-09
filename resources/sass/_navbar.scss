@@ -1,0 +1,123 @@
+.navbar {
+    padding: 0;
+    z-index: 9900;
+
+    &.bg-dark {
+        background-color: rgba(0,0,0,.8) !important;
+        backdrop-filter: blur(30px);
+    }
+    
+    .nav-item {
+        &.active {
+            .nav-link {
+                background: transparent;
+                opacity: 1;
+                border-bottom-color: $accent;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    
+        .nav-link {
+            color: #fff !important;
+            font-size: 19px;
+            padding: 9.5px 0 7px !important;
+            margin-right: 20px;
+            opacity: .6;
+            transition: .1s ease-in-out;
+            border-bottom: 3px solid transparent;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+
+    .navbar-brand {
+        padding: 9px 0 !important;
+        
+        &:hover {
+            opacity: .8;
+        }
+        
+        &.active {
+            background: transparent;
+            opacity: 1;
+        }
+        
+        img {
+            max-height: 18px;
+            width: auto;
+            margin-top: -3px;
+        }
+    }
+
+    .dropdown {
+        .dropdown-toggle::after {
+            display: none;
+        }
+    }
+
+    .dropdown-menu {
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 4px 0;
+        margin-top: 0;
+        font-size: 15px;
+        backdrop-filter: blur(30px);
+            
+        @supports ((backdrop-filter: blur(20px))) {
+            background-color: rgba(240,240,240,.7);
+        }
+            
+        @supports not ((backdrop-filter: blur(20px))) {
+            background-color: #dedede;
+        }
+
+        .dropdown-divider {
+            margin: 4px 10px;
+            border-top-color: rgba(#000,.1);
+        }
+
+        .dropdown-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 0;
+            transition: .1s ease-in-out;
+            color: #292929;
+            
+            &:hover {
+                @supports ((backdrop-filter: blur(20px))) {
+                    background-color: rgba(#000,.1);
+                }
+                    
+                @supports not ((backdrop-filter: blur(20px))) {
+                    background-color: #cfcfcf;
+                }
+            }
+
+            &:active {
+                color: #292929;
+            }
+
+            &:focus {
+                color: #292929;
+                background: rgba(0,0,0,.1);
+            }
+        }
+    }
+    
+    .navbar-toggler {
+        background-color: rgba(0,0,0,.1);
+        border: none;
+        padding: 10px 12px;
+        margin-right: -15px;
+        
+        .navbar-toggler-icon {
+            background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+}

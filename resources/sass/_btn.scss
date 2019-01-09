@@ -1,4 +1,8 @@
 .btn {
     border-radius: 0;
     border-color: transparent;
+
+    &:focus {
+        box-shadow: none;
+    }
 }

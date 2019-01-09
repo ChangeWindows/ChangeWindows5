@@ -22,6 +22,7 @@
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
+            <p>Revamped navigation bar design</p>
             <h4><i class="fal fa-fw fa-server"></i> System</h4>
             <p>Minor restructuring of our files</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>

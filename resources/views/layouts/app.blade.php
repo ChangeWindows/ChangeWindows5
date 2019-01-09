@@ -26,10 +26,10 @@
         </script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
-                    <img src="{{ asset('img/logo_black.png') }}" />
+                    <img src="{{ asset('img/logo_white.png') }}" />
                     <span class="title"><span class="font-light">viv</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

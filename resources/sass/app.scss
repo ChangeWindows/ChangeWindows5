@@ -7,25 +7,28 @@
 @import '~@fortawesome/fontawesome-pro/scss/light';
 @import '~@fortawesome/fontawesome-pro/scss/brands';
 
-@import 'font';
-@import 'content';
-@import 'split';
-@import 'timeline';
-@import 'tile';
-@import 'label';
-@import 'paginate';
-@import 'listgroup';
-@import 'btn';
+// Bootstrap components
 @import 'breadcrumb';
+@import 'label';
 @import 'form';
 @import 'nav';
+@import 'listgroup';
+@import 'btn';
+@import 'navbar';
+
+// ChangeWindows
+@import 'font';
+@import 'content';
+@import 'timeline';
+@import 'tile';
+@import 'paginate';
 @import 'changelog';
 @import 'flight';
 @import 'about';
 @import 'user';
 
 body {
-    margin-top: 57px;
+    margin-top: 48px;
 }
 
 // Hero
@@ -103,14 +106,6 @@ body {
 
     h1 {
         margin-bottom: 0;
-    }
-}
-
-.navbar {
-    img {
-        width: 20px;
-        height: auto;
-        margin-top: -3px;
     }
 }
 
