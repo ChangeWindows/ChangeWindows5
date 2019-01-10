@@ -16,12 +16,12 @@
             if ( typeof Windows !== 'undefined' ) {
                 var titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
 
-                titleBar.backgroundColor = {a: 255, r: 248, g: 248, b: 248};
-                titleBar.inactiveBackgroundColor = {a: 255, r: 248, g: 248, b: 248};
-                titleBar.buttonBackgroundColor = {a: 255, r: 248, g: 248, b: 248};
-                titleBar.buttonInactiveBackgroundColor  = {a: 255, r: 248, g: 248, b: 248};
-                titleBar.buttonHoverBackgroundColor = {a: 255, r: 219, g: 219, b: 219};
-                titleBar.buttonPressedBackgroundColor = {a: 255, r: 203, g: 203, b: 203};
+                titleBar.backgroundColor = {a: 255, r: 51, g: 51, b: 51};
+                titleBar.inactiveBackgroundColor = {a: 255, r: 51, g: 51, b: 51};
+                titleBar.buttonBackgroundColor = {a: 255, r: 51, g: 51, b: 51};
+                titleBar.buttonInactiveBackgroundColor  = {a: 255, r: 51, g: 51, b: 51};
+                titleBar.buttonHoverBackgroundColor = {a: 255, r: 70, g: 70, b: 70};
+                titleBar.buttonPressedBackgroundColor = {a: 255, r: 80, g: 80, b: 80};
             }
         </script>
     </head>

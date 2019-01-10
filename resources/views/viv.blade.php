@@ -13,7 +13,7 @@
     <div class="col-9">
         <h1 class="title m-b-md">Welcome to <span class="font-uppercase font-light">Change</span><span class="font-uppercase font-bold">Windows</span> <span class="font-light">viv</span></h1>
         <p class="lead">With ChangeWindows, we want to provide you with a full and as detailed as possible changelog about everything new in Windows.</p>
-        <p>With <i>viv</i> we're going to do a few things differently. ChangeWindows will receive a new look with our primary goal set to making our website more accessible, easier to use and easier to navigate. Of course, what you're seeing now is only a <b>very early</b> preview of <i>viv</i>, so if you don't want that, feel free to return to <a href="https://changewindows.org">ChangeWindows 4.12</a>. Everything you're looking for is probably there.</p>
+        <p>With <i>viv</i> we're going to do a few things differently. While ChangeWindows will receive some visual changes, our primary goal is to making our website more accessible, easier to use and easier to navigate. Of course, what you're seeing now is only a <b>very early</b> preview of <i>viv</i> and lots of stuff is still missing, so if you don't want that, feel free to return to <a href="https://changewindows.org">ChangeWindows 4.12</a>. Everything you're looking for is probably there.</p>
 
         <h2>What's new</h2>
         <p>In the weeks ahead, ChangeWindows will regularly change, below you can keep track of these changes as we won't be annoucing all of them on our blog or other outlets.</p>
@@ -21,11 +21,12 @@
             <h3>5.0-alpha.2 <small>January 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
+            <p>Early construction for the Milestone page <span class="badge badge-info">Insider</span></p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
-            <p>Revamped navigation bar design</p>
             <h4><i class="fal fa-fw fa-server"></i> System</h4>
             <p>Minor restructuring of our files</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
+            <p>Revamped navigation bar design with transparency and blur</p>
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>

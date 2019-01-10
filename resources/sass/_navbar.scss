@@ -3,8 +3,15 @@
     z-index: 9900;
 
     &.bg-dark {
-        background-color: rgba(0,0,0,.8) !important;
         backdrop-filter: blur(30px);
+
+        @supports ((backdrop-filter: blur(30px))) {
+            background-color: rgba(0,0,0,.8) !important;
+        }
+            
+        @supports not ((backdrop-filter: blur(30px))) {
+            background-color: #333 !important;
+        }
     }
     
     .nav-item {
@@ -58,6 +65,18 @@
         .dropdown-toggle::after {
             display: none;
         }
+
+        .nav-link {
+            margin-right: 0;
+        }
+
+        &.show {
+            .nav-link {
+                background: transparent;
+                opacity: 1;
+                border-bottom-color: $accent;
+            }
+        }
     }
 
     .dropdown-menu {
@@ -69,17 +88,21 @@
         font-size: 15px;
         backdrop-filter: blur(30px);
             
-        @supports ((backdrop-filter: blur(20px))) {
-            background-color: rgba(240,240,240,.7);
+        @supports ((backdrop-filter: blur(30px))) {
+            background-color: rgba(0,0,0,.8);
         }
             
-        @supports not ((backdrop-filter: blur(20px))) {
-            background-color: #dedede;
+        @supports not ((backdrop-filter: blur(30px))) {
+            background-color: #333;
         }
 
         .dropdown-divider {
             margin: 4px 10px;
-            border-top-color: rgba(#000,.1);
+            border-top-color: rgba(#fff,.1);
+        }
+
+        .dropdown-header {
+            color: #ddd;
         }
 
         .dropdown-item {
@@ -87,24 +110,18 @@
             padding-bottom: 10px;
             border-radius: 0;
             transition: .1s ease-in-out;
-            color: #292929;
+            color: #fff;
             
             &:hover {
-                @supports ((backdrop-filter: blur(20px))) {
-                    background-color: rgba(#000,.1);
-                }
-                    
-                @supports not ((backdrop-filter: blur(20px))) {
-                    background-color: #cfcfcf;
-                }
+                background-color: rgba(#fff,.1);
             }
 
             &:active {
-                color: #292929;
+                color: #fff;
             }
 
             &:focus {
-                color: #292929;
+                color: #fff;
                 background: rgba(0,0,0,.1);
             }
         }

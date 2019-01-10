@@ -17534,9 +17534,18 @@ readers do not read off random characters that represent icons */
   z-index: 9900;
 }
 .navbar.bg-dark {
-  background-color: rgba(0, 0, 0, 0.8) !important;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .navbar.bg-dark {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .navbar.bg-dark {
+    background-color: #333 !important;
+  }
 }
 .navbar .nav-item.active .nav-link {
   background: transparent;
@@ -17576,6 +17585,14 @@ readers do not read off random characters that represent icons */
 .navbar .dropdown .dropdown-toggle::after {
   display: none;
 }
+.navbar .dropdown .nav-link {
+  margin-right: 0;
+}
+.navbar .dropdown.show .nav-link {
+  background: transparent;
+  opacity: 1;
+  border-bottom-color: #0098df;
+}
 .navbar .dropdown-menu {
   box-shadow: none;
   border: none;
@@ -17586,42 +17603,38 @@ readers do not read off random characters that represent icons */
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
 }
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .navbar .dropdown-menu {
-    background-color: rgba(240, 240, 240, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
-@supports not ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .navbar .dropdown-menu {
-    background-color: #dedede;
+    background-color: #333;
   }
 }
 .navbar .dropdown-menu .dropdown-divider {
   margin: 4px 10px;
-  border-top-color: rgba(0, 0, 0, 0.1);
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+.navbar .dropdown-menu .dropdown-header {
+  color: #ddd;
 }
 .navbar .dropdown-menu .dropdown-item {
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 0;
   transition: 0.1s ease-in-out;
-  color: #292929;
+  color: #fff;
 }
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
-  .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}
-@supports not ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
-  .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #cfcfcf;
-  }
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .navbar .dropdown-menu .dropdown-item:active {
-  color: #292929;
+  color: #fff;
 }
 .navbar .dropdown-menu .dropdown-item:focus {
-  color: #292929;
+  color: #fff;
   background: rgba(0, 0, 0, 0.1);
 }
 .navbar .navbar-toggler {
