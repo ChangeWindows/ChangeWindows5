@@ -24,6 +24,8 @@ Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name
 Route::patch('/changelog/{id}', 'ChangelogController@update')->name('updateChangelogs');
 Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
+Route::get('/milestones', 'MilestoneController@index')->name('milestones');
+
 Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 
