@@ -17530,8 +17530,14 @@ readers do not read off random characters that represent icons */
 }
 
 .navbar {
-  padding: 0;
   z-index: 9900;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media all and (min-width: 1200px) {
+  .navbar {
+    padding: 0;
+  }
 }
 .navbar.bg-dark {
   -webkit-backdrop-filter: blur(30px);
@@ -17547,6 +17553,9 @@ readers do not read off random characters that represent icons */
     background-color: #333 !important;
   }
 }
+.navbar .nav-item {
+  padding: 6px 0;
+}
 .navbar .nav-item.active .nav-link {
   background: transparent;
   opacity: 1;
@@ -17557,15 +17566,19 @@ readers do not read off random characters that represent icons */
 }
 .navbar .nav-item .nav-link {
   color: #fff !important;
-  font-size: 19px;
-  padding: 9.5px 0 7px !important;
+  padding: 3px 0 !important;
   margin-right: 20px;
   opacity: 0.6;
   transition: 0.1s ease-in-out;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 .navbar .nav-item .nav-link:hover {
   opacity: 0.8;
+}
+@media all and (max-width: 700px) {
+  .navbar .nav-item .nav-link .fa-fw {
+    display: none;
+  }
 }
 .navbar .navbar-brand {
   padding: 9px 0 !important;
@@ -17581,6 +17594,11 @@ readers do not read off random characters that represent icons */
   max-height: 18px;
   width: auto;
   margin-top: -3px;
+}
+@media all and (max-width: 700px) {
+  .navbar .navbar-brand .title {
+    display: none;
+  }
 }
 .navbar .dropdown .dropdown-toggle::after {
   display: none;
@@ -17645,6 +17663,13 @@ readers do not read off random characters that represent icons */
 }
 .navbar .navbar-toggler .navbar-toggler-icon {
   background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.jumbotron {
+  border-radius: 0;
+  background-color: #333 !important;
+  padding: 10px 20px 20px;
+  margin-bottom: 0;
 }
 
 .font-light {
@@ -18179,6 +18204,13 @@ body {
   height: 300px;
   display: block;
   position: relative;
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in;
+}
+.hero:hover {
+  -webkit-transform: translate(0, -3px);
+          transform: translate(0, -3px);
+  box-shadow: 0 20px 28px 0 rgba(0, 0, 0, 0.4);
 }
 .hero .text {
   display: block;
@@ -18200,6 +18232,7 @@ body {
   display: block;
   color: #fff;
   margin-bottom: 0;
+  font-size: 20px;
 }
 
 .about-header {

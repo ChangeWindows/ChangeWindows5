@@ -5,12 +5,16 @@
 @endphp
 
 @section('hero')
-<a class="hero" href="{{ route('viv') }}">
-    <span class="text">
-        <span class="h2">viv Preview</span>
-        <span class="h5">The ChangeWindows 5 Preview is here</span>
-    </span>
-</a>
+<div class="jumbotron bg-dark">
+    <div class="container">
+        <a class="hero" href="{{ route('viv') }}">
+            <span class="text">
+                <span class="h2">viv Preview</span>
+                <span class="h5">The ChangeWindows 5 Preview is here</span>
+            </span>
+        </a>
+    </div>
+</div>
 @endsection
 
 @section('content')

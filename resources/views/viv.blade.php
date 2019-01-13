@@ -22,6 +22,7 @@
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
             <p>Early construction for the Milestone page <span class="badge badge-info">Insider</span></p>
+            <p>Our favicon has been restored</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <h4><i class="fal fa-fw fa-server"></i> System</h4>
             <p>Minor restructuring of our files</p>

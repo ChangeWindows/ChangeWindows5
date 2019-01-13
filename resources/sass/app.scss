@@ -15,6 +15,7 @@
 @import 'listgroup';
 @import 'btn';
 @import 'navbar';
+@import 'jumbotron';
 
 // ChangeWindows
 @import 'font';
@@ -40,6 +41,13 @@ body {
     height: 300px;
     display: block;
     position: relative;
+    box-shadow: 0 16px 24px 0 rgba(0,0,0,.3);
+    transition: all .3s ease-in;
+
+    &:hover {
+        transform: translate(0, -3px);
+        box-shadow: 0 20px 28px 0 rgba(0,0,0,.4);
+    }
 
     .text {
         display: block;
@@ -62,6 +70,7 @@ body {
             display: block;
             color: #fff;
             margin-bottom: 0;
+            font-size: 20px;
         }
     }
 }

@@ -1,6 +1,11 @@
 .navbar {
-    padding: 0;
     z-index: 9900;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media all and (min-width:1200px) {
+        padding: 0;
+    }
 
     &.bg-dark {
         backdrop-filter: blur(30px);
@@ -15,6 +20,8 @@
     }
     
     .nav-item {
+        padding: 6px 0;
+
         &.active {
             .nav-link {
                 background: transparent;
@@ -29,15 +36,20 @@
     
         .nav-link {
             color: #fff !important;
-            font-size: 19px;
-            padding: 9.5px 0 7px !important;
+            padding: 3px 0 !important;
             margin-right: 20px;
             opacity: .6;
             transition: .1s ease-in-out;
-            border-bottom: 3px solid transparent;
+            border-bottom: 2px solid transparent;
 
             &:hover {
                 opacity: .8;
+            }
+
+            @media all and (max-width:700px) {
+                .fa-fw {
+                    display: none;
+                }
             }
         }
     }
@@ -58,6 +70,12 @@
             max-height: 18px;
             width: auto;
             margin-top: -3px;
+        }
+
+        @media all and (max-width:700px) {
+            .title {
+                display: none;
+            }
         }
     }
 
