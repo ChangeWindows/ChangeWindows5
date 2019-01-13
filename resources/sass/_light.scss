@@ -3,10 +3,14 @@ $text-secondary: #555;
 $background-header: #ebebeb;
 $background-content: #fff;
 $highlight-color: rgba(0,0,0,.1);
-$transparency: rgba(230,230,230,.8);
+$transparency: rgba(235,235,235,.8);
 $shadow: rgba(0,0,0,.3);
 
 .light {
+    .navbg {
+        background: $background-header;
+    }
+
     .jumbotron {
         background-color: $background-header !important;
         color: $text;

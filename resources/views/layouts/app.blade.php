@@ -99,6 +99,7 @@
                 </div>
             </div>
         </nav>
+        <div class="navbg"></div>
 
         @yield('hero')
         <div class="container" id="app">

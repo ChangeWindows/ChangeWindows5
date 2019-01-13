@@ -17621,6 +17621,10 @@ readers do not read off random characters that represent icons */
   transition: 0.1s ease-in-out;
 }
 
+.navbg {
+  height: 50px;
+}
+
 .jumbotron {
   border-radius: 0;
   padding: 10px 20px 20px;
@@ -18203,6 +18207,9 @@ h1 {
   margin: 0;
 }
 
+.light .navbg {
+  background: #ebebeb;
+}
 .light .jumbotron {
   background-color: #ebebeb !important;
   color: #333;
@@ -18215,7 +18222,7 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar.bg-cw {
-    background-color: rgba(230, 230, 230, 0.8) !important;
+    background-color: rgba(235, 235, 235, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18234,7 +18241,7 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar .dropdown-menu {
-    background-color: rgba(230, 230, 230, 0.8);
+    background-color: rgba(235, 235, 235, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18259,10 +18266,10 @@ h1 {
 }
 .light .navbar .dropdown-menu .dropdown-item:focus {
   color: #333;
-  background: rgba(230, 230, 230, 0.1);
+  background: rgba(235, 235, 235, 0.1);
 }
 .light .navbar .navbar-toggler {
-  background-color: rgba(230, 230, 230, 0.1);
+  background-color: rgba(235, 235, 235, 0.1);
 }
 .light .nav.nav-tabs .nav-item .nav-link {
   color: #333;
@@ -18271,6 +18278,9 @@ h1 {
   color: #333;
 }
 
+.dark .navbg {
+  background: #333;
+}
 .dark .jumbotron {
   background-color: #333 !important;
   color: #fff;
@@ -18283,7 +18293,7 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(51, 51, 51, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18302,7 +18312,7 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(51, 51, 51, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18327,20 +18337,16 @@ h1 {
 }
 .dark .navbar .dropdown-menu .dropdown-item:focus {
   color: #fff;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(51, 51, 51, 0.1);
 }
 .dark .navbar .navbar-toggler {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(51, 51, 51, 0.1);
 }
 .dark .nav.nav-tabs .nav-item .nav-link {
   color: #fff;
 }
 .dark .nav.nav-tabs .nav-item .nav-link.active {
   color: #fff;
-}
-
-body {
-  margin-top: 50px;
 }
 
 .hero {
