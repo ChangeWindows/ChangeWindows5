@@ -17533,6 +17533,8 @@ readers do not read off random characters that represent icons */
   z-index: 9900;
   padding-top: 0;
   padding-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media all and (min-width: 1200px) {
   .navbar {
@@ -17560,6 +17562,7 @@ readers do not read off random characters that represent icons */
   background: transparent;
   opacity: 1;
   border-bottom-color: #0098df;
+  box-shadow: 0 5px 8px -7px #0098df;
 }
 .navbar .nav-item.active .nav-link:hover {
   opacity: 1;
@@ -17612,7 +17615,7 @@ readers do not read off random characters that represent icons */
   border-bottom-color: #0098df;
 }
 .navbar .dropdown-menu {
-  box-shadow: none;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
   border: none;
   border-radius: 0;
   padding: 4px 0;
@@ -17670,6 +17673,25 @@ readers do not read off random characters that represent icons */
   background-color: #333 !important;
   padding: 10px 20px 20px;
   margin-bottom: 0;
+  color: #fff;
+}
+.jumbotron .viv-logo {
+  width: 32px;
+  height: auto;
+  display: block;
+  margin: 10px auto 30px;
+}
+.jumbotron .display-1 {
+  margin-bottom: 30px;
+}
+.jumbotron h2 {
+  font-weight: 700;
+  margin: 0;
+}
+.jumbotron h5 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .font-light {
@@ -18192,6 +18214,28 @@ h1 {
   padding: 5px 2px;
 }
 
+.milestone {
+  border-radius: 0;
+  min-height: 83.7px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: all 0.5s;
+  display: block;
+}
+.milestone:hover {
+  text-decoration: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transform: translate(0, -3px);
+          transform: translate(0, -3px);
+}
+.milestone h3 {
+  margin: 0;
+}
+.milestone h4 {
+  margin: 0;
+}
+
 body {
   margin-top: 48px;
 }
@@ -18201,11 +18245,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 300px;
+  height: 270px;
   display: block;
   position: relative;
   box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in;
+  border-radius: 2px;
 }
 .hero:hover {
   -webkit-transform: translate(0, -3px);
@@ -18233,29 +18278,6 @@ body {
   color: #fff;
   margin-bottom: 0;
   font-size: 20px;
-}
-
-.about-header {
-  text-align: center;
-  padding-top: 70px;
-  padding-bottom: 30px;
-  background-color: #0098df;
-  color: #fff;
-}
-.about-header .viv-logo {
-  width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 60px;
-}
-.about-header h1 {
-  margin-bottom: 0;
-}
-.about-header h5 {
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0;
 }
 
 .profile-header {
