@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\User;
 
 class ProfileController extends Controller
 {
@@ -21,7 +22,9 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function index(Request $request) {
+        $request->user()->authorizeRoles(['Admin', 'Insider', 'User']);
+
         return view('profile');
     }
 
@@ -41,8 +44,16 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) {
-        //
+    public function edit(Request $request, $id) {
+        $request->user()->authorizeRoles(['Admin', 'Insider', 'User']);
+
+        $user = User::find($id);
+
+        $user->theme = request()->get('theme');
+
+        $user->save();
+
+        return redirect()->route('profile');
     }
 
     /**

@@ -39,3 +39,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/viv', 'PreviewController@index')->name('viv');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::patch('/profile/{id}', 'ProfileController@edit')->name('updateProfile');

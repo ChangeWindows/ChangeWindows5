@@ -27,11 +27,11 @@
             }
         </script>
     </head>
-    <body class="dark">
+    <body class="{{ Auth::user()->theme <= 1 ? 'light' : 'dark' }}">
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
-                    <img src="{{ asset('img/logo_white.png') }}" />
+                    <img src="{{ Auth::user()->theme <= 1 ? asset('img/logo_black.png') : asset('img/logo_white.png') }}" />
                     <span class="title"><span class="font-light">viv</span></span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -59,7 +59,7 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown {{ Request::is('profile') ? 'active' : '' }}">
+                        <li class="nav-item dropdown {{ Request::is('profile*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @auth
                                     <i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}
