@@ -16,14 +16,15 @@
         
         <script>
             if ( typeof Windows !== 'undefined' ) {
-                var titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
+                let titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
+                let tbc = {{  Auth::user()->theme <= 1 ? 51 : 235 }}
 
-                titleBar.backgroundColor = {a: 255, r: 51, g: 51, b: 51};
-                titleBar.inactiveBackgroundColor = {a: 255, r: 51, g: 51, b: 51};
-                titleBar.buttonBackgroundColor = {a: 255, r: 51, g: 51, b: 51};
-                titleBar.buttonInactiveBackgroundColor  = {a: 255, r: 51, g: 51, b: 51};
-                titleBar.buttonHoverBackgroundColor = {a: 255, r: 70, g: 70, b: 70};
-                titleBar.buttonPressedBackgroundColor = {a: 255, r: 80, g: 80, b: 80};
+                titleBar.backgroundColor = {a: 255, r: tbc, g: tbc, b: tbc};
+                titleBar.inactiveBackgroundColor = {a: 255, r: tbc, g: tbc, b: tbc};
+                titleBar.buttonBackgroundColor = {a: 255, r: tbc, g: tbc, b: tbc};
+                titleBar.buttonInactiveBackgroundColor  = {a: 255, r: tbc, g: tbc, b: tbc};
+                titleBar.buttonHoverBackgroundColor = {a: 255, r: tbc + 10, g: tbc + 10, b: tbc + 10};
+                titleBar.buttonPressedBackgroundColor = {a: 255, r: tbc - 10, g: tbc - 10, b: tbc - 10};
             }
         </script>
     </head>
