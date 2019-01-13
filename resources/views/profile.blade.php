@@ -3,8 +3,7 @@
 @section('hero')
 <div class="jumbotron">
     <div class="container">
-        <span class="display-1"><i class="fal fa-user-circle"></i></span>
-        <h2>Hi {{ Auth::user()->name }}</h2>
+        <h2>Hello {{ Auth::user()->name }}</h2>
     </div>
 </div>
 @endsection
