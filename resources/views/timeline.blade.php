@@ -5,7 +5,7 @@
 @endphp
 
 @section('hero')
-<div class="jumbotron bg-dark">
+<div class="jumbotron">
     <div class="container">
         <a class="hero" href="{{ route('viv') }}">
             <span class="text">

@@ -1,15 +1,17 @@
 @extends('layouts.app')
 
 @section('hero')
-<div class="profile-header">
-    <span class="display-1"><i class="fal fa-fw fa-user-circle"></i></span>
-    <h1>Hi <span class="font-bold">{{ Auth::user()->name }}</span></h1>
+<div class="jumbotron">
+    <div class="container">
+        <span class="display-1"><i class="fal fa-user-circle"></i></span>
+        <h2>Hi {{ Auth::user()->name }}</h2>
+    </div>
 </div>
 @endsection
 
 @section('content')
 <div class="row">
-    <div class="col-9">
+    <div class="col-8">
         <h2>Settings</h2>
         <p>There are currently no settings available.</p>
         @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
@@ -25,7 +27,7 @@
             </div>
         @endif
     </div>
-    <div class="col-3">
+    <div class="col-4">
         <h2>Details</h2>
         <p>
             <b>Name</b>: {{ Auth::user()->name }}<br />
