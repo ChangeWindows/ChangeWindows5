@@ -17433,10 +17433,6 @@ readers do not read off random characters that represent icons */
   font-family: "Font Awesome 5 Brands";
 }
 
-.breadcrumb {
-  border-radius: 0;
-}
-
 .label {
   font-size: 100%;
   font-weight: 600;
@@ -17687,6 +17683,27 @@ readers do not read off random characters that represent icons */
 .jumbotron h2 {
   font-weight: 700;
   margin: 0;
+}
+.jumbotron h2 small {
+  font-size: 60%;
+  margin-left: 10px;
+}
+.jumbotron h2 small .fa-angle-right {
+  opacity: 0.5;
+}
+.jumbotron h2 small a {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+  font-weight: 700;
+}
+.jumbotron h2 small a:hover, .jumbotron h2 small a:active, .jumbotron h2 small a:focus {
+  opacity: 1;
+}
+.jumbotron h2 small .text {
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 700;
 }
 .jumbotron h5 {
   font-weight: 700;

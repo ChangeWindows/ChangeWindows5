@@ -1,19 +1,27 @@
 @extends('layouts.app')
 
-@section('content')
+@section('hero')
+<div class="jumbotron">
+    <div class="container">
+        <h2>
+            Changelogs
+            <small>
+                <a href="{{ route('showChangelogs') }}">Changelogs</a>
+                <i class="fal fa-fw fa-angle-right"></i>
+                <a href="{{ route('showChangelogs', $changelog->platform) }}">{{ getPlatformById($changelog->platform) }}</a>
+                <i class="fal fa-fw fa-angle-right"></i>
+                <a href="{{ route('showChangelogs', [$changelog->platform, $changelog->build]) }}">{{ $changelog->build }}</a>
+                <i class="fal fa-fw fa-angle-right"></i>
+                <a href="{{ route('editChangelog', [$changelog->id]) }}">{{ $changelog->delta }}</a>
+            </small>
+        </h2>
+    </div>
+</div>
+@endsection
 
+@section('content')
 <form method="POST" action="{{ route('updateChangelogs', $changelog->id) }}" class="row">
     {{ method_field('PATCH') }}
-    <div class="col-12">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('showChangelogs') }}">Changelogs</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('showChangelogs', $changelog->platform) }}">{{ getPlatformById($changelog->platform) }}</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('showChangelogs', [$changelog->platform, $changelog->build]) }}">{{ $changelog->build }}</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('editChangelog', [$changelog->id]) }}">{{ $changelog->delta }}</a></li>
-            </ol>
-        </nav>
-    </div>
     <div class="col-2">
         <a class="btn btn-primary btn-block" href="{{ route('createChangelogs') }}"><i class="fal fa-fw fa-plus"></i> Add changelog</a>
         <div class="list-group list-group-changelogs mt-3">

@@ -4,6 +4,14 @@
     $previous = null;
 @endphp
 
+@section('hero')
+<div class="jumbotron">
+    <div class="container">
+        <h2>Flights</h2>
+    </div>
+</div>
+@endsection
+
 @section('content')
 <div class="row">
     <div class="col-12">

@@ -1,16 +1,22 @@
 @extends('layouts.app')
 
-@section('content')
-
-<form method="POST" action="{{ route('storeChangelogs') }}" class="row row-p-10">
-    <div class="col-12">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('showChangelogs') }}">Changelogs</a></li>
-                <li class="breadcrumb-item">New changelog</li>
-            </ol>
-        </nav>
+@section('hero')
+<div class="jumbotron">
+    <div class="container">
+        <h2>
+            Changelogs
+            <small>
+                <a href="{{ route('showChangelogs') }}">Changelogs</a>
+                <i class="fal fa-fw fa-angle-right"></i>
+                <span class="text">New changelog</span>
+            </small>
+        </h2>
     </div>
+</div>
+@endsection
+
+@section('content')
+<form method="POST" action="{{ route('storeChangelogs') }}" class="row row-p-10">
     {{ csrf_field() }}
     <div class="col-3">
         <div class="form-group">

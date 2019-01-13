@@ -19,6 +19,34 @@
     h2 {
         font-weight: 700;
         margin: 0;
+
+        small {
+            font-size: 60%;
+            margin-left: 10px;
+
+            .fa-angle-right {
+                opacity: .5;
+            }
+
+            a {
+                color: #fff;
+                opacity: .8;
+                text-decoration: none;
+                font-weight: 700;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    opacity: 1;
+                }
+            }
+
+            .text {
+                color: #fff;
+                opacity: .8;
+                font-weight: 700;
+            }
+        }
     }
 
     h5 {

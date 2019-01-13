@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('hero')
+<div class="jumbotron">
+    <div class="container">
+        <h2>Users</h2>
+    </div>
+</div>
 @endsection
 
 @section('content')

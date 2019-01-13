@@ -1,23 +1,31 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="row">
-    <div class="col-12">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('showChangelogs') }}">Changelogs</a></li>
+@section('hero')
+<div class="jumbotron">
+    <div class="container">
+        <h2>
+            Changelogs
+            <small>
+                <a href="{{ route('showChangelogs') }}">Changelogs</a>
                 @if ($platform)
-                    <li class="breadcrumb-item"><a href="{{ route('showChangelogs', $platform) }}">{{ getPlatformById($platform) }}</a></li>
+                    <i class="fal fa-fw fa-angle-right"></i>
+                    <a href="{{ route('showChangelogs', $platform) }}">{{ getPlatformById($platform) }}</a>
                 @endif
                 @if ($build)
-                    <li class="breadcrumb-item"><a href="{{ route('showChangelogs', [$platform, $build]) }}">{{ $build }}</a></li>
+                    <i class="fal fa-fw fa-angle-right"></i>
+                    <a href="{{ route('showChangelogs', [$platform, $build]) }}">{{ $build }}</a>
                 @endif
-            </ol>
-        </nav>
+            </small>
+        </h2>
     </div>
+</div>
+@endsection
+
+@section('content')
+<div class="row">
     <div class="col-2">
         <a class="btn btn-primary btn-block" href="{{ route('createChangelogs') }}"><i class="fal fa-fw fa-plus"></i> Add changelog</a>
-        <div class="list-grou list-group-changelogsp mt-3">
+        <div class="list-group list-group-changelogs mt-3">
             <a href="{{ URL::to('changelog/0') }}" class="list-group-item {{ $platform == '0' ? 'active' : ''}}">Generic</a>
             <a href="{{ URL::to('changelog/1') }}" class="list-group-item {{ $platform == '1' ? 'active' : ''}}">PC</a>
             <a href="{{ URL::to('changelog/2') }}" class="list-group-item {{ $platform == '2' ? 'active' : ''}}">Mobile</a>
