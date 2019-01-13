@@ -36,7 +36,7 @@
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('/') || Request::is('build*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('timeline') }}"><i class="fal fa-fw fa-calendar-alt"></i> Timeline</a>
                         </li>
                         @auth
