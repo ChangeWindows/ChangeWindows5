@@ -59,7 +59,7 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown {{ Request::is('profile') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @auth
                                     <i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}
