@@ -95,6 +95,8 @@ class TimelineController extends Controller
 
         $changelogs = Changelog::where('build', $cur_build)->where('platform', $cur_platform)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get();
 
+        $meta = Release::where('build', $cur_build)->where('platform', $platform)->first();
+
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
             $notes[$release->delta]['rings'][$release->ring] = $release;
@@ -106,6 +108,6 @@ class TimelineController extends Controller
 
         $parsedown = new Parsedown();
 
-        return view('build', compact('timeline', 'platforms', 'notes', 'cur_build', 'cur_platform', 'parsedown'));
+        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'cur_platform', 'parsedown'));
     }
 }

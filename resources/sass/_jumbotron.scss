@@ -4,6 +4,10 @@
     padding: 10px 20px 20px;
     margin-bottom: 0;
     color: #fff;
+
+    &.tabs {
+        padding-bottom: 10px;
+    }
     
     .viv-logo {
         width: 32px;
@@ -19,6 +23,10 @@
     h2 {
         font-weight: 700;
         margin: 0;
+
+        .fab {
+            font-weight: 500 !important;
+        }
 
         small {
             font-size: 60%;

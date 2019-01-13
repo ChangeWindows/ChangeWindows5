@@ -17477,29 +17477,35 @@ readers do not read off random characters that represent icons */
 
 .nav.nav-tabs {
   border-bottom: none;
-  background: #eee;
-  padding: 10px 0;
+  padding: 0;
 }
 .nav.nav-tabs .nav-item {
   border: none;
 }
 .nav.nav-tabs .nav-item .nav-link {
   border: none;
-  border-bottom: 4px solid transparent;
-  padding: 12px 0;
+  border-bottom: 2px solid transparent;
+  padding: 6px 0;
   margin: 0 10px;
-  color: #333;
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.2s ease-in;
 }
-.nav.nav-tabs .nav-item .nav-link.active, .nav.nav-tabs .nav-item .nav-link:hover {
+.nav.nav-tabs .nav-item .nav-link.active {
   border-bottom-color: #0098df;
+  box-shadow: 0 5px 8px -7px #0098df;
   background: transparent;
-  color: #333;
+  color: #fff;
+  opacity: 1;
+}
+.nav.nav-tabs .nav-item .nav-link:hover {
+  opacity: 1;
 }
 .nav.nav-tabs .nav-item:first-child .nav-link {
-  margin-left: 20px;
+  margin-left: 0;
 }
 .nav.nav-tabs .nav-item:last-child .nav-link {
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .list-group.list-group-changelogs .list-group-item {
@@ -17527,10 +17533,7 @@ readers do not read off random characters that represent icons */
 
 .navbar {
   z-index: 9900;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 }
 @media all and (min-width: 1200px) {
   .navbar {
@@ -17671,6 +17674,9 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0;
   color: #fff;
 }
+.jumbotron.tabs {
+  padding-bottom: 10px;
+}
 .jumbotron .viv-logo {
   width: 32px;
   height: auto;
@@ -17683,6 +17689,9 @@ readers do not read off random characters that represent icons */
 .jumbotron h2 {
   font-weight: 700;
   margin: 0;
+}
+.jumbotron h2 .fab {
+  font-weight: 500 !important;
 }
 .jumbotron h2 small {
   font-size: 60%;

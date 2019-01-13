@@ -1,36 +1,42 @@
 .nav {
     &.nav-tabs {
         border-bottom: none;
-        background: #eee;
-        padding: 10px 0;
+        padding: 0;
 
         .nav-item {
             border: none;
 
             .nav-link {
                 border: none;
-                border-bottom: 4px solid transparent;
-                padding: 12px 0;
+                border-bottom: 2px solid transparent;
+                padding: 6px 0;
                 margin: 0 10px;
-                color: #333;
+                color: #fff;
+                opacity: .8;
+                transition: all .2s ease-in;
 
-                &.active,
-                &:hover {
+                &.active {
                     border-bottom-color: $accent;
+                    box-shadow: 0 5px 8px -7px $accent;
                     background: transparent;
-                    color: #333;
+                    color: #fff;
+                    opacity: 1;
+                }
+
+                &:hover {
+                    opacity: 1;
                 }
             }
 
             &:first-child {
                 .nav-link {
-                    margin-left: 20px;
+                    margin-left: 0;
                 }
             }
 
             &:last-child {
                 .nav-link {
-                    margin-right: 20px;
+                    margin-right: 0;
                 }
             }
         }

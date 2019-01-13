@@ -1,15 +1,20 @@
 @extends('layouts.app')
 
 @section('hero')
-<ul class="nav nav-tabs">
-    @foreach ($platforms as $platform)
-        <li class="nav-item">
-            <a class="nav-link {{ $platform->platform == $cur_platform ? 'active' : '' }}" href="{{ URL::to('build/'.$cur_build.'/'.$platform->platform) }}">
-                {{ getPlatformById($platform->platform) }}
-            </a>
-        </li>
-    @endforeach
-</ul>
+<div class="jumbotron tabs">
+    <div class="container">
+        <h2 class="mb-4"><i class="fab fa-fw fa-windows"></i> Windows 10</h2>
+        <ul class="nav nav-tabs">
+            @foreach ($platforms as $platform)
+                <li class="nav-item">
+                    <a class="nav-link {{ $platform->platform == $cur_platform ? 'active' : '' }}" href="{{ URL::to('build/'.$cur_build.'/'.$platform->platform) }}">
+                        {{ getPlatformById($platform->platform) }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+</div>
 @endsection
 
 @section('content')
@@ -17,7 +22,7 @@
     <div class="col-lg-8">
         <div class="changelog">
             @foreach ($notes as $delta => $info)
-                <h2 class="date-heading text-accent">{{ $cur_build }}.{{ $delta }}</h2>
+                <h2 class="date-heading text-accent">{{ $meta->major }}.{{ $meta->minor }}.{{ $meta->build }}.{{ $delta }}</h2>
                 <div class="date-box">
                     @php
                         $first = false;
