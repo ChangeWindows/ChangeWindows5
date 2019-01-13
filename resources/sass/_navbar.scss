@@ -6,16 +6,8 @@
         padding: 0;
     }
 
-    &.bg-dark {
+    &.bg-cw {
         backdrop-filter: blur(30px);
-
-        @supports ((backdrop-filter: blur(30px))) {
-            background-color: rgba(0,0,0,.8) !important;
-        }
-            
-        @supports not ((backdrop-filter: blur(30px))) {
-            background-color: #333 !important;
-        }
     }
     
     .nav-item {
@@ -35,7 +27,6 @@
         }
     
         .nav-link {
-            color: #fff !important;
             padding: 3px 0 !important;
             margin-right: 20px;
             opacity: .6;
@@ -98,29 +89,15 @@
     }
 
     .dropdown-menu {
-        box-shadow: 0 0 24px 0 rgba(0,0,0,.3);
         border: none;
         border-radius: 0;
         padding: 4px 0;
         margin-top: 0;
         font-size: 15px;
         backdrop-filter: blur(30px);
-            
-        @supports ((backdrop-filter: blur(30px))) {
-            background-color: rgba(0,0,0,.8);
-        }
-            
-        @supports not ((backdrop-filter: blur(30px))) {
-            background-color: #333;
-        }
 
         .dropdown-divider {
             margin: 4px 10px;
-            border-top-color: rgba(#fff,.1);
-        }
-
-        .dropdown-header {
-            color: #ddd;
         }
 
         .dropdown-item {
@@ -128,31 +105,6 @@
             padding-bottom: 10px;
             border-radius: 0;
             transition: .1s ease-in-out;
-            color: #fff;
-            
-            &:hover {
-                background-color: rgba(#fff,.1);
-            }
-
-            &:active {
-                color: #fff;
-            }
-
-            &:focus {
-                color: #fff;
-                background: rgba(0,0,0,.1);
-            }
-        }
-    }
-    
-    .navbar-toggler {
-        background-color: rgba(0,0,0,.1);
-        border: none;
-        padding: 10px 12px;
-        margin-right: -15px;
-        
-        .navbar-toggler-icon {
-            background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
     }
 }

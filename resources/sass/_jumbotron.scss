@@ -1,23 +1,10 @@
 .jumbotron {
     border-radius: 0;
-    background-color: #333 !important;
     padding: 10px 20px 20px;
     margin-bottom: 0;
-    color: #fff;
 
     &.tabs {
         padding-bottom: 10px;
-    }
-    
-    .viv-logo {
-        width: 32px;
-        height: auto;
-        display: block;
-        margin: 10px auto 30px;
-    }
-
-    .display-1 {
-        margin-bottom: 30px;
     }
 
     h2 {
@@ -37,7 +24,6 @@
             }
 
             a {
-                color: #fff;
                 opacity: .8;
                 text-decoration: none;
                 font-weight: 700;
@@ -50,7 +36,6 @@
             }
 
             .text {
-                color: #fff;
                 opacity: .8;
                 font-weight: 700;
             }

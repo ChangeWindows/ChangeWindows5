@@ -28,8 +28,12 @@
 @import 'user';
 @import 'milestone';
 
+// Themes
+@import 'light';
+@import 'dark';
+
 body {
-    margin-top: 48px;
+    margin-top: 50px;
 }
 
 // Hero
@@ -41,13 +45,13 @@ body {
     height: 270px;
     display: block;
     position: relative;
-    box-shadow: 0 16px 24px 0 rgba(0,0,0,.3);
+    box-shadow: 0 6px 16px 0 rgba(0,0,0,.3);
     transition: all .3s ease-in;
     border-radius: 2px;
 
     &:hover {
         transform: translate(0, -3px);
-        box-shadow: 0 20px 28px 0 rgba(0,0,0,.4);
+        box-shadow: 0 8px 18px 0 rgba(0,0,0,.3);
     }
 
     .text {

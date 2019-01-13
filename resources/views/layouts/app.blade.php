@@ -27,8 +27,8 @@
             }
         </script>
     </head>
-    <body>
-        <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top ">
+    <body class="dark">
+        <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
                     <img src="{{ asset('img/logo_white.png') }}" />

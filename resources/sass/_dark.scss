@@ -1,0 +1,103 @@
+$text: #fff;
+$text-secondary: #ddd;
+$background-header: #333;
+$background-content: #111;
+$highlight-color: rgba(255,255,255,.1);
+$transparency: rgba(0,0,0,.8);
+$shadow: rgba(0,0,0,.3);
+
+.dark {
+    .jumbotron {
+        background-color: $background-header !important;
+        color: $text;
+    
+        h2 {
+            small {
+                a {
+                    color: $text;
+                }
+    
+                .text {
+                    color: $text;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        &.bg-cw {
+            @supports ((backdrop-filter: blur(30px))) {
+                background-color: $transparency !important;
+            }
+                
+            @supports not ((backdrop-filter: blur(30px))) {
+                background-color: $background-header !important;
+            }
+        }
+
+        .navbar-brand {
+            color: $text;
+        }
+        
+        .nav-item {
+            .nav-link {
+                color: $text !important;
+            }
+        }
+    
+        .dropdown-menu {
+            box-shadow: 0 0 24px 0 $shadow;
+
+            @supports ((backdrop-filter: blur(30px))) {
+                background-color: $transparency;
+            }
+                
+            @supports not ((backdrop-filter: blur(30px))) {
+                background-color: $background-header;
+            }
+    
+            .dropdown-divider {
+                border-top-color: $highlight-color;
+            }
+    
+            .dropdown-header {
+                color: $text-secondary;
+            }
+    
+            .dropdown-item {
+                color: $text;
+                
+                &:hover {
+                    background-color: $highlight-color;
+                }
+    
+                &:active {
+                    color: $text;
+                }
+    
+                &:focus {
+                    color: $text;
+                    background: rgba($transparency,.1);
+                }
+            }
+        }
+        
+        .navbar-toggler {
+            background-color: rgba($transparency,.1);
+        }
+    }
+
+    .nav {
+        &.nav-tabs {
+            .nav-item {
+                .nav-link {
+                    color: $text;
+    
+                    &.active {
+                        color: $text;
+                    }
+                }
+            }
+        }
+    }
+}
