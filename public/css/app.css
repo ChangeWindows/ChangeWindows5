@@ -17664,6 +17664,9 @@ readers do not read off random characters that represent icons */
   text-transform: uppercase;
   margin: 0;
 }
+.jumbotron .btn-toolbar {
+  margin-top: 20px;
+}
 
 .font-light {
   font-weight: 300;

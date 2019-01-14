@@ -8,6 +8,9 @@
 <div class="jumbotron">
     <div class="container">
         <h2>Flights</h2>
+        <div class="btn-toolbar">
+            <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New build</a>
+        </div>
     </div>
 </div>
 @endsection

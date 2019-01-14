@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="row">
-    <div class="col-9">
+    <div class="col-12 col-md-9">
         <p class="lead">With ChangeWindows, we want to provide you with a full and as detailed as possible changelog about everything new in Windows.</p>
         <p>With <i>viv</i> we're going to do a few things differently. While ChangeWindows will receive some visual changes, our primary goal is to making our website more accessible, easier to use and easier to navigate. Of course, what you're seeing now is only a <b>very early</b> preview of <i>viv</i> and lots of stuff is still missing, so if you don't want that, feel free to return to <a href="https://changewindows.org">ChangeWindows 4.12</a>. Everything you're looking for is probably there.</p>
 
@@ -26,6 +26,7 @@
             <p>Our favicon has been restored</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>Updated design for highlights on the timeline page</p>
+            <p>Various improvements to our responsive design for smaller screens</p>
             <h4><i class="fal fa-fw fa-server"></i> System</h4>
             <p>Minor restructuring of our files</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
@@ -58,7 +59,7 @@
             <p>Patrons are currently not listed on About</p>
         </section>
     </div>
-    <div class="col-3">
+    <div class="col-12 col-md-3">
         <h4>About</h4>
         <p>ChangeWindows 5.0-alpha.1</p>
 

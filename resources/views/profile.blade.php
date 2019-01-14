@@ -10,7 +10,7 @@
 
 @section('content')
 <div class="row">
-    <div class="col-8">
+    <div class="col-12 col-md-8">
         <h2>Settings</h2>
         <form method="POST" action="{{ route('updateProfile', Auth::user()->id) }}" class="row">
             {{ csrf_field() }}
@@ -46,7 +46,7 @@
             </div>
         @endif
     </div>
-    <div class="col-4">
+    <div class="col-12 col-md-4">
         <h2>Details</h2>
         <p>
             <b>Name</b>: {{ Auth::user()->name }}<br />

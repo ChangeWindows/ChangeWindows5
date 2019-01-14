@@ -44,7 +44,7 @@
         </div>
         {{ $releases->links() }}
     </div>
-    <div class="col-lg-5">
+    <div class="d-none d-lg-block col-lg-5">
         @auth
             @if (Auth::user()->hasAnyRole(['Admin']))
                 <p class="h3">Admin tools</p>
