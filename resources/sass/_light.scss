@@ -1,5 +1,6 @@
 $text: #333;
 $text-secondary: #555;
+$disabled: #888;
 $background-header: #ebebeb;
 $background-content: #fff;
 $background-content-2: #f8f8f8;
@@ -179,6 +180,29 @@ $shadow-hover: rgba(0,0,0,.1);
         
                 &:hover {
                     background-color: $background-content-2;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        .page-item {
+            .page-link {
+                color: $text;
+            }
+    
+            &:not(.disabled) {
+                &.active,
+                &:hover {
+                    .page-link {
+                        color: $text;
+                    }
+                }
+            }
+    
+            &.disabled {
+                .page-link {
+                    color: $disabled;
                 }
             }
         }

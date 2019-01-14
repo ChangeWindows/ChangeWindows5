@@ -17945,15 +17945,16 @@ h1 {
 .pagination .page-item .page-link {
   background-color: transparent;
   border: none;
-  border-bottom: 4px solid transparent;
-  color: #0098df;
+  border-bottom: 2px solid transparent;
   border-radius: 0;
   text-align: center;
+  color: #fff;
 }
 .pagination .page-item:not(.disabled).active .page-link, .pagination .page-item:not(.disabled):hover .page-link {
   background-color: transparent;
-  border-bottom: 4px solid #0098df;
-  color: #0098df;
+  border-bottom: 2px solid #0098df;
+  box-shadow: 0 7px 8px -7px #0098df;
+  color: #fff;
 }
 .pagination .page-item.disabled .page-link {
   color: #666;
@@ -18311,6 +18312,15 @@ h1 {
 .light .list-group.list-group-changelogs .list-group-item:hover {
   background-color: #f8f8f8;
 }
+.light .pagination .page-item .page-link {
+  color: #333;
+}
+.light .pagination .page-item:not(.disabled).active .page-link, .light .pagination .page-item:not(.disabled):hover .page-link {
+  color: #333;
+}
+.light .pagination .page-item.disabled .page-link {
+  color: #888;
+}
 
 .dark {
   background: #181818;
@@ -18428,6 +18438,15 @@ h1 {
 }
 .dark .list-group.list-group-changelogs .list-group-item:hover {
   background-color: #222;
+}
+.dark .pagination .page-item .page-link {
+  color: #fff;
+}
+.dark .pagination .page-item:not(.disabled).active .page-link, .dark .pagination .page-item:not(.disabled):hover .page-link {
+  color: #fff;
+}
+.dark .pagination .page-item.disabled .page-link {
+  color: #888;
 }
 
 .hero {

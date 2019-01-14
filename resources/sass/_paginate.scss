@@ -6,10 +6,10 @@
         .page-link {
             background-color: transparent;
             border: none;
-            border-bottom: 4px solid transparent;
-            color: $accent;
+            border-bottom: 2px solid transparent;
             border-radius: 0;
             text-align: center;
+            color: #fff;
         }
 
         &:not(.disabled) {
@@ -17,8 +17,9 @@
             &:hover {
                 .page-link {
                     background-color: transparent;
-                    border-bottom: 4px solid $accent;
-                    color: $accent;
+                    border-bottom: 2px solid $accent;
+                    box-shadow: 0 7px 8px -7px $accent;
+                    color: #fff;
                 }
             }
         }

@@ -10,7 +10,7 @@ use Parsedown;
 class TimelineController extends Controller
 {
     public function index() {
-        $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50);
+        $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50)->onEachSide(1);
 
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;

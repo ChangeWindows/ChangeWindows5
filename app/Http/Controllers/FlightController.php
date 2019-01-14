@@ -14,7 +14,7 @@ class FlightController extends Controller
     public function index(Request $request) {
         $request->user()->authorizeRoles('Admin');
         
-        $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(100);
+        $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(100)->onEachSide(1);
 
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
