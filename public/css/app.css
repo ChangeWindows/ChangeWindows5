@@ -18314,10 +18314,10 @@ h1 {
   color: #fff;
 }
 .dark .navbg {
-  background: #333;
+  background: #282828;
 }
 .dark .jumbotron {
-  background-color: #333 !important;
+  background-color: #282828 !important;
   color: #fff;
 }
 .dark .jumbotron h2 small a {
@@ -18328,12 +18328,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
-    background-color: rgba(51, 51, 51, 0.8) !important;
+    background-color: rgba(40, 40, 40, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
-    background-color: #333 !important;
+    background-color: #282828 !important;
   }
 }
 .dark .navbar .navbar-brand {
@@ -18347,12 +18347,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar .dropdown-menu {
-    background-color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(40, 40, 40, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar .dropdown-menu {
-    background-color: #333;
+    background-color: #282828;
   }
 }
 .dark .navbar .dropdown-menu .dropdown-divider {
@@ -18372,10 +18372,10 @@ h1 {
 }
 .dark .navbar .dropdown-menu .dropdown-item:focus {
   color: #fff;
-  background: rgba(51, 51, 51, 0.1);
+  background: rgba(40, 40, 40, 0.1);
 }
 .dark .navbar .navbar-toggler {
-  background-color: rgba(51, 51, 51, 0.1);
+  background-color: rgba(40, 40, 40, 0.1);
 }
 .dark .nav.nav-tabs .nav-item .nav-link {
   color: #fff;
@@ -18399,19 +18399,19 @@ h1 {
   color: #fff;
 }
 .dark .milestone {
-  border-color: #333;
+  border-color: #282828;
 }
 .dark .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .dark .release-notes h3 {
-  border-bottom-color: #333;
+  border-bottom-color: #282828;
 }
 .dark .release-notes p {
-  border-left-color: #333;
+  border-left-color: #282828;
 }
 .dark .flight-set {
-  border-color: #333;
+  border-color: #282828;
 }
 .dark .flight-set:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
