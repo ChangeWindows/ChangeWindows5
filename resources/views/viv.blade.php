@@ -22,6 +22,7 @@
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
             <p>Early development for the Milestones feature <span class="badge badge-info">Insider</span></p>
+            <p>You can now set the theme the website should follow in your profile</p>
             <p>Our favicon has been restored</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>Updated design for highlights on the timeline page</p>
