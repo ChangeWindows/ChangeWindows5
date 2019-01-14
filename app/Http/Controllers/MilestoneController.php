@@ -27,7 +27,7 @@ class MilestoneController extends Controller
 
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 
-        return view('milestones', compact('milestones'));
+        return view('milestones.index', compact('milestones'));
     }
 
     /**
@@ -36,8 +36,12 @@ class MilestoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        //
+    public function show(Request $request, $id) {
+        $request->user()->authorizeRoles(['Admin', 'Insider']);
+
+        $milestone = Milestone::findOrFail($id);
+
+        return view('milestones.show', compact('milestone'));
     }
 
     /**

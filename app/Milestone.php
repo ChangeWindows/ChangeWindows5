@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Milestone extends Model
 {
     protected $table = 'milestones';
+    public $incrementing = false;
 
     protected $dates = ['created_at', 'updated_at'];
 

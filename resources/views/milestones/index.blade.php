@@ -14,7 +14,7 @@
         <div class="row">
             @foreach ($milestones as $milestone)
                 <div class="col-lg-4 col-md-6 col-12">
-                    <a class="milestone" href="#">
+                    <a class="milestone" href="{{ URL::to('milestones/'.$milestone->id) }}">
                         <h4 class="text-center" style="color: #{{ $milestone->color }}">
                             <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $milestone->osname }}</span>
                         </h4>
