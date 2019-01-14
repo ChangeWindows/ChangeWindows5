@@ -52,10 +52,10 @@
                                 <a class="nav-link" href="/rings"><i class="fal fa-fw fa-bullseye"></i> Rings</a>
                             </li>
                         -->
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-sm-inline-block">
                             <a class="nav-link" href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                         </li>
-                        <li class="nav-item {{ Request::is('viv') ? 'active' : '' }}">
+                        <li class="nav-item d-none d-sm-inline-block {{ Request::is('viv') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
                         </li>
                     </ul>
@@ -63,9 +63,9 @@
                         <li class="nav-item dropdown {{ Request::is('profile*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @auth
-                                    <i class="fal fa-fw fa-user-circle"></i> {{ Auth::user()->name }}
+                                    <i class="fal fa-fw fa-user-circle d-inline"></i><span class="d-none d-sm-inline"> {{ Auth::user()->name }}<span>
                                 @else
-                                    <i class="fal fa-fw fa-sign-in"></i> Login
+                                    <i class="fal fa-fw fa-sign-in d-inline"></i><span class="d-none d-sm-inline"> Login<span>
                                 @endauth
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -76,10 +76,12 @@
                                         @csrf
                                     </form>
                                 @else
-                                    
                                     <a class="dropdown-item" href="{{ route('register') }}"><i class="fal fa-fw fa-user-plus"></i> Register</a>
                                     <a class="dropdown-item" href="{{ route('login') }}"><i class="fal fa-fw fa-sign-in"></i> Login</a>
                                 @endauth
+                                <div class="dropdown-divider d-block d-sm-none"></div>
+                                <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                                <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
                                 <div class="dropdown-divider"></div>
                                 <h6 class="dropdown-header">Preview</h6>
                                 <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=bug&template=bug_report.md&title="><i class="fal fa-fw fa-bug"></i> Report a bug</a>
