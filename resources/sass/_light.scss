@@ -2,11 +2,17 @@ $text: #333;
 $text-secondary: #555;
 $background-header: #ebebeb;
 $background-content: #fff;
+$background-content-2: #f8f8f8;
+$background-content-hover: #eee;
 $highlight-color: rgba(0,0,0,.1);
 $transparency: rgba(235,235,235,.8);
 $shadow: rgba(0,0,0,.3);
+$shadow-hover: rgba(0,0,0,.1);
 
 .light {
+    background: $background-content;
+    color: $text;
+
     .navbg {
         background: $background-header;
     }
@@ -100,6 +106,79 @@ $shadow: rgba(0,0,0,.3);
                     &.active {
                         color: $text;
                     }
+                }
+            }
+        }
+    }
+
+    .timeline {
+        .timeline-row {
+            &:nth-child(odd) {
+                background-color: $background-content;
+            }
+            
+            &:nth-child(even) {
+                background-color: $background-content-2;
+            }
+        
+            &:hover {
+                background-color: $background-content-hover;
+            }
+        
+            a.row .build {
+                color: $text;
+            }
+        
+            .row {
+                color: $text;
+            }
+        }
+    }
+    
+    .milestone {
+        border-color: $background-header;
+        
+        &:hover {
+            box-shadow: 0 4px 10px 0 $shadow-hover;
+        }
+    }
+
+    .release-notes {
+        h3 {
+            border-bottom-color: $background-header;
+        }
+    
+        p {
+            border-left-color: $background-header;
+        }
+    }
+
+    .flight-set {
+        border-color: $background-header;
+        
+        &:hover {
+            box-shadow: 0 4px 10px 0 $shadow-hover;
+        }
+    
+        .flight {
+            p {
+                &.build {
+                    color: $text;
+                }
+            }
+        }
+    }
+
+    .list-group {
+        &.list-group-changelogs {
+            .list-group-item {
+                &.active {
+                    color: $text;
+                    background: $background-content-hover;
+                }
+        
+                &:hover {
+                    background-color: $background-content-2;
                 }
             }
         }

@@ -4,10 +4,10 @@
     h3 {
         font-weight: 600;
         padding-bottom: 8px;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid transparent;
 
         small {
-            color: #999;
+            opacity: .6;
             font-weight: 600;
         }
     }
@@ -24,7 +24,7 @@
 
     p {
         line-height: 2;
-        border-left: .1rem solid #ddd;
+        border-left: .1rem solid transparent;
         margin-left: .85rem;
         padding-left: 1.4rem;
         margin-bottom: 0;

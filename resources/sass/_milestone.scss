@@ -3,13 +3,12 @@
     min-height: 83.7px;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid transparent;
     transition: all .5s;
     display: block;
         
     &:hover {
         text-decoration: none;
-        box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
         transform: translate(0, -3px);
     }
             

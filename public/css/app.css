@@ -17783,20 +17783,7 @@ h1 {
   transition: 0.2s ease-in-out;
   z-index: 9700;
 }
-.timeline .timeline-row:nth-child(odd) {
-  background-color: #fff;
-}
-.timeline .timeline-row:nth-child(even) {
-  background-color: #f8f8f8;
-}
-.timeline .timeline-row:hover {
-  background-color: #eee;
-}
-.timeline .timeline-row a.row .build {
-  color: #000;
-}
 .timeline .timeline-row .row {
-  color: #000;
   padding: 12px 0;
   font-size: 100%;
 }
@@ -18056,7 +18043,7 @@ h1 {
 }
 
 .flight-set {
-  border: 1px solid #ddd;
+  border: 1px solid transparent;
   margin-left: 0;
   margin-right: 0;
   transition: all 0.5s;
@@ -18064,7 +18051,6 @@ h1 {
 }
 .flight-set:hover {
   text-decoration: none;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .flight-set .flight {
   display: block;
@@ -18076,7 +18062,6 @@ h1 {
   line-height: 1;
 }
 .flight-set .flight p.build {
-  color: #333;
   font-size: 18px;
   font-weight: 600;
   margin: 4px 0;
@@ -18115,10 +18100,10 @@ h1 {
 .release-notes h3 {
   font-weight: 600;
   padding-bottom: 8px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid transparent;
 }
 .release-notes h3 small {
-  color: #999;
+  opacity: 0.6;
   font-weight: 600;
 }
 .release-notes h4 {
@@ -18131,7 +18116,7 @@ h1 {
 }
 .release-notes p {
   line-height: 2;
-  border-left: 0.1rem solid #ddd;
+  border-left: 0.1rem solid transparent;
   margin-left: 0.85rem;
   padding-left: 1.4rem;
   margin-bottom: 0;
@@ -18190,13 +18175,12 @@ h1 {
   min-height: 83.7px;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid transparent;
   transition: all 0.5s;
   display: block;
 }
 .milestone:hover {
   text-decoration: none;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   -webkit-transform: translate(0, -3px);
           transform: translate(0, -3px);
 }
@@ -18207,6 +18191,10 @@ h1 {
   margin: 0;
 }
 
+.light {
+  background: #fff;
+  color: #333;
+}
 .light .navbg {
   background: #ebebeb;
 }
@@ -18277,7 +18265,54 @@ h1 {
 .light .nav.nav-tabs .nav-item .nav-link.active {
   color: #333;
 }
+.light .timeline .timeline-row:nth-child(odd) {
+  background-color: #fff;
+}
+.light .timeline .timeline-row:nth-child(even) {
+  background-color: #f8f8f8;
+}
+.light .timeline .timeline-row:hover {
+  background-color: #eee;
+}
+.light .timeline .timeline-row a.row .build {
+  color: #333;
+}
+.light .timeline .timeline-row .row {
+  color: #333;
+}
+.light .milestone {
+  border-color: #ebebeb;
+}
+.light .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.light .release-notes h3 {
+  border-bottom-color: #ebebeb;
+}
+.light .release-notes p {
+  border-left-color: #ebebeb;
+}
+.light .flight-set {
+  border-color: #ebebeb;
+}
+.light .flight-set:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.light .flight-set .flight p.build {
+  color: #333;
+}
+.light .list-group.list-group-changelogs .list-group-item.active {
+  color: #333;
+  background: #eee;
+}
+.light .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #f8f8f8;
+}
 
+.dark {
+  background: #181818;
+  color: #fff;
+}
 .dark .navbg {
   background: #333;
 }
@@ -18347,6 +18382,49 @@ h1 {
 }
 .dark .nav.nav-tabs .nav-item .nav-link.active {
   color: #fff;
+}
+.dark .timeline .timeline-row:nth-child(odd) {
+  background-color: #181818;
+}
+.dark .timeline .timeline-row:nth-child(even) {
+  background-color: #222;
+}
+.dark .timeline .timeline-row:hover {
+  background-color: #282828;
+}
+.dark .timeline .timeline-row a.row .build {
+  color: #fff;
+}
+.dark .timeline .timeline-row .row {
+  color: #fff;
+}
+.dark .milestone {
+  border-color: #333;
+}
+.dark .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.dark .release-notes h3 {
+  border-bottom-color: #333;
+}
+.dark .release-notes p {
+  border-left-color: #333;
+}
+.dark .flight-set {
+  border-color: #333;
+}
+.dark .flight-set:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.dark .flight-set .flight p.build {
+  color: #fff;
+}
+.dark .list-group.list-group-changelogs .list-group-item.active {
+  color: #fff;
+  background: #282828;
+}
+.dark .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #222;
 }
 
 .hero {

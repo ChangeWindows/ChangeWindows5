@@ -19,25 +19,8 @@
         padding-right: 15px;
         transition: .2s ease-in-out;
         z-index: 9700;
-                
-        &:nth-child(odd) {
-            background-color: #fff;
-        }
-        
-        &:nth-child(even) {
-            background-color: #f8f8f8;
-        }
-    
-        &:hover {
-            background-color: #eee;
-        }
-    
-        a.row .build {
-            color: #000;
-        }
     
         .row {
-            color: #000;
             padding: 12px 0;
             font-size: 100%;
     
