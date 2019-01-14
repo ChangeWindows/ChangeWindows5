@@ -42,7 +42,7 @@
                         </li>
                         @auth
                             @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
-                                <li class="nav-item {{ Request::is('milestones') ? 'active' : '' }}">
+                                <li class="nav-item {{ Request::is('milestones*') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('milestones') }}"><i class="fal fa-fw fa-map-signs"></i> Milestones</a>
                                 </li>
                             @endif

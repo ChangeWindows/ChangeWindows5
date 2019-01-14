@@ -17667,6 +17667,10 @@ readers do not read off random characters that represent icons */
   text-transform: uppercase;
   margin: 0;
 }
+.jumbotron .lead {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
 .jumbotron .btn-toolbar {
   margin-top: 20px;
 }
