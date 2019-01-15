@@ -17,9 +17,9 @@ class CreateBuildfeedTable extends Migration
             $table->integer('major');
             $table->integer('minor');
             $table->integer('build');
-            $table->integer('revision');
-            $table->string('lab');
-            $table->string('buildtime');
+            $table->integer('revision')->nullable();
+            $table->string('lab')->nullable();
+            $table->string('buildtime')->nullable();
             $table->integer('family');
             $table->integer('sourcetype');
             $table->text('sourcedetails')->nullable();
