@@ -27,6 +27,9 @@ Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 Route::get('/milestones', 'MilestoneController@index')->name('milestones');
 Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone');
 
+Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
+Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');
+
 Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 

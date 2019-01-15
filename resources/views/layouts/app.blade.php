@@ -75,6 +75,9 @@
                                     <a class="dropdown-item" href="{{ route('register') }}"><i class="fal fa-fw fa-user-plus"></i> Register</a>
                                     <a class="dropdown-item" href="{{ route('login') }}"><i class="fal fa-fw fa-sign-in"></i> Login</a>
                                 @endauth
+                                <div class="dropdown-divider"></div>
+                                <h6 class="dropdown-header">More</h6>
+                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
                                 <div class="dropdown-divider d-block d-sm-none"></div>
                                 <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
