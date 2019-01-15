@@ -7,7 +7,7 @@
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="{{ URL::to('buildfeed') }}">
-                    Buildfeed
+                    BuildFeed
                 </a>
             </li>
             <li class="nav-item">
