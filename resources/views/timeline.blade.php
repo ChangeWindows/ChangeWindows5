@@ -197,6 +197,14 @@
                                 <div class="checkbox"><label><input type="checkbox" name="flight[7][6]" value="6"> <span class="label targeted">Semi-Annual Targeted</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[7][7]" value="7"> <span class="label broad">Semi-Annual Broad</span></label></div>
                             </div>
+                            <div class="col-lg-4 col-md-6 col-sm">
+                                <label for="ring" class="control-label extra-margin">ISO</label>
+                                <div class="checkbox"><label><input type="checkbox" name="flight[8][6]" value="6"> <span class="label targeted">Public</span></label></div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm">
+                                <label for="ring" class="control-label extra-margin">SDK</label>
+                                <div class="checkbox"><label><input type="checkbox" name="flight[9][6]" value="6"> <span class="label targeted">Public</span></label></div>
+                            </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-plus"></i> Add</button>
                             </div>
