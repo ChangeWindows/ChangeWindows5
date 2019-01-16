@@ -40,8 +40,10 @@ class MilestoneController extends Controller
         $request->user()->authorizeRoles(['Admin', 'Insider']);
 
         $milestone = Milestone::findOrFail($id);
+        $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
+        $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();
 
-        return view('milestones.show', compact('milestone'));
+        return view('milestones.show', compact('milestone', 'previous', 'next'));
     }
 
     /**

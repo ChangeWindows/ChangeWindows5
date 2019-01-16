@@ -11,8 +11,19 @@
 
 @section('content')
 <div class="row">
-    <div class="col">
-    
-    </div>
+    @if ($previous)
+        <div class="col-6">
+            <a href="{{ URL::to('milestones/'.$previous->id) }}">
+                <i class="fab fa-fw fa-windows"></i> {{ $previous->osname }} {{ $previous->name }}
+            </a>
+        </div>
+    @endif
+    @if ($next)
+        <div class="col-6">
+            <a href="{{ URL::to('milestones/'.$next->id) }}">
+                <i class="fab fa-fw fa-windows"></i> {{ $next->osname }} {{ $next->name }}
+            </a>
+        </div>
+    @endif
 </div>
 @endsection
