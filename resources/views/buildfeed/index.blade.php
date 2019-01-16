@@ -28,6 +28,8 @@
                 <div class="card-header">{{ $build->major }}.{{ $build->minor }}.{{ $build->build }}.{{ $build->revision }}</div>
                 <div class="card-body">
                     <i class="fal fa-fw fa-clock"></i> {{ $build->buildtime }}
+                    <br />
+                    <i class="fal fa-fw fa-flask"></i> {{ $build->lab }}
                 </div>
             </div>
         </div>

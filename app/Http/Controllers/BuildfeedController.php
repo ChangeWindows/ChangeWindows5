@@ -8,7 +8,7 @@ use App\Buildfeed;
 class BuildfeedController extends Controller
 {
     public function index() {
-        $builds = Buildfeed::orderBy('major', 'DESC')->orderBy('minor', 'DESC')->orderBy('build', 'DESC')->orderBy('revision', 'DESC')->paginate(50)->onEachSide(1);
+        $builds = Buildfeed::orderBy('major', 'DESC')->orderBy('minor', 'DESC')->orderBy('build', 'DESC')->orderBy('revision', 'DESC')->paginate(52)->onEachSide(1);
 
         return view('buildfeed.index', compact('builds'));
     }
