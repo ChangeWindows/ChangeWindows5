@@ -18202,6 +18202,20 @@ h1 {
   margin: 0;
 }
 
+.buildfeed .card {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+.buildfeed .card .card-header {
+  border: none;
+  padding: 10px;
+  border-radius: 0;
+}
+.buildfeed .card .card-body {
+  padding: 10px;
+}
+
 .light {
   background: #fff;
   color: #333;
@@ -18327,6 +18341,12 @@ h1 {
 }
 .light .pagination .page-item.disabled .page-link {
   color: #888;
+}
+.light .buildfeed .card .card-header {
+  background-color: #ebebeb;
+}
+.light .buildfeed .card .card-body {
+  background-color: #f8f8f8;
 }
 
 .dark {
@@ -18454,6 +18474,12 @@ h1 {
 }
 .dark .pagination .page-item.disabled .page-link {
   color: #888;
+}
+.dark .buildfeed .card .card-header {
+  background-color: #282828;
+}
+.dark .buildfeed .card .card-body {
+  background-color: #222;
 }
 
 .hero {

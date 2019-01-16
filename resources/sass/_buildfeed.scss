@@ -1,0 +1,17 @@
+.buildfeed {
+    .card {
+        border: none;
+        border-radius: 0;
+        margin-bottom: 10px;
+
+        .card-header {
+            border: none;
+            padding: 10px;
+            border-radius: 0;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+    }
+}

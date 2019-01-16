@@ -21,6 +21,7 @@
             <h3>5.0-alpha.2 <small>January 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
+            <p>BuildFeed.net data is now available from the user menu</p>
             <p>Early development for the Milestones feature <span class="badge badge-info">Insider</span></p>
             <p>You can now set the theme the website should follow in your profile</p>
             <p>Our favicon has been restored</p>

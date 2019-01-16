@@ -21,13 +21,18 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col">
-        @foreach ($builds as $build)
-            <p>{{ $build->buildstring }}</p>
-        @endforeach
-        {{ $builds->links() }}
-    </div>
+<div class="row buildfeed">
+    @foreach ($builds as $build)
+        <div class="col-6 col-lg-4 col-xl-3">
+            <div class="card">
+                <div class="card-header">{{ $build->major }}.{{ $build->minor }}.{{ $build->build }}.{{ $build->revision }}</div>
+                <div class="card-body">
+                    <i class="fal fa-fw fa-clock"></i> {{ $build->buildtime }}
+                </div>
+            </div>
+        </div>
+    @endforeach
+    <div class="col-12">{{ $builds->links() }}</div>
 </div>
 @endsection
 

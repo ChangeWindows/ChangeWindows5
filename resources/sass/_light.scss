@@ -207,4 +207,16 @@ $shadow-hover: rgba(0,0,0,.1);
             }
         }
     }
+
+    .buildfeed {
+        .card {
+            .card-header {
+                background-color: $background-header;
+            }
+    
+            .card-body {
+                background-color: $background-content-2;
+            }
+        }
+    }
 }

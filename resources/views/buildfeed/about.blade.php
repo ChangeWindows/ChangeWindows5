@@ -25,7 +25,7 @@
     <div class="col">
         <h4>*Gasp* Are you starting Bui-</h4>
         <p><b>No.</b> We are only hosting this data as an archive of the original <a href="https://buildfeed.com">BuildFeed</a>. We have no intend to continue expanding on it. Its only purpose here is for it to be readable online in a "not-a-12-MB-JSON-file"-way. This data is the BuildFeed data, unchanged, as it was. If you're looking for the latest and greatest buildstrings from internal builds from Microsoft (or public builds, for that matter), this is not the page you want to be on.</p>
-        <h4>Can we at least have some filters prety please?</h4>
+        <h4>Can we at least have some filters pretty please?</h4>
         <p>We are still building this new version of ChangeWindows, much still has to come and while we won't be expanding on this data, we will eventually make it look nice and make it filter-able.</p>
         <h4>License</h4>
         <p>Note that the following license applies to the BuildFeed data and only the BuildFeed data. This license does not correspond with ChangeWindows or its data.</p>
