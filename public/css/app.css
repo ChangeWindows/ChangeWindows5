@@ -17532,7 +17532,6 @@ readers do not read off random characters that represent icons */
 }
 
 .navbar {
-  z-index: 9900;
   padding: 0 20px;
 }
 @media all and (min-width: 1200px) {
