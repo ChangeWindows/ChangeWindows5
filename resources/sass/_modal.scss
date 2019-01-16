@@ -1,0 +1,31 @@
+.modal {
+    .modal-content {
+        border-radius: 2px;
+        border: none;
+        background-color: transparent;
+        backdrop-filter: blur(30px);
+
+        .modal-header {
+            border: none;
+            border-radius: 0;
+            padding: 10px 15px;
+
+            .modal-title {
+                font-weight: 700;
+                font-size: 26px;
+                line-break: 1;
+            }
+
+            .close {
+                text-shadow: none;
+                margin: -10px -15px -10px auto;
+                padding: 18px;
+            }
+        }
+
+        .modal-body {
+            border-radius: 0;
+            padding: 15px;
+        }
+    }
+}

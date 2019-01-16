@@ -7,6 +7,7 @@ $background-content-2: #f8f8f8;
 $background-content-hover: #eee;
 $highlight-color: rgba(0,0,0,.1);
 $transparency: rgba(235,235,235,.8);
+$transparency-content: rgba(255,255,255,.9);
 $shadow: rgba(0,0,0,.3);
 $shadow-hover: rgba(0,0,0,.1);
 
@@ -203,6 +204,36 @@ $shadow-hover: rgba(0,0,0,.1);
             &.disabled {
                 .page-link {
                     color: $disabled;
+                }
+            }
+        }
+    }
+    
+    .modal {
+        .modal-content {
+            box-shadow: 0 0 24px 0 $shadow;
+            
+            .modal-header {
+                @supports ((backdrop-filter: blur(30px))) {
+                    background: $transparency;
+                }
+                    
+                @supports not ((backdrop-filter: blur(30px))) {
+                    background: $background-header;
+                }
+
+                .close {
+                    color: $text !important;
+                }
+            }
+    
+            .modal-body {
+                @supports ((backdrop-filter: blur(30px))) {
+                    background: $transparency-content;
+                }
+                    
+                @supports not ((backdrop-filter: blur(30px))) {
+                    background: $background-content;
                 }
             }
         }

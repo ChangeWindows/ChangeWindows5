@@ -17674,6 +17674,33 @@ readers do not read off random characters that represent icons */
   margin-top: 20px;
 }
 
+.modal .modal-content {
+  border-radius: 2px;
+  border: none;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+.modal .modal-content .modal-header {
+  border: none;
+  border-radius: 0;
+  padding: 10px 15px;
+}
+.modal .modal-content .modal-header .modal-title {
+  font-weight: 700;
+  font-size: 26px;
+  line-break: 1;
+}
+.modal .modal-content .modal-header .close {
+  text-shadow: none;
+  margin: -10px -15px -10px auto;
+  padding: 18px;
+}
+.modal .modal-content .modal-body {
+  border-radius: 0;
+  padding: 15px;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -18341,6 +18368,32 @@ h1 {
 .light .pagination .page-item.disabled .page-link {
   color: #888;
 }
+.light .modal .modal-content {
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .light .modal .modal-content .modal-header {
+    background: rgba(235, 235, 235, 0.8);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .light .modal .modal-content .modal-header {
+    background: #ebebeb;
+  }
+}
+.light .modal .modal-content .modal-header .close {
+  color: #333 !important;
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .light .modal .modal-content .modal-body {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .light .modal .modal-content .modal-body {
+    background: #fff;
+  }
+}
 .light .buildfeed .card .card-header {
   background-color: #ebebeb;
 }
@@ -18473,6 +18526,32 @@ h1 {
 }
 .dark .pagination .page-item.disabled .page-link {
   color: #888;
+}
+.dark .modal .modal-content {
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .dark .modal .modal-content .modal-header {
+    background: rgba(40, 40, 40, 0.8);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .dark .modal .modal-content .modal-header {
+    background: #282828;
+  }
+}
+.dark .modal .modal-content .modal-header .close {
+  color: #fff !important;
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .dark .modal .modal-content .modal-body {
+    background: rgba(24, 24, 24, 0.9);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .dark .modal .modal-content .modal-body {
+    background: #181818;
+  }
 }
 .dark .buildfeed .card .card-header {
   background-color: #282828;
