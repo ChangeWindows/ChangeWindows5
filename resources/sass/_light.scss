@@ -239,6 +239,16 @@ $shadow-hover: rgba(0,0,0,.1);
         }
     }
 
+    .lifecycle-stats {
+        h5 {
+            color: $disabled;
+        }
+    
+        h4 {
+            color: $text;
+        }
+    }
+
     .buildfeed {
         .card {
             .card-header {

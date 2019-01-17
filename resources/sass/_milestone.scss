@@ -20,3 +20,29 @@
         margin: 0;
     }
 }
+
+.milestone-navigation {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    padding: 10px 10px 14px;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.lifecycle-stats {
+    h5 {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-weight: 700;
+    }
+}

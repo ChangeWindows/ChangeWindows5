@@ -31,7 +31,7 @@
             <h4><i class="fal fa-fw fa-server"></i> System</h4>
             <p>Minor restructuring of our files</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
-            <p>Revamped navigation bar design with transparency and blur</p>
+            <p>Revamped heading design with transparency and blur (on supported browsers)</p>
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <p>When in the profile, the profile menu will now be correctly marked as active</p>
