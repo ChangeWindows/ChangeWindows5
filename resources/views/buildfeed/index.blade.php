@@ -3,7 +3,7 @@
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2 class="mb-4"><i class="fal fa-fw fa-rss"></i> BuildFeed data</h2>
+        <h2 class="mb-4"><i class="fal fa-rss"></i> BuildFeed data</h2>
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="{{ URL::to('buildfeed') }}">

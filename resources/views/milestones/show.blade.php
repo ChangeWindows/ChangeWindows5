@@ -3,7 +3,7 @@
 @section('hero')
 <div class="jumbotron">
     <div class="container">
-        <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
+        <h2><i class="fab fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
         <p class="lead">{{ $milestone->description }}</p>
     </div>
 </div>
