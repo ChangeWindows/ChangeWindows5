@@ -57,41 +57,11 @@
         </div>
     @endif
     <div class="spacing-20"></div>
-    <div class="col-3">
-        <h4>PC</h4>
-        <h5>{{ $pc_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>Xbox</h4>
-        <h5>{{ $xbox_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>IoT</h4>
-        <h5>{{ $iot_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>Server</h4>
-        <h5>{{ $server_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>Holographic</h4>
-        <h5>{{ $holographic_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>Team</h4>
-        <h5>{{ $team_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>Mobile</h4>
-        <h5>{{ $mobile_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>SDK</h4>
-        <h5>{{ $sdk_count }} builds</h5>
-    </div>
-    <div class="col-3">
-        <h4>ISO</h4>
-        <h5>{{ $iso_count }} builds</h5>
-    </div>
+    @foreach ($platforms as $platform)
+        <div class="col-3">
+            <h4>{{ getPlatformById($platform->platform) }}</h4>
+            <h5>{{ $platform->count }} builds</h5>
+        </div>
+    @endforeach
 </div>
 @endsection

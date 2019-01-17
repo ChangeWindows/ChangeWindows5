@@ -45,17 +45,9 @@ class MilestoneController extends Controller
         $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
         $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();
 
-        $pc_count = Release::where('milestone', $milestone->id)->where('platform', '1')->count();
-        $mobile_count = Release::where('milestone', $milestone->id)->where('platform', '2')->count();
-        $xbox_count = Release::where('milestone', $milestone->id)->where('platform', '3')->count();
-        $server_count = Release::where('milestone', $milestone->id)->where('platform', '4')->count();
-        $holographic_count = Release::where('milestone', $milestone->id)->where('platform', '5')->count();
-        $iot_count = Release::where('milestone', $milestone->id)->where('platform', '6')->count();
-        $team_count = Release::where('milestone', $milestone->id)->where('platform', '7')->count();
-        $iso_count = Release::where('milestone', $milestone->id)->where('platform', '8')->count();
-        $sdk_count = Release::where('milestone', $milestone->id)->where('platform', '9')->count();
+        $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->where('delta', '<>', '99999')->groupBy('platform')->orderBy('platform')->get();
 
-        return view('milestones.show', compact('milestone', 'previous', 'next', 'pc_count', 'mobile_count', 'xbox_count', 'server_count', 'holographic_count', 'iot_count', 'team_count', 'iso_count', 'sdk_count'));
+        return view('milestones.show', compact('milestone', 'previous', 'next', 'platforms'));
     }
 
     /**
