@@ -1,10 +1,24 @@
 @extends('layouts.app')
 
 @section('hero')
-<div class="jumbotron">
+<div class="jumbotron tabs">
     <div class="container">
         <h2><i class="fab fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
         <p class="lead">{{ $milestone->description }}</p>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ URL::to('milestones/'.$milestone->id) }}">
+                    Overview
+                </a>
+            </li>
+            @foreach ($platforms as $platform)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ URL::to('milestones/'.$milestone->id.'/'.$platform->platform) }}">
+                        {{ getPlatformById($platform->platform) }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
     </div>
 </div>
 @endsection
