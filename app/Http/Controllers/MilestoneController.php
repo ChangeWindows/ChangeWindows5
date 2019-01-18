@@ -55,8 +55,6 @@ class MilestoneController extends Controller
         $total = ($preview_period + $public_period + $extended_period + $lts_period) * 100;
 
         if ($milestone->preview->lessThanOrEqualTo($now) && $milestone->public->greaterThan($now)) {
-            $support_period = 1;
-            
             $preview_done = $milestone->preview->diffInDays($milestone->now);
             $preview_go = $preview_period - $preview_done;
 
@@ -66,8 +64,6 @@ class MilestoneController extends Controller
             $lts_go = $lts_period;
         } else if ($milestone->public->lessThanOrEqualTo($now) && $milestone->mainEol->greaterThanOrEqualTo($now)) {
             // We flip this to "greaterThanOrEqualTo" instead of "greaterThan" because these dates indicate the last day of support
-            $support_period = 2;
-            
             $public_done = $milestone->public->diffInDays($milestone->now);
             $public_go = $public_period - $public_done;
             
@@ -76,8 +72,6 @@ class MilestoneController extends Controller
             $extended_go = $extended_period;
             $lts_go = $lts_period;
         } else if ($milestone->mainEol->lessThan($now) && $milestone->mainXol->greaterThanOrEqualTo($now)) {
-            $support_period = 3;
-            
             $extended_done = $milestone->public->diffInDays($milestone->now);
             $extended_go = $extended_period - $extended_done;
             
@@ -86,8 +80,6 @@ class MilestoneController extends Controller
             $public_done = $public_period;
             $lts_go = $lts_period;
         } else if ($milestone->mainXol->lessThan($now) && $milestone->ltsEol->greaterThanOrEqualTo($now)) {
-            $support_period = 4;
-            
             $lts_done = $milestone->public->diffInDays($milestone->now);
             $lts_go = $lts_period - $lts_done;
             
@@ -96,8 +88,6 @@ class MilestoneController extends Controller
             $public_done = $public_period;
             $extended_done = $extended_period;
         } else {
-            $support_period = 5;
-
             $preview_go = $public_go = $extended_go = $lts_go = 0;
             $preview_done = $preview_period;
             $public_done = $public_period;
