@@ -71,6 +71,19 @@
         </div>
     @endif
     <div class="spacing-20"></div>
+    <div class="col-12">
+        <div class="progress">
+            <div class="progress-bar bg-preview-done" style="width: {{ $progress['preview_done'] }}%"></div>
+            <div class="progress-bar bg-preview-go" style="width: {{ $progress['preview_go'] }}%"></div>
+            <div class="progress-bar bg-public-done" style="width: {{ $progress['public_done'] }}%"></div>
+            <div class="progress-bar bg-public-go" style="width: {{ $progress['public_go'] }}%"></div>
+            <div class="progress-bar bg-extended-done" style="width: {{ $progress['extended_done'] }}%"></div>
+            <div class="progress-bar bg-extended-go" style="width: {{ $progress['extended_go'] }}%"></div>
+            <div class="progress-bar bg-lts-done" style="width: {{ $progress['lts_done'] }}%"></div>
+            <div class="progress-bar bg-lts-go" style="width: {{ $progress['lts_go'] }}%"></div>
+        </div>
+    </div>
+    <div class="spacing-20"></div>
     @foreach ($platforms as $platform)
         <div class="col-3">
             <h4>{{ getPlatformById($platform->platform) }}</h4>

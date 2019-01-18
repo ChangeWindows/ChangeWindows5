@@ -36,6 +36,7 @@
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <p>When in the profile, the profile menu will now be correctly marked as active</p>
             <p>Modals will no longer appear below the navbar</p>
+            <p>The timeline sidebar no longer shows updates from older milestones as the current build</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
             <p>Patrons are currently not listed on About</p>
         </section>
