@@ -110,13 +110,16 @@
             </div>
         </nav>
         <div class="navbg"></div>
-
         @yield('hero')
         <div class="container" id="app">
             <main class="content">
                 @yield('content')
             </main>
         </div>
+        <footer class="text-center">
+            <hr />
+            <span class="font-uppercase font-light">Change</span><span class="font-uppercase font-bold">Windows</span> <span class="font-light">viv</span> 5.0-alpha.2 &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
+        </footer>
         @yield('modals')
 		<!-- Matomo -->
 		<script type="text/javascript">
