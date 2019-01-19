@@ -45,66 +45,7 @@ class MilestoneController extends Controller
         $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
         $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();
 
-        $now = Carbon::now();
-
-        $preview_period = $milestone->public->timestamp > 0 ? $milestone->preview->diffInDays($milestone->public) : 0;
-        $public_period = $milestone->mainEol->timestamp > 0 ? $milestone->public->diffInDays($milestone->mainEol) : 0;
-        $extended_period = $milestone->mainXol->timestamp > 0 ? $milestone->mainEol->diffInDays($milestone->mainXol) : 0;
-        $lts_period = $milestone->ltsEol->timestamp > 0 ? $milestone->mainXol->diffInDays($milestone->ltsEol) : 0;
-
-        $total = ($preview_period + $public_period + $extended_period + $lts_period) * 100;
-
-        if ($milestone->preview->lessThanOrEqualTo($now) && $milestone->public->greaterThan($now)) {
-            $preview_done = $milestone->preview->diffInDays($milestone->now);
-            $preview_go = $preview_period - $preview_done;
-
-            $public_done = $extended_done = $lts_done = 0;
-            $public_go = $public_period;
-            $extended_go = $extended_period;
-            $lts_go = $lts_period;
-        } else if ($milestone->public->lessThanOrEqualTo($now) && $milestone->mainEol->greaterThanOrEqualTo($now)) {
-            // We flip this to "greaterThanOrEqualTo" instead of "greaterThan" because these dates indicate the last day of support
-            $public_done = $milestone->public->diffInDays($milestone->now);
-            $public_go = $public_period - $public_done;
-            
-            $preview_go = $extended_done = $lts_done = 0;
-            $preview_done = $preview_period;
-            $extended_go = $extended_period;
-            $lts_go = $lts_period;
-        } else if ($milestone->mainEol->lessThan($now) && $milestone->mainXol->greaterThanOrEqualTo($now)) {
-            $extended_done = $milestone->mainEol->diffInDays($milestone->now);
-            $extended_go = $extended_period - $extended_done;
-            
-            $preview_go = $public_go = $lts_done = 0;
-            $preview_done = $preview_period;
-            $public_done = $public_period;
-            $lts_go = $lts_period;
-        } else if ($milestone->mainXol->lessThan($now) && $milestone->ltsEol->greaterThanOrEqualTo($now)) {
-            $lts_done = $milestone->mainXol->diffInDays($milestone->now);
-            $lts_go = $lts_period - $lts_done;
-            
-            $preview_go = $public_go = $extended_go = 0;
-            $preview_done = $preview_period;
-            $public_done = $public_period;
-            $extended_done = $extended_period;
-        } else {
-            $preview_go = $public_go = $extended_go = $lts_go = 0;
-            $preview_done = $preview_period;
-            $public_done = $public_period;
-            $extended_done = $extended_period;
-            $lts_done = $lts_period;
-        }
-
-        $progress = array(
-            'preview_done' => $preview_done / $total * 10000,
-            'preview_go' => $preview_go / $total * 10000,
-            'public_done' => $public_done / $total * 10000,
-            'public_go' => $public_go / $total * 10000,
-            'extended_done' => $extended_done / $total * 10000,
-            'extended_go' => $extended_go / $total * 10000,
-            'lts_done' => $lts_done / $total * 10000,
-            'lts_go' => $lts_go / $total * 10000
-        );
+        $progress = $milestone->getSupport();
 
         $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->where('delta', '<>', '99999')->groupBy('platform')->orderBy('platform')->get();
 
