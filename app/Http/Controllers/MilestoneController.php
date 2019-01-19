@@ -47,10 +47,10 @@ class MilestoneController extends Controller
 
         $now = Carbon::now();
 
-        $preview_period = $milestone->preview->diffInDays($milestone->public);
-        $public_period = $milestone->public->diffInDays($milestone->mainEol);
-        $extended_period = $milestone->mainEol->diffInDays($milestone->mainXol);
-        $lts_period = $milestone->mainXol->diffInDays($milestone->ltsEol);
+        $preview_period = $milestone->public->timestamp > 0 ? $milestone->preview->diffInDays($milestone->public) : 0;
+        $public_period = $milestone->mainEol->timestamp > 0 ? $milestone->public->diffInDays($milestone->mainEol) : 0;
+        $extended_period = $milestone->mainXol->timestamp > 0 ? $milestone->mainEol->diffInDays($milestone->mainXol) : 0;
+        $lts_period = $milestone->ltsEol->timestamp > 0 ? $milestone->mainXol->diffInDays($milestone->ltsEol) : 0;
 
         $total = ($preview_period + $public_period + $extended_period + $lts_period) * 100;
 
@@ -72,7 +72,7 @@ class MilestoneController extends Controller
             $extended_go = $extended_period;
             $lts_go = $lts_period;
         } else if ($milestone->mainEol->lessThan($now) && $milestone->mainXol->greaterThanOrEqualTo($now)) {
-            $extended_done = $milestone->public->diffInDays($milestone->now);
+            $extended_done = $milestone->mainEol->diffInDays($milestone->now);
             $extended_go = $extended_period - $extended_done;
             
             $preview_go = $public_go = $lts_done = 0;
@@ -80,7 +80,7 @@ class MilestoneController extends Controller
             $public_done = $public_period;
             $lts_go = $lts_period;
         } else if ($milestone->mainXol->lessThan($now) && $milestone->ltsEol->greaterThanOrEqualTo($now)) {
-            $lts_done = $milestone->public->diffInDays($milestone->now);
+            $lts_done = $milestone->mainXol->diffInDays($milestone->now);
             $lts_go = $lts_period - $lts_done;
             
             $preview_go = $public_go = $extended_go = 0;
