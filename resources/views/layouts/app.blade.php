@@ -55,7 +55,7 @@
                             </li>
                         -->
                         <li class="nav-item d-none d-sm-inline-block">
-                            <a class="nav-link" href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                            <a class="nav-link" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                         </li>
                         <li class="nav-item d-none d-sm-inline-block {{ Request::is('viv') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
@@ -81,7 +81,7 @@
                                 <h6 class="dropdown-header">More</h6>
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
                                 <div class="dropdown-divider d-block d-sm-none"></div>
-                                <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                                <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
                                 <div class="dropdown-divider"></div>
                                 <h6 class="dropdown-header">Preview</h6>
