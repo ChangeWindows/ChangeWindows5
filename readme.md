@@ -1,17 +1,31 @@
-# ChangeWindows viv
-***viv*** is the fifth major version of ChangeWindows. Unlike previous versions, we're building this one out in the open. What's the ChangeWindows/ChangeWindows repository for? Well, that used to be version 5 too, but we just wanted to start anew.
+<p align="center">
+<img src="https://viv.changewindows.org/img/logo_blue.png" width="100px" height="auto">
+</p>
 
-I should remove that one at some point...
+<h3 align="center">ChangeWindows viv</h3>
 
-## ChangeWindows
-ChangeWindows is your one-stop-shop to track everything you need to know about that Windows update that is rolling in on any of your devices. From PC to Xbox, from IoT to Server, from Team to Holographic. And yes, even Mobile.
+<p align="center">
+Changing viv one commit at a time
+<br />
+<br />
+<a href="https://viv.changewindows.org">ChangeWindows viv</a>
+&middot;
+<a href="https://changewindows.org">ChangeWindows</a>
+</p>
 
-## FAQ
+## About ChangeWindows
+ChangeWindows has been around for as long as the Windows Insider Program has been around and ever since that faitful day on 1 October 2014, our goal has been the same: do what Microsoft doesn't do: document every change we can possibly find in Windows on any platform.
 
-### What's gonna be new?
+## Open source
+This repository is a big shift for ChangeWindows from the previous 4 major versions. Not only is this the first time we're publishing the actual source of our website, we're also using for the first time a framework, in this case Laravel, to build our website. Not only because we're lazy, but also because it makes things a lot simpeler and cleaner.
 
-_viv_ isn't supposed to introduce any major new features at the start. It's mostly going to be just like ChangeWindows 4, but _fancy_. We will however finally have a proper account system, but that will be it for the time being. Although the means of management are going to change a lot with this one.
+ChangeWindows 5.0 is still in development when you're reading this. Before we put this major revamp of our website online, we want to have reached feature parity with what we currently have, and that will take a while. We have to catch up with over 2,5 year of development.
 
-### What's a "_viv_"?
+## Contributing
+We are open to contributions to ChangeWindows. Do you have a feature that you really want to see but we are not spending any time on it ourselves? Feel free to open a pull request for it!
 
-Nothing in particular. Just wanted to be cute and thus decided to go with a nice name. It mostly comes from the Dutch word "vijf" which means "five" in English. Why "five"? I think that's obvious.
+## Security Vulnerabilities
+If you discover a security vulnerability within ChangeWindows, please contact us through private means. Most successful would probably be to contact us on [Twitter](https://twitter.com/changewindows).
+
+## License
+The ChangeWindows website is open-sourced software licensed under the [AGPL license](LICENSE). Note however that the content on our website isn't unless stated otherwise.
