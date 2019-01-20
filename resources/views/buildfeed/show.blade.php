@@ -52,7 +52,7 @@
     </div>
     <div class="col-3 build-detail">
         <p>Source</p>
-        <h4>{{ $build->sourcetype }}</h4>
+        <h4>{{ getSource($build->sourcetype) }}</h4>
     </div>
     <div class="col-3 build-detail">
         <p>Leak date</p>
