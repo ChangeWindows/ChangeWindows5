@@ -20,11 +20,11 @@ class CreateBuildfeedTable extends Migration
             $table->integer('build');
             $table->integer('revision')->nullable();
             $table->string('lab')->nullable();
-            $table->string('buildtime')->nullable();
+            $table->dateTime('buildtime')->nullable();
             $table->integer('family');
             $table->integer('sourcetype');
             $table->text('sourcedetails')->nullable();
-            $table->text('leakdate')->nullable();
+            $table->dateTime('leakdate')->nullable();
             $table->string('buildstring');
             $table->string('alternatebuildstring');
         });
