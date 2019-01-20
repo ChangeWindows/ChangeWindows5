@@ -26,35 +26,35 @@
         <h2>{{ $build->buildstring }}</h2>
         <h5>{!! getFamily($build->family) !!}</h5>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Major</p>
         <h4>{{ $build->major }}</h4>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Minor</p>
         <h4>{{ $build->minor }}</h4>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Build</p>
         <h4>{{ $build->build }}</h4>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Revision</p>
         <h4>{{ $build->revision }}</h4>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Lab</p>
         <h4>{{ $build->lab }}</h4>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Buildtime</p>
         <h4>{{ $build->buildtime }}</h4>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Source</p>
         <h4>{{ getSource($build->sourcetype) }}</h4>
     </div>
-    <div class="col-3 build-detail">
+    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 build-detail">
         <p>Leak date</p>
         <h4>{{ $build->leakdate }}</h4>
     </div>
