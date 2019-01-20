@@ -17705,12 +17705,18 @@ readers do not read off random characters that represent icons */
   padding: 15px;
 }
 
+.progress {
+  margin: 10px 0 0;
+  border-radius: 0;
+  height: 4px;
+}
+
 .bg-preview-done {
   background-color: #0098df;
 }
 
 .bg-preview-go {
-  background-color: #d7f0fc;
+  background-color: #c3e6f7;
 }
 
 .bg-public-done {
@@ -17718,7 +17724,7 @@ readers do not read off random characters that represent icons */
 }
 
 .bg-public-go {
-  background-color: #edf5d6;
+  background-color: #e7f3c5;
 }
 
 .bg-extended-done {
@@ -17726,7 +17732,7 @@ readers do not read off random characters that represent icons */
 }
 
 .bg-extended-go {
-  background-color: #fceee0;
+  background-color: #fde5cd;
 }
 
 .bg-lts-done {
@@ -17734,7 +17740,7 @@ readers do not read off random characters that represent icons */
 }
 
 .bg-lts-go {
-  background-color: #f5dcd6;
+  background-color: #fad6cc;
 }
 
 .font-light {
@@ -18750,6 +18756,11 @@ h1 {
 .spacing-20 {
   width: 100%;
   height: 20px;
+}
+
+.spacing-40 {
+  width: 100%;
+  height: 40px;
 }
 
 footer {

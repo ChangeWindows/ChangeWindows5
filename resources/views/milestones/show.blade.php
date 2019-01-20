@@ -39,7 +39,7 @@
             </a>
         </div>
     @endif
-    <div class="spacing-20"></div>
+    <div class="spacing-40"></div>
     @if ($milestone->preview->timestamp > 0)
         <div class="col text-center lifecycle-stats">
             <h5>Start Preview</h5>
@@ -71,7 +71,6 @@
         </div>
     @endif
     @if ($progress)
-        <div class="spacing-20"></div>
         <div class="col-12">
             <div class="progress">
                 <div class="progress-bar bg-preview-done" style="width: {{ $progress['preview_done'] }}%"></div>
@@ -85,7 +84,7 @@
             </div>
         </div>
     @endif
-    <div class="spacing-20"></div>
+    <div class="spacing-40"></div>
     @foreach ($platforms as $platform)
         <div class="col-xl-4 col-lg-6 col-12 platform-card">
             <h4>{{ getPlatformById($platform->platform) }}</h4>
