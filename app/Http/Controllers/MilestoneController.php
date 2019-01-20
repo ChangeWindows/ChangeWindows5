@@ -53,7 +53,32 @@ class MilestoneController extends Controller
             $platform->builds = Release::where('milestone', $milestone->id)->where('platform', $platform->platform)->where('delta', '<>', '99999')->orderBy('date', 'DESC')->orderBy('delta', 'DESC')->limit(5)->get();
         }
 
-        return view('milestones.show', compact('milestone', 'previous', 'next', 'platforms', 'progress', 'prelist'));
+        return view('milestones.show', compact('milestone', 'previous', 'next', 'platforms', 'progress'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function platform(Request $request, $id, $platform_id) {
+        $request->user()->authorizeRoles(['Admin', 'Insider']);
+        $timeline = [];
+
+        $milestone = Milestone::findOrFail($id);
+        $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
+        $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();
+
+        $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->where('delta', '<>', '99999')->groupBy('platform')->orderBy('platform')->get();
+
+        $releases = Release::where('milestone', $id)->where('platform', $platform_id)->where('delta', '<>', '99999')->orderBy('build', 'DESC')->orderBy('delta', 'DESC')->orderBy('ring', 'ASC')->get();
+
+        foreach ($releases as $release) {
+            $timeline[$release->build.'.'.$release->delta][$release->ring] = $release->date->format('j M Y');
+        }
+
+        return view('milestones.platform', compact('milestone', 'previous', 'next', 'platforms', 'platform_id', 'timeline'));
     }
 
     /**

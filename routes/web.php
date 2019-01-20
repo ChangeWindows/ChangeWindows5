@@ -25,6 +25,7 @@ Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
 Route::get('/milestones', 'MilestoneController@index')->name('milestones');
 Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone');
+Route::get('/milestones/{id}/{platform}', 'MilestoneController@platform')->name('platformMilestone');
 
 Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
 Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');
