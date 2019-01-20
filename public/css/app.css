@@ -18282,18 +18282,45 @@ h1 {
   font-weight: 700;
 }
 
-.buildfeed .card {
+.buildfeed .bf {
   border: none;
   border-radius: 0;
   margin-bottom: 10px;
+  display: block;
+  transition: all 0.5s;
 }
-.buildfeed .card .card-header {
+.buildfeed .bf:hover {
+  text-decoration: none;
+  -webkit-transform: translate(0, -3px);
+          transform: translate(0, -3px);
+}
+.buildfeed .bf .bf-header {
   border: none;
   padding: 10px;
   border-radius: 0;
+  display: block;
 }
-.buildfeed .card .card-body {
+.buildfeed .bf .bf-body {
   padding: 10px;
+  display: block;
+}
+.buildfeed .build-detail {
+  margin-top: 10px;
+}
+.buildfeed .build-detail p {
+  margin-bottom: 0;
+}
+.buildfeed .build-detail h4 {
+  margin-top: 0;
+  font-weight: 600;
+}
+.buildfeed .build-title h2 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.buildfeed .build-title h5 {
+  margin-top: 0;
+  font-weight: 600;
 }
 
 .light {
@@ -18454,10 +18481,17 @@ h1 {
 .light .lifecycle-stats h4 {
   color: #333;
 }
-.light .buildfeed .card .card-header {
+.light .buildfeed .bf {
+  color: #333;
+}
+.light .buildfeed .bf:hover {
+  color: #333;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.light .buildfeed .bf .bf-header {
   background-color: #ebebeb;
 }
-.light .buildfeed .card .card-body {
+.light .buildfeed .bf .bf-body {
   background-color: #f8f8f8;
 }
 
@@ -18619,10 +18653,17 @@ h1 {
 .dark .lifecycle-stats h4 {
   color: #fff;
 }
-.dark .buildfeed .card .card-header {
+.dark .buildfeed .bf {
+  color: #fff;
+}
+.dark .buildfeed .bf:hover {
+  color: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.dark .buildfeed .bf .bf-header {
   background-color: #282828;
 }
-.dark .buildfeed .card .card-body {
+.dark .buildfeed .bf .bf-body {
   background-color: #222;
 }
 

@@ -14,6 +14,7 @@ class CreateBuildfeedTable extends Migration
     public function up()
     {
         Schema::create('buildfeed', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('major');
             $table->integer('minor');
             $table->integer('build');
@@ -24,7 +25,7 @@ class CreateBuildfeedTable extends Migration
             $table->integer('sourcetype');
             $table->text('sourcedetails')->nullable();
             $table->text('leakdate')->nullable();
-            $table->string('buildstring')->unique();
+            $table->string('buildstring');
             $table->string('alternatebuildstring');
         });
     }

@@ -24,14 +24,14 @@
 <div class="row buildfeed">
     @foreach ($builds as $build)
         <div class="col-6 col-lg-4 col-xl-3">
-            <div class="card">
-                <div class="card-header">{{ $build->major }}.{{ $build->minor }}.{{ $build->build }}.{{ $build->revision }}</div>
-                <div class="card-body">
+            <a href="{{ URL::to('buildfeed/'.$build->id) }}" class="bf">
+                <span class="bf-header">{{ $build->major }}.{{ $build->minor }}.{{ $build->build }}.{{ $build->revision }}</span>
+                <span class="bf-body">
                     <i class="fal fa-fw fa-clock"></i> {{ $build->buildtime }}
                     <br />
                     <i class="fal fa-fw fa-flask"></i> {{ $build->lab }}
-                </div>
-            </div>
+                </span>
+            </a>
         </div>
     @endforeach
     <div class="col-12">{{ $builds->links() }}</div>

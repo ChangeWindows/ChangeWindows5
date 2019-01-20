@@ -1,17 +1,51 @@
 .buildfeed {
-    .card {
+    .bf {
         border: none;
         border-radius: 0;
         margin-bottom: 10px;
+        display: block;
+        transition: all .5s;
+        
+        &:hover {
+            text-decoration: none;
+            transform: translate(0, -3px);
+        }
 
-        .card-header {
+        .bf-header {
             border: none;
             padding: 10px;
             border-radius: 0;
+            display: block;
         }
 
-        .card-body {
+        .bf-body {
             padding: 10px;
+            display: block;
+        }
+    }
+
+    .build-detail {
+        margin-top: 10px;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        h4 {
+            margin-top: 0;
+            font-weight: 600;
+        }
+    }
+
+    .build-title {
+        h2 {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        h5 {
+            margin-top: 0;
+            font-weight: 600;
         }
     }
 }

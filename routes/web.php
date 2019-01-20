@@ -17,7 +17,6 @@ Route::get('/', 'TimelineController@index')->name('timeline');
 Route::post('/build', 'TimelineController@store')->name('storeRelease');
 Route::get('/build/{build}/{platform?}', 'TimelineController@show')->name('showRelease');
 
-
 Route::get('/changelog/new', 'ChangelogController@create')->name('createChangelogs');
 Route::get('/changelog/{id}/edit', 'ChangelogController@edit')->name('editChangelog');
 Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name('showChangelogs');
@@ -29,6 +28,7 @@ Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone'
 
 Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
 Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');
+Route::get('/buildfeed/{id}', 'BuildfeedController@show')->name('showBuildfeed');
 
 Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');

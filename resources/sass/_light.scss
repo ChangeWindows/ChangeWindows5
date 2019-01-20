@@ -248,14 +248,21 @@ $shadow-hover: rgba(0,0,0,.1);
             color: $text;
         }
     }
-
+    
     .buildfeed {
-        .card {
-            .card-header {
+        .bf {
+            color: $text;
+            
+            &:hover {
+                color: $text;
+                box-shadow: 0 4px 10px 0 $shadow-hover;
+            }
+    
+            .bf-header {
                 background-color: $background-header;
             }
     
-            .card-body {
+            .bf-body {
                 background-color: $background-content-2;
             }
         }
