@@ -7,12 +7,24 @@
 @section('hero')
 <div class="jumbotron">
     <div class="container">
-        <a class="hero" href="{{ route('viv') }}">
-            <span class="text">
-                <span class="h2">viv Preview</span>
-                <span class="h5">The ChangeWindows 5 Preview is here</span>
-            </span>
-        </a>
+        <div class="row">
+            <div class="col-lg-8 col-sm-6">
+                <a class="hero hero-preview" href="{{ route('viv') }}">
+                    <span class="text">
+                        <span class="h2">viv</span>
+                        <span class="h5">The future of ChangeWindows is coming</span>
+                    </span>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 d-none d-sm-block">
+                <a class="hero hero-buildfeed" href="{{ route('buildfeed') }}">
+                    <span class="text">
+                        <span class="h2">BuildFeed data</span>
+                        <span class="h5">but archived</span>
+                    </span>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

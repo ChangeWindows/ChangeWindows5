@@ -25,20 +25,20 @@
 
 @section('content')
 <div class="row">
-    @if ($previous)
-        <div class="col-6">
+    <div class="col-6">
+        @if ($previous)
             <a href="{{ URL::to('milestones/'.$previous->id) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
                 <i class="fal fa-fw fa-angle-double-left"></i> <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $previous->osname }}</span> {{ $previous->name }}
             </a>
-        </div>
-    @endif
-    @if ($next)
-        <div class="col-6">
+        @endif
+    </div>
+    <div class="col-6">
+        @if ($next)
             <a href="{{ URL::to('milestones/'.$next->id) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
                 <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $next->osname }}</span> {{ $next->name }} <i class="fal fa-fw fa-angle-double-right"></i>
             </a>
-        </div>
-    @endif
+        @endif
+    </div>
     <div class="spacing-40"></div>
     @if ($milestone->preview->timestamp > 0)
         <div class="col text-center lifecycle-stats">
