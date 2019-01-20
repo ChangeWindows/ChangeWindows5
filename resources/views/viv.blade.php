@@ -40,7 +40,6 @@
             <p>Hero images now no longer appear to have no rounded corners at the bottom</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
             <p>Patrons are currently not listed on About</p>
-            <p>Settings won't show your current settings</p>
             <p>ChangeWindows 4 URLs are not compatible with viv</p>
         </section>
         <section class="release-notes">

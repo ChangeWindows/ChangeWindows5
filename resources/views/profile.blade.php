@@ -17,15 +17,15 @@
             {{ method_field('PATCH') }}
             <div class="col-12">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="theme" id="theme-default" value="0" {{ Auth::user()->theme === 0 ? 'checked' : '' }}>
+                    <input class="form-check-input" type="radio" name="theme" id="theme-default" value="0" {{ Auth::user()->theme == 0 ? 'checked' : '' }}>
                     <label class="form-check-label" for="theme-default">Default</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="theme" id="theme-light" value="1" {{ Auth::user()->theme === 1 ? 'checked' : '' }}>
+                    <input class="form-check-input" type="radio" name="theme" id="theme-light" value="1" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="theme-light">Light</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="theme" id="theme-dark" value="2" {{ Auth::user()->theme === 2 ? 'checked' : '' }}>
+                    <input class="form-check-input" type="radio" name="theme" id="theme-dark" value="2" {{ Auth::user()->theme == 2 ? 'checked' : '' }}>
                     <label class="form-check-label" for="theme-dark">Dark</label>
                 </div>
             </div>
