@@ -17884,6 +17884,7 @@ h1 {
   margin-bottom: 4px;
   display: block;
   transition: all 0.5s;
+  height: 84px;
 }
 .tile:hover {
   color: #fff;
@@ -17996,6 +17997,9 @@ h1 {
 }
 .tile.ltsc .tile-header {
   background: #008acb !important;
+}
+.tile.none {
+  background-color: #0098df;
 }
 
 .row-gutter {
@@ -18284,6 +18288,17 @@ h1 {
 }
 .lifecycle-stats h4 {
   font-weight: 700;
+}
+
+.platform-card h4 {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.platform-card h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  opacity: 0.7;
 }
 
 .buildfeed .bf {
@@ -18735,4 +18750,8 @@ h1 {
 .spacing-20 {
   width: 100%;
   height: 20px;
+}
+
+footer {
+  padding-bottom: 20px;
 }

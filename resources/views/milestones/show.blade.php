@@ -70,24 +70,50 @@
             <h4>{{ $milestone->ltsEol->toFormattedDateString() }}</h4>
         </div>
     @endif
-    <div class="spacing-20"></div>
-    <div class="col-12">
-        <div class="progress">
-            <div class="progress-bar bg-preview-done" style="width: {{ $progress['preview_done'] }}%"></div>
-            <div class="progress-bar bg-preview-go" style="width: {{ $progress['preview_go'] }}%"></div>
-            <div class="progress-bar bg-public-done" style="width: {{ $progress['public_done'] }}%"></div>
-            <div class="progress-bar bg-public-go" style="width: {{ $progress['public_go'] }}%"></div>
-            <div class="progress-bar bg-extended-done" style="width: {{ $progress['extended_done'] }}%"></div>
-            <div class="progress-bar bg-extended-go" style="width: {{ $progress['extended_go'] }}%"></div>
-            <div class="progress-bar bg-lts-done" style="width: {{ $progress['lts_done'] }}%"></div>
-            <div class="progress-bar bg-lts-go" style="width: {{ $progress['lts_go'] }}%"></div>
+    @if ($progress)
+        <div class="spacing-20"></div>
+        <div class="col-12">
+            <div class="progress">
+                <div class="progress-bar bg-preview-done" style="width: {{ $progress['preview_done'] }}%"></div>
+                <div class="progress-bar bg-preview-go" style="width: {{ $progress['preview_go'] }}%"></div>
+                <div class="progress-bar bg-public-done" style="width: {{ $progress['public_done'] }}%"></div>
+                <div class="progress-bar bg-public-go" style="width: {{ $progress['public_go'] }}%"></div>
+                <div class="progress-bar bg-extended-done" style="width: {{ $progress['extended_done'] }}%"></div>
+                <div class="progress-bar bg-extended-go" style="width: {{ $progress['extended_go'] }}%"></div>
+                <div class="progress-bar bg-lts-done" style="width: {{ $progress['lts_done'] }}%"></div>
+                <div class="progress-bar bg-lts-go" style="width: {{ $progress['lts_go'] }}%"></div>
+            </div>
         </div>
-    </div>
+    @endif
     <div class="spacing-20"></div>
     @foreach ($platforms as $platform)
-        <div class="col-3">
+        <div class="col-xl-4 col-lg-6 col-12 platform-card">
             <h4>{{ getPlatformById($platform->platform) }}</h4>
-            <h5>{{ $platform->count }} builds</h5>
+            <h6>{{ $platform->count }} builds</h6>
+            
+            <div class="timeline">
+                @foreach ($platform->builds as $build)
+                    <div class="timeline-row">
+                        <a class="row" href="{{ URL::to('build/'.$build->build.'/'.$build->platform) }}">
+                            <div class="col-5 build"><img src="{{ asset('img/platform/'.getPlatformImage($build->platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($build->platform) }}" />{{ $build->build }}.{{ $build->delta }}</div>
+                            <div class="col-3 ring">
+                                <span class="label {{ $build->class }}">{{ $build->flight }}</span>
+                            </div>
+                            <div class="col-4 date">
+                                <span class="date">{{ $build->date->format('j M Y') }}</span>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+                <div class="timeline-row">
+                    <a class="row" href="{{ URL::to('milestones/'.$milestone->id.'/'.$platform->platform) }}">
+                        <div class="col"><img src="{{ asset('img/platform/'.getPlatformImage($platform->platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform->platform) }}" /></div>
+                        <div class="col text-right">
+                            See all <i class="fal fa-fw fa-angle-double-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     @endforeach
 </div>

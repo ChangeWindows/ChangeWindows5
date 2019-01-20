@@ -5,6 +5,7 @@
     margin-bottom: 4px;
     display: block;
     transition: all .5s;
+    height: 84px;
 
     &:hover {
         color: #fff;
@@ -147,6 +148,10 @@
         .tile-header {
             background: darken($ltsc, 4%) !important;
         }
+    }
+
+    &.none {
+        background-color: $accent;
     }
 }
 

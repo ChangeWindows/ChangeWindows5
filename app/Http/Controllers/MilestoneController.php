@@ -49,7 +49,11 @@ class MilestoneController extends Controller
 
         $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->where('delta', '<>', '99999')->groupBy('platform')->orderBy('platform')->get();
 
-        return view('milestones.show', compact('milestone', 'previous', 'next', 'platforms', 'progress'));
+        foreach ($platforms as $platform) {
+            $platform->builds = Release::where('milestone', $milestone->id)->where('platform', $platform->platform)->where('delta', '<>', '99999')->orderBy('date', 'DESC')->orderBy('delta', 'DESC')->limit(5)->get();
+        }
+
+        return view('milestones.show', compact('milestone', 'previous', 'next', 'platforms', 'progress', 'prelist'));
     }
 
     /**
