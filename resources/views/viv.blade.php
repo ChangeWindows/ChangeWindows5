@@ -37,8 +37,11 @@
             <p>When in the profile, the profile menu will now be correctly marked as active</p>
             <p>Modals will no longer appear below the navbar</p>
             <p>The timeline sidebar no longer shows updates from older milestones as the current build</p>
+            <p>Hero images now no longer appear to have no rounded corners at the bottom</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
             <p>Patrons are currently not listed on About</p>
+            <p>Settings won't show your current settings</p>
+            <p>ChangeWindows 4 URLs are not compatible with viv</p>
         </section>
         <section class="release-notes">
             <h3>5.0-alpha.1 <small>9 January 2019</small></h3>
@@ -56,10 +59,10 @@
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
             <p>A number of ChangeWindows 4 features are currently not available but will return</p>
             <p>You can no longer change the grouping in the timeline</p>
-            <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
             <p>Tiles on the timeline show a hover effect but aren't yet clickable</p>
             <p>Patrons are currently not listed on About</p>
+            <p>ChangeWindows 4 URLs are not compatible with viv</p>
         </section>
     </div>
     <div class="col-12 col-md-3">

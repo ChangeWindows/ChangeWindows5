@@ -60,9 +60,20 @@
                         <li class="nav-item d-none d-sm-inline-block {{ Request::is('viv') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
                         </li>
+                        <li class="nav-item dropdown {{ Request::is('buildfeed*') ? 'active' : '' }}">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fal fa-fw fa-ellipsis-h"></i> More
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
+                                <div class="dropdown-divider d-block d-sm-none"></div>
+                                <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                                <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown {{ Request::is('profile*') || Request::is('buildfeed*') ? 'active' : '' }}">
+                        <li class="nav-item dropdown {{ Request::is('buildfeed*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @auth
                                     <i class="fal fa-fw fa-user-circle d-inline"></i><span class="d-none d-sm-inline"> {{ Auth::user()->name }}<span>
@@ -77,12 +88,6 @@
                                     <a class="dropdown-item" href="{{ route('register') }}"><i class="fal fa-fw fa-user-plus"></i> Register</a>
                                     <a class="dropdown-item" href="{{ route('login') }}"><i class="fal fa-fw fa-sign-in"></i> Login</a>
                                 @endauth
-                                <div class="dropdown-divider"></div>
-                                <h6 class="dropdown-header">More</h6>
-                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
-                                <div class="dropdown-divider d-block d-sm-none"></div>
-                                <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
-                                <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
                                 <div class="dropdown-divider"></div>
                                 <h6 class="dropdown-header">Preview</h6>
                                 <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=bug&template=bug_report.md&title="><i class="fal fa-fw fa-bug"></i> Report a bug</a>
