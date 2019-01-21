@@ -37,15 +37,7 @@
         @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
             <div class="spacing-20"></div>
             <h2>Insider features</h2>
-            <div class="list-group">
-                <div class="list-group-item list-group-item-success">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1"><i class="fal fa-fw fa-check"></i> Milestones beta</h5>
-                    </div>
-                    <p class="mb-1">The milestones page gives an overview off all builds within a milestone.</p>
-                    <small>You can't turn this feature of right now.</small>
-                </div>
-            </div>
+            <p>There are currently no Insider features available.</p>
         @endif
     </div>
     <div class="col-12 col-md-4">

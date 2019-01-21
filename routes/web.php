@@ -25,10 +25,10 @@ Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
 Route::get('/milestones', 'MilestoneController@index')->name('milestones');
 Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone');
-Route::get('/milestones/{id}/edit', 'MilestoneController@edit')->name('editMilestone');
+Route::get('/milestones/{id}/edit', 'MilestoneController@edit')->name('editMilestone')->middleware('auth');
 Route::get('/milestones/{id}/{platform}', 'MilestoneController@platform')->name('platformMilestone');
-Route::post('/milestones', 'MilestoneController@store')->name('storeMilestone');
-Route::patch('/milestones/{id}', 'MilestoneController@update')->name('updateMilestone');
+Route::post('/milestones', 'MilestoneController@store')->name('storeMilestone')->middleware('auth');
+Route::patch('/milestones/{id}', 'MilestoneController@update')->name('updateMilestone')->middleware('auth');
 
 Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
 Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');

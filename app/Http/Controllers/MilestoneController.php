@@ -16,7 +16,6 @@ class MilestoneController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -24,9 +23,7 @@ class MilestoneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request) {
-        $request->user()->authorizeRoles(['Admin', 'Insider']);
-
+    public function index() {
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 
         return view('milestones.index', compact('milestones'));
@@ -39,8 +36,6 @@ class MilestoneController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request, $id) {
-        $request->user()->authorizeRoles(['Admin', 'Insider']);
-
         $milestone = Milestone::findOrFail($id);
         $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
         $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();

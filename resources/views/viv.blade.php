@@ -22,7 +22,7 @@
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
             <p>BuildFeed.net data is now available from the user menu</p>
-            <p>Early development for the Milestones feature <span class="badge badge-info">Insider</span></p>
+            <p>Early development for the Milestones feature</p>
             <p>You can now set the theme the website should follow in your profile</p>
             <p>Our favicon has been restored</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
@@ -41,6 +41,7 @@
             <p>Hero images now no longer appear to have no rounded corners at the bottom</p>
             <p>Removed instances where "Holographic" was incorrectly referred to as "Mixed Reality"</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
+            <p>The left and right border of timeline items are not clickable</p>
             <p>Patrons are currently not listed on About</p>
             <p>ChangeWindows 4 URLs are not compatible with viv</p>
         </section>
