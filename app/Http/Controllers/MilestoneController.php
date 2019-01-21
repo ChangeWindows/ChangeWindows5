@@ -147,8 +147,12 @@ class MilestoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) {
-        //
+    public function edit(Request $request, $id) {
+        $request->user()->authorizeRoles('Admin');
+
+        $milestone = Milestone::findOrFail($id);
+
+        return view('milestones.edit', compact('milestone'));
     }
 
     /**
@@ -159,7 +163,60 @@ class MilestoneController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
-        //
+        $request->user()->authorizeRoles('Admin');
+
+        $milestone = Milestone::findOrFail($id);
+        
+        $milestone->id = request()->get('id');
+        $milestone->osname = request()->get('osname');
+        $milestone->name = request()->get('name');
+        $milestone->codename = request()->get('codename');
+        $milestone->version = request()->get('version');
+        $milestone->color = request()->get('color');
+        $milestone->description = request()->get('description');
+        $milestone->preview = request()->get('preview') === null ? '0000-01-01' : request()->get('preview');
+        $milestone->public = request()->get('public') === null ? '0000-01-01' : request()->get('public');
+        $milestone->mainEol = request()->get('mainEol') === null ? '0000-01-01' : request()->get('mainEol');
+        $milestone->mainXol = request()->get('mainXol') === null ? '0000-01-01' : request()->get('mainXol');
+        $milestone->ltsEol = request()->get('ltsEol') === null ? '0000-01-01' : request()->get('ltsEol');
+        $milestone->isLts = false;
+        $milestone->pcSkip = request()->get('pcSkip') === null ? 0 : 1;
+        $milestone->pcFast = request()->get('pcFast') === null ? 0 : 1;
+        $milestone->pcSlow = request()->get('pcSlow') === null ? 0 : 1;
+        $milestone->pcReleasePreview = request()->get('pcReleasePreview') === null ? 0 : 1;
+        $milestone->pcTargeted = request()->get('pcTargeted') === null ? 0 : 1;
+        $milestone->pcBroad = request()->get('pcBroad') === null ? 0 : 1;
+        $milestone->pcLTS = request()->get('pcLTS') === null ? 0 : 1;
+        $milestone->mobileFast = request()->get('mobileFast') === null ? 0 : 1;
+        $milestone->mobileSlow = request()->get('mobileSlow') === null ? 0 : 1;
+        $milestone->mobileReleasePreview = request()->get('mobileReleasePreview') === null ? 0 : 1;
+        $milestone->mobileTargeted = request()->get('mobileTargeted') === null ? 0 : 1;
+        $milestone->mobileBroad = request()->get('mobileBroad') === null ? 0 : 1;
+        $milestone->xboxSkip = request()->get('xboxSkip') === null ? 0 : 1;
+        $milestone->xboxFast = request()->get('xboxFast') === null ? 0 : 1;
+        $milestone->xboxSlow = request()->get('xboxSlow') === null ? 0 : 1;
+        $milestone->xboxPreview = request()->get('xboxPreview') === null ? 0 : 1;
+        $milestone->xboxReleasePreview = request()->get('xboxReleasePreview') === null ? 0 : 1;
+        $milestone->xboxTargeted = request()->get('xboxTargeted') === null ? 0 : 1;
+        $milestone->serverSlow = request()->get('serverSlow') === null ? 0 : 1;
+        $milestone->serverTargeted = request()->get('serverTargeted') === null ? 0 : 1;
+        $milestone->serverLTS = request()->get('serverLTS') === null ? 0 : 1;
+        $milestone->iotSlow = request()->get('iotSlow') === null ? 0 : 1;
+        $milestone->iotTargeted = request()->get('iotTargeted') === null ? 0 : 1;
+        $milestone->iotBroad = request()->get('iotBroad') === null ? 0 : 1;
+        $milestone->teamTargeted = request()->get('teamTargeted') === null ? 0 : 1;
+        $milestone->teamBroad = request()->get('teamBroad') === null ? 0 : 1;
+        $milestone->holographicFast = request()->get('holographicFast') === null ? 0 : 1;
+        $milestone->holographicSlow = request()->get('holographicSlow') === null ? 0 : 1;
+        $milestone->holographicTargeted = request()->get('holographicTargeted') === null ? 0 : 1;
+        $milestone->holographicBroad = request()->get('holographicBroad') === null ? 0 : 1;
+        $milestone->holographicLTS = request()->get('holographicLTS') === null ? 0 : 1;
+        $milestone->sdk = request()->get('sdk') === null ? 0 : 1;
+        $milestone->iso = request()->get('iso') === null ? 0 : 1;
+
+        $milestone->save();
+
+        return redirect('/milestones');
     }
 
     /**
