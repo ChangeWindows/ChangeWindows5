@@ -124,7 +124,7 @@
                             </div>
                             <div class="col-12"><hr /></div>
                             <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label extra-margin">Desktop</label>
+                                <label for="ring" class="control-label extra-margin">PC</label>
                                 <div class="checkbox"><label><input type="checkbox" name="pcSkip" value="1"> <span class="label skip">Skip Ahead</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="pcFast" value="2"> <span class="label fast">Fast Ring</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="pcSlow" value="3"> <span class="label slow">Slow Ring</span></label></div>

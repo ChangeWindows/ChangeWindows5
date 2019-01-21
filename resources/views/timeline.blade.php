@@ -63,15 +63,15 @@
                 <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New build</a>
             @endif
         @endauth
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Desktop</p>
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> PC</p>
         <div class="row row-gutter">
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['skip'] ) ?></div>
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['active'] ) ?></div>
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['slow'] ) ?></div>
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['desktop']['release'] ) ?></div>
-            <div class="col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['desktop']['target'] ) ?></div>
-            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['broad'] ) ?></div>
-            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['desktop']['ltsc'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['active'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
+            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['release'] ) ?></div>
+            <div class="col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['pc']['target'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['broad'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['ltsc'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-xbox"></i> Xbox</p>
         <div class="row row-gutter">
@@ -152,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label extra-margin">Desktop</label>
+                                <label for="ring" class="control-label extra-margin">PC</label>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][0]" value="0"> <span class="label leak">vNext</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][1]" value="1"> <span class="label skip">Skip Ahead</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][2]" value="2"> <span class="label fast">Fast Ring</span></label></div>
@@ -190,7 +190,7 @@
                                 <div class="checkbox"><label><input type="checkbox" name="flight[4][8]" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></label></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label extra-margin">Mixed Reality</label>
+                                <label for="ring" class="control-label extra-margin">Holographic</label>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[5][0]" value="0"> <span class="label leak">vNext</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[5][6]" value="6"> <span class="label targeted">Semi-Annual Targeted</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[5][7]" value="7"> <span class="label broad">Semi-Annual Broad</span></label></div>

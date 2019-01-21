@@ -29,11 +29,13 @@
                     <label class="form-check-label" for="theme-dark">Dark</label>
                 </div>
             </div>
+            <div class="spacing-20"></div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary"><i class="fal fa-fw fa-save"></i> Save</button>
             </div>
         </form>
         @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
+            <div class="spacing-20"></div>
             <h2>Insider features</h2>
             <div class="list-group">
                 <div class="list-group-item list-group-item-success">

@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label extra-margin">Desktop</label>
+                                <label for="ring" class="control-label extra-margin">PC</label>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][0]" value="0"> <span class="label leak">vNext</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][1]" value="1"> <span class="label skip">Skip Ahead</span></label></div>
                                 <div class="checkbox"><label><input type="checkbox" name="flight[1][2]" value="2"> <span class="label fast">Fast Ring</span></label></div>

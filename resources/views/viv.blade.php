@@ -32,12 +32,14 @@
             <p>Minor restructuring of our files</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
             <p>Revamped heading design with transparency and blur (on supported browsers)</p>
+            <p>Reversed "Desktop" branding back to "PC" as it should have been</p>
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <p>When in the profile, the profile menu will now be correctly marked as active</p>
             <p>Modals will no longer appear below the navbar</p>
             <p>The timeline sidebar no longer shows updates from older milestones as the current build</p>
             <p>Hero images now no longer appear to have no rounded corners at the bottom</p>
+            <p>Removed instances where "Holographic" was incorrectly referred to as "Mixed Reality"</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
             <p>Patrons are currently not listed on About</p>
             <p>ChangeWindows 4 URLs are not compatible with viv</p>

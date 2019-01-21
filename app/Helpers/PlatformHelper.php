@@ -3,7 +3,7 @@
 function getPlatformById($id) {
     switch ($id) {
         case 0:     return 'Generic';
-        case 1:     return 'Desktop';
+        case 1:     return 'PC';
         case 2:     return 'Mobile';
         case 3:     return 'Xbox';
         case 4:     return 'Server';
@@ -18,7 +18,7 @@ function getPlatformById($id) {
 
 function getPlatformImage($id) {
     switch ($id) {
-        case 1:     return 'desktop.png';
+        case 1:     return 'pc.png';
         case 2:     return 'mobile.png';
         case 3:     return 'xbox.png';
         case 4:     return 'server.png';
@@ -33,7 +33,7 @@ function getPlatformImage($id) {
 
 function getPlatformClass($id) {
     switch ($id) {
-        case 1:     return 'desktop';
+        case 1:     return 'pc';
         case 2:     return 'mobile';
         case 3:     return 'xbox';
         case 4:     return 'server';

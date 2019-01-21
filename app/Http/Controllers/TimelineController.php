@@ -16,13 +16,13 @@ class TimelineController extends Controller
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
         }
 
-        $flights['desktop']['skip'] = Release::where('platform', '1')->where('ring', '1')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['desktop']['active'] = Release::where('platform', '1')->where('ring', '2')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['desktop']['slow'] = Release::where('platform', '1')->where('ring', '3')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['desktop']['release'] = Release::where('platform', '1')->where('ring', '5')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['desktop']['target'] = Release::where('platform', '1')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['desktop']['broad'] = Release::where('platform', '1')->where('ring', '7')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['desktop']['ltsc'] = Release::where('platform', '1')->where('ring', '8')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $flights['pc']['skip'] = Release::where('platform', '1')->where('ring', '1')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $flights['pc']['active'] = Release::where('platform', '1')->where('ring', '2')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $flights['pc']['slow'] = Release::where('platform', '1')->where('ring', '3')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $flights['pc']['release'] = Release::where('platform', '1')->where('ring', '5')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $flights['pc']['target'] = Release::where('platform', '1')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $flights['pc']['broad'] = Release::where('platform', '1')->where('ring', '7')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $flights['pc']['ltsc'] = Release::where('platform', '1')->where('ring', '8')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
 
         $flights['xbox']['skip'] = Release::where('platform', '3')->where('ring', '1')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
         $flights['xbox']['active'] = Release::where('platform', '3')->where('ring', '2')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
