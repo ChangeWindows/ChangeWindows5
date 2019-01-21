@@ -18506,6 +18506,14 @@ h1 {
 .light .lifecycle-stats h4 {
   color: #333;
 }
+.light .form-control {
+  background-color: #fff;
+  color: #333;
+  border-color: #ebebeb;
+}
+.light .form-control:focus {
+  border-color: #0098df;
+}
 .light .buildfeed .bf {
   color: #333;
 }
@@ -18677,6 +18685,14 @@ h1 {
 }
 .dark .lifecycle-stats h4 {
   color: #fff;
+}
+.dark .form-control {
+  background-color: #181818;
+  color: #fff;
+  border-color: #282828;
+}
+.dark .form-control:focus {
+  border-color: #0098df;
 }
 .dark .buildfeed .bf {
   color: #fff;

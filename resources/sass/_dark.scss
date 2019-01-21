@@ -249,6 +249,16 @@ $shadow-hover: rgba(0,0,0,.3);
         }
     }
     
+    .form-control {
+        background-color: $background-content;
+        color: $text;
+        border-color: $background-header;
+    
+        &:focus {
+            border-color: $accent;
+        }
+    }
+    
     .buildfeed {
         .bf {
             color: $text;
