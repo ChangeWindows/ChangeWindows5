@@ -18,6 +18,17 @@
         <h2>What's new</h2>
         <p>In the weeks ahead, ChangeWindows will regularly change, below you can keep track of these changes as we won't be annoucing all of them on our blog or other outlets.</p>
         <section class="release-notes">
+            <h3>5.0-alpha.3 <small>January/February 2019</small></h3>
+            <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+            <p>The Rings page is now available for Insiders</p>
+            <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
+            <p>Non-Insiders are no longer blocked from visiting the milestone platform details</p>
+            <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
+            <p>The left and right border of timeline items are not clickable</p>
+            <p>Patrons are currently not listed on About</p>
+            <p>ChangeWindows 4 URLs are not compatible with viv</p>
+        </section>
+        <section class="release-notes">
             <h3>5.0-alpha.2 <small>21 January 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
@@ -33,7 +44,6 @@
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
             <p>Revamped heading design with transparency and blur (on supported browsers)</p>
             <p>Reversed "Desktop" branding back to "PC" as it should have been</p>
-            <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <p>When in the profile, the profile menu will now be correctly marked as active</p>
             <p>Modals will no longer appear below the navbar</p>
