@@ -17856,13 +17856,13 @@ h1 {
   margin-bottom: 15px;
 }
 .timeline .timeline-row {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
   transition: 0.2s ease-in-out;
   z-index: 9700;
 }
 .timeline .timeline-row .row {
-  padding: 12px 0;
+  padding: 12px 5px;
   font-size: 100%;
 }
 .timeline .timeline-row .row:hover {
