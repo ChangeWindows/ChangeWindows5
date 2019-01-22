@@ -58,7 +58,6 @@ class MilestoneController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function platform(Request $request, $id, $platform_id) {
-        $request->user()->authorizeRoles(['Admin', 'Insider']);
         $timeline = [];
 
         $milestone = Milestone::findOrFail($id);
