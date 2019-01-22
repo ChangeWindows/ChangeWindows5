@@ -18,7 +18,7 @@
         <h2>What's new</h2>
         <p>In the weeks ahead, ChangeWindows will regularly change, below you can keep track of these changes as we won't be annoucing all of them on our blog or other outlets.</p>
         <section class="release-notes">
-            <h3>5.0-alpha.2 <small>January 2019</small></h3>
+            <h3>5.0-alpha.2 <small>21 January 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now navigate to builds from the sidebar tiles on the timeline</p>
             <p>BuildFeed.net data is now available from the user menu</p>
@@ -69,7 +69,7 @@
     </div>
     <div class="col-12 col-md-3">
         <h4>About</h4>
-        <p>ChangeWindows 5.0-alpha.1</p>
+        <p>ChangeWindows 5.0-alpha.2</p>
 
         <h4>Patrons</h4>
         <a href="https://www.patreon.com/bePatron?c=1028298" class="btn btn-primary btn-patreon"><i class="fab fa-fw fa-patreon"></i> Become a Patron</a>

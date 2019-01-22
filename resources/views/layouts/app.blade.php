@@ -45,11 +45,13 @@
                         <li class="nav-item {{ Request::is('milestones*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('milestones') }}"><i class="fal fa-fw fa-map-signs"></i> Milestones</a>
                         </li>
-                        <!--
-                            <li class="nav-item">
-                                <a class="nav-link" href="/rings"><i class="fal fa-fw fa-bullseye"></i> Rings</a>
-                            </li>
-                        -->
+                        @auth
+                            @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
+                                <li class="nav-item {{ Request::is('rings*') ? 'active' : '' }}">
+                                    <a class="nav-link" href="{{ route('rings') }}"><i class="fal fa-fw fa-bullseye"></i> Rings</a>
+                                </li>
+                            @endif
+                        @endauth
                         <li class="nav-item d-none d-sm-inline-block">
                             <a class="nav-link" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                         </li>

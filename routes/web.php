@@ -30,6 +30,8 @@ Route::get('/milestones/{id}/{platform}', 'MilestoneController@platform')->name(
 Route::post('/milestones', 'MilestoneController@store')->name('storeMilestone')->middleware('auth');
 Route::patch('/milestones/{id}', 'MilestoneController@update')->name('updateMilestone')->middleware('auth');
 
+Route::get('/rings', 'RingsController@index')->name('rings')->middleware('auth');
+
 Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
 Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');
 Route::get('/buildfeed/{id}', 'BuildfeedController@show')->name('showBuildfeed');
