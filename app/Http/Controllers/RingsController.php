@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Release;
+use App\Milestone;
 
 class RingsController extends Controller
 {
@@ -47,5 +48,13 @@ class RingsController extends Controller
         $flights['iso']['target'] = Release::where('platform', '8')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
 
         return view('rings.index', compact('flights'));
+    }
+
+    public function platform(Request $request, $platform_id) {
+        $request->user()->authorizeRoles(['Admin', 'Insider']);
+
+        $milestones = Milestone::orderBy('version', 'DESC')->get();
+
+        return view('rings.platform', compact('milestones'));
     }
 }

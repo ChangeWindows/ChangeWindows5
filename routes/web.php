@@ -31,6 +31,7 @@ Route::post('/milestones', 'MilestoneController@store')->name('storeMilestone')-
 Route::patch('/milestones/{id}', 'MilestoneController@update')->name('updateMilestone')->middleware('auth');
 
 Route::get('/rings', 'RingsController@index')->name('rings')->middleware('auth');
+Route::get('/rings/{platform}', 'RingsController@platform')->name('platformRings')->middleware('auth');
 
 Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
 Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');
