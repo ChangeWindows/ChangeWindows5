@@ -51,7 +51,7 @@
                             <span class="label skip">{{ array_key_exists('1', $rings) ? $rings['1'] : '' }}</span>
                         </div>
                         @endif
-                        @if (in_array($platform_id, [1, 2, 3]))
+                        @if (in_array($platform_id, [1, 2, 3, 5]))
                         <div class="col ring">
                             <span class="label fast">{{ array_key_exists('2', $rings) ? $rings['2'] : '' }}</span>
                         </div>
