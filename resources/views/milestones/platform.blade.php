@@ -13,7 +13,7 @@
             </li>
             @foreach ($platforms as $platform)
                 <li class="nav-item">
-                    <a class="nav-link {{ $platform_id == $platform->platform ? 'active' : '' }}" href="{{ route('showMilestone', ['id' => $milestone->id, 'platform' => $platform->platform]) }}">
+                    <a class="nav-link {{ $platform_id == $platform->platform ? 'active' : '' }}" href="{{ route('platformMilestone', ['id' => $milestone->id, 'platform' => $platform->platform]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 </li>
@@ -44,7 +44,7 @@
         <div class="timeline">
             @foreach ($timeline as $build => $rings)
                 <div class="timeline-row">
-                    <a class="row" href="{{ Uroute('showRelease', ['build' => explode('.', $build)[0], 'platform' => $platform_id]) }}">
+                    <a class="row" href="{{ route('showRelease', ['build' => explode('.', $build)[0], 'platform' => $platform_id]) }}">
                         <div class="col-6 col-md-2 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform_id)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform_id) }}" />{{ $build }}</div>
                         @if (in_array($platform_id, [1, 3]))
                         <div class="col ring">

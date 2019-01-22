@@ -18,7 +18,7 @@
             </li>
             @foreach ($platforms as $platform)
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('showMilestone', ['id' => $milestone->id, 'platform' => $platform->platform]) }}">
+                    <a class="nav-link" href="{{ route('platformMilestone', ['id' => $milestone->id, 'platform' => $platform->platform]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 </li>
