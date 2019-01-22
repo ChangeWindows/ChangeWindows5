@@ -7,13 +7,13 @@
         <p class="lead">{{ $milestone->description }}</p>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link" href="{{ URL::to('milestones/'.$milestone->id) }}">
+                <a class="nav-link" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
                     Overview
                 </a>
             </li>
             @foreach ($platforms as $platform)
                 <li class="nav-item">
-                    <a class="nav-link {{ $platform_id == $platform->platform ? 'active' : '' }}" href="{{ URL::to('milestones/'.$milestone->id.'/'.$platform->platform) }}">
+                    <a class="nav-link {{ $platform_id == $platform->platform ? 'active' : '' }}" href="{{ route('showMilestone', ['id' => $milestone->id, 'platform' => $platform->platform]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 </li>
@@ -27,14 +27,14 @@
 <div class="row">
     <div class="col-6">
         @if ($previous)
-            <a href="{{ URL::to('milestones/'.$previous->id) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
+            <a href="{{ route('showMilestone', ['id' => $previous->id]) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
                 <i class="fal fa-fw fa-angle-double-left"></i> <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $previous->osname }}</span> {{ $previous->name }}
             </a>
         @endif
     </div>
     <div class="col-6">
         @if ($next)
-            <a href="{{ URL::to('milestones/'.$next->id) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
+            <a href="{{ route('showMilestone', ['id' => $next->id]) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
                 <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $next->osname }}</span> {{ $next->name }} <i class="fal fa-fw fa-angle-double-right"></i>
             </a>
         @endif
@@ -44,7 +44,7 @@
         <div class="timeline">
             @foreach ($timeline as $build => $rings)
                 <div class="timeline-row">
-                    <a class="row" href="{{ URL::to('build/'.explode('.', $build)[0].'/'.$platform_id) }}">
+                    <a class="row" href="{{ Uroute('showRelease', ['build' => explode('.', $build)[0], 'platform' => $platform_id]) }}">
                         <div class="col-6 col-md-2 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform_id)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform_id) }}" />{{ $build }}</div>
                         @if (in_array($platform_id, [1, 3]))
                         <div class="col ring">

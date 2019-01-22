@@ -5,14 +5,14 @@
     <div class="container">
         <h2>Rings</h2>
         <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings') ? 'active' : '' }}" href="{{ URL::to('rings') }}">Overview</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings/1') ? 'active' : '' }}" href="{{ URL::to('rings/1') }}">PC</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings/3') ? 'active' : '' }}" href="{{ URL::to('rings/3') }}">Xbox</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings/6') ? 'active' : '' }}" href="{{ URL::to('rings/6') }}">IoT</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings/4') ? 'active' : '' }}" href="{{ URL::to('rings/4') }}">Server</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings/5') ? 'active' : '' }}" href="{{ URL::to('rings/5') }}">Holographic</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings/7') ? 'active' : '' }}" href="{{ URL::to('rings/7') }}">Team</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('rings/2') ? 'active' : '' }}" href="{{ URL::to('rings/2') }}">Mobile</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings') ? 'active' : '' }}" href="{{ route('rings') }}">Overview</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings/1') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 1]) }}">PC</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings/3') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 3]) }}">Xbox</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings/6') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 6]) }}">IoT</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings/4') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 4]) }}">Server</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings/5') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 5]) }}">Holographic</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings/7') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 7]) }}">Team</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::is('rings/2') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 2]) }}">Mobile</a></li>
         </ul>
     </div>
 </div>

@@ -6,19 +6,19 @@
         <h2><i class="fab fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
         @auth
             @if (Auth::user()->hasAnyRole(['Admin']))
-                <a class="btn btn-primary" href="{{ URL::to('milestones/'.$milestone->id.'/edit') }}"><i class="fal fa-fw fa-pencil"></i> Edit</a>
+                <a class="btn btn-primary" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit</a>
             @endif
         @endauth
         <p class="lead">{{ $milestone->description }}</p>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="{{ URL::to('milestones/'.$milestone->id) }}">
+                <a class="nav-link active" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
                     Overview
                 </a>
             </li>
             @foreach ($platforms as $platform)
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ URL::to('milestones/'.$milestone->id.'/'.$platform->platform) }}">
+                    <a class="nav-link" href="{{ route('showMilestone', ['id' => $milestone->id, 'platform' => $platform->platform]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 </li>
@@ -32,14 +32,14 @@
 <div class="row">
     <div class="col-6">
         @if ($previous)
-            <a href="{{ URL::to('milestones/'.$previous->id) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
+            <a href="{{ route('showMilestone', ['id' => $previous->id]) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
                 <i class="fal fa-fw fa-angle-double-left"></i> <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $previous->osname }}</span> {{ $previous->name }}
             </a>
         @endif
     </div>
     <div class="col-6">
         @if ($next)
-            <a href="{{ URL::to('milestones/'.$next->id) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
+            <a href="{{ route('showMilestone', ['id' => $next->id]) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
                 <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $next->osname }}</span> {{ $next->name }} <i class="fal fa-fw fa-angle-double-right"></i>
             </a>
         @endif
@@ -98,7 +98,7 @@
             <div class="timeline">
                 @foreach ($platform->builds as $build)
                     <div class="timeline-row">
-                        <a class="row" href="{{ URL::to('build/'.$build->build.'/'.$build->platform) }}">
+                        <a class="row" href="{{ route('showRelease', ['build' => $build->build, 'platform' => $build->platform]) }}">
                             <div class="col-5 build"><img src="{{ asset('img/platform/'.getPlatformImage($build->platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($build->platform) }}" />{{ $build->build }}.{{ $build->delta }}</div>
                             <div class="col-3 ring">
                                 <span class="label {{ $build->class }}">{{ $build->flight }}</span>
@@ -110,7 +110,7 @@
                     </div>
                 @endforeach
                 <div class="timeline-row">
-                    <a class="row" href="{{ URL::to('milestones/'.$milestone->id.'/'.$platform->platform) }}">
+                    <a class="row" href="{{ route('showMilestone', ['id' => $milestone->id, 'platform' => $platform->platform]) }}">
                         <div class="col"><img src="{{ asset('img/platform/'.getPlatformImage($platform->platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform->platform) }}" /></div>
                         <div class="col text-right">
                             See all <i class="fal fa-fw fa-angle-double-right"></i>

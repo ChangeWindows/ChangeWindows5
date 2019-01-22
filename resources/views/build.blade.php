@@ -7,7 +7,7 @@
         <ul class="nav nav-tabs">
             @foreach ($platforms as $platform)
                 <li class="nav-item">
-                    <a class="nav-link {{ $platform->platform == $cur_platform ? 'active' : '' }}" href="{{ URL::to('build/'.$cur_build.'/'.$platform->platform) }}">
+                    <a class="nav-link {{ $platform->platform == $cur_platform ? 'active' : '' }}" href="{{ route('showRelease', ['build' => $cur_build, 'platform' => $platform->platform]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 </li>

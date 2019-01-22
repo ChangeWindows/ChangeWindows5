@@ -30,17 +30,17 @@
                             <div class="col-12">
                                 <div class="options">
                                     <div class="btn-group">
-                                        <form method="POST" action="{{ URL::to('users/'.$user->id.'/promote') }}">
+                                        <form method="POST" action="{{ route('promoteUser', ['id' => $user->id]) }}">
                                             {{ method_field('PATCH') }}
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 1 ? 'disabled' : '' }}><i class="fal fa-fw fa-arrow-up"></i> Promote</button>
                                         </form>
-                                        <form method="POST" action="{{ URL::to('users/'.$user->id.'/demote') }}">
+                                        <form method="POST" action="{{ route('demoteUser', ['id' => $user->id]) }}">
                                             {{ method_field('PATCH') }}
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 3 ? 'disabled' : '' }}><i class="fal fa-fw fa-arrow-down"></i> Demote</button>
                                         </form>
-                                        <form method="POST" action="{{ URL::to('users/'.$user->id) }}">
+                                        <form method="POST" action="{{ route('deleteUser', ['id' => $user->id]) }}">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
                                             <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>

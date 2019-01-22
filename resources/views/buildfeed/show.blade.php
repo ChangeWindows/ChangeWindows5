@@ -6,12 +6,12 @@
         <h2 class="mb-4"><i class="fal fa-rss"></i> BuildFeed data</h2>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="{{ URL::to('buildfeed') }}">
+                <a class="nav-link active" href="{{ route('buildfeed') }}">
                     BuildFeed
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ URL::to('buildfeed/about') }}">
+                <a class="nav-link" href="{{ route('aboutBuildfeed') }}">
                     About
                 </a>
             </li>

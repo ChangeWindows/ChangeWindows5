@@ -29,14 +29,14 @@
                                 @foreach ($rings as $ring)
                                     <div class="col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
                                         <div class="flight-set">
-                                            <a class="flight" href="{{ URL::to('build/'.$build.'/'.$platform) }}">
+                                            <a class="flight" href="{{ route('showRelease', ['build' => $build, 'platform' => $platform]) }}">
                                                 <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-fluid" alt="{{ getPlatformById($platform) }}" /></div>
                                                 <div class="data">
                                                     <p class="build">{{ $build }}.{{ $delta }}</p>
                                                     <p class="ring"><span class="label {{ $ring->class }}">{{ $ring->flight }}</span></p>
                                                 </div>
                                             </a>
-                                            <form method="POST" action="{{ URL::to('flight/'.$ring->id) }}">
+                                            <form method="POST" action="{{ route('destroyFlight', ['id' => $ring->id]) }}">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>
