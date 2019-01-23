@@ -39,9 +39,9 @@ class RingsController extends Controller
                 $set[$milestone->id]['milestone'] = $milestone;
 
                 foreach($milestone->getFlights()[getPlatformClass($platform_id)] as $ring => $flight) {
-                    if ($flight === 1) {
+                    if ($flight == 1) {
                         $set[$milestone->id]['flights'][$ring] = Release::where('platform', $platform_id)->where('ring', getRingIdByClass($ring))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-                    } elseif ($flight === 0) {
+                    } elseif ($flight == 0) {
                         $set[$milestone->id]['flights'][$ring] = false;
                     }
                 }
