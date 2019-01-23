@@ -9,43 +9,22 @@ use App\Milestone;
 class RingsController extends Controller
 {
     public function index() {
-        $flights['pc']['skip'] = Release::where('platform', '1')->where('ring', '1')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['pc']['active'] = Release::where('platform', '1')->where('ring', '2')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['pc']['slow'] = Release::where('platform', '1')->where('ring', '3')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['pc']['release'] = Release::where('platform', '1')->where('ring', '5')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['pc']['target'] = Release::where('platform', '1')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['pc']['broad'] = Release::where('platform', '1')->where('ring', '7')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['pc']['ltsc'] = Release::where('platform', '1')->where('ring', '8')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
 
-        $flights['xbox']['skip'] = Release::where('platform', '3')->where('ring', '1')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['xbox']['active'] = Release::where('platform', '3')->where('ring', '2')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['xbox']['slow'] = Release::where('platform', '3')->where('ring', '3')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['xbox']['preview'] = Release::where('platform', '3')->where('ring', '4')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['xbox']['release'] = Release::where('platform', '3')->where('ring', '5')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['xbox']['target'] = Release::where('platform', '3')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        $set['pc'] = Release::where('platform', '1')->whereIn('ring', array(1, 2, 3, 5, 6, 7, 8))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['xbox'] = Release::where('platform', '3')->whereIn('ring', array(1, 2, 3, 4, 5, 6))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['server'] = Release::where('platform', '4')->whereIn('ring', array(3, 6, 8))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['iot'] = Release::where('platform', '6')->whereIn('ring', array(3, 6, 7))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['holo'] = Release::where('platform', '5')->whereIn('ring', array(2, 3, 6, 7, 8))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['team'] = Release::where('platform', '7')->whereIn('ring', array(6, 7))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['mobile'] = Release::where('platform', '2')->whereIn('ring', array(6, 7))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['sdk'] = Release::where('platform', '9')->whereIn('ring', array(6))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        $set['iso'] = Release::where('platform', '8')->whereIn('ring', array(6))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
 
-        $flights['server']['slow'] = Release::where('platform', '4')->where('ring', '3')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['server']['target'] = Release::where('platform', '4')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['server']['ltsc'] = Release::where('platform', '4')->where('ring', '8')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-
-        $flights['iot']['slow'] = Release::where('platform', '6')->where('ring', '3')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['iot']['target'] = Release::where('platform', '6')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['iot']['broad'] = Release::where('platform', '6')->where('ring', '7')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-
-        $flights['holo']['active'] = Release::where('platform', '5')->where('ring', '2')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['holo']['slow'] = Release::where('platform', '5')->where('ring', '3')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['holo']['target'] = Release::where('platform', '5')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['holo']['broad'] = Release::where('platform', '5')->where('ring', '7')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['holo']['ltsc'] = Release::where('platform', '5')->where('ring', '8')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-
-        $flights['team']['target'] = Release::where('platform', '7')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['team']['broad'] = Release::where('platform', '7')->where('ring', '7')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-
-        $flights['mobile']['target'] = Release::where('platform', '2')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['mobile']['broad'] = Release::where('platform', '2')->where('ring', '7')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-
-        $flights['sdk']['target'] = Release::where('platform', '9')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
-        $flights['iso']['target'] = Release::where('platform', '8')->where('ring', '6')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+        foreach($set as $platform => $rings) {
+            foreach($rings as $ring => $release) {
+                $flights[$platform][getRingClassById($ring)] = $release;
+            }
+        }
 
         return view('rings.index', compact('flights'));
     }
