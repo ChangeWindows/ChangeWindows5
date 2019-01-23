@@ -152,4 +152,35 @@ class Release extends Model
         // In all fairness, this needs a bottom and top range for which build should be in which milestone
         // additionally, the create build form should have an override for the early skip ahead builds
     }
+
+    // Release scopes
+    public function scopePc($query) { return $query->where('platform', '1'); }
+    public function scopeMobile($query) { return $query->where('platform', '2'); }
+    public function scopeXbox($query) { return $query->where('platform', '3'); }
+    public function scopeServer($query) { return $query->where('platform', '4'); }
+    public function scopeHolographic($query) { return $query->where('platform', '5'); }
+    public function scopeIot($query) { return $query->where('platform', '6'); }
+    public function scopeTeam($query) { return $query->where('platform', '7'); }
+    public function scopeISO($query) { return $query->where('platform', '8'); }
+    public function scopeSDK($query) { return $query->where('platform', '9'); }
+
+    public function scopeLatestFlight($query) { return $query->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc'); }
+    public function scopeAllRings($query) { return $query->groupBy('ring')->get()->keyBy('ring'); }
+
+    public function scopePlatformRings($query, $platform) {
+        switch ($platform) {
+            case 1:     $rings = array(1, 2, 3, 5, 6, 7, 8); break;
+            case 2:     $rings = array(6, 7); break;
+            case 3:     $rings = array(1, 2, 3, 4, 5, 6); break;
+            case 4:     $rings = array(3, 6, 8); break;
+            case 5:     $rings = array(2, 3, 6, 7, 8); break;
+            case 6:     $rings = array(3, 6, 7); break;
+            case 7:     $rings = array(6, 7); break;
+            case 8:     $rings = array(6); break;
+            case 9:     $rings = array(6); break;
+            default:    return;
+        }
+
+        return $query->where('platform', $platform)->whereIn('ring', $rings);
+    }
 }

@@ -15,16 +15,16 @@ class TimelineController extends Controller
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
         }
-
-        $set['pc'] = Release::where('platform', '1')->whereIn('ring', array(1, 2, 3, 5, 6, 7, 8))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['xbox'] = Release::where('platform', '3')->whereIn('ring', array(1, 2, 3, 4, 5, 6))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['server'] = Release::where('platform', '4')->whereIn('ring', array(3, 6, 8))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['iot'] = Release::where('platform', '6')->whereIn('ring', array(3, 6, 7))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['holo'] = Release::where('platform', '5')->whereIn('ring', array(2, 3, 6, 7, 8))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['team'] = Release::where('platform', '7')->whereIn('ring', array(6, 7))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['mobile'] = Release::where('platform', '2')->whereIn('ring', array(6, 7))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['sdk'] = Release::where('platform', '9')->whereIn('ring', array(6))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
-        $set['iso'] = Release::where('platform', '8')->whereIn('ring', array(6))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->groupBy('ring')->get()->keyBy('ring');
+        
+        $set['pc'] = Release::platformRings(1)->latestFlight()->allRings();
+        $set['xbox'] = Release::platformRings(3)->latestFlight()->allRings();
+        $set['server'] = Release::platformRings(4)->latestFlight()->allRings();
+        $set['iot'] = Release::platformRings(6)->latestFlight()->allRings();
+        $set['holo'] = Release::platformRings(5)->latestFlight()->allRings();
+        $set['team'] = Release::platformRings(7)->latestFlight()->allRings();
+        $set['mobile'] = Release::platformRings(2)->latestFlight()->allRings();
+        $set['sdk'] = Release::platformRings(8)->latestFlight()->allRings();
+        $set['iso'] = Release::platformRings(9)->latestFlight()->allRings();
 
         foreach($set as $platform => $rings) {
             foreach($rings as $ring => $release) {
