@@ -80,4 +80,99 @@ class Milestone extends Model
             return false;
         }
     }
+
+    public function getFlights() {
+        return array(
+            'pc' => array(
+                'skip' => $this->pcSkip,
+                'fast' => $this->pcFast,
+                'slow' => $this->pcSlow,
+                'preview' => -1,
+                'release' => $this->pcReleasePreview,
+                'targeted' => $this->pcTargeted,
+                'broad' => $this->pcBroad,
+                'ltsc' => $this->pcLTS
+            ),
+            'mobile' => array(
+                'skip' => -1,
+                'fast' => $this->mobileFast,
+                'slow' => $this->mobileSlow,
+                'preview' => -1,
+                'release' => $this->mobileReleasePreview,
+                'targeted' => $this->mobileTargeted,
+                'broad' => $this->mobileBroad,
+                'ltsc' => -1
+            ),
+            'xbox' => array(
+                'skip' => $this->xboxSkip,
+                'fast' => $this->xboxFast,
+                'slow' => $this->xboxSlow,
+                'preview' => $this->xboxPreview,
+                'release' => $this->xboxReleasePreview,
+                'targeted' => $this->xboxTargeted,
+                'broad' => -1,
+                'ltsc' => -1
+            ),
+            'server' => array(
+                'skip' => -1,
+                'fast' => -1,
+                'slow' => $this->serverSlow,
+                'preview' => -1,
+                'release' => -1,
+                'targeted' => $this->serverTargeted,
+                'broad' => -1,
+                'ltsc' => $this->serverLTS
+            ),
+            'holographic' => array(
+                'skip' => -1,
+                'fast' => $this->holographicFast,
+                'slow' => $this->holographicSlow,
+                'preview' => -1,
+                'release' => -1,
+                'targeted' => $this->holographicTargeted,
+                'broad' => $this->holographicBroad,
+                'ltsc' => $this->holographicLTS
+            ),
+            'iot' => array(
+                'skip' => -1,
+                'fast' => -1,
+                'slow' => $this->iotSlow,
+                'preview' => -1,
+                'release' => -1,
+                'targeted' => $this->iotTargeted,
+                'broad' => $this->iotBroad,
+                'ltsc' => -1
+            ),
+            'team' => array(
+                'skip' => -1,
+                'fast' => -1,
+                'slow' => -1,
+                'preview' => -1,
+                'release' => -1,
+                'targeted' => $this->teamTargeted,
+                'broad' => $this->teamBroad,
+                'ltsc' => -1
+            ),
+            'sdk' => array(
+                'skip' => -1,
+                'fast' => -1,
+                'slow' => -1,
+                'preview' => -1,
+                'release' => -1,
+                'targeted' => $this->sdk,
+                'broad' => -1,
+                'ltsc' => -1
+            ),
+            'iso' => array(
+                'skip' => -1,
+                'fast' => -1,
+                'slow' => -1,
+                'preview' => -1,
+                'release' => -1,
+                'targeted' => $this->iso,
+                'broad' => -1,
+                'ltsc' => -1
+            )
+        );
+    }
 }

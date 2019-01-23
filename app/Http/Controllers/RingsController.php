@@ -34,6 +34,20 @@ class RingsController extends Controller
 
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 
-        return view('rings.platform', compact('milestones'));
+        foreach($milestones as $milestone) {
+            if ( in_array( 1, $milestone->getFlights()[getPlatformClass($platform_id)] ) ) {
+                $set[$milestone->id]['milestone'] = $milestone;
+
+                foreach($milestone->getFlights()[getPlatformClass($platform_id)] as $ring => $flight) {
+                    if ($flight === 1) {
+                        $set[$milestone->id]['flights'][$ring] = Release::where('platform', $platform_id)->where('ring', getRingIdByClass($ring))->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc')->first();
+                    } elseif ($flight === 0) {
+                        $set[$milestone->id]['flights'][$ring] = false;
+                    }
+                }
+            }
+        }
+
+        return view('rings.platform', compact('set'));
     }
 }

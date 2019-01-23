@@ -19,13 +19,20 @@
 @endsection
 
 @section('content')
-<div class="row">
-    @foreach ($milestones as $milestone)
+<div class="row row-gutter">
+    @foreach ($set as $group => $content)
         <div class="col-12">
-            <a href="{{ route('showMilestone', ['id' => $milestone->id]) }}" class="h3" style="color: #{{ $milestone->color }}">
-                <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $milestone->osname }}</span> <span class="font-weight-regular">{{ $milestone->name }}</span> <small>version {{ $milestone->version }}</small>
+            <a href="{{ route('showMilestone', ['id' => $content['milestone']->id]) }}" class="h3" style="color: #{{ $content['milestone']->color }}">
+                <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $content['milestone']->osname }}</span> <span class="font-weight-regular">{{ $content['milestone']->name }}</span> <small>version {{ $content['milestone']->version }}</small>
             </a>
         </div>
+        @foreach ($content['flights'] as $ring => $flight)
+            @if ($flight)
+                <div class="col-xl col-md-3 col-sm-4 col-6"><?php getTile( $flight ) ?></div>
+            @else
+                <div class="col-xl"></div>
+            @endif
+        @endforeach
     @endforeach
 </div>
 @endsection

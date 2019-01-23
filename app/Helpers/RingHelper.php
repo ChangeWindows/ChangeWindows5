@@ -29,3 +29,18 @@ function getRingClassById($id) {
         default:    return;
     }
 }
+
+function getRingIdByClass($class) {
+    switch ($class) {
+        case 'leak':        return 0;
+        case 'skip':        return 1;
+        case 'fast':        return 2;
+        case 'slow':        return 3;
+        case 'preview':     return 4;
+        case 'release':     return 5;
+        case 'targeted':    return 6;
+        case 'broad':       return 7;
+        case 'ltsc':        return 8;
+        default:            return;
+    }
+}
