@@ -31,7 +31,7 @@ class ChangelogController extends Controller
                                     ->paginate(50);
         }
 
-        return view('changelogs.all', compact('changelogs', 'platform', 'build', 'delta'));
+        return view('changelogs.all', compact('changelogs', 'platform', 'build'));
     }
 
     public function create(Request $request) {

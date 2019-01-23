@@ -24,8 +24,8 @@
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <p>Non-Insiders are no longer blocked from visiting the milestone platform details</p>
             <p>Fixes Holographic not showing the Fast Ring in the platform overview for a milestone</p>
+            <p>The left and right border of timeline items are no longer not clickable</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
-            <p>The left and right border of timeline items are not clickable</p>
             <p>Patrons are currently not listed on About</p>
             <p>ChangeWindows 4 URLs are not compatible with viv</p>
         </section>
