@@ -161,8 +161,18 @@ class Release extends Model
     public function scopeHolographic($query) { return $query->where('platform', '5'); }
     public function scopeIot($query) { return $query->where('platform', '6'); }
     public function scopeTeam($query) { return $query->where('platform', '7'); }
-    public function scopeISO($query) { return $query->where('platform', '8'); }
-    public function scopeSDK($query) { return $query->where('platform', '9'); }
+    public function scopeIso($query) { return $query->where('platform', '8'); }
+    public function scopeSdk($query) { return $query->where('platform', '9'); }
+
+    public function scopeLeak($query) { return $query->where('ring', '0'); }
+    public function scopeSkip($query) { return $query->where('ring', '1'); }
+    public function scopeActive($query) { return $query->where('ring', '2'); }
+    public function scopeSlow($query) { return $query->where('ring', '3'); }
+    public function scopePreview($query) { return $query->where('ring', '4'); }
+    public function scopeRelease($query) { return $query->where('ring', '5'); }
+    public function scopeTargeted($query) { return $query->where('ring', '6'); }
+    public function scopeBroad($query) { return $query->where('ring', '7'); }
+    public function scopeLtsc($query) { return $query->where('ring', '8'); }
 
     public function scopeLatestFlight($query) { return $query->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc'); }
     public function scopeAllRings($query) { return $query->groupBy('ring')->get()->keyBy('ring'); }

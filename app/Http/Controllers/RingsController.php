@@ -9,21 +9,43 @@ use App\Milestone;
 class RingsController extends Controller
 {
     public function index() {
-        $set['pc'] = Release::platformRings(1)->latestFlight()->allRings();
-        $set['xbox'] = Release::platformRings(3)->latestFlight()->allRings();
-        $set['server'] = Release::platformRings(4)->latestFlight()->allRings();
-        $set['iot'] = Release::platformRings(6)->latestFlight()->allRings();
-        $set['holo'] = Release::platformRings(5)->latestFlight()->allRings();
-        $set['team'] = Release::platformRings(7)->latestFlight()->allRings();
-        $set['mobile'] = Release::platformRings(2)->latestFlight()->allRings();
-        $set['sdk'] = Release::platformRings(8)->latestFlight()->allRings();
-        $set['iso'] = Release::platformRings(9)->latestFlight()->allRings();
+        $flights['pc']['skip'] = Release::pc()->skip()->latestFlight()->first();
+        $flights['pc']['fast'] = Release::pc()->active()->latestFlight()->first();
+        $flights['pc']['slow'] = Release::pc()->slow()->latestFlight()->first();
+        $flights['pc']['release'] = Release::pc()->release()->latestFlight()->first();
+        $flights['pc']['targeted'] = Release::pc()->targeted()->latestFlight()->first();
+        $flights['pc']['broad'] = Release::pc()->broad()->latestFlight()->first();
+        $flights['pc']['ltsc'] = Release::pc()->ltsc()->latestFlight()->first();
 
-        foreach($set as $platform => $rings) {
-            foreach($rings as $ring => $release) {
-                $flights[$platform][getRingClassById($ring)] = $release;
-            }
-        }
+        $flights['xbox']['skip'] = Release::xbox()->skip()->latestFlight()->first();
+        $flights['xbox']['fast'] = Release::xbox()->active()->latestFlight()->first();
+        $flights['xbox']['slow'] = Release::xbox()->slow()->latestFlight()->first();
+        $flights['xbox']['preview'] = Release::xbox()->preview()->latestFlight()->first();
+        $flights['xbox']['release'] = Release::xbox()->release()->latestFlight()->first();
+        $flights['xbox']['targeted'] = Release::xbox()->targeted()->latestFlight()->first();
+
+        $flights['server']['slow'] = Release::server()->slow()->latestFlight()->first();
+        $flights['server']['targeted'] = Release::server()->targeted()->latestFlight()->first();
+        $flights['server']['ltsc'] = Release::server()->ltsc()->latestFlight()->first();
+
+        $flights['iot']['slow'] = Release::iot()->slow()->latestFlight()->first();
+        $flights['iot']['targeted'] = Release::iot()->targeted()->latestFlight()->first();
+        $flights['iot']['broad'] = Release::iot()->broad()->latestFlight()->first();
+
+        $flights['holo']['fast'] = Release::holographic()->active()->latestFlight()->first();
+        $flights['holo']['slow'] = Release::holographic()->slow()->latestFlight()->first();
+        $flights['holo']['targeted'] = Release::holographic()->targeted()->latestFlight()->first();
+        $flights['holo']['broad'] = Release::holographic()->broad()->latestFlight()->first();
+        $flights['holo']['ltsc'] = Release::holographic()->ltsc()->latestFlight()->first();
+
+        $flights['team']['targeted'] = Release::team()->targeted()->latestFlight()->first();
+        $flights['team']['broad'] = Release::team()->broad()->latestFlight()->first();
+
+        $flights['mobile']['targeted'] = Release::mobile()->targeted()->latestFlight()->first();
+        $flights['mobile']['broad'] = Release::mobile()->broad()->latestFlight()->first();
+
+        $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
+        $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
 
         return view('rings.index', compact('flights'));
     }
