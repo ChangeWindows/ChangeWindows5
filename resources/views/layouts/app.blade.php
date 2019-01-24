@@ -71,6 +71,21 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav">
+                        @auth
+                            @if (Auth::user()->hasAnyRole(['Admin']))
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fal fa-fw fa-tachometer d-inline"></i><span class="d-none d-sm-inline"> Manage<span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        @yield('toolset')
+                                        <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="fal fa-fw fa-plane"></i> Flights</a>
+                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fal fa-fw fa-align-left"></i> Changelogs</a>
+                                        <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="fal fa-fw fa-users"></i> Users</a>
+                                    </div>
+                                </li>
+                            @endif
+                        @endauth
                         <li class="nav-item dropdown {{ Request::is('profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @auth
@@ -90,15 +105,6 @@
                                 <h6 class="dropdown-header">Preview</h6>
                                 <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=bug&template=bug_report.md&title="><i class="fal fa-fw fa-bug"></i> Report a bug</a>
                                 <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=&template=feature_request.md&title="><i class="fal fa-fw fa-box-heart"></i> Request a feature</a>
-                                @auth
-                                    @if (Auth::user()->hasAnyRole(['Admin']))
-                                        <div class="dropdown-divider"></div>
-                                        <h6 class="dropdown-header">Manage</h6>
-                                        <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="fal fa-fw fa-plane"></i> Flights</a>
-                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fal fa-fw fa-align-left"></i> Changelogs</a>
-                                        <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="fal fa-fw fa-users"></i> Users</a>
-                                    @endif
-                                @endauth
                                 @auth
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fal fa-fw fa-sign-out"></i> Log out</a>

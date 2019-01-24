@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
+@section('toolset')
+<a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fal fa-fw fa-plus"></i> New milestone</a>
+<div class="dropdown-divider"></div>
+@endsection
+
 @section('hero')
 <div class="jumbotron">
     <div class="container">
         <h2>Milestones</h2>
-        @auth
-            @if (Auth::user()->hasAnyRole(['Admin']))
-                <a class="btn btn-primary" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fal fa-fw fa-plus"></i> New milestone</a>
-            @endif
-        @endauth
     </div>
 </div>
 @endsection

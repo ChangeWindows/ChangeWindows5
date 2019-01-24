@@ -74,15 +74,17 @@
             display: none;
         }
 
-        .nav-link {
-            margin-right: 0;
-        }
-
         &.show {
             .nav-link {
                 background: transparent;
                 opacity: 1;
                 border-bottom-color: $accent;
+            }
+        }
+
+        &:last-child {
+            .nav-link {
+                margin-right: 0;
             }
         }
     }

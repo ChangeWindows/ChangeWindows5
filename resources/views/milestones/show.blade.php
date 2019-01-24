@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
+@section('toolset')
+<a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit milestone</a>
+<div class="dropdown-divider"></div>
+@endsection
+
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
         <h2><i class="fab fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
-        @auth
-            @if (Auth::user()->hasAnyRole(['Admin']))
-                <a class="btn btn-primary" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit</a>
-            @endif
-        @endauth
         <p class="lead">{{ $milestone->description }}</p>
         <ul class="nav nav-tabs">
             <li class="nav-item">

@@ -17597,13 +17597,13 @@ readers do not read off random characters that represent icons */
 .navbar .dropdown .dropdown-toggle::after {
   display: none;
 }
-.navbar .dropdown .nav-link {
-  margin-right: 0;
-}
 .navbar .dropdown.show .nav-link {
   background: transparent;
   opacity: 1;
   border-bottom-color: #0098df;
+}
+.navbar .dropdown:last-child .nav-link {
+  margin-right: 0;
 }
 .navbar .dropdown-menu {
   border: none;

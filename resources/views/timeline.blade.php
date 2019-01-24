@@ -4,6 +4,11 @@
     $previous = null;
 @endphp
 
+@section('toolset')
+<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New flight</a>
+<div class="dropdown-divider"></div>
+@endsection
+
 @section('hero')
 <div class="jumbotron">
     <div class="container">
@@ -57,12 +62,6 @@
         {{ $releases->links() }}
     </div>
     <div class="d-none d-lg-block col-lg-5">
-        @auth
-            @if (Auth::user()->hasAnyRole(['Admin']))
-                <p class="h3">Admin tools</p>
-                <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New build</a>
-            @endif
-        @endauth
         <p class="h3"><i class="fab fa-fw fa-windows"></i> PC</p>
         <div class="row row-gutter">
             <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
