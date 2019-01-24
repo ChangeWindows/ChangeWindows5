@@ -17908,20 +17908,22 @@ h1 {
 }
 
 .tile {
-  padding: 10px;
+  padding: 8px;
   color: #fff;
   line-height: 1;
   margin-bottom: 4px;
   display: block;
-  transition: all 0.5s;
-  height: 84px;
+  transition: all 0.3s ease-in;
 }
 .tile:hover {
+  -webkit-transform: translate(0, -1px);
+          transform: translate(0, -1px);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
   text-decoration: none;
 }
 .tile .ring {
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 15px;
   display: block;
@@ -17933,100 +17935,37 @@ h1 {
 }
 .tile .date {
   font-weight: 600;
-  text-transform: uppercase;
   font-size: 15px;
   padding-top: 10px;
+  padding-bottom: 2px;
   display: block;
 }
 .tile.vnext, .tile.leak {
   background-color: #e52262;
 }
-.tile.vnext:hover, .tile.leak:hover {
-  box-shadow: 0 0 10px 2px #e52262 !important;
-  z-index: 9800;
-}
-.tile.vnext .tile-header, .tile.leak .tile-header {
-  background: #d91a58 !important;
-}
 .tile.skip {
   background-color: #e74018;
-}
-.tile.skip:hover {
-  box-shadow: 0 0 10px 2px #e74018 !important;
-  z-index: 9800;
-}
-.tile.skip .tile-header {
-  background: #d53b16 !important;
 }
 .tile.fast {
   background-color: #fb8009;
 }
-.tile.fast:hover {
-  box-shadow: 0 0 10px 2px #fb8009 !important;
-  z-index: 9800;
-}
-.tile.fast .tile-header {
-  background: #ec7604 !important;
-}
 .tile.slow {
   background-color: #ffc000;
-}
-.tile.slow:hover {
-  box-shadow: 0 0 10px 2px #ffc000 !important;
-  z-index: 9800;
-}
-.tile.slow .tile-header {
-  background: #ebb100 !important;
 }
 .tile.preview {
   background-color: #c0d700;
 }
-.tile.preview:hover {
-  box-shadow: 0 0 10px 2px #c0d700 !important;
-  z-index: 9800;
-}
-.tile.preview .tile-header {
-  background: #aec300 !important;
-}
 .tile.release {
   background-color: #97c800;
-}
-.tile.release:hover {
-  box-shadow: 0 0 10px 2px #97c800 !important;
-  z-index: 9800;
-}
-.tile.release .tile-header {
-  background: #88b400 !important;
 }
 .tile.targeted {
   background-color: #46c429;
 }
-.tile.targeted:hover {
-  box-shadow: 0 0 10px 2px #46c429 !important;
-  z-index: 9800;
-}
-.tile.targeted .tile-header {
-  background: #40b325 !important;
-}
 .tile.broad {
   background-color: #10b08f;
 }
-.tile.broad:hover {
-  box-shadow: 0 0 10px 2px #10b08f !important;
-  z-index: 9800;
-}
-.tile.broad .tile-header {
-  background: #0e9d80 !important;
-}
 .tile.ltsc {
   background-color: #0098df;
-}
-.tile.ltsc:hover {
-  box-shadow: 0 0 10px 2px #0098df !important;
-  z-index: 9800;
-}
-.tile.ltsc .tile-header {
-  background: #008acb !important;
 }
 .tile.none {
   background-color: #0098df;
