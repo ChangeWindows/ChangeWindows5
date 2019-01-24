@@ -26,11 +26,18 @@
     font-size: 1.5rem;
     text-align: center;
     display: block;
-    padding: 10px 10px 14px;
+    padding: 7px 10px 11px;
+    line-height: 1.4;
 
     &:hover {
         color: #fff;
         text-decoration: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .previous-milestone {
+        margin-bottom: 10px;
     }
 }
 
