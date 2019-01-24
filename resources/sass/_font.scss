@@ -72,3 +72,36 @@ h1 {
 .sdk {
     color: $sdk;
 }
+
+.rings > div {
+    .h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+
+        .fab {
+            font-weight: 400 !important;
+        }
+    }
+
+    &:not(:first-child) {
+        .h3 {
+            margin-top: 6px;
+        }
+    }
+}
+
+.ring-milestones {
+    margin-bottom: 6px;
+
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    a.h3 {
+        font-size: 1.3rem;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

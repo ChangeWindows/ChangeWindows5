@@ -17816,6 +17816,30 @@ h1 {
   color: #886ce4;
 }
 
+.rings > div .h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.rings > div .h3 .fab {
+  font-weight: 400 !important;
+}
+.rings > div:not(:first-child) .h3 {
+  margin-top: 6px;
+}
+
+.ring-milestones {
+  margin-bottom: 6px;
+}
+.ring-milestones:not(:first-child) {
+  margin-top: 10px;
+}
+.ring-milestones a.h3 {
+  font-size: 1.3rem;
+}
+.ring-milestones a.h3:hover {
+  text-decoration: none;
+}
+
 .container {
   padding: 0;
 }

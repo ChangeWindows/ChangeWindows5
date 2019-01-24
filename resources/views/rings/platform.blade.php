@@ -21,7 +21,7 @@
 @section('content')
 <div class="row row-gutter">
     @foreach ($set as $group => $content)
-        <div class="col-12">
+        <div class="col-12 ring-milestones">
             <a href="{{ route('showMilestone', ['id' => $content['milestone']->id]) }}" class="h3" style="color: #{{ $content['milestone']->color }}">
                 <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $content['milestone']->osname }}</span> <span class="font-weight-regular">{{ $content['milestone']->name }}</span> <small>version {{ $content['milestone']->version }}</small>
             </a>
@@ -30,7 +30,7 @@
             @if ($flight)
                 <div class="col-xl col-md-3 col-sm-4 col-6"><?php getTile( $flight ) ?></div>
             @else
-                <div class="col-xl"></div>
+                <div class="col-xl d-none d-xl-block"></div>
             @endif
         @endforeach
     @endforeach

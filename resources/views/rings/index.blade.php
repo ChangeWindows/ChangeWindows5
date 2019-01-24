@@ -19,14 +19,14 @@
 @endsection
 
 @section('content')
-<div class="row px-n10">
+<div class="row px-n10 rings">
     <div class="col-12" id="pc">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> PC</p>
         <div class="row row-gutter">
             <div class="col-xl col-md-3 col-sm-4 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
             <div class="col-xl col-md-3 col-sm-4 col-6"><?php getTile( $flights['pc']['fast'] ) ?></div>
             <div class="col-xl col-md-3 col-sm-4 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
-            <div class="col-xl col-md-3 col-sm-4 col-6"><?php getTile( $flights['pc']['release'] ) ?></div>
+            <div class="col-xl col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['release'] ) ?></div>
             <div class="col-xl col-md-4 col-sm-6 col-12"><?php getTile( $flights['pc']['targeted'] ) ?></div>
             <div class="col-xl col-md-4 col-sm-6 col-6"><?php getTile( $flights['pc']['broad'] ) ?></div>
             <div class="col-xl col-md-4 col-sm-6 col-6"><?php getTile( $flights['pc']['ltsc'] ) ?></div>
@@ -69,30 +69,30 @@
             <div class="col-md col-sm-6 col-12"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-8 col-sm-8 col-xs-12" id="team">
+    <div class="col-lg-4 col-md-8 col-sm-8 col-12" id="team">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['team']['targeted'] ) ?></div>
             <div class="col"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-8 col-sm-8 col-xs-12" id="mobile">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
-        <div class="row row-gutter">
-            <div class="col-md"><?php getTile( $flights['mobile']['targeted'] ) ?></div>
-            <div class="col-md"><?php getTile( $flights['mobile']['broad'] ) ?></div>
-        </div>
-    </div>
-    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12" id="sdk">
+    <div class="col-lg-2 col-md-4 col-sm-4 col-6" id="sdk">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['sdk']['targeted'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12" id="iso">
+    <div class="col-lg-2 col-md-4 col-sm-4 col-6" id="iso">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> ISO</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iso']['targeted'] ) ?></div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-8 col-sm-8 col-12" id="mobile">
+        <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['mobile']['targeted'] ) ?></div>
+            <div class="col"><?php getTile( $flights['mobile']['broad'] ) ?></div>
         </div>
     </div>
 </div>
