@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('toolset')
+<a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit milestone</a>
+<div class="dropdown-divider"></div>
+@endsection
+
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
