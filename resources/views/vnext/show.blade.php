@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('toolset')
+<a class="dropdown-item" href="{{ route('editVNext', ['platform_id' => $changelog->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit vNext</a>
+<div class="dropdown-divider"></div>
+@endsection
+
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
@@ -11,7 +16,6 @@
             <li class="nav-item"><a class="nav-link {{ Request::is('vnext/4') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 4]) }}">Server</a></li>
             <li class="nav-item"><a class="nav-link {{ Request::is('vnext/5') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 5]) }}">Holographic</a></li>
             <li class="nav-item"><a class="nav-link {{ Request::is('vnext/7') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 7]) }}">Team</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('vnext/2') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 2]) }}">Mobile</a></li>
         </ul>
     </div>
 </div>

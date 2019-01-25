@@ -41,6 +41,8 @@ Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 
 Route::get('/vnext/{platform?}', 'vNextController@index')->name('showVNext');
+Route::get('/vnext/{platform?}/edit', 'vNextController@edit')->name('editVNext');
+Route::patch('/vnext/{platform?}', 'vNextController@update')->name('updateVNext');
 
 Route::get('/users', 'UserController@index')->name('showUsers');
 Route::patch('/users/{id}/promote', 'UserController@promote')->name('promoteUser');
