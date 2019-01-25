@@ -40,6 +40,8 @@ Route::get('/buildfeed/{id}', 'BuildfeedController@show')->name('showBuildfeed')
 Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 
+Route::get('/vnext/{platform?}', 'vNextController@index')->name('showVNext');
+
 Route::get('/users', 'UserController@index')->name('showUsers');
 Route::patch('/users/{id}/promote', 'UserController@promote')->name('promoteUser');
 Route::patch('/users/{id}/demote', 'UserController@demote')->name('demoteUser');

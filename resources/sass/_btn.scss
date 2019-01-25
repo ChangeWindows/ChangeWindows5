@@ -5,4 +5,18 @@
     &:focus {
         box-shadow: none;
     }
+
+    &.btn-vnext {
+        background-color: $leak;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 9px;
+        color: #fff;
+        transition: all .3s ease-in;
+    
+        &:hover {
+            transform: translate(0, -1px);
+            box-shadow: 0 4px 18px 0 rgba(0,0,0,.2);
+        }
+    }
 }

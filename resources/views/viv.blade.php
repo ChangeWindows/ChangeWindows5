@@ -21,6 +21,12 @@
             <h3>5.0-alpha.3 <small>January/February 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>The Rings page is now available for Insiders</p>
+            <p>The vNext changelog are back and have been added to the timeline sidebar</p>
+            <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
+            <p>The milestone pages now feature an improved responsive design</p>
+            <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
+            <p>Modernized look for tiles on the timeline sidebar and rings page</p>
+            <p>Management tools have been lifted out of the UI into their own dropdown in the navbar</p>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <p>Non-Insiders are no longer blocked from visiting the milestone platform details</p>
             <p>Fixes Holographic not showing the Fast Ring in the platform overview for a milestone</p>

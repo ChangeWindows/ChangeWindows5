@@ -17534,6 +17534,19 @@ readers do not read off random characters that represent icons */
 .btn:focus {
   box-shadow: none;
 }
+.btn.btn-vnext {
+  background-color: #e52262;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 9px;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.btn.btn-vnext:hover {
+  -webkit-transform: translate(0, -1px);
+          transform: translate(0, -1px);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+}
 
 .navbar {
   padding: 0 20px;
