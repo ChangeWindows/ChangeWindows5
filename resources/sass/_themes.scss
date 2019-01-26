@@ -1,0 +1,300 @@
+$themes: (
+    light: (
+        text: #333,
+        text-secondary: #555,
+        disabled: #888,
+        background-header: #ebebeb,
+        background-content: #fff,
+        background-content-2: #f8f8f8,
+        background-content-hover: #eee,
+        highlight-color: rgba(0,0,0,.1),
+        transparency: rgba(235,235,235,.8),
+        transparency-content: rgba(255,255,255,.9),
+        shadow: rgba(0,0,0,.3),
+        shadow-hover: rgba(0,0,0,.1)
+    ),
+    dark: (
+        text: #fff,
+        text-secondary: #ddd,
+        disabled: #888,
+        background-header: #282828,
+        background-content: #181818,
+        background-content-2: #222,
+        background-content-hover: #282828,
+        highlight-color: rgba(255,255,255,.1),
+        transparency: rgba(40,40,40,.8),
+        transparency-content: rgba(24,24,24,.9),
+        shadow: rgba(0,0,0,.3),
+        shadow-hover: rgba(0,0,0,.3)
+    )
+);
+
+@each $theme, $color in $themes {
+    .#{$theme} {
+        background: map-get($color, background-content);
+        color: map-get($color, text);
+
+        .navbg {
+            background: map-get($color, background-header);
+        }
+    
+        .jumbotron {
+            background-color: map-get($color, background-header) !important;
+            color: map-get($color, text);
+        
+            h2 {
+                small {
+                    a {
+                        color: map-get($color, text);
+                    }
+        
+                    .text {
+                        color: map-get($color, text);
+                    }
+                }
+            }
+        }
+    
+        .navbar {
+            &.bg-cw {
+                @supports ((backdrop-filter: blur(30px))) {
+                    background-color: map-get($color, transparency) !important;
+                }
+                    
+                @supports not ((backdrop-filter: blur(30px))) {
+                    background-color: map-get($color, background-header) !important;
+                }
+            }
+    
+            .navbar-brand {
+                color: map-get($color, text);
+            }
+            
+            .nav-item {
+                .nav-link {
+                    color: map-get($color, text) !important;
+                }
+            }
+        
+            .dropdown-menu {
+                box-shadow: 0 0 24px 0 map-get($color, shadow);
+    
+                @supports ((backdrop-filter: blur(30px))) {
+                    background-color: map-get($color, transparency);
+                }
+                    
+                @supports not ((backdrop-filter: blur(30px))) {
+                    background-color: map-get($color, background-header);
+                }
+        
+                .dropdown-divider {
+                    border-top-color: map-get($color, highlight-color);
+                }
+        
+                .dropdown-header {
+                    color: map-get($color, text-secondary);
+                }
+        
+                .dropdown-item {
+                    color: map-get($color, text);
+                    
+                    &:hover {
+                        background-color: map-get($color, highlight-color);
+                    }
+        
+                    &:active {
+                        color: map-get($color, text);
+                    }
+        
+                    &:focus {
+                        color: map-get($color, text);
+                        background: rgba(map-get($color, transparency),.1);
+                    }
+                }
+            }
+            
+            .navbar-toggler {
+                background-color: rgba(map-get($color, transparency),.1);
+            }
+        }
+    
+        .nav {
+            &.nav-tabs {
+                .nav-item {
+                    .nav-link {
+                        color: map-get($color, text);
+        
+                        &.active {
+                            color: map-get($color, text);
+                        }
+                    }
+                }
+            }
+        }
+    
+        .timeline {
+            .timeline-row {
+                &:nth-child(odd) {
+                    background-color: map-get($color, background-content);
+                }
+                
+                &:nth-child(even) {
+                    background-color: map-get($color, background-content-2);
+                }
+            
+                &:hover {
+                    background-color: map-get($color, background-content-hover);
+                }
+            
+                a.row .build {
+                    color: map-get($color, text);
+                }
+            
+                .row {
+                    color: map-get($color, text);
+                }
+            }
+        }
+        
+        .milestone {
+            border-color: map-get($color, background-header);
+            
+            &:hover {
+                box-shadow: 0 4px 10px 0 map-get($color, shadow-hover);
+            }
+        }
+    
+        .release-notes {
+            h3 {
+                border-bottom-color: map-get($color, background-header);
+            }
+        
+            p {
+                border-left-color: map-get($color, background-header);
+            }
+        }
+    
+        .flight-set {
+            border-color: map-get($color, background-header);
+            
+            &:hover {
+                box-shadow: 0 4px 10px 0 map-get($color, shadow-hover);
+            }
+        
+            .flight {
+                p {
+                    &.build {
+                        color: map-get($color, text);
+                    }
+                }
+            }
+        }
+    
+        .list-group {
+            &.list-group-changelogs {
+                .list-group-item {
+                    &.active {
+                        color: map-get($color, text);
+                        background: map-get($color, background-content-hover);
+                    }
+            
+                    &:hover {
+                        background-color: map-get($color, background-content-2);
+                    }
+                }
+            }
+        }
+    
+        .pagination {
+            .page-item {
+                .page-link {
+                    color: map-get($color, text);
+                }
+        
+                &:not(.disabled) {
+                    &.active,
+                    &:hover {
+                        .page-link {
+                            color: map-get($color, text);
+                        }
+                    }
+                }
+        
+                &.disabled {
+                    .page-link {
+                        color: map-get($color, disabled);
+                    }
+                }
+            }
+        }
+        
+        .modal {
+            .modal-content {
+                box-shadow: 0 0 24px 0 map-get($color, shadow);
+                
+                .modal-header {
+                    @supports ((backdrop-filter: blur(30px))) {
+                        background: map-get($color, transparency);
+                    }
+                        
+                    @supports not ((backdrop-filter: blur(30px))) {
+                        background: map-get($color, background-header);
+                    }
+    
+                    .close {
+                        color: map-get($color, text) !important;
+                    }
+                }
+        
+                .modal-body {
+                    @supports ((backdrop-filter: blur(30px))) {
+                        background: map-get($color, transparency-content);
+                    }
+                        
+                    @supports not ((backdrop-filter: blur(30px))) {
+                        background: map-get($color, background-content);
+                    }
+                }
+            }
+        }
+    
+        .lifecycle-stats {
+            h5 {
+                color: map-get($color, disabled);
+            }
+        
+            h4 {
+                color: map-get($color, text);
+            }
+        }
+        
+        .form-control {
+            background-color: map-get($color, background-content);
+            color: map-get($color, text);
+            border-color: map-get($color, background-header);
+        
+            &:focus {
+                border-color: $accent;
+            }
+        }
+        
+        .buildfeed {
+            .bf {
+                color: map-get($color, text);
+                
+                &:hover {
+                    color: map-get($color, text);
+                    box-shadow: 0 4px 10px 0 map-get($color, shadow-hover);
+                }
+        
+                .bf-header {
+                    background-color: map-get($color, background-header);
+                }
+        
+                .bf-body {
+                    background-color: map-get($color, background-content-2);
+                }
+            }
+        }
+    }
+}
