@@ -91,6 +91,8 @@ class TimelineController extends Controller
             $releases = Release::where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
         }
 
+        $milestone = $releases[0]->ms;
+
         $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
 
         $changelogs = Changelog::where('build', $cur_build)->where('platform', $cur_platform)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get();
@@ -108,6 +110,6 @@ class TimelineController extends Controller
 
         $parsedown = new Parsedown();
 
-        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'cur_platform', 'parsedown'));
+        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'cur_platform', 'parsedown', 'milestone'));
     }
 }

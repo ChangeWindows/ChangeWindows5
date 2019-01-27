@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use App\Milestone;
 
 class Release extends Model
 {
@@ -12,6 +13,10 @@ class Release extends Model
     protected $dates = ['created_at', 'updated_at', 'date'];
 
     protected $fillable = array('major', 'minor', 'build', 'delta', 'milestone', 'platform', 'ring', 'date');
+
+    public function ms() {
+        return $this->belongsTo('App\Milestone', 'milestone');
+    }
 
     public function getFormatAttribute() {
         return $this->date->format('d M Y');

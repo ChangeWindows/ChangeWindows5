@@ -3,7 +3,7 @@
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2 class="mb-4"><i class="fab fa-fw fa-windows"></i> Windows 10</h2>
+        <h2 class="mb-4"><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
         <ul class="nav nav-tabs">
             @foreach ($platforms as $platform)
                 <li class="nav-item">
