@@ -27,19 +27,17 @@
                     @php
                         $first = false;
                     @endphp
-                    @if (array_key_exists('rings', $info))
-                        @foreach ($info['rings'] as $ring => $release)
-                            @if ($first)
-                                <i class="fal fa-fw fa-angle-right"></i>
-                            @endif
-                            <span class="label {{ getRingClassById($ring) }}">{{ $release->date->format('j M \'y') }}</span>
-                            @if (!$first)
-                                @php
-                                    $first = true;
-                                @endphp
-                            @endif
-                        @endforeach
-                    @endif
+                    @foreach ($info['rings'] as $ring => $release)
+                        @if ($first)
+                            <i class="fal fa-fw fa-angle-right"></i>
+                        @endif
+                        <span class="label {{ getRingClassById($ring) }}">{{ $release->date->format('j M \'y') }}</span>
+                        @if (!$first)
+                            @php
+                                $first = true;
+                            @endphp
+                        @endif
+                    @endforeach
                 </div>
 
                 @if (array_key_exists('changelog', $info))
