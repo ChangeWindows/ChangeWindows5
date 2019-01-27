@@ -43,17 +43,17 @@
             <div class="col-3">
                 <div class="form-group">
                     <label for="platform">Platform</label>
-                    <select class="form-control" id="platform" name="platform" aria-describedby="platform" value="{{ $changelog->platform }}">
-                        <option value="0">Generic</option>
-                        <option value="1">PC</option>
-                        <option value="2">Mobile</option>
-                        <option value="3">Xbox</option>
-                        <option value="4">Server</option>
-                        <option value="5">Holographic</option>
-                        <option value="6">IoT</option>
-                        <option value="7">Team</option>
-                        <option value="8">ISO</option>
-                        <option value="8">SDK</option>
+                    <select class="form-control" id="platform" name="platform" aria-describedby="platform">
+                        <option value="0" {{ $changelog->platform == 0 ? 'selected' : ''}}>Generic</option>
+                        <option value="1" {{ $changelog->platform == 1 ? 'selected' : ''}}>PC</option>
+                        <option value="2" {{ $changelog->platform == 2 ? 'selected' : ''}}>Mobile</option>
+                        <option value="3" {{ $changelog->platform == 3 ? 'selected' : ''}}>Xbox</option>
+                        <option value="4" {{ $changelog->platform == 4 ? 'selected' : ''}}>Server</option>
+                        <option value="5" {{ $changelog->platform == 5 ? 'selected' : ''}}>Holographic</option>
+                        <option value="6" {{ $changelog->platform == 6 ? 'selected' : ''}}>IoT</option>
+                        <option value="7" {{ $changelog->platform == 7 ? 'selected' : ''}}>Team</option>
+                        <option value="8" {{ $changelog->platform == 8 ? 'selected' : ''}}>ISO</option>
+                        <option value="9" {{ $changelog->platform == 9 ? 'selected' : ''}}>SDK</option>
                     </select>
                 </div>
             </div>
