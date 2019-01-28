@@ -16,13 +16,13 @@
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
             <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="theme" id="theme-light" value="0" {{ Auth::user()->theme == 0 ? 'checked' : '' }}>
-                    <label class="form-check-label" for="theme-light">Light</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="theme-light" name="theme" value="0" {{ Auth::user()->theme == 0 ? 'checked' : '' }}>
+                    <label class="custom-control-label" for="theme-light">Light</label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="theme" id="theme-dark" value="1" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
-                    <label class="form-check-label" for="theme-dark">Dark</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="theme-dark" name="theme" value="0" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
+                    <label class="custom-control-label" for="theme-dark">Dark</label>
                 </div>
             </div>
             <div class="spacing-20"></div>
