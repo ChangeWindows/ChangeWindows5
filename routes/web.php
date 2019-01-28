@@ -38,6 +38,8 @@ Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfee
 Route::get('/buildfeed/{id}', 'BuildfeedController@show')->name('showBuildfeed');
 
 Route::get('/flight', 'FlightController@index')->name('showFlights');
+Route::get('/flight/{id}', 'FlightController@edit')->name('editFlight');
+Route::patch('/flight/{id}', 'FlightController@update')->name('updateFlight');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 
 Route::get('/vnext/{platform?}', 'vNextController@index')->name('showVNext');

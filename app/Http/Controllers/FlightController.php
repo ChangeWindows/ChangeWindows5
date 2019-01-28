@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Release;
+use App\Milestone;
 
 class FlightController extends Controller
 {
@@ -20,7 +21,37 @@ class FlightController extends Controller
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
         }
 
-        return view('flights', compact('releases', 'timeline'));
+        return view('flights.index', compact('releases', 'timeline'));
+    }
+
+    public function edit(Request $request, $id) {
+        $request->user()->authorizeRoles('Admin');
+        
+        $flight = Release::find($id);
+        $milestones = Milestone::orderBy('version', 'DESC')->get();
+
+        return view('flights.edit', compact('flight', 'milestones'));
+    }
+
+    public function update(Request $request, $id) {
+        $request->user()->authorizeRoles('Admin');
+        
+        $string = Release::splitString(request()->get('build_string'));
+        
+        $flight = Release::find($id);
+
+        $flight->major = $string['major'];
+        $flight->minor = $string['minor'];
+        $flight->build = $string['build'];
+        $flight->delta = $string['delta'];
+        $flight->milestone = request()->get('milestone');
+        $flight->platform = request()->get('platform');
+        $flight->ring = request()->get('ring');
+        $flight->date = request()->get('release');
+
+        $flight->save();
+
+        return redirect('flight');
     }
 
     public function destroy(Request $request, $id) {
