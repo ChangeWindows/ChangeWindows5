@@ -9,7 +9,7 @@ use Parsedown;
 
 class TimelineController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50)->onEachSide(1);
 
         foreach ($releases as $release) {
@@ -54,7 +54,26 @@ class TimelineController extends Controller
         $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
 
-        return view('timeline', compact('releases', 'flights', 'timeline'));
+        $user_agent = $request->server('HTTP_USER_AGENT');
+
+        if ( strpos( $user_agent, 'Edge/' ) ) {
+            $edge_agent = substr($user_agent, strrpos($user_agent, 'Edge/'));
+            $ua['build'] = substr($edge_agent, strrpos($edge_agent, '.') + 1);
+            
+            if ( strpos( $user_agent, 'Xbox' ) ) {
+                $ua['platform'] = '3';
+            } else if ( strpos( $user_agent, 'Windows Phone' ) ) {
+                $ua['platform'] = '2';
+            } else if ( strpos( $user_agent, 'Windows IoT' ) ) {
+                $ua['platform'] = '6';
+            } else {
+                $ua['platform'] = '1';
+            }
+        } else {
+            $ua = false;
+        }
+
+        return view('timeline', compact('releases', 'flights', 'timeline', 'ua'));
     }
 
     public function store(Request $request) {

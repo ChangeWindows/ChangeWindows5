@@ -62,11 +62,30 @@
         {{ $releases->links() }}
     </div>
     <div class="d-none d-lg-block col-lg-5">
-        <div class="row row-gutter">
-            <div class="col">
-                <a href="{{ route('showVNext') }}" class="btn btn-vnext btn-block">The changelog for the next public release</a>
+        @if ($ua)
+            <div class="row row-gutter">
+                <div class="col">
+                    <a href="{{ route('showVNext', ['platform_id' => $ua['platform']]) }}" class="tile leak">
+                        <span class="ring">Next public release</span>
+                        <span class="build">vNext</span>
+                        <span class="date">Tomorrow</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{{ route('showRelease', ['build' => $ua['build'], 'platform' => $ua['platform']]) }}" class="tile leak">
+                        <span class="ring">This device</span>
+                        <span class="build"><?php echo $ua['build'] ?></span>
+                        <span class="date">Running now</span>
+                    </a>
+                </div>
             </div>
-        </div>
+        @else
+            <div class="row row-gutter">
+                <div class="col">
+                    <a href="{{ route('showVNext') }}" class="btn btn-vnext btn-block">The changelog for the next public release</a>
+                </div>
+            </div>
+        @endif
         <p class="h3"><i class="fab fa-fw fa-windows"></i> PC</p>
         <div class="row row-gutter">
             <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
