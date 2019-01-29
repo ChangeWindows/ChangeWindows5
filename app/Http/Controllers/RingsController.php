@@ -58,7 +58,7 @@ class RingsController extends Controller
         foreach($milestones as $milestone) {
             if ( in_array( 1, $milestone->getFlights()[getPlatformClass($platform_id)] ) ) {
                 $set[$milestone->id]['milestone'] = $milestone;
-                $releases = Release::platformRings(1)->latestFlight()->allRings();
+                $releases = Release::platformRings($platform_id)->latestFlight()->allRings();
 
                 foreach($milestone->getFlights()[getPlatformClass($platform_id)] as $ring => $flight) {
                     if ($flight == 1) {
