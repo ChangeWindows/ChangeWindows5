@@ -21,17 +21,23 @@
             <h3>5.0-alpha.3 <small>January/February 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>The Rings page is now available for Insiders</p>
+            <p>My Windows is now available in the timeline sidebar when visiting ChangeWindows with Edge or our app</p>
             <p>The vNext changelog are back and have been added to the timeline sidebar</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>The milestone pages now feature an improved responsive design</p>
+            <p>Various improvements to our management tools, including flight editing and more</p>
+            <h4><i class="fal fa-fw fa-server"></i> System</h4>
+            <p>Further file clean-up and other code improvements</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
             <p>Modernized look for tiles on the timeline sidebar and rings page</p>
             <p>Management tools have been lifted out of the UI into their own dropdown in the navbar</p>
             <p>Light has been restored as the default theme</p>
+            <p>Updated radio and checkbox controls to use a custom design</p>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
             <p>Non-Insiders are no longer blocked from visiting the milestone platform details</p>
             <p>Fixes Holographic not showing the Fast Ring in the platform overview for a milestone</p>
             <p>The left and right border of timeline items are no longer not clickable</p>
+            <p>When editing a changelog, the editor will now remember the platform instead of requiring it to be set again</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
             <p>Patrons are currently not listed on About</p>
             <p>ChangeWindows 4 URLs are not compatible with viv</p>
