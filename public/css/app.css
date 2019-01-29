@@ -18335,10 +18335,10 @@ h1 {
   color: #333;
 }
 .light .navbg {
-  background: #ebebeb;
+  background: #eee;
 }
 .light .jumbotron {
-  background-color: #ebebeb !important;
+  background-color: #eee !important;
   color: #333;
 }
 .light .jumbotron h2 small a {
@@ -18354,7 +18354,7 @@ h1 {
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar.bg-cw {
-    background-color: #ebebeb !important;
+    background-color: #eee !important;
   }
 }
 .light .navbar .navbar-brand {
@@ -18373,7 +18373,7 @@ h1 {
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar .dropdown-menu {
-    background-color: #ebebeb;
+    background-color: #eee;
   }
 }
 .light .navbar .dropdown-menu .dropdown-divider {
@@ -18420,19 +18420,19 @@ h1 {
   color: #333;
 }
 .light .milestone {
-  border-color: #ebebeb;
+  border-color: #eee;
 }
 .light .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .release-notes h3 {
-  border-bottom-color: #ebebeb;
+  border-bottom-color: #eee;
 }
 .light .release-notes p {
-  border-left-color: #ebebeb;
+  border-left-color: #eee;
 }
 .light .flight-set {
-  border-color: #ebebeb;
+  border-color: #eee;
 }
 .light .flight-set:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -18466,7 +18466,7 @@ h1 {
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .modal .modal-content .modal-header {
-    background: #ebebeb;
+    background: #eee;
   }
 }
 .light .modal .modal-content .modal-header .close {
@@ -18491,7 +18491,7 @@ h1 {
 .light .form-control {
   background-color: #fff;
   color: #333;
-  border-color: #ebebeb;
+  border-color: #eee;
 }
 .light .form-control:focus {
   border-color: #0098df;
@@ -18504,7 +18504,7 @@ h1 {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .buildfeed .bf .bf-header {
-  background-color: #ebebeb;
+  background-color: #eee;
 }
 .light .buildfeed .bf .bf-body {
   background-color: #f8f8f8;
