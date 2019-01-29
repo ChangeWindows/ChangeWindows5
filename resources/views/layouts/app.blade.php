@@ -64,10 +64,12 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
-                                <a class="dropdown-item" href="https://twitter.com/changewindows"><i class="fab fa-fw fa-twitter"></i> @ChangeWindows</a>
                                 <div class="dropdown-divider d-block d-sm-none"></div>
                                 <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
+                                <div class="dropdown-divider d-block"></div>
+                                <a class="dropdown-item" href="https://twitter.com/changewindows"><i class="fab fa-fw fa-twitter"></i> @ChangeWindows</a>
+                                <a class="dropdown-item" href="https://patreon.com/changewindows"><i class="fab fa-fw fa-patreon"></i> Patreon</a>
                             </div>
                         </li>
                     </ul>
