@@ -17683,6 +17683,17 @@ readers do not read off random characters that represent icons */
   text-transform: uppercase;
   margin: 0;
 }
+.jumbotron h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.jumbotron.build-header h2 {
+  margin-bottom: 0 !important;
+}
+.jumbotron.build-header h6 {
+  margin-bottom: 20px;
+  margin-left: 48px;
+}
 .jumbotron .lead {
   margin-bottom: 0;
   margin-top: 15px;

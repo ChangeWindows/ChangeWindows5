@@ -48,6 +48,22 @@
         margin: 0;
     }
 
+    h6 {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &.build-header {
+        h2 {
+            margin-bottom: 0 !important;
+        }
+
+        h6 {
+            margin-bottom: 20px;
+            margin-left: 48px;
+        }
+    }
+
     .lead {
         margin-bottom: 0;
         margin-top: 15px;
