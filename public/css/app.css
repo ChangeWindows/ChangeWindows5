@@ -18228,6 +18228,9 @@ h1 {
 .user .h2 {
   margin: 0 0 6px;
   line-height: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .user .h6 {
   margin: 0 !important;
