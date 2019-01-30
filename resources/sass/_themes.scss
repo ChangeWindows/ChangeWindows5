@@ -68,6 +68,10 @@ $themes: (
                 }
             }
         }
+        
+        .tile {
+            background-color: map-get($color, background-header);
+        }
     
         .navbar {
             &.bg-cw {

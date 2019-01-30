@@ -1,4 +1,4 @@
-.tile {
+.tile, .light .tile {
     padding: 8px;
     color: #fff;
     line-height: 1;
@@ -72,6 +72,70 @@
 
     &.none {
         background-color: $accent;
+    }
+}
+
+.dark, .black {
+    .tile {
+        &.vnext, &.leak {
+            .ring {
+                color: $leak;
+            }
+        }
+        
+        &.skip {
+            .ring {
+                color: $skip;
+            }
+        }
+        
+        &.fast {
+            .ring {
+                color: $fast;
+            }
+        }
+    
+        &.slow {
+            .ring {
+                color: $slow;
+            }
+        }
+    
+        &.preview {
+            .ring {
+                color: $preview;
+            }
+        }
+    
+        &.release {
+            .ring {
+                color: $release;
+            }
+        }
+    
+        &.targeted {
+            .ring {
+                color: $targeted;
+            }
+        }
+    
+        &.broad {
+            .ring {
+                color: $broad;
+            }
+        }
+    
+        &.ltsc {
+            .ring {
+                color: $ltsc;
+            }
+        }
+    
+        &.none {
+            .ring {
+                color: $accent;
+            }
+        }
     }
 }
 

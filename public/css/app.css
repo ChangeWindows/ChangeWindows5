@@ -17931,7 +17931,7 @@ h1 {
   margin-right: 3px;
 }
 
-.tile {
+.tile, .light .tile {
   padding: 8px;
   color: #fff;
   line-height: 1;
@@ -17939,60 +17939,91 @@ h1 {
   display: block;
   transition: all 0.3s ease-in;
 }
-.tile:hover {
+.tile:hover, .light .tile:hover {
   -webkit-transform: translate(0, -1px);
           transform: translate(0, -1px);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
   text-decoration: none;
 }
-.tile .ring {
+.tile .ring, .light .tile .ring {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 15px;
   display: block;
 }
-.tile .build {
+.tile .build, .light .tile .build {
   font-weight: 600;
   font-size: 24px;
   display: block;
 }
-.tile .date {
+.tile .date, .light .tile .date {
   font-weight: 600;
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 2px;
   display: block;
 }
-.tile.vnext, .tile.leak {
+.tile.vnext, .tile.leak, .light .tile.vnext, .light .tile.leak {
   background-color: #e52262;
 }
-.tile.skip {
+.tile.skip, .light .tile.skip {
   background-color: #e74018;
 }
-.tile.fast {
+.tile.fast, .light .tile.fast {
   background-color: #fb8009;
 }
-.tile.slow {
+.tile.slow, .light .tile.slow {
   background-color: #ffc000;
 }
-.tile.preview {
+.tile.preview, .light .tile.preview {
   background-color: #c0d700;
 }
-.tile.release {
+.tile.release, .light .tile.release {
   background-color: #97c800;
 }
-.tile.targeted {
+.tile.targeted, .light .tile.targeted {
   background-color: #46c429;
 }
-.tile.broad {
+.tile.broad, .light .tile.broad {
   background-color: #10b08f;
 }
-.tile.ltsc {
+.tile.ltsc, .light .tile.ltsc {
   background-color: #0098df;
 }
-.tile.none {
+.tile.none, .light .tile.none {
   background-color: #0098df;
+}
+
+.dark .tile.vnext .ring, .dark .tile.leak .ring, .black .tile.vnext .ring, .black .tile.leak .ring {
+  color: #e52262;
+}
+.dark .tile.skip .ring, .black .tile.skip .ring {
+  color: #e74018;
+}
+.dark .tile.fast .ring, .black .tile.fast .ring {
+  color: #fb8009;
+}
+.dark .tile.slow .ring, .black .tile.slow .ring {
+  color: #ffc000;
+}
+.dark .tile.preview .ring, .black .tile.preview .ring {
+  color: #c0d700;
+}
+.dark .tile.release .ring, .black .tile.release .ring {
+  color: #97c800;
+}
+.dark .tile.targeted .ring, .black .tile.targeted .ring {
+  color: #46c429;
+}
+.dark .tile.broad .ring, .black .tile.broad .ring {
+  color: #10b08f;
+}
+.dark .tile.ltsc .ring, .black .tile.ltsc .ring {
+  color: #0098df;
+}
+.dark .tile.none .ring, .black .tile.none .ring {
+  color: #0098df;
 }
 
 .row-gutter {
@@ -18361,6 +18392,9 @@ h1 {
 .light .jumbotron h2 small .text {
   color: #333;
 }
+.light .tile {
+  background-color: #eee;
+}
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar.bg-cw {
     background-color: rgba(235, 235, 235, 0.8) !important;
@@ -18541,6 +18575,9 @@ h1 {
 .dark .jumbotron h2 small .text {
   color: #fff;
 }
+.dark .tile {
+  background-color: #282828;
+}
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
     background-color: rgba(40, 40, 40, 0.8) !important;
@@ -18720,6 +18757,9 @@ h1 {
 }
 .black .jumbotron h2 small .text {
   color: #fff;
+}
+.black .tile {
+  background-color: #111;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .black .navbar.bg-cw {
