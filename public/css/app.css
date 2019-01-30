@@ -17534,7 +17534,8 @@ readers do not read off random characters that represent icons */
 .btn:focus {
   box-shadow: none;
 }
-.btn.btn-vnext {
+
+.btn.btn-vnext, .light .btn.btn-vnext {
   background-color: #e52262;
   font-weight: 700;
   text-transform: uppercase;
@@ -17542,10 +17543,14 @@ readers do not read off random characters that represent icons */
   color: #fff;
   transition: all 0.3s ease-in;
 }
-.btn.btn-vnext:hover {
+.btn.btn-vnext:hover, .light .btn.btn-vnext:hover {
   -webkit-transform: translate(0, -1px);
           transform: translate(0, -1px);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dark .btn.btn-vnext, .black .btn.btn-vnext {
+  color: #e52262;
 }
 
 .navbar {
@@ -18392,7 +18397,7 @@ h1 {
 .light .jumbotron h2 small .text {
   color: #333;
 }
-.light .tile {
+.light .tile, .light .btn-vnext {
   background-color: #eee;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18575,7 +18580,7 @@ h1 {
 .dark .jumbotron h2 small .text {
   color: #fff;
 }
-.dark .tile {
+.dark .tile, .dark .btn-vnext {
   background-color: #282828;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18758,7 +18763,7 @@ h1 {
 .black .jumbotron h2 small .text {
   color: #fff;
 }
-.black .tile {
+.black .tile, .black .btn-vnext {
   background-color: #151515;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
