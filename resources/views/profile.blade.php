@@ -21,7 +21,7 @@
                     <label class="custom-control-label" for="theme-light">Light</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="theme-dark" name="theme" value="0" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
+                    <input type="radio" class="custom-control-input" id="theme-dark" name="theme" value="1" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
                     <label class="custom-control-label" for="theme-dark">Dark</label>
                 </div>
             </div>
