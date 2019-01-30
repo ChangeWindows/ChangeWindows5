@@ -30,7 +30,7 @@
             }
         </script>
     </head>
-    <body class="{{ Auth::check() && Auth::user()->theme > 1 ? Auth::user()->theme == 1 ? 'dark' : 'black' : 'light' }}">
+    <body class="{{ Auth::check() && Auth::user()->theme >= 1 ? Auth::user()->theme == 1 ? 'dark' : 'black' : 'light' }}">
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
