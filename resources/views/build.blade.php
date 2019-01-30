@@ -3,8 +3,8 @@
 @section('hero')
 <div class="jumbotron tabs build-header">
     <div class="container">
-        <h2 class="mb-4"><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
-        <h6>{{ $meta->major }}.{{ $meta->minor }}.{{ $meta->build }} &middot; {{ $milestone->codename }} &middot; {{ $milestone->name }}</h6>
+        <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
+        <h6>{{ $meta->major }}.{{ $meta->minor }}.{{ $meta->build }} &middot; {{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
         <ul class="nav nav-tabs">
             @foreach ($platforms as $platform)
                 <li class="nav-item">

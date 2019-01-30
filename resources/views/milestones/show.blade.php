@@ -6,9 +6,10 @@
 @endsection
 
 @section('hero')
-<div class="jumbotron tabs">
+<div class="jumbotron tabs build-header">
     <div class="container">
-        <h2><i class="fab fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
+        <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
+        <h6>{{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
         <p class="lead">{{ $milestone->description }}</p>
         <ul class="nav nav-tabs">
             <li class="nav-item">
