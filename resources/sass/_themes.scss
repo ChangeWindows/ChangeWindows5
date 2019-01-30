@@ -26,6 +26,20 @@ $themes: (
         transparency-content: rgba(24,24,24,.9),
         shadow: rgba(0,0,0,.3),
         shadow-hover: rgba(0,0,0,.3)
+    ),
+    black: (
+        text: #fff,
+        text-secondary: #ccc,
+        disabled: #777,
+        background-header: #111,
+        background-content: #000,
+        background-content-2: #111,
+        background-content-hover: #181818,
+        highlight-color: rgba(255,255,255,.1),
+        transparency: rgba(20,20,20,.8),
+        transparency-content: rgba(24,24,24,.9),
+        shadow: rgba(0,0,0,.3),
+        shadow-hover: rgba(0,0,0,.3)
     )
 );
 

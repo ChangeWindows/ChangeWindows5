@@ -20,9 +20,10 @@
         <section class="release-notes">
             <h3>5.0-alpha.3 <small>January/February 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
-            <p>The Rings page is now available for Insiders</p>
+            <p>The Rings page is now available for Insiders <span class="badge badge-info">Insiders</span></p>
             <p>My Windows is now available in the timeline sidebar when visiting ChangeWindows with Edge or our app</p>
             <p>The vNext changelog are back and have been added to the timeline sidebar</p>
+            <p>The Black theme has been added as a darker version of Dark <span class="badge badge-info">Insiders</span></p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>The milestone pages now feature an improved responsive design</p>
             <p>Various improvements to our management tools, including flight editing and more</p>

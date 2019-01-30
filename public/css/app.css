@@ -18704,6 +18704,186 @@ h1 {
   background-color: #222;
 }
 
+.black {
+  background: #000;
+  color: #fff;
+}
+.black .navbg {
+  background: #111;
+}
+.black .jumbotron {
+  background-color: #111 !important;
+  color: #fff;
+}
+.black .jumbotron h2 small a {
+  color: #fff;
+}
+.black .jumbotron h2 small .text {
+  color: #fff;
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .navbar.bg-cw {
+    background-color: rgba(20, 20, 20, 0.8) !important;
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .navbar.bg-cw {
+    background-color: #111 !important;
+  }
+}
+.black .navbar .navbar-brand {
+  color: #fff;
+}
+.black .navbar .nav-item .nav-link {
+  color: #fff !important;
+}
+.black .navbar .dropdown-menu {
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .navbar .dropdown-menu {
+    background-color: rgba(20, 20, 20, 0.8);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .navbar .dropdown-menu {
+    background-color: #111;
+  }
+}
+.black .navbar .dropdown-menu .dropdown-divider {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+.black .navbar .dropdown-menu .dropdown-header {
+  color: #ccc;
+}
+.black .navbar .dropdown-menu .dropdown-item {
+  color: #fff;
+}
+.black .navbar .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.black .navbar .dropdown-menu .dropdown-item:active {
+  color: #fff;
+}
+.black .navbar .dropdown-menu .dropdown-item:focus {
+  color: #fff;
+  background: rgba(20, 20, 20, 0.1);
+}
+.black .navbar .navbar-toggler {
+  background-color: rgba(20, 20, 20, 0.1);
+}
+.black .nav.nav-tabs .nav-item .nav-link {
+  color: #fff;
+}
+.black .nav.nav-tabs .nav-item .nav-link.active {
+  color: #fff;
+}
+.black .timeline .timeline-row:nth-child(odd) {
+  background-color: #000;
+}
+.black .timeline .timeline-row:nth-child(even) {
+  background-color: #111;
+}
+.black .timeline .timeline-row:hover {
+  background-color: #181818;
+}
+.black .timeline .timeline-row a.row .build {
+  color: #fff;
+}
+.black .timeline .timeline-row .row {
+  color: #fff;
+}
+.black .milestone {
+  border-color: #111;
+}
+.black .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.black .release-notes h3 {
+  border-bottom-color: #111;
+}
+.black .release-notes p {
+  border-left-color: #111;
+}
+.black .flight-set {
+  border-color: #111;
+}
+.black .flight-set:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.black .flight-set .flight p.build {
+  color: #fff;
+}
+.black .list-group.list-group-changelogs .list-group-item.active {
+  color: #fff;
+  background: #181818;
+}
+.black .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #111;
+}
+.black .pagination .page-item .page-link {
+  color: #fff;
+}
+.black .pagination .page-item:not(.disabled).active .page-link, .black .pagination .page-item:not(.disabled):hover .page-link {
+  color: #fff;
+}
+.black .pagination .page-item.disabled .page-link {
+  color: #777;
+}
+.black .modal .modal-content {
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .modal .modal-content .modal-header {
+    background: rgba(20, 20, 20, 0.8);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .modal .modal-content .modal-header {
+    background: #111;
+  }
+}
+.black .modal .modal-content .modal-header .close {
+  color: #fff !important;
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .modal .modal-content .modal-body {
+    background: rgba(24, 24, 24, 0.9);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .black .modal .modal-content .modal-body {
+    background: #000;
+  }
+}
+.black .lifecycle-stats h5 {
+  color: #777;
+}
+.black .lifecycle-stats h4 {
+  color: #fff;
+}
+.black .form-control {
+  background-color: #000;
+  color: #fff;
+  border-color: #111;
+}
+.black .form-control:focus {
+  border-color: #0098df;
+}
+.black .buildfeed .bf {
+  color: #fff;
+}
+.black .buildfeed .bf:hover {
+  color: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.black .buildfeed .bf .bf-header {
+  background-color: #111;
+}
+.black .buildfeed .bf .bf-body {
+  background-color: #111;
+}
+
 .hero {
   background-repeat: no-repeat;
   background-size: cover;

@@ -24,6 +24,14 @@
                     <input type="radio" class="custom-control-input" id="theme-dark" name="theme" value="1" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
                     <label class="custom-control-label" for="theme-dark">Dark</label>
                 </div>
+                @auth
+                    @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="theme-black" name="theme" value="2" {{ Auth::user()->theme == 2 ? 'checked' : '' }}>
+                            <label class="custom-control-label" for="theme-black">Black</label>
+                        </div>
+                    @endif
+                @endauth
             </div>
             <div class="spacing-20"></div>
             <div class="col-12">
