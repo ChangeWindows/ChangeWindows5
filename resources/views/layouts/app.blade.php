@@ -30,11 +30,11 @@
             }
         </script>
     </head>
-    <body class="{{ Auth::check() && Auth::user()->theme > 1 ? 'dark' : 'light' }}">
+    <body class="{{ Auth::check() && Auth::user()->theme >= 1 ? 'dark' : 'light' }}">
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
-                    <img src="{{ Auth::check() && Auth::user()->theme > 1 ? asset('img/logo_white.png') : asset('img/logo_black.png') }}" />
+                    <img src="{{ Auth::check() && Auth::user()->theme >= 1 ? asset('img/logo_white.png') : asset('img/logo_black.png') }}" />
                     <span class="title"><span class="font-light">viv</span></span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
