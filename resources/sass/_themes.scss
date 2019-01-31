@@ -1,5 +1,5 @@
 $themes: (
-    light: (
+    white: (
         text: #333,
         text-secondary: #555,
         disabled: #888,
@@ -9,6 +9,20 @@ $themes: (
         background-content-hover: #f0f0f0,
         highlight-color: rgba(0,0,0,.1),
         transparency: rgba(246,246,246,.8),
+        transparency-content: rgba(255,255,255,.9),
+        shadow: rgba(0,0,0,.3),
+        shadow-hover: rgba(0,0,0,.1)
+    ),
+    light: (
+        text: #000,
+        text-secondary: #333,
+        disabled: #666,
+        background-header: #d2d2d2,
+        background-content: #e6e6e6,
+        background-content-2: #ddd,
+        background-content-hover: #d6d6d6,
+        highlight-color: rgba(0,0,0,.1),
+        transparency: rgba(210,210,210,.8),
         transparency-content: rgba(255,255,255,.9),
         shadow: rgba(0,0,0,.3),
         shadow-hover: rgba(0,0,0,.1)

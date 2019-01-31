@@ -18380,150 +18380,333 @@ h1 {
   font-weight: 600;
 }
 
-.light {
+.white {
   background: #fff;
   color: #333;
 }
-.light .navbg {
+.white .navbg {
   background: #f6f6f6;
 }
-.light .jumbotron {
+.white .jumbotron {
   background-color: #f6f6f6 !important;
   color: #333;
 }
-.light .jumbotron h2 small a {
+.white .jumbotron h2 small a {
   color: #333;
 }
-.light .jumbotron h2 small .text {
+.white .jumbotron h2 small .text {
   color: #333;
 }
-.light .tile, .light .btn-vnext {
+.white .tile, .white .btn-vnext {
   background-color: #f6f6f6;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .navbar.bg-cw {
+  .white .navbar.bg-cw {
     background-color: rgba(246, 246, 246, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .navbar.bg-cw {
+  .white .navbar.bg-cw {
     background-color: #f6f6f6 !important;
   }
 }
-.light .navbar .navbar-brand {
+.white .navbar .navbar-brand {
   color: #333;
 }
-.light .navbar .nav-item .nav-link {
+.white .navbar .nav-item .nav-link {
   color: #333 !important;
+}
+.white .navbar .dropdown-menu {
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .white .navbar .dropdown-menu {
+    background-color: rgba(246, 246, 246, 0.8);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .white .navbar .dropdown-menu {
+    background-color: #f6f6f6;
+  }
+}
+.white .navbar .dropdown-menu .dropdown-divider {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+.white .navbar .dropdown-menu .dropdown-header {
+  color: #555;
+}
+.white .navbar .dropdown-menu .dropdown-item {
+  color: #333;
+}
+.white .navbar .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.white .navbar .dropdown-menu .dropdown-item:active {
+  color: #333;
+}
+.white .navbar .dropdown-menu .dropdown-item:focus {
+  color: #333;
+  background: rgba(246, 246, 246, 0.1);
+}
+.white .navbar .navbar-toggler {
+  background-color: rgba(246, 246, 246, 0.1);
+}
+.white .nav.nav-tabs .nav-item .nav-link {
+  color: #333;
+}
+.white .nav.nav-tabs .nav-item .nav-link.active {
+  color: #333;
+}
+.white .timeline .timeline-row:nth-child(odd) {
+  background-color: #fff;
+}
+.white .timeline .timeline-row:nth-child(even) {
+  background-color: #f8f8f8;
+}
+.white .timeline .timeline-row:hover {
+  background-color: #f0f0f0;
+}
+.white .timeline .timeline-row a.row .build {
+  color: #333;
+}
+.white .timeline .timeline-row .row {
+  color: #333;
+}
+.white .milestone {
+  border-color: #f6f6f6;
+}
+.white .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.white .release-notes h3 {
+  border-bottom-color: #f6f6f6;
+}
+.white .release-notes p {
+  border-left-color: #f6f6f6;
+}
+.white .flight-set {
+  border-color: #f6f6f6;
+}
+.white .flight-set:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.white .flight-set .flight p.build {
+  color: #333;
+}
+.white .list-group.list-group-changelogs .list-group-item.active {
+  color: #333;
+  background: #f0f0f0;
+}
+.white .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #f8f8f8;
+}
+.white .pagination .page-item .page-link {
+  color: #333;
+}
+.white .pagination .page-item:not(.disabled).active .page-link, .white .pagination .page-item:not(.disabled):hover .page-link {
+  color: #333;
+}
+.white .pagination .page-item.disabled .page-link {
+  color: #888;
+}
+.white .modal .modal-content {
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .white .modal .modal-content .modal-header {
+    background: rgba(246, 246, 246, 0.8);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .white .modal .modal-content .modal-header {
+    background: #f6f6f6;
+  }
+}
+.white .modal .modal-content .modal-header .close {
+  color: #333 !important;
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .white .modal .modal-content .modal-body {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .white .modal .modal-content .modal-body {
+    background: #fff;
+  }
+}
+.white .lifecycle-stats h5 {
+  color: #888;
+}
+.white .lifecycle-stats h4 {
+  color: #333;
+}
+.white .form-control {
+  background-color: #fff;
+  color: #333;
+  border-color: #f6f6f6;
+}
+.white .form-control:focus {
+  border-color: #0098df;
+}
+.white .buildfeed .bf {
+  color: #333;
+}
+.white .buildfeed .bf:hover {
+  color: #333;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.white .buildfeed .bf .bf-header {
+  background-color: #f6f6f6;
+}
+.white .buildfeed .bf .bf-body {
+  background-color: #f8f8f8;
+}
+
+.light {
+  background: #e6e6e6;
+  color: #000;
+}
+.light .navbg {
+  background: #d2d2d2;
+}
+.light .jumbotron {
+  background-color: #d2d2d2 !important;
+  color: #000;
+}
+.light .jumbotron h2 small a {
+  color: #000;
+}
+.light .jumbotron h2 small .text {
+  color: #000;
+}
+.light .tile, .light .btn-vnext {
+  background-color: #d2d2d2;
+}
+@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .light .navbar.bg-cw {
+    background-color: rgba(210, 210, 210, 0.8) !important;
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+  .light .navbar.bg-cw {
+    background-color: #d2d2d2 !important;
+  }
+}
+.light .navbar .navbar-brand {
+  color: #000;
+}
+.light .navbar .nav-item .nav-link {
+  color: #000 !important;
 }
 .light .navbar .dropdown-menu {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar .dropdown-menu {
-    background-color: rgba(246, 246, 246, 0.8);
+    background-color: rgba(210, 210, 210, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar .dropdown-menu {
-    background-color: #f6f6f6;
+    background-color: #d2d2d2;
   }
 }
 .light .navbar .dropdown-menu .dropdown-divider {
   border-top-color: rgba(0, 0, 0, 0.1);
 }
 .light .navbar .dropdown-menu .dropdown-header {
-  color: #555;
+  color: #333;
 }
 .light .navbar .dropdown-menu .dropdown-item {
-  color: #333;
+  color: #000;
 }
 .light .navbar .dropdown-menu .dropdown-item:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .light .navbar .dropdown-menu .dropdown-item:active {
-  color: #333;
+  color: #000;
 }
 .light .navbar .dropdown-menu .dropdown-item:focus {
-  color: #333;
-  background: rgba(246, 246, 246, 0.1);
+  color: #000;
+  background: rgba(210, 210, 210, 0.1);
 }
 .light .navbar .navbar-toggler {
-  background-color: rgba(246, 246, 246, 0.1);
+  background-color: rgba(210, 210, 210, 0.1);
 }
 .light .nav.nav-tabs .nav-item .nav-link {
-  color: #333;
+  color: #000;
 }
 .light .nav.nav-tabs .nav-item .nav-link.active {
-  color: #333;
+  color: #000;
 }
 .light .timeline .timeline-row:nth-child(odd) {
-  background-color: #fff;
+  background-color: #e6e6e6;
 }
 .light .timeline .timeline-row:nth-child(even) {
-  background-color: #f8f8f8;
+  background-color: #ddd;
 }
 .light .timeline .timeline-row:hover {
-  background-color: #f0f0f0;
+  background-color: #d6d6d6;
 }
 .light .timeline .timeline-row a.row .build {
-  color: #333;
+  color: #000;
 }
 .light .timeline .timeline-row .row {
-  color: #333;
+  color: #000;
 }
 .light .milestone {
-  border-color: #f6f6f6;
+  border-color: #d2d2d2;
 }
 .light .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .release-notes h3 {
-  border-bottom-color: #f6f6f6;
+  border-bottom-color: #d2d2d2;
 }
 .light .release-notes p {
-  border-left-color: #f6f6f6;
+  border-left-color: #d2d2d2;
 }
 .light .flight-set {
-  border-color: #f6f6f6;
+  border-color: #d2d2d2;
 }
 .light .flight-set:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .flight-set .flight p.build {
-  color: #333;
+  color: #000;
 }
 .light .list-group.list-group-changelogs .list-group-item.active {
-  color: #333;
-  background: #f0f0f0;
+  color: #000;
+  background: #d6d6d6;
 }
 .light .list-group.list-group-changelogs .list-group-item:hover {
-  background-color: #f8f8f8;
+  background-color: #ddd;
 }
 .light .pagination .page-item .page-link {
-  color: #333;
+  color: #000;
 }
 .light .pagination .page-item:not(.disabled).active .page-link, .light .pagination .page-item:not(.disabled):hover .page-link {
-  color: #333;
+  color: #000;
 }
 .light .pagination .page-item.disabled .page-link {
-  color: #888;
+  color: #666;
 }
 .light .modal .modal-content {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .modal .modal-content .modal-header {
-    background: rgba(246, 246, 246, 0.8);
+    background: rgba(210, 210, 210, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .modal .modal-content .modal-header {
-    background: #f6f6f6;
+    background: #d2d2d2;
   }
 }
 .light .modal .modal-content .modal-header .close {
-  color: #333 !important;
+  color: #000 !important;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .modal .modal-content .modal-body {
@@ -18532,35 +18715,35 @@ h1 {
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .modal .modal-content .modal-body {
-    background: #fff;
+    background: #e6e6e6;
   }
 }
 .light .lifecycle-stats h5 {
-  color: #888;
+  color: #666;
 }
 .light .lifecycle-stats h4 {
-  color: #333;
+  color: #000;
 }
 .light .form-control {
-  background-color: #fff;
-  color: #333;
-  border-color: #f6f6f6;
+  background-color: #e6e6e6;
+  color: #000;
+  border-color: #d2d2d2;
 }
 .light .form-control:focus {
   border-color: #0098df;
 }
 .light .buildfeed .bf {
-  color: #333;
+  color: #000;
 }
 .light .buildfeed .bf:hover {
-  color: #333;
+  color: #000;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .buildfeed .bf .bf-header {
-  background-color: #f6f6f6;
+  background-color: #d2d2d2;
 }
 .light .buildfeed .bf .bf-body {
-  background-color: #f8f8f8;
+  background-color: #ddd;
 }
 
 .dark {

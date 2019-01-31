@@ -1,3 +1,18 @@
+@php
+    if (!Auth::check() || Auth::user()->theme == 0) {
+        $theme = 'white';
+        $header = 246;
+    } else if (Auth::user()->theme == 1) {
+        $theme = 'light';
+        $header = 111;
+    } else if (Auth::user()->theme == 2) {
+        $theme = 'dark';
+        $header = 47;
+    } else if (Auth::user()->theme == 3) {
+        $theme = 'black';
+        $header = 21;
+    }
+@endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -19,7 +34,7 @@
         <script>
             if ( typeof Windows !== 'undefined' ) {
                 let titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
-                let tbc = {{ Auth::check() && Auth::user()->theme >= 1 ? Auth::user()->theme == 1 ? 47 : 21 : 246 }};
+                let tbc = {{ $header }};
 
                 titleBar.backgroundColor = {a: 255, r: tbc, g: tbc, b: tbc};
                 titleBar.inactiveBackgroundColor = {a: 255, r: tbc, g: tbc, b: tbc};
@@ -30,11 +45,11 @@
             }
         </script>
     </head>
-    <body class="{{ Auth::check() && Auth::user()->theme >= 1 ? Auth::user()->theme == 1 ? 'dark' : 'black' : 'light' }}">
+    <body class="{{ $theme }}">
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
-                    <img src="{{ Auth::check() && Auth::user()->theme >= 1 ? asset('img/logo_white.png') : asset('img/logo_black.png') }}" />
+                    <img src="{{ Auth::check() && Auth::user()->theme >= 2 ? asset('img/logo_white.png') : asset('img/logo_black.png') }}" />
                     <span class="title"><span class="font-light">viv</span></span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
