@@ -18385,10 +18385,10 @@ h1 {
   color: #333;
 }
 .light .navbg {
-  background: #eee;
+  background: #f6f6f6;
 }
 .light .jumbotron {
-  background-color: #eee !important;
+  background-color: #f6f6f6 !important;
   color: #333;
 }
 .light .jumbotron h2 small a {
@@ -18398,16 +18398,16 @@ h1 {
   color: #333;
 }
 .light .tile, .light .btn-vnext {
-  background-color: #eee;
+  background-color: #f6f6f6;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar.bg-cw {
-    background-color: rgba(235, 235, 235, 0.8) !important;
+    background-color: rgba(246, 246, 246, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar.bg-cw {
-    background-color: #eee !important;
+    background-color: #f6f6f6 !important;
   }
 }
 .light .navbar .navbar-brand {
@@ -18421,12 +18421,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar .dropdown-menu {
-    background-color: rgba(235, 235, 235, 0.8);
+    background-color: rgba(246, 246, 246, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .navbar .dropdown-menu {
-    background-color: #eee;
+    background-color: #f6f6f6;
   }
 }
 .light .navbar .dropdown-menu .dropdown-divider {
@@ -18446,10 +18446,10 @@ h1 {
 }
 .light .navbar .dropdown-menu .dropdown-item:focus {
   color: #333;
-  background: rgba(235, 235, 235, 0.1);
+  background: rgba(246, 246, 246, 0.1);
 }
 .light .navbar .navbar-toggler {
-  background-color: rgba(235, 235, 235, 0.1);
+  background-color: rgba(246, 246, 246, 0.1);
 }
 .light .nav.nav-tabs .nav-item .nav-link {
   color: #333;
@@ -18464,7 +18464,7 @@ h1 {
   background-color: #f8f8f8;
 }
 .light .timeline .timeline-row:hover {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 .light .timeline .timeline-row a.row .build {
   color: #333;
@@ -18473,19 +18473,19 @@ h1 {
   color: #333;
 }
 .light .milestone {
-  border-color: #eee;
+  border-color: #f6f6f6;
 }
 .light .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .release-notes h3 {
-  border-bottom-color: #eee;
+  border-bottom-color: #f6f6f6;
 }
 .light .release-notes p {
-  border-left-color: #eee;
+  border-left-color: #f6f6f6;
 }
 .light .flight-set {
-  border-color: #eee;
+  border-color: #f6f6f6;
 }
 .light .flight-set:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -18495,7 +18495,7 @@ h1 {
 }
 .light .list-group.list-group-changelogs .list-group-item.active {
   color: #333;
-  background: #eee;
+  background: #f0f0f0;
 }
 .light .list-group.list-group-changelogs .list-group-item:hover {
   background-color: #f8f8f8;
@@ -18514,12 +18514,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .modal .modal-content .modal-header {
-    background: rgba(235, 235, 235, 0.8);
+    background: rgba(246, 246, 246, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .light .modal .modal-content .modal-header {
-    background: #eee;
+    background: #f6f6f6;
   }
 }
 .light .modal .modal-content .modal-header .close {
@@ -18544,7 +18544,7 @@ h1 {
 .light .form-control {
   background-color: #fff;
   color: #333;
-  border-color: #eee;
+  border-color: #f6f6f6;
 }
 .light .form-control:focus {
   border-color: #0098df;
@@ -18557,21 +18557,21 @@ h1 {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .buildfeed .bf .bf-header {
-  background-color: #eee;
+  background-color: #f6f6f6;
 }
 .light .buildfeed .bf .bf-body {
   background-color: #f8f8f8;
 }
 
 .dark {
-  background: #181818;
+  background: #262626;
   color: #fff;
 }
 .dark .navbg {
-  background: #282828;
+  background: #2f2f2f;
 }
 .dark .jumbotron {
-  background-color: #282828 !important;
+  background-color: #2f2f2f !important;
   color: #fff;
 }
 .dark .jumbotron h2 small a {
@@ -18581,16 +18581,16 @@ h1 {
   color: #fff;
 }
 .dark .tile, .dark .btn-vnext {
-  background-color: #282828;
+  background-color: #2f2f2f;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
-    background-color: rgba(40, 40, 40, 0.8) !important;
+    background-color: rgba(47, 47, 47, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
-    background-color: #282828 !important;
+    background-color: #2f2f2f !important;
   }
 }
 .dark .navbar .navbar-brand {
@@ -18604,12 +18604,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar .dropdown-menu {
-    background-color: rgba(40, 40, 40, 0.8);
+    background-color: rgba(47, 47, 47, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar .dropdown-menu {
-    background-color: #282828;
+    background-color: #2f2f2f;
   }
 }
 .dark .navbar .dropdown-menu .dropdown-divider {
@@ -18629,10 +18629,10 @@ h1 {
 }
 .dark .navbar .dropdown-menu .dropdown-item:focus {
   color: #fff;
-  background: rgba(40, 40, 40, 0.1);
+  background: rgba(47, 47, 47, 0.1);
 }
 .dark .navbar .navbar-toggler {
-  background-color: rgba(40, 40, 40, 0.1);
+  background-color: rgba(47, 47, 47, 0.1);
 }
 .dark .nav.nav-tabs .nav-item .nav-link {
   color: #fff;
@@ -18641,13 +18641,13 @@ h1 {
   color: #fff;
 }
 .dark .timeline .timeline-row:nth-child(odd) {
-  background-color: #181818;
+  background-color: #262626;
 }
 .dark .timeline .timeline-row:nth-child(even) {
-  background-color: #222;
+  background-color: #2f2f2f;
 }
 .dark .timeline .timeline-row:hover {
-  background-color: #282828;
+  background-color: #353535;
 }
 .dark .timeline .timeline-row a.row .build {
   color: #fff;
@@ -18656,19 +18656,19 @@ h1 {
   color: #fff;
 }
 .dark .milestone {
-  border-color: #282828;
+  border-color: #2f2f2f;
 }
 .dark .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .dark .release-notes h3 {
-  border-bottom-color: #282828;
+  border-bottom-color: #2f2f2f;
 }
 .dark .release-notes p {
-  border-left-color: #282828;
+  border-left-color: #2f2f2f;
 }
 .dark .flight-set {
-  border-color: #282828;
+  border-color: #2f2f2f;
 }
 .dark .flight-set:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
@@ -18678,10 +18678,10 @@ h1 {
 }
 .dark .list-group.list-group-changelogs .list-group-item.active {
   color: #fff;
-  background: #282828;
+  background: #353535;
 }
 .dark .list-group.list-group-changelogs .list-group-item:hover {
-  background-color: #222;
+  background-color: #2f2f2f;
 }
 .dark .pagination .page-item .page-link {
   color: #fff;
@@ -18697,12 +18697,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .modal .modal-content .modal-header {
-    background: rgba(40, 40, 40, 0.8);
+    background: rgba(47, 47, 47, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .modal .modal-content .modal-header {
-    background: #282828;
+    background: #2f2f2f;
   }
 }
 .dark .modal .modal-content .modal-header .close {
@@ -18715,7 +18715,7 @@ h1 {
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .modal .modal-content .modal-body {
-    background: #181818;
+    background: #262626;
   }
 }
 .dark .lifecycle-stats h5 {
@@ -18725,9 +18725,9 @@ h1 {
   color: #fff;
 }
 .dark .form-control {
-  background-color: #181818;
+  background-color: #262626;
   color: #fff;
-  border-color: #282828;
+  border-color: #2f2f2f;
 }
 .dark .form-control:focus {
   border-color: #0098df;
@@ -18740,10 +18740,10 @@ h1 {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .dark .buildfeed .bf .bf-header {
-  background-color: #282828;
+  background-color: #2f2f2f;
 }
 .dark .buildfeed .bf .bf-body {
-  background-color: #222;
+  background-color: #2f2f2f;
 }
 
 .black {
@@ -18768,7 +18768,7 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .black .navbar.bg-cw {
-    background-color: rgba(20, 20, 20, 0.8) !important;
+    background-color: rgba(21, 21, 21, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18787,7 +18787,7 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .black .navbar .dropdown-menu {
-    background-color: rgba(20, 20, 20, 0.8);
+    background-color: rgba(21, 21, 21, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
@@ -18812,10 +18812,10 @@ h1 {
 }
 .black .navbar .dropdown-menu .dropdown-item:focus {
   color: #fff;
-  background: rgba(20, 20, 20, 0.1);
+  background: rgba(21, 21, 21, 0.1);
 }
 .black .navbar .navbar-toggler {
-  background-color: rgba(20, 20, 20, 0.1);
+  background-color: rgba(21, 21, 21, 0.1);
 }
 .black .nav.nav-tabs .nav-item .nav-link {
   color: #fff;
@@ -18880,7 +18880,7 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .black .modal .modal-content .modal-header {
-    background: rgba(20, 20, 20, 0.8);
+    background: rgba(21, 21, 21, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {

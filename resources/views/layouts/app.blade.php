@@ -19,7 +19,7 @@
         <script>
             if ( typeof Windows !== 'undefined' ) {
                 let titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
-                let tbc = {{ Auth::check() && Auth::user()->theme <= 1 ? 235 : 40 }}
+                let tbc = {{ Auth::check() && Auth::user()->theme >= 1 ? Auth::user()->theme == 1 ? 47 : 21 : 246 }};
 
                 titleBar.backgroundColor = {a: 255, r: tbc, g: tbc, b: tbc};
                 titleBar.inactiveBackgroundColor = {a: 255, r: tbc, g: tbc, b: tbc};
