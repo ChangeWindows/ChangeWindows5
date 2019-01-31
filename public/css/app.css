@@ -17535,7 +17535,7 @@ readers do not read off random characters that represent icons */
   box-shadow: none;
 }
 
-.btn.btn-vnext, .light .btn.btn-vnext {
+.btn.btn-vnext, .light .btn.btn-vnext, .white .btn.btn-vnext {
   background-color: #e52262;
   font-weight: 700;
   text-transform: uppercase;
@@ -17543,7 +17543,7 @@ readers do not read off random characters that represent icons */
   color: #fff;
   transition: all 0.3s ease-in;
 }
-.btn.btn-vnext:hover, .light .btn.btn-vnext:hover {
+.btn.btn-vnext:hover, .light .btn.btn-vnext:hover, .white .btn.btn-vnext:hover {
   -webkit-transform: translate(0, -1px);
           transform: translate(0, -1px);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
@@ -17936,7 +17936,7 @@ h1 {
   margin-right: 3px;
 }
 
-.tile, .light .tile {
+.tile, .light .tile, .white .tile {
   padding: 8px;
   color: #fff;
   line-height: 1;
@@ -17944,59 +17944,59 @@ h1 {
   display: block;
   transition: all 0.3s ease-in;
 }
-.tile:hover, .light .tile:hover {
+.tile:hover, .light .tile:hover, .white .tile:hover {
   -webkit-transform: translate(0, -1px);
           transform: translate(0, -1px);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
   text-decoration: none;
 }
-.tile .ring, .light .tile .ring {
+.tile .ring, .light .tile .ring, .white .tile .ring {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 15px;
   display: block;
 }
-.tile .build, .light .tile .build {
+.tile .build, .light .tile .build, .white .tile .build {
   font-weight: 600;
   font-size: 24px;
   display: block;
 }
-.tile .date, .light .tile .date {
+.tile .date, .light .tile .date, .white .tile .date {
   font-weight: 600;
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 2px;
   display: block;
 }
-.tile.vnext, .tile.leak, .light .tile.vnext, .light .tile.leak {
+.tile.vnext, .tile.leak, .light .tile.vnext, .light .tile.leak, .white .tile.vnext, .white .tile.leak {
   background-color: #e52262;
 }
-.tile.skip, .light .tile.skip {
+.tile.skip, .light .tile.skip, .white .tile.skip {
   background-color: #e74018;
 }
-.tile.fast, .light .tile.fast {
+.tile.fast, .light .tile.fast, .white .tile.fast {
   background-color: #fb8009;
 }
-.tile.slow, .light .tile.slow {
+.tile.slow, .light .tile.slow, .white .tile.slow {
   background-color: #ffc000;
 }
-.tile.preview, .light .tile.preview {
+.tile.preview, .light .tile.preview, .white .tile.preview {
   background-color: #c0d700;
 }
-.tile.release, .light .tile.release {
+.tile.release, .light .tile.release, .white .tile.release {
   background-color: #97c800;
 }
-.tile.targeted, .light .tile.targeted {
+.tile.targeted, .light .tile.targeted, .white .tile.targeted {
   background-color: #46c429;
 }
-.tile.broad, .light .tile.broad {
+.tile.broad, .light .tile.broad, .white .tile.broad {
   background-color: #10b08f;
 }
-.tile.ltsc, .light .tile.ltsc {
+.tile.ltsc, .light .tile.ltsc, .white .tile.ltsc {
   background-color: #0098df;
 }
-.tile.none, .light .tile.none {
+.tile.none, .light .tile.none, .white .tile.none {
   background-color: #0098df;
 }
 
