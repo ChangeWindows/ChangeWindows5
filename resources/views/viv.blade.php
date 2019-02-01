@@ -18,9 +18,9 @@
         <h2>What's new</h2>
         <p>In the weeks ahead, ChangeWindows will regularly change, below you can keep track of these changes as we won't be annoucing all of them on our blog or other outlets.</p>
         <section class="release-notes">
-            <h3>5.0-alpha.3 <small>January/February 2019</small></h3>
+            <h3>5.0-alpha.3 <small>1 February 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
-            <p>The Rings page is now available for Insiders <span class="badge badge-info">Insiders</span></p>
+            <p>The Rings page is now available</p>
             <p>My Windows is now available in the timeline sidebar when visiting ChangeWindows with Edge or our app</p>
             <p>The vNext changelog are back and have been added to the timeline sidebar</p>
             <p>The new Light and Black themes have been added <span class="badge badge-info">Insiders</span></p>
@@ -94,7 +94,7 @@
     </div>
     <div class="col-12 col-md-3">
         <h4>About</h4>
-        <p>ChangeWindows 5.0-alpha.2</p>
+        <p>ChangeWindows 5.0-alpha.3</p>
 
         <h4>Patrons</h4>
         <a href="https://www.patreon.com/bePatron?c=1028298" class="btn btn-primary btn-patreon"><i class="fab fa-fw fa-patreon"></i> Become a Patron</a>

@@ -4,7 +4,7 @@
         $header = 246;
     } else if (Auth::user()->theme == 1) {
         $theme = 'light';
-        $header = 111;
+        $header = 210;
     } else if (Auth::user()->theme == 2) {
         $theme = 'dark';
         $header = 47;
@@ -141,7 +141,7 @@
         </div>
         <footer class="text-center">
             <hr />
-            <span class="font-uppercase font-light">Change</span><span class="font-uppercase font-bold">Windows</span> <span class="font-light">viv</span> 5.0-alpha.2 &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
+            <span class="font-uppercase font-light">Change</span><span class="font-uppercase font-bold">Windows</span> <span class="font-light">viv</span> 5.0-alpha.3 &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
         </footer>
         @yield('modals')
 		<!-- Matomo -->
