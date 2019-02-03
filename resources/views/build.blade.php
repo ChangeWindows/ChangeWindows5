@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') Build {{ $meta->build }} @endsection
 
 @section('hero')
 <div class="jumbotron tabs build-header">

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') Milestones @endsection
 
 @section('toolset')
 <a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fal fa-fw fa-plus"></i> New milestone</a>

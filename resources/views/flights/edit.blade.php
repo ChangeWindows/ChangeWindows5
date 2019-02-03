@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') {{ $flight->build }}.{{$flight->dleta }} &middot; Flights @endsection
 
 @section('hero')
 <div class="jumbotron">

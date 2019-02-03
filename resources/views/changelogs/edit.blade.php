@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') Edit &middot; {{ $changelog->build }}.{{ $changelog->delta }} @endsection
 
 @section('hero')
 <div class="jumbotron">

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') Timeline @endsection
 
 @php
     $previous = null;

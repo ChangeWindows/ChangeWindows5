@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') Reset password @endsection
 
 @section('hero')
 <div class="jumbotron">

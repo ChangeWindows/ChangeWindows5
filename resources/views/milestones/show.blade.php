@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') {{ $milestone->codename }} &middot; Milestone @endsection
 
 @section('toolset')
 <a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit milestone</a>

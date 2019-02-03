@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') {{ $build->build }}.{{ $build->revision}} &middot; BuildFeed @endsection
 
 @section('hero')
 <div class="jumbotron tabs">

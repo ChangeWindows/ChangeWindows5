@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') {{ $milestone->codename }} &middot; Milestones @endsection
 
 @section('hero')
 <div class="jumbotron">

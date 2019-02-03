@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') Flights @endsection
 
 @php
     $previous = null;

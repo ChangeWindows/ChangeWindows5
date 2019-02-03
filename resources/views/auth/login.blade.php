@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') Login @endsection
 
 @section('hero')
 <div class="jumbotron">

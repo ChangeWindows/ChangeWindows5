@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title') BuildFeed @endsection
 
 @section('hero')
 <div class="jumbotron tabs">
