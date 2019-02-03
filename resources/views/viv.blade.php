@@ -14,13 +14,14 @@
 <div class="row">
     <div class="col-12 col-md-9">
         <p class="lead">With ChangeWindows, we want to provide you with a full and as detailed as possible changelog about everything new in Windows.</p>
-        <p>With <i>viv</i> we're going to do a few things differently. While ChangeWindows will receive some visual changes, our primary goal is to making our website more accessible, easier to use and easier to navigate. Of course, what you're seeing now is only a <b>very early</b> preview of <i>viv</i> and lots of stuff is still missing, so if you don't want that, feel free to return to <a href="https://changewindows.org">ChangeWindows 4.12</a>. Everything you're looking for is probably there.</p>
+        <p>With <i>viv</i> we're going to do a few things differently. While ChangeWindows will receive some visual changes, our primary goal is to making our website more accessible, easier to use and easier to navigate. Of course, what you're seeing now is only a <b>very early</b> preview of <i>viv</i> and lots of stuff is still missing, so if you don't want that, feel free to return to <a href="https://changewindows.org">ChangeWindows 4.13</a>. Everything you're looking for is probably there.</p>
 
         <h2>What's new</h2>
         <p>In the weeks ahead, ChangeWindows will regularly change, below you can keep track of these changes as we won't be annoucing all of them on our blog or other outlets.</p>
         <section class="release-notes">
             <h3>5.0-alpha.4 <small>February 2019</small></h3>
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+            <p>You can now select the platform you want to show on the timeline</p>
             <p>URLs now use the name of platforms instead of an id</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>We now show page-specific titles in your tabs</p>
