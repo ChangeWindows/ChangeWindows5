@@ -52,7 +52,7 @@ class RingsController extends Controller
 
     public function platform(Request $request, $platform) {
         $request->user()->authorizeRoles(['Admin', 'Insider']);
-        $platform_id = getPlatformIdFromUrl($platform);
+        $platform_id = getPlatformIdByClass($platform);
 
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 

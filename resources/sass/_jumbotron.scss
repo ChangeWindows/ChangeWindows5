@@ -3,6 +3,14 @@
     padding: 10px 20px 20px;
     margin-bottom: 0;
 
+    &.highlights {
+        &.tabs {
+            .nav {
+                margin-top: 10px;
+            }
+        }
+    }
+
     &.tabs {
         padding-bottom: 10px;
     }

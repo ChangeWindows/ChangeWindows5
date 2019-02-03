@@ -10,7 +10,26 @@ use Parsedown;
 class TimelineController extends Controller
 {
     public function index(Request $request) {
-        $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(50)->onEachSide(1);
+        $platform_id = getPlatformIdByClass($request->platform);
+        $ring_id = getRingIdByClass($request->ring);
+
+        $where = array();
+
+        if ($ring_id != null) {
+            array_push($where, ['ring', '=', $ring_id]);
+        }
+
+        if ($platform_id != null) {
+            array_push($where, ['platform', '=', $platform_id]);
+        }
+        
+        $releases = Release::where($where)
+                            ->orderBy('date', 'desc')
+                            ->orderBy('build', 'desc')
+                            ->orderBy('delta', 'desc')
+                            ->orderBy('ring', 'desc')
+                            ->paginate(50)
+                            ->onEachSide(1);
 
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
@@ -73,7 +92,7 @@ class TimelineController extends Controller
             $ua = false;
         }
 
-        return view('timeline', compact('releases', 'flights', 'timeline', 'ua'));
+        return view('timeline', compact('releases', 'flights', 'timeline', 'ua', 'platform_id', 'ring_id'));
     }
 
     public function store(Request $request) {
@@ -102,7 +121,7 @@ class TimelineController extends Controller
 
     public function show($build, $platform = null) {
         $cur_build = $build;
-        $platform_id = $platform === null ? 1 : getPlatformIdFromUrl($platform);
+        $platform_id = $platform === null ? 1 : getPlatformIdByClass($platform);
 
         if ($platform) {
             $releases = Release::where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();

@@ -17962,6 +17962,9 @@ readers do not read off random characters that represent icons */
   padding: 10px 20px 20px;
   margin-bottom: 0;
 }
+.jumbotron.highlights.tabs .nav {
+  margin-top: 10px;
+}
 .jumbotron.tabs {
   padding-bottom: 10px;
 }

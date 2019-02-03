@@ -59,7 +59,7 @@ class MilestoneController extends Controller
      */
     public function platform(Request $request, $id, $platform) {
         $timeline = [];
-        $platform_id = getPlatformIdFromUrl($platform);
+        $platform_id = getPlatformIdByClass($platform);
 
         $milestone = Milestone::findOrFail($id);
         $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();

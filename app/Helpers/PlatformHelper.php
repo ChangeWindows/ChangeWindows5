@@ -46,7 +46,7 @@ function getPlatformClass($id) {
     }
 }
 
-function getPlatformIdFromUrl($id) {
+function getPlatformIdByClass($id) {
     switch ($id) {
         case 'pc':           return 1;
         case 'mobile':       return 2;
