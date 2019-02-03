@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') {{ $middot->codename }} &middot; Milestones @endsection
+@section('title') {{ $milestone->codename }} &middot; Milestones @endsection
 
 @section('toolset')
 <a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit milestone</a>
@@ -7,9 +7,10 @@
 @endsection
 
 @section('hero')
-<div class="jumbotron tabs">
+<div class="jumbotron tabs build-header">
     <div class="container">
-        <h2><i class="fab fa-windows"></i> {{ $milestone->osname }} {{ $milestone->name }}<small>version {{ $milestone->version }}</small></h2>
+        <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
+        <h6>{{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
         <p class="lead">{{ $milestone->description }}</p>
         <ul class="nav nav-tabs">
             <li class="nav-item">
