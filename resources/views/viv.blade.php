@@ -20,6 +20,8 @@
         <p>In the weeks ahead, ChangeWindows will regularly change, below you can keep track of these changes as we won't be annoucing all of them on our blog or other outlets.</p>
         <section class="release-notes">
             <h3>5.0-alpha.4 <small>February 2019</small></h3>
+            <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+            <p>URLs now use the name of platforms instead of an id</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>We now show page-specific titles in your tabs</p>
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
@@ -28,7 +30,6 @@
             <p>We fixed the spelling mistake in the BuildFeed promotional highlight image</p>
             <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
             <p>Patrons are currently not listed on About</p>
-            <p>ChangeWindows 4 URLs are not compatible with viv</p>
         </section>
         <section class="release-notes">
             <h3>5.0-alpha.3 <small>1 February 2019</small></h3>

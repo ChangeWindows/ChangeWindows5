@@ -61,13 +61,13 @@ class TimelineController extends Controller
             $ua['build'] = substr($edge_agent, strrpos($edge_agent, '.') + 1);
             
             if ( strpos( $user_agent, 'Xbox' ) ) {
-                $ua['platform'] = '3';
+                $ua['platform'] = 'xbox';
             } else if ( strpos( $user_agent, 'Windows Phone' ) ) {
-                $ua['platform'] = '2';
+                $ua['platform'] = 'mobile';
             } else if ( strpos( $user_agent, 'Windows IoT' ) ) {
-                $ua['platform'] = '6';
+                $ua['platform'] = 'iot';
             } else {
-                $ua['platform'] = '1';
+                $ua['platform'] = 'pc';
             }
         } else {
             $ua = false;
