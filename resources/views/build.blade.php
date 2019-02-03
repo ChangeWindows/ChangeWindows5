@@ -9,7 +9,7 @@
         <ul class="nav nav-tabs">
             @foreach ($platforms as $platform)
                 <li class="nav-item">
-                    <a class="nav-link {{ $platform->platform == $cur_platform ? 'active' : '' }}" href="{{ route('showRelease', ['build' => $cur_build, 'platform' => $platform->platform]) }}">
+                    <a class="nav-link {{ $platform->platform == $meta->platform ? 'active' : '' }}" href="{{ route('showRelease', ['build' => $cur_build, 'platform' => getPlatformClass($platform->platform)]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 </li>

@@ -102,10 +102,10 @@ class TimelineController extends Controller
 
     public function show($build, $platform = null) {
         $cur_build = $build;
-        $cur_platform = $platform === null ? '1' : $platform;
+        $platform_id = $platform === null ? 1 : getPlatformIdFromUrl($platform);
 
         if ($platform) {
-            $releases = Release::where('build', $cur_build)->where('platform', $platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
+            $releases = Release::where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
         } else {
             $releases = Release::where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
         }
@@ -114,9 +114,9 @@ class TimelineController extends Controller
 
         $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
 
-        $changelogs = Changelog::where('build', $cur_build)->where('platform', $cur_platform)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get()->keyBy('delta');
+        $changelogs = Changelog::where('build', $cur_build)->where('platform', $platform_id)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get()->keyBy('delta');
 
-        $meta = Release::where('build', $cur_build)->where('platform', $cur_platform)->first();
+        $meta = Release::where('build', $cur_build)->where('platform', $platform_id)->first();
 
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
@@ -131,6 +131,6 @@ class TimelineController extends Controller
 
         $parsedown = new Parsedown();
 
-        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'cur_platform', 'parsedown', 'milestone'));
+        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'parsedown', 'milestone'));
     }
 }

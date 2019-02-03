@@ -50,8 +50,9 @@ class RingsController extends Controller
         return view('rings.index', compact('flights'));
     }
 
-    public function platform(Request $request, $platform_id) {
+    public function platform(Request $request, $platform) {
         $request->user()->authorizeRoles(['Admin', 'Insider']);
+        $platform_id = getPlatformIdFromUrl($platform);
 
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 

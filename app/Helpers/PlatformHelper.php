@@ -45,3 +45,18 @@ function getPlatformClass($id) {
         default:    return;
     }
 }
+
+function getPlatformIdFromUrl($id) {
+    switch ($id) {
+        case 'pc':           return 1;
+        case 'mobile':       return 2;
+        case 'xbox':         return 3;
+        case 'server':       return 4;
+        case 'holographic':  return 5;
+        case 'iot':          return 6;
+        case 'team':         return 7;
+        case 'iso':          return 8;
+        case 'sdk':          return 9;
+        default:    return;
+    }
+}

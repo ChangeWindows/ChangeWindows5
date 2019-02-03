@@ -46,7 +46,7 @@
                     @foreach ($deltas as $delta => $platforms)
                         @foreach ($platforms as $platform => $rings)
                             <div class="timeline-row">
-                                <a class="row" href="{{ route('showRelease', ['build' => $build, 'platform' => $platform]) }}">
+                                <a class="row" href="{{ route('showRelease', ['build' => $build, 'platform' => getPlatformClass($platform)]) }}">
                                     <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
                                     <div class="col-6 col-md-8 ring">
                                         @foreach ($rings as $ring)
