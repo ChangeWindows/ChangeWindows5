@@ -1,15 +1,24 @@
 @extends('layouts.app')
 
+@section('hero')
+<div class="jumbotron">
+    <div class="container">
+        <h2>Login</h2>
+    </div>
+</div>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <h2>{{ __('Login') }}</h2>
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('login') }}" class="login-form">
                 @csrf
 
-                <label for="email">{{ __('E-Mail Address') }}</label>
-                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                <img class="login-logo" src="{{ asset('img/logo_blue.png') }}" />
+
+                <label for="email">E-mail address</label>
+                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email address" required autofocus>
 
                 @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
@@ -17,8 +26,8 @@
                     </span>
                 @endif
 
-                <label for="password">{{ __('Password') }}</label>
-                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                <label for="password">Password</label>
+                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
 
                 @if ($errors->has('password'))
                     <span class="invalid-feedback" role="alert">
@@ -26,20 +35,19 @@
                     </span>
                 @endif
                 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <label class="custom-control-label" for="remember">Remember me</label>
                 </div>
                 
                 <button type="submit" class="btn btn-primary">
-                    <i class="fal fa-fw fa-sign-in"></i> {{ __('Login') }}
+                    <i class="fal fa-fw fa-sign-in"></i> Login
                 </button>
-
+                <a class="btn btn-light" href="{{ route('register') }}">
+                    Register
+                </a>
                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
+                    Forgotten password
                 </a>
             </form>
         </div>

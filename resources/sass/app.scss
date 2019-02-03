@@ -132,7 +132,26 @@
     height: 40px;
 }
 
-  // Footer
-  footer {
-      padding-bottom: 20px;
-  }
+// Footer
+footer {
+    padding-bottom: 20px;
+}
+
+// Login
+.login-form {
+    label {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .login-logo {
+        display: block;
+        width: 64px;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .btn {
+        margin-top: 15px;
+    }
+}
