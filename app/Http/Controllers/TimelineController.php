@@ -10,6 +10,9 @@ use Parsedown;
 class TimelineController extends Controller
 {
     public function index(Request $request) {
+        $platform_id = getPlatformIdByClass($request->platform);
+        $ring_id = getRingIdByClass($request->ring);
+
         $releases = Release::when(request('ring', false), function ($query, $ring_id) {
                                 return $query->where('ring', getRingIdByClass($ring_id));
                             })->when(request('platform', false), function ($query, $platform_id) {

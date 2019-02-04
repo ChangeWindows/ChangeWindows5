@@ -23,8 +23,11 @@
             <h4><i class="fal fa-fw fa-plus"></i> New</h4>
             <p>You can now select the platform you want to show on the timeline</p>
             <p>URLs now use the name of platforms instead of an id</p>
+            <p>You can now click on some details on BuildFeed detail pages to search for them</p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>We now show page-specific titles in your tabs</p>
+            <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
+            <p>The White-theme has a slightly darker header</p>
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
             <p>Removes support for non-Windows 10 releases</p>
             <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
