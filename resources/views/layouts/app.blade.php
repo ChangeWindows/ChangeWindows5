@@ -55,25 +55,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item {{ Request::is('/') || Request::is('build/*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('timeline') }}"><i class="fal fa-fw fa-calendar-alt"></i> Timeline</a>
+                            <a class="nav-link" href="{{ route('timeline') }}">Timeline</a>
                         </li>
                         <li class="nav-item {{ Request::is('milestones*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('milestones') }}"><i class="fal fa-fw fa-map-signs"></i> Milestones</a>
+                            <a class="nav-link" href="{{ route('milestones') }}">Milestones</a>
                         </li>
                         <li class="nav-item {{ Request::is('rings*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('rings') }}"><i class="fal fa-fw fa-bullseye"></i> Rings</a>
+                            <a class="nav-link" href="{{ route('rings') }}">Rings</a>
                         </li>
                         <li class="nav-item d-none d-sm-inline-block">
-                            <a class="nav-link" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                            <a class="nav-link" href="https://medium.com/changewindows" target="_blank">Blog</a>
                         </li>
-                        <li class="nav-item d-none d-sm-inline-block {{ Request::is('viv') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
+                        <li class="nav-item d-none d-sm-inline-block {{ Request::is('viv*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('viv') }}">About</a>
                         </li>
                         <li class="nav-item dropdown {{ Request::is('buildfeed*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fal fa-fw fa-ellipsis-h"></i> More
+                                More <i class="fal fa-fw fa-angle-down"></i>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
                                 <div class="dropdown-divider d-block d-sm-none"></div>
                                 <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
