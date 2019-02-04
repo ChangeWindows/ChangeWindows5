@@ -13,18 +13,11 @@ class TimelineController extends Controller
         $platform_id = getPlatformIdByClass($request->platform);
         $ring_id = getRingIdByClass($request->ring);
 
-        $where = array();
-
-        if ($ring_id != null) {
-            array_push($where, ['ring', '=', $ring_id]);
-        }
-
-        if ($platform_id != null) {
-            array_push($where, ['platform', '=', $platform_id]);
-        }
-        
-        $releases = Release::where($where)
-                            ->orderBy('date', 'desc')
+        $releases = Release::when(request('ring', false), function ($query, $ring_id) {
+                                return $query->where('ring', getRingIdByClass($ring_id));
+                            })->when(request('platform', false), function ($query, $platform_id) {
+                                return $query->where('platform', getPlatformIdByClass($platform_id));
+                            })->orderBy('date', 'desc')
                             ->orderBy('build', 'desc')
                             ->orderBy('delta', 'desc')
                             ->orderBy('ring', 'desc')

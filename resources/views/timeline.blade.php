@@ -36,7 +36,7 @@
             <li class="nav-item"><a class="nav-link {{ $platform_id == '1' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'pc']) }}">PC</a></li>
             <li class="nav-item"><a class="nav-link {{ $platform_id == '3' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'xbox']) }}">Xbox</a></li>
             <li class="nav-item"><a class="nav-link {{ $platform_id == '6' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iot']) }}">IoT</a></li>
-            <li class="nav-item"><a class="nav-link {{ $platform_id == 'ser4ver' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'server']) }}">Server</a></li>
+            <li class="nav-item"><a class="nav-link {{ $platform_id == '4' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'server']) }}">Server</a></li>
             <li class="nav-item"><a class="nav-link {{ $platform_id == '5' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'holographic']) }}">Holographic</a></li>
             <li class="nav-item"><a class="nav-link {{ $platform_id == '7' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'team']) }}">Team</a></li>
             <li class="nav-item"><a class="nav-link {{ $platform_id == '2' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'mobile']) }}">Mobile</a></li>
