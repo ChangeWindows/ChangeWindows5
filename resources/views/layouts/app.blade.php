@@ -1,7 +1,7 @@
 @php
     if (!Auth::check() || Auth::user()->theme == 0) {
         $theme = 'white';
-        $header = 246;
+        $header = 234;
     } else if (Auth::user()->theme == 1) {
         $theme = 'light';
         $header = 210;

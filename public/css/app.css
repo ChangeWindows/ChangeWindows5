@@ -18696,10 +18696,10 @@ h1 {
   color: #333;
 }
 .white .navbg {
-  background: #f6f6f6;
+  background: #ededed;
 }
 .white .jumbotron {
-  background-color: #f6f6f6 !important;
+  background-color: #ededed !important;
   color: #333;
 }
 .white .jumbotron h2 small a {
@@ -18709,16 +18709,16 @@ h1 {
   color: #333;
 }
 .white .tile, .white .btn-vnext {
-  background-color: #f6f6f6;
+  background-color: #ededed;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .white .navbar.bg-cw {
-    background-color: rgba(246, 246, 246, 0.8) !important;
+    background-color: rgba(237, 237, 237, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .white .navbar.bg-cw {
-    background-color: #f6f6f6 !important;
+    background-color: #ededed !important;
   }
 }
 .white .navbar .navbar-brand {
@@ -18732,12 +18732,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .white .navbar .dropdown-menu {
-    background-color: rgba(246, 246, 246, 0.8);
+    background-color: rgba(237, 237, 237, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .white .navbar .dropdown-menu {
-    background-color: #f6f6f6;
+    background-color: #ededed;
   }
 }
 .white .navbar .dropdown-menu .dropdown-divider {
@@ -18757,10 +18757,10 @@ h1 {
 }
 .white .navbar .dropdown-menu .dropdown-item:focus {
   color: #333;
-  background: rgba(246, 246, 246, 0.1);
+  background: rgba(237, 237, 237, 0.1);
 }
 .white .navbar .navbar-toggler {
-  background-color: rgba(246, 246, 246, 0.1);
+  background-color: rgba(237, 237, 237, 0.1);
 }
 .white .nav.nav-tabs .nav-item .nav-link {
   color: #333;
@@ -18784,19 +18784,19 @@ h1 {
   color: #333;
 }
 .white .milestone {
-  border-color: #f6f6f6;
+  border-color: #ededed;
 }
 .white .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .white .release-notes h3 {
-  border-bottom-color: #f6f6f6;
+  border-bottom-color: #ededed;
 }
 .white .release-notes p {
-  border-left-color: #f6f6f6;
+  border-left-color: #ededed;
 }
 .white .flight-set {
-  border-color: #f6f6f6;
+  border-color: #ededed;
 }
 .white .flight-set:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -18825,12 +18825,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .white .modal .modal-content .modal-header {
-    background: rgba(246, 246, 246, 0.8);
+    background: rgba(237, 237, 237, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .white .modal .modal-content .modal-header {
-    background: #f6f6f6;
+    background: #ededed;
   }
 }
 .white .modal .modal-content .modal-header .close {
@@ -18855,7 +18855,7 @@ h1 {
 .white .form-control {
   background-color: #fff;
   color: #333;
-  border-color: #f6f6f6;
+  border-color: #ededed;
 }
 .white .form-control:focus {
   border-color: #0098df;
@@ -18868,7 +18868,7 @@ h1 {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .white .buildfeed .bf .bf-header {
-  background-color: #f6f6f6;
+  background-color: #ededed;
 }
 .white .buildfeed .bf .bf-body {
   background-color: #f8f8f8;
