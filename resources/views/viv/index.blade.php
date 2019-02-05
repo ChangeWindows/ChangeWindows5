@@ -1,21 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.viv')
 @section('title') About viv @endsection
-
-@section('hero')
-<div class="jumbotron tabs">
-    <div class="container">
-        <h2><span class="font-uppercase font-light">Change</span><span class="font-uppercase font-bold">Windows</span> <span class="font-light">viv</span></h2>
-        <h5>Changing Windows one build at a time</h5>
-        <div class="nav-scroll">
-            <nav class="nav">
-                <a class="nav-link active" href="{{ route('viv') }}">About</a>
-                <a class="nav-link" href="{{ route('vivTerms') }}">Terms</a>
-                <a class="nav-link" href="{{ route('vivPrivacy') }}">Privacy</a>
-            </nav>
-        </div>
-    </div>
-</div>
-@endsection
 
 @section('content')
 <div class="row">

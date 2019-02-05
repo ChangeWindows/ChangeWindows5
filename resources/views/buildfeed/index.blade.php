@@ -1,19 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.buildfeed')
 @section('title') BuildFeed @endsection
-
-@section('hero')
-<div class="jumbotron tabs">
-    <div class="container">
-        <h2 class="mb-4"><i class="fal fa-rss"></i> BuildFeed data</h2>
-        <div class="nav-scroll">
-            <nav class="nav">
-                <a class="nav-link active" href="{{ route('buildfeed') }}">BuildFeed</a>
-                <a class="nav-link" href="{{ route('aboutBuildfeed') }}">About</a>
-            </nav>
-        </div>
-    </div>
-</div>
-@endsection
 
 @section('content')
 <div class="row buildfeed">
@@ -31,8 +17,4 @@
     @endforeach
     <div class="col-12">{{ $builds->links() }}</div>
 </div>
-@endsection
-
-@section('modals')
-
 @endsection

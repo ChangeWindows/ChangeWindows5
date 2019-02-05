@@ -17977,14 +17977,14 @@ readers do not read off random characters that represent icons */
   margin-top: 10px;
 }
 .jumbotron.tabs {
-  padding-bottom: 6px;
+  padding-bottom: 4px;
 }
 .jumbotron h2 {
   font-weight: 700;
   margin: 0;
 }
 .jumbotron h2 .fab {
-  font-weight: 500 !important;
+  font-weight: 400 !important;
 }
 .jumbotron h2 small {
   font-size: 60%;
