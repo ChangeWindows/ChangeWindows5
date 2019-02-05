@@ -15,8 +15,14 @@
             <p>You can now select the platform you want to show on the timeline</p>
             <p>URLs now use the name of platforms instead of an id</p>
             <p>You can now click on some details on BuildFeed detail pages to search for them</p>
+            <p>Flights without a changelog will now show buttons to create them <span class="badge badge-warning">Admin</span></p>
+            <p>Milestones can now be removed from the front end <span class="badge badge-warning">Admin</span></p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
+            <p>The "About" section has been expanded with Terms of Service and a Privacy statement</p>
             <p>We now show page-specific titles in your tabs</p>
+            <p>The tab navigation is now responsive and will scroll sideways on smaller screens</p>
+            <h4><i class="fal fa-fw fa-server"></i> System</h4>
+            <p>Various improvements in the usage of Blade</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
             <p>The White-theme has a slightly darker header</p>
             <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
@@ -35,7 +41,7 @@
             <p>The new Light and Black themes have been added <span class="badge badge-info">Insiders</span></p>
             <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
             <p>The milestone pages now feature an improved responsive design</p>
-            <p>Various improvements to our management tools, including flight editing and more</p>
+            <p>Various improvements to our management tools, including flight editing and more <span class="badge badge-warning">Admin</span></p>
             <h4><i class="fal fa-fw fa-server"></i> System</h4>
             <p>Further file clean-up and other code improvements</p>
             <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
