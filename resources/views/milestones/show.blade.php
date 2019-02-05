@@ -12,20 +12,18 @@
         <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
         <h6>{{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
         <p class="lead">{{ $milestone->description }}</p>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
+        <div class="nav-scroll">
+            <nav class="nav">
                 <a class="nav-link active" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
                     Overview
                 </a>
-            </li>
-            @foreach ($platforms as $platform)
-                <li class="nav-item">
+                @foreach ($platforms as $platform)
                     <a class="nav-link" href="{{ route('platformMilestone', ['id' => $milestone->id, 'platform' => getPlatformClass($platform->platform)]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
-                </li>
-            @endforeach
-        </ul>
+                @endforeach
+            </nav>
+        </div>
     </div>
 </div>
 @endsection

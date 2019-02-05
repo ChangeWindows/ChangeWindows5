@@ -151,15 +151,11 @@ $themes: (
         }
     
         .nav {
-            &.nav-tabs {
-                .nav-item {
-                    .nav-link {
-                        color: map-get($color, text);
-        
-                        &.active {
-                            color: map-get($color, text);
-                        }
-                    }
+            .nav-link {
+                color: map-get($color, text);
+
+                &.active {
+                    color: map-get($color, text);
                 }
             }
         }

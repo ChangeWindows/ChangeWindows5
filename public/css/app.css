@@ -17787,37 +17787,48 @@ readers do not read off random characters that represent icons */
   box-shadow: none;
 }
 
-.nav.nav-tabs {
-  border-bottom: none;
-  padding: 0;
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
 }
-.nav.nav-tabs .nav-item {
-  border: none;
-}
-.nav.nav-tabs .nav-item .nav-link {
+.nav .nav-link {
   border: none;
   border-bottom: 2px solid transparent;
   padding: 6px 0;
-  margin: 0 10px;
-  color: #fff;
+  margin: 0 10px 4px;
   opacity: 0.8;
   transition: all 0.2s ease-in;
 }
-.nav.nav-tabs .nav-item .nav-link.active {
+.nav .nav-link:first-child {
+  margin-left: 0;
+}
+.nav .nav-link:last-child {
+  margin-right: 0;
+}
+.nav .nav-link.active {
   border-bottom-color: #0098df;
   box-shadow: 0 5px 8px -7px #0098df;
   background: transparent;
-  color: #fff;
   opacity: 1;
 }
-.nav.nav-tabs .nav-item .nav-link:hover {
+.nav .nav-link:hover {
   opacity: 1;
 }
-.nav.nav-tabs .nav-item:first-child .nav-link {
-  margin-left: 0;
+
+.nav-scroll {
+  position: relative;
+  z-index: 2;
+  height: 53px;
+  overflow-y: hidden;
 }
-.nav.nav-tabs .nav-item:last-child .nav-link {
-  margin-right: 0;
+.nav-scroll nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .list-group.list-group-changelogs .list-group-item {
@@ -18762,10 +18773,10 @@ h1 {
 .white .navbar .navbar-toggler {
   background-color: rgba(234, 234, 234, 0.1);
 }
-.white .nav.nav-tabs .nav-item .nav-link {
+.white .nav .nav-link {
   color: #333;
 }
-.white .nav.nav-tabs .nav-item .nav-link.active {
+.white .nav .nav-link.active {
   color: #333;
 }
 .white .timeline .timeline-row:nth-child(odd) {
@@ -18945,10 +18956,10 @@ h1 {
 .light .navbar .navbar-toggler {
   background-color: rgba(210, 210, 210, 0.1);
 }
-.light .nav.nav-tabs .nav-item .nav-link {
+.light .nav .nav-link {
   color: #000;
 }
-.light .nav.nav-tabs .nav-item .nav-link.active {
+.light .nav .nav-link.active {
   color: #000;
 }
 .light .timeline .timeline-row:nth-child(odd) {
@@ -19128,10 +19139,10 @@ h1 {
 .dark .navbar .navbar-toggler {
   background-color: rgba(47, 47, 47, 0.1);
 }
-.dark .nav.nav-tabs .nav-item .nav-link {
+.dark .nav .nav-link {
   color: #fff;
 }
-.dark .nav.nav-tabs .nav-item .nav-link.active {
+.dark .nav .nav-link.active {
   color: #fff;
 }
 .dark .timeline .timeline-row:nth-child(odd) {
@@ -19311,10 +19322,10 @@ h1 {
 .black .navbar .navbar-toggler {
   background-color: rgba(21, 21, 21, 0.1);
 }
-.black .nav.nav-tabs .nav-item .nav-link {
+.black .nav .nav-link {
   color: #fff;
 }
-.black .nav.nav-tabs .nav-item .nav-link.active {
+.black .nav .nav-link.active {
   color: #fff;
 }
 .black .timeline .timeline-row:nth-child(odd) {

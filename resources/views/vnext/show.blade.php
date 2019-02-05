@@ -10,14 +10,16 @@
 <div class="jumbotron tabs">
     <div class="container">
         <h2 class="mb-4"><i class="fab fa-fw fa-windows"></i> vNext</h2>
-        <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link {{ Request::is('vnext') || Request::is('vnext/1') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 1]) }}">PC</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('vnext/3') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 3]) }}">Xbox</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('vnext/6') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 6]) }}">IoT</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('vnext/4') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 4]) }}">Server</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('vnext/5') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 5]) }}">Holographic</a></li>
-            <li class="nav-item"><a class="nav-link {{ Request::is('vnext/7') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 7]) }}">Team</a></li>
-        </ul>
+        <div class="nav-scroll">
+            <nav class="nav">
+                <a class="nav-link {{ Request::is('vnext') || Request::is('vnext/pc') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 1]) }}">PC</a>
+                <a class="nav-link {{ Request::is('vnext/xbox') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 3]) }}">Xbox</a>
+                <a class="nav-link {{ Request::is('vnext/iot') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 6]) }}">IoT</a>
+                <a class="nav-link {{ Request::is('vnext/server') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 4]) }}">Server</a>
+                <a class="nav-link {{ Request::is('vnext/holographic') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 5]) }}">Holographic</a>
+                <a class="nav-link {{ Request::is('vnext/team') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 7]) }}">Team</a>
+            </nav>
+        </div>
     </div>
 </div>
 @endsection

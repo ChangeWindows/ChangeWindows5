@@ -6,23 +6,13 @@
     <div class="container">
         <h2><span class="font-uppercase font-light">Change</span><span class="font-uppercase font-bold">Windows</span> <span class="font-light">viv</span></h2>
         <h5>Changing Windows one build at a time</h5>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('viv') }}">
-                    About
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="{{ route('vivTerms') }}">
-                    Terms
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('vivPrivacy') }}">
-                    Privacy
-                </a>
-            </li>
-        </ul>
+        <div class="nav-scroll">
+            <nav class="nav">
+                <a class="nav-link" href="{{ route('viv') }}">About</a>
+                <a class="nav-link active" href="{{ route('vivTerms') }}">Terms</a>
+                <a class="nav-link" href="{{ route('vivPrivacy') }}">Privacy</a>
+            </nav>
+        </div>
     </div>
 </div>
 @endsection

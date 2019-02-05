@@ -5,18 +5,12 @@
 <div class="jumbotron tabs">
     <div class="container">
         <h2 class="mb-4"><i class="fal fa-rss"></i> BuildFeed data</h2>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('buildfeed') }}">
-                    BuildFeed
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="{{ route('aboutBuildfeed') }}">
-                    About
-                </a>
-            </li>
-        </ul>
+        <div class="nav-scroll">
+            <nav class="nav">
+                <a class="nav-link" href="{{ route('buildfeed') }}">BuildFeed</a>
+                <a class="nav-link active" href="{{ route('aboutBuildfeed') }}">About</a>
+            </nav>
+        </div>
     </div>
 </div>
 @endsection

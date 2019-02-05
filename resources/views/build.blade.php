@@ -6,15 +6,15 @@
     <div class="container">
         <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
         <h6>{{ $meta->major }}.{{ $meta->minor }}.{{ $meta->build }} &middot; {{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
-        <ul class="nav nav-tabs">
-            @foreach ($platforms as $platform)
-                <li class="nav-item">
+        <div class="nav-scroll">
+            <nav class="nav">
+                @foreach ($platforms as $platform)
                     <a class="nav-link {{ $platform->platform == $meta->platform ? 'active' : '' }}" href="{{ route('showRelease', ['build' => $cur_build, 'platform' => getPlatformClass($platform->platform)]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
-                </li>
-            @endforeach
-        </ul>
+                @endforeach
+            </nav>
+        </div>
     </div>
 </div>
 @endsection
