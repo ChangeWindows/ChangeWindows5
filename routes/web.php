@@ -29,6 +29,7 @@ Route::get('/milestones/{id}/edit', 'MilestoneController@edit')->name('editMiles
 Route::get('/milestones/{id}/{platform}', 'MilestoneController@platform')->name('platformMilestone');
 Route::post('/milestones', 'MilestoneController@store')->name('storeMilestone')->middleware('auth');
 Route::patch('/milestones/{id}', 'MilestoneController@update')->name('updateMilestone')->middleware('auth');
+Route::delete('/milestones/{id}', 'MilestoneController@destroy')->name('destroyMilestone');
 
 Route::get('/rings', 'RingsController@index')->name('rings');
 Route::get('/rings/{platform}', 'RingsController@platform')->name('platformRings');
