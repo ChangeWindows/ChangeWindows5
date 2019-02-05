@@ -45,7 +45,17 @@
                 @if (array_key_exists('changelog', $info))
                     {!! $parsedown->text($info['changelog']) !!}
                 @else
-                    <h4>No changelog yet</h4>
+                    @if (Auth::user() && Auth::user()->hasAnyRole(['Admin']))
+                        <h4>No changelog yet, create one...</h4>
+                        <a href="{{ route('createChangelog', ['string' => $meta->build.'.'.$delta, 'platform' => getPlatformClass($meta->platform)]) }}" class="btn btn-sm btn-primary">{{ getPlatformById($meta->platform) }}</a>
+                        <a href="{{ route('createChangelog', ['string' => $meta->build.'.'.$delta, 'platform' => 'generic']) }}" class="btn btn-sm btn-light">Generic</a>
+                    @else
+                        <h4>No changelog yet</h4>
+                    @endif
+                    @auth
+                        @if (Auth::user()->hasAnyRole(['Admin']))
+                        @endif
+                    @endauth
                 @endif
             @endforeach
         </div>
