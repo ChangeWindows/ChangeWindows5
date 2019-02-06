@@ -19,7 +19,7 @@ ChangeWindows has been around for as long as the Windows Insider Program has bee
 ## Open source
 This repository is a big shift for ChangeWindows from the previous 4 major versions. Not only is this the first time we're publishing the actual source of our website, we're also using for the first time a framework, in this case Laravel, to build our website. Not only because we're lazy, but also because it makes things a lot simpeler and cleaner.
 
-ChangeWindows 5.0 is still in development when you're reading this. Before we put this major revamp of our website online, we want to have reached feature parity with what we currently have, and that will take a while. We have to catch up with over 2,5 year of development.
+ChangeWindows 5.0 is still in development when you're reading this. Before we put this major revamp of our website online, we want to have reached feature parity with what we currently have, and that will take a while. We have to catch up with over 3,5 year of development, which will probably take a couple of months.
 
 ## Contributing
 We are open to contributions to ChangeWindows. Do you have a feature that you really want to see but we are not spending any time on it ourselves? Feel free to open a pull request for it!
