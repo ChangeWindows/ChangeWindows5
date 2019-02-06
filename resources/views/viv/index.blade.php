@@ -14,9 +14,6 @@
     <div class="col-12 col-md-3">
         <h4>About</h4>
         <p>ChangeWindows 5.0-alpha.3</p>
-
-        <h4>Disclaimer</h4>
-        <p>ChangeWindows and studio384 are not related to Microsoft in any way. All trademarks mentioned are the property of their respective owners. We do not guarantee the correctness of the information on this site.</p>
     </div>
 </div>
 @endsection

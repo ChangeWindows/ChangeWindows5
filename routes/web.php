@@ -61,3 +61,10 @@ Route::get('/viv/privacy', 'VivController@privacy')->name('vivPrivacy');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::patch('/profile/{id}', 'ProfileController@edit')->name('updateProfile');
+
+Route::get('/patreons', 'PatreonController@index')->name('showPatreon');
+Route::get('/patreons/new', 'PatreonController@create')->name('createPatreon');
+Route::get('/patreons/{id}/edit', 'PatreonController@edit')->name('editPatreon');
+Route::post('/patreons', 'PatreonController@store')->name('storePatreon');
+Route::patch('/patreons/{id}', 'PatreonController@update')->name('updatePatreon');
+Route::delete('/patreons/{id}', 'PatreonController@destroy')->name('deletePatreon');
