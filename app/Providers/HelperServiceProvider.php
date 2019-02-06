@@ -23,6 +23,7 @@ class HelperServiceProvider extends ServiceProvider
     public function register()
     {
         require_once app_path('Helpers/PlatformHelper.php');
+        require_once app_path('Helpers/PatronHelper.php');
         require_once app_path('Helpers/RingHelper.php');
         require_once app_path('Helpers/TileHelper.php');
         require_once app_path('Helpers/BuildFeedHelper.php');

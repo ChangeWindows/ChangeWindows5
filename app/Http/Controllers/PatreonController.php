@@ -15,7 +15,7 @@ class PatreonController extends Controller
         $request->user()->authorizeRoles('Admin');
         
         $patreons = Patreon::orderBy('amount', 'desc')
-                            ->orderBy('name', 'desc')
+                            ->orderBy('name', 'asc')
                             ->paginate(50);
 
         return view('patreon.index', compact('patreons'));
@@ -37,7 +37,7 @@ class PatreonController extends Controller
             'amount' => request()->get('amount')
         ]);
 
-        return redirect('/patreons');
+        return redirect()->back();
     }
 
     public function update(Request $request, $id) {

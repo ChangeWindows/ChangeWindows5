@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('title') Patrons @endsection
 
+@php
+    $insider_level = null;
+@endphp
+
 @section('hero')
 <div class="jumbotron">
     <div class="container">
@@ -13,19 +17,24 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col-12">
-        <div class="list-group list-group-changelogs">
-            @foreach ($patreons as $patron)
-                <a href="{{ route('editPatreon', [$patron->id]) }}" class="list-group-item">
-                    {{ $patron->name }} &middot; ${{ $patron->amount }}
-                </a>
-            @endforeach
-        </div>
-        
-        {{ $patreons->links() }}
+@foreach ($patreons as $patron)
+    @if ($insider_level !== getPatronLevel($patron->amount))
+        <h2>{{ getPatronLevel($patron->amount) }}</h2>
+        @php $insider_level = getPatronLevel($patron->amount) @endphp
+    @endif
+    <div>
+        <a href="{{ route('editPatreon', [$patron->id]) }}" class="btn btn-light">
+            {{ $patron->name }} &middot; ${{ $patron->amount }}
+        </a>
+        <form method="POST" action="{{ route('deletePatreon', ['id' => $patron->id]) }}" class="d-inline">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+            <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>
+        </form>
     </div>
-</div>
+@endforeach
+
+{{ $patreons->links() }}
 @endsection
 
 @section('modals')
