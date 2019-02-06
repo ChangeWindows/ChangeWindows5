@@ -9,6 +9,7 @@
     <p>You can now select the platform you want to show on the timeline</p>
     <p>URLs now use the name of platforms instead of an id</p>
     <p>You can now click on some details on BuildFeed detail pages to search for them</p>
+    <p>Patrons are now listed on our About page</p>
     <p>Flights without a changelog will now show buttons to create them <span class="badge badge-warning">Admin</span></p>
     <p>Milestones can now be removed from the front end <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
@@ -23,8 +24,6 @@
     <p>Removes support for non-Windows 10 releases</p>
     <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
     <p>We fixed the spelling mistake in the BuildFeed promotional highlight image</p>
-    <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
-    <p>Patrons are currently not listed on About</p>
 </section>
 <section class="release-notes">
     <h3>5.0-alpha.3 <small>1 February 2019</small></h3>
