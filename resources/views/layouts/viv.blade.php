@@ -9,6 +9,7 @@
         <div class="nav-scroll mt-2">
             <nav class="nav">
                 <a class="nav-link {{ Request::is('viv') ? 'active' : '' }}" href="{{ route('viv') }}">About</a>
+                <a class="nav-link {{ Request::is('viv/changelog') ? 'active' : '' }}" href="{{ route('vivChangelog') }}">Changelog</a>
                 <a class="nav-link {{ Request::is('viv/terms') ? 'active' : '' }}" href="{{ route('vivTerms') }}">Terms</a>
                 <a class="nav-link {{ Request::is('viv/privacy') ? 'active' : '' }}" href="{{ route('vivPrivacy') }}">Privacy</a>
             </nav>

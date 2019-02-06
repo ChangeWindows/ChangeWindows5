@@ -56,6 +56,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/viv', 'VivController@index')->name('viv');
 Route::get('/viv/terms', 'VivController@terms')->name('vivTerms');
+Route::get('/viv/changelog', 'VivController@changelog')->name('vivChangelog');
 Route::get('/viv/privacy', 'VivController@privacy')->name('vivPrivacy');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');

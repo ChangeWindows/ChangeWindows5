@@ -10,6 +10,10 @@ class VivController extends Controller
         return view('viv.index');
     }
 
+    public function changelog() {
+        return view('viv.changelog');
+    }
+
     public function terms() {
         return view('viv.terms');
     }
