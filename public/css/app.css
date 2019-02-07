@@ -18525,6 +18525,41 @@ h1 {
   padding-right: 5px;
 }
 
+.patron {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+.patron .header {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 2px 8px 4px;
+}
+.patron .fa-user-circle {
+  margin: 15px auto 0;
+  display: block;
+  font-size: 80px;
+}
+.patron .name {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.patron.platinum .header {
+  background-color: #e5e4e2;
+}
+.patron.gold .header {
+  background-color: #ffd700;
+}
+.patron.silver .header {
+  background-color: #c0c0c0;
+}
+.patron.bronze .header {
+  background-color: #cd7f32;
+}
+
 .release-notes {
   margin-bottom: 2rem;
 }

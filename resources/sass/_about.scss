@@ -1,3 +1,53 @@
+.patron {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+
+    .header {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 2px 8px 4px;
+    }
+
+    .fa-user-circle {
+        margin: 15px auto 0;
+        display: block;
+        font-size: 80px;
+    }
+
+    .name {
+        text-align: center;
+        font-size: 24px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &.platinum {
+        .header {
+            background-color: #e5e4e2;
+        }
+    }
+
+    &.gold {
+        .header {
+            background-color: #ffd700;
+        }
+    }
+
+    &.silver {
+        .header {
+            background-color: #c0c0c0;
+        }
+    }
+
+    &.bronze {
+        .header {
+            background-color: #cd7f32;
+        }
+    }
+}
+
 .release-notes {
     margin-bottom: 2rem;
 
