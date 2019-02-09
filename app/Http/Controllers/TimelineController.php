@@ -109,7 +109,7 @@ class TimelineController extends Controller
                 ]);
             }
 
-            Twitter::postTweet(['status' => 'Info on build '.$string['build'].' for '.getPlatformById($platform).' is now available! #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.$platform, 'format' => 'json']);
+            Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released! #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.$platform, 'format' => 'json']);
         }
 
         return redirect('/');

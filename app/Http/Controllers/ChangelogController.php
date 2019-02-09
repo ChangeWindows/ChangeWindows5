@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Changelog;
+use Twitter;
 
 class ChangelogController extends Controller
 {
@@ -65,6 +66,8 @@ class ChangelogController extends Controller
             'platform' => request()->get('platform'),
             'changelog' => request()->get('changelog')
         ]);
+
+        Twitter::postTweet(['status' => 'Info on build '.$string['build'].' for '.getPlatformById(request()->get('platform')).' is now available! #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.request()->get('platform'), 'format' => 'json']);
 
         return redirect('/changelog');
     }
