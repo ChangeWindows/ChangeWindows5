@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Release;
 use App\Changelog;
 use Parsedown;
+use Twitter;
 
 class TimelineController extends Controller
 {
@@ -107,6 +108,8 @@ class TimelineController extends Controller
                     'date' => request()->get('release')
                 ]);
             }
+
+            Twitter::postTweet(['status' => 'Info on build '.$string['build'].' for '.getPlatformById($platform).' is now available! #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.$platform, 'format' => 'json']);
         }
 
         return redirect('/');
