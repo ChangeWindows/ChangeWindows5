@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Milestone;
 use App\Release;
 use Carbon\Carbon;
+use Twitter;
 
 class MilestoneController extends Controller
 {
@@ -132,6 +133,8 @@ class MilestoneController extends Controller
             'sdk' => request()->get('sdk') === null ? 0 : 1,
             'iso' => request()->get('iso') === null ? 0 : 1
         ]);
+
+        Twitter::postTweet(['status' => 'Follow everything about '.request()->get('codename').' at ChangeWindows! #Windows #WindowsInsiders https://changewindows.org/milestones/'.request()->get('id'), 'format' => 'json']);
 
         return redirect('/milestones');
     }
