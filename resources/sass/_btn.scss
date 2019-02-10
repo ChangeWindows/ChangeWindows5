@@ -5,6 +5,24 @@
     &:focus {
         box-shadow: none;
     }
+
+    &.btn-filter {
+        background: transparent;
+        color: $accent;
+        font-weight: 600;
+        font-size: .9rem;
+
+        .filter-title {
+            color: #000 !important;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+    }
 }
 
 .btn, .light .btn, .white .btn {

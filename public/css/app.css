@@ -17853,6 +17853,19 @@ readers do not read off random characters that represent icons */
 .btn:focus {
   box-shadow: none;
 }
+.btn.btn-filter {
+  background: transparent;
+  color: #0098df;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.btn.btn-filter .filter-title {
+  color: #000 !important;
+}
+.btn.btn-filter:hover, .btn.btn-filter:active, .btn.btn-filter:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
 
 .btn.btn-vnext, .light .btn.btn-vnext, .white .btn.btn-vnext {
   background-color: #e52262;

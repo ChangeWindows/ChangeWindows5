@@ -44,3 +44,18 @@ function getRingIdByClass($class) {
         default:            return;
     }
 }
+
+function getRingByClass($class) {
+    switch ($class) {
+        case 'leak':        return 0;
+        case 'skip':        return 'Fast Ring Skip Ahead';
+        case 'fast':        return 'Fast Ring Active';
+        case 'slow':        return 'Slow Ring';
+        case 'preview':     return 'Preview Ring';
+        case 'release':     return 'Release Preview Ring';
+        case 'targeted':    return 'Semi-Annual Channel Targeted';
+        case 'broad':       return 'Semi-Annual Channel Broad';
+        case 'ltsc':        return 'Long-Term Suppprt Channel';
+        default:            return 'All';
+    }
+}

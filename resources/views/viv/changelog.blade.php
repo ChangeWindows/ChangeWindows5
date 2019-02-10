@@ -12,6 +12,7 @@
     <p>Patrons are now listed on our About page</p>
     <p>Flights without a changelog will now show buttons to create them <span class="badge badge-warning">Admin</span></p>
     <p>Milestones can now be removed from the front end <span class="badge badge-warning">Admin</span></p>
+    <p>ChangeWindows can now tweet to <a href="https://twitter.com/changewindows">@ChangeWindows</a> when creating a flight, changelog or milestone <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
     <p>The "About" section has been expanded with Terms of Service and a Privacy statement</p>
     <p>We now show page-specific titles in your tabs</p>

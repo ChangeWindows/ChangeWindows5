@@ -33,16 +33,16 @@
         </div>
         <div class="nav-scroll">
             <nav class="nav">
-                <a class="nav-link {{ $platform_id == '' ? 'active' : '' }}" href="{{ route('timeline') }}">All</a>
-                <a class="nav-link {{ $platform_id == '1' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'pc']) }}">PC</a>
-                <a class="nav-link {{ $platform_id == '3' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'xbox']) }}">Xbox</a>
-                <a class="nav-link {{ $platform_id == '6' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iot']) }}">IoT</a>
-                <a class="nav-link {{ $platform_id == '4' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'server']) }}">Server</a>
-                <a class="nav-link {{ $platform_id == '5' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'holographic']) }}">Holographic</a>
-                <a class="nav-link {{ $platform_id == '7' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'team']) }}">Team</a>
-                <a class="nav-link {{ $platform_id == '2' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'mobile']) }}">Mobile</a>
-                <a class="nav-link {{ $platform_id == '9' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'sdk']) }}">SDK</a>
-                <a class="nav-link {{ $platform_id == '8' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iso']) }}">ISO</a>
+                <a class="nav-link {{ $request->platform == '' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => null, 'ring' => $request->ring]) }}">All</a>
+                <a class="nav-link {{ $request->platform == 'pc' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'pc', 'ring' => $request->ring]) }}">PC</a>
+                <a class="nav-link {{ $request->platform == 'xbox' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'xbox', 'ring' => $request->ring]) }}">Xbox</a>
+                <a class="nav-link {{ $request->platform == 'iot' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iot', 'ring' => $request->ring]) }}">IoT</a>
+                <a class="nav-link {{ $request->platform == 'server' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'server', 'ring' => $request->ring]) }}">Server</a>
+                <a class="nav-link {{ $request->platform == 'holographic' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'holographic', 'ring' => $request->ring]) }}">Holographic</a>
+                <a class="nav-link {{ $request->platform == 'team' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'team', 'ring' => $request->ring]) }}">Team</a>
+                <a class="nav-link {{ $request->platform == 'mobile' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'mobile', 'ring' => $request->ring]) }}">Mobile</a>
+                <a class="nav-link {{ $request->platform == 'sdk' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'sdk', 'ring' => $request->ring]) }}">SDK</a>
+                <a class="nav-link {{ $request->platform == 'iso' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iso', 'ring' => $request->ring]) }}">ISO</a>
             </ul>
         </div>
     </div>
@@ -52,6 +52,24 @@
 @section('content')
 <div class="row px-n10">
     <div class="col-lg-7">
+        <div class="text-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="filter-title">Ring:</span> {{ getRingByClass($request->ring) }}
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => null]) }}">All</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'skip']) }}">Fast Skip Ahead/Alpha Skip Ahead</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'fast']) }}">Fast Active/ Alpha Active/Fast</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'slow']) }}">Slow/Beta/Preview</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'preview']) }}">Delta</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'release']) }}">Release Preview/Omega</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'targeted']) }}">Semi-Annual Targeted/Release</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'broad']) }}">Semi-Annual Broad</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'lts']) }}">Long-Term Servicing</a>
+                </div>
+            </div>
+        </div>
         <div class="timeline">
             @foreach ($timeline as $date => $builds)
                 <div class="date-heading">{{ $date }}</div>

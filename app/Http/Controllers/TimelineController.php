@@ -13,6 +13,7 @@ class TimelineController extends Controller
     public function index(Request $request) {
         $platform_id = getPlatformIdByClass($request->platform);
         $ring_id = getRingIdByClass($request->ring);
+        $timeline = [];
 
         $releases = Release::when(request('ring', false), function ($query, $ring_id) {
                                 return $query->where('ring', getRingIdByClass($ring_id));
@@ -86,7 +87,7 @@ class TimelineController extends Controller
             $ua = false;
         }
 
-        return view('timeline', compact('releases', 'flights', 'timeline', 'ua', 'platform_id', 'ring_id'));
+        return view('timeline', compact('releases', 'flights', 'timeline', 'ua', 'request'));
     }
 
     public function store(Request $request) {
