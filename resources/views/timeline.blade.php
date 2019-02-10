@@ -71,26 +71,33 @@
             </div>
         </div>
         <div class="timeline">
-            @foreach ($timeline as $date => $builds)
-                <div class="date-heading">{{ $date }}</div>
-                <div></div>
-                @foreach ($builds as $build => $deltas)
-                    @foreach ($deltas as $delta => $platforms)
-                        @foreach ($platforms as $platform => $rings)
-                            <div class="timeline-row">
-                                <a class="row" href="{{ route('showRelease', ['build' => $build, 'platform' => getPlatformClass($platform)]) }}">
-                                    <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
-                                    <div class="col-6 col-md-8 ring">
-                                        @foreach ($rings as $ring)
-                                            <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
-                                        @endforeach
-                                    </div>
-                                </a>
-                            </div>
+            @if ($timeline)
+                @foreach ($timeline as $date => $builds)
+                    <div class="date-heading">{{ $date }}</div>
+                    <div></div>
+                    @foreach ($builds as $build => $deltas)
+                        @foreach ($deltas as $delta => $platforms)
+                            @foreach ($platforms as $platform => $rings)
+                                <div class="timeline-row">
+                                    <a class="row" href="{{ route('showRelease', ['build' => $build, 'platform' => getPlatformClass($platform)]) }}">
+                                        <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
+                                        <div class="col-6 col-md-8 ring">
+                                            @foreach ($rings as $ring)
+                                                <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
+                                            @endforeach
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
                         @endforeach
                     @endforeach
                 @endforeach
-            @endforeach
+            @else
+                <div class="no-results text-center">
+                    <h3>No results have been found.</h3>
+                    <p class="lead">Your current selection has no flights. Try to change the platform and/or ring.</p>
+                </div>
+            @endif
         </div>
         {{ $releases->links() }}
     </div>
