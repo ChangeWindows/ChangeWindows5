@@ -70,10 +70,6 @@
     }
 
     .dropdown {
-        .dropdown-toggle::after {
-            display: none;
-        }
-
         &.show {
             .nav-link {
                 background: transparent;
@@ -85,30 +81,6 @@
         &:last-child {
             .nav-link {
                 margin-right: 0;
-            }
-        }
-    }
-
-    .dropdown-menu {
-        border: none;
-        border-radius: 0;
-        padding: 5px 0;
-        margin-top: 0;
-        font-size: 15px;
-        backdrop-filter: blur(30px);
-
-        .dropdown-divider {
-            margin: 5px 24px;
-        }
-
-        .dropdown-item {
-            padding-top: 7px;
-            padding-bottom: 7px;
-            border-radius: 0;
-            transition: .1s ease-in-out;
-
-            .fa-fw {
-                margin-right: 10px;
             }
         }
     }

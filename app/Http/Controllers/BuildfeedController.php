@@ -23,7 +23,10 @@ class BuildfeedController extends Controller
                             ->paginate(52)
                             ->onEachSide(1);
 
-        return view('buildfeed.index', compact('builds'));
+        $labs = Buildfeed::select('lab')->orderBy('lab')->groupBy('lab')->get();
+        $families = Buildfeed::select('family')->orderBy('family')->groupBy('family')->get();
+
+        return view('buildfeed.index', compact('builds', 'request', 'labs', 'families'));
     }
 
     public function show($id) {

@@ -107,43 +107,6 @@ $themes: (
                     color: map-get($color, text) !important;
                 }
             }
-        
-            .dropdown-menu {
-                box-shadow: 0 0 24px 0 map-get($color, shadow);
-    
-                @supports ((backdrop-filter: blur(30px))) {
-                    background-color: map-get($color, transparency);
-                }
-                    
-                @supports not ((backdrop-filter: blur(30px))) {
-                    background-color: map-get($color, background-header);
-                }
-        
-                .dropdown-divider {
-                    border-top-color: map-get($color, highlight-color);
-                }
-        
-                .dropdown-header {
-                    color: map-get($color, text-secondary);
-                }
-        
-                .dropdown-item {
-                    color: map-get($color, text);
-                    
-                    &:hover {
-                        background-color: map-get($color, highlight-color);
-                    }
-        
-                    &:active {
-                        color: map-get($color, text);
-                    }
-        
-                    &:focus {
-                        color: map-get($color, text);
-                        background: rgba(map-get($color, transparency),.1);
-                    }
-                }
-            }
             
             .navbar-toggler {
                 background-color: rgba(map-get($color, transparency),.1);
@@ -156,6 +119,43 @@ $themes: (
 
                 &.active {
                     color: map-get($color, text);
+                }
+            }
+        }
+        
+        .dropdown-menu {
+            box-shadow: 0 0 24px 0 map-get($color, shadow);
+
+            @supports ((backdrop-filter: blur(30px))) {
+                background-color: map-get($color, transparency);
+            }
+                
+            @supports not ((backdrop-filter: blur(30px))) {
+                background-color: map-get($color, background-header);
+            }
+    
+            .dropdown-divider {
+                border-top-color: map-get($color, highlight-color);
+            }
+    
+            .dropdown-header {
+                color: map-get($color, text-secondary);
+            }
+    
+            .dropdown-item {
+                color: map-get($color, text);
+                
+                &:hover {
+                    background-color: map-get($color, highlight-color);
+                }
+    
+                &:active {
+                    color: map-get($color, text);
+                }
+    
+                &:focus {
+                    color: map-get($color, text);
+                    background: rgba(map-get($color, transparency),.1);
                 }
             }
         }

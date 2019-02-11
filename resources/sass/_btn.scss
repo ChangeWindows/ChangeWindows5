@@ -18,6 +18,25 @@
 
         &:hover,
         &:active,
+        &:focus,
+        &:active:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+    }
+}
+
+.show {
+    & > .btn-filter.dropdown-toggle {
+        background: transparent;
+        color: $accent;
+
+        .filter-title {
+            color: #000 !important;
+        }
+
+        &:hover,
+        &:active,
         &:focus {
             box-shadow: none;
             border-color: transparent;
