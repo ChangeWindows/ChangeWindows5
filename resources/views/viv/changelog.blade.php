@@ -8,6 +8,7 @@
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
     <p>You can now select the platform you want to show on the timeline</p>
     <p>URLs now use the name of platforms instead of an id</p>
+    <p>Filters have been added to BuildFeed to filter by lab, family and source</p>
     <p>You can now click on some details on BuildFeed detail pages to search for them</p>
     <p>Patrons are now listed on our About page</p>
     <p>Flights without a changelog will now show buttons to create them <span class="badge badge-warning">Admin</span></p>
