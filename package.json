@@ -19,6 +19,7 @@
         "lodash": "4.17.11",
         "popper.js": "1.14.7",
         "sass": "1.17.0",
-        "sass-loader": "7.1.0"
+        "sass-loader": "7.1.0",
+        "vue-template-compiler": "^2.6.5"
     }
 }
