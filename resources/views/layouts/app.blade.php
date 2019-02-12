@@ -78,6 +78,10 @@
                                 <div class="dropdown-divider d-block d-sm-none"></div>
                                 <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
+                                <div class="dropdown-divider"></div>
+                                <h6 class="dropdown-header">Preview</h6>
+                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=bug&template=bug_report.md&title="><i class="fal fa-fw fa-bug"></i> Report a bug</a>
+                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=&template=feature_request.md&title="><i class="fal fa-fw fa-box-heart"></i> Request a feature</a>
                                 <div class="dropdown-divider d-block"></div>
                                 <a class="dropdown-item" href="https://twitter.com/changewindows"><i class="fab fa-fw fa-twitter"></i> @ChangeWindows</a>
                                 <a class="dropdown-item" href="https://patreon.com/changewindows"><i class="fab fa-fw fa-patreon"></i> Patreon</a>
@@ -100,35 +104,24 @@
                                     </div>
                                 </li>
                             @endif
-                        @endauth
-                        <li class="nav-item dropdown {{ Request::is('profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                @auth
+                            <li class="nav-item dropdown {{ Request::is('profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fal fa-fw fa-user-circle d-inline"></i><span class="d-none d-sm-inline"> {{ Auth::user()->name }}<span>
-                                @else
-                                    <i class="fal fa-fw fa-sign-in d-inline"></i><span class="d-none d-sm-inline"> Login<span>
-                                @endauth
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                @auth
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('profile') }}"><i class="fal fa-fw fa-cog"></i> Settings</a>
-                                @else
-                                    <a class="dropdown-item" href="{{ route('register') }}"><i class="fal fa-fw fa-user-plus"></i> Register</a>
-                                    <a class="dropdown-item" href="{{ route('login') }}"><i class="fal fa-fw fa-sign-in"></i> Login</a>
-                                @endauth
-                                <div class="dropdown-divider"></div>
-                                <h6 class="dropdown-header">Preview</h6>
-                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=bug&template=bug_report.md&title="><i class="fal fa-fw fa-bug"></i> Report a bug</a>
-                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=&template=feature_request.md&title="><i class="fal fa-fw fa-box-heart"></i> Request a feature</a>
-                                @auth
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fal fa-fw fa-sign-out"></i> Log out</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                @endauth
-                            </div>
-                        </li>
+                                </div>
+                            </li>
+                        @else
+                            <li class="nav-item nav-login {{ Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('login') }}"><i class="fal fa-fw fa-sign-in d-inline"></i><span class="d-none d-sm-inline"> Login<span></a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </div>

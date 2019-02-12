@@ -18063,6 +18063,9 @@ readers do not read off random characters that represent icons */
 .navbar .nav-item.active .nav-link:hover {
   opacity: 1;
 }
+.navbar .nav-item.nav-login .nav-link {
+  margin-right: 0;
+}
 .navbar .nav-item .nav-link {
   padding: 3px 0 !important;
   margin-right: 20px;

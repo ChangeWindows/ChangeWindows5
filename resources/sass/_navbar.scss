@@ -24,6 +24,12 @@
                 }
             }
         }
+
+        &.nav-login {
+            .nav-link {
+                margin-right: 0;
+            }
+        }
     
         .nav-link {
             padding: 3px 0 !important;
