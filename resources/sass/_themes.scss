@@ -183,6 +183,14 @@ $themes: (
                 }
             }
         }
+        
+        .btn {
+            &.btn-filter {
+                .filter-title {
+                    color: map-get($color, text) !important;
+                }
+            }
+        }
 
         .show {
             & > .btn-filter.dropdown-toggle {

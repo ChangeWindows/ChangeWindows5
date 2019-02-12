@@ -18004,9 +18004,6 @@ readers do not read off random characters that represent icons */
   font-weight: 600;
   font-size: 0.9rem;
 }
-.btn.btn-filter .filter-title {
-  color: #000 !important;
-}
 .btn.btn-filter:hover, .btn.btn-filter:active, .btn.btn-filter:focus, .btn.btn-filter:active:focus {
   box-shadow: none;
   border-color: transparent;
@@ -19012,6 +19009,9 @@ h1 {
 .white .timeline .timeline-row .row {
   color: #333;
 }
+.white .btn.btn-filter .filter-title {
+  color: #333 !important;
+}
 .white .show > .btn-filter.dropdown-toggle .filter-title {
   color: #333 !important;
 }
@@ -19197,6 +19197,9 @@ h1 {
 }
 .light .timeline .timeline-row .row {
   color: #000;
+}
+.light .btn.btn-filter .filter-title {
+  color: #000 !important;
 }
 .light .show > .btn-filter.dropdown-toggle .filter-title {
   color: #000 !important;
@@ -19384,6 +19387,9 @@ h1 {
 .dark .timeline .timeline-row .row {
   color: #fff;
 }
+.dark .btn.btn-filter .filter-title {
+  color: #fff !important;
+}
 .dark .show > .btn-filter.dropdown-toggle .filter-title {
   color: #fff !important;
 }
@@ -19569,6 +19575,9 @@ h1 {
 }
 .black .timeline .timeline-row .row {
   color: #fff;
+}
+.black .btn.btn-filter .filter-title {
+  color: #fff !important;
 }
 .black .show > .btn-filter.dropdown-toggle .filter-title {
   color: #fff !important;
