@@ -97,6 +97,8 @@ class TimelineController extends Controller
         $milestone = Release::getMilestoneByString($string);
 
         foreach(request()->get('flight') as $platform => $ring) {
+            $rings = array();
+
             foreach($ring as $key => $value) {
                 Release::create([
                     'major' => $string['major'],
@@ -108,9 +110,11 @@ class TimelineController extends Controller
                     'ring' => $value,
                     'date' => request()->get('release')
                 ]);
+
+                array_push($rings, getRingById($value));
             }
 
-            Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released! #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.$platform, 'format' => 'json']);
+            Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to the '.implode(', ', $rings).'. #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform), 'format' => 'json']);
         }
 
         return redirect('/');
