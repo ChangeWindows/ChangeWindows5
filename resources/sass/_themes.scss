@@ -183,6 +183,14 @@ $themes: (
                 }
             }
         }
+
+        .show {
+            & > .btn-filter.dropdown-toggle {
+                .filter-title {
+                    color: map-get($color, text) !important;
+                }
+            }
+        }
         
         .milestone {
             border-color: map-get($color, background-header);

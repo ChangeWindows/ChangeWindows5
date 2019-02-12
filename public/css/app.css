@@ -18016,9 +18016,6 @@ readers do not read off random characters that represent icons */
   background: transparent;
   color: #0098df;
 }
-.show > .btn-filter.dropdown-toggle .filter-title {
-  color: #000 !important;
-}
 .show > .btn-filter.dropdown-toggle:hover, .show > .btn-filter.dropdown-toggle:active, .show > .btn-filter.dropdown-toggle:focus {
   box-shadow: none;
   border-color: transparent;
@@ -19012,6 +19009,9 @@ h1 {
 .white .timeline .timeline-row .row {
   color: #333;
 }
+.white .show > .btn-filter.dropdown-toggle .filter-title {
+  color: #333 !important;
+}
 .white .milestone {
   border-color: #eaeaea;
 }
@@ -19194,6 +19194,9 @@ h1 {
 }
 .light .timeline .timeline-row .row {
   color: #000;
+}
+.light .show > .btn-filter.dropdown-toggle .filter-title {
+  color: #000 !important;
 }
 .light .milestone {
   border-color: #d2d2d2;
@@ -19378,6 +19381,9 @@ h1 {
 .dark .timeline .timeline-row .row {
   color: #fff;
 }
+.dark .show > .btn-filter.dropdown-toggle .filter-title {
+  color: #fff !important;
+}
 .dark .milestone {
   border-color: #2f2f2f;
 }
@@ -19560,6 +19566,9 @@ h1 {
 }
 .black .timeline .timeline-row .row {
   color: #fff;
+}
+.black .show > .btn-filter.dropdown-toggle .filter-title {
+  color: #fff !important;
 }
 .black .milestone {
   border-color: #151515;
