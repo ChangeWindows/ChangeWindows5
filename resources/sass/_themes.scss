@@ -2,11 +2,13 @@ $themes: (
     white: (
         text: #333,
         text-secondary: #555,
+        text-inverse: #fff,
         disabled: #888,
         background-header: #eaeaea,
         background-content: #fff,
         background-content-2: #f8f8f8,
         background-content-hover: #f0f0f0,
+        border: #ddd,
         highlight-color: rgba(0,0,0,.1),
         transparency: rgba(234,234,234,.8),
         transparency-content: rgba(255,255,255,.9),
@@ -16,11 +18,13 @@ $themes: (
     light: (
         text: #000,
         text-secondary: #333,
+        text-inverse: #fff,
         disabled: #666,
         background-header: #d2d2d2,
         background-content: #e6e6e6,
         background-content-2: #ddd,
         background-content-hover: #d6d6d6,
+        border: #ccc,
         highlight-color: rgba(0,0,0,.1),
         transparency: rgba(210,210,210,.8),
         transparency-content: rgba(255,255,255,.9),
@@ -30,11 +34,13 @@ $themes: (
     dark: (
         text: #fff,
         text-secondary: #ddd,
+        text-inverse: #000,
         disabled: #888,
         background-header: #2f2f2f,
         background-content: #262626,
         background-content-2: #2f2f2f,
         background-content-hover: #353535,
+        border: #444,
         highlight-color: rgba(255,255,255,.1),
         transparency: rgba(47,47,47,.8),
         transparency-content: rgba(24,24,24,.9),
@@ -44,11 +50,13 @@ $themes: (
     black: (
         text: #fff,
         text-secondary: #ccc,
+        text-inverse: #000,
         disabled: #777,
         background-header: #151515,
         background-content: #000,
         background-content-2: #151515,
         background-content-hover: #1d1d1d,
+        border: #222,
         highlight-color: rgba(255,255,255,.1),
         transparency: rgba(21,21,21,.8),
         transparency-content: rgba(24,24,24,.9),
@@ -339,6 +347,18 @@ $themes: (
                     background-color: map-get($color, background-content-2);
                 }
             }
+        }
+
+        .patron {
+            border-color: map-get($color, border);
+        
+            .header {
+                color: map-get($color, text-inverse);
+            }
+        }
+
+        hr {
+            border-color: map-get($color, border);
         }
     }
 }

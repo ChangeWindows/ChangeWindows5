@@ -18703,14 +18703,13 @@ h1 {
 }
 
 .patron {
-  border: 1px solid #ddd;
+  border: 1px solid transparent;
   margin-bottom: 10px;
 }
 .patron .header {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
   padding: 2px 8px 4px;
 }
 .patron .fa-user-circle {
@@ -19105,6 +19104,15 @@ h1 {
 .white .buildfeed .bf .bf-body {
   background-color: #f8f8f8;
 }
+.white .patron {
+  border-color: #ddd;
+}
+.white .patron .header {
+  color: #fff;
+}
+.white hr {
+  border-color: #ddd;
+}
 
 .light {
   background: #e6e6e6;
@@ -19293,6 +19301,15 @@ h1 {
 }
 .light .buildfeed .bf .bf-body {
   background-color: #ddd;
+}
+.light .patron {
+  border-color: #ccc;
+}
+.light .patron .header {
+  color: #fff;
+}
+.light hr {
+  border-color: #ccc;
 }
 
 .dark {
@@ -19483,6 +19500,15 @@ h1 {
 .dark .buildfeed .bf .bf-body {
   background-color: #2f2f2f;
 }
+.dark .patron {
+  border-color: #444;
+}
+.dark .patron .header {
+  color: #000;
+}
+.dark hr {
+  border-color: #444;
+}
 
 .black {
   background: #000;
@@ -19671,6 +19697,15 @@ h1 {
 }
 .black .buildfeed .bf .bf-body {
   background-color: #151515;
+}
+.black .patron {
+  border-color: #222;
+}
+.black .patron .header {
+  color: #000;
+}
+.black hr {
+  border-color: #222;
 }
 
 .hero {
