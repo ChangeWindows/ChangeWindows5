@@ -8,5 +8,5 @@ class Patreon extends Model
 {
     protected $table = 'patreon';
 
-    protected $fillable = array('name', 'amount');
+    protected $fillable = array('name', 'amount', 'email');
 }

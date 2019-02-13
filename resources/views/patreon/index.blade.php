@@ -50,16 +50,22 @@
             <div class="modal-body">
                 <form method="POST" action="{{ route('storePatreon') }}" class="row row-p-10">
                     {{ csrf_field() }}
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-4 col-8">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Name">
                         </div>
                     </div>
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-2 col-4">
                         <div class="form-group">
                             <label for="amount">Amount</label>
                             <input type="text" class="form-control" id="amount" name="amount" aria-describedby="amount" placeholder="Amount">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email">
                         </div>
                     </div>
                     <div class="col-12">
