@@ -147,8 +147,12 @@ class Release extends Model
                 $milestone = 'redstone5';
             else if ( $build < 18500 )
                 $milestone = '19h1';
+            else if ( $build < 18501 )
+                $milestone = '19h2';
+            else if ( $build < 19200 )
+                $milestone = '20h1';
             else
-                $milestone = 'vanadium';
+                $milestone = '20h2';
         }
         
         return $milestone;
