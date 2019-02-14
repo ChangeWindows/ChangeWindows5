@@ -4,7 +4,7 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.0-alpha.4 <small>February 2019</small></h3>
+    <h3>5.0-alpha.4 <small>14 February 2019</small></h3>
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
     <p>You can now select the platform you want to show on the timeline</p>
     <p>URLs now use the name of platforms instead of an id</p>
@@ -20,6 +20,7 @@
     <p>The tab navigation is now responsive and will scroll sideways on smaller screens</p>
     <h4><i class="fal fa-fw fa-server"></i> System</h4>
     <p>Various improvements in the usage of Blade</p>
+    <p>Improvements to support Windows 10 20H1 builds</p>
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
     <p>The White-theme has a slightly darker header</p>
     <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
