@@ -245,12 +245,23 @@ $themes: (
         .list-group {
             &.list-group-changelogs {
                 .list-group-item {
+                    background-color: map-get($color, background-content-2);
+
                     &.active {
                         color: map-get($color, text);
                         background: map-get($color, background-content-hover);
                     }
             
                     &:hover {
+                        background-color: map-get($color, background-content-hover);
+                    }
+                }
+            }
+
+            &.list-group-platforms {
+                .list-group-item {
+                    &:hover,
+                    &:hover:not(.active) {
                         background-color: map-get($color, background-content-2);
                     }
                 }

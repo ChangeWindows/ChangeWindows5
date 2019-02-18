@@ -27,8 +27,7 @@ class ChangelogController extends Controller
                                     ->orderBy('delta', 'desc')
                                     ->paginate(50);
         } else {
-            $changelogs = Changelog::orderBy('build', 'desc')
-                                    ->orderBy('delta', 'desc')
+            $changelogs = Changelog::orderBy('updated_at', 'desc')
                                     ->paginate(50);
         }
 

@@ -2,18 +2,34 @@
     &.list-group-changelogs {
         .list-group-item {
             border: none;
+            margin: 0 0 4px;
+            padding: 6px 10px;
+            background-color: transparent;
+            border-radius: 0;
+            line-height: 1.2;
+    
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.list-group-platforms {
+        .list-group-item {
+            border: none;
             margin: 0;
-            padding: 5px 10px;
+            padding: 7px 10px;
             background-color: transparent;
             border-radius: 0;
     
-            &.active {
-                color: #444;
-                background: #ddd;
+            &:hover {
+                text-decoration: none;
             }
-    
-            &:hover{
-                background-color: #eee;
+
+            &.active,
+            &.active:hover {
+                background-color: $accent;
+                color: #fff;
             }
         }
     }

@@ -25,7 +25,7 @@
     {{ method_field('PATCH') }}
     <div class="col-2">
         <a class="btn btn-primary btn-block" href="{{ route('createChangelog') }}"><i class="fal fa-fw fa-plus"></i> Add changelog</a>
-        <div class="list-group list-group-changelogs mt-3">
+        <div class="list-group list-group-platforms mt-3">
             <a href="{{ route('showChangelogs', ['platform' => 0]) }}" class="list-group-item {{ $changelog->platform == '0' ? 'active' : ''}}">Generic</a>
             <a href="{{ route('showChangelogs', ['platform' => 1]) }}" class="list-group-item {{ $changelog->platform == '1' ? 'active' : ''}}">PC</a>
             <a href="{{ route('showChangelogs', ['platform' => 2]) }}" class="list-group-item {{ $changelog->platform == '2' ? 'active' : ''}}">Mobile</a>
@@ -43,7 +43,6 @@
         <div class="row">
             <div class="col-3">
                 <div class="form-group">
-                    <label for="platform">Platform</label>
                     <select class="form-control" id="platform" name="platform" aria-describedby="platform">
                         <option value="0" {{ $changelog->platform == 0 ? 'selected' : ''}}>Generic</option>
                         <option value="1" {{ $changelog->platform == 1 ? 'selected' : ''}}>PC</option>
@@ -58,20 +57,18 @@
                     </select>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-7">
                 <div class="form-group">
-                    <label for="build_string">String</label>
                     <input type="text" class="form-control" id="build_string" name="build_string" aria-describedby="build_string" placeholder="Build string" value="{{ $changelog->build }}.{{ $changelog->delta }}">
                 </div>
             </div>
-            <div class="col-12">
-                <div class="form-group">
-                    <label for="changelog">Changelog</label>
-                    <textarea class="form-control text-monospace" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="30">{{ $changelog->changelog }}</textarea>
-                </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-check"></i> Save</button>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-check"></i> Save</button>
+                <div class="form-group">
+                    <textarea class="form-control text-monospace" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="30">{{ $changelog->changelog }}</textarea>
+                </div>
             </div>
         </div>
     </div>

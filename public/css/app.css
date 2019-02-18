@@ -17978,17 +17978,28 @@ readers do not read off random characters that represent icons */
 
 .list-group.list-group-changelogs .list-group-item {
   border: none;
+  margin: 0 0 4px;
+  padding: 6px 10px;
+  background-color: transparent;
+  border-radius: 0;
+  line-height: 1.2;
+}
+.list-group.list-group-changelogs .list-group-item:hover {
+  text-decoration: none;
+}
+.list-group.list-group-platforms .list-group-item {
+  border: none;
   margin: 0;
-  padding: 5px 10px;
+  padding: 7px 10px;
   background-color: transparent;
   border-radius: 0;
 }
-.list-group.list-group-changelogs .list-group-item.active {
-  color: #444;
-  background: #ddd;
+.list-group.list-group-platforms .list-group-item:hover {
+  text-decoration: none;
 }
-.list-group.list-group-changelogs .list-group-item:hover {
-  background-color: #eee;
+.list-group.list-group-platforms .list-group-item.active, .list-group.list-group-platforms .list-group-item.active:hover {
+  background-color: #0098df;
+  color: #fff;
 }
 
 .btn {
@@ -19035,11 +19046,17 @@ h1 {
 .white .flight-set .flight p.build {
   color: #333;
 }
+.white .list-group.list-group-changelogs .list-group-item {
+  background-color: #f8f8f8;
+}
 .white .list-group.list-group-changelogs .list-group-item.active {
   color: #333;
   background: #f0f0f0;
 }
 .white .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #f0f0f0;
+}
+.white .list-group.list-group-platforms .list-group-item:hover, .white .list-group.list-group-platforms .list-group-item:hover:not(.active) {
   background-color: #f8f8f8;
 }
 .white .pagination .page-item .page-link {
@@ -19233,11 +19250,17 @@ h1 {
 .light .flight-set .flight p.build {
   color: #000;
 }
+.light .list-group.list-group-changelogs .list-group-item {
+  background-color: #ddd;
+}
 .light .list-group.list-group-changelogs .list-group-item.active {
   color: #000;
   background: #d6d6d6;
 }
 .light .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #d6d6d6;
+}
+.light .list-group.list-group-platforms .list-group-item:hover, .light .list-group.list-group-platforms .list-group-item:hover:not(.active) {
   background-color: #ddd;
 }
 .light .pagination .page-item .page-link {
@@ -19431,11 +19454,17 @@ h1 {
 .dark .flight-set .flight p.build {
   color: #fff;
 }
+.dark .list-group.list-group-changelogs .list-group-item {
+  background-color: #212121;
+}
 .dark .list-group.list-group-changelogs .list-group-item.active {
   color: #fff;
   background: #2f2f2f;
 }
 .dark .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #2f2f2f;
+}
+.dark .list-group.list-group-platforms .list-group-item:hover, .dark .list-group.list-group-platforms .list-group-item:hover:not(.active) {
   background-color: #212121;
 }
 .dark .pagination .page-item .page-link {
@@ -19629,11 +19658,17 @@ h1 {
 .black .flight-set .flight p.build {
   color: #fff;
 }
+.black .list-group.list-group-changelogs .list-group-item {
+  background-color: #101010;
+}
 .black .list-group.list-group-changelogs .list-group-item.active {
   color: #fff;
   background: #1d1d1d;
 }
 .black .list-group.list-group-changelogs .list-group-item:hover {
+  background-color: #1d1d1d;
+}
+.black .list-group.list-group-platforms .list-group-item:hover, .black .list-group.list-group-platforms .list-group-item:hover:not(.active) {
   background-color: #101010;
 }
 .black .pagination .page-item .page-link {
