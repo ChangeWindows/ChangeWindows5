@@ -7,7 +7,7 @@
         $header = 210;
     } else if (Auth::user()->theme == 2) {
         $theme = 'dark';
-        $header = 47;
+        $header = 29;
     } else if (Auth::user()->theme == 3) {
         $theme = 'black';
         $header = 21;

@@ -4,7 +4,7 @@
  * Licensed under AGPL
  */
 /*!
- * Bootstrap v4.3.0 (https://getbootstrap.com/)
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -19313,14 +19313,14 @@ h1 {
 }
 
 .dark {
-  background: #262626;
+  background: #292929;
   color: #fff;
 }
 .dark .navbg {
-  background: #2f2f2f;
+  background: #1d1d1d;
 }
 .dark .jumbotron {
-  background-color: #2f2f2f !important;
+  background-color: #1d1d1d !important;
   color: #fff;
 }
 .dark .jumbotron h2 small a {
@@ -19330,16 +19330,16 @@ h1 {
   color: #fff;
 }
 .dark .tile, .dark .btn-vnext {
-  background-color: #2f2f2f;
+  background-color: #1d1d1d;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
-    background-color: rgba(47, 47, 47, 0.8) !important;
+    background-color: rgba(29, 29, 29, 0.8) !important;
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .navbar.bg-cw {
-    background-color: #2f2f2f !important;
+    background-color: #1d1d1d !important;
   }
 }
 .dark .navbar .navbar-brand {
@@ -19349,7 +19349,7 @@ h1 {
   color: #fff !important;
 }
 .dark .navbar .navbar-toggler {
-  background-color: rgba(47, 47, 47, 0.1);
+  background-color: rgba(29, 29, 29, 0.1);
 }
 .dark .nav .nav-link {
   color: #fff;
@@ -19362,12 +19362,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .dropdown-menu {
-    background-color: rgba(47, 47, 47, 0.8);
+    background-color: rgba(29, 29, 29, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .dropdown-menu {
-    background-color: #2f2f2f;
+    background-color: #1d1d1d;
   }
 }
 .dark .dropdown-menu .dropdown-divider {
@@ -19387,16 +19387,16 @@ h1 {
 }
 .dark .dropdown-menu .dropdown-item:focus {
   color: #fff;
-  background: rgba(47, 47, 47, 0.1);
+  background: rgba(29, 29, 29, 0.1);
 }
 .dark .timeline .timeline-row:nth-child(odd) {
-  background-color: #262626;
+  background-color: #292929;
 }
 .dark .timeline .timeline-row:nth-child(even) {
-  background-color: #2f2f2f;
+  background-color: #212121;
 }
 .dark .timeline .timeline-row:hover {
-  background-color: #353535;
+  background-color: #2f2f2f;
 }
 .dark .timeline .timeline-row a.row .build {
   color: #fff;
@@ -19411,19 +19411,19 @@ h1 {
   color: #fff !important;
 }
 .dark .milestone {
-  border-color: #2f2f2f;
+  border-color: #1d1d1d;
 }
 .dark .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .dark .release-notes h3 {
-  border-bottom-color: #2f2f2f;
+  border-bottom-color: #1d1d1d;
 }
 .dark .release-notes p {
-  border-left-color: #2f2f2f;
+  border-left-color: #1d1d1d;
 }
 .dark .flight-set {
-  border-color: #2f2f2f;
+  border-color: #1d1d1d;
 }
 .dark .flight-set:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
@@ -19433,10 +19433,10 @@ h1 {
 }
 .dark .list-group.list-group-changelogs .list-group-item.active {
   color: #fff;
-  background: #353535;
+  background: #2f2f2f;
 }
 .dark .list-group.list-group-changelogs .list-group-item:hover {
-  background-color: #2f2f2f;
+  background-color: #212121;
 }
 .dark .pagination .page-item .page-link {
   color: #fff;
@@ -19452,12 +19452,12 @@ h1 {
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .modal .modal-content .modal-header {
-    background: rgba(47, 47, 47, 0.8);
+    background: rgba(29, 29, 29, 0.8);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .modal .modal-content .modal-header {
-    background: #2f2f2f;
+    background: #1d1d1d;
   }
 }
 .dark .modal .modal-content .modal-header .close {
@@ -19470,7 +19470,7 @@ h1 {
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .dark .modal .modal-content .modal-body {
-    background: #262626;
+    background: #292929;
   }
 }
 .dark .lifecycle-stats h5 {
@@ -19480,9 +19480,9 @@ h1 {
   color: #fff;
 }
 .dark .form-control {
-  background-color: #262626;
+  background-color: #292929;
   color: #fff;
-  border-color: #2f2f2f;
+  border-color: #1d1d1d;
 }
 .dark .form-control:focus {
   border-color: #0098df;
@@ -19495,19 +19495,19 @@ h1 {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .dark .buildfeed .bf .bf-header {
-  background-color: #2f2f2f;
+  background-color: #1d1d1d;
 }
 .dark .buildfeed .bf .bf-body {
-  background-color: #2f2f2f;
+  background-color: #212121;
 }
 .dark .patron {
-  border-color: #444;
+  border-color: #363636;
 }
 .dark .patron .header {
   color: #000;
 }
 .dark hr {
-  border-color: #444;
+  border-color: #363636;
 }
 
 .black {
@@ -19591,7 +19591,7 @@ h1 {
   background-color: #000;
 }
 .black .timeline .timeline-row:nth-child(even) {
-  background-color: #151515;
+  background-color: #101010;
 }
 .black .timeline .timeline-row:hover {
   background-color: #1d1d1d;
@@ -19634,7 +19634,7 @@ h1 {
   background: #1d1d1d;
 }
 .black .list-group.list-group-changelogs .list-group-item:hover {
-  background-color: #151515;
+  background-color: #101010;
 }
 .black .pagination .page-item .page-link {
   color: #fff;
@@ -19696,7 +19696,7 @@ h1 {
   background-color: #151515;
 }
 .black .buildfeed .bf .bf-body {
-  background-color: #151515;
+  background-color: #101010;
 }
 .black .patron {
   border-color: #222;
