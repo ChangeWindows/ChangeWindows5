@@ -66,7 +66,7 @@ class ChangelogController extends Controller
             'changelog' => request()->get('changelog')
         ]);
 
-        Twitter::postTweet(['status' => 'Info on build '.$string['build'].' for '.getPlatformById(request()->get('platform')).' is now available! #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.request()->get('platform'), 'format' => 'json']);
+        Twitter::postTweet(['status' => 'Info on build '.$string['build'].' for '.getPlatformById(request()->get('platform')).' is now available! #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.request()->get('platform').'#'.$string['delta'], 'format' => 'json']);
 
         return redirect('/changelog');
     }

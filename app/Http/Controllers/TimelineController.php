@@ -115,7 +115,7 @@ class TimelineController extends Controller
             }
 
             if (request()->get('tweet')) {
-                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to the '.implode(', ', $rings).'. #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform), 'format' => 'json']);
+                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to the '.implode(', ', $rings).'. #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
             }
         }
 
