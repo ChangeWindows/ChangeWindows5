@@ -214,6 +214,9 @@
                                     <input type="date" class="form-control" id="release" name="release" aria-describedby="release" placeholder="Date">
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="tweet" name="tweet" value="1" checked="checked"><label class="custom-control-label" for="tweet"> Tweet this</label></label></div>
+                            </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label extra-margin">PC</label>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f11" name="flight[1][1]" value="1"><label class="custom-control-label" for="f11"><span class="label skip">Skip Ahead</span></label></label></div>
