@@ -15,6 +15,56 @@ function getRingById($id) {
     }
 }
 
+function getTweetRingById($id, $platform) {
+    switch ($id) {
+        case 0:
+            return 'Leak';
+        case 1:
+            return 'Skip Ahead';
+        case 2:
+            switch ($platform) {
+                case 3:
+                    return 'Alpha';
+                default:
+                    return 'Fast Active';
+            }
+        case 3:
+            switch ($platform) {
+                case 3:
+                    return 'Beta';
+                case 1:
+                case 2:
+                case 5:
+                    return 'Slow';
+            }
+        case 4:
+            return 'Delta';
+        case 5:
+            switch ($platform) {
+                case 3:
+                    return 'Omega';
+                default:
+                    return 'Release Preview';
+            }
+        case 6:
+            switch ($platform) {
+                case 3:
+                    return 'Production';
+                case 8:
+                case 9:
+                    return 'Public';
+                default:
+                    return 'SAC Targeted';
+            }
+        case 7:
+            return 'SAC Broad';
+        case 8:
+            return 'LTSC';
+        default:
+            return;
+    }
+}
+
 function getRingClassById($id) {
     switch ($id) {
         case 0:     return 'leak';

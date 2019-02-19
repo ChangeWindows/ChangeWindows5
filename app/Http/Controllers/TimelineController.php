@@ -111,7 +111,7 @@ class TimelineController extends Controller
                     'date' => request()->get('release')
                 ]);
 
-                array_push($rings, getRingById($value));
+                array_push($rings, getTweetRingById($value, $platform));
             }
 
             if ($platform === 3) {
@@ -120,8 +120,11 @@ class TimelineController extends Controller
                 $hashtags = '#Windows #WindowsInsiders';
             }
 
+            $ring_list = implode(', ', $rings);
+            $ring_list = substr_replace($ring_list, ' and', strrpos($ring_list, ','), 1);
+
             if (request()->get('tweet')) {
-                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to the '.implode(', ', $rings).'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.$ring_list.'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
             }
         }
 
