@@ -114,8 +114,14 @@ class TimelineController extends Controller
                 array_push($rings, getRingById($value));
             }
 
+            if ($platform === 3) {
+                $hashtags = '#Xbox #XboxInsider';
+            } else {
+                $hashtags = '#Windows #WindowsInsiders';
+            }
+
             if (request()->get('tweet')) {
-                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to the '.implode(', ', $rings).'. #Windows #WindowsInsiders https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to the '.implode(', ', $rings).'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
             }
         }
 
