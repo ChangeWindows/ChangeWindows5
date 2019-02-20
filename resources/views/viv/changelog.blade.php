@@ -19,8 +19,9 @@
     <p>Updates a large set of dependencies</p>
     <p>Changelogs will now show the "This is a recent log" warning when they are less then a day old automatically</p>
     <p>We now use the Font Awesome SVG framework instead of webfonts</p>
-    <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes a typo that showed the vNext changelogs in the browser tabs as "vNExt"</p>
+    <p>Fixes a bug where tweets for published changelogs would not correctly link to the right platform</p>
 </section>
 <section class="release-notes">
     <h3>5.0-alpha.4 <small>14 February 2019</small></h3>
@@ -44,7 +45,7 @@
     <p>The White-theme has a slightly darker header</p>
     <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
     <p>Removes support for non-Windows 10 releases</p>
-    <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>We fixed the spelling mistake in the BuildFeed promotional highlight image</p>
 </section>
 <section class="release-notes">
@@ -64,12 +65,12 @@
     <p>Management tools have been lifted out of the UI into their own dropdown in the navbar</p>
     <p>Light has been restored as the default theme</p>
     <p>Updated radio and checkbox controls to use a custom design</p>
-    <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Non-Insiders are no longer blocked from visiting the milestone platform details</p>
     <p>Fixes Holographic not showing the Fast Ring in the platform overview for a milestone</p>
     <p>The left and right border of timeline items are no longer not clickable</p>
     <p>When editing a changelog, the editor will now remember the platform instead of requiring it to be set again</p>
-    <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
+    <h4><i class="fal fa-fw fa-bug"></i> Known issues</h4>
     <p>Patrons are currently not listed on About</p>
     <p>ChangeWindows 4 URLs are not compatible with viv</p>
 </section>
@@ -89,13 +90,13 @@
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
     <p>Revamped heading design with transparency and blur (on supported browsers)</p>
     <p>Reversed "Desktop" branding back to "PC" as it should have been</p>
-    <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>When in the profile, the profile menu will now be correctly marked as active</p>
     <p>Modals will no longer appear below the navbar</p>
     <p>The timeline sidebar no longer shows updates from older milestones as the current build</p>
     <p>Hero images now no longer appear to have no rounded corners at the bottom</p>
     <p>Removed instances where "Holographic" was incorrectly referred to as "Mixed Reality"</p>
-    <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
+    <h4><i class="fal fa-fw fa-bug"></i> Known issues</h4>
     <p>The left and right border of timeline items are not clickable</p>
     <p>Patrons are currently not listed on About</p>
     <p>ChangeWindows 4 URLs are not compatible with viv</p>
@@ -116,7 +117,7 @@
     <h4><i class="fal fa-fw fa-trash-alt"></i> Removed</h4>
     <p>A number of ChangeWindows 4 features are currently not available but will return</p>
     <p>You can no longer change the grouping in the timeline</p>
-    <h4><i class="fal fa-fw fa-exclamation-triangle"></i> Known issues</h4>
+    <h4><i class="fal fa-fw fa-bug"></i> Known issues</h4>
     <p>Tiles on the timeline show a hover effect but aren't yet clickable</p>
     <p>Patrons are currently not listed on About</p>
     <p>ChangeWindows 4 URLs are not compatible with viv</p>
