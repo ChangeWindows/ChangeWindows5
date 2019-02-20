@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('title') New changelog @endsection
 
+@section('scripts')
+<script>
+var simplemde = new SimpleMDE({ element: document.getElementById("changelog") });
+</script>
+@endsection
+
 @section('hero')
 <div class="jumbotron">
     <div class="container">

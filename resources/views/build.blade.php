@@ -43,6 +43,12 @@
                 </div>
 
                 @if (array_key_exists('changelog', $info))
+                    @if ($info['created'] > $info['new'])
+                        <div class="alert alert-warning text-center">
+                            <h4 class="alert-heading"><i class="fal fa-fw fa-exclamation-triangle"></i> This changelog is about a recently release build</h4>
+                            This is a draft and will be updated regularly over the next couple of hours.
+                        </div>
+                    @endif
                     {!! $parsedown->text($info['changelog']) !!}
                 @else
                     @if (Auth::user() && Auth::user()->hasAnyRole(['Admin']))

@@ -33,6 +33,6 @@ class vNextController extends Controller
         $changelog->changelog = request()->get('changelog');
         $changelog->save();
 
-        return redirect('/vnext/'.$platform);
+        return redirect('/vnext/'.getPlatformClass($platform));
     }
 }
