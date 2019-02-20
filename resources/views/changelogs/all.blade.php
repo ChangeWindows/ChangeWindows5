@@ -46,7 +46,7 @@
                 <a href="{{ route('editChangelog', [$changelog->id]) }}" class="list-group-item">
                     {{ $changelog->build }}.{{ $changelog->delta }} &middot; {{ getPlatformById($changelog->platform) }}
                     <br />
-                    <small>Last updated: {{ $changelog->updated_at }}</small>
+                    <small>Updated: {{ Carbon\Carbon::parse($changelog->created_at)->format('d F Y H:i:s') }}</small>
                 </a>
             @endforeach
         </div>
