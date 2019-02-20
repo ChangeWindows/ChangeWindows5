@@ -7,7 +7,7 @@
     <h3>5.0-beta.1 <small>March 2019</small></h3>
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
     <p>Sending out tweets after adding a flight is now optional <span class="badge badge-warning">Admin</span></p>
-    <p>An "All" fitler has been added to the changelog overview <span class="badge badge-warning">Admin</span></p>
+    <p>An "All" filter has been added to the changelog overview <span class="badge badge-warning">Admin</span></p>
     <p>Adds a Markdown editor for editing changelogs and vNext logs <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
     <p>Tweets for flights and changelogs will now link directly to the relevant delta</p>
@@ -19,6 +19,8 @@
     <p>Updates a large set of dependencies</p>
     <p>Changelogs will now show the "This is a recent log" warning when they are less then a day old automatically</p>
     <p>We now use the Font Awesome SVG framework instead of webfonts</p>
+    <h4><i class="fal fa-fw fa-bug"></i> Fixed</h4>
+    <p>Fixes a typo that showed the vNext changelogs in the browser tabs as "vNExt"</p>
 </section>
 <section class="release-notes">
     <h3>5.0-alpha.4 <small>14 February 2019</small></h3>

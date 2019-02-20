@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title') vNExt @endsection
+@section('title') vNext @endsection
 
 @section('toolset')
 <a class="dropdown-item" href="{{ route('editVNext', ['platform_id' => $changelog->id]) }}"><i class="fal fa-fw fa-pencil"></i> Edit vNext</a>
