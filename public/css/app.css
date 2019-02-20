@@ -18100,9 +18100,9 @@ readers do not read off random characters that represent icons */
   opacity: 1;
 }
 .navbar .navbar-brand img {
-  max-height: 18px;
+  max-height: 26px;
   width: auto;
-  margin-top: -3px;
+  margin: -4px;
 }
 @media all and (max-width: 700px) {
   .navbar .navbar-brand .title {

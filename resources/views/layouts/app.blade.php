@@ -49,7 +49,7 @@
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
-                    <img src="{{ Auth::check() && Auth::user()->theme >= 2 ? asset('img/logo_white.png') : asset('img/logo_black.png') }}" />
+                    <img src="{{ Auth::check() && Auth::user()->theme >= 2 ? asset('img/logo_white.png') : asset('img/logo_blue.png') }}" />
                     <span class="title"><span class="font-light">viv</span></span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
