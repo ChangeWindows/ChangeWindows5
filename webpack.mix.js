@@ -14,6 +14,8 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
    .copy('node_modules/@fortawesome/fontawesome-pro/webfonts/fa-light-300.*', 'public/webfonts/')
    .copy('node_modules/@fortawesome/fontawesome-pro/webfonts/fa-brands-400.*', 'public/webfonts/')
+   .copy('node_modules/simplemde/dist/simplemde.min.js', 'public/js')
+   .copy('node_modules/simplemde/dist/simplemde.min.css', 'public/css')
    .sass('resources/sass/app.scss', 'public/css')
       .options({
          processCssUrls: false

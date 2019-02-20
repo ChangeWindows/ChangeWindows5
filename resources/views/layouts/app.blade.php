@@ -26,6 +26,7 @@
 
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
         <link rel="shortcut icon" href="{{{ asset('img/favicon.png') }}}">
 
@@ -153,5 +154,7 @@
 			})();
 		</script>
 		<!-- End Matomo Code -->
+
+        @yield('scripts')
     </body>
 </html>

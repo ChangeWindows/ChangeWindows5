@@ -10,5 +10,7 @@
     "/webfonts/fa-brands-400.svg": "/webfonts/fa-brands-400.svg",
     "/webfonts/fa-brands-400.ttf": "/webfonts/fa-brands-400.ttf",
     "/webfonts/fa-brands-400.woff": "/webfonts/fa-brands-400.woff",
-    "/webfonts/fa-brands-400.woff2": "/webfonts/fa-brands-400.woff2"
+    "/webfonts/fa-brands-400.woff2": "/webfonts/fa-brands-400.woff2",
+    "/js/simplemde.min.js": "/js/simplemde.min.js",
+    "/css/simplemde.min.css": "/css/simplemde.min.css"
 }

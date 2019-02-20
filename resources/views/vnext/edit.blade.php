@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('title') vNext @endsection
 
+@section('scripts')
+<script>
+var simplemde = new SimpleMDE({ element: document.getElementById("changelog") });
+</script>
+@endsection
+
 @section('hero')
 <div class="jumbotron">
     <div class="container">
@@ -23,13 +29,12 @@
         {{ csrf_field() }}
         <div class="row">
             <div class="col-12">
-                <div class="form-group">
-                    <label for="changelog">Changelog</label>
-                    <textarea class="form-control text-monospace" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="30">{{ $changelog->changelog }}</textarea>
-                </div>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-check"></i> Save</button>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-check"></i> Save</button>
+                <div class="form-group">
+                    <textarea class="form-control text-monospace" id="changelog" name="changelog" aria-describedby="changelog" placeholder="Changelog" rows="30">{{ $changelog->changelog }}</textarea>
+                </div>
             </div>
         </div>
     </div>
