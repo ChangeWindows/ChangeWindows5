@@ -136,7 +136,7 @@
         </div>
         <footer class="text-center">
             <hr />
-            <span class="font-uppercase font-light">Change</span><span class="font-uppercase font-bold">Windows</span> <span class="font-light">viv</span> {{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
+            <span class="font-light">change</span><span class="font-bold">windows</span> <span class="font-light">viv</span> {{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
         </footer>
         @yield('modals')
 		<!-- Matomo -->

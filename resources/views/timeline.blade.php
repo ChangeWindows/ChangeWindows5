@@ -17,8 +17,8 @@
             <div class="col-lg-8 col-sm-6">
                 <a class="hero hero-preview" href="{{ route('viv') }}">
                     <span class="text">
-                        <span class="h2">viv</span>
-                        <span class="h5">The future of ChangeWindows is coming</span>
+                        <span class="h2">ChangeWindows viv</span>
+                        <span class="h5">Welcome to a brand new ChangeWindows</span>
                     </span>
                 </a>
             </div>
