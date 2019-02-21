@@ -36,6 +36,8 @@ function getTweetRingById($id, $platform) {
                 case 2:
                 case 5:
                     return 'Slow';
+                default:
+                    return 'Preview';
             }
         case 4:
             return 'Delta';
