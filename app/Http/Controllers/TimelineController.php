@@ -161,7 +161,7 @@ class TimelineController extends Controller
             if (array_key_exists($changelog->delta, $notes)) {
                 $notes[$changelog->delta]['changelog'] = $changelog->changelog;
                 $notes[$changelog->delta]['created'] = $changelog->created_at;
-                $notes[$changelog->delta]['new'] = $changelog->created_at->subDay();
+                $notes[$changelog->delta]['new'] = $changelog->created_at->addDay();
             }
         }
 
