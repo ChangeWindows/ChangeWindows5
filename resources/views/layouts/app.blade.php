@@ -31,7 +31,7 @@
         <script src="{{ asset('js/fontawesome.min.js') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
-        <link rel="shortcut icon" href="{{{ asset('img/logo_blue.png') }}}">
+        <link rel="shortcut icon" href="{{{ asset('img/favicon.png?v3') }}}">
 
         <meta name="format-detection" content="telephone=no">
         
