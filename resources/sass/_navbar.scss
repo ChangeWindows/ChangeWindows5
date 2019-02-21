@@ -51,7 +51,7 @@
     }
 
     .navbar-brand {
-        padding: 9px 0 !important;
+        padding: 6px 0 12px !important;
         
         &:hover {
             opacity: .8;
@@ -65,7 +65,7 @@
         img {
             max-height: 26px;
             width: auto;
-            margin: -4px;
+            margin: 0;
         }
 
         @media all and (max-width:700px) {
