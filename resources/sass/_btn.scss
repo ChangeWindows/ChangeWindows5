@@ -2,10 +2,6 @@
     border-radius: 0;
     border-color: transparent;
 
-    &:focus {
-        box-shadow: none;
-    }
-
     &.btn-filter {
         background: transparent;
         color: $accent;

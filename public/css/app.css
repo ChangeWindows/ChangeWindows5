@@ -1847,7 +1847,7 @@ pre code {
   background-color: #fff;
   border-color: #80d7ff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 174, 255, 0.25);
+  box-shadow: none;
 }
 .form-control::-webkit-input-placeholder {
   color: #6c757d;
@@ -2305,7 +2305,7 @@ textarea.form-control {
 }
 .btn:focus, .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 174, 255, 0.25);
+  box-shadow: none !important;
 }
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
@@ -3337,7 +3337,7 @@ input[type=button].btn-block {
   background-color: #00aeff;
 }
 .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 0.2rem rgba(0, 174, 255, 0.25);
+  box-shadow: none;
 }
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
   border-color: #80d7ff;
@@ -3520,7 +3520,7 @@ input[type=button].btn-block {
 }
 .custom-file-input:focus ~ .custom-file-label {
   border-color: #80d7ff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 174, 255, 0.25);
+  box-shadow: none;
 }
 .custom-file-input:disabled ~ .custom-file-label {
   background-color: #e9ecef;
@@ -3577,13 +3577,13 @@ input[type=button].btn-block {
   outline: none;
 }
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 174, 255, 0.25);
+  box-shadow: 0 0 0 1px #fff, none;
 }
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 174, 255, 0.25);
+  box-shadow: 0 0 0 1px #fff, none;
 }
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 174, 255, 0.25);
+  box-shadow: 0 0 0 1px #fff, none;
 }
 .custom-range::-moz-focus-outer {
   border: 0;
@@ -9772,8 +9772,22 @@ h3 {
 .form-control {
   border-radius: 0;
 }
-.form-control:focus {
-  box-shadow: none;
+
+.control-label {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: 0 !important;
+}
+.custom-checkbox .custom-control-label::after {
+  background: no-repeat 60%/60% 60%;
 }
 
 .nav {
@@ -9849,9 +9863,6 @@ h3 {
 .btn {
   border-radius: 0;
   border-color: transparent;
-}
-.btn:focus {
-  box-shadow: none;
 }
 .btn.btn-filter {
   background: transparent;

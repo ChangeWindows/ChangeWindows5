@@ -1,7 +1,25 @@
 .form-control {
     border-radius: 0;
+}
 
-    &:focus {
-        box-shadow: none;
+.control-label {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.custom-checkbox {
+    .custom-control-label {
+        &::before {
+            border-radius: 0 !important;
+        }
+    
+        &::after {
+            background: no-repeat 60%/60% 60%;
+        }
     }
 }
