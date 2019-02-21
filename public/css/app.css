@@ -9787,7 +9787,7 @@ h3 {
   border-radius: 0 !important;
 }
 .custom-checkbox .custom-control-label::after {
-  background: no-repeat 60%/60% 60%;
+  background: no-repeat 50%/60% 60%;
 }
 
 .nav {
