@@ -24,6 +24,7 @@
     <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes a typo that showed the vNext changelogs in the browser tabs as "vNExt"</p>
     <p>Fixes a bug where tweets for published changelogs would not correctly link to the right platform</p>
+    <p>Fixes an alignment issue with highlights where the images wouldn't be centered properly</p>
 </section>
 <section class="release-notes">
     <h3>5.0-alpha.4 <small>14 February 2019</small></h3>
