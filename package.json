@@ -18,8 +18,8 @@
         "laravel-mix": "4.0.14",
         "lodash": "4.17.11",
         "popper.js": "1.14.7",
-        "sass": "1.17.0",
+        "sass": "1.17.1",
         "sass-loader": "7.1.0",
-        "vue-template-compiler": "2.6.6"
+        "vue-template-compiler": "2.6.7"
     }
 }
