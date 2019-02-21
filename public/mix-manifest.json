@@ -1,14 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/webfonts/fa-light-300.eot": "/webfonts/fa-light-300.eot",
-    "/webfonts/fa-light-300.svg": "/webfonts/fa-light-300.svg",
-    "/webfonts/fa-light-300.ttf": "/webfonts/fa-light-300.ttf",
-    "/webfonts/fa-light-300.woff": "/webfonts/fa-light-300.woff",
-    "/webfonts/fa-light-300.woff2": "/webfonts/fa-light-300.woff2",
-    "/webfonts/fa-brands-400.eot": "/webfonts/fa-brands-400.eot",
-    "/webfonts/fa-brands-400.svg": "/webfonts/fa-brands-400.svg",
-    "/webfonts/fa-brands-400.ttf": "/webfonts/fa-brands-400.ttf",
-    "/webfonts/fa-brands-400.woff": "/webfonts/fa-brands-400.woff",
-    "/webfonts/fa-brands-400.woff2": "/webfonts/fa-brands-400.woff2"
+    "/js/light.min.js": "/js/light.min.js",
+    "/js/brands.min.js": "/js/brands.min.js",
+    "/js/fontawesome.min.js": "/js/fontawesome.min.js"
 }

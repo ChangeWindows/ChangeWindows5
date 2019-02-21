@@ -13,4 +13,6 @@ npm-debug.log
 yarn-error.log
 *.env
 .phpunit.result.cache
-/public/webfonts
+/public/js/brands.min.js
+/public/js/light.min.js
+/public/js/fontawesome.min.js
