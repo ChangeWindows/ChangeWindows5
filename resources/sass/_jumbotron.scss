@@ -17,6 +17,10 @@
         padding-bottom: 4px;
     }
 
+    h1 {
+        font-weight: 700;
+    }
+
     h2 {
         font-weight: 700;
         margin: 0;
@@ -81,5 +85,30 @@
 
     .btn-toolbar {
         margin-top: 20px;
+    }
+
+    &.insider {
+        color: #fff !important;
+        margin-top: 10px;
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .row {
+            margin-top: 15px;
+        }
+        
+        &.gold {
+            background-color: $yellow !important;
+        }
+        
+        &.silver {
+            background-color: #9eacbd !important;
+        }
+        
+        &.bronze {
+            background-color: #cd7f32 !important;
+        }
     }
 }
