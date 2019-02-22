@@ -138,15 +138,26 @@ class TimelineController extends Controller
         $cur_build = $build;
         $platform_id = $platform === null ? 1 : getPlatformIdByClass($platform);
 
+        $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
+
+        if ($platforms->count() < 1) {
+            abort(404);
+        }
+
         if ($platform) {
             $releases = Release::where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
+            
+            if ($releases->count() < 1) {
+                $platform_id = $platforms[0]->platform;
+                $releases = Release::where('build', $cur_build)->where('platform', $platforms[0]->platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
+            }
         } else {
+            $platform_id = $platforms[0]->platform;
             $releases = Release::where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
         }
 
-        $milestone = $releases[0]->ms;
 
-        $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
+        $milestone = $releases[0]->ms;
 
         $changelogs = Changelog::where('build', $cur_build)->where('platform', $platform_id)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get()->keyBy('delta');
 
