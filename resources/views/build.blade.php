@@ -24,7 +24,7 @@
     <div class="col-lg-8">
         <div class="changelog">
             @foreach ($notes as $delta => $info)
-                <h2 class="date-heading text-accent">{{ $meta->major }}.{{ $meta->minor }}.{{ $meta->build }}.{{ $delta }}</h2>
+                <h2 class="date-heading text-accent" id="{{ $delta }}">{{ $meta->major }}.{{ $meta->minor }}.{{ $meta->build }}.{{ $delta }}</h2>
                 <div class="date-box">
                     @php
                         $first = false;
