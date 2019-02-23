@@ -53,8 +53,6 @@ Route::patch('/users/{id}/promote', 'UserController@promote')->name('promoteUser
 Route::patch('/users/{id}/demote', 'UserController@demote')->name('demoteUser');
 Route::delete('/users/{id}', 'UserController@destroy')->name('deleteUser');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/viv', 'VivController@index')->name('viv');
 Route::get('/viv/terms', 'VivController@terms')->name('vivTerms');
 Route::get('/viv/changelog', 'VivController@changelog')->name('vivChangelog');
