@@ -29,7 +29,7 @@ class Release extends Model implements Feedable
     }
 
     public static function getFeedItems() {
-        return Release::all();
+        return Release::orderBy('date', 'desc')->limit(100)->get();
     }
 
     public function ms() {
