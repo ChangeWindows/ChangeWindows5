@@ -9916,6 +9916,7 @@ h3 {
 }
 .navbar .nav-item {
   padding: 6px 0;
+  margin-right: 20px;
 }
 .navbar .nav-item.active .nav-link {
   background: transparent;
@@ -9926,12 +9927,11 @@ h3 {
 .navbar .nav-item.active .nav-link:hover {
   opacity: 1;
 }
-.navbar .nav-item.nav-login .nav-link {
+.navbar .nav-item.nav-login {
   margin-right: 0;
 }
 .navbar .nav-item .nav-link {
   padding: 3px 0 !important;
-  margin-right: 20px;
   opacity: 0.6;
   transition: 0.1s ease-in-out;
   border-bottom: 2px solid transparent;

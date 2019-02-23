@@ -11,6 +11,7 @@
     
     .nav-item {
         padding: 6px 0;
+        margin-right: 20px;
 
         &.active {
             .nav-link {
@@ -26,14 +27,11 @@
         }
 
         &.nav-login {
-            .nav-link {
-                margin-right: 0;
-            }
+            margin-right: 0;
         }
     
         .nav-link {
             padding: 3px 0 !important;
-            margin-right: 20px;
             opacity: .6;
             transition: .1s ease-in-out;
             border-bottom: 2px solid transparent;
