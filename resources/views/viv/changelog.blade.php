@@ -6,6 +6,7 @@
 <section class="release-notes">
     <h3>5.0-beta.1 <small>March 2019</small></h3>
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+    <p>An RSS feed is now available to track all flights on ChangeWindows</p>
     <p>Sending out tweets after adding a flight is now optional <span class="badge badge-warning">Admin</span></p>
     <p>An "All" filter has been added to the changelog overview <span class="badge badge-warning">Admin</span></p>
     <p>Adds a Markdown editor for editing changelogs and vNext logs <span class="badge badge-warning">Admin</span></p>

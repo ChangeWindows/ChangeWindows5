@@ -12,6 +12,7 @@
 */
 
 Auth::routes();
+Route::feeds();
 
 Route::get('/', 'TimelineController@index')->name('timeline');
 Route::post('/build', 'TimelineController@store')->name('storeRelease');

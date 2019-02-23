@@ -23,6 +23,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>@yield('title') &middot; ChangeWindows</title>
+        @include('feed::links')
 
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -78,6 +79,9 @@
                                 More <i class="fal fa-fw fa-angle-down"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <h6 class="dropdown-header">RSS</h6>
+                                <a class="dropdown-item" href="/feed"><i class="fal fa-fw fa-rss-square"></i> Flight feed</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
                                 <div class="dropdown-divider d-block d-sm-none"></div>
                                 <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>

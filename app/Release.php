@@ -3,16 +3,34 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 use Carbon\Carbon;
 use App\Milestone;
 
-class Release extends Model
+class Release extends Model implements Feedable
 {
     protected $table = 'releases';
 
     protected $dates = ['created_at', 'updated_at', 'date'];
 
     protected $fillable = array('major', 'minor', 'build', 'delta', 'milestone', 'platform', 'ring', 'date');
+
+    public function toFeedItem()
+    {
+        return FeedItem::create([
+            'id' => $this->build,
+            'title' => $this->build.'.'.$this->delta.' for '.getPlatformById($this->platform).' in '.getRingById($this->ring),
+            'summary' => $this->major.'.'.$this->minor.'.'.$this->build.'.'.$this->delta.' for '.getPlatformById($this->platform).' has been released for '.getRingById($this->ring),
+            'updated' => $this->date,
+            'link' => 'https://changewindows.org/build/'.$this->build.'/'.getPlatformClass($this->platform),
+            'author' => 'ChangeWindows'
+        ]);
+    }
+
+    public static function getFeedItems() {
+        return Release::all();
+    }
 
     public function ms() {
         return $this->belongsTo('App\Milestone', 'milestone');
