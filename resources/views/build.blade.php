@@ -67,6 +67,14 @@
         </div>
     </div>
     <div class="col-lg-4">
+        <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
+            <h4 class="text-center" style="color: #{{ $milestone->color }}">
+                <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $milestone->osname }}</span>
+            </h4>
+            <h4 class="text-center" style="color: #{{ $milestone->color }}">
+                version {{ $milestone->version }}
+            </h4>
+        </a>
         <div class="timeline">
             @foreach ($timeline as $date => $builds)
                 <div class="date-heading">{{ $date }}</div>
