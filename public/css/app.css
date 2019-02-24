@@ -9912,6 +9912,45 @@ h3 {
   margin-top: 0;
 }
 
+.btn-patreon {
+  background: #f96854 !important;
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 30px auto;
+}
+.btn-patreon .fa-fw {
+  color: #052d49;
+}
+.btn-patreon:hover {
+  background: #dd4e3e !important;
+}
+.btn-patreon:active {
+  color: #fff;
+}
+.btn-patreon.active:focus {
+  color: #fff !important;
+}
+
+.btn-store {
+  text-align: left;
+  line-height: 1;
+  padding: 0.75rem;
+}
+.btn-store .brand {
+  font-size: 20px;
+  display: block;
+  font-weight: 600;
+}
+.btn-store .ms-store {
+  font-size: 14px;
+  margin-left: 24px;
+  display: block;
+}
+.btn-store .fab {
+  font-weight: 400;
+}
+
 .navbar {
   padding: 0 20px;
 }
@@ -10598,6 +10637,18 @@ h1 {
 .flight-row .flight-block {
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.about-logo {
+  display: block;
+  width: 124px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.about-intro {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .patron {

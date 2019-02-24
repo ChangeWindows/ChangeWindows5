@@ -65,3 +65,49 @@
 .btn-block + .btn-block {
     margin-top: 0;
 }
+
+.btn-patreon {
+    background: #f96854 !important;
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 30px auto;
+
+    .fa-fw {
+        color: #052d49;
+    }
+    
+    &:hover {
+        background: #dd4e3e !important;
+    }
+
+    &:active {
+        color: #fff;
+    }
+
+    &.active:focus {
+        color: #fff !important;
+    }
+}
+
+.btn-store {
+    text-align: left;
+    line-height: 1;
+    padding: .75rem;
+
+    .brand {
+        font-size: 20px;
+        display: block;
+        font-weight: 600;
+    }
+
+    .ms-store {
+        font-size: 14px;
+        margin-left: 24px;
+        display: block;
+    }
+
+    .fab {
+        font-weight: 400;
+    }
+}
