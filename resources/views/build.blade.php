@@ -21,7 +21,7 @@
 
 @section('content')
 <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-9">
         <div class="changelog">
             @foreach ($notes as $delta => $info)
                 <h2 class="date-heading text-accent" id="{{ $delta }}">{{ $meta->major }}.{{ $meta->minor }}.{{ $meta->build }}.{{ $delta }}</h2>
@@ -66,7 +66,15 @@
             @endforeach
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
+        <div class="row row-btn">
+            @if ($previous)
+                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showRelease', ['build' => $previous->build]) }}"><i class="fal fa-fw fa-angle-left"></i> {{ $previous->build }}</a>
+            @endif
+            @if ($next)
+                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showRelease', ['build' => $next->build]) }}">{{ $next->build }} <i class="fal fa-fw fa-angle-right"></i></a>
+            @endif
+        </div>
         <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
             <h4 class="text-center" style="color: #{{ $milestone->color }}">
                 <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $milestone->osname }}</span>

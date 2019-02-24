@@ -176,8 +176,11 @@ class TimelineController extends Controller
             }
         }
 
+        $previous = Release::where('build', '<', $cur_build)->orderBy('build', 'desc')->first();
+        $next = Release::where('build', '>', $cur_build)->orderBy('build', 'asc')->first();
+
         $parsedown = new Parsedown();
 
-        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'parsedown', 'milestone'));
+        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'parsedown', 'milestone', 'next', 'previous'));
     }
 }

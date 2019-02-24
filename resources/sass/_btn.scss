@@ -55,3 +55,13 @@
         }
     }
 }
+
+.row-btn {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 10px;
+}
+
+.btn-block + .btn-block {
+    margin-top: 0;
+}
