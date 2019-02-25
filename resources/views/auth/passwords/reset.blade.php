@@ -16,7 +16,7 @@
             <form method="POST" action="{{ route('password.update') }}" class="login-form">
                 @csrf
 
-                <img class="login-logo" src="{{ asset('img/logo_blue.png') }}" />
+                <img class="login-logo" src="{{ asset('img/logo_color.png') }}" />
                 <input type="hidden" name="token" value="{{ $token }}">
 
                 <label for="email">E-mail address</label>

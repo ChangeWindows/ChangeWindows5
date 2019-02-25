@@ -12396,7 +12396,7 @@ span.CodeMirror-selectedtext {
   background-image: url("../img/header.png");
 }
 .hero.hero-buildfeed {
-  background-image: url("../img/header-buildfeed.png");
+  background-image: url("../img/header_buildfeed.png");
 }
 .hero:hover {
   -webkit-transform: translate(0, -3px);
