@@ -6,6 +6,7 @@
     border: 1px solid transparent;
     transition: all .5s;
     display: block;
+    border-radius: 3px;
         
     &:hover {
         text-decoration: none;
@@ -28,6 +29,7 @@
     display: block;
     padding: 7px 10px 11px;
     line-height: 1.4;
+    border-radius: 3px;
 
     &:hover {
         color: #fff;

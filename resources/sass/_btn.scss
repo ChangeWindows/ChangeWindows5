@@ -1,5 +1,5 @@
 .btn {
-    border-radius: 0;
+    border-radius: 3px;
     border-color: transparent;
 
     &.btn-filter {
@@ -7,14 +7,15 @@
         color: $accent;
         font-weight: 600;
         font-size: .9rem;
+    }
 
-        &:hover,
-        &:active,
-        &:focus,
-        &:active:focus {
-            box-shadow: none;
-            border-color: transparent;
-        }
+    &:hover,
+    &:active,
+    &:focus,
+    &:hover:focus,
+    &:active:focus {
+        box-shadow: none;
+        border-color: transparent;
     }
 }
 

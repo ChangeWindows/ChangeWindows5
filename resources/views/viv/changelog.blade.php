@@ -25,6 +25,7 @@
     <p>We now use the Font Awesome SVG framework instead of webfonts</p>
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
     <p>Introduces our updated logo, branding and accent color</p>
+    <p>Introduces new platform iconography for our timelines</p>
     <p>Revamped design for our Patron highlights</p>
     <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes a typo that showed the vNext changelogs in the browser tabs as "vNExt"</p>

@@ -54,8 +54,8 @@
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
-                    <img src="{{ Auth::check() && Auth::user()->theme >= 2 ? asset('img/logo_white.png') : asset('img/logo_blue.png') }}" />
-                    <span class="title"><span class="font-light">viv</span></span>
+                    <img src="{{ asset('img/logo_blue.png') }}" />
+                    <span class="title"><span class="font-bold">viv</span></span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -143,7 +143,7 @@
         </div>
         <footer class="text-center">
             <hr />
-            <span class="font-light">change</span><span class="font-bold">windows</span> <span class="font-light">viv</span> {{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
+            <span class="font-bold">ChangeWindows viv</span> {{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
         </footer>
         @yield('modals')
 		<!-- Matomo -->

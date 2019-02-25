@@ -4,7 +4,7 @@
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2><span class="font-light">change</span><span class="font-bold">windows</span> <span class="font-light">viv</span></h2>
+        <h2 class="font-bold">ChangeWindows viv</h2>
         <h5>Changing Windows one build at a time</h5>
         <div class="nav-scroll mt-2">
             <nav class="nav">
