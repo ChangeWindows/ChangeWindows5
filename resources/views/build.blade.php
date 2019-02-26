@@ -75,13 +75,13 @@
                 <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showRelease', ['build' => $next->build]) }}">{{ $next->build }} <i class="fal fa-fw fa-angle-right"></i></a>
             @endif
         </div>
-        <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
-            <h4 class="text-center" style="color: #{{ $milestone->color }}">
+        <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}" style="background: #{{ $milestone->color }}">
+            <h4 class="text-center">
                 <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $milestone->osname }}</span>
             </h4>
-            <h4 class="text-center" style="color: #{{ $milestone->color }}">
-                version {{ $milestone->version }}
-            </h4>
+            <h3 class="text-center">
+                {{ $milestone->name }}
+            </h3>
         </a>
         <div class="timeline">
             @foreach ($timeline as $date => $builds)

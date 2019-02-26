@@ -9874,6 +9874,12 @@ h3 {
   box-shadow: none;
   border-color: transparent;
 }
+.btn.col:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.btn.col:last-child {
+  border-radius: 0 3px 3px 0;
+}
 
 .show > .btn-filter.dropdown-toggle {
   background: transparent;
@@ -10760,10 +10766,10 @@ h1 {
   color: #fff;
 }
 .milestone:hover {
+  color: #fff;
   text-decoration: none;
   -webkit-transform: translate(0, -3px);
           transform: translate(0, -3px);
-  color: #fff;
 }
 .milestone h3 {
   margin: 0;
@@ -10779,11 +10785,14 @@ h1 {
   display: block;
   padding: 7px 10px 11px;
   line-height: 1.4;
+  transition: all 0.5s;
   border-radius: 3px;
 }
 .milestone-navigation:hover {
   color: #fff;
   text-decoration: none;
+  -webkit-transform: translate(0, -3px);
+          transform: translate(0, -3px);
 }
 
 @media (max-width: 575px) {

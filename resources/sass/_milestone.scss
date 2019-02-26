@@ -8,9 +8,9 @@
     color: #fff;
         
     &:hover {
+        color: #fff;
         text-decoration: none;
         transform: translate(0, -3px);
-        color: #fff;
     }
             
     h3 {
@@ -29,11 +29,13 @@
     display: block;
     padding: 7px 10px 11px;
     line-height: 1.4;
+    transition: all .5s;
     border-radius: 3px;
 
     &:hover {
         color: #fff;
         text-decoration: none;
+        transform: translate(0, -3px);
     }
 }
 
