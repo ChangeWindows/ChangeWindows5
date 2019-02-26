@@ -4,7 +4,7 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.0-beta.1 <small>March 2019</small></h3>
+    <h3>5.0-beta.1 <small>26 February 2019</small></h3>
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
     <p>Build details now show quick navigation to the previous and next build in the sidebar</p>
     <p>The milestone of any given build can now quickly be accessed from the sidebar</p>
@@ -18,6 +18,8 @@
     <p>The Dark theme has been redesigned and now has a lighter header and darker content area</p>
     <p>Tweets will now include shorter ring names and use platform-specific names</p>
     <p>Updated about page with links to our apps in the Microsoft Store</p>
+    <p>Revamped design for HTTP error pages</p>
+    <p>Various fixes, enhancements and small modifications to our design</p>
     <p>Revamps the changelog management overview UI <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fal fa-fw fa-server"></i> System</h4>
     <p>Updates a large set of dependencies</p>

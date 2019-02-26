@@ -9880,6 +9880,9 @@ h3 {
 .btn.col:last-child {
   border-radius: 0 3px 3px 0;
 }
+.btn.col:last-child:first-child {
+  border-radius: 3px;
+}
 
 .show > .btn-filter.dropdown-toggle {
   background: transparent;
