@@ -62,42 +62,58 @@
             @foreach ($timeline as $build => $rings)
                 <div class="timeline-row">
                     <a class="row" href="{{ route('showRelease', ['build' => explode('.', $build)[0], 'platform' => getPlatformClass($platform_id)]) }}">
-                        <div class="col-6 col-sm-3 col-md-2 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform_id)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform_id) }}" />{{ $build }}</div>
+                        <div class="col-4 col-sm-3 col-md-2 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform_id)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform_id) }}" />{{ $build }}</div>
+                        <div class="col-8 col-sm-9 col-md-10 d-lg-none">
+                            @php
+                                $first = false;
+                            @endphp
+                            @foreach ($rings as $ring => $release)
+                                @if ($first)
+                                    <i class="fal fa-fw fa-angle-right"></i>
+                                @endif
+                                <span class="label {{ getRingClassById($ring) }}">{{ $release }}</span>
+                                @if (!$first)
+                                    @php
+                                        $first = true;
+                                    @endphp
+                                @endif
+                            @endforeach
+                        </div>
                         @if (in_array($platform_id, [1, 3]))
-                        <div class="{{ array_key_exists('1', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('1', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label skip">{{ array_key_exists('1', $rings) ? $rings['1'] : '' }}</span>
                         </div>
                         @endif
                         @if (in_array($platform_id, [1, 2, 3, 5]))
-                        <div class="{{ array_key_exists('2', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('2', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label fast">{{ array_key_exists('2', $rings) ? $rings['2'] : '' }}</span>
                         </div>
                         @endif
                         @if (in_array($platform_id, [1, 2, 3, 4, 5, 6, 7]))
-                        <div class="{{ array_key_exists('3', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('3', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label slow">{{ array_key_exists('3', $rings) ? $rings['3'] : '' }}</span>
                         </div>
                         @endif
                         @if (in_array($platform_id, [3]))
-                        <div class="{{ array_key_exists('4', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('4', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label preview">{{ array_key_exists('4', $rings) ? $rings['4'] : '' }}</span>
                         </div>
                         @endif
                         @if (in_array($platform_id, [1, 2, 3]))
-                        <div class="{{ array_key_exists('5', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('5', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label release">{{ array_key_exists('5', $rings) ? $rings['5'] : '' }}</span>
                         </div>
                         @endif
-                        <div class="{{ array_key_exists('6', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('6', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label targeted">{{ array_key_exists('6', $rings) ? $rings['6'] : '' }}</span>
                         </div>
                         @if (in_array($platform_id, [1, 2, 5, 6, 7]))
-                        <div class="{{ array_key_exists('7', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('7', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label broad">{{ array_key_exists('7', $rings) ? $rings['7'] : '' }}</span>
                         </div>
                         @endif
                         @if (in_array($platform_id, [1, 4, 5]))
-                        <div class="{{ array_key_exists('8', $rings) ? 'col-4 col-sm-3 col-md-2' : 'd-none d-lg-block' }} col-lg ring">
+                        <div class="{{ array_key_exists('8', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label ltsc">{{ array_key_exists('8', $rings) ? $rings['8'] : '' }}</span>
                         </div>
                         @endif
