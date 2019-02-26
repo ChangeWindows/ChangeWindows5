@@ -14,23 +14,10 @@
         <style>
         html {
             line-height: 1.15;
-                -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
         }
 
         body {
             margin: 0;
-        }
-
-        header,
-        nav,
-        section {
-            display: block;
-        }
-
-        figcaption,
-        main {
-            display: block;
         }
 
         a {
@@ -38,213 +25,39 @@
             -webkit-text-decoration-skip: objects;
         }
 
-        strong {
-            font-weight: inherit;
+        .btn {
+            padding: 12px 20px;
+            transition: all .5s;
+            border-radius: 3px;
+            color: #fff;
+            background: #ff4355;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
-
-        strong {
-            font-weight: bolder;
-        }
-
-        code {
-            font-family: monospace, monospace;
-            font-size: 1em;
-        }
-
-        dfn {
-            font-style: italic;
-        }
-
-        svg:not(:root) {
-            overflow: hidden;
-        }
-
-        button,
-        input {
-            font-family: sans-serif;
-            font-size: 100%;
-            line-height: 1.15;
-            margin: 0;
-        }
-
-        button,
-        input {
-            overflow: visible;
-        }
-
-        button {
-            text-transform: none;
-        }
-
-        button,
-        html [type="button"],
-        [type="reset"],
-        [type="submit"] {
-            -webkit-appearance: button;
-        }
-
-        button::-moz-focus-inner,
-        [type="button"]::-moz-focus-inner,
-        [type="reset"]::-moz-focus-inner,
-        [type="submit"]::-moz-focus-inner {
-            border-style: none;
-            padding: 0;
-        }
-
-        button:-moz-focusring,
-        [type="button"]:-moz-focusring,
-        [type="reset"]:-moz-focusring,
-        [type="submit"]:-moz-focusring {
-            outline: 1px dotted ButtonText;
-        }
-
-        legend {
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            color: inherit;
-            display: table;
-            max-width: 100%;
-            padding: 0;
-            white-space: normal;
-        }
-
-        [type="checkbox"],
-        [type="radio"] {
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            padding: 0;
-        }
-
-        [type="number"]::-webkit-inner-spin-button,
-        [type="number"]::-webkit-outer-spin-button {
-            height: auto;
-        }
-
-        [type="search"] {
-            -webkit-appearance: textfield;
-            outline-offset: -2px;
-        }
-
-        [type="search"]::-webkit-search-cancel-button,
-        [type="search"]::-webkit-search-decoration {
-            -webkit-appearance: none;
-        }
-
-        ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            font: inherit;
-        }
-
-        menu {
-            display: block;
-        }
-
-        canvas {
-            display: inline-block;
-        }
-
-        template {
-            display: none;
-        }
-
-        [hidden] {
-            display: none;
+                
+        .btn:hover {
+            color: #fff;
+            text-decoration: none;
+            transform: translate(0, -3px);
         }
 
         html {
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
+            box-sizing: border-box;
             font-family: sans-serif;
-        }
-
-        *,
-        *::before,
-        *::after {
-            -webkit-box-sizing: inherit;
-                    box-sizing: inherit;
         }
 
         p {
             margin: 0;
         }
 
-        button {
-            background: transparent;
-            padding: 0;
-        }
-
-        button:focus {
-            outline: 1px dotted;
-            outline: 5px auto -webkit-focus-ring-color;
-        }
-
-        *,
-        *::before,
-        *::after {
-            border-width: 0;
-            border-style: solid;
-            border-color: #dae1e7;
-        }
-
-        button,
-        [type="button"],
-        [type="reset"],
-        [type="submit"] {
-            border-radius: 0;
-        }
-
-        button,
-        input {
-            font-family: inherit;
-        }
-
-        input::-webkit-input-placeholder {
-            color: inherit;
-            opacity: .5;
-        }
-
-        input:-ms-input-placeholder {
-            color: inherit;
-            opacity: .5;
-        }
-
-        input::-ms-input-placeholder {
-            color: inherit;
-            opacity: .5;
-        }
-
-        input::placeholder {
-            color: inherit;
-            opacity: .5;
-        }
-
-        button,
-        [role=button] {
-            cursor: pointer;
-        }
-
-        .bg-transparent {
-            background-color: transparent;
-        }
-
         .bg-white {
             background-color: #fff;
         }
 
-        .bg-teal-light {
-            background-color: #64d5ca;
-        }
-
-        .bg-blue-dark {
-            background-color: #2779bd;
-        }
-
-        .bg-indigo-light {
-            background-color: #7886d7;
-        }
-
-        .bg-purple-light {
-            background-color: #a779e9;
+        .bg-line {
+            background-color: #ff4355;
         }
 
         .bg-no-repeat {
@@ -253,22 +66,6 @@
 
         .bg-cover {
             background-size: cover;
-        }
-
-        .border-grey-light {
-            border-color: #dae1e7;
-        }
-
-        .hover\:border-grey:hover {
-            border-color: #b8c2cc;
-        }
-
-        .rounded-lg {
-            border-radius: .5rem;
-        }
-
-        .border-2 {
-            border-width: 2px;
         }
 
         .hidden {
@@ -282,31 +79,20 @@
         }
 
         .items-center {
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            align-items: center;
         }
 
         .justify-center {
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            justify-content: center;
         }
 
         .font-sans {
-            font-family: 'Segoe UI';
-        }
-
-        .font-light {
-            font-weight: 300;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
         }
 
         .font-bold {
             font-weight: 700;
-        }
-
-        .font-black {
-            font-weight: 900;
+            color: #333;
         }
 
         .h-1 {
@@ -387,15 +173,6 @@
             font-size: 3rem;
         }
 
-        .uppercase {
-            text-transform: uppercase;
-        }
-
-        .antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
         .tracking-wide {
             letter-spacing: .05em;
         }
@@ -418,8 +195,6 @@
             }
 
             .md\:flex {
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
             }
 
@@ -456,30 +231,26 @@
         }
         </style>
     </head>
-    <body class="antialiased font-sans">
+    <body class="font-sans">
         <div class="md:flex min-h-screen">
             <div class="w-full md:w-1/2 bg-white flex items-center justify-center">
                 <div class="max-w-sm m-8">
-                    <div class="text-black text-5xl md:text-15xl font-bold">
-                        @yield('code', __('Oh no'))
+                    <div class="text-5xl md:text-15xl font-bold">
+                        @yield('code', 'Oh no')
                     </div>
 
-                    <div class="w-16 h-1 bg-blue-dark my-3 md:my-6"></div>
+                    <div class="w-16 h-1 bg-line my-3 md:my-6"></div>
 
-                    <p class="text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal">
+                    <p class="text-grey-darker text-2xl md:text-3xl mb-8 leading-normal">
                         @yield('message')
                     </p>
 
-                    <a href="{{ route('timeline') }}">
-                        <button class="bg-transparent text-grey-darkest font-bold uppercase tracking-wide py-3 px-6 border-2 border-grey-light hover:border-grey rounded-lg">
-                            {{ __('Timeline') }}
-                        </button>
-                    </a>
+                    <a href="{{ route('timeline') }}" class="btn">Timeline</a>
                 </div>
             </div>
 
             <div class="relative pb-full md:flex md:pb-0 md:min-h-screen w-full md:w-1/2">
-                @yield('image')
+                <div style="background-image: url({{ asset('/img/background.png') }});" class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center"></div>
             </div>
         </div>
     </body>
