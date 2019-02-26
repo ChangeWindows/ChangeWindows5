@@ -20,11 +20,11 @@
         <div class="row">
             @foreach ($milestones as $milestone)
                 <div class="col-lg-4 col-md-6 col-12">
-                    <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
-                        <h4 class="text-center" style="color: #{{ $milestone->color }}">
+                    <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}" style="background: #{{ $milestone->color }}">
+                        <h4 class="text-center">
                             <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $milestone->osname }}</span>
                         </h4>
-                        <h3 class="text-center" style="color: #{{ $milestone->color }}">
+                        <h3 class="text-center">
                             {{ $milestone->name }}
                         </h3>
                     </a>
