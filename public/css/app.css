@@ -10104,6 +10104,7 @@ h3 {
 .jumbotron.insider {
   color: #fff !important;
   margin-top: 10px;
+  border-radius: 3px;
 }
 .jumbotron.insider h1 {
   margin-top: 20px;
@@ -10665,6 +10666,7 @@ h1 {
   margin-top: 10px;
   padding: 10px;
   transition: all 0.2s;
+  border-radius: 3px;
 }
 .patron:hover {
   background-color: rgba(255, 255, 255, 0.2);
