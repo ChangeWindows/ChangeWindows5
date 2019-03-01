@@ -1,5 +1,5 @@
 .form-control {
-    border-radius: 0;
+    border-radius: 3px;
 }
 
 .control-label {
@@ -15,7 +15,7 @@
 .custom-checkbox {
     .custom-control-label {
         &::before {
-            border-radius: 0 !important;
+            border-radius: 3px !important;
         }
     
         &::after {

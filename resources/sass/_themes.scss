@@ -209,8 +209,12 @@ $themes: (
         }
         
         .milestone {
-            border-color: map-get($color, background-header);
-            
+            &:hover {
+                box-shadow: 0 4px 10px 0 map-get($color, shadow-hover);
+            }
+        }
+        
+        .milestone-navigation {
             &:hover {
                 box-shadow: 0 4px 10px 0 map-get($color, shadow-hover);
             }

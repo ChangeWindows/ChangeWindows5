@@ -9770,7 +9770,7 @@ h3 {
 }
 
 .form-control {
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 .control-label {
@@ -9784,7 +9784,7 @@ h3 {
 }
 
 .custom-checkbox .custom-control-label::before {
-  border-radius: 0 !important;
+  border-radius: 3px !important;
 }
 .custom-checkbox .custom-control-label::after {
   background: no-repeat 50%/60% 60%;
@@ -10188,7 +10188,7 @@ h3 {
 
 .dropdown-menu {
   border: none;
-  border-radius: 0;
+  border-radius: 3px;
   padding: 5px 0;
   margin-top: 0;
   font-size: 15px;
@@ -11674,10 +11674,10 @@ span.CodeMirror-selectedtext {
 .white .show > .btn-filter.dropdown-toggle .filter-title {
   color: #333 !important;
 }
-.white .milestone {
-  border-color: #eaeaea;
-}
 .white .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.white .milestone-navigation:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .white .release-notes h3 {
@@ -11878,10 +11878,10 @@ span.CodeMirror-selectedtext {
 .light .show > .btn-filter.dropdown-toggle .filter-title {
   color: #000 !important;
 }
-.light .milestone {
-  border-color: #d2d2d2;
-}
 .light .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.light .milestone-navigation:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .light .release-notes h3 {
@@ -12082,10 +12082,10 @@ span.CodeMirror-selectedtext {
 .dark .show > .btn-filter.dropdown-toggle .filter-title {
   color: #fff !important;
 }
-.dark .milestone {
-  border-color: #1d1d1d;
-}
 .dark .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.dark .milestone-navigation:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .dark .release-notes h3 {
@@ -12286,10 +12286,10 @@ span.CodeMirror-selectedtext {
 .black .show > .btn-filter.dropdown-toggle .filter-title {
   color: #fff !important;
 }
-.black .milestone {
-  border-color: #151515;
-}
 .black .milestone:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.black .milestone-navigation:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 .black .release-notes h3 {
