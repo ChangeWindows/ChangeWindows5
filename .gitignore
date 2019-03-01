@@ -16,3 +16,4 @@ yarn-error.log
 /public/js/brands.min.js
 /public/js/light.min.js
 /public/js/fontawesome.min.js
+.npmrc
