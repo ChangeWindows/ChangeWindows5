@@ -79,7 +79,7 @@
                     <div class="col-md-6 col-12">
                         <div class="form-group">
                             <label for="release">Date</label>
-                            <input type="date" class="form-control" id="release" name="release" aria-describedby="release" placeholder="Date">
+                            <input type="date" class="form-control" id="release" name="release" aria-describedby="release" placeholder="Date" value="{{ date('Y-m-d') }}">
                         </div>
                     </div>
                     <div class="col-12">
