@@ -5,7 +5,7 @@
             margin: 0 0 4px;
             padding: 6px 10px;
             background-color: transparent;
-            border-radius: 0;
+            border-radius: 3px;
             line-height: 1.2;
     
             &:hover {
@@ -20,7 +20,7 @@
             margin: 0;
             padding: 7px 10px;
             background-color: transparent;
-            border-radius: 0;
+            border-radius: 3px;
     
             &:hover {
                 text-decoration: none;
@@ -28,7 +28,7 @@
 
             &.active,
             &.active:hover {
-                background-color: $accent;
+                background-color: $accent !important;
                 color: #fff;
             }
         }

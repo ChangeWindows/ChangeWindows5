@@ -9839,7 +9839,7 @@ h3 {
   margin: 0 0 4px;
   padding: 6px 10px;
   background-color: transparent;
-  border-radius: 0;
+  border-radius: 3px;
   line-height: 1.2;
 }
 .list-group.list-group-changelogs .list-group-item:hover {
@@ -9850,13 +9850,13 @@ h3 {
   margin: 0;
   padding: 7px 10px;
   background-color: transparent;
-  border-radius: 0;
+  border-radius: 3px;
 }
 .list-group.list-group-platforms .list-group-item:hover {
   text-decoration: none;
 }
 .list-group.list-group-platforms .list-group-item.active, .list-group.list-group-platforms .list-group-item.active:hover {
-  background-color: #ff4355;
+  background-color: #ff4355 !important;
   color: #fff;
 }
 
@@ -10604,6 +10604,7 @@ h1 {
   margin-right: 0;
   transition: all 0.5s;
   margin-bottom: 10px;
+  border-radius: 3px;
 }
 .flight-set:hover {
   text-decoration: none;
