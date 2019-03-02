@@ -5,9 +5,14 @@
 <h2>What's new</h2>
 <section class="release-notes">
     <h3>5.0-beta.2 <small>March 2019</small></h3>
+    <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
+    <p>When adding a flight, the date will be set to today by default <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
     <p>Tweeting when a new changelog is published has been temporarly disabled</p>
     <p>Improved design consistency</p>
+    <p>Various code cleanup and consistency improvements</p>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where hovering over an active list group would make the text unreadable</p>
 </section>
 <section class="release-notes">
     <h3>5.0-beta.1 <small>26 February 2019</small></h3>

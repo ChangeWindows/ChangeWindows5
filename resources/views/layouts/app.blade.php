@@ -55,7 +55,6 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
                     <img src="{{ asset('img/logo_color.png') }}" />
-                    <span class="title"><span class="font-bold">viv</span></span>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -143,7 +142,7 @@
         </div>
         <footer class="text-center">
             <hr />
-            <span class="font-bold">ChangeWindows viv</span> {{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
+            <span class="font-bold">ChangeWindows</span> {{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
         </footer>
         @yield('modals')
 		<!-- Matomo -->
