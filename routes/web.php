@@ -15,7 +15,6 @@ Auth::routes();
 Route::feeds();
 
 Route::get('/', 'TimelineController@index')->name('timeline');
-Route::post('/build', 'TimelineController@store')->name('storeRelease');
 Route::get('/build/{build}/{platform?}', 'TimelineController@show')->name('showRelease');
 
 Route::get('/changelog/new', 'ChangelogController@create')->name('createChangelog');
@@ -41,6 +40,7 @@ Route::get('/buildfeed/{id}', 'BuildfeedController@show')->name('showBuildfeed')
 
 Route::get('/flight', 'FlightController@index')->name('showFlights');
 Route::get('/flight/{id}', 'FlightController@edit')->name('editFlight');
+Route::post('/flight', 'FlightController@store')->name('storeFlight');
 Route::patch('/flight/{id}', 'FlightController@update')->name('updateFlight');
 Route::delete('/flight/{id}', 'FlightController@destroy')->name('destroyFlight');
 

@@ -33,6 +33,50 @@ class FlightController extends Controller
         return view('flights.edit', compact('flight', 'milestones'));
     }
 
+    public function store(Request $request) {
+        $request->user()->authorizeRoles('Admin');
+        
+        $string = Release::splitString(request()->get('build_string'));
+        $milestone = Release::getMilestoneByString($string);
+
+        foreach(request()->get('flight') as $platform => $ring) {
+            $rings = array();
+
+            foreach($ring as $key => $value) {
+                Release::create([
+                    'major' => $string['major'],
+                    'minor' => $string['minor'],
+                    'build' => $string['build'],
+                    'delta' => $string['delta'],
+                    'milestone' => $milestone,
+                    'platform' => $platform,
+                    'ring' => $value,
+                    'date' => request()->get('release')
+                ]);
+
+                array_push($rings, getTweetRingById($value, $platform));
+            }
+
+            if ($platform === 3) {
+                $hashtags = '#Xbox #XboxInsider';
+            } else {
+                $hashtags = '#Windows #WindowsInsiders';
+            }
+
+            $ring_list = implode(', ', $rings);
+
+            if (count($rings) > 1) {
+                $ring_list = substr_replace($ring_list, ' and', strrpos($ring_list, ','), 1);
+            }
+
+            if (request()->get('tweet')) {
+                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.$ring_list.'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+            }
+        }
+
+        return redirect('/');
+    }
+
     public function update(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
         

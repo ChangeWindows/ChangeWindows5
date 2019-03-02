@@ -200,7 +200,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form method="POST" action="{{ route('storeRelease') }}" class="row row-p-10">
+                        <form method="POST" action="{{ route('storeFlight') }}" class="row row-p-10">
                             {{ csrf_field() }}
                             <div class="col-md-6 col-12">
                                 <div class="form-group">
