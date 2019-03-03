@@ -14,12 +14,51 @@ Changing viv one commit at a time
 </p>
 
 ## About ChangeWindows
-ChangeWindows has been around for as long as the Windows Insider Program has been around and ever since that faitful day on 1 October 2014, our goal has been the same: do what Microsoft doesn't do: document every change we can possibly find in Windows on any platform.
+ChangeWindows does what Microsoft doesn't: document every change we can possibly find in Windows on any platform.
 
 ## Open source
 This repository is a big shift for ChangeWindows from the previous 4 major versions. Not only is this the first time we're publishing the actual source of our website, we're also using for the first time a framework, in this case Laravel, to build our website. Not only because we're lazy, but also because it makes things a lot simpeler and cleaner.
 
-ChangeWindows 5.0 is still in development when you're reading this. Before we put this major revamp of our website online, we want to have reached feature parity with what we currently have, and that will take a while. We have to catch up with over 3,5 year of development, which will probably take a couple of months.
+## Using
+To run ChangeWindows, you'll need the following:
+
+* PHP 7.1.3 or higher, including extensions required by Laravel 5.7
+* MySQL
+* Composer
+* NPM
+
+### Setup
+Clone this repository to any given directory and setup the `.env` file with all required parameters. An example of an `.env` file can be found in `.env.example`. Then execute the following commands.
+
+```
+composer install
+npm install
+php artisan migrate
+php artisan db:seed
+```
+
+To run ChangeWindows, use the following command:
+
+```
+php artisan serve
+```
+
+This will launch a server at `127.0.0.1:8000`. Also run this NPM command.
+
+```
+npm run watch
+```
+
+This will compile various files, mostly SCSS and keep an eye out for changes.
+
+### Login details
+After migrating and seeding the database, there will be 3 accounts from the start.
+
+| Name | Email | Role | Password |
+| ---- | ----- | ---- | -------- |
+| Yannick | yannick@changewindows.org | Admin | secret |
+| Viv | viv@changewindows.org | Insider | secret |
+| Tom | tom@changewindows.org | User | secret |
 
 ## Contributing
 We are open to contributions to ChangeWindows. Do you have a feature that you really want to see but we are not spending any time on it ourselves? Feel free to open a pull request for it!

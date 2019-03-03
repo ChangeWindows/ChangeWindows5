@@ -4,6 +4,11 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.0-rc.1 <small>March 2019</small></h3>
+    <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
+    <p>Various preparations on the Git repository for the official launch</p>
+</section>
+<section class="release-notes">
     <h3>5.0-beta.2 <small>3 March 2019</small></h3>
     <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
     <p>When adding a flight, the date will be set to today by default <span class="badge badge-warning">Admin</span></p>
