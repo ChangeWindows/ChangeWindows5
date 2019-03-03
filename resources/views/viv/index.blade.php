@@ -1,5 +1,5 @@
 @extends('layouts.viv')
-@section('title') About viv @endsection
+@section('title') About ChangeWindows @endsection
 
 @php
     $insider_level = null;

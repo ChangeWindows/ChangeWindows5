@@ -1,5 +1,5 @@
 @extends('layouts.viv')
-@section('title') viv Changelog @endsection
+@section('title') ChangeWindows Changelog @endsection
 
 @section('content')
 <h2>What's new</h2>
