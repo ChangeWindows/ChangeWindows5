@@ -21,7 +21,7 @@
             </a>
         </p>
         <p class="text-center"><a href="https://www.patreon.com/bePatron?c=1028298" class="btn btn-primary btn-patreon"><i class="fab fa-fw fa-patreon"></i> Become a Patron</a></p>
-        <p class="lead text-center about-intro">These are our patrons, they help us make ChangeWindows a reality. If you want to join them in this, feel free to join them.</p>
+        <p class="lead text-center about-intro">These are our patrons, they help us make ChangeWindows a reality. If you like what we do, feel free to join them.</p>
         <div class="jumbotron insider gold">
             <h1 class="text-center text-lowercase"><span class="font-weight-light">Gold</span>Insider</h1>
             <div class="row justify-content-md-center">
