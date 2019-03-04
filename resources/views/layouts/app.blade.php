@@ -74,7 +74,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                                 <a class="dropdown-item" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
-                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
+                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed</a>
                                 <div class="dropdown-divider"></div>
                                 <h6 class="dropdown-header">RSS</h6>
                                 <a class="dropdown-item" href="/feed"><i class="fal fa-fw fa-rss-square"></i> Flight feed</a>

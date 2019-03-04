@@ -25,7 +25,7 @@
             <div class="col-lg-4 col-sm-6 d-none d-sm-block">
                 <a class="hero hero-buildfeed" href="{{ route('buildfeed') }}">
                     <span class="text">
-                        <span class="h2">BuildFeed data</span>
+                        <span class="h2">BuildFeed</span>
                         <span class="h5">but archived</span>
                     </span>
                 </a>
