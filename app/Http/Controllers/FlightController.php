@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Release;
 use App\Milestone;
+use Twitter;
 
 class FlightController extends Controller
 {

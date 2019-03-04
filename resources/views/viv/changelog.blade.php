@@ -9,6 +9,8 @@
     <p>Various preparations on the Git repository for the official launch</p>
     <p>Updated menu structure for the launch</p>
     <p>Minor typography updates for headings</p>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes a bug that resulted in a HTTP/500 crash when adding a new flight</p>
 </section>
 <section class="release-notes">
     <h3>5.0-beta.2 <small>3 March 2019</small></h3>

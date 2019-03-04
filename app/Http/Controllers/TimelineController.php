@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Release;
 use App\Changelog;
 use Parsedown;
-use Twitter;
 
 class TimelineController extends Controller
 {
