@@ -67,29 +67,19 @@
                         <li class="nav-item {{ Request::is('rings*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('rings') }}">Rings</a>
                         </li>
-                        <li class="nav-item d-none d-sm-inline-block">
-                            <a class="nav-link" href="https://medium.com/changewindows" target="_blank">Blog</a>
-                        </li>
-                        <li class="nav-item d-none d-sm-inline-block {{ Request::is('viv*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('viv') }}">About</a>
-                        </li>
-                        <li class="nav-item dropdown {{ Request::is('buildfeed*') ? 'active' : '' }}">
+                        <li class="nav-item dropdown {{ Request::is('buildfeed*') || Request::is('viv*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 More <i class="fal fa-fw fa-angle-down"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                                <a class="dropdown-item" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
+                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
+                                <div class="dropdown-divider"></div>
                                 <h6 class="dropdown-header">RSS</h6>
                                 <a class="dropdown-item" href="/feed"><i class="fal fa-fw fa-rss-square"></i> Flight feed</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fal fa-fw fa-rss"></i> BuildFeed data</a>
-                                <div class="dropdown-divider d-block d-sm-none"></div>
-                                <a class="dropdown-item d-block d-sm-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
-                                <a class="dropdown-item d-block d-sm-none" href="{{ route('viv') }}"><i class="fal fa-fw fa-alicorn"></i> About</a>
-                                <div class="dropdown-divider"></div>
-                                <h6 class="dropdown-header">Preview</h6>
-                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=bug&template=bug_report.md&title="><i class="fal fa-fw fa-bug"></i> Report a bug</a>
-                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/issues/new?assignees=&labels=&template=feature_request.md&title="><i class="fal fa-fw fa-box-heart"></i> Request a feature</a>
-                                <div class="dropdown-divider d-block"></div>
+                                <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/"><i class="fab fa-fw fa-github"></i> GitHub</a>
                                 <a class="dropdown-item" href="https://twitter.com/changewindows"><i class="fab fa-fw fa-twitter"></i> @ChangeWindows</a>
                                 <a class="dropdown-item" href="https://patreon.com/changewindows"><i class="fab fa-fw fa-patreon"></i> Patreon</a>
                             </div>
@@ -97,25 +87,19 @@
                     </ul>
                     <ul class="navbar-nav">
                         @auth
-                            @if (Auth::user()->hasAnyRole(['Admin']))
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fal fa-fw fa-tachometer d-inline"></i><span class="d-none d-sm-inline"> Manage<span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <li class="nav-item dropdown {{ Request::is('profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fal fa-fw fa-user-circle d-inline"></i><span class="d-none d-md-inline"> {{ Auth::user()->name }}<span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @if (Auth::user()->hasAnyRole(['Admin']))
                                         @yield('toolset')
                                         <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="fal fa-fw fa-plane"></i> Flights</a>
                                         <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fal fa-fw fa-align-left"></i> Changelogs</a>
                                         <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="fal fa-fw fa-users"></i> Users</a>
                                         <a class="dropdown-item" href="{{ route('showPatreon') }}"><i class="fab fa-fw fa-patreon"></i> Patrons</a>
-                                    </div>
-                                </li>
-                            @endif
-                            <li class="nav-item dropdown {{ Request::is('profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fal fa-fw fa-user-circle d-inline"></i><span class="d-none d-sm-inline"> {{ Auth::user()->name }}<span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <div class="dropdown-divider"></div>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('profile') }}"><i class="fal fa-fw fa-cog"></i> Settings</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fal fa-fw fa-sign-out"></i> Log out</a>

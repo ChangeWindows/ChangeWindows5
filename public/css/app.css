@@ -9997,11 +9997,6 @@ h3 {
 .navbar .nav-item .nav-link:hover {
   opacity: 0.8;
 }
-@media all and (max-width: 700px) {
-  .navbar .nav-item .nav-link .fa-fw {
-    display: none;
-  }
-}
 .navbar .navbar-brand {
   padding: 6px 0 12px !important;
 }

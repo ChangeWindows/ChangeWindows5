@@ -7,6 +7,7 @@
     <h3>5.0-rc.1 <small>March 2019</small></h3>
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
     <p>Various preparations on the Git repository for the official launch</p>
+    <p>Updated menu structure for the launch</p>
 </section>
 <section class="release-notes">
     <h3>5.0-beta.2 <small>3 March 2019</small></h3>
