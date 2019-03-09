@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://viv.changewindows.org'),
+    'url' => env('APP_URL', 'https://changewindows.org'),
 
     /*
     |--------------------------------------------------------------------------
