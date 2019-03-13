@@ -4,7 +4,13 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.0-rc.1 <small>March 2019</small></h3>
+    <h3>5.0.1 <small>10 March 2019</small></h3>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where the platform pages on Rings would link to the wrong location</p>
+    <p>Fixes an issue where vNext used old platformId-based URLs</p>
+</section>
+<section class="release-notes">
+    <h3>5.0.0 <small>9 March 2019</small></h3>
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
     <p>Various preparations on the Git repository for the official launch</p>
     <p>Updated menu structure for the launch</p>

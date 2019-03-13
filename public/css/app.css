@@ -10017,13 +10017,13 @@ h3 {
     display: none;
   }
 }
+.navbar .dropdown {
+  margin-right: 0;
+}
 .navbar .dropdown.show .nav-link {
   background: transparent;
   opacity: 1;
   border-bottom-color: #ff4355;
-}
-.navbar .dropdown:last-child .nav-link {
-  margin-right: 0;
 }
 
 .navbg {
@@ -10106,6 +10106,9 @@ h3 {
 }
 .jumbotron.insider .row {
   margin-top: 15px;
+}
+.jumbotron.insider.platinum {
+  background-color: #bdcfd4 !important;
 }
 .jumbotron.insider.gold {
   background-color: #ffc000 !important;

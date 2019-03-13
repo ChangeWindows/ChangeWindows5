@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-sm-6">
-                <a class="hero hero-preview" href="{{ route('viv') }}">
+                <a class="hero hero-preview" href="https://medium.com/changewindows/changewindows-5-0-b0e63d01067">
                     <span class="text">
                         <span class="h2">ChangeWindows 5</span>
                         <span class="h5">Welcome to a brand new ChangeWindows</span>
@@ -25,7 +25,7 @@
             <div class="col-lg-4 col-sm-6 d-none d-sm-block">
                 <a class="hero hero-buildfeed" href="{{ route('buildfeed') }}">
                     <span class="text">
-                        <span class="h2">BuildFeed data</span>
+                        <span class="h2">BuildFeed</span>
                         <span class="h5">but archived</span>
                     </span>
                 </a>
