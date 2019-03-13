@@ -10107,6 +10107,9 @@ h3 {
 .jumbotron.insider .row {
   margin-top: 15px;
 }
+.jumbotron.insider.platinum {
+  background-color: #bdcfd4 !important;
+}
 .jumbotron.insider.gold {
   background-color: #ffc000 !important;
 }

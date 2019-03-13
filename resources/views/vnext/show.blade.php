@@ -12,12 +12,12 @@
         <h2 class="mb-4"><i class="fab fa-fw fa-windows"></i> vNext</h2>
         <div class="nav-scroll">
             <nav class="nav">
-                <a class="nav-link {{ Request::is('vnext') || Request::is('vnext/pc') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 1]) }}">PC</a>
-                <a class="nav-link {{ Request::is('vnext/xbox') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 3]) }}">Xbox</a>
-                <a class="nav-link {{ Request::is('vnext/iot') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 6]) }}">IoT</a>
-                <a class="nav-link {{ Request::is('vnext/server') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 4]) }}">Server</a>
-                <a class="nav-link {{ Request::is('vnext/holographic') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 5]) }}">Holographic</a>
-                <a class="nav-link {{ Request::is('vnext/team') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 7]) }}">Team</a>
+                <a class="nav-link {{ Request::is('vnext') || Request::is('vnext/pc') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 'pc']) }}">PC</a>
+                <a class="nav-link {{ Request::is('vnext/xbox') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 'xbox']) }}">Xbox</a>
+                <a class="nav-link {{ Request::is('vnext/iot') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 'iot']) }}">IoT</a>
+                <a class="nav-link {{ Request::is('vnext/server') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 'server']) }}">Server</a>
+                <a class="nav-link {{ Request::is('vnext/holographic') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 'holographic']) }}">Holographic</a>
+                <a class="nav-link {{ Request::is('vnext/team') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 'team']) }}">Team</a>
             </nav>
         </div>
     </div>
