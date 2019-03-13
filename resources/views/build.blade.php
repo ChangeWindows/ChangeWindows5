@@ -9,7 +9,7 @@
         <div class="nav-scroll">
             <nav class="nav">
                 @foreach ($platforms as $platform)
-                    <a class="nav-link {{ $platform->platform == $meta->platform ? 'active' : '' }}" href="{{ route('showRelease', ['build' => $cur_build, 'platform' => getPlatformClass($platform->platform)]) }}">
+                    <a class="nav-link {{ $platform->platform == $meta->platform ? 'active' : '' }}" href="{{ route('showBuild', ['milestone' => $milestone->id, 'build' => $meta->build, 'platform' => getPlatformClass($platform->platform)]) }}">
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 @endforeach
@@ -69,10 +69,10 @@
     <div class="col-lg-3">
         <div class="row row-btn">
             @if ($previous)
-                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showRelease', ['build' => $previous->build]) }}"><i class="fal fa-fw fa-angle-left"></i> {{ $previous->build }}</a>
+                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showBuild', ['milestone' => $previous->milestone, 'build' => $previous->build]) }}"><i class="fal fa-fw fa-angle-left"></i> {{ $previous->build }}</a>
             @endif
             @if ($next)
-                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showRelease', ['build' => $next->build]) }}">{{ $next->build }} <i class="fal fa-fw fa-angle-right"></i></a>
+                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showBuild', ['milestone' => $next->milestone, 'build' => $next->build]) }}">{{ $next->build }} <i class="fal fa-fw fa-angle-right"></i></a>
             @endif
         </div>
         <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}" style="background: #{{ $milestone->color }}">
@@ -92,7 +92,7 @@
                         @foreach ($platforms as $platform => $rings)
                             @foreach ($rings as $ring)
                                 <div class="timeline-row">
-                                    <a class="row" href="{{ route('showRelease', $build, $platform) }}">
+                                    <a class="row" href="{{ route('showBuild', ['milestone' => $milestone->id, 'build' => $build, 'platform', $platform]) }}">
                                         <div class="col-7 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
                                         <div class="col-5 ring">
                                             <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>

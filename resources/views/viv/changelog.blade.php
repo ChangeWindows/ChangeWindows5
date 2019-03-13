@@ -4,6 +4,11 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.1-alpha.1 <small>March 2019</small></h3>
+    <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+    <p>Introduces an updated URL scheme like <code>/{milestone}/{build}</code></p>
+</section>
+<section class="release-notes">
     <h3>5.0.1 <small>10 March 2019</small></h3>
     <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes an issue where the platform pages on Rings would link to the wrong location</p>

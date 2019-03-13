@@ -24,7 +24,7 @@ Route::patch('/changelog/{id}', 'ChangelogController@update')->name('updateChang
 Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
 Route::get('/milestones', 'MilestoneController@index')->name('milestones');
-Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone');
+Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestoneLegacy');
 Route::get('/milestones/{id}/edit', 'MilestoneController@edit')->name('editMilestone')->middleware('auth');
 Route::get('/milestones/{id}/{platform}', 'MilestoneController@platform')->name('platformMilestone');
 Route::post('/milestones', 'MilestoneController@store')->name('storeMilestone')->middleware('auth');
@@ -67,3 +67,6 @@ Route::get('/patreons/{id}/edit', 'PatreonController@edit')->name('editPatreon')
 Route::post('/patreons', 'PatreonController@store')->name('storePatreon');
 Route::patch('/patreons/{id}', 'PatreonController@update')->name('updatePatreon');
 Route::delete('/patreons/{id}', 'PatreonController@destroy')->name('deletePatreon');
+
+Route::get('/{id}', 'MilestoneController@show')->name('showMilestone');
+Route::get('/{milestone}/{build}/{platform?}', 'TimelineController@build')->name('showBuild');

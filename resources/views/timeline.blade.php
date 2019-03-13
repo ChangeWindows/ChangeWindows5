@@ -81,7 +81,7 @@
                         @foreach ($deltas as $delta => $platforms)
                             @foreach ($platforms as $platform => $rings)
                                 <div class="timeline-row">
-                                    <a class="row" href="{{ route('showRelease', ['build' => $build, 'platform' => getPlatformClass($platform)]) }}">
+                                    <a class="row" href="{{ route('showBuild', ['milestone' => $rings[array_key_first($rings)]->milestone, 'build' => $build, 'platform' => getPlatformClass($platform)]) }}">
                                         <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
                                         <div class="col-6 col-md-8 ring">
                                             @foreach ($rings as $ring)
@@ -114,11 +114,19 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="{{ route('showRelease', ['build' => $ua['build'], 'platform' => $ua['platform']]) }}" class="tile leak">
-                        <span class="ring">This device</span>
-                        <span class="build"><?php echo $ua['build'] ?></span>
-                        <span class="date">Running now</span>
-                    </a>
+                    @if ($ua['milestone'] === 'tba')
+                        <a href="{{ route('showVNext', ['platform_id' => $ua['platform']]) }}" class="tile leak">
+                            <span class="ring">This device</span>
+                            <span class="build"><?php echo $ua['build'] ?></span>
+                            <span class="date">Running now</span>
+                        </a>
+                    @else
+                        <a href="{{ route('showBuild', ['milestone' => $ua['milestone'], 'build' => $ua['build'], 'platform' => $ua['platform']]) }}" class="tile leak">
+                            <span class="ring">This device</span>
+                            <span class="build"><?php echo $ua['build'] ?></span>
+                            <span class="date">Running now</span>
+                        </a>
+                    @endif
                 </div>
             </div>
         @else

@@ -110,7 +110,7 @@
             <div class="timeline">
                 @foreach ($platform->builds as $build)
                     <div class="timeline-row">
-                        <a class="row" href="{{ route('showRelease', ['build' => $build->build, 'platform' => getPlatformClass($build->platform)]) }}">
+                        <a class="row" href="{{ route('showBuild', ['milestone' => $milestone->id, 'build' => $build->build, 'platform' => getPlatformClass($build->platform)]) }}">
                             <div class="col-5 build"><img src="{{ asset('img/platform/'.getPlatformImage($build->platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($build->platform) }}" />{{ $build->build }}.{{ $build->delta }}</div>
                             <div class="col-3 ring">
                                 <span class="label {{ $build->class }}">{{ $build->flight }}</span>

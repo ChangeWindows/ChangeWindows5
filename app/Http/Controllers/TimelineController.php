@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Release;
 use App\Changelog;
+use App\Milestone;
 use Parsedown;
 
 class TimelineController extends Controller
@@ -82,6 +83,10 @@ class TimelineController extends Controller
             } else {
                 $ua['platform'] = 'pc';
             }
+
+            $ua_release = Release::where('build', $ua['build'])->where('platform', getPlatformIdByClass($ua['platform']))->first();
+
+            $ua['milestone'] = $ua_release ? $ua_release->milestone : 'tba';
         } else {
             $ua = false;
         }
@@ -137,5 +142,58 @@ class TimelineController extends Controller
         $parsedown = new Parsedown();
 
         return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'parsedown', 'milestone', 'next', 'previous'));
+    }
+
+    public function build($milestone, $build = null, $platform = null) {
+        $cur_build = $build;
+        $cur_milestone = $milestone;
+        $platform_id = $platform === null ? 1 : getPlatformIdByClass($platform);
+
+        // Get current build and milestone information
+        $meta = Release::where('build', $cur_build)->where('platform', $platform_id)->first();
+        $milestone = Milestone::find($milestone);
+
+        // Get the available platforms from a build and check if move to the first platform that is available
+        $platforms = Release::select('platform')->where('milestone', $cur_milestone)->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
+
+        if ($platforms->count() < 1) {
+            abort(404);
+        }
+
+        if ($platform) {
+            $releases = Release::where('milestone', $cur_milestone)->where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
+            
+            if ($releases->count() < 1) {
+                $platform_id = $platforms[0]->platform;
+                $releases = Release::where('milestone', $cur_milestone)->where('build', $cur_build)->where('platform', $platforms[0]->platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
+            }
+        } else {
+            $platform_id = $platforms[0]->platform;
+            $releases = Release::where('milestone', $cur_milestone)->where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
+        }
+
+        // Get all changelogs for the current platform
+        $changelogs = Changelog::where('build', $cur_build)->where('platform', $platform_id)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get()->keyBy('delta');
+
+        foreach ($releases as $release) {
+            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
+            $notes[$release->delta]['rings'][$release->ring] = $release;
+        }
+
+        foreach ($changelogs as $changelog) {
+            if (array_key_exists($changelog->delta, $notes)) {
+                $notes[$changelog->delta]['changelog'] = $changelog->changelog;
+                $notes[$changelog->delta]['created'] = $changelog->created_at;
+                $notes[$changelog->delta]['new'] = $changelog->created_at->addDay();
+            }
+        }
+
+        // Get the previous and next navigation
+        $previous = Release::where('build', '<', $cur_build)->orderBy('build', 'desc')->first();
+        $next = Release::where('build', '>', $cur_build)->orderBy('build', 'asc')->first();
+
+        $parsedown = new Parsedown();
+
+        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'parsedown', 'milestone', 'next', 'previous'));
     }
 }

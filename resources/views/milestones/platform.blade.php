@@ -61,7 +61,7 @@
         <div class="timeline">
             @foreach ($timeline as $build => $rings)
                 <div class="timeline-row">
-                    <a class="row" href="{{ route('showRelease', ['build' => explode('.', $build)[0], 'platform' => getPlatformClass($platform_id)]) }}">
+                    <a class="row" href="{{ route('showBuild', ['milestone' => $milestone->id, 'build' => explode('.', $build)[0], 'platform' => getPlatformClass($platform_id)]) }}">
                         <div class="col-4 col-sm-3 col-md-2 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform_id)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform_id) }}" />{{ $build }}</div>
                         <div class="col-8 col-sm-9 col-md-10 d-lg-none">
                             @php
