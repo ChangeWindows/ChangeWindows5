@@ -58,10 +58,10 @@
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item {{ Request::is('/') || Request::is('build/*') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('/') || Request::is('build/*') || Route::currentRouteName() === 'showBuild' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('timeline') }}">Timeline</a>
                         </li>
-                        <li class="nav-item {{ Request::is('milestones*') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('milestones*') || Route::currentRouteName() === 'showMilestone' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('milestones') }}">Milestones</a>
                         </li>
                         <li class="nav-item {{ Request::is('rings*') ? 'active' : '' }}">
