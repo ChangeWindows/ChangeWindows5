@@ -13,6 +13,13 @@
 <section class="release-notes">
     <h3>5.0.1 <small>10 March 2019</small></h3>
     <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes the incorrect urls for the "See all"-links for platforms in milestone details</p>
+</section>
+<section class="release-notes">
+    <h3>5.0.1 <small>10 March 2019</small></h3>
+    <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+    <p>Platinum Insiders are now shown on About</p>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes an issue where the platform pages on Rings would link to the wrong location</p>
     <p>Fixes an issue where vNext used old platformId-based URLs</p>
 </section>

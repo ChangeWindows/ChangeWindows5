@@ -122,7 +122,7 @@
                     </div>
                 @endforeach
                 <div class="timeline-row">
-                    <a class="row" href="{{ route('showMilestone', ['id' => $milestone->id, 'platform' => getPlatformClass($platform->platform)]) }}">
+                    <a class="row" href="{{ route('platformMilestone', ['id' => $milestone->id, 'platform' => getPlatformClass($platform->platform)]) }}">
                         <div class="col"><img src="{{ asset('img/platform/'.getPlatformImage($platform->platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform->platform) }}" /></div>
                         <div class="col text-right">
                             See all <i class="fal fa-fw fa-angle-double-right"></i>
