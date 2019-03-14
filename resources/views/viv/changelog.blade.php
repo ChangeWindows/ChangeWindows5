@@ -7,6 +7,8 @@
     <h3>5.1-alpha.1 <small>March 2019</small></h3>
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
     <p>Introduces an updated URL scheme like <code>/{milestone}/{build}</code></p>
+    <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
+    <p>Tweets now use the Laravels <code>join()</code>-function to merge rings</p>
 </section>
 <section class="release-notes">
     <h3>5.0.1 <small>10 March 2019</small></h3>
