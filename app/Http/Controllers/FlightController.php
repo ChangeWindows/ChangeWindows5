@@ -58,20 +58,10 @@ class FlightController extends Controller
                 array_push($rings, getTweetRingById($value, $platform));
             }
 
-            if ($platform === 3) {
-                $hashtags = '#Xbox #XboxInsider';
-            } else {
-                $hashtags = '#Windows #WindowsInsiders';
-            }
-
-            $ring_list = implode(', ', $rings);
-
-            if (count($rings) > 1) {
-                $ring_list = substr_replace($ring_list, ' and', strrpos($ring_list, ','), 1);
-            }
+            $hashtags = $platform === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
 
             if (request()->get('tweet')) {
-                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.$ring_list.'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.collect($rings)->join(', ', ' and ').'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
             }
         }
 
