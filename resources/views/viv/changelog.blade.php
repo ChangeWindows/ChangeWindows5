@@ -9,9 +9,12 @@
     <p>Introduces an updated URL scheme like <code>/{milestone}/{build}</code></p>
     <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
     <p>Tweets now use the Laravels <code>join()</code>-function to merge rings</p>
+    <p>For better visual distinction, the platform icon is now shown in the changelog overview <span class="badge badge-warning">Admin</span></p>
+    <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
+    <p>The White theme now uses a slightly darker font/p>
 </section>
 <section class="release-notes">
-    <h3>5.0.1 <small>10 March 2019</small></h3>
+    <h3>5.0.2 <small>March 2019</small></h3>
     <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes the incorrect urls for the "See all"-links for platforms in milestone details</p>
 </section>
