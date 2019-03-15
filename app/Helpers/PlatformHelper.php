@@ -12,7 +12,7 @@ function getPlatformById($id) {
         case 7:     return 'Team';
         case 8:     return 'ISO';
         case 9:     return 'SDK';
-        default:    return;
+        default:    return 'Generic';
     }
 }
 
@@ -27,7 +27,7 @@ function getPlatformImage($id) {
         case 7:     return 'team.png';
         case 8:     return 'iso.png';
         case 9:     return 'sdk.png';
-        default:    return;
+        default:    return 'generic.png';
     }
 }
 
@@ -42,7 +42,7 @@ function getPlatformClass($id) {
         case 7:     return 'team';
         case 8:     return 'iso';
         case 9:     return 'sdk';
-        default:    return;
+        default:    return 'generic';
     }
 }
 
@@ -57,6 +57,6 @@ function getPlatformIdByClass($id) {
         case 'team':         return 7;
         case 'iso':          return 8;
         case 'sdk':          return 9;
-        default:    return;
+        default:             return 0;
     }
 }

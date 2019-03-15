@@ -44,9 +44,12 @@
         <div class="list-group list-group-changelogs">
             @foreach ($changelogs as $changelog)
                 <a href="{{ route('editChangelog', [$changelog->id]) }}" class="list-group-item">
-                    {{ $changelog->build }}.{{ $changelog->delta }} &middot; {{ getPlatformById($changelog->platform) }}
-                    <br />
-                    <small>Updated: {{ Carbon\Carbon::parse($changelog->updated_at)->format('d F Y H:i:s') }}</small>
+                    <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($changelog->platform)) }}" class="img-fluid" alt="{{ getPlatformById($changelog->platform) }}" /></div>
+                    <div class="data">
+                        {{ $changelog->build }}.{{ $changelog->delta }} &middot; {{ getPlatformById($changelog->platform) }}
+                        <br />
+                        <small>Updated: {{ Carbon\Carbon::parse($changelog->updated_at)->format('d F Y H:i:s') }}</small>
+                    </div>
                 </a>
             @endforeach
         </div>

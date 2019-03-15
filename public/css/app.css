@@ -9845,6 +9845,18 @@ h3 {
 .list-group.list-group-changelogs .list-group-item:hover {
   text-decoration: none;
 }
+.list-group.list-group-changelogs .list-group-item .img {
+  display: inline-block;
+  margin-right: 10px;
+  float: left;
+}
+.list-group.list-group-changelogs .list-group-item .img img {
+  width: 24px;
+  height: 24px;
+}
+.list-group.list-group-changelogs .list-group-item .data {
+  display: inline-block;
+}
 .list-group.list-group-platforms .list-group-item {
   border: none;
   margin: 0;
@@ -11583,20 +11595,20 @@ span.CodeMirror-selectedtext {
 
 .white {
   background: #fff;
-  color: #333;
+  color: #222;
 }
 .white .navbg {
   background: #eaeaea;
 }
 .white .jumbotron {
   background-color: #eaeaea !important;
-  color: #333;
+  color: #222;
 }
 .white .jumbotron h2 small a {
-  color: #333;
+  color: #222;
 }
 .white .jumbotron h2 small .text {
-  color: #333;
+  color: #222;
 }
 .white .tile, .white .btn-vnext {
   background-color: #eaeaea;
@@ -11612,19 +11624,19 @@ span.CodeMirror-selectedtext {
   }
 }
 .white .navbar .navbar-brand {
-  color: #333;
+  color: #222;
 }
 .white .navbar .nav-item .nav-link {
-  color: #333 !important;
+  color: #222 !important;
 }
 .white .navbar .navbar-toggler {
   background-color: rgba(234, 234, 234, 0.1);
 }
 .white .nav .nav-link {
-  color: #333;
+  color: #222;
 }
 .white .nav .nav-link.active {
-  color: #333;
+  color: #222;
 }
 .white .dropdown-menu {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
@@ -11646,16 +11658,16 @@ span.CodeMirror-selectedtext {
   color: #555;
 }
 .white .dropdown-menu .dropdown-item {
-  color: #333;
+  color: #222;
 }
 .white .dropdown-menu .dropdown-item:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .white .dropdown-menu .dropdown-item:active {
-  color: #333;
+  color: #222;
 }
 .white .dropdown-menu .dropdown-item:focus {
-  color: #333;
+  color: #222;
   background: rgba(234, 234, 234, 0.1);
 }
 .white .timeline .timeline-row:nth-child(odd) {
@@ -11668,16 +11680,16 @@ span.CodeMirror-selectedtext {
   background-color: #f0f0f0;
 }
 .white .timeline .timeline-row a.row .build {
-  color: #333;
+  color: #222;
 }
 .white .timeline .timeline-row .row {
-  color: #333;
+  color: #222;
 }
 .white .btn.btn-filter .filter-title {
-  color: #333 !important;
+  color: #222 !important;
 }
 .white .show > .btn-filter.dropdown-toggle .filter-title {
-  color: #333 !important;
+  color: #222 !important;
 }
 .white .milestone:hover {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -11698,13 +11710,13 @@ span.CodeMirror-selectedtext {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .white .flight-set .flight p.build {
-  color: #333;
+  color: #222;
 }
 .white .list-group.list-group-changelogs .list-group-item {
   background-color: #f8f8f8;
 }
 .white .list-group.list-group-changelogs .list-group-item.active {
-  color: #333;
+  color: #222;
   background: #f0f0f0;
 }
 .white .list-group.list-group-changelogs .list-group-item:hover {
@@ -11714,10 +11726,10 @@ span.CodeMirror-selectedtext {
   background-color: #f8f8f8;
 }
 .white .pagination .page-item .page-link {
-  color: #333;
+  color: #222;
 }
 .white .pagination .page-item:not(.disabled).active .page-link, .white .pagination .page-item:not(.disabled):hover .page-link {
-  color: #333;
+  color: #222;
 }
 .white .pagination .page-item.disabled .page-link {
   color: #888;
@@ -11736,7 +11748,7 @@ span.CodeMirror-selectedtext {
   }
 }
 .white .modal .modal-content .modal-header .close {
-  color: #333 !important;
+  color: #222 !important;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
   .white .modal .modal-content .modal-body {
@@ -11752,21 +11764,21 @@ span.CodeMirror-selectedtext {
   color: #888;
 }
 .white .lifecycle-stats h4 {
-  color: #333;
+  color: #222;
 }
 .white .form-control {
   background-color: #fff;
-  color: #333;
+  color: #222;
   border-color: #eaeaea;
 }
 .white .form-control:focus {
   border-color: #ff4355;
 }
 .white .buildfeed .bf {
-  color: #333;
+  color: #222;
 }
 .white .buildfeed .bf:hover {
-  color: #333;
+  color: #222;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .white .buildfeed .bf .bf-header {
