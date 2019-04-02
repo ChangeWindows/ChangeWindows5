@@ -4,14 +4,17 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.1-alpha.1 <small>March 2019</small></h3>
+    <h3>5.1-alpha.1 <small>April 2019</small></h3>
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
     <p>Introduces an updated URL scheme like <code>/{milestone}/{build}</code></p>
     <h4><i class="fal fa-fw fa-wrench"></i> Improved</h4>
     <p>Tweets now use the Laravels <code>join()</code>-function to merge rings</p>
     <p>For better visual distinction, the platform icon is now shown in the changelog overview <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
-    <p>The White theme now uses a slightly darker font/p>
+    <p>When visiting your profile, you'll now see a badge corresponding to your status</p>
+    <p>The White theme now uses a slightly darker font</p>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes a bug that resulted in platforms being listed in random orders on the timeline</p>
 </section>
 <section class="release-notes">
     <h3>5.0.2 <small>March 2019</small></h3>
