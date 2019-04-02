@@ -10198,24 +10198,26 @@ h3 {
 }
 
 .badge {
+  border-radius: 100px;
+}
+.badge .badge-user {
   width: 2.5rem;
   line-height: 1rem;
-  border-radius: 100px;
   color: #fff;
 }
-.badge.badge-admin {
+.badge .badge-user.badge-admin {
   background-color: #ff4355 !important;
 }
-.badge.badge-platinum {
+.badge .badge-user.badge-platinum {
   background-color: #bdcfd4 !important;
 }
-.badge.badge-gold {
+.badge .badge-user.badge-gold {
   background-color: #ffc000 !important;
 }
-.badge.badge-silver {
+.badge .badge-user.badge-silver {
   background-color: #9eacbd !important;
 }
-.badge.badge-bronze {
+.badge .badge-user.badge-bronze {
   background-color: #cd7f32 !important;
 }
 
