@@ -1,0 +1,26 @@
+.badge {
+    width: 2.5rem;
+    line-height: 1rem;
+    border-radius: 100px;
+    color: #fff;
+
+    &.badge-admin {
+        background-color: $accent  !important;
+    }
+
+    &.badge-platinum {
+        background-color: #bdcfd4  !important;
+    }
+    
+    &.badge-gold {
+        background-color: $yellow !important;
+    }
+    
+    &.badge-silver {
+        background-color: #9eacbd !important;
+    }
+    
+    &.badge-bronze {
+        background-color: #cd7f32 !important;
+    }
+}

@@ -36,4 +36,16 @@ class User extends Authenticatable
     public function getRoles() {
         return $this->roles()->firstOrFail();
     }
+
+    public function getBadge() {
+        switch ($this->getRoles()['name']) {
+            case 'Admin':               return ['fa-user-crown', 'admin']; break;
+            case 'Editor':              return ['fa-user-edit', 'editor']; break;
+            case 'Platinum Insider':    return ['fa-crown', 'platinum']; break;
+            case 'Gold Insider':        return ['fa-crown', 'gold']; break;
+            case 'Silver Insider':      return ['fa-crown', 'silver']; break;
+            case 'Bronze Insider':      return ['fa-crown', 'bronze']; break;
+            default:                    return null; break;
+        }
+    }
 }

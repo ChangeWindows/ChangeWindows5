@@ -23,7 +23,7 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
-        $request->user()->authorizeRoles(['Admin', 'Insider', 'User']);
+        $request->user()->authorizeRoles(['Admin', 'Editor', 'Platinum Insider', 'Gold Insider', 'Silver Insider', 'Bronze Insider', 'User']);
 
         return view('profile');
     }
@@ -45,7 +45,7 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request, $id) {
-        $request->user()->authorizeRoles(['Admin', 'Insider', 'User']);
+        $request->user()->authorizeRoles(['Admin', 'Editor', 'Platinum Insider', 'Gold Insider', 'Silver Insider', 'Bronze Insider', 'User']);
 
         $user = User::find($id);
 

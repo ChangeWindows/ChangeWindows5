@@ -4,7 +4,7 @@
 @section('hero')
 <div class="jumbotron">
     <div class="container">
-        <h2>Hello {{ Auth::user()->name }}</h2>
+        <h2>Hello {{ Auth::user()->name }} {{ getBadge(Auth::user()->getBadge()) }}</h2>
     </div>
 </div>
 @endsection
