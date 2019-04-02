@@ -36,11 +36,10 @@ class UserController extends Controller
 
         $user = User::find($id);
 
-        $old_role = Role::find($user->roles[0]->id);
-        $new_role = Role::find($user->roles[0]->id - 1);
-
-        $user->roles()->detach($old_role);
-        $user->roles()->attach($new_role);
+        $new_role = Role::where('id', '<', $user->role->id)->orderBy('id', 'desc')->first();
+        
+        $user->role_id = $new_role->id;
+        $user->save();
 
         return redirect('/users');
     }
@@ -50,11 +49,10 @@ class UserController extends Controller
 
         $user = User::find($id);
 
-        $old_role = Role::find($user->roles[0]->id);
-        $new_role = Role::find($user->roles[0]->id + 1);
-
-        $user->roles()->detach($old_role);
-        $user->roles()->attach($new_role);
+        $new_role = Role::where('id', '>', $user->role->id)->orderBy('id', 'asc')->first();
+        
+        $user->role_id = $new_role->id;
+        $user->save();
 
         return redirect('/users');
     }

@@ -22,11 +22,7 @@
                                 <p class="h2">{{ $user->name }}</p>
                                 <p class="h6">{{ $user->created_at }}</p>
                                 <p class="h6">{{ $user->email }}</p>
-                                <p class="h6">
-                                    @foreach ($user->roles as $role)
-                                        {{ $role->name }}
-                                    @endforeach
-                                </p>
+                                <p class="h6">{{ $user->role->name }}</p>
                             </div>
                             <div class="col-12">
                                 <div class="options">
@@ -34,12 +30,12 @@
                                         <form method="POST" action="{{ route('promoteUser', ['id' => $user->id]) }}">
                                             {{ method_field('PATCH') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 1 ? 'disabled' : '' }}><i class="fal fa-fw fa-arrow-up"></i> Promote</button>
+                                            <button type="submit" class="btn btn-outline-primary" {{ $user->role->id === 1 ? 'disabled' : '' }}><i class="fal fa-fw fa-arrow-up"></i> Promote</button>
                                         </form>
                                         <form method="POST" action="{{ route('demoteUser', ['id' => $user->id]) }}">
                                             {{ method_field('PATCH') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 3 ? 'disabled' : '' }}><i class="fal fa-fw fa-arrow-down"></i> Demote</button>
+                                            <button type="submit" class="btn btn-outline-primary" {{ $user->role->id === 20 ? 'disabled' : '' }}><i class="fal fa-fw fa-arrow-down"></i> Demote</button>
                                         </form>
                                         <form method="POST" action="{{ route('deleteUser', ['id' => $user->id]) }}">
                                             {{ method_field('DELETE') }}

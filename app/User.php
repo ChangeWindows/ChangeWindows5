@@ -13,8 +13,8 @@ class User extends Authenticatable
     protected $fillable = [ 'name', 'email', 'password', 'theme' ];
     protected $hidden = [ 'password', 'remember_token', ];
 
-    public function roles() {
-        return $this->belongsToMany(Role::class);
+    public function role() {
+        return $this->belongsTo('App\Role', 'role_id');
     }
 
     public function authorizeRoles($roles) {
@@ -26,19 +26,15 @@ class User extends Authenticatable
     }
 
     public function hasAnyRole($roles) {
-        return null !== $this->roles()->whereIn('name', $roles)->first();
+        return null !== $this->role->whereIn('name', $roles)->first();
     }
 
     public function hasRole($role) {
-        return null !== $this->roles()->where('name', $role)->first();
-    }
-
-    public function getRoles() {
-        return $this->roles()->firstOrFail();
+        return null !== $this->role->where('name', $role)->first();
     }
 
     public function getBadge() {
-        switch ($this->getRoles()['name']) {
+        switch ($this->role) {
             case 'Admin':               return ['fa-user-crown', 'admin']; break;
             case 'Editor':              return ['fa-user-edit', 'editor']; break;
             case 'Platinum Insider':    return ['fa-crown', 'platinum']; break;

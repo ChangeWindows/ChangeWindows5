@@ -58,7 +58,7 @@
         <p>
             <b>Name</b>: {{ Auth::user()->name }}<br />
             <b>Email</b>: {{ Auth::user()->email }}<br />
-            <b>Role</b>: {{ Auth::user()->getRoles()->name }}
+            <b>Role</b>: {{ Auth::user()->role->name }}
         </p>
     </div>
 </div>
