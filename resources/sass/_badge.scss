@@ -1,10 +1,13 @@
 .badge {
     border-radius: 100px;
-    
-    .badge-user {
-        width: 2.5rem;
-        line-height: 1rem;
+
+    &.badge-user {
+        line-height: 1;
+        font-size: 50%;
         color: #fff;
+        top: -6px;
+        position: relative;
+        padding: 4.5px 3px;
 
         &.badge-admin {
             background-color: $accent  !important;

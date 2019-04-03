@@ -10200,24 +10200,27 @@ h3 {
 .badge {
   border-radius: 100px;
 }
-.badge .badge-user {
-  width: 2.5rem;
-  line-height: 1rem;
+.badge.badge-user {
+  line-height: 1;
+  font-size: 50%;
   color: #fff;
+  top: -6px;
+  position: relative;
+  padding: 4.5px 3px;
 }
-.badge .badge-user.badge-admin {
+.badge.badge-user.badge-admin {
   background-color: #ff4355 !important;
 }
-.badge .badge-user.badge-platinum {
+.badge.badge-user.badge-platinum {
   background-color: #bdcfd4 !important;
 }
-.badge .badge-user.badge-gold {
+.badge.badge-user.badge-gold {
   background-color: #ffc000 !important;
 }
-.badge .badge-user.badge-silver {
+.badge.badge-user.badge-silver {
   background-color: #9eacbd !important;
 }
-.badge .badge-user.badge-bronze {
+.badge.badge-user.badge-bronze {
   background-color: #cd7f32 !important;
 }
 

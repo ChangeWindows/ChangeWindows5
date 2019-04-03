@@ -34,7 +34,7 @@ class User extends Authenticatable
     }
 
     public function getBadge() {
-        switch ($this->role) {
+        switch ($this->role->name) {
             case 'Admin':               return ['fa-user-crown', 'admin']; break;
             case 'Editor':              return ['fa-user-edit', 'editor']; break;
             case 'Platinum Insider':    return ['fa-crown', 'platinum']; break;
