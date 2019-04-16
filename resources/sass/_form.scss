@@ -23,3 +23,12 @@
         }
     }
 }
+
+td .custom-control-label { 
+    &::after,
+    &::before {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: -.25rem;
+    }
+}

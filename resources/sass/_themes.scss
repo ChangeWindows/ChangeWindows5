@@ -313,7 +313,8 @@ $themes: (
                     }
                 }
         
-                .modal-body {
+                .modal-body,
+                .table {
                     @supports ((backdrop-filter: blur(30px))) {
                         background: map-get($color, transparency-content);
                     }

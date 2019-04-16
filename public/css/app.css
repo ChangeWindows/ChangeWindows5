@@ -9790,6 +9790,12 @@ h3 {
   background: no-repeat 50%/60% 60%;
 }
 
+td .custom-control-label::after, td .custom-control-label::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -0.25rem;
+}
+
 .nav {
   display: flex;
   flex-wrap: nowrap;
@@ -10157,6 +10163,9 @@ h3 {
 .modal .modal-content .modal-body {
   border-radius: 0;
   padding: 15px;
+}
+.modal .modal-content .table {
+  margin: 0;
 }
 
 .progress {
@@ -11778,12 +11787,14 @@ span.CodeMirror-selectedtext {
   color: #222 !important;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .modal .modal-content .modal-body {
+  .white .modal .modal-content .modal-body,
+.white .modal .modal-content .table {
     background: rgba(255, 255, 255, 0.9);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .modal .modal-content .modal-body {
+  .white .modal .modal-content .modal-body,
+.white .modal .modal-content .table {
     background: #fff;
   }
 }
@@ -11982,12 +11993,14 @@ span.CodeMirror-selectedtext {
   color: #000 !important;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .modal .modal-content .modal-body {
+  .light .modal .modal-content .modal-body,
+.light .modal .modal-content .table {
     background: rgba(255, 255, 255, 0.9);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .modal .modal-content .modal-body {
+  .light .modal .modal-content .modal-body,
+.light .modal .modal-content .table {
     background: #e6e6e6;
   }
 }
@@ -12186,12 +12199,14 @@ span.CodeMirror-selectedtext {
   color: #fff !important;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .modal .modal-content .modal-body {
+  .dark .modal .modal-content .modal-body,
+.dark .modal .modal-content .table {
     background: rgba(24, 24, 24, 0.9);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .modal .modal-content .modal-body {
+  .dark .modal .modal-content .modal-body,
+.dark .modal .modal-content .table {
     background: #292929;
   }
 }
@@ -12390,12 +12405,14 @@ span.CodeMirror-selectedtext {
   color: #fff !important;
 }
 @supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .modal .modal-content .modal-body {
+  .black .modal .modal-content .modal-body,
+.black .modal .modal-content .table {
     background: rgba(24, 24, 24, 0.9);
   }
 }
 @supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .modal .modal-content .modal-body {
+  .black .modal .modal-content .modal-body,
+.black .modal .modal-content .table {
     background: #000;
   }
 }
