@@ -70,6 +70,7 @@
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'broad']) }}">Semi-Annual Broad</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'lts']) }}">Long-Term Servicing</a>
                 </div>
+                @if (Auth::user()->hasAnyRole(['Admin']))
             </div>
         </div>
         <div class="timeline">
