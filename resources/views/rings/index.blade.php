@@ -72,26 +72,28 @@
             <div class="col-md col-sm-6 col-12"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-8 col-sm-8 col-12" id="team">
+    <div class="col-12" id="team">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
         <div class="row row-gutter">
-            <div class="col"><?php getTile( $flights['team']['targeted'] ) ?></div>
-            <div class="col"><?php getTile( $flights['team']['broad'] ) ?></div>
+            <div class="col-md col-6"><?php getTile( $flights['team']['fast'] ) ?></div>
+            <div class="col-md col-6"><?php getTile( $flights['team']['slow'] ) ?></div>
+            <div class="col-md col-6"><?php getTile( $flights['team']['targeted'] ) ?></div>
+            <div class="col-md col-6"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-2 col-md-4 col-sm-4 col-6" id="sdk">
+    <div class="col-md-3 col-6" id="sdk">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['sdk']['targeted'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-2 col-md-4 col-sm-4 col-6" id="iso">
+    <div class="col-md-3 col-6" id="iso">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> ISO</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iso']['targeted'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-8 col-sm-8 col-12" id="mobile">
+    <div class="col-md-6 col-12" id="mobile">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['mobile']['targeted'] ) ?></div>

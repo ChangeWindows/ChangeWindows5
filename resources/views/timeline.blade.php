@@ -181,8 +181,10 @@
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
         <div class="row row-gutter">
-            <div class="col"><?php getTile( $flights['team']['targeted'] ) ?></div>
-            <div class="col"><?php getTile( $flights['team']['broad'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['fast'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['slow'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['targeted'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
         <div class="row row-gutter">
@@ -301,7 +303,12 @@
                                         </div>
                                     </td>
                                     <td></td>
-                                    <td></td>
+                                    <td>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="f72" name="flight[7][2]" value="1">
+                                            <label class="custom-control-label" for="f72"></label>
+                                        </div>
+                                    </td>
                                     <td></td>
                                     <td></td>
                                 </tr>
@@ -343,7 +350,12 @@
                                             <label class="custom-control-label" for="f63"></label>
                                         </div>
                                     </td>
-                                    <td></td>
+                                    <td>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="f73" name="flight[7][3]" value="1">
+                                            <label class="custom-control-label" for="f73"></label>
+                                        </div>
+                                    </td>
                                     <td></td>
                                     <td></td>
                                 </tr>

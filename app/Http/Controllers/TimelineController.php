@@ -60,6 +60,8 @@ class TimelineController extends Controller
         $flights['holo']['broad'] = Release::holographic()->broad()->latestFlight()->first();
         $flights['holo']['ltsc'] = Release::holographic()->ltsc()->latestFlight()->first();
 
+        $flights['team']['fast'] = Release::team()->active()->latestFlight()->first();
+        $flights['team']['slow'] = Release::team()->slow()->latestFlight()->first();
         $flights['team']['targeted'] = Release::team()->targeted()->latestFlight()->first();
         $flights['team']['broad'] = Release::team()->broad()->latestFlight()->first();
 
