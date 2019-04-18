@@ -7,6 +7,7 @@
 
 @section('toolset')
 <a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New flight</a>
+<a class="dropdown-item" href="{{ route('bulkFlight') }}"><i class="fal fa-fw fa-plus"></i> New bulk flights</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -71,6 +72,8 @@
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'lts']) }}">Long-Term Servicing</a>
                 </div>
                 @if (Auth::user()->hasAnyRole(['Admin']))
+                    <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fal fa-fw fa-plus"></i> Flight</span></a>
+                @endif
             </div>
         </div>
         <div class="timeline">
@@ -207,7 +210,7 @@
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">New build</h5>
+                            <h5 class="modal-title">New flight</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true"><i class="fal fa-fw fa-times"></i></span>
                             </button>

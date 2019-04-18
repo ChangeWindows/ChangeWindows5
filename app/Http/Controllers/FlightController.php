@@ -96,4 +96,10 @@ class FlightController extends Controller
 
         return redirect('flight');
     }
+
+    public function bulk(Request $request) {
+        $request->user()->authorizeRoles('Admin');
+
+        return view('flights.bulk');
+    }
 }
