@@ -145,8 +145,8 @@ class Milestone extends Model
             ),
             'team' => array(
                 'skip' => -1,
-                'fast' => -1,
-                'slow' => -1,
+                'fast' => $this->teamFast,
+                'slow' => $this->teamSlow,
                 'preview' => -1,
                 'release' => -1,
                 'targeted' => $this->teamTargeted,
