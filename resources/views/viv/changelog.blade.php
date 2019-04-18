@@ -4,7 +4,9 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.0.1 <small>10 March 2019</small></h3>
+    <h3>5.0.2 <small>18 April 2019</small></h3>
+    <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+    <p>Support for publishing Fast and Slow builds for Team</p>
     <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes the incorrect urls for the "See all"-links for platforms in milestone details</p>
 </section>
