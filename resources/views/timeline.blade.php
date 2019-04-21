@@ -71,9 +71,11 @@
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'broad']) }}">Semi-Annual Broad</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'lts']) }}">Long-Term Servicing</a>
                 </div>
-                @if (Auth::user()->hasAnyRole(['Admin']))
-                    <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fal fa-fw fa-plus"></i> Flight</span></a>
-                @endif
+                @auth
+                    @if (Auth::user()->hasAnyRole(['Admin']))
+                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fal fa-fw fa-plus"></i> Flight</span></a>
+                    @endif
+                @endauth
             </div>
         </div>
         <div class="timeline">
