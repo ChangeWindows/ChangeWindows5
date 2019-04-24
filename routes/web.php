@@ -40,7 +40,8 @@ Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfee
 Route::get('/buildfeed/{id}', 'BuildfeedController@show')->name('showBuildfeed');
 
 Route::get('/flight', 'FlightController@index')->name('showFlights');
-Route::get('/flight/bulk', 'FlightController@bulk')->name('bulkFlight');
+Route::get('/flights', 'FlightController@bulk')->name('bulkFlight');
+Route::post('/flights', 'FlightController@bulkStore')->name('bulkStoreFlight');
 Route::get('/flight/{id}', 'FlightController@edit')->name('editFlight');
 Route::post('/flight', 'FlightController@store')->name('storeFlight');
 Route::patch('/flight/{id}', 'FlightController@update')->name('updateFlight');

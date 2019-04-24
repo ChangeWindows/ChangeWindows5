@@ -99,7 +99,47 @@ class FlightController extends Controller
 
     public function bulk(Request $request) {
         $request->user()->authorizeRoles('Admin');
+        
+        $milestones = Milestone::where('public', '<>', '0000-01-01')->where('public', '<>', '0000-00-00')->where('public', '<=', date('Y-m-d'))->orderBy('version', 'DESC')->get();
 
-        return view('flights.bulk');
+        return view('flights.bulk', compact('milestones'));
+    }
+
+    public function bulkStore(Request $request) {
+        $request->user()->authorizeRoles('Admin');
+        
+        foreach(request()->get('string') as $milestone => $string) {
+            $strings[$milestone] = Release::splitString($string);
+        }
+
+        foreach(request()->get('flight') as $milestone => $platform) {
+
+            foreach($platform as $form => $ring) {
+                $rings = array();
+
+                foreach($ring as $key => $value) {
+                    Release::create([
+                        'major' => $strings[$milestone]['major'],
+                        'minor' => $strings[$milestone]['minor'],
+                        'build' => $strings[$milestone]['build'],
+                        'delta' => $strings[$milestone]['delta'],
+                        'milestone' => $milestone,
+                        'platform' => $form,
+                        'ring' => $key,
+                        'date' => request()->get('release')
+                    ]);
+
+                    array_push($rings, getTweetRingById($value, $platform));
+                }
+
+                $hashtags = $form === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
+
+                if (request()->get('tweet')) {
+                    Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.collect($rings)->join(', ', ' and ').'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+                }
+            }
+        }
+
+        return redirect('/');
     }
 }

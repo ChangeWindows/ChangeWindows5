@@ -74,6 +74,7 @@
                 @auth
                     @if (Auth::user()->hasAnyRole(['Admin']))
                         <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fal fa-fw fa-plus"></i> Flight</span></a>
+                        <a class="btn btn-light btn-filter" href="{{ route('bulkFlight') }}"><span class="filter-title"><i class="fal fa-fw fa-plus"></i> Bulk flights</span></a>
                     @endif
                 @endauth
             </div>
