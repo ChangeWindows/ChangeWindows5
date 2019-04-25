@@ -27,7 +27,7 @@
     @foreach ($set as $group => $content)
         <div class="col-12 ring-milestones">
             <a href="{{ route('showMilestone', ['id' => $content['milestone']->id]) }}" class="h3" style="color: #{{ $content['milestone']->color }}">
-                <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $content['milestone']->osname }}</span> <span class="font-weight-normal">version {{ $content['milestone']->version }}</span> <small>{{ $content['milestone']->codename }}{!! $content['milestone']->name !== '' ? ' &middot; '.$content['milestone']->name : '' !!}</small>
+                <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $content['milestone']->osname }}</span> <span class="font-weight-normal">version {{ $content['milestone']->version }}</span> <small>{{ $content['milestone']->codename }}</small>
             </a>
         </div>
         @foreach ($content['flights'] as $ring => $flight)
