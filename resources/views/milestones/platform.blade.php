@@ -41,7 +41,7 @@
                 <i class="fal fa-fw fa-angle-double-left"></i>
                 <i class="fab fa-fw fa-windows"></i>
                 <span class="font-weight-bold">{{ $previous->osname }}</span>
-                <span class="d-none d-sm-inline d-lg-none"><br /></span> {{ $previous->name }}
+                <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $previous->version }}
             </a>
         @endif
     </div>
@@ -51,7 +51,7 @@
                 <i class="fab fa-fw fa-windows"></i>
                 <span class="font-weight-bold">{{ $next->osname }}</span>
                 <i class="fal fa-fw fa-angle-double-right d-none d-sm-inline d-lg-none"></i>
-                <span class="d-none d-sm-inline d-lg-none"><br /></span> {{ $next->name }}
+                <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $next->version }}
                 <i class="fal fa-fw fa-angle-double-right d-inline d-sm-none d-lg-inline"></i>
             </a>
         @endif
