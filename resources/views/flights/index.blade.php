@@ -37,12 +37,18 @@
                                                     <p class="ring"><span class="label {{ $ring->class }}">{{ $ring->flight }}</span></p>
                                                 </div>
                                             </a>
-                                            <form method="POST" action="{{ route('destroyFlight', ['id' => $ring->id]) }}" class="d-inline">
-                                                {{ method_field('DELETE') }}
-                                                {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>
-                                            </form>
-                                            <a href="{{ route('editFlight', $ring->id) }}" class="btn btn-outline-primary"><i class="fal fa-fw fa-pencil"></i> Edit</a>
+                                            <div class="btn-toolbar justify-content-between" role="toolbar">
+                                                <div class="btn-group" role="group">
+                                                    <a href="{{ route('editFlight', $ring->id) }}" class="btn btn-outline-primary"><i class="fal fa-fw fa-pencil"></i> Edit</a>
+                                                </div>
+                                                <div class="btn-group" role="group">
+                                                    <form method="POST" action="{{ route('destroyFlight', ['id' => $ring->id]) }}" class="d-inline">
+                                                        {{ method_field('DELETE') }}
+                                                        {{ csrf_field() }}
+                                                        <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 @endforeach
