@@ -22,20 +22,20 @@
                 <label for="email">E-mail address</label>
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" placeholder="E-mail address" required autofocus>
 
-                @if ($errors->has('email'))
+                @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
-                @endif
+                @enderror
 
                 <label for="password">Password</label>
                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placehlder="Password" name="password" required>
 
-                @if ($errors->has('password'))
+                @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('password') }}</strong>
                     </span>
-                @endif
+                @enderror
 
                 <label for="password-confirm">Confirm password</label>
 

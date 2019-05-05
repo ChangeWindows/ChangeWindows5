@@ -27,11 +27,11 @@
                 <label for="email">E-mail address</label>
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="E-mail address" required>
 
-                @if ($errors->has('email'))
+                @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
-                @endif
+                @enderror
 
                 <button type="submit" class="btn btn-primary">
                     <i class="fal fa-fw fa-paper-plane"></i> Send password reset link
