@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Changelog;
-use Twitter;
 
 class ChangelogController extends Controller
 {
@@ -65,14 +64,6 @@ class ChangelogController extends Controller
             'platform' => request()->get('platform'),
             'changelog' => request()->get('changelog')
         ]);
-
-        if (request()->get('platform') === 3) {
-            $hashtags = '#Xbox #XboxInsider';
-        } else {
-            $hashtags = '#Windows #WindowsInsiders';
-        }
-
-        // Twitter::postTweet(['status' => 'Info on build '.$string['build'].' for '.getPlatformById(request()->get('platform')).' is now available! '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass(request()->get('platform')).'#'.$string['delta'], 'format' => 'json']);
 
         return redirect('/changelog');
     }

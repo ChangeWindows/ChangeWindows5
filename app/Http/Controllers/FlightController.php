@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Release;
 use App\Milestone;
-use Twitter;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class FlightController extends Controller
 {
@@ -39,6 +39,7 @@ class FlightController extends Controller
         
         $string = Release::splitString(request()->get('build_string'));
         $milestone = Release::getMilestoneByString($string);
+        $connection = new TwitterOAuth(env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET'), env('TWITTER_ACCESS_TOKEN'), env('TWITTER_ACCESS_TOKEN_SECRET'));
 
         foreach(request()->get('flight') as $platform => $ring) {
             $rings = array();
@@ -61,7 +62,7 @@ class FlightController extends Controller
             $hashtags = $platform === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
 
             if (request()->get('tweet')) {
-                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.collect($rings)->join(', ', ' and ').'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+                $connection->post('statuses/update', ['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.collect($rings)->join(', ', ' and ').'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta']]);
             }
         }
 
@@ -107,6 +108,8 @@ class FlightController extends Controller
 
     public function bulkStore(Request $request) {
         $request->user()->authorizeRoles('Admin');
+
+        $connection = new TwitterOAuth(env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET'), env('TWITTER_ACCESS_TOKEN'), env('TWITTER_ACCESS_TOKEN_SECRET'));
         
         foreach(request()->get('string') as $milestone => $string) {
             $strings[$milestone] = Release::splitString($string);
@@ -135,7 +138,7 @@ class FlightController extends Controller
                 $hashtags = $form === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
 
                 if (request()->get('tweet')) {
-                    Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.collect($rings)->join(', ', ' and ').'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+                    $connection->post('statuses/update', ['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.collect($rings)->join(', ', ' and ').'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta']]);
                 }
             }
         }

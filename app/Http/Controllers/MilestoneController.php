@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Milestone;
 use App\Release;
 use Carbon\Carbon;
-use Twitter;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class MilestoneController extends Controller
 {
@@ -85,6 +85,8 @@ class MilestoneController extends Controller
     public function store(Request $request) {
         $request->user()->authorizeRoles('Admin');
 
+        $connection = new TwitterOAuth(env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET'), env('TWITTER_ACCESS_TOKEN'), env('TWITTER_ACCESS_TOKEN_SECRET'));
+
         Milestone::create([
             'id' => request()->get('id'),
             'osname' => request()->get('osname'),
@@ -136,7 +138,7 @@ class MilestoneController extends Controller
             'iso' => request()->get('iso') === null ? 0 : 1
         ]);
 
-        Twitter::postTweet(['status' => 'Follow everything about '.request()->get('codename').' at ChangeWindows! #Windows #WindowsInsiders https://changewindows.org/milestones/'.request()->get('id'), 'format' => 'json']);
+        $connection->post('statuses/update', ['status' => 'Follow everything about '.request()->get('codename').' at ChangeWindows! #Windows #WindowsInsiders https://changewindows.org/milestones/'.request()->get('id'));
 
         return redirect('/milestones');
     }
