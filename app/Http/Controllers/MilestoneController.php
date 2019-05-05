@@ -138,7 +138,7 @@ class MilestoneController extends Controller
             'iso' => request()->get('iso') === null ? 0 : 1
         ]);
 
-        $connection->post('statuses/update', ['status' => 'Follow everything about '.request()->get('codename').' at ChangeWindows! #Windows #WindowsInsiders https://changewindows.org/milestones/'.request()->get('id'));
+        $connection->post('statuses/update', ['status' => 'Follow everything about '.request()->get('codename').' at ChangeWindows! #Windows #WindowsInsiders https://changewindows.org/milestones/'.request()->get('id')]);
 
         return redirect('/milestones');
     }
