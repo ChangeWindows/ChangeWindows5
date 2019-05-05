@@ -52,13 +52,15 @@ class FlightController extends Controller
                     'delta' => $string['delta'],
                     'milestone' => $milestone,
                     'platform' => $platform,
-                    'ring' => $value,
+                    'ring' => $key,
                     'date' => request()->get('release')
                 ]);
 
-                array_push($rings, getTweetRingById($value, $platform));
+                array_push($rings, getTweetRingById($key, $platform));
             }
 
+
+            dd($rings);
             $hashtags = $platform === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
 
             if (request()->get('tweet')) {
@@ -132,7 +134,7 @@ class FlightController extends Controller
                         'date' => request()->get('release')
                     ]);
 
-                    array_push($rings, getTweetRingById($value, $platform));
+                    array_push($rings, getTweetRingById($key, $platform));
                 }
 
                 $hashtags = $form === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
