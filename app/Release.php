@@ -164,7 +164,10 @@ class Release extends Model implements Feedable
             else if ( $build < 17900 )
                 $milestone = 'redstone5';
             else if ( $build < 18500 )
-                $milestone = '19h1';
+                if ( $delta < 7000 )
+                    $milestone = '19h1';
+                else
+                    $milestone = '19h2';
             else if ( $build < 18501 )
                 $milestone = '19h2';
             else if ( $build < 19200 )
