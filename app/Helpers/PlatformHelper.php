@@ -18,16 +18,16 @@ function getPlatformById($id) {
 
 function getPlatformImage($id) {
     switch ($id) {
-        case 1:     return 'pc.svg';
-        case 2:     return 'mobile.svg';
-        case 3:     return 'xbox.svg';
-        case 4:     return 'server.svg';
-        case 5:     return 'holographic.svg';
-        case 6:     return 'iot.svg';
-        case 7:     return 'team.svg';
-        case 8:     return 'iso.svg';
-        case 9:     return 'sdk.svg';
-        default:    return 'generic.svg';
+        case 1:     return 'pc.png';
+        case 2:     return 'mobile.png';
+        case 3:     return 'xbox.png';
+        case 4:     return 'server.png';
+        case 5:     return 'holographic.png';
+        case 6:     return 'iot.png';
+        case 7:     return 'team.png';
+        case 8:     return 'iso.png';
+        case 9:     return 'sdk.png';
+        default:    return 'generic.png';
     }
 }
 

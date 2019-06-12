@@ -99,15 +99,15 @@
                     <thead>
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col"><img src="{{ asset('img/platform/pc.svg') }}" height="32px" width="32px" alt="PC" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/mobile.svg') }}" height="32px" width="32px" alt="Mobile" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/xbox.svg') }}" height="32px" width="32px" alt="Xbox" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/server.svg') }}" height="32px" width="32px" alt="Server" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/holographic.svg') }}" height="32px" width="32px" alt="Holographic" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/iot.svg') }}" height="32px" width="32px" alt="IoT" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/team.svg') }}" height="32px" width="32px" alt="Team" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/iso.svg') }}" height="32px" width="32px" alt="ISO" /></th>
-                            <th scope="col"><img src="{{ asset('img/platform/sdk.svg') }}" height="32px" width="32px" alt="SDK" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/pc.png') }}" height="32px" width="32px" alt="PC" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/mobile.png') }}" height="32px" width="32px" alt="Mobile" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/xbox.png') }}" height="32px" width="32px" alt="Xbox" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/server.png') }}" height="32px" width="32px" alt="Server" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/holographic.png') }}" height="32px" width="32px" alt="Holographic" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/iot.png') }}" height="32px" width="32px" alt="IoT" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/team.png') }}" height="32px" width="32px" alt="Team" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/iso.png') }}" height="32px" width="32px" alt="ISO" /></th>
+                            <th scope="col"><img src="{{ asset('img/platform/sdk.png') }}" height="32px" width="32px" alt="SDK" /></th>
                         </tr>
                     </thead>
                     <tbody>
