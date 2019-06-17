@@ -13,6 +13,7 @@
 @section('hero')
 <div class="jumbotron highlights tabs">
     <div class="container">
+<!--
         <div class="row">
             <div class="col-lg-8 col-sm-6">
                 <a class="hero hero-preview" href="https://medium.com/changewindows/changewindows-5-0-b0e63d01067">
@@ -31,6 +32,7 @@
                 </a>
             </div>
         </div>
+-->
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link {{ $request->platform == '' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => null, 'ring' => $request->ring]) }}">All</a>
