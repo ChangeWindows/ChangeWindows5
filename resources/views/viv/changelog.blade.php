@@ -4,6 +4,12 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.0.4 <small>17 June 2019</small></h3>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where flights could not be published in 5.0.3</p>
+    <p>Updates various packages that report security issues</p>
+</section>
+<section class="release-notes">
     <h3>5.0.3 <small>17 June 2019</small></h3>
     <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
     <p>Support for fast-releasing Xbox Alpha Skip Ahead builds</p>

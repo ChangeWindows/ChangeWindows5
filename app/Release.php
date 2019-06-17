@@ -135,6 +135,7 @@ class Release extends Model implements Feedable
     }
 
     static function getMilestoneByString($string) {
+        $delta = $string['delta'];
         $build = $string['build'];
         $major = $string['major'];
 
