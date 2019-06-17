@@ -13,6 +13,7 @@
 @section('hero')
 <div class="jumbotron highlights tabs">
     <div class="container">
+<!--
         <div class="row">
             <div class="col-lg-8 col-sm-6">
                 <a class="hero hero-preview" href="https://medium.com/changewindows/changewindows-5-0-b0e63d01067">
@@ -31,6 +32,7 @@
                 </a>
             </div>
         </div>
+-->
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link {{ $request->platform == '' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => null, 'ring' => $request->ring]) }}">All</a>
@@ -167,8 +169,10 @@
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
         <div class="row row-gutter">
-            <div class="col"><?php getTile( $flights['team']['targeted'] ) ?></div>
-            <div class="col"><?php getTile( $flights['team']['broad'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['fast'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['slow'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['targeted'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
         <div class="row row-gutter">
@@ -267,6 +271,8 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Team</label>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f72" name="flight[7][2]" value="2"><label class="custom-control-label" for="f72"><span class="label fast">Fast Ring</span></label></label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f73" name="flight[7][3]" value="3"><label class="custom-control-label" for="f73"><span class="label slow">Slow Ring</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f76" name="flight[7][6]" value="6"><label class="custom-control-label" for="f76"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f77" name="flight[7][7]" value="7"><label class="custom-control-label" for="f77"><span class="label broad">Semi-Annual Broad</span></label></label></div>
                             </div>

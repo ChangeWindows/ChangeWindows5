@@ -4,7 +4,21 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.0.3 <small>17 June 2019</small></h3>
+    <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
+    <p>Support for fast-releasing Xbox Alpha Skip Ahead builds</p>
+</section>
+<section class="release-notes">
+    <h3>5.0.2 <small>18 April 2019</small></h3>
+    <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+    <p>Support for publishing Fast and Slow builds for Team</p>
+    <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes the incorrect urls for the "See all"-links for platforms in milestone details</p>
+</section>
+<section class="release-notes">
     <h3>5.0.1 <small>10 March 2019</small></h3>
+    <h4><i class="fal fa-fw fa-plus"></i> New</h4>
+    <p>Platinum Insiders are now shown on About</p>
     <h4><i class="fal fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes an issue where the platform pages on Rings would link to the wrong location</p>
     <p>Fixes an issue where vNext used old platformId-based URLs</p>

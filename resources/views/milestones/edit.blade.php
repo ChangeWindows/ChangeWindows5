@@ -137,6 +137,8 @@
     </div>
     <div class="col-lg-4 col-md-6 col-sm">
         <label for="ring" class="control-label">Team</label>
+        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="teamFast" name="teamFast" {{ $milestone->teamFast == '1' ? 'checked' : '' }} value="2"><label class="custom-control-label" for="teamFast"><span class="label fast">Fast Ring</span></label></label></div>
+        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="teamSlow" name="teamSlow" {{ $milestone->teamSlow == '1' ? 'checked' : '' }} value="7"><label class="custom-control-label" for="teamSlow"><span class="label slow">Slow Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="teamTargeted" name="teamTargeted" {{ $milestone->teamTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="teamTargeted"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="teamBroad" name="teamBroad" {{ $milestone->teamBroad == '1' ? 'checked' : '' }} value="7"><label class="custom-control-label" for="teamBroad"><span class="label broad">Semi-Annual Broad</span></label></label></div>
     </div>

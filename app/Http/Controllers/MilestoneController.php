@@ -124,6 +124,8 @@ class MilestoneController extends Controller
             'iotTargeted' => request()->get('iotTargeted') === null ? 0 : 1,
             'iotBroad' => request()->get('iotBroad') === null ? 0 : 1,
             'teamTargeted' => request()->get('teamTargeted') === null ? 0 : 1,
+            'teamFast' => request()->get('teamFast') === null ? 0 : 1,
+            'teamSlow' => request()->get('teamSlow') === null ? 0 : 1,
             'teamBroad' => request()->get('teamBroad') === null ? 0 : 1,
             'holographicFast' => request()->get('holographicFast') === null ? 0 : 1,
             'holographicSlow' => request()->get('holographicSlow') === null ? 0 : 1,
@@ -202,6 +204,8 @@ class MilestoneController extends Controller
         $milestone->iotSlow = request()->get('iotSlow') === null ? 0 : 1;
         $milestone->iotTargeted = request()->get('iotTargeted') === null ? 0 : 1;
         $milestone->iotBroad = request()->get('iotBroad') === null ? 0 : 1;
+        $milestone->teamFast = request()->get('teamFast') === null ? 0 : 1;
+        $milestone->teamSlow = request()->get('teamSlow') === null ? 0 : 1;
         $milestone->teamTargeted = request()->get('teamTargeted') === null ? 0 : 1;
         $milestone->teamBroad = request()->get('teamBroad') === null ? 0 : 1;
         $milestone->holographicFast = request()->get('holographicFast') === null ? 0 : 1;

@@ -135,6 +135,8 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">
                         <label for="ring" class="control-label">Team</label>
+                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f72" name="flight[7][2]" value="2"><label class="custom-control-label" for="f72"><span class="label fast">Fast Ring</span></label></label></div>
+                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f73" name="flight[7][3]" value="3"><label class="custom-control-label" for="f73"><span class="label slow">Slow Ring</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f76" name="flight[7][6]" value="6"><label class="custom-control-label" for="f76"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f77" name="flight[7][7]" value="7"><label class="custom-control-label" for="f77"><span class="label broad">Semi-Annual Broad</span></label></label></div>
                     </div>
