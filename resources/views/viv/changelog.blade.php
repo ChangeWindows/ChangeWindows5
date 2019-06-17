@@ -17,6 +17,11 @@
     <p>Fixes a bug that resulted in platforms being listed in random orders on the timeline</p>
 </section>
 <section class="release-notes">
+    <h3>5.0.3 <small>17 June 2019</small></h3>
+    <h4><i class="fal fa-fw fa-exchange"></i> Changed</h4>
+    <p>Support for fast-releasing Xbox Alpha Skip Ahead builds</p>
+</section>
+<section class="release-notes">
     <h3>5.0.2 <small>18 April 2019</small></h3>
     <h4><i class="fal fa-fw fa-plus"></i> New</h4>
     <p>Support for publishing Fast and Slow builds for Team</p>
