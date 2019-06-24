@@ -63,7 +63,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => null]) }}">All</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'skip']) }}">Fast Skip Ahead/Alpha Skip Ahead</a>
-                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'fast']) }}">Fast Active/ Alpha Active/Fast</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'fast']) }}">Fast Active/Alpha Active/Fast</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'slow']) }}">Slow/Beta/Preview</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'preview']) }}">Delta</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'release']) }}">Release Preview/Omega</a>
@@ -88,7 +88,7 @@
                         @foreach ($deltas as $delta => $platforms)
                             @foreach ($platforms as $platform => $rings)
                                 <div class="timeline-row">
-                                    <a class="row" href="{{ route('showBuild', ['milestone' => $rings[array_key_first($rings)]->milestone, 'build' => $build, 'platform' => getPlatformClass($platform)]) }}">
+                                    <a class="row" href="{{ route('showBuild', ['milestone' => $rings[array_key_first($rings)]->milestone, 'build' => $build, 'platform' => getPlatformClass($platform)]) }}#{{ $delta }}">
                                         <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
                                         <div class="col-6 col-md-8 ring">
                                             @foreach ($rings as $ring)
