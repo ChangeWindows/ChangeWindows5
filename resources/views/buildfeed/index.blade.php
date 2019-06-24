@@ -67,6 +67,6 @@
             </div>
         </div>
     @endif
-    <div class="col-12">{{ $builds->links() }}</div>
+    <div class="col-12">{{ $builds->appends(['lab' => $request->lab, 'family' => $request->family, 'sourcetype' => $request->sourcetype])->links() }}</div>
 </div>
 @endsection

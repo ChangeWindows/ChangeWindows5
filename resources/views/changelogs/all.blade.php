@@ -54,7 +54,7 @@
             @endforeach
         </div>
         
-        {{ $changelogs->links() }}
+        {{ $changelogs->appends(['platform' => $platform])->links() }}
     </div>
 </div>
 @endsection
