@@ -30,7 +30,7 @@
                                 @foreach ($rings as $ring)
                                     <div class="col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
                                         <div class="flight-set">
-                                            <a class="flight" href="{{ route('showBuild', ['milestone' => $ring->milestone, 'build' => $build, 'platform' => $platform]) }}">
+                                            <a class="flight" href="{{ route('showBuild', ['milestone' => $ring->milestone, 'build' => $build, 'platform' => getPlatformClass($platform)]) }}#{{ $delta }}">
                                                 <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-fluid" alt="{{ getPlatformById($platform) }}" /></div>
                                                 <div class="data">
                                                     <p class="build">{{ $build }}.{{ $delta }}</p>
