@@ -32,7 +32,7 @@
         <script src="{{ asset('js/fontawesome.min.js') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
-        <link rel="shortcut icon" href="{{{ asset('img/favicon.png?v4') }}}">
+        <link rel="shortcut icon" href="{{{ asset('img/logo.png?v5') }}}">
 
         <meta name="format-detection" content="telephone=no">
         
@@ -54,7 +54,7 @@
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
-                    <img src="{{ asset('img/logo_color.png') }}" />
+                    <img src="{{ asset('img/logo.png') }}" />
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">

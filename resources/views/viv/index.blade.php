@@ -8,7 +8,7 @@
 @section('content')
 <div class="row">
     <div class="col-12">
-        <img class="about-logo" src="{{ asset('img/logo_color.png') }}" />
+        <img class="about-logo" src="{{ asset('img/logo.png') }}" />
         <p class="lead text-center about-intro">ChangeWindows is your source to find out everything you need to know about the previous, current and next version of Windows, be it for your PC, Xbox, HoloLens, Hub, IoT device, server or perhaps even that phone you still have.</p>
         <p class="text-center mt-3">
             <a href="ms-windows-store://pdp/?productid=9N8V0TQT6NLB" class="btn btn-primary btn-store">

@@ -16,7 +16,7 @@
             <form method="POST" action="{{ route('password.email') }}"" class="login-form">
                 @csrf
 
-                <img class="login-logo" src="{{ asset('img/logo_color.png') }}" />
+                <img class="login-logo" src="{{ asset('img/logo.png') }}" />
 
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">

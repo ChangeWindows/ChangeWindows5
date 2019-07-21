@@ -16,7 +16,7 @@
             <form method="POST" action="{{ route('register') }}" class="login-form">
                 @csrf
 
-                <img class="login-logo" src="{{ asset('img/logo_color.png') }}" />
+                <img class="login-logo" src="{{ asset('img/logo.png') }}" />
                 
                 <label for="name">Name</label>
                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="Name" required autofocus>
