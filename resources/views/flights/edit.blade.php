@@ -64,8 +64,7 @@
                         <option value="3" {{ $flight->ring == 3 ? 'selected' : ''}}>Slow Ring/Beta/Preview</option>
                         <option value="4" {{ $flight->ring == 4 ? 'selected' : ''}}>Delta</option>
                         <option value="5" {{ $flight->ring == 5 ? 'selected' : ''}}>Release Preview Ring/Omega Ring</option>
-                        <option value="6" {{ $flight->ring == 6 ? 'selected' : ''}}>Semi-Annual Channel Targeted/Release</option>
-                        <option value="7" {{ $flight->ring == 7 ? 'selected' : ''}}>Semi-Annual Channel Broad</option>
+                        <option value="6" {{ $flight->ring == 6 ? 'selected' : ''}}>Semi-Annual Channel/Release</option>
                         <option value="8" {{ $flight->ring == 8 ? 'selected' : ''}}>Long-Term Servicing Channel</option>
                     </select>
                 </div>

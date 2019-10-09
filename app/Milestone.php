@@ -12,7 +12,7 @@ class Milestone extends Model
 
     protected $dates = ['created_at', 'updated_at', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol'];
 
-    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'description', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcSkip', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcBroad', 'pcLTS', 'mobileFast', 'mobileSlow', 'mobileReleasePreview', 'mobileTargeted', 'mobileBroad', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'iotBroad', 'teamTargeted', 'teamBroad', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicBroad', 'holographicLTS', 'sdk', 'iso'];
+    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'description', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcSkip', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcLTS', 'mobileFast', 'mobileSlow', 'mobileReleasePreview', 'mobileTargeted', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'teamTargeted', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicLTS', 'sdk', 'iso'];
 
     public function getSupport() {
         $now = Carbon::now();
@@ -37,7 +37,7 @@ class Milestone extends Model
                 // We flip this to "greaterThanOrEqualTo" instead of "greaterThan" because these dates indicate the last day of support
                 $public_done = $this->public->diffInDays($this->now);
                 $public_go = $public_period - $public_done;
-                
+
                 $preview_go = $extended_done = $lts_done = 0;
                 $preview_done = $preview_period;
                 $extended_go = $extended_period;
@@ -45,7 +45,7 @@ class Milestone extends Model
             } else if ($this->mainEol->lessThan($now) && $this->mainXol->greaterThanOrEqualTo($now)) {
                 $extended_done = $this->mainEol->diffInDays($this->now);
                 $extended_go = $extended_period - $extended_done;
-                
+
                 $preview_go = $public_go = $lts_done = 0;
                 $preview_done = $preview_period;
                 $public_done = $public_period;
@@ -53,7 +53,7 @@ class Milestone extends Model
             } else if ($this->mainXol->lessThan($now) && $this->ltsEol->greaterThanOrEqualTo($now)) {
                 $lts_done = $this->mainXol->diffInDays($this->now);
                 $lts_go = $lts_period - $lts_done;
-                
+
                 $preview_go = $public_go = $extended_go = 0;
                 $preview_done = $preview_period;
                 $public_done = $public_period;
@@ -90,7 +90,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => $this->pcReleasePreview,
                 'targeted' => $this->pcTargeted,
-                'broad' => $this->pcBroad,
                 'ltsc' => $this->pcLTS
             ),
             'mobile' => array(
@@ -100,7 +99,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => $this->mobileReleasePreview,
                 'targeted' => $this->mobileTargeted,
-                'broad' => $this->mobileBroad,
                 'ltsc' => -1
             ),
             'xbox' => array(
@@ -110,7 +108,6 @@ class Milestone extends Model
                 'preview' => $this->xboxPreview,
                 'release' => $this->xboxReleasePreview,
                 'targeted' => $this->xboxTargeted,
-                'broad' => -1,
                 'ltsc' => -1
             ),
             'server' => array(
@@ -120,7 +117,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => -1,
                 'targeted' => $this->serverTargeted,
-                'broad' => -1,
                 'ltsc' => $this->serverLTS
             ),
             'holographic' => array(
@@ -130,7 +126,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => -1,
                 'targeted' => $this->holographicTargeted,
-                'broad' => $this->holographicBroad,
                 'ltsc' => $this->holographicLTS
             ),
             'iot' => array(
@@ -140,7 +135,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => -1,
                 'targeted' => $this->iotTargeted,
-                'broad' => $this->iotBroad,
                 'ltsc' => -1
             ),
             'team' => array(
@@ -150,7 +144,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => -1,
                 'targeted' => $this->teamTargeted,
-                'broad' => $this->teamBroad,
                 'ltsc' => -1
             ),
             'sdk' => array(
@@ -160,7 +153,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => -1,
                 'targeted' => $this->sdk,
-                'broad' => -1,
                 'ltsc' => -1
             ),
             'iso' => array(
@@ -170,7 +162,6 @@ class Milestone extends Model
                 'preview' => -1,
                 'release' => -1,
                 'targeted' => $this->iso,
-                'broad' => -1,
                 'ltsc' => -1
             )
         );

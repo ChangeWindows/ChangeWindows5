@@ -8,8 +8,7 @@ function getRingById($id) {
         case 3:     return 'Slow Ring';
         case 4:     return 'Preview Ring';
         case 5:     return 'Release Preview Ring';
-        case 6:     return 'Semi-Annual Channel Targeted';
-        case 7:     return 'Semi-Annual Channel Broad';
+        case 6:     return 'Semi-Annual Channel';
         case 8:     return 'Long-Term Suppprt Channel';
         default:    return;
     }
@@ -56,10 +55,8 @@ function getTweetRingById($id, $platform) {
                 case 9:
                     return 'Public';
                 default:
-                    return 'SAC Targeted';
+                    return 'SAC';
             }
-        case 7:
-            return 'SAC Broad';
         case 8:
             return 'LTSC';
         default:
@@ -76,7 +73,6 @@ function getRingClassById($id) {
         case 4:     return 'preview';
         case 5:     return 'release';
         case 6:     return 'targeted';
-        case 7:     return 'broad';
         case 8:     return 'ltsc';
         default:    return;
     }
@@ -91,7 +87,6 @@ function getRingIdByClass($class) {
         case 'preview':     return 4;
         case 'release':     return 5;
         case 'targeted':    return 6;
-        case 'broad':       return 7;
         case 'ltsc':        return 8;
         default:            return;
     }
@@ -105,8 +100,7 @@ function getRingByClass($class) {
         case 'slow':        return 'Slow Ring';
         case 'preview':     return 'Preview Ring';
         case 'release':     return 'Release Preview Ring';
-        case 'targeted':    return 'Semi-Annual Channel Targeted';
-        case 'broad':       return 'Semi-Annual Channel Broad';
+        case 'targeted':    return 'Semi-Annual Channel';
         case 'ltsc':        return 'Long-Term Suppprt Channel';
         default:            return 'All';
     }

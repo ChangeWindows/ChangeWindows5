@@ -67,8 +67,7 @@
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'slow']) }}">Slow/Beta/Preview</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'preview']) }}">Delta</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'release']) }}">Release Preview/Omega</a>
-                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'targeted']) }}">Semi-Annual Targeted/Release</a>
-                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'broad']) }}">Semi-Annual Broad</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'targeted']) }}">Semi-Annual/Release</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'lts']) }}">Long-Term Servicing</a>
                 </div>
                 @auth
@@ -145,13 +144,12 @@
         @endif
         <p class="h3"><i class="fab fa-fw fa-windows"></i> PC</p>
         <div class="row row-gutter">
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['fast'] ) ?></div>
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
-            <div class="col-xl-6 col-lg-6 col-md-3 col-sm-6 col-6"><?php getTile( $flights['pc']['release'] ) ?></div>
-            <div class="col-xl-4 col-lg-12 col-md-4 col-sm-4 col-12"><?php getTile( $flights['pc']['targeted'] ) ?></div>
-            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['broad'] ) ?></div>
-            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-4 col-6"><?php getTile( $flights['pc']['ltsc'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['skip'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['fast'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['release'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['targeted'] ) ?></div>
+            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['ltsc'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-xbox"></i> Xbox</p>
         <div class="row row-gutter">
@@ -166,7 +164,6 @@
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iot']['slow'] ) ?></div>
             <div class="col"><?php getTile( $flights['iot']['targeted'] ) ?></div>
-            <div class="col"><?php getTile( $flights['iot']['broad'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Server</p>
         <div class="row row-gutter">
@@ -176,23 +173,20 @@
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Holographic</p>
         <div class="row row-gutter">
-            <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['fast'] ) ?></div>
-            <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['slow'] ) ?></div>
-            <div class="col-xl-4 col-lg-12 col-sm-4 col-12"><?php getTile( $flights['holo']['targeted'] ) ?></div>
-            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['broad'] ) ?></div>
-            <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['holo']['fast'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['holo']['slow'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['holo']['targeted'] ) ?></div>
+            <div class="col-6"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
         <div class="row row-gutter">
-            <div class="col-6"><?php getTile( $flights['team']['fast'] ) ?></div>
-            <div class="col-6"><?php getTile( $flights['team']['slow'] ) ?></div>
-            <div class="col-6"><?php getTile( $flights['team']['targeted'] ) ?></div>
-            <div class="col-6"><?php getTile( $flights['team']['broad'] ) ?></div>
+            <div class="col"><?php getTile( $flights['team']['fast'] ) ?></div>
+            <div class="col"><?php getTile( $flights['team']['slow'] ) ?></div>
+            <div class="col"><?php getTile( $flights['team']['targeted'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['mobile']['targeted'] ) ?></div>
-            <div class="col"><?php getTile( $flights['mobile']['broad'] ) ?></div>
         </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
         <div class="row row-gutter">
@@ -462,48 +456,6 @@
                                             <label class="custom-control-label" for="f96"></label>
                                         </div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="text-right"><span class="label broad">Broad</span></th>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="f17" name="flight[1][7]" value="1">
-                                            <label class="custom-control-label" for="f17"></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="f27" name="flight[2][7]" value="1">
-                                            <label class="custom-control-label" for="f27"></label>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="f47" name="flight[4][7]" value="1">
-                                            <label class="custom-control-label" for="f47"></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="f57" name="flight[5][7]" value="1">
-                                            <label class="custom-control-label" for="f57"></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="f67" name="flight[6][7]" value="1">
-                                            <label class="custom-control-label" for="f67"></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="f77" name="flight[7][7]" value="1">
-                                            <label class="custom-control-label" for="f77"></label>
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-right"><span class="label ltsc">LTSC</span></th>

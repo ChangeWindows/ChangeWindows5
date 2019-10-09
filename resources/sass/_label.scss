@@ -8,7 +8,7 @@
     &.vnext, &.leak {
         color: $leak;
     }
-    
+
     &.skip {
         color: $skip;
     }
@@ -31,10 +31,6 @@
 
     &.targeted {
         color: $targeted;
-    }
-
-    &.broad {
-        color: $broad;
     }
 
     &.ltsc {

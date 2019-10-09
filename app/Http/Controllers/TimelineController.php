@@ -30,13 +30,12 @@ class TimelineController extends Controller
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
         }
-        
+
         $flights['pc']['skip'] = Release::pc()->skip()->latestFlight()->first();
         $flights['pc']['fast'] = Release::pc()->active()->latestFlight()->first();
         $flights['pc']['slow'] = Release::pc()->slow()->latestFlight()->first();
         $flights['pc']['release'] = Release::pc()->release()->latestFlight()->first();
         $flights['pc']['targeted'] = Release::pc()->targeted()->latestFlight()->first();
-        $flights['pc']['broad'] = Release::pc()->broad()->latestFlight()->first();
         $flights['pc']['ltsc'] = Release::pc()->ltsc()->latestFlight()->first();
 
         $flights['xbox']['skip'] = Release::xbox()->skip()->latestFlight()->first();
@@ -52,21 +51,17 @@ class TimelineController extends Controller
 
         $flights['iot']['slow'] = Release::iot()->slow()->latestFlight()->first();
         $flights['iot']['targeted'] = Release::iot()->targeted()->latestFlight()->first();
-        $flights['iot']['broad'] = Release::iot()->broad()->latestFlight()->first();
 
         $flights['holo']['fast'] = Release::holographic()->active()->latestFlight()->first();
         $flights['holo']['slow'] = Release::holographic()->slow()->latestFlight()->first();
         $flights['holo']['targeted'] = Release::holographic()->targeted()->latestFlight()->first();
-        $flights['holo']['broad'] = Release::holographic()->broad()->latestFlight()->first();
         $flights['holo']['ltsc'] = Release::holographic()->ltsc()->latestFlight()->first();
 
         $flights['team']['fast'] = Release::team()->active()->latestFlight()->first();
         $flights['team']['slow'] = Release::team()->slow()->latestFlight()->first();
         $flights['team']['targeted'] = Release::team()->targeted()->latestFlight()->first();
-        $flights['team']['broad'] = Release::team()->broad()->latestFlight()->first();
 
         $flights['mobile']['targeted'] = Release::mobile()->targeted()->latestFlight()->first();
-        $flights['mobile']['broad'] = Release::mobile()->broad()->latestFlight()->first();
 
         $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
@@ -76,7 +71,7 @@ class TimelineController extends Controller
         if ( strpos( $user_agent, 'Edge/' ) ) {
             $edge_agent = substr($user_agent, strrpos($user_agent, 'Edge/'));
             $ua['build'] = substr($edge_agent, strrpos($edge_agent, '.') + 1);
-            
+
             if ( strpos( $user_agent, 'Xbox' ) ) {
                 $ua['platform'] = 'xbox';
             } else if ( strpos( $user_agent, 'Windows Phone' ) ) {
@@ -109,7 +104,7 @@ class TimelineController extends Controller
 
         if ($platform) {
             $releases = Release::where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
-            
+
             if ($releases->count() < 1) {
                 $platform_id = $platforms[0]->platform;
                 $releases = Release::where('build', $cur_build)->where('platform', $platforms[0]->platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
@@ -165,7 +160,7 @@ class TimelineController extends Controller
 
         if ($platform) {
             $releases = Release::where('milestone', $cur_milestone)->where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
-            
+
             if ($releases->count() < 1) {
                 $platform_id = $platforms[0]->platform;
                 $releases = Release::where('milestone', $cur_milestone)->where('build', $cur_build)->where('platform', $platforms[0]->platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);

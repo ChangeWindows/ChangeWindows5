@@ -9750,9 +9750,6 @@ h3 {
 .label.targeted {
   color: #46c429;
 }
-.label.broad {
-  color: #10b08f;
-}
 .label.ltsc {
   color: #0098df;
 }
@@ -10476,9 +10473,6 @@ h1 {
 .tile.targeted, .light .tile.targeted, .white .tile.targeted {
   background-color: #46c429;
 }
-.tile.broad, .light .tile.broad, .white .tile.broad {
-  background-color: #10b08f;
-}
 .tile.ltsc, .light .tile.ltsc, .white .tile.ltsc {
   background-color: #0098df;
 }
@@ -10506,9 +10500,6 @@ h1 {
 }
 .dark .tile.targeted .ring, .black .tile.targeted .ring {
   color: #46c429;
-}
-.dark .tile.broad .ring, .black .tile.broad .ring {
-  color: #10b08f;
 }
 .dark .tile.ltsc .ring, .black .tile.ltsc .ring {
   color: #0098df;

@@ -32,13 +32,11 @@ class CreateMilestonesTable extends Migration
             $table->integer('pcSlow')->unsigned();
             $table->integer('pcReleasePreview')->unsigned();
             $table->integer('pcTargeted')->unsigned();
-            $table->integer('pcBroad')->unsigned();
             $table->integer('pcLTS')->unsigned();
             $table->integer('mobileFast')->unsigned();
             $table->integer('mobileSlow')->unsigned();
             $table->integer('mobileReleasePreview')->unsigned();
             $table->integer('mobileTargeted')->unsigned();
-            $table->integer('mobileBroad')->unsigned();
             $table->integer('xboxSkip')->unsigned();
             $table->integer('xboxFast')->unsigned();
             $table->integer('xboxSlow')->unsigned();
@@ -50,13 +48,10 @@ class CreateMilestonesTable extends Migration
             $table->integer('serverLTS')->unsigned();
             $table->integer('iotSlow')->unsigned();
             $table->integer('iotTargeted')->unsigned();
-            $table->integer('iotBroad')->unsigned();
             $table->integer('teamTargeted')->unsigned();
-            $table->integer('teamBroad')->unsigned();
             $table->integer('holographicFast')->unsigned();
             $table->integer('holographicSlow')->unsigned();
             $table->integer('holographicTargeted')->unsigned();
-            $table->integer('holographicBroad')->unsigned();
             $table->integer('holographicLTS')->unsigned();
             $table->integer('sdk')->unsigned();
             $table->integer('iso')->unsigned();

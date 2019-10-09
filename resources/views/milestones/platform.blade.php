@@ -107,11 +107,6 @@
                         <div class="{{ array_key_exists('6', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label targeted">{{ array_key_exists('6', $rings) ? $rings['6'] : '' }}</span>
                         </div>
-                        @if (in_array($platform_id, [1, 2, 5, 6, 7]))
-                        <div class="{{ array_key_exists('7', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
-                            <span class="label broad">{{ array_key_exists('7', $rings) ? $rings['7'] : '' }}</span>
-                        </div>
-                        @endif
                         @if (in_array($platform_id, [1, 4, 5]))
                         <div class="{{ array_key_exists('8', $rings) ? 'col-4 d-none d-lg-block' : 'd-none d-lg-block' }} col-lg ring">
                             <span class="label ltsc">{{ array_key_exists('8', $rings) ? $rings['8'] : '' }}</span>

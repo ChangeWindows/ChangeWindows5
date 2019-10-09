@@ -247,7 +247,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th scope="row" class="text-right"><span class="label targeted">Targeted</span></th>
+                    <th scope="row" class="text-right"><span class="label targeted">Production</span></th>
                     <td>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="pcTargeted" name="pcTargeted" {{ $milestone->pcTargeted == '1' ? 'checked' : '' }} value="1">
@@ -302,43 +302,6 @@
                             <label class="custom-control-label" for="sdk"></label>
                         </div>
                     </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-right"><span class="label broad">Broad</span></th>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="pcBroad" name="pcBroad" {{ $milestone->pcBroad == '1' ? 'checked' : '' }} value="1">
-                            <label class="custom-control-label" for="pcBroad"></label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="mobileBroad" name="mobileBroad" {{ $milestone->mobileBroad == '1' ? 'checked' : '' }} value="1">
-                            <label class="custom-control-label" for="mobileBroad"></label>
-                        </div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="holographicBroad" name="holographicBroad" {{ $milestone->holographicBroad == '1' ? 'checked' : '' }} value="1">
-                            <label class="custom-control-label" for="holographicBroad"></label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="iotBroad" name="iotBroad" {{ $milestone->iotBroad == '1' ? 'checked' : '' }} value="1">
-                            <label class="custom-control-label" for="iotBroad"></label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="teamBroad" name="teamBroad" {{ $milestone->teamBroad == '1' ? 'checked' : '' }} value="1">
-                            <label class="custom-control-label" for="teamBroad"></label>
-                        </div>
-                    </td>
-                    <td></td>
-                    <td></td>
                 </tr>
                 <tr>
                     <th scope="row" class="text-right"><span class="label ltsc">LTSC</span></th>

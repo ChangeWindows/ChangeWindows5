@@ -38,11 +38,11 @@
     &.vnext, &.leak {
         background-color: $leak;
     }
-    
+
     &.skip {
         background-color: $skip;
     }
-    
+
     &.fast {
         background-color: $fast;
     }
@@ -63,10 +63,6 @@
         background-color: $targeted;
     }
 
-    &.broad {
-        background-color: $broad;
-    }
-
     &.ltsc {
         background-color: $ltsc;
     }
@@ -83,55 +79,49 @@
                 color: $leak;
             }
         }
-        
+
         &.skip {
             .ring {
                 color: $skip;
             }
         }
-        
+
         &.fast {
             .ring {
                 color: $fast;
             }
         }
-    
+
         &.slow {
             .ring {
                 color: $slow;
             }
         }
-    
+
         &.preview {
             .ring {
                 color: $preview;
             }
         }
-    
+
         &.release {
             .ring {
                 color: $release;
             }
         }
-    
+
         &.targeted {
             .ring {
                 color: $targeted;
             }
         }
-    
-        &.broad {
-            .ring {
-                color: $broad;
-            }
-        }
-    
+
         &.ltsc {
             .ring {
                 color: $ltsc;
             }
         }
-    
+
         &.none {
             .ring {
                 color: $accent;

@@ -79,8 +79,6 @@ class Release extends Model implements Feedable
             }
         if ( $this->ring == 6 )
             return 'Targeted';
-        if ( $this->ring == 7 )
-            return 'Broad';
         if ( $this->ring == 8 )
             return 'LTSC';
     }
@@ -100,8 +98,6 @@ class Release extends Model implements Feedable
             return 'release';
         if ( $this->ring == 6 )
             return 'targeted';
-        if ( $this->ring == 7 )
-            return 'broad';
         if ( $this->ring == 8 )
             return 'ltsc';
     }
@@ -177,7 +173,7 @@ class Release extends Model implements Feedable
             else
                 $milestone = '20h2';
         }
-        
+
         return $milestone;
 
         // Damn it.
@@ -203,7 +199,6 @@ class Release extends Model implements Feedable
     public function scopePreview($query) { return $query->where('ring', '4'); }
     public function scopeRelease($query) { return $query->where('ring', '5'); }
     public function scopeTargeted($query) { return $query->where('ring', '6'); }
-    public function scopeBroad($query) { return $query->where('ring', '7'); }
     public function scopeLtsc($query) { return $query->where('ring', '8'); }
 
     public function scopeLatestFlight($query) { return $query->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc'); }

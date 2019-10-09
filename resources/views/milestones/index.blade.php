@@ -130,8 +130,7 @@
                                 <div class="checkbox"><input type="checkbox" name="pcFast" value="2"> <span class="label fast">Fast Ring</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcSlow" value="3"> <span class="label slow">Slow Ring</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcReleasePreview" value="5"> <span class="label release">Release Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
+                                <div class="checkbox"><input type="checkbox" name="pcTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
@@ -139,8 +138,7 @@
                                 <div class="checkbox"><input type="checkbox" name="mobileFast" value="2"> <span class="label fast">Fast Ring</span></div>
                                 <div class="checkbox"><input type="checkbox" name="mobileSlow" value="3"> <span class="label slow">Slow Ring</span></div>
                                 <div class="checkbox"><input type="checkbox" name="mobileReleasePreview" value="5"> <span class="label release">Release Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
+                                <div class="checkbox"><input type="checkbox" name="mobileTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Xbox</label>
@@ -154,26 +152,22 @@
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Server</label>
                                 <div class="checkbox"><input type="checkbox" name="serverSlow" value="3"> <span class="label slow">Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="serverTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="serverBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
+                                <div class="checkbox"><input type="checkbox" name="serverTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
                                 <div class="checkbox"><input type="checkbox" name="serverLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Holographic</label>
-                                <div class="checkbox"><input type="checkbox" name="holographicTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="holographicBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
+                                <div class="checkbox"><input type="checkbox" name="holographicTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
                                 <div class="checkbox"><input type="checkbox" name="holographicLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">IoT</label>
                                 <div class="checkbox"><input type="checkbox" name="iotSlow" value="3"> <span class="label slow">Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="iotTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="iotBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
+                                <div class="checkbox"><input type="checkbox" name="iotTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Team</label>
-                                <div class="checkbox"><input type="checkbox" name="teamTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="teamBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
+                                <div class="checkbox"><input type="checkbox" name="teamTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">ISO</label>

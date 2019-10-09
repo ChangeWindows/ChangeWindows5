@@ -205,7 +205,7 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row" class="text-right"><span class="label targeted">Targeted</span></th>
+                                <th scope="row" class="text-right"><span class="label targeted">Production</span></th>
                                 <td>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="flight[{{ $milestone->id }}][1][6]" name="flight[{{ $milestone->id }}][1][6]" {{ $milestone->pcTargeted == '1' ? 'checked' : '' }} value="1">
@@ -260,43 +260,6 @@
                                         <label class="custom-control-label" for="flight[{{ $milestone->id }}][9]"></label>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-right"><span class="label broad">Broad</span></th>
-                                <td>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="flight[{{ $milestone->id }}][1][7]" name="flight[{{ $milestone->id }}][1][7]" {{ $milestone->pcBroad == '1' ? 'checked' : '' }} value="1">
-                                        <label class="custom-control-label" for="flight[{{ $milestone->id }}][1][7]"></label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="flight[{{ $milestone->id }}][2][7]" name="flight[{{ $milestone->id }}][2][7]" {{ $milestone->mobileBroad == '1' ? 'checked' : '' }} value="1">
-                                        <label class="custom-control-label" for="flight[{{ $milestone->id }}][2][7]"></label>
-                                    </div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="flight[{{ $milestone->id }}][5][7]" name="flight[{{ $milestone->id }}][5][7]" {{ $milestone->holographicBroad == '1' ? 'checked' : '' }} value="1">
-                                        <label class="custom-control-label" for="flight[{{ $milestone->id }}][5][7]"></label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="flight[{{ $milestone->id }}][6][7]" name="flight[{{ $milestone->id }}][6][7]" {{ $milestone->iotBroad == '1' ? 'checked' : '' }} value="1">
-                                        <label class="custom-control-label" for="flight[{{ $milestone->id }}][6][7]"></label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="flight[{{ $milestone->id }}][7][7]" name="flight[{{ $milestone->id }}][7][7]" {{ $milestone->teamBroad == '1' ? 'checked' : '' }} value="1">
-                                        <label class="custom-control-label" for="flight[{{ $milestone->id }}][7][7]"></label>
-                                    </div>
-                                </td>
-                                <td></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <th scope="row" class="text-right"><span class="label ltsc">LTSC</span></th>

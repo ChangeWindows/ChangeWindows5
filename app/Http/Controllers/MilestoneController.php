@@ -106,13 +106,11 @@ class MilestoneController extends Controller
             'pcSlow' => request()->get('pcSlow') === null ? 0 : 1,
             'pcReleasePreview' => request()->get('pcReleasePreview') === null ? 0 : 1,
             'pcTargeted' => request()->get('pcTargeted') === null ? 0 : 1,
-            'pcBroad' => request()->get('pcBroad') === null ? 0 : 1,
             'pcLTS' => request()->get('pcLTS') === null ? 0 : 1,
             'mobileFast' => request()->get('mobileFast') === null ? 0 : 1,
             'mobileSlow' => request()->get('mobileSlow') === null ? 0 : 1,
             'mobileReleasePreview' => request()->get('mobileReleasePreview') === null ? 0 : 1,
             'mobileTargeted' => request()->get('mobileTargeted') === null ? 0 : 1,
-            'mobileBroad' => request()->get('mobileBroad') === null ? 0 : 1,
             'xboxSkip' => request()->get('xboxSkip') === null ? 0 : 1,
             'xboxFast' => request()->get('xboxFast') === null ? 0 : 1,
             'xboxSlow' => request()->get('xboxSlow') === null ? 0 : 1,
@@ -124,15 +122,12 @@ class MilestoneController extends Controller
             'serverLTS' => request()->get('serverLTS') === null ? 0 : 1,
             'iotSlow' => request()->get('iotSlow') === null ? 0 : 1,
             'iotTargeted' => request()->get('iotTargeted') === null ? 0 : 1,
-            'iotBroad' => request()->get('iotBroad') === null ? 0 : 1,
             'teamTargeted' => request()->get('teamTargeted') === null ? 0 : 1,
             'teamFast' => request()->get('teamFast') === null ? 0 : 1,
             'teamSlow' => request()->get('teamSlow') === null ? 0 : 1,
-            'teamBroad' => request()->get('teamBroad') === null ? 0 : 1,
             'holographicFast' => request()->get('holographicFast') === null ? 0 : 1,
             'holographicSlow' => request()->get('holographicSlow') === null ? 0 : 1,
             'holographicTargeted' => request()->get('holographicTargeted') === null ? 0 : 1,
-            'holographicBroad' => request()->get('holographicBroad') === null ? 0 : 1,
             'holographicLTS' => request()->get('holographicLTS') === null ? 0 : 1,
             'sdk' => request()->get('sdk') === null ? 0 : 1,
             'iso' => request()->get('iso') === null ? 0 : 1
@@ -168,7 +163,7 @@ class MilestoneController extends Controller
         $request->user()->authorizeRoles('Admin');
 
         $milestone = Milestone::findOrFail($id);
-        
+
         $milestone->id = request()->get('id');
         $milestone->osname = request()->get('osname');
         $milestone->name = request()->get('name');
@@ -187,13 +182,11 @@ class MilestoneController extends Controller
         $milestone->pcSlow = request()->get('pcSlow') === null ? 0 : 1;
         $milestone->pcReleasePreview = request()->get('pcReleasePreview') === null ? 0 : 1;
         $milestone->pcTargeted = request()->get('pcTargeted') === null ? 0 : 1;
-        $milestone->pcBroad = request()->get('pcBroad') === null ? 0 : 1;
         $milestone->pcLTS = request()->get('pcLTS') === null ? 0 : 1;
         $milestone->mobileFast = request()->get('mobileFast') === null ? 0 : 1;
         $milestone->mobileSlow = request()->get('mobileSlow') === null ? 0 : 1;
         $milestone->mobileReleasePreview = request()->get('mobileReleasePreview') === null ? 0 : 1;
         $milestone->mobileTargeted = request()->get('mobileTargeted') === null ? 0 : 1;
-        $milestone->mobileBroad = request()->get('mobileBroad') === null ? 0 : 1;
         $milestone->xboxSkip = request()->get('xboxSkip') === null ? 0 : 1;
         $milestone->xboxFast = request()->get('xboxFast') === null ? 0 : 1;
         $milestone->xboxSlow = request()->get('xboxSlow') === null ? 0 : 1;
@@ -205,15 +198,12 @@ class MilestoneController extends Controller
         $milestone->serverLTS = request()->get('serverLTS') === null ? 0 : 1;
         $milestone->iotSlow = request()->get('iotSlow') === null ? 0 : 1;
         $milestone->iotTargeted = request()->get('iotTargeted') === null ? 0 : 1;
-        $milestone->iotBroad = request()->get('iotBroad') === null ? 0 : 1;
         $milestone->teamFast = request()->get('teamFast') === null ? 0 : 1;
         $milestone->teamSlow = request()->get('teamSlow') === null ? 0 : 1;
         $milestone->teamTargeted = request()->get('teamTargeted') === null ? 0 : 1;
-        $milestone->teamBroad = request()->get('teamBroad') === null ? 0 : 1;
         $milestone->holographicFast = request()->get('holographicFast') === null ? 0 : 1;
         $milestone->holographicSlow = request()->get('holographicSlow') === null ? 0 : 1;
         $milestone->holographicTargeted = request()->get('holographicTargeted') === null ? 0 : 1;
-        $milestone->holographicBroad = request()->get('holographicBroad') === null ? 0 : 1;
         $milestone->holographicLTS = request()->get('holographicLTS') === null ? 0 : 1;
         $milestone->sdk = request()->get('sdk') === null ? 0 : 1;
         $milestone->iso = request()->get('iso') === null ? 0 : 1;
@@ -231,7 +221,7 @@ class MilestoneController extends Controller
      */
     public function destroy(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         Milestone::destroy($id);
 
         return redirect('/milestones');

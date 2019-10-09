@@ -14,7 +14,6 @@ class RingsController extends Controller
         $flights['pc']['slow'] = Release::pc()->slow()->latestFlight()->first();
         $flights['pc']['release'] = Release::pc()->release()->latestFlight()->first();
         $flights['pc']['targeted'] = Release::pc()->targeted()->latestFlight()->first();
-        $flights['pc']['broad'] = Release::pc()->broad()->latestFlight()->first();
         $flights['pc']['ltsc'] = Release::pc()->ltsc()->latestFlight()->first();
 
         $flights['xbox']['skip'] = Release::xbox()->skip()->latestFlight()->first();
@@ -30,21 +29,17 @@ class RingsController extends Controller
 
         $flights['iot']['slow'] = Release::iot()->slow()->latestFlight()->first();
         $flights['iot']['targeted'] = Release::iot()->targeted()->latestFlight()->first();
-        $flights['iot']['broad'] = Release::iot()->broad()->latestFlight()->first();
 
         $flights['holo']['fast'] = Release::holographic()->active()->latestFlight()->first();
         $flights['holo']['slow'] = Release::holographic()->slow()->latestFlight()->first();
         $flights['holo']['targeted'] = Release::holographic()->targeted()->latestFlight()->first();
-        $flights['holo']['broad'] = Release::holographic()->broad()->latestFlight()->first();
         $flights['holo']['ltsc'] = Release::holographic()->ltsc()->latestFlight()->first();
 
         $flights['team']['fast'] = Release::team()->active()->latestFlight()->first();
         $flights['team']['slow'] = Release::team()->slow()->latestFlight()->first();
         $flights['team']['targeted'] = Release::team()->targeted()->latestFlight()->first();
-        $flights['team']['broad'] = Release::team()->broad()->latestFlight()->first();
 
         $flights['mobile']['targeted'] = Release::mobile()->targeted()->latestFlight()->first();
-        $flights['mobile']['broad'] = Release::mobile()->broad()->latestFlight()->first();
 
         $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();

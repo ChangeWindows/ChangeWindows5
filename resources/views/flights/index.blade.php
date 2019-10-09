@@ -262,7 +262,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <th scope="row" class="text-right"><span class="label targeted">Targeted</span></th>
+                            <th scope="row" class="text-right"><span class="label targeted">Production</span></th>
                             <td>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="f16" name="flight[1][6]" value="1">
@@ -317,48 +317,6 @@
                                     <label class="custom-control-label" for="f96"></label>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-right"><span class="label broad">Broad</span></th>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="f17" name="flight[1][7]" value="1">
-                                    <label class="custom-control-label" for="f17"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="f27" name="flight[2][7]" value="1">
-                                    <label class="custom-control-label" for="f27"></label>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="f47" name="flight[4][7]" value="1">
-                                    <label class="custom-control-label" for="f47"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="f57" name="flight[5][7]" value="1">
-                                    <label class="custom-control-label" for="f57"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="f67" name="flight[6][7]" value="1">
-                                    <label class="custom-control-label" for="f67"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="f77" name="flight[7][7]" value="1">
-                                    <label class="custom-control-label" for="f77"></label>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
                         </tr>
                         <tr>
                             <th scope="row" class="text-right"><span class="label ltsc">LTSC</span></th>
