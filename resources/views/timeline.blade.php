@@ -6,8 +6,8 @@
 @endphp
 
 @section('toolset')
-<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New flight</a>
-<a class="dropdown-item" href="{{ route('bulkFlight') }}"><i class="fal fa-fw fa-plus"></i> New bulk flights</a>
+<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fad fa-fw fa-plus"></i> New flight</a>
+<a class="dropdown-item" href="{{ route('bulkFlight') }}"><i class="fad fa-fw fa-plus"></i> New bulk flights</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -73,8 +73,8 @@
                 </div>
                 @auth
                     @if (Auth::user()->hasAnyRole(['Admin']))
-                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fal fa-fw fa-plus"></i> Flight</span></a>
-                        <a class="btn btn-light btn-filter" href="{{ route('bulkFlight') }}"><span class="filter-title"><i class="fal fa-fw fa-plus"></i> Bulk flights</span></a>
+                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fad fa-fw fa-plus"></i> Flight</span></a>
+                        <a class="btn btn-light btn-filter" href="{{ route('bulkFlight') }}"><span class="filter-title"><i class="fad fa-fw fa-plus"></i> Bulk flights</span></a>
                     @endif
                 @endauth
             </div>
@@ -217,7 +217,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title">New flight</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"><i class="fal fa-fw fa-times"></i></span>
+                                <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
                             </button>
                         </div>
                         <div class="modal-body">
@@ -233,7 +233,7 @@
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-plus"></i> Add</button>
+                                    <button type="submit" class="btn btn-primary btn-block"><i class="fad fa-fw fa-plus"></i> Add</button>
                                 </div>
                                 <div class="col-12">
                                     <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="tweet" name="tweet" value="1" checked="checked"><label class="custom-control-label" for="tweet"> Tweet this</label></label></div>

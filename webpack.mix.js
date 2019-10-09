@@ -12,7 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .copy('node_modules/@fortawesome/fontawesome-pro/js/light.min.js', 'public/js/')
+   .copy('node_modules/@fortawesome/fontawesome-pro/js/duotone.min.js', 'public/js/')
    .copy('node_modules/@fortawesome/fontawesome-pro/js/brands.min.js', 'public/js/')
    .copy('node_modules/@fortawesome/fontawesome-pro/js/fontawesome.min.js', 'public/js/')
    .sass('resources/sass/app.scss', 'public/css')

@@ -31,7 +31,7 @@
                     @endphp
                     @foreach ($info['rings'] as $ring => $release)
                         @if ($first)
-                            <i class="fal fa-fw fa-angle-right"></i>
+                            <i class="fad fa-fw fa-angle-right"></i>
                         @endif
                         <span class="label {{ getRingClassById($ring) }}">{{ $release->date->format('j M \'y') }}</span>
                         @if (!$first)
@@ -45,7 +45,7 @@
                 @if (array_key_exists('changelog', $info))
                     @if (Carbon\Carbon::now() < $info['new'])
                         <div class="alert alert-warning text-center">
-                            <h4 class="alert-heading"><i class="fal fa-fw fa-exclamation-triangle"></i> This changelog is about a recently release build</h4>
+                            <h4 class="alert-heading"><i class="fad fa-fw fa-exclamation-triangle"></i> This changelog is about a recently release build</h4>
                             This is a draft and will be updated regularly over the next couple of hours.
                         </div>
                     @endif
@@ -69,10 +69,10 @@
     <div class="col-lg-3">
         <div class="row row-btn">
             @if ($previous)
-                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showBuild', ['milestone' => $previous->milestone, 'build' => $previous->build]) }}"><i class="fal fa-fw fa-angle-left"></i> {{ $previous->build }}</a>
+                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showBuild', ['milestone' => $previous->milestone, 'build' => $previous->build]) }}"><i class="fad fa-fw fa-angle-left"></i> {{ $previous->build }}</a>
             @endif
             @if ($next)
-                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showBuild', ['milestone' => $next->milestone, 'build' => $next->build]) }}">{{ $next->build }} <i class="fal fa-fw fa-angle-right"></i></a>
+                <a class="col btn btn-lg btn-primary btn-block" href="{{ route('showBuild', ['milestone' => $next->milestone, 'build' => $next->build]) }}">{{ $next->build }} <i class="fad fa-fw fa-angle-right"></i></a>
             @endif
         </div>
         <a class="milestone" href="{{ route('showMilestone', ['id' => $milestone->id]) }}" style="background: #{{ $milestone->color }}">

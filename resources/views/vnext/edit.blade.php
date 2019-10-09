@@ -14,7 +14,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
             vNext
             <small>
                 <a href="{{ route('showChangelogs') }}">vNext</a>
-                <i class="fal fa-fw fa-angle-right"></i>
+                <i class="fad fa-fw fa-angle-right"></i>
                 <a href="{{ route('showVNext', $changelog->id) }}">{{ getPlatformById($changelog->id) }}</a>
             </small>
         </h2>
@@ -29,7 +29,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
         {{ csrf_field() }}
         <div class="row">
             <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-check"></i> Save</button>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fad fa-fw fa-check"></i> Save</button>
             </div>
             <div class="col-12">
                 <div class="form-group">

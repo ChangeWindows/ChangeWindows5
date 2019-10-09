@@ -52,9 +52,9 @@
                 <a href="{{ route('showBuildfeed', ['id' => $build->id]) }}" class="bf">
                     <span class="bf-header">{{ $build->major }}.{{ $build->minor }}.{{ $build->build }}.{{ $build->revision }}</span>
                     <span class="bf-body">
-                        <i class="fal fa-fw fa-clock"></i> {{ $build->buildtime }}
+                        <i class="fad fa-fw fa-clock"></i> {{ $build->buildtime }}
                         <br />
-                        <i class="fal fa-fw fa-flask"></i> {{ $build->lab }}
+                        <i class="fad fa-fw fa-flask"></i> {{ $build->lab }}
                     </span>
                 </a>
             </div>

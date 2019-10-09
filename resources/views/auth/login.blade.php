@@ -35,14 +35,14 @@
                         <strong>{{ $errors->first('password') }}</strong>
                     </span>
                 @enderror
-                
+
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="custom-control-label" for="remember">Remember me</label>
                 </div>
-                
+
                 <button type="submit" class="btn btn-primary">
-                    <i class="fal fa-fw fa-sign-in"></i> Login
+                    <i class="fad fa-fw fa-sign-in"></i> Login
                 </button>
                 <a class="btn btn-light" href="{{ route('register') }}">
                     Register

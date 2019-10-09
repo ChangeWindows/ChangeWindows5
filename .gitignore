@@ -15,5 +15,6 @@ yarn-error.log
 .phpunit.result.cache
 /public/js/brands.min.js
 /public/js/light.min.js
+/public/js/duotone.min.js
 /public/js/fontawesome.min.js
 .npmrc

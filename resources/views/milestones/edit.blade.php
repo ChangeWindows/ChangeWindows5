@@ -371,7 +371,7 @@
         </table>
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fal fa-fw fa-save"></i> Save</button>
+        <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-save"></i> Save</button>
     </div>
 </form>
 @endsection

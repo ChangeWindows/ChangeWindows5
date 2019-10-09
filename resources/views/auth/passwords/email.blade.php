@@ -34,7 +34,7 @@
                 @enderror
 
                 <button type="submit" class="btn btn-primary">
-                    <i class="fal fa-fw fa-paper-plane"></i> Send password reset link
+                    <i class="fad fa-fw fa-paper-plane"></i> Send password reset link
                 </button>
             </form>
         </div>

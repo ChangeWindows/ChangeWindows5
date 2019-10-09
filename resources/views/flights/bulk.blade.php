@@ -27,7 +27,7 @@
                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="tweet" name="tweet" value="1" checked="checked"><label class="custom-control-label" for="tweet"> Tweet this</label></label></div>
             </div>
             <div class="col-md-3 col-4">
-                <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-plus"></i> Add</button>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fad fa-fw fa-plus"></i> Add</button>
             </div>
             @foreach ($milestones as $milestone)
                 <div class="col-12"><hr /></div>
