@@ -14,13 +14,13 @@ class DropRoleUserTable extends Migration
     public function up()
     {
         Schema::dropIfExists('role_user');
-        
+
         Schema::table('roles', function (Blueprint $table) {
             $table->dropColumn('rank');
         });
 
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('role_id')->default('20');
+            $table->integer('role_id')->default('3');
         });
     }
 
@@ -36,7 +36,7 @@ class DropRoleUserTable extends Migration
             $table->integer('role_id')->unsigned();
             $table->integer('user_id')->unsigned();
         });
-        
+
         Schema::table('roles', function (Blueprint $table) {
             $table->integer('rank');
         });

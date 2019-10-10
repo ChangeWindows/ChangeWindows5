@@ -26,7 +26,7 @@ class User extends Authenticatable
     }
 
     public function hasAnyRole($roles) {
-        return null !== $this->role->whereIn('name', $roles)->first();
+        return in_array($this->role->name, $roles);
     }
 
     public function hasRole($role) {
