@@ -118,59 +118,258 @@
                                 </div>
                             </div>
                             <div class="col-12"><hr /></div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">PC</label>
-                                <div class="checkbox"><input type="checkbox" name="pcSkip" value="1"> <span class="label skip">Skip Ahead</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcFast" value="2"> <span class="label fast">Fast Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcSlow" value="3"> <span class="label slow">Slow Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcReleasePreview" value="5"> <span class="label release">Release Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">Mobile</label>
-                                <div class="checkbox"><input type="checkbox" name="mobileFast" value="2"> <span class="label fast">Fast Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileSlow" value="3"> <span class="label slow">Slow Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileReleasePreview" value="5"> <span class="label release">Release Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">Xbox</label>
-                                <div class="checkbox"><input type="checkbox" name="xboxSkip" value="1"> <span class="label skip">Alpha Skip Ahead Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="xboxFast" value="2"> <span class="label fast">Alpha Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="xboxSlow" value="3"> <span class="label slow">Beta Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="xboxPreview" value="4"> <span class="label preview">Delta Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="xboxReleasePreview" value="5"> <span class="label release">Omega Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="xboxTargeted" value="6"> <span class="label targeted">Production</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">Server</label>
-                                <div class="checkbox"><input type="checkbox" name="serverSlow" value="3"> <span class="label slow">Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="serverTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
-                                <div class="checkbox"><input type="checkbox" name="serverLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">Holographic</label>
-                                <div class="checkbox"><input type="checkbox" name="holographicTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
-                                <div class="checkbox"><input type="checkbox" name="holographicLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">IoT</label>
-                                <div class="checkbox"><input type="checkbox" name="iotSlow" value="3"> <span class="label slow">Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="iotTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">Team</label>
-                                <div class="checkbox"><input type="checkbox" name="teamTargeted" value="6"> <span class="label targeted">Semi-Annual Channel</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">ISO</label>
-                                <div class="checkbox"><input type="checkbox" name="iso" value="6"> <span class="label targeted">Public</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">SDK</label>
-                                <div class="checkbox"><input type="checkbox" name="sdk" value="6"> <span class="label targeted">Public</span></div>
-                            </div>
+                            <table class="table table-hover text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/pc.png') }}" height="32px" width="32px" alt="PC" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/mobile.png') }}" height="32px" width="32px" alt="Mobile" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/xbox.png') }}" height="32px" width="32px" alt="Xbox" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/server.png') }}" height="32px" width="32px" alt="Server" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/holographic.png') }}" height="32px" width="32px" alt="Holographic" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/iot.png') }}" height="32px" width="32px" alt="IoT" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/team.png') }}" height="32px" width="32px" alt="Team" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/iso.png') }}" height="32px" width="32px" alt="ISO" /></th>
+                                        <th scope="col"><img src="{{ asset('img/platform/sdk.png') }}" height="32px" width="32px" alt="SDK" /></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="text-right"><span class="label skip">Skip Ahead</span></th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="pcSkip" name="pcSkip" value="1">
+                                                <label class="custom-control-label" for="pcSkip"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="xboxSkip" name="xboxSkip" value="1">
+                                                <label class="custom-control-label" for="xboxSkip"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-right"><span class="label fast">Fast</span></th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="pcFast" name="pcFast" value="1">
+                                                <label class="custom-control-label" for="pcFast"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="mobileFast" name="mobileFast" value="1">
+                                                <label class="custom-control-label" for="mobileFast"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="xboxFast" name="xboxFast" value="1">
+                                                <label class="custom-control-label" for="xboxFast"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="holographicFast" name="holographicFast" value="1">
+                                                <label class="custom-control-label" for="holographicFast"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="teamFast" name="teamFast" value="1">
+                                                <label class="custom-control-label" for="teamFast"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-right"><span class="label slow">Slow</span></th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="pcSlow" name="pcSlow" value="1">
+                                                <label class="custom-control-label" for="pcSlow"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="mobileSlow" name="mobileSlow" value="1">
+                                                <label class="custom-control-label" for="mobileSlow"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="xboxSlow" name="xboxSlow" value="1">
+                                                <label class="custom-control-label" for="xboxSlow"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="serverSlow" name="serverSlow" value="1">
+                                                <label class="custom-control-label" for="serverSlow"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="holographicSlow" name="holographicSlow" value="1">
+                                                <label class="custom-control-label" for="holographicSlow"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="iotSlow" name="iotSlow" value="1">
+                                                <label class="custom-control-label" for="iotSlow"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="teamSlow" name="teamSlow" value="1">
+                                                <label class="custom-control-label" for="teamSlow"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-right"><span class="label preview">Preview</span></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="xboxPreview" name="xboxPreview" value="1">
+                                                <label class="custom-control-label" for="xboxPreview"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-right"><span class="label release">Release Preview</span></th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="pcReleasePreview" name="pcReleasePreview" value="1">
+                                                <label class="custom-control-label" for="pcReleasePreview"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="mobileReleasePreview" name="mobileReleasePreview" value="1">
+                                                <label class="custom-control-label" for="mobileReleasePreview"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="xboxReleasePreview" name="xboxReleasePreview" value="1">
+                                                <label class="custom-control-label" for="xboxReleasePreview"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-right"><span class="label targeted">Production</span></th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="pcTargeted" name="pcTargeted" value="1">
+                                                <label class="custom-control-label" for="pcTargeted"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="mobileTargeted" name="mobileTargeted" value="1">
+                                                <label class="custom-control-label" for="mobileTargeted"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="xboxTargeted" name="xboxTargeted" value="1">
+                                                <label class="custom-control-label" for="xboxTargeted"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="serverTargeted" name="serverTargeted" value="1">
+                                                <label class="custom-control-label" for="serverTargeted"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="holographicTargeted" name="holographicTargeted" value="1">
+                                                <label class="custom-control-label" for="holographicTargeted"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="iotTargeted" name="iotTargeted" value="1">
+                                                <label class="custom-control-label" for="iotTargeted"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="teamTargeted" name="teamTargeted" value="1">
+                                                <label class="custom-control-label" for="teamTargeted"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="iso" name="iso" value="1">
+                                                <label class="custom-control-label" for="iso"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="sdk" name="sdk" value="1">
+                                                <label class="custom-control-label" for="sdk"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-right"><span class="label ltsc">LTSC</span></th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="pcLTS" name="pcLTS" value="1">
+                                                <label class="custom-control-label" for="pcLTS"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="serverLTS" name="serverLTS" value="1">
+                                                <label class="custom-control-label" for="serverLTS"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="holographicLTS" name="holographicLTS" value="1">
+                                                <label class="custom-control-label" for="holographicLTS"></label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>
                             </div>
