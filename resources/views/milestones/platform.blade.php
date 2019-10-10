@@ -16,7 +16,6 @@
     <div class="container">
         <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
         <h6>{{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
-        <p class="lead">{{ $milestone->description }}</p>
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">

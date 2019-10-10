@@ -12,7 +12,7 @@ class Milestone extends Model
 
     protected $dates = ['created_at', 'updated_at', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol'];
 
-    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'description', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcSkip', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcLTS', 'mobileFast', 'mobileSlow', 'mobileReleasePreview', 'mobileTargeted', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'teamTargeted', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicLTS', 'sdk', 'iso'];
+    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcSkip', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcLTS', 'mobileFast', 'mobileSlow', 'mobileReleasePreview', 'mobileTargeted', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'teamTargeted', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicLTS', 'sdk', 'iso'];
 
     public function getSupport() {
         $now = Carbon::now();

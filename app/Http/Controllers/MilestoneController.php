@@ -94,7 +94,6 @@ class MilestoneController extends Controller
             'codename' => request()->get('codename'),
             'version' => request()->get('version'),
             'color' => request()->get('color'),
-            'description' => request()->get('description'),
             'preview' => request()->get('preview') === null ? '0000-01-01' : request()->get('preview'),
             'public' => request()->get('public') === null ? '0000-01-01' : request()->get('public'),
             'mainEol' => request()->get('mainEol') === null ? '0000-01-01' : request()->get('mainEol'),
@@ -170,7 +169,6 @@ class MilestoneController extends Controller
         $milestone->codename = request()->get('codename');
         $milestone->version = request()->get('version');
         $milestone->color = request()->get('color');
-        $milestone->description = request()->get('description');
         $milestone->preview = request()->get('preview') === null ? '0000-01-01' : request()->get('preview');
         $milestone->public = request()->get('public') === null ? '0000-01-01' : request()->get('public');
         $milestone->mainEol = request()->get('mainEol') === null ? '0000-01-01' : request()->get('mainEol');

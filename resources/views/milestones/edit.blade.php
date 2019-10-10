@@ -51,12 +51,6 @@
             <input type="text" class="form-control" id="color" name="color" aria-describedby="color" placeholder="Color" value="{{ $milestone->color }}">
         </div>
     </div>
-    <div class="col-12">
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description" aria-describedby="description" placeholder="Description">{{ $milestone->description }}</textarea>
-        </div>
-    </div>
     <div class="col-lg-3 col-md-4 col-12">
         <div class="form-group">
             <label for="preview">Preview</label>
