@@ -2,11 +2,11 @@
 @section('title') {{ $milestone->codename }} &middot; Milestones @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fad fa-fw fa-pencil"></i> Edit milestone</a>
+<a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fad text-primary fa-fw fa-pencil"></i> Edit milestone</a>
 <form method="POST" action="{{ route('destroyMilestone', ['id' => $milestone->id]) }}">
     {{ method_field('DELETE') }}
     {{ csrf_field() }}
-    <button type="submit" class="dropdown-item"><i class="fad fa-fw fa-trash-alt"></i> Delete milestone</button>
+    <button type="submit" class="dropdown-item"><i class="fad text-primary fa-fw fa-trash-alt"></i> Delete milestone</button>
 </form>
 <div class="dropdown-divider"></div>
 @endsection

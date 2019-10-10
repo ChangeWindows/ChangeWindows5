@@ -2,7 +2,7 @@
 @section('title') vNext @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="{{ route('editVNext', ['platform_id' => $changelog->id]) }}"><i class="fad fa-fw fa-pencil"></i> Edit vNext</a>
+<a class="dropdown-item" href="{{ route('editVNext', ['platform_id' => $changelog->id]) }}"><i class="fad text-primary fa-fw fa-pencil"></i> Edit vNext</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -32,8 +32,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('modals')
-
 @endsection

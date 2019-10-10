@@ -2,7 +2,7 @@
 @section('title') Milestones @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fad fa-fw fa-plus"></i> New milestone</a>
+<a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fad text-primary fa-fw fa-plus"></i> New milestone</a>
 <div class="dropdown-divider"></div>
 @endsection
 

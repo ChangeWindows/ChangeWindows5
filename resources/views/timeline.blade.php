@@ -6,8 +6,8 @@
 @endphp
 
 @section('toolset')
-<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fad fa-fw fa-plus"></i> New flight</a>
-<a class="dropdown-item" href="{{ route('bulkFlight') }}"><i class="fad fa-fw fa-plus"></i> New bulk flights</a>
+<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fad text-primary fa-fw fa-plus"></i> New flight</a>
+<a class="dropdown-item" href="{{ route('bulkFlight') }}"><i class="fad text-primary fa-fw fa-plus"></i> New bulk flights</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -72,8 +72,8 @@
                 </div>
                 @auth
                     @if (Auth::user()->hasAnyRole(['Admin']))
-                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fad fa-fw fa-plus"></i> Flight</span></a>
-                        <a class="btn btn-light btn-filter" href="{{ route('bulkFlight') }}"><span class="filter-title"><i class="fad fa-fw fa-plus"></i> Bulk flights</span></a>
+                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fad text-primary fa-fw fa-plus"></i> Flight</span></a>
+                        <a class="btn btn-light btn-filter" href="{{ route('bulkFlight') }}"><span class="filter-title"><i class="fad text-primary fa-fw fa-plus"></i> Bulk flights</span></a>
                     @endif
                 @endauth
             </div>
