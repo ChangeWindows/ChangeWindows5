@@ -24,7 +24,7 @@ class TimelineController extends Controller
                             ->orderBy('build', 'desc')
                             ->orderBy('delta', 'desc')
                             ->orderBy('ring', 'desc')
-                            ->paginate(50)
+                            ->paginate(75)
                             ->onEachSide(1);
 
         foreach ($releases as $release) {
