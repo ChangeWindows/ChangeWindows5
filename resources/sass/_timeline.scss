@@ -5,7 +5,7 @@
     margin-bottom: 0;
     padding-bottom: 8px;
     color: $accent;
-    
+
     &:first-child {
         margin-top: 0 !important;
     }
@@ -19,30 +19,30 @@
         padding-right: 5px;
         transition: .2s ease-in-out;
         z-index: 9700;
-    
+
         .row {
-            padding: 12px 5px;
+            padding: 8px 5px;
             font-size: 100%;
-    
+
             &:hover {
                 text-decoration: none !important;
             }
-    
+
             &:active {
                 text-decoration: none;
             }
-    
+
             .img-platform {
-                width: 32px;
-                height: 32px;
+                width: 24px;
+                height: 24px;
                 margin: -10px 10px -5px 0;
             }
-            
+
             .ring {
                 :last-child {
                     margin-right: 0;
                 }
-                
+
                 .label {
                     margin-right: 3px;
                 }

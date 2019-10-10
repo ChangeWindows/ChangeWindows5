@@ -15,7 +15,7 @@ class FlightController extends Controller
 
     public function index(Request $request) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(100)->onEachSide(1);
 
         foreach ($releases as $release) {
@@ -27,7 +27,7 @@ class FlightController extends Controller
 
     public function edit(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $flight = Release::find($id);
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 
@@ -36,7 +36,7 @@ class FlightController extends Controller
 
     public function store(Request $request) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $string = Release::splitString(request()->get('build_string'));
         $milestone = Release::getMilestoneByString($string);
         $connection = new TwitterOAuth(env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET'), env('TWITTER_ACCESS_TOKEN'), env('TWITTER_ACCESS_TOKEN_SECRET'));
@@ -60,7 +60,6 @@ class FlightController extends Controller
             }
 
 
-            dd($rings);
             $hashtags = $platform === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
 
             if (request()->get('tweet')) {
@@ -73,9 +72,9 @@ class FlightController extends Controller
 
     public function update(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $string = Release::splitString(request()->get('build_string'));
-        
+
         $flight = Release::find($id);
 
         $flight->major = $string['major'];
@@ -94,7 +93,7 @@ class FlightController extends Controller
 
     public function destroy(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         Release::destroy($id);
 
         return redirect('flight');
@@ -102,7 +101,7 @@ class FlightController extends Controller
 
     public function bulk(Request $request) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $milestones = Milestone::where('public', '<>', '0000-01-01')->where('public', '<>', '0000-00-00')->where('public', '<=', date('Y-m-d'))->orderBy('version', 'DESC')->get();
 
         return view('flights.bulk', compact('milestones'));
@@ -112,7 +111,7 @@ class FlightController extends Controller
         $request->user()->authorizeRoles('Admin');
 
         $connection = new TwitterOAuth(env('TWITTER_CONSUMER_KEY'), env('TWITTER_CONSUMER_SECRET'), env('TWITTER_ACCESS_TOKEN'), env('TWITTER_ACCESS_TOKEN_SECRET'));
-        
+
         foreach(request()->get('string') as $milestone => $string) {
             $strings[$milestone] = Release::splitString($string);
         }
