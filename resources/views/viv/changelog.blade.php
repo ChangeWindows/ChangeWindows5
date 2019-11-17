@@ -4,6 +4,15 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.0.5 <small>17 November 2019</small></h3>
+    <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
+    <p>The Timeline has now a more compact layout and shows 75 releases per page instead of 50</p>
+    <p>Milestone pages now show the last 7 instead of 5 releases of a platform on the overview</p>
+    <p>The ChangeWindows logo and accent color have been updated</p>
+    <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes the random sorting order for builds in the timeline</p>
+</section>
+<section class="release-notes">
     <h3>5.0.4 <small>17 June 2019</small></h3>
     <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes an issue where flights could not be published in 5.0.3</p>
