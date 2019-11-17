@@ -10,7 +10,7 @@
     <div class="container">
         <h2>Patrons</h2>
         <div class="btn-toolbar">
-            <a class="btn btn-primary" href="#newPatronModal" data-toggle="modal" data-target="#newPatronModal"><i class="fal fa-fw fa-plus"></i> New Patron</a>
+            <a class="btn btn-primary" href="#newPatronModal" data-toggle="modal" data-target="#newPatronModal"><i class="fad fa-fw fa-plus"></i> New Patron</a>
         </div>
     </div>
 </div>
@@ -29,7 +29,7 @@
         <form method="POST" action="{{ route('deletePatreon', ['id' => $patron->id]) }}" class="d-inline">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
-            <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>
+            <button type="submit" class="btn btn-outline-danger"><i class="fad fa-fw fa-trash-alt"></i></button>
         </form>
     </div>
 @endforeach
@@ -44,7 +44,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">New Patron</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fal fa-fw fa-times"></i></span>
+                    <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
                 </button>
             </div>
             <div class="modal-body">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-plus"></i> Add</button>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fad fa-fw fa-plus"></i> Add</button>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2 class="mb-4"><i class="fal fa-rss"></i> BuildFeed</h2>
+        <h2 class="mb-4"><i class="fad fa-rss"></i> BuildFeed</h2>
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link {{ Request::is('buildfeed*') && !Request::is('buildfeed/about') ? 'active' : '' }}" href="{{ route('buildfeed') }}">BuildFeed</a>

@@ -14,7 +14,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
             Changelogs
             <small>
                 <a href="{{ route('showChangelogs') }}">Changelogs</a>
-                <i class="fal fa-fw fa-angle-right"></i>
+                <i class="fad fa-fw fa-angle-right"></i>
                 <span class="text">New changelog</span>
             </small>
         </h2>
@@ -48,7 +48,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
     </div>
     <div class="col-1">
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block"><i class="fal fa-fw fa-plus"></i> Add</button>
+            <button type="submit" class="btn btn-primary btn-block"><i class="fad fa-fw fa-plus"></i> Add</button>
         </div>
     </div>
     <div class="col-12">

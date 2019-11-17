@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://viv.changewindows.org/img/logo_color.png" width="100px" height="auto">
+<img src="https://viv.changewindows.org/img/logo.png" width="100px" height="auto">
 </p>
 
 <h3 align="center">ChangeWindows viv</h3>

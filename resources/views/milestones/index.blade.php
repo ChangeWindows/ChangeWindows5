@@ -2,7 +2,7 @@
 @section('title') Milestones @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fal fa-fw fa-plus"></i> New milestone</a>
+<a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fad fa-fw fa-plus"></i> New milestone</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -44,7 +44,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title">New build</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="fal fa-fw fa-times"></i></span>
+                            <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -184,7 +184,7 @@
                                 <div class="checkbox"><input type="checkbox" name="sdk" value="6"> <span class="label targeted">Public</span></div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fal fa-fw fa-plus"></i> Add</button>
+                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>
                             </div>
                         </form>
                     </div>

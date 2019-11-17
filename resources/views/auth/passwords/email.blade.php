@@ -16,7 +16,7 @@
             <form method="POST" action="{{ route('password.email') }}"" class="login-form">
                 @csrf
 
-                <img class="login-logo" src="{{ asset('img/logo_color.png') }}" />
+                <img class="login-logo" src="{{ asset('img/logo.png') }}" />
 
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -34,7 +34,7 @@
                 @endif
 
                 <button type="submit" class="btn btn-primary">
-                    <i class="fal fa-fw fa-paper-plane"></i> Send password reset link
+                    <i class="fad fa-fw fa-paper-plane"></i> Send password reset link
                 </button>
             </form>
         </div>

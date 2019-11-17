@@ -10,7 +10,7 @@
     <div class="container">
         <h2>Flights</h2>
         <div class="btn-toolbar">
-            <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fal fa-fw fa-plus"></i> New flight</a>
+            <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fad fa-fw fa-plus"></i> New flight</a>
         </div>
     </div>
 </div>
@@ -40,9 +40,9 @@
                                             <form method="POST" action="{{ route('destroyFlight', ['id' => $ring->id]) }}" class="d-inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-outline-danger"><i class="fal fa-fw fa-trash-alt"></i></button>
+                                                <button type="submit" class="btn btn-outline-danger"><i class="fad fa-fw fa-trash-alt"></i></button>
                                             </form>
-                                            <a href="{{ route('editFlight', $ring->id) }}" class="btn btn-outline-primary"><i class="fal fa-fw fa-pencil"></i> Edit</a>
+                                            <a href="{{ route('editFlight', $ring->id) }}" class="btn btn-outline-primary"><i class="fad fa-fw fa-pencil"></i> Edit</a>
                                         </div>
                                     </div>
                                 @endforeach
@@ -64,7 +64,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">New build</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fal fa-fw fa-times"></i></span>
+                    <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
                 </button>
             </div>
             <div class="modal-body">
@@ -149,7 +149,7 @@
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block  mt-3"><i class="fal fa-fw fa-plus"></i> Add</button>
+                        <button type="submit" class="btn btn-primary btn-block  mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>
                     </div>
                 </form>
             </div>
