@@ -16,7 +16,7 @@
             <form method="POST" action="{{ route('login') }}" class="login-form">
                 @csrf
 
-                <img class="login-logo" src="{{ asset('img/logo_color.png') }}" />
+                <img class="login-logo" src="{{ asset('img/logo.png') }}" />
 
                 <label for="email">E-mail address</label>
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email address" required autofocus>
@@ -35,14 +35,14 @@
                         <strong>{{ $errors->first('password') }}</strong>
                     </span>
                 @endif
-                
+
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="custom-control-label" for="remember">Remember me</label>
                 </div>
-                
+
                 <button type="submit" class="btn btn-primary">
-                    <i class="fal fa-fw fa-sign-in"></i> Login
+                    <i class="fad fa-fw fa-sign-in"></i> Login
                 </button>
                 <a class="btn btn-light" href="{{ route('register') }}">
                     Register

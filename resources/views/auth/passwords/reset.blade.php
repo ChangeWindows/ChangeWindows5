@@ -16,7 +16,7 @@
             <form method="POST" action="{{ route('password.update') }}" class="login-form">
                 @csrf
 
-                <img class="login-logo" src="{{ asset('img/logo_color.png') }}" />
+                <img class="login-logo" src="{{ asset('img/logo.png') }}" />
                 <input type="hidden" name="token" value="{{ $token }}">
 
                 <label for="email">E-mail address</label>
@@ -42,7 +42,7 @@
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" required>
 
                 <button type="submit" class="btn btn-primary">
-                    <i class="fal fa-fw fa-key"></> Reset password
+                    <i class="fad fa-fw fa-key"></> Reset password
                 </button>
             </form>
         </div>

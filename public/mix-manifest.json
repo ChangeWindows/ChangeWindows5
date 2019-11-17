@@ -1,7 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/js/light.min.js": "/js/light.min.js",
+    "/js/duotone.min.js": "/js/duotone.min.js",
     "/js/brands.min.js": "/js/brands.min.js",
     "/js/fontawesome.min.js": "/js/fontawesome.min.js"
 }

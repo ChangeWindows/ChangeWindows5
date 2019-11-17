@@ -9,7 +9,6 @@ use App\Milestone;
 class RingsController extends Controller
 {
     public function index() {
-        $flights['pc']['skip'] = Release::pc()->skip()->latestFlight()->first();
         $flights['pc']['fast'] = Release::pc()->active()->latestFlight()->first();
         $flights['pc']['slow'] = Release::pc()->slow()->latestFlight()->first();
         $flights['pc']['release'] = Release::pc()->release()->latestFlight()->first();
@@ -28,7 +27,6 @@ class RingsController extends Controller
         $flights['server']['targeted'] = Release::server()->targeted()->latestFlight()->first();
         $flights['server']['ltsc'] = Release::server()->ltsc()->latestFlight()->first();
 
-        $flights['iot']['slow'] = Release::iot()->slow()->latestFlight()->first();
         $flights['iot']['targeted'] = Release::iot()->targeted()->latestFlight()->first();
         $flights['iot']['broad'] = Release::iot()->broad()->latestFlight()->first();
 

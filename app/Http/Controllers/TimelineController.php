@@ -20,16 +20,16 @@ class TimelineController extends Controller
                                 return $query->where('platform', getPlatformIdByClass($platform_id));
                             })->orderBy('date', 'desc')
                             ->orderBy('build', 'desc')
+                            ->orderBy('platform', 'asc')
                             ->orderBy('delta', 'desc')
                             ->orderBy('ring', 'desc')
-                            ->paginate(50)
+                            ->paginate(75)
                             ->onEachSide(1);
 
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
         }
-        
-        $flights['pc']['skip'] = Release::pc()->skip()->latestFlight()->first();
+
         $flights['pc']['fast'] = Release::pc()->active()->latestFlight()->first();
         $flights['pc']['slow'] = Release::pc()->slow()->latestFlight()->first();
         $flights['pc']['release'] = Release::pc()->release()->latestFlight()->first();
@@ -48,7 +48,6 @@ class TimelineController extends Controller
         $flights['server']['targeted'] = Release::server()->targeted()->latestFlight()->first();
         $flights['server']['ltsc'] = Release::server()->ltsc()->latestFlight()->first();
 
-        $flights['iot']['slow'] = Release::iot()->slow()->latestFlight()->first();
         $flights['iot']['targeted'] = Release::iot()->targeted()->latestFlight()->first();
         $flights['iot']['broad'] = Release::iot()->broad()->latestFlight()->first();
 
@@ -74,7 +73,7 @@ class TimelineController extends Controller
         if ( strpos( $user_agent, 'Edge/' ) ) {
             $edge_agent = substr($user_agent, strrpos($user_agent, 'Edge/'));
             $ua['build'] = substr($edge_agent, strrpos($edge_agent, '.') + 1);
-            
+
             if ( strpos( $user_agent, 'Xbox' ) ) {
                 $ua['platform'] = 'xbox';
             } else if ( strpos( $user_agent, 'Windows Phone' ) ) {
@@ -103,7 +102,7 @@ class TimelineController extends Controller
 
         if ($platform) {
             $releases = Release::where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
-            
+
             if ($releases->count() < 1) {
                 $platform_id = $platforms[0]->platform;
                 $releases = Release::where('build', $cur_build)->where('platform', $platforms[0]->platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
@@ -112,7 +111,6 @@ class TimelineController extends Controller
             $platform_id = $platforms[0]->platform;
             $releases = Release::where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
         }
-
 
         $milestone = $releases[0]->ms;
 
