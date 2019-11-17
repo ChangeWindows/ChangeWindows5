@@ -46,7 +46,7 @@ class MilestoneController extends Controller
         $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->groupBy('platform')->orderBy('platform')->get();
 
         foreach ($platforms as $platform) {
-            $platform->builds = Release::where('milestone', $milestone->id)->where('platform', $platform->platform)->orderBy('date', 'DESC')->orderBy('delta', 'DESC')->limit(5)->get();
+            $platform->builds = Release::where('milestone', $milestone->id)->where('platform', $platform->platform)->orderBy('date', 'DESC')->orderBy('delta', 'DESC')->limit(7)->get();
         }
 
         return view('milestones.show', compact('milestone', 'previous', 'next', 'platforms', 'progress'));
@@ -166,7 +166,7 @@ class MilestoneController extends Controller
         $request->user()->authorizeRoles('Admin');
 
         $milestone = Milestone::findOrFail($id);
-        
+
         $milestone->id = request()->get('id');
         $milestone->osname = request()->get('osname');
         $milestone->name = request()->get('name');
@@ -229,7 +229,7 @@ class MilestoneController extends Controller
      */
     public function destroy(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         Milestone::destroy($id);
 
         return redirect('/milestones');
