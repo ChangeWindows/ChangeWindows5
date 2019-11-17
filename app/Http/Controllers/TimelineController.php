@@ -20,6 +20,7 @@ class TimelineController extends Controller
                                 return $query->where('platform', getPlatformIdByClass($platform_id));
                             })->orderBy('date', 'desc')
                             ->orderBy('build', 'desc')
+                            ->orderBy('platform', 'asc')
                             ->orderBy('delta', 'desc')
                             ->orderBy('ring', 'desc')
                             ->paginate(75)
