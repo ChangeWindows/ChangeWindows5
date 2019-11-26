@@ -154,7 +154,6 @@
                                 <label for="ring" class="control-label">Server</label>
                                 <div class="checkbox"><input type="checkbox" name="serverSlow" value="3"> <span class="label slow">Preview</span></div>
                                 <div class="checkbox"><input type="checkbox" name="serverTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="serverBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
                                 <div class="checkbox"><input type="checkbox" name="serverLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">

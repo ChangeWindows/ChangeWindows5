@@ -115,7 +115,6 @@
                         <label for="ring" class="control-label">Server</label>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f43" name="flight[4][3]" value="3"><label class="custom-control-label" for="f43"><span class="label slow">Preview</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f46" name="flight[4][6]" value="6"><label class="custom-control-label" for="f46"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f47" name="flight[4][7]" value="7"><label class="custom-control-label" for="f47"><span class="label broad">Semi-Annual Broad</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f48" name="flight[4][8]" value="8"><label class="custom-control-label" for="f48"><span class="label ltsc">LTSC</span></label></label></div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">

@@ -119,7 +119,6 @@
         <label for="ring" class="control-label">Server</label>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverSlow" name="serverSlow" {{ $milestone->serverSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="serverSlow"><span class="label slow">Preview</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverTargeted" name="serverTargeted" {{ $milestone->serverTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="serverTargeted"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverBroad" name="serverBroad" {{ $milestone->serverBroad == '1' ? 'checked' : '' }} value="7"><label class="custom-control-label" for="serverBroad"><span class="label broad">Semi-Annual Broad</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverLTS" name="serverLTS" {{ $milestone->serverLTS == '1' ? 'checked' : '' }} value="8"><label class="custom-control-label" for="serverLTS"><span class="label ltsc">Long-Term Servicing Channel</span></label></label></div>
     </div>
     <div class="col-lg-4 col-md-6 col-sm">
