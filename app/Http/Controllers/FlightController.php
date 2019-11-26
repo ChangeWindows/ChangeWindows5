@@ -15,7 +15,7 @@ class FlightController extends Controller
 
     public function index(Request $request) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(100)->onEachSide(1);
 
         foreach ($releases as $release) {
@@ -27,7 +27,7 @@ class FlightController extends Controller
 
     public function edit(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $flight = Release::find($id);
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 
@@ -36,7 +36,7 @@ class FlightController extends Controller
 
     public function store(Request $request) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $string = Release::splitString(request()->get('build_string'));
         $milestone = Release::getMilestoneByString($string);
 
@@ -58,20 +58,10 @@ class FlightController extends Controller
                 array_push($rings, getTweetRingById($value, $platform));
             }
 
-            if ($platform === 3) {
-                $hashtags = '#Xbox #XboxInsider';
-            } else {
-                $hashtags = '#Windows #WindowsInsiders';
-            }
-
-            $ring_list = implode(', ', $rings);
-
-            if (count($rings) > 1) {
-                $ring_list = substr_replace($ring_list, ' and', strrpos($ring_list, ','), 1);
-            }
+            $hashtags = $platform === 3 ? '#Xbox #XboxInsider' : '#Windows #WindowsInsiders';
 
             if (request()->get('tweet')) {
-                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.$ring_list.'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
+                Twitter::postTweet(['status' => 'Build '.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).' has been released to '.collect($rings)->join(', ', ' and ').'. '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass($platform).'#'.$string['delta'], 'format' => 'json']);
             }
         }
 
@@ -80,9 +70,9 @@ class FlightController extends Controller
 
     public function update(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $string = Release::splitString(request()->get('build_string'));
-        
+
         $flight = Release::find($id);
 
         $flight->major = $string['major'];
@@ -101,7 +91,7 @@ class FlightController extends Controller
 
     public function destroy(Request $request, $id) {
         $request->user()->authorizeRoles('Admin');
-        
+
         Release::destroy($id);
 
         return redirect('flight');

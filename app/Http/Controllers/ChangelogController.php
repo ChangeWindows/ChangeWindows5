@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Changelog;
-use Twitter;
 
 class ChangelogController extends Controller
 {
@@ -14,7 +13,7 @@ class ChangelogController extends Controller
 
     public function index(Request $request, $platform = null, $build = null) {
         $request->user()->authorizeRoles('Admin');
-        
+
         if ($platform != null && $build == null) {
             $changelogs = Changelog::where('platform', $platform)
                                     ->orderBy('build', 'desc')
@@ -56,7 +55,7 @@ class ChangelogController extends Controller
 
     public function store(Request $request) {
         $request->user()->authorizeRoles('Admin');
-        
+
         $string = Changelog::splitString(request()->get('build_string'));
 
         Changelog::create([
@@ -66,14 +65,6 @@ class ChangelogController extends Controller
             'changelog' => request()->get('changelog')
         ]);
 
-        if (request()->get('platform') === 3) {
-            $hashtags = '#Xbox #XboxInsider';
-        } else {
-            $hashtags = '#Windows #WindowsInsiders';
-        }
-
-        // Twitter::postTweet(['status' => 'Info on build '.$string['build'].' for '.getPlatformById(request()->get('platform')).' is now available! '.$hashtags.' https://changewindows.org/build/'.$string['build'].'/'.getPlatformClass(request()->get('platform')).'#'.$string['delta'], 'format' => 'json']);
-
         return redirect('/changelog');
     }
 
@@ -81,7 +72,7 @@ class ChangelogController extends Controller
         $request->user()->authorizeRoles('Admin');
 
         $changelog = Changelog::find($id);
-        
+
         $string = Changelog::splitString(request()->get('build_string'));
 
         $changelog->build = $string['build'];
