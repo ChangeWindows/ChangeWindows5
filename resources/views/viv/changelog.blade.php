@@ -12,6 +12,7 @@
     <p>Minor improvements to our automated Tweet logic</p>
     <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
     <p>Wherever we refer to a milestone, we'll now refer to its version primarily instead of the name</p>
+    <p>Releases for the SDK and ISO are now labeled "Public" instead of "Targeted"</p>
     <h4><i class="fad fa-fw fa-trash-alt"></i> Removed</h4>
     <p>Support for Fast Ring Skip Ahead for PC has been removed from the Rings page</p>
     <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>

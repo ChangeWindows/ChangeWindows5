@@ -141,11 +141,11 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">
                         <label for="ring" class="control-label">ISO</label>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f86" name="flight[8][6]" value="6"><label class="custom-control-label" for="f86"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
+                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f86" name="flight[8][6]" value="6"><label class="custom-control-label" for="f86"><span class="label targeted">Public</span></label></label></div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">
                         <label for="ring" class="control-label">SDK</label>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
+                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Public</span></label></label></div>
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary btn-block  mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>

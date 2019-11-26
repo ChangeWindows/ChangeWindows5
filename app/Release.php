@@ -78,7 +78,15 @@ class Release extends Model implements Feedable
                     return 'Preview';
             }
         if ( $this->ring == 6 )
-            return 'Targeted';
+            switch ( $this->platform ) {
+                case 3:
+                    return 'Production';
+                case 8:
+                case 9:
+                    return 'Public';
+                default:
+                    return 'Targeted';
+            }
         if ( $this->ring == 7 )
             return 'Broad';
         if ( $this->ring == 8 )
@@ -177,7 +185,7 @@ class Release extends Model implements Feedable
             else
                 $milestone = '20h2';
         }
-        
+
         return $milestone;
 
         // Damn it.
