@@ -91,7 +91,6 @@
     <div class="col-12"><hr /></div>
     <div class="col-lg-4 col-md-6 col-sm">
         <label for="ring" class="control-label">PC</label>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcSkip" name="pcSkip" {{ $milestone->pcSkip == '1' ? 'checked' : '' }} value="1"><label class="custom-control-label" for="pcSkip"><span class="label skip">Skip Ahead</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcFast" name="pcFast" {{ $milestone->pcFast == '1' ? 'checked' : '' }} value="2"><label class="custom-control-label" for="pcFast"><span class="label fast">Fast Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcSlow" name="pcSlow" {{ $milestone->pcSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="pcSlow"><span class="label slow">Slow Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcReleasePreview" name="pcReleasePreview" {{ $milestone->pcReleasePreview == '1' ? 'checked' : '' }} value="5"><label class="custom-control-label" for="pcReleasePreview"><span class="label release">Release Preview</span></label></label></div>

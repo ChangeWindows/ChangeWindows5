@@ -6,12 +6,16 @@
 <section class="release-notes">
     <h3>5.0.6 <small>26 November 2019</small></h3>
     <h4><i class="fad fa-fw fa-wrench"></i> Improved</h4>
-    <p>The changelog overview now shows the platform icons for better readability</p>
+    <p>The changelog overview now shows the platform icons for better readability <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fad fa-fw fa-server"></i> System</h4>
     <p>Update to Laravel 6 and Bootstrap 4.4</p>
     <p>Minor improvements to our automated Tweet logic</p>
     <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
     <p>Wherever we refer to a milestone, we'll now refer to its version primarily instead of the name</p>
+    <h4><i class="fad fa-fw fa-trash-alt"></i> Removed</h4>
+    <p>Support for Fast Ring Skip Ahead for PC has been removed from the Rings page</p>
+    <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where the platform-specific Rings-pages might crash</p>
 </section>
 <section class="release-notes">
     <h3>5.0.5 <small>17 November 2019</small></h3>

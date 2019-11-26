@@ -87,7 +87,6 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">
                         <label for="ring" class="control-label">PC</label>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f11" name="flight[1][1]" value="1"><label class="custom-control-label" for="f11"><span class="label skip">Skip Ahead</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f12" name="flight[1][2]" value="2"><label class="custom-control-label" for="f12"><span class="label fast">Fast Ring</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f13" name="flight[1][3]" value="3"><label class="custom-control-label" for="f13"><span class="label slow">Slow Ring</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f15" name="flight[1][5]" value="5"><label class="custom-control-label" for="f15"><span class="label release">Release Preview Ring</span></label></label></div>

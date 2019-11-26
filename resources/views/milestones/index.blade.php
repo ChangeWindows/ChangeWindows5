@@ -126,7 +126,6 @@
                             <div class="col-12"><hr /></div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">PC</label>
-                                <div class="checkbox"><input type="checkbox" name="pcSkip" value="1"> <span class="label skip">Skip Ahead</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcFast" value="2"> <span class="label fast">Fast Ring</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcSlow" value="3"> <span class="label slow">Slow Ring</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcReleasePreview" value="5"> <span class="label release">Release Preview</span></div>
