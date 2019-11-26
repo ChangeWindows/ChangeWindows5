@@ -10310,6 +10310,21 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: none;
 }
 
+.list-group.list-group-changelogs .list-group-item .img {
+  display: inline-block;
+  margin-right: 10px;
+  float: left;
+}
+
+.list-group.list-group-changelogs .list-group-item .img img {
+  width: 24px;
+  height: 24px;
+}
+
+.list-group.list-group-changelogs .list-group-item .data {
+  display: inline-block;
+}
+
 .list-group.list-group-platforms .list-group-item {
   border: none;
   margin: 0;

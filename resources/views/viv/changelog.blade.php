@@ -5,8 +5,11 @@
 <h2>What's new</h2>
 <section class="release-notes">
     <h3>5.0.6 <small>26 November 2019</small></h3>
-    <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
+    <h4><i class="fad fa-fw fa-wrench"></i> Improved</h4>
+    <p>The changelog overview now shows the platform icons for better readability</p>
+    <h4><i class="fad fa-fw fa-server"></i> System</h4>
     <p>Update to Laravel 6 and Bootstrap 4.4</p>
+    <p>Minor improvements to our automated Tweet logic</p>
 </section>
 <section class="release-notes">
     <h3>5.0.5 <small>17 November 2019</small></h3>
