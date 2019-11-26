@@ -6,9 +6,7 @@
 <section class="release-notes">
     <h3>5.0.6 <small>26 November 2019</small></h3>
     <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
-    <p>Update to Bootstrap 4.4</p>
-    <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
-    <p>Fixes the random sorting order for builds in the timeline</p>
+    <p>Update to Laravel 6 and Bootstrap 4.4</p>
 </section>
 <section class="release-notes">
     <h3>5.0.5 <small>17 November 2019</small></h3>
