@@ -15,8 +15,10 @@
     <p>Releases for the SDK and ISO are now labeled "Public" instead of "Targeted"</p>
     <h4><i class="fad fa-fw fa-trash-alt"></i> Removed</h4>
     <p>Support for Fast Ring Skip Ahead for PC has been removed from the Rings page</p>
+    <p>Removes support for adding flights to Server Broad <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes an issue where the platform-specific Rings-pages might crash</p>
+    <p>Fixes a bug where ChangeWindows would file build 18363 as Windows 10 version 1903</p>
 </section>
 <section class="release-notes">
     <h3>5.0.5 <small>17 November 2019</small></h3>
