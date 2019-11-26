@@ -25,11 +25,11 @@
         <title>@yield('title') &middot; ChangeWindows</title>
         @include('feed::links')
 
-        <script src="{{ asset('js/app.js?v5.0.5') }}" defer></script>
-        <link href="{{ asset('css/app.css?v5.0.5') }}" rel="stylesheet">
-        <script src="{{ asset('js/brands.min.js?v5.0.5') }}" defer></script>
-        <script src="{{ asset('js/duotone.min.js?v5.0.5') }}" defer></script>
-        <script src="{{ asset('js/fontawesome.min.js?v5.0.5') }}" defer></script>
+        <script src="{{ asset('js/app.js?v5.0.6') }}" defer></script>
+        <link href="{{ asset('css/app.css?v5.0.6') }}" rel="stylesheet">
+        <link href="{{ asset('css/brands.min.css?v5.0.6') }}" rel="stylesheet">
+        <link href="{{ asset('css/duotone.min.css?v5.0.6') }}" rel="stylesheet">
+        <link href="{{ asset('css/fontawesome.min.css?v5.0.6') }}" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
         <link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
@@ -89,7 +89,7 @@
                         @auth
                             <li class="nav-item dropdown {{ Request::is('profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fad fa-fw fa-user-circle d-inline"></i><span class="d-none d-md-inline"> {{ Auth::user()->name }}<span>
+                                    <i class="fad fa-fw fa-user-circle"></i><span class="d-none d-md-inline"> {{ Auth::user()->name }}<span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->hasAnyRole(['Admin']))
@@ -110,7 +110,7 @@
                             </li>
                         @else
                             <li class="nav-item nav-login {{ Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('login') }}"><i class="fad fa-fw fa-sign-in d-inline"></i><span class="d-none d-sm-inline"> Login<span></a>
+                                <a class="nav-link" href="{{ route('login') }}"><i class="fad fa-fw fa-sign-in"></i><span class="d-none d-sm-inline"> Login<span></a>
                             </li>
                         @endauth
                     </ul>

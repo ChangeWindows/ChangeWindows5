@@ -4,7 +4,12 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.0.6 <small>26 November 2019</small></h3>
+    <h3>5.0.8 <small>26 November 2019</small></h3>
+    <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes the loading problems with Font Awesome</p>
+</section>
+<section class="release-notes">
+    <h3>5.0.7 <small>26 November 2019</small></h3>
     <h4><i class="fad fa-fw fa-wrench"></i> Improved</h4>
     <p>The changelog overview now shows the platform icons for better readability <span class="badge badge-warning">Admin</span></p>
     <h4><i class="fad fa-fw fa-server"></i> System</h4>
@@ -21,7 +26,7 @@
     <p>Fixes a bug where ChangeWindows would file build 18363 as Windows 10 version 1903</p>
 </section>
 <section class="release-notes">
-    <h3>5.0.5 <small>17 November 2019</small></h3>
+    <h3>5.0.5 / 5.0.6 <small>17 November 2019</small></h3>
     <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
     <p>The Timeline has now a more compact layout and shows 75 releases per page instead of 50</p>
     <p>Milestone pages now show the last 7 instead of 5 releases of a platform on the overview</p>
