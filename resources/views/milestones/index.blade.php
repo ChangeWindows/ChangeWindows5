@@ -24,8 +24,8 @@
                         <h4 class="text-center">
                             <i class="fab fa-fw fa-windows"></i> <span class="font-weight-bold">{{ $milestone->osname }}</span>
                         </h4>
-                        <h3 class="text-center">
-                            {{ $milestone->name }}
+                        <h3 class="text-center font-weight-normal">
+                            version {{ $milestone->version }}
                         </h3>
                     </a>
                 </div>

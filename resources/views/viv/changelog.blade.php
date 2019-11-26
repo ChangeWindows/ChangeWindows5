@@ -10,6 +10,8 @@
     <h4><i class="fad fa-fw fa-server"></i> System</h4>
     <p>Update to Laravel 6 and Bootstrap 4.4</p>
     <p>Minor improvements to our automated Tweet logic</p>
+    <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
+    <p>Wherever we refer to a milestone, we'll now refer to its version primarily instead of the name</p>
 </section>
 <section class="release-notes">
     <h3>5.0.5 <small>17 November 2019</small></h3>
