@@ -12,7 +12,7 @@ class Milestone extends Model
 
     protected $dates = ['created_at', 'updated_at', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol'];
 
-    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'description', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcSkip', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcBroad', 'pcLTS', 'mobileFast', 'mobileSlow', 'mobileReleasePreview', 'mobileTargeted', 'mobileBroad', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'iotBroad', 'teamTargeted', 'teamBroad', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicBroad', 'holographicLTS', 'sdk', 'iso'];
+    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'description', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcBroad', 'pcLTS', 'mobileFast', 'mobileSlow', 'mobileReleasePreview', 'mobileTargeted', 'mobileBroad', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'iotBroad', 'teamTargeted', 'teamBroad', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicBroad', 'holographicLTS', 'sdk', 'iso'];
 
     public function getSupport() {
         $now = Carbon::now();
@@ -37,7 +37,7 @@ class Milestone extends Model
                 // We flip this to "greaterThanOrEqualTo" instead of "greaterThan" because these dates indicate the last day of support
                 $public_done = $this->public->diffInDays($this->now);
                 $public_go = $public_period - $public_done;
-                
+
                 $preview_go = $extended_done = $lts_done = 0;
                 $preview_done = $preview_period;
                 $extended_go = $extended_period;
@@ -45,7 +45,7 @@ class Milestone extends Model
             } else if ($this->mainEol->lessThan($now) && $this->mainXol->greaterThanOrEqualTo($now)) {
                 $extended_done = $this->mainEol->diffInDays($this->now);
                 $extended_go = $extended_period - $extended_done;
-                
+
                 $preview_go = $public_go = $lts_done = 0;
                 $preview_done = $preview_period;
                 $public_done = $public_period;
@@ -53,7 +53,7 @@ class Milestone extends Model
             } else if ($this->mainXol->lessThan($now) && $this->ltsEol->greaterThanOrEqualTo($now)) {
                 $lts_done = $this->mainXol->diffInDays($this->now);
                 $lts_go = $lts_period - $lts_done;
-                
+
                 $preview_go = $public_go = $extended_go = 0;
                 $preview_done = $preview_period;
                 $public_done = $public_period;
@@ -84,7 +84,7 @@ class Milestone extends Model
     public function getFlights() {
         return array(
             'pc' => array(
-                'skip' => $this->pcSkip,
+                'skip' => -1,
                 'fast' => $this->pcFast,
                 'slow' => $this->pcSlow,
                 'preview' => -1,
@@ -95,10 +95,10 @@ class Milestone extends Model
             ),
             'mobile' => array(
                 'skip' => -1,
-                'fast' => $this->mobileFast,
-                'slow' => $this->mobileSlow,
+                'fast' => -1,
+                'slow' => -1,
                 'preview' => -1,
-                'release' => $this->mobileReleasePreview,
+                'release' => -1,
                 'targeted' => $this->mobileTargeted,
                 'broad' => $this->mobileBroad,
                 'ltsc' => -1

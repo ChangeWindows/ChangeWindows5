@@ -91,7 +91,6 @@
     <div class="col-12"><hr /></div>
     <div class="col-lg-4 col-md-6 col-sm">
         <label for="ring" class="control-label">PC</label>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcSkip" name="pcSkip" {{ $milestone->pcSkip == '1' ? 'checked' : '' }} value="1"><label class="custom-control-label" for="pcSkip"><span class="label skip">Skip Ahead</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcFast" name="pcFast" {{ $milestone->pcFast == '1' ? 'checked' : '' }} value="2"><label class="custom-control-label" for="pcFast"><span class="label fast">Fast Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcSlow" name="pcSlow" {{ $milestone->pcSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="pcSlow"><span class="label slow">Slow Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcReleasePreview" name="pcReleasePreview" {{ $milestone->pcReleasePreview == '1' ? 'checked' : '' }} value="5"><label class="custom-control-label" for="pcReleasePreview"><span class="label release">Release Preview</span></label></label></div>
@@ -120,7 +119,6 @@
         <label for="ring" class="control-label">Server</label>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverSlow" name="serverSlow" {{ $milestone->serverSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="serverSlow"><span class="label slow">Preview</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverTargeted" name="serverTargeted" {{ $milestone->serverTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="serverTargeted"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverBroad" name="serverBroad" {{ $milestone->serverBroad == '1' ? 'checked' : '' }} value="7"><label class="custom-control-label" for="serverBroad"><span class="label broad">Semi-Annual Broad</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverLTS" name="serverLTS" {{ $milestone->serverLTS == '1' ? 'checked' : '' }} value="8"><label class="custom-control-label" for="serverLTS"><span class="label ltsc">Long-Term Servicing Channel</span></label></label></div>
     </div>
     <div class="col-lg-4 col-md-6 col-sm">

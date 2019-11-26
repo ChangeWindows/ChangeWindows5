@@ -99,7 +99,6 @@ class MilestoneController extends Controller
             'mainXol' => request()->get('mainXol') === null ? '0000-01-01' : request()->get('mainXol'),
             'ltsEol' => request()->get('ltsEol') === null ? '0000-01-01' : request()->get('ltsEol'),
             'isLts' => false,
-            'pcSkip' => request()->get('pcSkip') === null ? 0 : 1,
             'pcFast' => request()->get('pcFast') === null ? 0 : 1,
             'pcSlow' => request()->get('pcSlow') === null ? 0 : 1,
             'pcReleasePreview' => request()->get('pcReleasePreview') === null ? 0 : 1,
@@ -180,7 +179,6 @@ class MilestoneController extends Controller
         $milestone->mainXol = request()->get('mainXol') === null ? '0000-01-01' : request()->get('mainXol');
         $milestone->ltsEol = request()->get('ltsEol') === null ? '0000-01-01' : request()->get('ltsEol');
         $milestone->isLts = false;
-        $milestone->pcSkip = request()->get('pcSkip') === null ? 0 : 1;
         $milestone->pcFast = request()->get('pcFast') === null ? 0 : 1;
         $milestone->pcSlow = request()->get('pcSlow') === null ? 0 : 1;
         $milestone->pcReleasePreview = request()->get('pcReleasePreview') === null ? 0 : 1;

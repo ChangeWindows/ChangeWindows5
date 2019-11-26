@@ -78,7 +78,15 @@ class Release extends Model implements Feedable
                     return 'Preview';
             }
         if ( $this->ring == 6 )
-            return 'Targeted';
+            switch ( $this->platform ) {
+                case 3:
+                    return 'Production';
+                case 8:
+                case 9:
+                    return 'Public';
+                default:
+                    return 'Targeted';
+            }
         if ( $this->ring == 7 )
             return 'Broad';
         if ( $this->ring == 8 )
@@ -164,7 +172,7 @@ class Release extends Model implements Feedable
                 $milestone = 'redstone4';
             else if ( $build < 17900 )
                 $milestone = 'redstone5';
-            else if ( $build < 18500 ) {
+            else if ( $build < 18363 ) {
                 if ( $delta < 7000 )
                     $milestone = '19h1';
                 else
@@ -172,12 +180,14 @@ class Release extends Model implements Feedable
             }
             else if ( $build < 18501 )
                 $milestone = '19h2';
-            else if ( $build < 19200 )
+            else if ( $build < 19100 )
                 $milestone = '20h1';
-            else
+            else if ( $build < 19800 )
                 $milestone = '20h2';
+            else
+                $milestone = 'manganese';
         }
-        
+
         return $milestone;
 
         // Damn it.

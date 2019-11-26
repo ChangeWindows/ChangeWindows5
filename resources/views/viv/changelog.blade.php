@@ -4,6 +4,23 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.0.6 <small>26 November 2019</small></h3>
+    <h4><i class="fad fa-fw fa-wrench"></i> Improved</h4>
+    <p>The changelog overview now shows the platform icons for better readability <span class="badge badge-warning">Admin</span></p>
+    <h4><i class="fad fa-fw fa-server"></i> System</h4>
+    <p>Update to Laravel 6 and Bootstrap 4.4</p>
+    <p>Minor improvements to our automated Tweet logic</p>
+    <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
+    <p>Wherever we refer to a milestone, we'll now refer to its version primarily instead of the name</p>
+    <p>Releases for the SDK and ISO are now labeled "Public" instead of "Targeted"</p>
+    <h4><i class="fad fa-fw fa-trash-alt"></i> Removed</h4>
+    <p>Support for Fast Ring Skip Ahead for PC has been removed from the Rings page</p>
+    <p>Removes support for adding flights to Server Broad <span class="badge badge-warning">Admin</span></p>
+    <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where the platform-specific Rings-pages might crash</p>
+    <p>Fixes a bug where ChangeWindows would file build 18363 as Windows 10 version 1903</p>
+</section>
+<section class="release-notes">
     <h3>5.0.5 <small>17 November 2019</small></h3>
     <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
     <p>The Timeline has now a more compact layout and shows 75 releases per page instead of 50</p>

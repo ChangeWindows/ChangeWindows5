@@ -226,7 +226,6 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">PC</label>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f11" name="flight[1][1]" value="1"><label class="custom-control-label" for="f11"><span class="label skip">Skip Ahead</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f12" name="flight[1][2]" value="2"><label class="custom-control-label" for="f12"><span class="label fast">Fast Ring</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f13" name="flight[1][3]" value="3"><label class="custom-control-label" for="f13"><span class="label slow">Slow Ring</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f15" name="flight[1][5]" value="5"><label class="custom-control-label" for="f15"><span class="label release">Release Preview Ring</span></label></label></div>
@@ -255,7 +254,6 @@
                                 <label for="ring" class="control-label">Server</label>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f43" name="flight[4][3]" value="3"><label class="custom-control-label" for="f43"><span class="label slow">Preview</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f46" name="flight[4][6]" value="6"><label class="custom-control-label" for="f46"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f47" name="flight[4][7]" value="7"><label class="custom-control-label" for="f47"><span class="label broad">Semi-Annual Broad</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f48" name="flight[4][8]" value="8"><label class="custom-control-label" for="f48"><span class="label ltsc">LTSC</span></label></label></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
@@ -281,11 +279,11 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">ISO</label>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f86" name="flight[8][6]" value="6"><label class="custom-control-label" for="f86"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f86" name="flight[8][6]" value="6"><label class="custom-control-label" for="f86"><span class="label targeted">Public</span></label></label></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">SDK</label>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Public</span></label></label></div>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>

@@ -51,6 +51,7 @@ class RingsController extends Controller
     }
 
     public function platform(Request $request, $platform) {
+        $set = [];
         $platform_id = getPlatformIdByClass($platform);
 
         $milestones = Milestone::orderBy('version', 'DESC')->get();
