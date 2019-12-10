@@ -44,7 +44,7 @@
         <div class="list-group list-group-changelogs">
             @foreach ($changelogs as $changelog)
                 <a href="{{ route('editChangelog', [$changelog->id]) }}" class="list-group-item">
-                    <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($changelog->platform)) }}" class="img-fluid" alt="{{ getPlatformById($changelog->platform) }}" /></div>
+                    <div class="img">{!! getPlatformIcon($changelog->platform) !!}</div>
                     <div class="data">
                         {{ $changelog->build }}.{{ $changelog->delta }} &middot; {{ getPlatformById($changelog->platform) }}
                         <br />

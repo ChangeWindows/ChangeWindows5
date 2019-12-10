@@ -23,7 +23,7 @@
 @section('content')
 <div class="row px-n10 rings">
     <div class="col-12" id="pc">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> PC</p>
+        <p class="h3">{!! getPlatformIconNoStyle(1) !!} PC</p>
         <div class="row row-gutter">
             <div class="col-md col-sm-4 col-6"><?php getTile( $flights['pc']['fast'] ) ?></div>
             <div class="col-md col-sm-4 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="col-12" id="xbox">
-        <p class="h3"><i class="fab fa-fw fa-xbox"></i> Xbox</p>
+        <p class="h3">{!! getPlatformIconNoStyle(3) !!} Xbox</p>
         <div class="row row-gutter">
             <div class="col-md col-sm-4 col-6"><?php getTile( $flights['xbox']['skip'] ) ?></div>
             <div class="col-md col-sm-4 col-6"><?php getTile( $flights['xbox']['fast'] ) ?></div>
@@ -45,14 +45,14 @@
         </div>
     </div>
     <div class="col-lg-6" id="iot">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> IoT</p>
+        <p class="h3">{!! getPlatformIconNoStyle(6) !!} IoT</p>
         <div class="row row-gutter">
             <div class="col-xl col-6"><?php getTile( $flights['iot']['targeted'] ) ?></div>
             <div class="col-xl col-6"><?php getTile( $flights['iot']['broad'] ) ?></div>
         </div>
     </div>
     <div class="col-lg-6" id="server">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Server</p>
+        <p class="h3">{!! getPlatformIconNoStyle(4) !!} Server</p>
         <div class="row row-gutter">
             <div class="col-xl col-sm-4 col-6"><?php getTile( $flights['server']['slow'] ) ?></div>
             <div class="col-xl col-sm-4 col-6"><?php getTile( $flights['server']['targeted'] ) ?></div>
@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="col-12" id="holographic">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Holographic</p>
+        <p class="h3">{!! getPlatformIconNoStyle(5) !!} Holographic</p>
         <div class="row row-gutter">
             <div class="col-md col-sm-4 col-6"><?php getTile( $flights['holo']['fast'] ) ?></div>
             <div class="col-md col-sm-4 col-6"><?php getTile( $flights['holo']['slow'] ) ?></div>
@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="col-lg-8 col-12" id="team">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
+        <p class="h3">{!! getPlatformIconNoStyle(7) !!} Team</p>
         <div class="row row-gutter">
             <div class="col-md col-6"><?php getTile( $flights['team']['fast'] ) ?></div>
             <div class="col-md col-6"><?php getTile( $flights['team']['slow'] ) ?></div>
@@ -79,13 +79,13 @@
         </div>
     </div>
     <div class="col-lg-2 col-6" id="sdk">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
+        <p class="h3">{!! getPlatformIconNoStyle(9) !!} SDK</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['sdk']['targeted'] ) ?></div>
         </div>
     </div>
     <div class="col-lg-2 col-6" id="iso">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> ISO</p>
+        <p class="h3">{!! getPlatformIconNoStyle(8) !!} ISO</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iso']['targeted'] ) ?></div>
         </div>

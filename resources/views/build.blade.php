@@ -93,7 +93,7 @@
                             @foreach ($rings as $ring)
                                 <div class="timeline-row">
                                     <a class="row" href="{{ route('showRelease', $build, $platform) }}">
-                                        <div class="col-7 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
+                                        <div class="col-7 build"><span class="pr-1">{!! getPlatformIcon($platform) !!}</span> {{ $build }}.{{ $delta }}</div>
                                         <div class="col-5 ring">
                                             <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
                                         </div>

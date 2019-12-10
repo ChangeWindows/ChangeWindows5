@@ -31,7 +31,7 @@
                                     <div class="col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
                                         <div class="flight-set">
                                             <a class="flight" href="{{ route('showRelease', ['build' => $build, 'platform' => $platform]) }}">
-                                                <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-fluid" alt="{{ getPlatformById($platform) }}" /></div>
+                                                <div class="img">{!! getPlatformIcon($platform) !!}</div>
                                                 <div class="data">
                                                     <p class="build">{{ $build }}.{{ $delta }}</p>
                                                     <p class="ring"><span class="label {{ $ring->class }}">{{ $ring->flight }}</span></p>
