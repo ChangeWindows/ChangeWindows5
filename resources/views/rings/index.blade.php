@@ -14,7 +14,6 @@
                 <a class="nav-link {{ Request::is('rings/server') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'server']) }}">Server</a>
                 <a class="nav-link {{ Request::is('rings/holographic') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'holographic']) }}">Holographic</a>
                 <a class="nav-link {{ Request::is('rings/team') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'team']) }}">Team</a>
-                <a class="nav-link {{ Request::is('rings/mobile') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'mobile']) }}">Mobile</a>
             </nav>
         </div>
     </div>
@@ -48,8 +47,8 @@
     <div class="col-lg-6" id="iot">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> IoT</p>
         <div class="row row-gutter">
-            <div class="col-xl col-sm-4 col-6"><?php getTile( $flights['iot']['targeted'] ) ?></div>
-            <div class="col-xl col-sm-4 col-6"><?php getTile( $flights['iot']['broad'] ) ?></div>
+            <div class="col-xl col-6"><?php getTile( $flights['iot']['targeted'] ) ?></div>
+            <div class="col-xl col-6"><?php getTile( $flights['iot']['broad'] ) ?></div>
         </div>
     </div>
     <div class="col-lg-6" id="server">
@@ -70,7 +69,7 @@
             <div class="col-md col-sm-6 col-12"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
         </div>
     </div>
-    <div class="col-12" id="team">
+    <div class="col-lg-8 col-12" id="team">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
         <div class="row row-gutter">
             <div class="col-md col-6"><?php getTile( $flights['team']['fast'] ) ?></div>
@@ -79,23 +78,16 @@
             <div class="col-md col-6"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
     </div>
-    <div class="col-md-3 col-6" id="sdk">
+    <div class="col-lg-2 col-6" id="sdk">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['sdk']['targeted'] ) ?></div>
         </div>
     </div>
-    <div class="col-md-3 col-6" id="iso">
+    <div class="col-lg-2 col-6" id="iso">
         <p class="h3"><i class="fab fa-fw fa-windows"></i> ISO</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iso']['targeted'] ) ?></div>
-        </div>
-    </div>
-    <div class="col-md-6 col-12" id="mobile">
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
-        <div class="row row-gutter">
-            <div class="col"><?php getTile( $flights['mobile']['targeted'] ) ?></div>
-            <div class="col"><?php getTile( $flights['mobile']['broad'] ) ?></div>
         </div>
     </div>
 </div>

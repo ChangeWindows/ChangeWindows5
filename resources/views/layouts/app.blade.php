@@ -25,11 +25,11 @@
         <title>@yield('title') &middot; ChangeWindows</title>
         @include('feed::links')
 
-        <script src="{{ asset('js/app.js?v5.0.6') }}" defer></script>
-        <link href="{{ asset('css/app.css?v5.0.6') }}" rel="stylesheet">
-        <link href="{{ asset('css/brands.min.css?v5.0.6') }}" rel="stylesheet">
-        <link href="{{ asset('css/duotone.min.css?v5.0.6') }}" rel="stylesheet">
-        <link href="{{ asset('css/fontawesome.min.css?v5.0.6') }}" rel="stylesheet">
+        <script src="{{ asset('js/app.js?v5.0.9') }}" defer></script>
+        <link href="{{ asset('css/app.css?v5.0.9') }}" rel="stylesheet">
+        <link href="{{ asset('css/brands.min.css?v5.0.9') }}" rel="stylesheet">
+        <link href="{{ asset('css/duotone.min.css?v5.0.9') }}" rel="stylesheet">
+        <link href="{{ asset('css/fontawesome.min.css?v5.0.9') }}" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
         <link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">

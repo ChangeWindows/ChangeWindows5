@@ -95,14 +95,6 @@
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f18" name="flight[1][8]" value="8"><label class="custom-control-label" for="f18"><span class="label ltsc">LTSC</span></label></label></div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">
-                        <label for="ring" class="control-label">Mobile</label>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f22" name="flight[2][2]" value="2"><label class="custom-control-label" for="f22"><span class="label fast">Fast Ring</span></label></label></div>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f23" name="flight[2][3]" value="3"><label class="custom-control-label" for="f23"><span class="label slow">Slow Ring</span></label></label></div>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f25" name="flight[2][5]" value="5"><label class="custom-control-label" for="f25"><span class="label release">Release Preview Ring</span></label></label></div>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f26" name="flight[2][6]" value="6"><label class="custom-control-label" for="f26"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f27" name="flight[2][7]" value="7"><label class="custom-control-label" for="f27"><span class="label broad">Semi-Annual Broad</span></label></label></div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm">
                         <label for="ring" class="control-label">Xbox</label>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f31" name="flight[3][1]" value="1"><label class="custom-control-label" for="f31"><span class="label skip">Skip Ahead</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f32" name="flight[3][2]" value="2"><label class="custom-control-label" for="f32"><span class="label fast">Alpha Ring</span></label></label></div>

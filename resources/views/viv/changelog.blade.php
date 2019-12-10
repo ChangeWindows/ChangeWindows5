@@ -4,6 +4,16 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.0.9 <small>10 December 2019</small></h3>
+    <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
+    <p>Removes Mobile from the Rings page and Timeline sidebar</p>
+    <h4><i class="fad fa-fw fa-server"></i> System</h4>
+    <p>Update to Laravel 6.7 and Bootstrap 4.4.1</p>
+    <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where the Windows-logo on the milestones page was bold</p>
+    <p>Fixes a visual bug where IoT would take all available space on the main Rings page</p>
+</section>
+<section class="release-notes">
     <h3>5.0.8 <small>26 November 2019</small></h3>
     <h4><i class="fad fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes the loading problems with Font Awesome</p>

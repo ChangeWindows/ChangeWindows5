@@ -41,9 +41,6 @@ class RingsController extends Controller
         $flights['team']['targeted'] = Release::team()->targeted()->latestFlight()->first();
         $flights['team']['broad'] = Release::team()->broad()->latestFlight()->first();
 
-        $flights['mobile']['targeted'] = Release::mobile()->targeted()->latestFlight()->first();
-        $flights['mobile']['broad'] = Release::mobile()->broad()->latestFlight()->first();
-
         $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
 

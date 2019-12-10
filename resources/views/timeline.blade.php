@@ -177,11 +177,6 @@
             <div class="col-6"><?php getTile( $flights['team']['targeted'] ) ?></div>
             <div class="col-6"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Mobile</p>
-        <div class="row row-gutter">
-            <div class="col"><?php getTile( $flights['mobile']['targeted'] ) ?></div>
-            <div class="col"><?php getTile( $flights['mobile']['broad'] ) ?></div>
-        </div>
         <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['sdk']['targeted'] ) ?></div>
@@ -232,14 +227,6 @@
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f16" name="flight[1][6]" value="6"><label class="custom-control-label" for="f16"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f17" name="flight[1][7]" value="7"><label class="custom-control-label" for="f17"><span class="label broad">Semi-Annual Broad</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f18" name="flight[1][8]" value="8"><label class="custom-control-label" for="f18"><span class="label ltsc">LTSC</span></label></label></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">Mobile</label>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f22" name="flight[2][2]" value="2"><label class="custom-control-label" for="f22"><span class="label fast">Fast Ring</span></label></label></div>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f23" name="flight[2][3]" value="3"><label class="custom-control-label" for="f23"><span class="label slow">Slow Ring</span></label></label></div>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f25" name="flight[2][5]" value="5"><label class="custom-control-label" for="f25"><span class="label release">Release Preview Ring</span></label></label></div>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f26" name="flight[2][6]" value="6"><label class="custom-control-label" for="f26"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f27" name="flight[2][7]" value="7"><label class="custom-control-label" for="f27"><span class="label broad">Semi-Annual Broad</span></label></label></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Xbox</label>
