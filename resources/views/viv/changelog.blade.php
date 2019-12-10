@@ -4,6 +4,13 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.1-alpha.1 <small>10 December 2019</small></h3>
+    <h4><i class="fad fa-fw fa-wrench"></i> Improved</h4>
+    <p>Replaces the platform icons with Font Awesome icons</p>
+    <h4><i class="fad fa-fw fa-trash-alt"></i> Removed</h4>
+    <p>Milestones will no longer show a description</p>
+</section>
+<section class="release-notes">
     <h3>5.0.9 <small>10 December 2019</small></h3>
     <h4><i class="fad fa-fw fa-exchange"></i> Changed</h4>
     <p>Removes Mobile from the Rings page and Timeline sidebar</p>
