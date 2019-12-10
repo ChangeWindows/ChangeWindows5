@@ -51,12 +51,6 @@
             <input type="text" class="form-control" id="color" name="color" aria-describedby="color" placeholder="Color" value="{{ $milestone->color }}">
         </div>
     </div>
-    <div class="col-12">
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description" aria-describedby="description" placeholder="Description">{{ $milestone->description }}</textarea>
-        </div>
-    </div>
     <div class="col-12"><hr /></div>
     <div class="col-md-4 col-12">
         <div class="form-group">
@@ -97,14 +91,6 @@
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcTargeted" name="pcTargeted" {{ $milestone->pcTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="pcTargeted"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcBroad" name="pcBroad" {{ $milestone->pcBroad == '1' ? 'checked' : '' }} value="7"><label class="custom-control-label" for="pcBroad"><span class="label broad">Semi-Annual Broad</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcLTS" name="pcLTS" {{ $milestone->pcLTS == '1' ? 'checked' : '' }} value="8"><label class="custom-control-label" for="pcLTS"><span class="label ltsc">Long-Term Servicing Channel</span></label></label></div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm">
-        <label for="ring" class="control-label">Mobile</label>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileFast" name="mobileFast" {{ $milestone->mobileFast == '1' ? 'checked' : '' }} value="2"><label class="custom-control-label" for="mobileFast"><span class="label fast">Fast Ring</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileSlow" name="mobileSlow" {{ $milestone->mobileSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="mobileSlow"><span class="label slow">Slow Ring</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileReleasePreview" name="mobileReleasePreview" {{ $milestone->mobileReleasePreview == '1' ? 'checked' : '' }} value="5"><label class="custom-control-label" for="mobileReleasePreview"><span class="label release">Release Preview</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileTargeted" name="mobileTargeted" {{ $milestone->mobileTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="mobileTargeted"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileBroad" name="mobileBroad" {{ $milestone->mobileBroad == '1' ? 'checked' : '' }} value="7"><label class="custom-control-label" for="mobileBroad"><span class="label broad">Semi-Annual Broad</span></label></label></div>
     </div>
     <div class="col-lg-4 col-md-6 col-sm">
         <label for="ring" class="control-label">Xbox</label>
