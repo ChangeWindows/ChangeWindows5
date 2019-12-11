@@ -7,6 +7,7 @@
     <h3>5.1-alpha.1 <small>10 December 2019</small></h3>
     <h4><i class="fad fa-fw fa-wrench"></i> Improved</h4>
     <p>Replaces the platform icons with Font Awesome icons</p>
+    <p>The Timeline sidebar and Rings page now use the platform-specific icons</p>
     <h4><i class="fad fa-fw fa-trash-alt"></i> Removed</h4>
     <p>Milestones will no longer show a description</p>
 </section>
