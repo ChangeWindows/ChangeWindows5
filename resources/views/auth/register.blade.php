@@ -49,7 +49,7 @@
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" required>
 
                 <button type="submit" class="btn btn-primary">
-                    <i class="fad fa-fw fa-user-plus"></i> Register
+                    <i class="far fa-fw fa-user-plus"></i> Register
                 </button>
                 <a class="btn btn-light" href="{{ route('login') }}">
                     Login

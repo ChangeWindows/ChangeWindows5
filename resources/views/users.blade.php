@@ -17,7 +17,7 @@
                 <div class="col-lg-4 col-sm-6 col-12 user-box">
                     <div class="user">
                         <div class="row">
-                            <div class="col-2 text-center"><i class="fad fa-fw fa-user-circle"></i></div>
+                            <div class="col-2 text-center"><i class="far fa-fw fa-user-circle"></i></div>
                             <div class="col-10">
                                 <p class="h2">{{ $user->name }}</p>
                                 <p class="h6">{{ $user->created_at }}</p>
@@ -34,17 +34,17 @@
                                         <form method="POST" action="{{ route('promoteUser', ['id' => $user->id]) }}">
                                             {{ method_field('PATCH') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 1 ? 'disabled' : '' }}><i class="fad fa-fw fa-arrow-up"></i> Promote</button>
+                                            <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 1 ? 'disabled' : '' }}><i class="far fa-fw fa-arrow-up"></i> Promote</button>
                                         </form>
                                         <form method="POST" action="{{ route('demoteUser', ['id' => $user->id]) }}">
                                             {{ method_field('PATCH') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 3 ? 'disabled' : '' }}><i class="fad fa-fw fa-arrow-down"></i> Demote</button>
+                                            <button type="submit" class="btn btn-outline-primary" {{ $user->roles[0]->id === 3 ? 'disabled' : '' }}><i class="far fa-fw fa-arrow-down"></i> Demote</button>
                                         </form>
                                         <form method="POST" action="{{ route('deleteUser', ['id' => $user->id]) }}">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-outline-danger"><i class="fad fa-fw fa-trash-alt"></i></button>
+                                            <button type="submit" class="btn btn-outline-danger"><i class="far fa-fw fa-trash-alt"></i></button>
                                         </form>
                                     </div>
                                 </div>

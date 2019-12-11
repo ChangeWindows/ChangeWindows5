@@ -27,9 +27,9 @@
 
         <script src="{{ asset('js/app.js?v5.0.9') }}" defer></script>
         <link href="{{ asset('css/app.css?v5.0.9') }}" rel="stylesheet">
-        <link href="{{ asset('css/brands.min.css?v5.0.9') }}" rel="stylesheet">
-        <link href="{{ asset('css/duotone.min.css?v5.0.9') }}" rel="stylesheet">
-        <link href="{{ asset('css/fontawesome.min.css?v5.0.9') }}" rel="stylesheet">
+        <script src="{{ asset('js/brands.min.js?v5.0.9') }}" defer></script>
+        <script src="{{ asset('js/regular.min.js?v5.0.9') }}" defer></script>
+        <script src="{{ asset('js/fontawesome.min.js?v5.0.9') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
         <link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
@@ -69,15 +69,15 @@
                         </li>
                         <li class="nav-item dropdown {{ Request::is('buildfeed*') || Request::is('viv*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                More <i class="fad fa-fw fa-angle-down"></i>
+                                More <i class="far fa-fw fa-angle-down"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
-                                <a class="dropdown-item" href="{{ route('viv') }}"><i class="fad fa-fw fa-alicorn"></i> About</a>
-                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="fad fa-fw fa-rss"></i> BuildFeed</a>
+                                <a class="dropdown-item" href="{{ route('viv') }}"><i class="far fa-fw fa-alicorn"></i> About</a>
+                                <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="far fa-fw fa-rss"></i> BuildFeed</a>
                                 <div class="dropdown-divider"></div>
                                 <h6 class="dropdown-header">RSS</h6>
-                                <a class="dropdown-item" href="/feed"><i class="fad fa-fw fa-rss-square"></i> Flight feed</a>
+                                <a class="dropdown-item" href="/feed"><i class="far fa-fw fa-rss-square"></i> Flight feed</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/"><i class="fab fa-fw fa-github"></i> GitHub</a>
                                 <a class="dropdown-item" href="https://twitter.com/changewindows"><i class="fab fa-fw fa-twitter"></i> @ChangeWindows</a>
@@ -89,20 +89,20 @@
                         @auth
                             <li class="nav-item dropdown {{ Request::is('profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fad fa-fw fa-user-circle"></i><span class="d-none d-md-inline"> {{ Auth::user()->name }}<span>
+                                    <i class="far fa-fw fa-user-circle"></i><span class="d-none d-md-inline"> {{ Auth::user()->name }}<span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->hasAnyRole(['Admin']))
                                         @yield('toolset')
-                                        <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="fad fa-fw fa-plane"></i> Flights</a>
-                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="fad fa-fw fa-align-left"></i> Changelogs</a>
-                                        <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="fad fa-fw fa-users"></i> Users</a>
+                                        <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="far fa-fw fa-plane"></i> Flights</a>
+                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>
+                                        <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="far fa-fw fa-users"></i> Users</a>
                                         <a class="dropdown-item" href="{{ route('showPatreon') }}"><i class="fab fa-fw fa-patreon"></i> Patrons</a>
                                         <div class="dropdown-divider"></div>
                                     @endif
-                                    <a class="dropdown-item" href="{{ route('profile') }}"><i class="fad fa-fw fa-cog"></i> Settings</a>
+                                    <a class="dropdown-item" href="{{ route('profile') }}"><i class="far fa-fw fa-cog"></i> Settings</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fad fa-fw fa-sign-out"></i> Log out</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="far fa-fw fa-sign-out"></i> Log out</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -110,7 +110,7 @@
                             </li>
                         @else
                             <li class="nav-item nav-login {{ Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('login') }}"><i class="fad fa-fw fa-sign-in"></i><span class="d-none d-sm-inline"> Login<span></a>
+                                <a class="nav-link" href="{{ route('login') }}"><i class="far fa-fw fa-sign-in"></i><span class="d-none d-sm-inline"> Login<span></a>
                             </li>
                         @endauth
                     </ul>

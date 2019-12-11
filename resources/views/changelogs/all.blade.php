@@ -9,11 +9,11 @@
             <small>
                 <a href="{{ route('showChangelogs') }}">Changelogs</a>
                 @if ($platform)
-                    <i class="fad fa-fw fa-angle-right"></i>
+                    <i class="far fa-fw fa-angle-right"></i>
                     <a href="{{ route('showChangelogs', $platform) }}">{{ getPlatformById($platform) }}</a>
                 @endif
                 @if ($build)
-                    <i class="fad fa-fw fa-angle-right"></i>
+                    <i class="far fa-fw fa-angle-right"></i>
                     <a href="{{ route('showChangelogs', [$platform, $build]) }}">{{ $build }}</a>
                 @endif
             </small>
@@ -25,7 +25,7 @@
 @section('content')
 <div class="row">
     <div class="col-2">
-        <a class="btn btn-primary btn-block" href="{{ route('createChangelog') }}"><i class="fad fa-fw fa-plus"></i> Add changelog</a>
+        <a class="btn btn-primary btn-block" href="{{ route('createChangelog') }}"><i class="far fa-fw fa-plus"></i> Add changelog</a>
         <div class="list-group list-group-platforms mt-3">
             <a href="{{ route('showChangelogs') }}" class="list-group-item {{ $platform == null ? 'active' : ''}}">All</a>
             <a href="{{ route('showChangelogs', ['platform' => 0]) }}" class="list-group-item {{ $platform == '0' ? 'active' : ''}}">Generic</a>

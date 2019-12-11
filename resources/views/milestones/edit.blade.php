@@ -135,7 +135,7 @@
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="sdk" name="sdk" {{ $milestone->sdk == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="sdk"><span class="label targeted">Public</span></label></label></div>
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-save"></i> Save</button>
+        <button type="submit" class="btn btn-primary btn-block mt-3"><i class="far fa-fw fa-save"></i> Save</button>
     </div>
 </form>
 @endsection

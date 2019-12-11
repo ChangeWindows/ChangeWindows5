@@ -28,7 +28,7 @@
                 @foreach ($platinum as $patron)
                     <div class="col-3">
                         <div class="patron">
-                            <i class="fad fa-fw fa-user-circle"></i>
+                            <i class="far fa-fw fa-user-circle"></i>
                             <div class="name">{{ $patron->name }}</div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                 @foreach ($gold as $patron)
                     <div class="col-3">
                         <div class="patron">
-                            <i class="fad fa-fw fa-user-circle"></i>
+                            <i class="far fa-fw fa-user-circle"></i>
                             <div class="name">{{ $patron->name }}</div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@
 @endphp
 
 @section('toolset')
-<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fad fa-fw fa-plus"></i> New flight</a>
+<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="far fa-fw fa-plus"></i> New flight</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -72,7 +72,7 @@
                 </div>
                 @auth
                     @if (Auth::user()->hasAnyRole(['Admin']))
-                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fad text-primary fa-fw fa-plus"></i> Flight</span></a>
+                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="far text-primary fa-fw fa-plus"></i> Flight</span></a>
                     @endif
                 @endauth
             </div>
@@ -198,7 +198,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title">New build</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
+                            <span aria-hidden="true"><i class="far fa-fw fa-times"></i></span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -273,7 +273,7 @@
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Public</span></label></label></div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>
+                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="far fa-fw fa-plus"></i> Add</button>
                             </div>
                         </form>
                     </div>

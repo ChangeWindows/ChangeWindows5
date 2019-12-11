@@ -42,7 +42,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">
-                    <i class="fad fa-fw fa-sign-in"></i> Login
+                    <i class="far fa-fw fa-sign-in"></i> Login
                 </button>
                 <a class="btn btn-light" href="{{ route('register') }}">
                     Register

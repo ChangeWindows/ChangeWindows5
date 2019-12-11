@@ -2,11 +2,11 @@
 @section('title') {{ $milestone->codename }} &middot; Milestone @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="fad fa-fw fa-pencil"></i> Edit milestone</a>
+<a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="far fa-fw fa-pencil"></i> Edit milestone</a>
 <form method="POST" action="{{ route('destroyMilestone', ['id' => $milestone->id]) }}">
     {{ method_field('DELETE') }}
     {{ csrf_field() }}
-    <button type="submit" class="dropdown-item"><i class="fad fa-fw fa-trash-alt"></i> Delete milestone</button>
+    <button type="submit" class="dropdown-item"><i class="far fa-fw fa-trash-alt"></i> Delete milestone</button>
 </form>
 <div class="dropdown-divider"></div>
 @endsection
@@ -37,7 +37,7 @@
     <div class="col-12 col-sm-6 previous-milestone">
         @if ($previous)
             <a href="{{ route('showMilestone', ['id' => $previous->id]) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
-                <i class="fad fa-fw fa-angle-double-left"></i>
+                <i class="far fa-fw fa-angle-double-left"></i>
                 <i class="fab fa-fw fa-windows"></i>
                 <span class="font-weight-bold">{{ $previous->osname }}</span>
                 <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $previous->version }}
@@ -49,9 +49,9 @@
             <a href="{{ route('showMilestone', ['id' => $next->id]) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
                 <i class="fab fa-fw fa-windows"></i>
                 <span class="font-weight-bold">{{ $next->osname }}</span>
-                <i class="fad fa-fw fa-angle-double-right d-none d-sm-inline d-lg-none"></i>
+                <i class="far fa-fw fa-angle-double-right d-none d-sm-inline d-lg-none"></i>
                 <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $next->version }}
-                <i class="fad fa-fw fa-angle-double-right d-inline d-sm-none d-lg-inline"></i>
+                <i class="far fa-fw fa-angle-double-right d-inline d-sm-none d-lg-inline"></i>
             </a>
         @endif
     </div>
@@ -124,7 +124,7 @@
                     <a class="row" href="{{ route('platformMilestone', ['id' => $milestone->id, 'platform' => getPlatformClass($platform->platform)]) }}">
                         <div class="col">{!! getPlatformIcon($platform->platform) !!}</div>
                         <div class="col text-right">
-                            See all <i class="fad fa-fw fa-angle-double-right"></i>
+                            See all <i class="far fa-fw fa-angle-double-right"></i>
                         </div>
                     </a>
                 </div>

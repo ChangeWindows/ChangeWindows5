@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block"><i class="fad fa-fw fa-check"></i> Save</button>
+                <button type="submit" class="btn btn-primary btn-block"><i class="far fa-fw fa-check"></i> Save</button>
             </div>
         </div>
     </div>

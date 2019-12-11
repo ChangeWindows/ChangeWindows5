@@ -18,30 +18,30 @@ function getPlatformById($id) {
 
 function getPlatformIcon($id) {
     switch ($id) {
-        case 1:     return '<i class="fad fa-fw fa-lg fa-desktop pc"></i>';
-        case 2:     return '<i class="fad fa-fw fa-lg fa-mobile mobile"></i>';
-        case 3:     return '<i class="fad fa-fw fa-lg fa-gamepad-alt fa-swap-opacity xbox"></i>';
-        case 4:     return '<i class="fad fa-fw fa-lg fa-server server"></i>';
-        case 5:     return '<i class="fad fa-fw fa-lg fa-head-vr holographic"></i>';
-        case 6:     return '<i class="fad fa-fw fa-lg fa-microchip iot"></i>';
-        case 7:     return '<i class="fad fa-fw fa-lg fa-tv-alt team"></i>';
-        case 8:     return '<i class="fad fa-fw fa-lg fa-compact-disc fa-swap-opacity iso"></i>';
-        case 9:     return '<i class="fad fa-fw fa-lg fa-code sdk"></i>';
+        case 1:     return '<i class="far fa-fw fa-lg fa-desktop pc"></i>';
+        case 2:     return '<i class="far fa-fw fa-lg fa-mobile mobile"></i>';
+        case 3:     return '<i class="far fa-fw fa-lg fa-gamepad-alt xbox"></i>';
+        case 4:     return '<i class="far fa-fw fa-lg fa-server server"></i>';
+        case 5:     return '<i class="far fa-fw fa-lg fa-head-vr holographic"></i>';
+        case 6:     return '<i class="far fa-fw fa-lg fa-microchip iot"></i>';
+        case 7:     return '<i class="far fa-fw fa-lg fa-tv-alt team"></i>';
+        case 8:     return '<i class="far fa-fw fa-lg fa-compact-disc iso"></i>';
+        case 9:     return '<i class="far fa-fw fa-lg fa-code sdk"></i>';
         default:    return '<i class="fab fa-fw fa-lg fa-windows generic"></i>';
     }
 }
 
 function getPlatformIconNoStyle($id) {
     switch ($id) {
-        case 1:     return '<i class="fad fa-fw fa-desktop"></i>';
-        case 2:     return '<i class="fad fa-fw fa-mobile"></i>';
-        case 3:     return '<i class="fad fa-fw fa-gamepad-alt fa-swap-opacity"></i>';
-        case 4:     return '<i class="fad fa-fw fa-server"></i>';
-        case 5:     return '<i class="fad fa-fw fa-head-vr"></i>';
-        case 6:     return '<i class="fad fa-fw fa-microchip"></i>';
-        case 7:     return '<i class="fad fa-fw fa-tv-alt"></i>';
-        case 8:     return '<i class="fad fa-fw fa-compact-disc fa-swap-opacity"></i>';
-        case 9:     return '<i class="fad fa-fw fa-code"></i>';
+        case 1:     return '<i class="far fa-fw fa-desktop"></i>';
+        case 2:     return '<i class="far fa-fw fa-mobile"></i>';
+        case 3:     return '<i class="far fa-fw fa-gamepad-alt"></i>';
+        case 4:     return '<i class="far fa-fw fa-server"></i>';
+        case 5:     return '<i class="far fa-fw fa-head-vr"></i>';
+        case 6:     return '<i class="far fa-fw fa-microchip"></i>';
+        case 7:     return '<i class="far fa-fw fa-tv-alt"></i>';
+        case 8:     return '<i class="far fa-fw fa-compact-disc"></i>';
+        case 9:     return '<i class="far fa-fw fa-code"></i>';
         default:    return '<i class="fab fa-fw fa-windows"></i>';
     }
 }

@@ -44,7 +44,7 @@
             </div>
             <div class="spacing-20"></div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary"><i class="fad fa-fw fa-save"></i> Save</button>
+                <button type="submit" class="btn btn-primary"><i class="far fa-fw fa-save"></i> Save</button>
             </div>
         </form>
         @if (Auth::user()->hasAnyRole(['Admin', 'Insider']))
