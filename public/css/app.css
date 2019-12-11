@@ -10394,8 +10394,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .btn.btn-vnext:hover, .light .btn.btn-vnext:hover, .white .btn.btn-vnext:hover {
-  -webkit-transform: translate(0, -1px);
-          transform: translate(0, -1px);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -10955,8 +10953,6 @@ h1 {
 }
 
 .tile:hover, .light .tile:hover, .white .tile:hover {
-  -webkit-transform: translate(0, -1px);
-          transform: translate(0, -1px);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
   text-decoration: none;
@@ -11416,8 +11412,6 @@ h1 {
 .milestone:hover {
   color: #fff;
   text-decoration: none;
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
 }
 
 .milestone h3 {
@@ -11443,8 +11437,6 @@ h1 {
 .milestone-navigation:hover {
   color: #fff;
   text-decoration: none;
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
 }
 
 @media (max-width: 575px) {
@@ -11487,8 +11479,6 @@ h1 {
 
 .buildfeed .bf:hover {
   text-decoration: none;
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
 }
 
 .buildfeed .bf .bf-header {
@@ -13176,8 +13166,6 @@ span.CodeMirror-selectedtext {
 }
 
 .hero:hover {
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
   box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.3);
 }
 

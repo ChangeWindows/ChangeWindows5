@@ -60,7 +60,6 @@
     }
 
     &:hover {
-        transform: translate(0, -3px);
         box-shadow: 0 8px 18px 0 rgba(0,0,0,.3);
     }
 
@@ -108,7 +107,7 @@
 .row {
     margin-right: -5px;
     margin-left: -5px;
-  
+
     > .col,
     > [class*="col-"] {
       padding-right: 5px;
