@@ -97,13 +97,7 @@ $themes: (
 
         .navbar {
             &.bg-cw {
-                @supports ((backdrop-filter: blur(30px))) {
-                    background-color: map-get($color, transparency) !important;
-                }
-
-                @supports not ((backdrop-filter: blur(30px))) {
-                    background-color: map-get($color, background-header) !important;
-                }
+                background-color: map-get($color, background-header) !important;
             }
 
             .navbar-brand {
@@ -133,14 +127,7 @@ $themes: (
 
         .dropdown-menu {
             box-shadow: 0 0 24px 0 map-get($color, shadow);
-
-            @supports ((backdrop-filter: blur(30px))) {
-                background-color: map-get($color, transparency);
-            }
-
-            @supports not ((backdrop-filter: blur(30px))) {
-                background-color: map-get($color, background-header);
-            }
+            background-color: map-get($color, background-header);
 
             .dropdown-divider {
                 border-top-color: map-get($color, highlight-color);
@@ -300,13 +287,7 @@ $themes: (
                 box-shadow: 0 0 24px 0 map-get($color, shadow);
 
                 .modal-header {
-                    @supports ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, transparency);
-                    }
-
-                    @supports not ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, background-header);
-                    }
+                    background: map-get($color, background-header);
 
                     .close {
                         color: map-get($color, text) !important;
@@ -314,13 +295,7 @@ $themes: (
                 }
 
                 .modal-body {
-                    @supports ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, transparency-content);
-                    }
-
-                    @supports not ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, background-content);
-                    }
+                    background: map-get($color, background-content);
                 }
             }
         }

@@ -4,7 +4,6 @@
     padding: 5px 0;
     margin-top: 0;
     font-size: 15px;
-    backdrop-filter: blur(30px);
 
     .dropdown-divider {
         margin: 5px 24px;
@@ -25,7 +24,7 @@
         max-width: 250px;
         text-overflow: ellipsis;
         overflow-x: hidden;
-        white-space: nowrap; 
+        white-space: nowrap;
         max-height: 400px;
         overflow-y: auto;
     }

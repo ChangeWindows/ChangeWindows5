@@ -5,10 +5,6 @@
         padding: 0;
     }
 
-    &.bg-cw {
-        backdrop-filter: blur(30px);
-    }
-    
     .nav-item {
         padding: 6px 0;
         margin-right: 20px;
@@ -29,7 +25,7 @@
         &.nav-login {
             margin-right: 0;
         }
-    
+
         .nav-link {
             padding: 3px 0 !important;
             opacity: .6;
@@ -44,16 +40,16 @@
 
     .navbar-brand {
         padding: 6px 0 12px !important;
-        
+
         &:hover {
             opacity: .8;
         }
-        
+
         &.active {
             background: transparent;
             opacity: 1;
         }
-        
+
         img {
             max-height: 26px;
             width: auto;

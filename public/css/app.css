@@ -10469,11 +10469,6 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.navbar.bg-cw {
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
-}
-
 .navbar .nav-item {
   padding: 6px 0;
   margin-right: 20px;
@@ -10663,8 +10658,6 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 2px;
   border: none;
   background-color: transparent;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
 }
 
 .modal .modal-content .modal-header {
@@ -10734,8 +10727,6 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 5px 0;
   margin-top: 0;
   font-size: 15px;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
 }
 
 .dropdown-menu .dropdown-divider {
@@ -12276,16 +12267,8 @@ span.CodeMirror-selectedtext {
   background-color: #eaeaea;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .navbar.bg-cw {
-    background-color: rgba(234, 234, 234, 0.8) !important;
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .navbar.bg-cw {
-    background-color: #eaeaea !important;
-  }
+.white .navbar.bg-cw {
+  background-color: #eaeaea !important;
 }
 
 .white .navbar .navbar-brand {
@@ -12310,18 +12293,7 @@ span.CodeMirror-selectedtext {
 
 .white .dropdown-menu {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
-}
-
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .dropdown-menu {
-    background-color: rgba(234, 234, 234, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .dropdown-menu {
-    background-color: #eaeaea;
-  }
+  background-color: #eaeaea;
 }
 
 .white .dropdown-menu .dropdown-divider {
@@ -12438,32 +12410,16 @@ span.CodeMirror-selectedtext {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .modal .modal-content .modal-header {
-    background: rgba(234, 234, 234, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .modal .modal-content .modal-header {
-    background: #eaeaea;
-  }
+.white .modal .modal-content .modal-header {
+  background: #eaeaea;
 }
 
 .white .modal .modal-content .modal-header .close {
   color: #222 !important;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .modal .modal-content .modal-body {
-    background: rgba(255, 255, 255, 0.9);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .white .modal .modal-content .modal-body {
-    background: #fff;
-  }
+.white .modal .modal-content .modal-body {
+  background: #fff;
 }
 
 .white .lifecycle-stats h5 {
@@ -12539,16 +12495,8 @@ span.CodeMirror-selectedtext {
   background-color: #d2d2d2;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .navbar.bg-cw {
-    background-color: rgba(210, 210, 210, 0.8) !important;
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .navbar.bg-cw {
-    background-color: #d2d2d2 !important;
-  }
+.light .navbar.bg-cw {
+  background-color: #d2d2d2 !important;
 }
 
 .light .navbar .navbar-brand {
@@ -12573,18 +12521,7 @@ span.CodeMirror-selectedtext {
 
 .light .dropdown-menu {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
-}
-
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .dropdown-menu {
-    background-color: rgba(210, 210, 210, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .dropdown-menu {
-    background-color: #d2d2d2;
-  }
+  background-color: #d2d2d2;
 }
 
 .light .dropdown-menu .dropdown-divider {
@@ -12701,32 +12638,16 @@ span.CodeMirror-selectedtext {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .modal .modal-content .modal-header {
-    background: rgba(210, 210, 210, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .modal .modal-content .modal-header {
-    background: #d2d2d2;
-  }
+.light .modal .modal-content .modal-header {
+  background: #d2d2d2;
 }
 
 .light .modal .modal-content .modal-header .close {
   color: #000 !important;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .modal .modal-content .modal-body {
-    background: rgba(255, 255, 255, 0.9);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .light .modal .modal-content .modal-body {
-    background: #e6e6e6;
-  }
+.light .modal .modal-content .modal-body {
+  background: #e6e6e6;
 }
 
 .light .lifecycle-stats h5 {
@@ -12802,16 +12723,8 @@ span.CodeMirror-selectedtext {
   background-color: #1d1d1d;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .navbar.bg-cw {
-    background-color: rgba(29, 29, 29, 0.8) !important;
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .navbar.bg-cw {
-    background-color: #1d1d1d !important;
-  }
+.dark .navbar.bg-cw {
+  background-color: #1d1d1d !important;
 }
 
 .dark .navbar .navbar-brand {
@@ -12836,18 +12749,7 @@ span.CodeMirror-selectedtext {
 
 .dark .dropdown-menu {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
-}
-
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .dropdown-menu {
-    background-color: rgba(29, 29, 29, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .dropdown-menu {
-    background-color: #1d1d1d;
-  }
+  background-color: #1d1d1d;
 }
 
 .dark .dropdown-menu .dropdown-divider {
@@ -12964,32 +12866,16 @@ span.CodeMirror-selectedtext {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .modal .modal-content .modal-header {
-    background: rgba(29, 29, 29, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .modal .modal-content .modal-header {
-    background: #1d1d1d;
-  }
+.dark .modal .modal-content .modal-header {
+  background: #1d1d1d;
 }
 
 .dark .modal .modal-content .modal-header .close {
   color: #fff !important;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .modal .modal-content .modal-body {
-    background: rgba(24, 24, 24, 0.9);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .dark .modal .modal-content .modal-body {
-    background: #292929;
-  }
+.dark .modal .modal-content .modal-body {
+  background: #292929;
 }
 
 .dark .lifecycle-stats h5 {
@@ -13065,16 +12951,8 @@ span.CodeMirror-selectedtext {
   background-color: #151515;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .navbar.bg-cw {
-    background-color: rgba(21, 21, 21, 0.8) !important;
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .navbar.bg-cw {
-    background-color: #151515 !important;
-  }
+.black .navbar.bg-cw {
+  background-color: #151515 !important;
 }
 
 .black .navbar .navbar-brand {
@@ -13099,18 +12977,7 @@ span.CodeMirror-selectedtext {
 
 .black .dropdown-menu {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
-}
-
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .dropdown-menu {
-    background-color: rgba(21, 21, 21, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .dropdown-menu {
-    background-color: #151515;
-  }
+  background-color: #151515;
 }
 
 .black .dropdown-menu .dropdown-divider {
@@ -13227,32 +13094,16 @@ span.CodeMirror-selectedtext {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .modal .modal-content .modal-header {
-    background: rgba(21, 21, 21, 0.8);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .modal .modal-content .modal-header {
-    background: #151515;
-  }
+.black .modal .modal-content .modal-header {
+  background: #151515;
 }
 
 .black .modal .modal-content .modal-header .close {
   color: #fff !important;
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .modal .modal-content .modal-body {
-    background: rgba(24, 24, 24, 0.9);
-  }
-}
-
-@supports not ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
-  .black .modal .modal-content .modal-body {
-    background: #000;
-  }
+.black .modal .modal-content .modal-body {
+  background: #000;
 }
 
 .black .lifecycle-stats h5 {
