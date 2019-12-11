@@ -7,13 +7,15 @@
     <h3>5.1-alpha.1 <small>10 December 2019</small></h3>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
     <p>Replaces the platform icons with Font Awesome icons</p>
-    <p>The Timeline sidebar and Rings page now use the platform-specific icons</p>
+    <p>The Timeline sidebar and Rings page now use the platform-specific icons and colors</p>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
     <p>Switched out the Font Awesome Duotone icons for the Regular icons</p>
     <h4><i class="far fa-fw fa-server"></i> System</h4>
     <p>Update to Font Awesome 5.12</p>
     <h4><i class="far fa-fw fa-trash-alt"></i> Removed</h4>
     <p>Milestones will no longer show a description</p>
+    <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>The inconsistent font weight between Timeline and Rings has been fixed</p>
 </section>
 <section class="release-notes">
     <h3>5.0.9 <small>10 December 2019</small></h3>
