@@ -3,12 +3,11 @@
     font-weight: 600;
     padding: 1px 0 2px 0 !important;
     margin-right: 10px !important;
-    text-transform: uppercase;
 
     &.vnext, &.leak {
         color: $leak;
     }
-    
+
     &.skip {
         color: $skip;
     }
