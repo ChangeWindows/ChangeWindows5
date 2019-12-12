@@ -4,7 +4,7 @@
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2>Rings</h2>
+        <h2 class="mb-2">Rings</h2>
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link {{ Request::is('rings') ? 'active' : '' }}" href="{{ route('rings') }}">Overview</a>

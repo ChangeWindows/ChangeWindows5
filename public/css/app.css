@@ -10185,7 +10185,6 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 600;
   padding: 1px 0 2px 0 !important;
   margin-right: 10px !important;
-  text-transform: uppercase;
 }
 
 .label.vnext, .label.leak {
@@ -10254,37 +10253,42 @@ a.text-dark:hover, a.text-dark:focus {
 
 .nav .nav-link {
   border: none;
-  border-bottom: 2px solid transparent;
-  padding: 6px 0;
-  margin: 0 10px 4px;
+  padding: 7px 12px;
+  margin: 0;
   opacity: .8;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-}
-
-.nav .nav-link:first-child {
-  margin-left: 0;
-}
-
-.nav .nav-link:last-child {
-  margin-right: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: inline-block;
 }
 
 .nav .nav-link.active {
-  border-bottom-color: #ff9c00;
-  box-shadow: 0 5px 8px -7px #ff9c00;
-  background: transparent;
-  opacity: 1;
+  position: relative;
+}
+
+.nav .nav-link.active::after {
+  background-color: #ff9c00;
+  width: calc(100% - (12px * 2));
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  content: "";
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.nav .nav-link.active:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .nav .nav-link:hover {
   opacity: 1;
+  background: rgba(170, 170, 170, 0.2);
 }
 
 .nav-scroll {
   position: relative;
-  z-index: 2;
-  height: 53px;
   overflow-y: hidden;
 }
 
@@ -10292,8 +10296,6 @@ a.text-dark:hover, a.text-dark:focus {
   display: -webkit-box;
   display: flex;
   flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
   overflow-x: auto;
   text-align: center;
   white-space: nowrap;
@@ -10476,7 +10478,6 @@ a.text-dark:hover, a.text-dark:focus {
   background: transparent;
   opacity: 1;
   border-bottom-color: #ff9c00;
-  box-shadow: 0 5px 8px -7px #ff9c00;
 }
 
 .navbar .nav-item.active .nav-link:hover {
@@ -10545,7 +10546,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .jumbotron.highlights.tabs {
-  padding-bottom: 10px;
+  padding-bottom: 0;
 }
 
 .jumbotron.highlights.tabs .nav {
@@ -10553,7 +10554,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .jumbotron.tabs {
-  padding-bottom: 4px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .jumbotron h1 {
