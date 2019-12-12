@@ -93,6 +93,7 @@
                                                 <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
                                             @endforeach
                                         </div>
+                                        <a class="dot" style="background-color: #{{ $ring->color }}" data-toggle="tooltip" data-placement="left" title="Version {{ $ring->version }}"></a>
                                     </a>
                                 </div>
                             @endforeach

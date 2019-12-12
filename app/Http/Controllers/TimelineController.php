@@ -14,11 +14,13 @@ class TimelineController extends Controller
         $ring_id = getRingIdByClass($request->ring);
         $timeline = [];
 
-        $releases = Release::when(request('ring', false), function ($query, $ring_id) {
+        $releases = Release::select('releases.*', 'milestones.color', 'milestones.version')
+                            ->when(request('ring', false), function ($query, $ring_id) {
                                 return $query->where('ring', getRingIdByClass($ring_id));
                             })->when(request('platform', false), function ($query, $platform_id) {
                                 return $query->where('platform', getPlatformIdByClass($platform_id));
-                            })->orderBy('date', 'desc')
+                            })->join('milestones', 'milestones.id', '=', 'releases.milestone')
+                            ->orderBy('date', 'desc')
                             ->orderBy('build', 'desc')
                             ->orderBy('platform', 'asc')
                             ->orderBy('delta', 'desc')

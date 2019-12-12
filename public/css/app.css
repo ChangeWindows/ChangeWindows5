@@ -10909,9 +10909,9 @@ h1 {
 .timeline .timeline-row {
   padding-left: 5px;
   padding-right: 5px;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-  z-index: 9700;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  position: relative;
 }
 
 .timeline .timeline-row .row {
@@ -10939,6 +10939,16 @@ h1 {
 
 .timeline .timeline-row .row .ring .label {
   margin-right: 3px;
+}
+
+.timeline .timeline-row .dot {
+  width: 8px;
+  height: 8px;
+  background: #ff9c00;
+  position: absolute;
+  top: calc(50% - 4px);
+  right: 15px;
+  border-radius: 8px;
 }
 
 .tile, .light .tile, .white .tile {

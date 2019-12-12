@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/js/regular.min.js": "/js/regular.min.js",
     "/js/brands.min.js": "/js/brands.min.js",
-    "/js/fontawesome.min.js": "/js/fontawesome.min.js"
+    "/js/fontawesome.min.js": "/js/fontawesome.min.js",
+    "/js/jquery.min.js": "/js/jquery.min.js"
 }

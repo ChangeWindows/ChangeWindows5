@@ -4,7 +4,12 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.1-alpha.1 <small>10 December 2019</small></h3>
+    <h3>5.1-alpha.2 <small>December 2019</small></h3>
+    <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>Timeline now shows a hover-able dot that indicates the milestone the build is part of, hovering will show the version</p>
+</section>
+<section class="release-notes">
+    <h3>5.1-alpha.1 <small>11 December 2019</small></h3>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
     <p>Replaces the platform icons with Font Awesome icons</p>
     <p>The Timeline sidebar and Rings page now use the platform-specific icons and colors</p>
