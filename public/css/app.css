@@ -10248,7 +10248,8 @@ a.text-dark:hover, a.text-dark:focus {
 .nav {
   display: -webkit-box;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  margin-top: 0 !important;
 }
 
 .nav .nav-link {
@@ -10271,7 +10272,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 2px;
   position: absolute;
   bottom: 0;
-  left: 14px;
+  left: 12px;
   content: "";
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -10285,20 +10286,6 @@ a.text-dark:hover, a.text-dark:focus {
 .nav .nav-link:hover {
   opacity: 1;
   background: rgba(170, 170, 170, 0.2);
-}
-
-.nav-scroll {
-  position: relative;
-  overflow-y: hidden;
-}
-
-.nav-scroll nav {
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .list-group.list-group-changelogs .list-group-item {
@@ -10864,6 +10851,17 @@ h1 {
 
 .ring-milestones a.h3:hover {
   text-decoration: none;
+}
+
+.changelog-content h2 {
+  font-size: 1.75rem;
+  padding-bottom: .25rem;
+  margin-bottom: 1rem;
+}
+
+.changelog-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -12294,7 +12292,7 @@ span.CodeMirror-selectedtext {
 }
 
 .white .dropdown-menu {
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
   background-color: #eaeaea;
 }
 
@@ -12471,6 +12469,10 @@ span.CodeMirror-selectedtext {
   border-color: #ddd;
 }
 
+.white .changelog-content h2 {
+  border-bottom: 1px solid #ddd;
+}
+
 .light {
   background: #e6e6e6;
   color: #000;
@@ -12522,7 +12524,7 @@ span.CodeMirror-selectedtext {
 }
 
 .light .dropdown-menu {
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
   background-color: #d2d2d2;
 }
 
@@ -12699,6 +12701,10 @@ span.CodeMirror-selectedtext {
   border-color: #ccc;
 }
 
+.light .changelog-content h2 {
+  border-bottom: 1px solid #ccc;
+}
+
 .dark {
   background: #292929;
   color: #fff;
@@ -12750,7 +12756,7 @@ span.CodeMirror-selectedtext {
 }
 
 .dark .dropdown-menu {
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
   background-color: #1d1d1d;
 }
 
@@ -12927,6 +12933,10 @@ span.CodeMirror-selectedtext {
   border-color: #363636;
 }
 
+.dark .changelog-content h2 {
+  border-bottom: 1px solid #363636;
+}
+
 .black {
   background: #000;
   color: #fff;
@@ -12978,7 +12988,7 @@ span.CodeMirror-selectedtext {
 }
 
 .black .dropdown-menu {
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
   background-color: #151515;
 }
 
@@ -13153,6 +13163,10 @@ span.CodeMirror-selectedtext {
 
 .black hr {
   border-color: #222;
+}
+
+.black .changelog-content h2 {
+  border-bottom: 1px solid #222;
 }
 
 .hero {

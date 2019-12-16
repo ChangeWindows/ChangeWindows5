@@ -126,7 +126,7 @@ $themes: (
         }
 
         .dropdown-menu {
-            box-shadow: 0 0 24px 0 map-get($color, shadow);
+            box-shadow: 0 0 15px 0 map-get($color, shadow);
             background-color: map-get($color, background-header);
 
             .dropdown-divider {
@@ -349,6 +349,12 @@ $themes: (
 
         hr {
             border-color: map-get($color, border);
+        }
+
+        .changelog-content {
+            h2 {
+                border-bottom: 1px solid map-get($color, border);
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 .nav {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    margin-top: 0 !important;
 
     .nav-link {
         border: none;
@@ -19,7 +20,7 @@
                 height: 2px;
                 position: absolute;
                 bottom: 0;
-                left: 14px;
+                left: 12px;
                 content: "";
                 transition: all .2s ease-in-out;
             }
@@ -36,18 +37,5 @@
             opacity: 1;
             background: rgba(170,170,170,.2);
         }
-    }
-}
-
-.nav-scroll {
-    position: relative;
-    overflow-y: hidden;
-
-    nav {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
     }
 }

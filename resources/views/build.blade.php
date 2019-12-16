@@ -49,7 +49,9 @@
                             This is a draft and will be updated regularly over the next couple of hours.
                         </div>
                     @endif
-                    {!! $parsedown->text($info['changelog']) !!}
+                    <div class="changelog-content">
+                        {!! $parsedown->text($info['changelog']) !!}
+                    </div>
                 @else
                     @if (Auth::user() && Auth::user()->hasAnyRole(['Admin']))
                         <h4>No changelog yet, create one...</h4>
