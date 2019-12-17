@@ -11087,21 +11087,50 @@ h1 {
 .pagination .page-item .page-link {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid transparent;
   border-radius: 0;
   text-align: center;
   color: #fff;
+  margin: 0;
+  padding: 7px 12px;
+}
+
+.pagination .page-item .page-link:focus {
+  box-shadow: none;
+}
+
+.pagination .page-item:not(.disabled).active {
+  position: relative;
+}
+
+.pagination .page-item:not(.disabled).active::after {
+  background-color: #ff9c00;
+  width: calc(100% - (12px * 2));
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  content: "";
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.pagination .page-item:not(.disabled).active:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .pagination .page-item:not(.disabled).active .page-link, .pagination .page-item:not(.disabled):hover .page-link {
   background-color: transparent;
-  border-bottom: 2px solid #ff9c00;
-  box-shadow: 0 5px 8px -7px #ff9c00;
   color: #fff;
 }
 
 .pagination .page-item.disabled .page-link {
   color: #666;
+}
+
+.pagination .page-item:hover {
+  opacity: 1;
+  background: rgba(170, 170, 170, 0.2);
 }
 
 .changelog a + h3 {
