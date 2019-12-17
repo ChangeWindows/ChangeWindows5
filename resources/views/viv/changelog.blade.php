@@ -11,7 +11,10 @@
     <p>Improvements to the changelog design to make the heading structure better to understand</p>
     <p>Revamped tab-design with some Fluent inspiration</p>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>Revamped footer design</p>
     <p>Moves the Mobile-platform in an overflow menu for the Timeline tabs</p>
+    <h4><i class="far fa-fw fa-server"></i> System</h4>
+    <p>Update to Laravel 6.8</p>
 </section>
 <section class="release-notes">
     <h3>5.1-alpha.1 <small>11 December 2019</small></h3>

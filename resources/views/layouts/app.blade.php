@@ -57,7 +57,7 @@
             }
         </script>
     </head>
-    <body class="{{ $theme }}">
+    <body class="{{ $theme }} d-flex flex-column">
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('timeline') }}">
@@ -125,15 +125,29 @@
             </div>
         </nav>
         <div class="navbg"></div>
-        @yield('hero')
-        <div class="container" id="app">
-            <main class="content">
-                @yield('content')
-            </main>
+        <div class="flex-fill flex-grow-1">
+            @yield('hero')
+            <div class="container" id="app">
+                <main class="content">
+                    @yield('content')
+                </main>
+            </div>
         </div>
-        <footer class="text-center">
-            <hr />
-            <span class="font-bold">ChangeWindows</span> {{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">Studio384</a>
+        <footer class="bg-light">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <span class="h4 mb-2"><span class="font-weight-bold">ChangeWindows</span></span>
+                        <p class="mb-0">{{ config('app.viv') }} &middot; 2014-2019 &copy; <a href="https://studio384.be">.384</a></p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="https://studio384.be" class="h4 f-gilroy font-weight-bold">.<span class="luna">384</span></a>
+                    </div>
+                    <div class="col-12 text-right">
+                        <span class="m-0"><a href="https://github.com/changewindows"><i class="fab fa-fw fa-twitter"></i></a> <a href="https://twitter.com/changewindows"><i class="fab fa-fw fa-github"></i></a></span>
+                    </div>
+                </div>
+            </div>
         </footer>
         @yield('modals')
 		<!-- Matomo -->
