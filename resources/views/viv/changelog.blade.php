@@ -4,10 +4,11 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.1-alpha.2 <small>December 2019</small></h3>
+    <h3>5.1-alpha.2 <small>17 December 2019</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Timeline now shows a hover-able dot that indicates the milestone the build is part of, hovering will show the version</p>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
+    <p>Improved spacing on the Milestones page to show more content</p>
     <p>Improvements to the changelog design to make the heading structure better to understand</p>
     <p>Revamped tab- and pagination-design with some Fluent inspiration</p>
     <p>Revamped the Milestone delete process to be less easy to click <span class="badge badge-warning">Admin</span></p>
