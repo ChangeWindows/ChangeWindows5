@@ -10,7 +10,7 @@
 <div class="jumbotron tabs build-header">
     <div class="container">
         <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
-        <h6>{{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
+        <h6 class="mb-2">{{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link active" href="{{ route('showMilestone', ['id' => $milestone->id]) }}">
@@ -98,8 +98,8 @@
     <div class="spacing-40"></div>
     @foreach ($platforms as $platform)
         <div class="col-xl-4 col-lg-6 col-12 platform-card">
-            <h4>{{ getPlatformById($platform->platform) }}</h4>
-            <h6>{{ $platform->count }} builds</h6>
+            <h4 class="font-weight-bold mb-1">{{ getPlatformById($platform->platform) }} <small class="font-weight-bold text-muted h6">{{ $platform->count }} builds</small></h4>
+
 
             <div class="timeline">
                 @foreach ($platform->builds as $build)
