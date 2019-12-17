@@ -9,7 +9,8 @@
     <p>Timeline now shows a hover-able dot that indicates the milestone the build is part of, hovering will show the version</p>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
     <p>Improvements to the changelog design to make the heading structure better to understand</p>
-    <p>Revamped tab-design with some Fluent inspiration</p>
+    <p>Revamped tab- and pagination-design with some Fluent inspiration</p>
+    <p>Revamped the Milestone delete process to be less easy to click <span class="badge badge-warning">Admin</span></p>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
     <p>Revamped footer design</p>
     <p>Moves the Mobile-platform in an overflow menu for the Timeline tabs</p>

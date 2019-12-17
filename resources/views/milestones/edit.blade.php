@@ -138,4 +138,13 @@
         <button type="submit" class="btn btn-primary btn-block mt-3"><i class="far fa-fw fa-save"></i> Save</button>
     </div>
 </form>
+
+<form method="POST" class="mt-4" action="{{ route('destroyMilestone', ['id' => $milestone->id]) }}">
+    <h2 class="text-danger">Danger zone</h2>
+    <p>Deleting a milestone cannot be undone. Clicking the button is a direct action.</p>
+
+    {{ method_field('DELETE') }}
+    {{ csrf_field() }}
+    <button type="submit" class="btn btn-danger"><i class="far fa-fw fa-trash-alt"></i> Delete milestone</button>
+</form>
 @endsection
