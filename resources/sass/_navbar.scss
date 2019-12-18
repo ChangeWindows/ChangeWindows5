@@ -6,17 +6,32 @@
     }
 
     .nav-item {
-        padding: 6px 0;
-        margin-right: 20px;
+        padding: 0;
 
         &.active {
             .nav-link {
                 background: transparent;
                 opacity: 1;
-                border-bottom-color: $accent;
+                position: relative;
 
                 &:hover {
                     opacity: 1;
+
+                    &::after {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+
+                &::after {
+                    background-color: $accent;
+                    width: calc(100% - (12px * 2));
+                    height: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 12px;
+                    content: "";
+                    transition: all .2s ease-in-out;
                 }
             }
         }
@@ -26,32 +41,55 @@
         }
 
         .nav-link {
-            padding: 3px 0 !important;
-            opacity: .6;
+            padding: 17px 12px !important;
+            opacity: 1;
             transition: .1s ease-in-out;
-            border-bottom: 2px solid transparent;
+            line-height: 1;
 
             &:hover {
-                opacity: .8;
+                opacity: 1;
+                background: rgba(170,170,170,.2);
             }
         }
     }
 
     .navbar-brand {
-        padding: 6px 0 12px !important;
+        padding: 12px !important;
+        margin-right: 0;
+        font-size: 0 !important;
+        position: relative;
 
         &:hover {
-            opacity: .8;
+            background: rgba(170,170,170,.2);
         }
 
         &.active {
             background: transparent;
-            opacity: 1;
+
+            &:hover {
+                background: rgba(170,170,170,.2);
+
+                &::after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+
+            &::after {
+                background-color: $accent;
+                width: calc(100% - (12px * 2));
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 12px;
+                content: "";
+                transition: all .2s ease-in-out;
+            }
         }
 
         img {
-            max-height: 26px;
-            width: auto;
+            height: 26px;
+            width: 26px;
             margin: 0;
         }
 

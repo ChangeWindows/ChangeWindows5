@@ -10457,18 +10457,34 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar .nav-item {
-  padding: 6px 0;
-  margin-right: 20px;
+  padding: 0;
 }
 
 .navbar .nav-item.active .nav-link {
   background: transparent;
   opacity: 1;
-  border-bottom-color: #ff9c00;
+  position: relative;
 }
 
 .navbar .nav-item.active .nav-link:hover {
   opacity: 1;
+}
+
+.navbar .nav-item.active .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar .nav-item.active .nav-link::after {
+  background-color: #ff9c00;
+  width: calc(100% - (12px * 2));
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  content: "";
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .navbar .nav-item.nav-login {
@@ -10476,33 +10492,57 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar .nav-item .nav-link {
-  padding: 3px 0 !important;
-  opacity: .6;
+  padding: 17px 12px !important;
+  opacity: 1;
   -webkit-transition: .1s ease-in-out;
   transition: .1s ease-in-out;
-  border-bottom: 2px solid transparent;
+  line-height: 1;
 }
 
 .navbar .nav-item .nav-link:hover {
-  opacity: .8;
+  opacity: 1;
+  background: rgba(170, 170, 170, 0.2);
 }
 
 .navbar .navbar-brand {
-  padding: 6px 0 12px !important;
+  padding: 12px !important;
+  margin-right: 0;
+  font-size: 0 !important;
+  position: relative;
 }
 
 .navbar .navbar-brand:hover {
-  opacity: .8;
+  background: rgba(170, 170, 170, 0.2);
 }
 
 .navbar .navbar-brand.active {
   background: transparent;
-  opacity: 1;
+}
+
+.navbar .navbar-brand.active:hover {
+  background: rgba(170, 170, 170, 0.2);
+}
+
+.navbar .navbar-brand.active:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar .navbar-brand.active::after {
+  background-color: #ff9c00;
+  width: calc(100% - (12px * 2));
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  content: "";
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .navbar .navbar-brand img {
-  max-height: 26px;
-  width: auto;
+  height: 26px;
+  width: 26px;
   margin: 0;
 }
 
@@ -10528,7 +10568,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .jumbotron {
   border-radius: 0;
-  padding: 10px 20px 20px;
+  padding: 10px 20px;
   margin-bottom: 0;
 }
 

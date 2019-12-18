@@ -60,14 +60,11 @@
     <body class="{{ $theme }} d-flex flex-column">
         <nav class="navbar navbar-expand bg-cw fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('timeline') }}">
+                <a class="navbar-brand {{ Request::is('/') || Request::is('build/*') ? 'active' : '' }}" href="{{ route('timeline') }}">
                     <img src="{{ asset('img/logo.png') }}" />
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item {{ Request::is('/') || Request::is('build/*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('timeline') }}">Timeline</a>
-                        </li>
                         <li class="nav-item {{ Request::is('milestones*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('milestones') }}">Milestones</a>
                         </li>
