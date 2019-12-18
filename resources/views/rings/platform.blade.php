@@ -4,7 +4,7 @@
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2>Rings</h2>
+        <h2 class="mb-2">Rings</h2>
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link {{ Request::is('rings') ? 'active' : '' }}" href="{{ route('rings') }}">Overview</a>
@@ -14,7 +14,6 @@
                 <a class="nav-link {{ Request::is('rings/server') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'server']) }}">Server</a>
                 <a class="nav-link {{ Request::is('rings/holographic') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'holographic']) }}">Holographic</a>
                 <a class="nav-link {{ Request::is('rings/team') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'team']) }}">Team</a>
-                <a class="nav-link {{ Request::is('rings/mobile') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'mobile']) }}">Mobile</a>
             </nav>
         </div>
     </div>
