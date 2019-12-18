@@ -21,7 +21,7 @@
         position: relative;
 
         .row {
-            padding: 8px 5px;
+            padding: 7px 5px;
             font-size: 100%;
 
             &:hover {
@@ -32,10 +32,8 @@
                 text-decoration: none;
             }
 
-            .img-platform {
-                width: 24px;
-                height: 24px;
-                margin: -10px 10px -5px 0;
+            .platform-icon {
+                font-size: .9rem;
             }
 
             .ring {
