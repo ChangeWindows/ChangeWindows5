@@ -8,6 +8,7 @@ $themes: (
         background-content: #fff,
         background-content-2: #f8f8f8,
         background-content-hover: #f0f0f0,
+        light-border: #eee,
         border: #ddd,
         highlight-color: rgba(0,0,0,.1),
         transparency: rgba(234,234,234,.8),
@@ -24,6 +25,7 @@ $themes: (
         background-content: #e6e6e6,
         background-content-2: #ddd,
         background-content-hover: #d6d6d6,
+        light-border: #ddd,
         border: #ccc,
         highlight-color: rgba(0,0,0,.1),
         transparency: rgba(210,210,210,.8),
@@ -40,6 +42,7 @@ $themes: (
         background-content: #292929,
         background-content-2: #212121,
         background-content-hover: #2f2f2f,
+        light-border: #444,
         border: #363636,
         highlight-color: rgba(255,255,255,.1),
         transparency: rgba(29,29,29,.8),
@@ -56,6 +59,7 @@ $themes: (
         background-content: #000,
         background-content-2: #101010,
         background-content-hover: #1d1d1d,
+        light-border: #333,
         border: #222,
         highlight-color: rgba(255,255,255,.1),
         transparency: rgba(21,21,21,.8),
@@ -353,7 +357,7 @@ $themes: (
 
         .changelog-content {
             h2 {
-                border-bottom: 1px solid map-get($color, border);
+                border-bottom: 1px solid map-get($color, light-border);
             }
         }
     }

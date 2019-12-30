@@ -10638,7 +10638,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .jumbotron.build-header h6 {
-  margin-bottom: 20px;
   margin-left: 48px;
 }
 
@@ -12537,7 +12536,7 @@ span.CodeMirror-selectedtext {
 }
 
 .white .changelog-content h2 {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
 }
 
 .light {
@@ -12769,7 +12768,7 @@ span.CodeMirror-selectedtext {
 }
 
 .light .changelog-content h2 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
 }
 
 .dark {
@@ -13001,7 +13000,7 @@ span.CodeMirror-selectedtext {
 }
 
 .dark .changelog-content h2 {
-  border-bottom: 1px solid #363636;
+  border-bottom: 1px solid #444;
 }
 
 .black {
@@ -13233,7 +13232,7 @@ span.CodeMirror-selectedtext {
 }
 
 .black .changelog-content h2 {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #333;
 }
 
 body {

@@ -1,15 +1,10 @@
 @extends('layouts.app')
 @section('title') {{ $milestone->codename }} &middot; Milestone @endsection
 
-@section('toolset')
-<a class="dropdown-item" href="{{ route('editMilestone', ['id' => $milestone->id]) }}"><i class="far fa-fw fa-pencil"></i> Edit milestone</a>
-<div class="dropdown-divider"></div>
-@endsection
-
 @section('hero')
 <div class="jumbotron tabs build-header">
     <div class="container">
-        <h2><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
+        <h2 class="pt-2"><i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} <span class="font-weight-normal">version {{ $milestone->version }}</span></h2>
         <h6 class="mb-2">{{ $milestone->codename }}{!! $milestone->name !== '' ? ' &middot; '.$milestone->name : '' !!}</h6>
         <div class="nav-scroll">
             <nav class="nav">
@@ -21,6 +16,10 @@
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 @endforeach
+                <div class="flex-grow-1"></div>
+                <a class="nav-link" href="{{ route('editMilestone', ['id' => $milestone->id]) }}">
+                    <i class="far fa-fw fa-pencil"></i>
+                </a>
             </nav>
         </div>
     </div>
