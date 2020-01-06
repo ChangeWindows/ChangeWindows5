@@ -25,12 +25,12 @@
         <title>@yield('title') &middot; ChangeWindows</title>
         @include('feed::links')
 
-        <script src="{{ asset('js/jquery.min.js?v5.1.0-a2-3') }}"></script>
-        <script src="{{ asset('js/app.js?v5.1.0-a2-3') }}" defer></script>
-        <link href="{{ asset('css/app.css?v5.1.0-a2-3') }}" rel="stylesheet">
-        <script src="{{ asset('js/brands.min.js?v5.1.0-a2-3') }}" defer></script>
-        <script src="{{ asset('js/regular.min.js?v5.1.0-a2-3') }}" defer></script>
-        <script src="{{ asset('js/fontawesome.min.js?v5.1.0-a2-3') }}" defer></script>
+        <script src="{{ asset('js/jquery.min.js?v5.1.0-a3-0') }}"></script>
+        <script src="{{ asset('js/app.js?v5.1.0-a3-0') }}" defer></script>
+        <link href="{{ asset('css/app.css?v5.1.0-a3-0') }}" rel="stylesheet">
+        <script src="{{ asset('js/brands.min.js?v5.1.0-a3-0') }}" defer></script>
+        <script src="{{ asset('js/regular.min.js?v5.1.0-a3-0') }}" defer></script>
+        <script src="{{ asset('js/fontawesome.min.js?v5.1.0-a3-0') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
         <script>

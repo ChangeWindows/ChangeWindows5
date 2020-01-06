@@ -4,6 +4,11 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.1-alpha.3 <small>January 2020</small></h3>
+    <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
+    <p>Revamped navigation and header design</p>
+</section>
+<section class="release-notes">
     <h3>5.1-alpha.2 <small>17 December 2019</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Timeline now shows a hover-able dot that indicates the milestone the build is part of, hovering will show the version</p>
