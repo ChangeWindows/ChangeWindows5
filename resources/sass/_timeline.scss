@@ -47,14 +47,23 @@
             }
         }
 
-        .dot {
-            width: 8px;
-            height: 8px;
-            background: $accent;
+        .dot-container {
             position: absolute;
-            top: calc(50% - 4px);
-            right: 15px;
-            border-radius: 8px;
+            width: 39px;
+            height: 39px;
+            top: 0;
+            right: 0;
+
+            .dot {
+                background: $accent;
+                border-radius: 8px;
+                width: 8px;
+                height: 8px;
+                position: relative;
+                top: 5px;
+                left: 14px;
+                display: inline-block;
+            }
         }
     }
 }

@@ -7,6 +7,10 @@
     <h3>5.1-alpha.3 <small>January 2020</small></h3>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
     <p>Revamped navigation and header design</p>
+    <p>The hover-zone for milestone dots in the timeline is now larger</p>
+    <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes a markup bug that resulted in Ring Platform pages being aligned to the bottom of the page</p>
+    <p>Fixes an issue where the "Edit milestone"-button was visible for users without permission</p>
 </section>
 <section class="release-notes">
     <h3>5.1-alpha.2 <small>17 December 2019</small></h3>

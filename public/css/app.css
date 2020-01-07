@@ -10978,14 +10978,23 @@ h1 {
   margin-right: 3px;
 }
 
-.timeline .timeline-row .dot {
+.timeline .timeline-row .dot-container {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  top: 0;
+  right: 0;
+}
+
+.timeline .timeline-row .dot-container .dot {
+  background: #ff9c00;
+  border-radius: 8px;
   width: 8px;
   height: 8px;
-  background: #ff9c00;
-  position: absolute;
-  top: calc(50% - 4px);
-  right: 15px;
-  border-radius: 8px;
+  position: relative;
+  top: 5px;
+  left: 14px;
+  display: inline-block;
 }
 
 .tile, .light .tile, .white .tile {

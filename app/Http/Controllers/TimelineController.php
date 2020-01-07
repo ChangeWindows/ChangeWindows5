@@ -28,8 +28,10 @@ class TimelineController extends Controller
                             ->paginate(75)
                             ->onEachSide(1);
 
+        // TODO: This is probably the crappiest piece of code in all of Viv
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
+            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform]['default'] = $release;
         }
 
         $flights['pc']['fast'] = Release::pc()->active()->latestFlight()->first();

@@ -90,14 +90,18 @@
                         @foreach ($deltas as $delta => $platforms)
                             @foreach ($platforms as $platform => $rings)
                                 <div class="timeline-row">
-                                    <a class="row" href="{{ route('showRelease', ['build' => $build, 'platform' => getPlatformClass($platform)]) }}">
+                                    <a class="row" href="{{ route('platformMilestone', ['id' => $rings['default']->milestone, 'platform' => getPlatformClass($platform)]) }}">
                                         <div class="col-6 col-md-4 build"><span class="pr-2 platform-icon">{!! getPlatformIcon($platform) !!}</span> {{ $build }}.{{ $delta }}</div>
                                         <div class="col-6 col-md-8 ring">
-                                            @foreach ($rings as $ring)
-                                                <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
+                                            @foreach ($rings as $name => $ring)
+                                                @if ($name !== 'default')
+                                                    <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
+                                                @endif
                                             @endforeach
                                         </div>
-                                        <a class="dot" style="background-color: #{{ $ring->color }}" data-toggle="tooltip" data-placement="left" title="Version {{ $ring->version }}"></a>
+                                    </a>
+                                    <a class="dot-container" data-toggle="tooltip" data-placement="left" title="Version {{ $rings['default']->version }}">
+                                        <span class="dot" style="background-color: #{{ $rings['default']->color }}"></span>
                                     </a>
                                 </div>
                             @endforeach
