@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Log;
 use App\Milestone;
 use App\Release;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Parsedown;
 use Twitter;
 
 class MilestoneController extends Controller
@@ -61,20 +63,23 @@ class MilestoneController extends Controller
     public function platform(Request $request, $id, $platform) {
         $timeline = [];
         $platform_id = getPlatformIdByClass($platform);
+        $parsedown = new Parsedown();
 
         $milestone = Milestone::findOrFail($id);
         $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
         $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();
+
+        $changelog = Log::where('milestone_id', $id)->where('platform', $platform_id)->first();
 
         $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->groupBy('platform')->orderBy('platform')->get();
 
         $releases = Release::where('milestone', $id)->where('platform', $platform_id)->orderBy('build', 'DESC')->orderBy('delta', 'DESC')->orderBy('ring', 'ASC')->get();
 
         foreach ($releases as $release) {
-            $timeline[$release->build.'.'.$release->delta][$release->ring] = $release->date->format('j M Y');
+            $timeline[$release->build.'.'.$release->delta][$release->ring] = $release->date->format('j M \'y');
         }
 
-        return view('milestones.platform', compact('milestone', 'previous', 'next', 'platforms', 'platform_id', 'timeline'));
+        return view('milestones.platform', compact('milestone', 'previous', 'next', 'platforms', 'platform_id', 'timeline', 'changelog', 'parsedown'));
     }
 
     /**

@@ -35,7 +35,7 @@
     <div class="col-12 col-sm-6 previous-milestone">
         @if ($previous)
             <a href="{{ route('showMilestone', ['id' => $previous->id]) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
-                <i class="far fa-fw fa-angle-double-left"></i>
+                <i class="far fa-fw fa-arrow-left"></i>
                 <i class="fab fa-fw fa-windows"></i>
                 <span class="font-weight-bold">{{ $previous->osname }}</span>
                 <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $previous->version }}
@@ -47,9 +47,9 @@
             <a href="{{ route('showMilestone', ['id' => $next->id]) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
                 <i class="fab fa-fw fa-windows"></i>
                 <span class="font-weight-bold">{{ $next->osname }}</span>
-                <i class="far fa-fw fa-angle-double-right d-none d-sm-inline d-lg-none"></i>
+                <i class="far fa-fw fa-arrow-right d-none d-sm-inline d-lg-none"></i>
                 <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $next->version }}
-                <i class="far fa-fw fa-angle-double-right d-inline d-sm-none d-lg-inline"></i>
+                <i class="far fa-fw fa-arrow-right d-inline d-sm-none d-lg-inline"></i>
             </a>
         @endif
     </div>
@@ -122,7 +122,7 @@
                     <a class="row" href="{{ route('platformMilestone', ['id' => $milestone->id, 'platform' => getPlatformClass($platform->platform)]) }}">
                         <div class="col">{!! getPlatformIcon($platform->platform) !!}</div>
                         <div class="col text-right">
-                            See all <i class="far fa-fw fa-angle-double-right"></i>
+                            See all <i class="far fa-fw fa-arrow-right"></i>
                         </div>
                     </a>
                 </div>

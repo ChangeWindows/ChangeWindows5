@@ -10184,7 +10184,11 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 100%;
   font-weight: 600;
   padding: 1px 0 2px 0 !important;
-  margin-right: 10px !important;
+  margin-right: 10px;
+}
+
+.label + .label {
+  margin-left: 4px;
 }
 
 .label.vnext, .label.leak {

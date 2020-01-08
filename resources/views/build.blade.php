@@ -60,10 +60,6 @@
                     @else
                         <h4>No changelog yet</h4>
                     @endif
-                    @auth
-                        @if (Auth::user()->hasAnyRole(['Admin']))
-                        @endif
-                    @endauth
                 @endif
             @endforeach
         </div>

@@ -23,6 +23,12 @@ Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name
 Route::patch('/changelog/{id}', 'ChangelogController@update')->name('updateChangelogs');
 Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
+Route::get('/log/new', 'LogController@create')->name('createLog');
+Route::get('/log/{id}/edit', 'LogController@edit')->name('editLog');
+Route::get('/log/{platform?}/{build?}', 'LogController@index')->name('showLogs');
+Route::patch('/log/{id}', 'LogController@update')->name('updateLogs');
+Route::post('/log', 'LogController@store')->name('storeLogs');
+
 Route::get('/milestones', 'MilestoneController@index')->name('milestones');
 Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone');
 Route::get('/milestones/{id}/edit', 'MilestoneController@edit')->name('editMilestone')->middleware('auth');

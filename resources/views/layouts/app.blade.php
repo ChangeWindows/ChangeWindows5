@@ -25,12 +25,12 @@
         <title>@yield('title') &middot; ChangeWindows</title>
         @include('feed::links')
 
-        <script src="{{ asset('js/jquery.min.js?v5.1.0-a3-0') }}"></script>
-        <script src="{{ asset('js/app.js?v5.1.0-a3-0') }}" defer></script>
-        <link href="{{ asset('css/app.css?v5.1.0-a3-0') }}" rel="stylesheet">
-        <script src="{{ asset('js/brands.min.js?v5.1.0-a3-0') }}" defer></script>
-        <script src="{{ asset('js/regular.min.js?v5.1.0-a3-0') }}" defer></script>
-        <script src="{{ asset('js/fontawesome.min.js?v5.1.0-a3-0') }}" defer></script>
+        <script src="{{ asset('js/jquery.min.js?v5.1.0-a3-1') }}"></script>
+        <script src="{{ asset('js/app.js?v5.1.0-a3-1') }}" defer></script>
+        <link href="{{ asset('css/app.css?v5.1.0-a3-1') }}" rel="stylesheet">
+        <script src="{{ asset('js/brands.min.js?v5.1.0-a3-1') }}" defer></script>
+        <script src="{{ asset('js/regular.min.js?v5.1.0-a3-1') }}" defer></script>
+        <script src="{{ asset('js/fontawesome.min.js?v5.1.0-a3-1') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
         <script>
@@ -99,7 +99,8 @@
                                     @if (Auth::user()->hasAnyRole(['Admin']))
                                         @yield('toolset')
                                         <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="far fa-fw fa-plane"></i> Flights</a>
-                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>
+                                        <a class="dropdown-item" href="{{ route('showLogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>
+                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs (Legacy)</a>
                                         <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="far fa-fw fa-users"></i> Users</a>
                                         <a class="dropdown-item" href="{{ route('showPatreon') }}"><i class="fab fa-fw fa-patreon"></i> Patrons</a>
                                         <div class="dropdown-divider"></div>
