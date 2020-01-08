@@ -183,7 +183,7 @@ class Release extends Model implements Feedable
             else if ( $build < 19100 )
                 $milestone = '20h1';
             else if ( $build < 19800 )
-                $milestone = '20h2';
+                $milestone = 'manganese';
             else
                 $milestone = 'manganese';
         }
