@@ -69,26 +69,7 @@ class TimelineController extends Controller
         $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
 
-        $user_agent = $request->server('HTTP_USER_AGENT');
-
-        if ( strpos( $user_agent, 'Edge/' ) ) {
-            $edge_agent = substr($user_agent, strrpos($user_agent, 'Edge/'));
-            $ua['build'] = substr($edge_agent, strrpos($edge_agent, '.') + 1);
-
-            if ( strpos( $user_agent, 'Xbox' ) ) {
-                $ua['platform'] = 'xbox';
-            } else if ( strpos( $user_agent, 'Windows Phone' ) ) {
-                $ua['platform'] = 'mobile';
-            } else if ( strpos( $user_agent, 'Windows IoT' ) ) {
-                $ua['platform'] = 'iot';
-            } else {
-                $ua['platform'] = 'pc';
-            }
-        } else {
-            $ua = false;
-        }
-
-        return view('timeline', compact('releases', 'flights', 'timeline', 'ua', 'request'));
+        return view('timeline', compact('releases', 'flights', 'timeline', 'request'));
     }
 
     public function show($build, $platform = null) {
