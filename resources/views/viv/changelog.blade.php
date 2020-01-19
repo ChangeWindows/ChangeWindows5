@@ -12,6 +12,9 @@
     <p>The hover-zone for milestone dots in the timeline is now larger</p>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
     <p>The main Timeline now links to Milestone-pages rather than Build-pages</p>
+    <p>The Timeline sidebar tiles now link to the Milestone-pages rather than the Build-pages</p>
+    <h4><i class="far fa-fw fa-trash-alt"></i> Removed</h4>
+    <p>"My Windows" has been removed from the timeline sidebar due to the discontinuation of EdgeHTML</p>
     <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes a markup bug that resulted in Ring Platform pages being aligned to the bottom of the page</p>
     <p>Fixes an issue where the "Edit milestone"-button was visible for users without permission</p>
