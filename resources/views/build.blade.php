@@ -58,7 +58,8 @@
                         <a href="{{ route('createChangelog', ['string' => $meta->build.'.'.$delta, 'platform' => getPlatformClass($meta->platform)]) }}" class="btn btn-sm btn-primary">{{ getPlatformById($meta->platform) }}</a>
                         <a href="{{ route('createChangelog', ['string' => $meta->build.'.'.$delta, 'platform' => 'generic']) }}" class="btn btn-sm btn-light">Generic</a>
                     @else
-                        <h4>No changelog yet</h4>
+                        <h4>No changelog available just yet</h4>
+                        <p>This means that this is or a very recent milestone or we just didn't yet get around writing it. Stay tuned, we're working on it.</p>
                     @endif
                 @endif
             @endforeach
