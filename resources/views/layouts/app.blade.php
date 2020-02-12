@@ -115,7 +115,7 @@
                             </li>
                         @else
                             <li class="nav-item nav-login {{ Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('login') }}"><i class="far fa-fw fa-sign-in"></i><span class="d-none d-sm-inline"> Login<span></a>
+                                <a class="nav-link" href="{{ route('login') }}"><i class="far fa-fw fa-sign-in"></i><span class="d-none d-sm-inline"><span></a>
                             </li>
                         @endauth
                     </ul>

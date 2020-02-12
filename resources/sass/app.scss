@@ -42,6 +42,11 @@ body {
     min-height: 100vh;
 }
 
+// Utils
+.bg-g-primary {
+    background-image: linear-gradient(90deg, #0078d7 0%, #0059be 100%) !important;
+}
+
 // Hero
 .hero {
     background-repeat: no-repeat;
@@ -166,9 +171,9 @@ footer {
 
     .login-logo {
         display: block;
-        width: 84px;
+        width: 56px;
         height: auto;
-        margin: 20px auto;
+        margin: 56px 32px;
     }
 
     .btn {

@@ -42,7 +42,7 @@
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" required>
 
                 <button type="submit" class="btn btn-primary">
-                    <i class="far fa-fw fa-key"></> Reset password
+                    <i class="far fa-fw fa-key"></i> Reset password
                 </button>
             </form>
         </div>
