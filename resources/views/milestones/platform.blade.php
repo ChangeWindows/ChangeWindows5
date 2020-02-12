@@ -27,29 +27,6 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col-12 col-sm-6 previous-milestone">
-        @if ($previous)
-            <a href="{{ route('showMilestone', ['id' => $previous->id]) }}" class="milestone-navigation" style="background-color: #{{ $previous->color }}">
-                <i class="far fa-fw fa-arrow-left"></i>
-                <i class="fab fa-fw fa-windows"></i>
-                <span class="font-weight-bold">{{ $previous->osname }}</span>
-                <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $previous->version }}
-            </a>
-        @endif
-    </div>
-    <div class="col-12 col-sm-6 next-milestone">
-        @if ($next)
-            <a href="{{ route('showMilestone', ['id' => $next->id]) }}" class="milestone-navigation" style="background-color: #{{ $next->color }}">
-                <i class="fab fa-fw fa-windows"></i>
-                <span class="font-weight-bold">{{ $next->osname }}</span>
-                <i class="far fa-fw fa-arrow-right d-none d-sm-inline d-lg-none"></i>
-                <span class="d-none d-sm-inline d-lg-none"><br /></span> version {{ $next->version }}
-                <i class="far fa-fw fa-arrow-right d-inline d-sm-none d-lg-inline"></i>
-            </a>
-        @endif
-    </div>
-</div>
 <div class="row mt-3">
     <div class="col-lg-9 col-md-8 col-12">
         @if ($changelog)

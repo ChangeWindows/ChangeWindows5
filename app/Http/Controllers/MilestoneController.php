@@ -66,8 +66,6 @@ class MilestoneController extends Controller
         $parsedown = new Parsedown();
 
         $milestone = Milestone::findOrFail($id);
-        $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
-        $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();
 
         $changelog = Log::where('milestone_id', $id)->where('platform', $platform_id)->first();
 
@@ -79,7 +77,7 @@ class MilestoneController extends Controller
             $timeline[$release->build.'.'.$release->delta][$release->ring] = $release->date->format('j M \'y');
         }
 
-        return view('milestones.platform', compact('milestone', 'previous', 'next', 'platforms', 'platform_id', 'timeline', 'changelog', 'parsedown'));
+        return view('milestones.platform', compact('milestone', 'platforms', 'platform_id', 'timeline', 'changelog', 'parsedown'));
     }
 
     /**

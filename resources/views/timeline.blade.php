@@ -53,9 +53,6 @@
 @endsection
 
 @section('content')
-<div class="alert alert-danger">
-    As we begin some restructuring to our Build-Milestone system, changelogs and other data may not be available on Viv. For a working, full overview, please visit the <a href="https://changewindows.org">stable website</a>.
-</div>
 <div class="row px-n10">
     <div class="col-lg-7">
         <div class="text-center">
