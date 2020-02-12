@@ -102,6 +102,10 @@
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="xboxTargeted" name="xboxTargeted" {{ $milestone->xboxTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="xboxTargeted"><span class="label targeted">Production</span></label></label></div>
     </div>
     <div class="col-lg-4 col-md-6 col-sm">
+        <label for="ring" class="control-label">10X</label>
+        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="tenXSlow" name="tenXSlow" {{ $milestone->tenXSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="tenXSlow"><span class="label slow">Preview</span></label></label></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm">
         <label for="ring" class="control-label">Server</label>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverSlow" name="serverSlow" {{ $milestone->serverSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="serverSlow"><span class="label slow">Preview</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="serverTargeted" name="serverTargeted" {{ $milestone->serverTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="serverTargeted"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>

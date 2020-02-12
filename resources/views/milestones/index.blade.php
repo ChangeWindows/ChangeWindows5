@@ -143,6 +143,10 @@
                                 <div class="checkbox"><input type="checkbox" name="serverLTS" value="8"> <span class="label ltsc">LTSC</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
+                                <label for="ring" class="control-label">10X</label>
+                                <div class="checkbox"><input type="checkbox" name="tenXSlow" value="3"> <span class="label slow">Preview</span></div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Holographic</label>
                                 <div class="checkbox"><input type="checkbox" name="holographicTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
                                 <div class="checkbox"><input type="checkbox" name="holographicBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>

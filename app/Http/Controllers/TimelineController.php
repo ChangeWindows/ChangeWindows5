@@ -66,6 +66,8 @@ class TimelineController extends Controller
         $flights['team']['targeted'] = Release::team()->targeted()->latestFlight()->first();
         $flights['team']['broad'] = Release::team()->broad()->latestFlight()->first();
 
+        $flights['tenx']['slow'] = Release::tenX()->slow()->latestFlight()->first();
+
         $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
 

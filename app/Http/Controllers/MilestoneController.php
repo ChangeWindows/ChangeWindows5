@@ -128,6 +128,7 @@ class MilestoneController extends Controller
             'holographicTargeted' => request()->get('holographicTargeted') === null ? 0 : 1,
             'holographicBroad' => request()->get('holographicBroad') === null ? 0 : 1,
             'holographicLTS' => request()->get('holographicLTS') === null ? 0 : 1,
+            'tenXSlow' => request()->get('tenXSlow') === null ? 0 : 1,
             'sdk' => request()->get('sdk') === null ? 0 : 1,
             'iso' => request()->get('iso') === null ? 0 : 1
         ]);
@@ -202,6 +203,7 @@ class MilestoneController extends Controller
         $milestone->holographicTargeted = request()->get('holographicTargeted') === null ? 0 : 1;
         $milestone->holographicBroad = request()->get('holographicBroad') === null ? 0 : 1;
         $milestone->holographicLTS = request()->get('holographicLTS') === null ? 0 : 1;
+        $milestone->tenXSlow = request()->get('tenXSlow') === null ? 0 : 1;
         $milestone->sdk = request()->get('sdk') === null ? 0 : 1;
         $milestone->iso = request()->get('iso') === null ? 0 : 1;
 

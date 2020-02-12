@@ -38,6 +38,7 @@
             <a class="nav-link {{ $request->platform == 'pc' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'pc', 'ring' => $request->ring]) }}">PC</a>
             <a class="nav-link {{ $request->platform == 'xbox' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'xbox', 'ring' => $request->ring]) }}">Xbox</a>
             <a class="nav-link {{ $request->platform == 'server' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'server', 'ring' => $request->ring]) }}">Server</a>
+            <a class="nav-link {{ $request->platform == 'tenx' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'tenx', 'ring' => $request->ring]) }}">10X</a>
             <a class="nav-link {{ $request->platform == 'holographic' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'holographic', 'ring' => $request->ring]) }}">Holographic</a>
             <a class="nav-link {{ $request->platform == 'team' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'team', 'ring' => $request->ring]) }}">Team</a>
             <a class="nav-link {{ $request->platform == 'iot' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iot', 'ring' => $request->ring]) }}">IoT</a>
@@ -149,6 +150,10 @@
             <div class="col"><?php getTile( $flights['server']['targeted'] ) ?></div>
             <div class="col"><?php getTile( $flights['server']['ltsc'] ) ?></div>
         </div>
+        <p class="h3 font-weight-bold tenx">{!! getPlatformIconNoStyle(10) !!} 10X</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['tenx']['slow'] ) ?></div>
+        </div>
         <p class="h3 font-weight-bold holographic">{!! getPlatformIconNoStyle(5) !!} Holographic</p>
         <div class="row row-gutter">
             <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['fast'] ) ?></div>
@@ -235,6 +240,10 @@
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f43" name="flight[4][3]" value="3"><label class="custom-control-label" for="f43"><span class="label slow">Preview</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f46" name="flight[4][6]" value="6"><label class="custom-control-label" for="f46"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f48" name="flight[4][8]" value="8"><label class="custom-control-label" for="f48"><span class="label ltsc">LTSC</span></label></label></div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm">
+                                <label for="ring" class="control-label">10X</label>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f103" name="flight[10][3]" value="3"><label class="custom-control-label" for="f103"><span class="label slow">Preview</span></label></label></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Holographic</label>

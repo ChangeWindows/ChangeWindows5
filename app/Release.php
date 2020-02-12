@@ -183,9 +183,9 @@ class Release extends Model implements Feedable
             else if ( $build < 19100 )
                 $milestone = '20h1';
             else if ( $build < 19800 )
-                $milestone = '21h2';
+                $milestone = '21h1';
             else
-                $milestone = '21h2';
+                $milestone = '21h1';
         }
 
         return $milestone;
@@ -205,6 +205,7 @@ class Release extends Model implements Feedable
     public function scopeTeam($query) { return $query->where('platform', '7'); }
     public function scopeIso($query) { return $query->where('platform', '8'); }
     public function scopeSdk($query) { return $query->where('platform', '9'); }
+    public function scopeTenX($query) { return $query->where('platform', '10'); }
 
     public function scopeLeak($query) { return $query->where('ring', '0'); }
     public function scopeSkip($query) { return $query->where('ring', '1'); }
@@ -230,6 +231,7 @@ class Release extends Model implements Feedable
             case 7:     $rings = array(6, 7); break;
             case 8:     $rings = array(6); break;
             case 9:     $rings = array(6); break;
+            case 10:    $rings = array(3); break;
             default:    return;
         }
 

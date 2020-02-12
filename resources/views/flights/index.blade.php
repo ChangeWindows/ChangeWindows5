@@ -110,6 +110,10 @@
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f48" name="flight[4][8]" value="8"><label class="custom-control-label" for="f48"><span class="label ltsc">LTSC</span></label></label></div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">
+                        <label for="ring" class="control-label">10X</label>
+                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f103" name="flight[10][3]" value="3"><label class="custom-control-label" for="f103"><span class="label slow">Preview</span></label></label></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm">
                         <label for="ring" class="control-label">Holographic</label>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f52" name="flight[5][2]" value="2"><label class="custom-control-label" for="f52"><span class="label fast">Fast Ring</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f53" name="flight[5][3]" value="3"><label class="custom-control-label" for="f53"><span class="label slow">Slow Ring</span></label></label></div>

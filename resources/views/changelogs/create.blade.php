@@ -33,6 +33,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
                 <option value="2" {{ getPlatformIdByClass(request()->platform) == 2 ? 'selected' : ''}}>Mobile</option>
                 <option value="3" {{ getPlatformIdByClass(request()->platform) == 3 ? 'selected' : ''}}>Xbox</option>
                 <option value="4" {{ getPlatformIdByClass(request()->platform) == 4 ? 'selected' : ''}}>Server</option>
+                <option value="10" {{ getPlatformIdByClass(request()->platform) == 10 ? 'selected' : ''}}>10X</option>
                 <option value="5" {{ getPlatformIdByClass(request()->platform) == 5 ? 'selected' : ''}}>Holographic</option>
                 <option value="6" {{ getPlatformIdByClass(request()->platform) == 6 ? 'selected' : ''}}>IoT</option>
                 <option value="7" {{ getPlatformIdByClass(request()->platform) == 7 ? 'selected' : ''}}>Team</option>

@@ -46,6 +46,7 @@
                         <option value="2" {{ $flight->platform == 2 ? 'selected' : ''}}>Mobile</option>
                         <option value="3" {{ $flight->platform == 3 ? 'selected' : ''}}>Xbox</option>
                         <option value="4" {{ $flight->platform == 4 ? 'selected' : ''}}>Server</option>
+                        <option value="10" {{ $flight->platform == 10 ? 'selected' : ''}}>10X</option>
                         <option value="5" {{ $flight->platform == 5 ? 'selected' : ''}}>Holographic</option>
                         <option value="6" {{ $flight->platform == 6 ? 'selected' : ''}}>IoT</option>
                         <option value="7" {{ $flight->platform == 7 ? 'selected' : ''}}>Team</option>

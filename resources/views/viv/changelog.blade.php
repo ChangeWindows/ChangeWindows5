@@ -6,6 +6,7 @@
 <section class="release-notes">
     <h3>5.1-alpha.3 <small>January 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>Starts adding logic to track Windows 10X builds</p>
     <p>Introduces Milestone-level changelogs</p>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
     <p>Revamped navigation and header design</p>

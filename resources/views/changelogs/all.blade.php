@@ -33,6 +33,7 @@
             <a href="{{ route('showChangelogs', ['platform' => 2]) }}" class="list-group-item {{ $platform == '2' ? 'active' : ''}}">Mobile</a>
             <a href="{{ route('showChangelogs', ['platform' => 3]) }}" class="list-group-item {{ $platform == '3' ? 'active' : ''}}">Xbox</a>
             <a href="{{ route('showChangelogs', ['platform' => 4]) }}" class="list-group-item {{ $platform == '4' ? 'active' : ''}}">Server</a>
+            <a href="{{ route('showChangelogs', ['platform' => 10]) }}" class="list-group-item {{ $platform == '10' ? 'active' : ''}}">10X</a>
             <a href="{{ route('showChangelogs', ['platform' => 5]) }}" class="list-group-item {{ $platform == '5' ? 'active' : ''}}">Holographic</a>
             <a href="{{ route('showChangelogs', ['platform' => 6]) }}" class="list-group-item {{ $platform == '6' ? 'active' : ''}}">IoT</a>
             <a href="{{ route('showChangelogs', ['platform' => 7]) }}" class="list-group-item {{ $platform == '7' ? 'active' : ''}}">Team</a>

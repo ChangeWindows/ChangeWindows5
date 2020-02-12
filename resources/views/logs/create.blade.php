@@ -32,6 +32,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
                 <option value="2" {{ request()->platform == 2 ? 'selected' : ''}}>Mobile</option>
                 <option value="3" {{ request()->platform == 3 ? 'selected' : ''}}>Xbox</option>
                 <option value="4" {{ request()->platform == 4 ? 'selected' : ''}}>Server</option>
+                <option value="10" {{ request()->platform == 10 ? 'selected' : ''}}>10X</option>
                 <option value="5" {{ request()->platform == 5 ? 'selected' : ''}}>Holographic</option>
                 <option value="6" {{ request()->platform == 6 ? 'selected' : ''}}>IoT</option>
                 <option value="7" {{ request()->platform == 7 ? 'selected' : ''}}>Team</option>

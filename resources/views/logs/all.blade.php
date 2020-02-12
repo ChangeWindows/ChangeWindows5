@@ -28,6 +28,7 @@
             <a href="{{ route('showLogs', ['platform' => 2]) }}" class="list-group-item {{ $platform == '2' ? 'active' : ''}}">Mobile</a>
             <a href="{{ route('showLogs', ['platform' => 3]) }}" class="list-group-item {{ $platform == '3' ? 'active' : ''}}">Xbox</a>
             <a href="{{ route('showLogs', ['platform' => 4]) }}" class="list-group-item {{ $platform == '4' ? 'active' : ''}}">Server</a>
+            <a href="{{ route('showLogs', ['platform' => 10]) }}" class="list-group-item {{ $platform == '10' ? 'active' : ''}}">10X</a>
             <a href="{{ route('showLogs', ['platform' => 5]) }}" class="list-group-item {{ $platform == '5' ? 'active' : ''}}">Holographic</a>
             <a href="{{ route('showLogs', ['platform' => 6]) }}" class="list-group-item {{ $platform == '6' ? 'active' : ''}}">IoT</a>
             <a href="{{ route('showLogs', ['platform' => 7]) }}" class="list-group-item {{ $platform == '7' ? 'active' : ''}}">Team</a>

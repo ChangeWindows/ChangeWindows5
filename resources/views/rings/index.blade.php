@@ -11,6 +11,7 @@
                 <a class="nav-link {{ Request::is('rings/pc') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'pc']) }}">PC</a>
                 <a class="nav-link {{ Request::is('rings/xbox') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'xbox']) }}">Xbox</a>
                 <a class="nav-link {{ Request::is('rings/server') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'server']) }}">Server</a>
+                <a class="nav-link {{ Request::is('rings/tenx') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'tenx']) }}">10X</a>
                 <a class="nav-link {{ Request::is('rings/holographic') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'holographic']) }}">Holographic</a>
                 <a class="nav-link {{ Request::is('rings/team') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'team']) }}">Team</a>
                 <a class="nav-link {{ Request::is('rings/iot') ? 'active' : '' }}" href="{{ route('platformRings', ['platform' => 'iot']) }}">IoT</a>
@@ -44,19 +45,25 @@
             <div class="col-md col-sm-4 col-6"><?php getTile( $flights['xbox']['targeted'] ) ?></div>
         </div>
     </div>
-    <div class="col-lg-6" id="iot">
-        <p class="h3 iot">{!! getPlatformIconNoStyle(6) !!} IoT</p>
-        <div class="row row-gutter">
-            <div class="col-xl col-6"><?php getTile( $flights['iot']['targeted'] ) ?></div>
-            <div class="col-xl col-6"><?php getTile( $flights['iot']['broad'] ) ?></div>
-        </div>
-    </div>
     <div class="col-lg-6" id="server">
         <p class="h3 server">{!! getPlatformIconNoStyle(4) !!} Server</p>
         <div class="row row-gutter">
             <div class="col-xl col-sm-4 col-6"><?php getTile( $flights['server']['slow'] ) ?></div>
             <div class="col-xl col-sm-4 col-6"><?php getTile( $flights['server']['targeted'] ) ?></div>
             <div class="col-xl col-sm-4 col-12"><?php getTile( $flights['server']['ltsc'] ) ?></div>
+        </div>
+    </div>
+    <div class="col-lg-2" id="tenx">
+        <p class="h3 tenx">{!! getPlatformIconNoStyle(10) !!} 10X</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['tenx']['slow'] ) ?></div>
+        </div>
+    </div>
+    <div class="col-lg-4" id="iot">
+        <p class="h3 iot">{!! getPlatformIconNoStyle(6) !!} IoT</p>
+        <div class="row row-gutter">
+            <div class="col-xl col-6"><?php getTile( $flights['iot']['targeted'] ) ?></div>
+            <div class="col-xl col-6"><?php getTile( $flights['iot']['broad'] ) ?></div>
         </div>
     </div>
     <div class="col-12" id="holographic">

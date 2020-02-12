@@ -38,6 +38,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
             <a href="{{ route('showChangelogs', ['platform' => 2]) }}" class="list-group-item {{ $changelog->platform == '2' ? 'active' : ''}}">Mobile</a>
             <a href="{{ route('showChangelogs', ['platform' => 3]) }}" class="list-group-item {{ $changelog->platform == '3' ? 'active' : ''}}">Xbox</a>
             <a href="{{ route('showChangelogs', ['platform' => 4]) }}" class="list-group-item {{ $changelog->platform == '4' ? 'active' : ''}}">Server</a>
+            <a href="{{ route('showChangelogs', ['platform' => 10]) }}" class="list-group-item {{ $changelog->platform == '10' ? 'active' : ''}}">10X</a>
             <a href="{{ route('showChangelogs', ['platform' => 5]) }}" class="list-group-item {{ $changelog->platform == '5' ? 'active' : ''}}">Holographic</a>
             <a href="{{ route('showChangelogs', ['platform' => 6]) }}" class="list-group-item {{ $changelog->platform == '6' ? 'active' : ''}}">IoT</a>
             <a href="{{ route('showChangelogs', ['platform' => 7]) }}" class="list-group-item {{ $changelog->platform == '7' ? 'active' : ''}}">Team</a>
@@ -56,6 +57,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
                         <option value="2" {{ $changelog->platform == 2 ? 'selected' : ''}}>Mobile</option>
                         <option value="3" {{ $changelog->platform == 3 ? 'selected' : ''}}>Xbox</option>
                         <option value="4" {{ $changelog->platform == 4 ? 'selected' : ''}}>Server</option>
+                        <option value="10" {{ $changelog->platform == 10 ? 'selected' : ''}}>10X</option>
                         <option value="5" {{ $changelog->platform == 5 ? 'selected' : ''}}>Holographic</option>
                         <option value="6" {{ $changelog->platform == 6 ? 'selected' : ''}}>IoT</option>
                         <option value="7" {{ $changelog->platform == 7 ? 'selected' : ''}}>Team</option>

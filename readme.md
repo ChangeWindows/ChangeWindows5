@@ -79,4 +79,5 @@ alter table `milestones` drop `mobileTargeted`;
 alter table `milestones` drop `mobileBroad`;
 create table `logs` (`id` int unsigned not null auto_increment primary key, `milestone_id` varchar(191) not null, `platform` int not null, `changelog` text not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
 delete from `releases` where `releases`.`build` >= 18362 and `releases`.`ring` = 7;
+alter table `milestones` add `tenXSlow` int unsigned not null after `holographicLTS`;
 ```

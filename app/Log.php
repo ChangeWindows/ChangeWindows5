@@ -27,6 +27,7 @@ class Log extends Model
             case 7:     return 'Team';
             case 8:     return 'ISO';
             case 9:     return 'SDK';
+            case 10:    return '10X';
             default:    return;
         }
     }

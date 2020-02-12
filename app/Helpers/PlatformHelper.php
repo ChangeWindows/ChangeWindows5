@@ -12,6 +12,7 @@ function getPlatformById($id) {
         case 7:     return 'Team';
         case 8:     return 'ISO';
         case 9:     return 'SDK';
+        case 10:    return '10X';
         default:    return 'Generic';
     }
 }
@@ -27,6 +28,7 @@ function getPlatformIcon($id) {
         case 7:     return '<i class="far fa-fw fa-lg fa-tv-alt team"></i>';
         case 8:     return '<i class="far fa-fw fa-lg fa-compact-disc iso"></i>';
         case 9:     return '<i class="far fa-fw fa-lg fa-code sdk"></i>';
+        case 10:     return '<i class="far fa-fw fa-lg fa-tablet-android tenx"></i>';
         default:    return '<i class="fab fa-fw fa-lg fa-windows generic"></i>';
     }
 }
@@ -42,6 +44,7 @@ function getPlatformIconNoStyle($id) {
         case 7:     return '<i class="far fa-fw fa-tv-alt"></i>';
         case 8:     return '<i class="far fa-fw fa-compact-disc"></i>';
         case 9:     return '<i class="far fa-fw fa-code"></i>';
+        case 10:    return '<i class="far fa-fw fa-tablet-android"></i>';
         default:    return '<i class="fab fa-fw fa-windows"></i>';
     }
 }
@@ -57,6 +60,7 @@ function getPlatformClass($id) {
         case 7:     return 'team';
         case 8:     return 'iso';
         case 9:     return 'sdk';
+        case 10:    return 'tenx';
         default:    return 'generic';
     }
 }
@@ -72,6 +76,7 @@ function getPlatformIdByClass($id) {
         case 'team':        return 7;
         case 'iso':         return 8;
         case 'sdk':         return 9;
+        case 'tenx':        return 10;
         default:            return 0;
     }
 }
