@@ -4,13 +4,15 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.1-alpha.3 <small>January 2020</small></h3>
+    <h3>5.1-alpha.3 <small>13 February 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Starts adding logic to track Windows 10X builds</p>
     <p>Introduces Milestone-level changelogs</p>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
     <p>Revamped navigation and header design</p>
     <p>The hover-zone for milestone dots in the timeline is now larger</p>
+    <p>Improved headings for changelogs</p>
+    <p>Revamped flight management <span class="badge badge-warning">Admin</span></p>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
     <p>Brings back the pre-Viv brand coloring</p>
     <p>The main Timeline now links to Milestone-pages rather than Build-pages</p>
@@ -18,9 +20,12 @@
     <h4><i class="far fa-fw fa-trash-alt"></i> Removed</h4>
     <p>"My Windows" has been removed from the timeline sidebar due to the discontinuation of EdgeHTML</p>
     <p>The milestone navigation has been removed from Milestone's platform-specific pages</p>
+    <p>Removes individual build logs <span class="badge badge-warning">Admin</span></p>
     <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes a markup bug that resulted in Ring Platform pages being aligned to the bottom of the page</p>
     <p>Fixes an issue where the "Edit milestone"-button was visible for users without permission</p>
+    <h4><i class="far fa-fw fa-bug"></i> Known issues</h4>
+    <p>URLs that used to link to build pages currently redirect to the Milestone home page instead of the specific milestone and platform</p>
 </section>
 <section class="release-notes">
     <h3>5.1-alpha.2 <small>17 December 2019</small></h3>
