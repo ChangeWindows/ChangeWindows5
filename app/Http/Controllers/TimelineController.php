@@ -72,4 +72,9 @@ class TimelineController extends Controller
 
         return view('timeline', compact('releases', 'flights', 'timeline', 'request'));
     }
+
+    public function release($build, $platform = null) {
+        // TODO: Properly implement redirect to milestone page here
+        return redirect('/milestones');
+    }
 }

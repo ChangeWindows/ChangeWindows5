@@ -15,6 +15,7 @@ Auth::routes();
 Route::feeds();
 
 Route::get('/', 'TimelineController@index')->name('timeline');
+Route::get('/build/{build}/{platform?}', 'TimelineController@redirect')->name('showRelease');
 
 Route::get('/log/new', 'LogController@create')->name('createLog');
 Route::get('/log/{id}/edit', 'LogController@edit')->name('editLog');
