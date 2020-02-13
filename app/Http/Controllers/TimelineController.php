@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Release;
-use App\Changelog;
 use Parsedown;
 
 class TimelineController extends Controller
@@ -72,54 +71,5 @@ class TimelineController extends Controller
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
 
         return view('timeline', compact('releases', 'flights', 'timeline', 'request'));
-    }
-
-    public function show($build, $platform = null) {
-        $cur_build = $build;
-        $platform_id = $platform === null ? 1 : getPlatformIdByClass($platform);
-
-        $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
-
-        if ($platforms->count() < 1) {
-            abort(404);
-        }
-
-        if ($platform) {
-            $releases = Release::where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
-
-            if ($releases->count() < 1) {
-                $platform_id = $platforms[0]->platform;
-                $releases = Release::where('build', $cur_build)->where('platform', $platforms[0]->platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
-            }
-        } else {
-            $platform_id = $platforms[0]->platform;
-            $releases = Release::where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
-        }
-
-        $milestone = $releases[0]->ms;
-
-        $changelogs = Changelog::where('build', $cur_build)->where('platform', $platform_id)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get()->keyBy('delta');
-
-        $meta = Release::where('build', $cur_build)->where('platform', $platform_id)->first();
-
-        foreach ($releases as $release) {
-            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
-            $notes[$release->delta]['rings'][$release->ring] = $release;
-        }
-
-        foreach ($changelogs as $changelog) {
-            if (array_key_exists($changelog->delta, $notes)) {
-                $notes[$changelog->delta]['changelog'] = $changelog->changelog;
-                $notes[$changelog->delta]['created'] = $changelog->created_at;
-                $notes[$changelog->delta]['new'] = $changelog->created_at->addDay();
-            }
-        }
-
-        $previous = Release::where('build', '<', $cur_build)->orderBy('build', 'desc')->first();
-        $next = Release::where('build', '>', $cur_build)->orderBy('build', 'asc')->first();
-
-        $parsedown = new Parsedown();
-
-        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'parsedown', 'milestone', 'next', 'previous'));
     }
 }

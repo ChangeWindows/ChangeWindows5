@@ -15,13 +15,6 @@ Auth::routes();
 Route::feeds();
 
 Route::get('/', 'TimelineController@index')->name('timeline');
-Route::get('/build/{build}/{platform?}', 'TimelineController@show')->name('showRelease');
-
-Route::get('/changelog/new', 'ChangelogController@create')->name('createChangelog');
-Route::get('/changelog/{id}/edit', 'ChangelogController@edit')->name('editChangelog');
-Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name('showChangelogs');
-Route::patch('/changelog/{id}', 'ChangelogController@update')->name('updateChangelogs');
-Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
 
 Route::get('/log/new', 'LogController@create')->name('createLog');
 Route::get('/log/{id}/edit', 'LogController@edit')->name('editLog');

@@ -100,7 +100,6 @@
                                         @yield('toolset')
                                         <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="far fa-fw fa-plane"></i> Flights</a>
                                         <a class="dropdown-item" href="{{ route('showLogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>
-                                        <a class="dropdown-item" href="{{ route('showChangelogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs (Legacy)</a>
                                         <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="far fa-fw fa-users"></i> Users</a>
                                         <a class="dropdown-item" href="{{ route('showPatreon') }}"><i class="fab fa-fw fa-patreon"></i> Patrons</a>
                                         <div class="dropdown-divider"></div>

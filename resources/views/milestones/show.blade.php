@@ -107,7 +107,7 @@
             <div class="timeline">
                 @foreach ($platform->builds as $build)
                     <div class="timeline-row">
-                        <a class="row" href="{{ route('showRelease', ['build' => $build->build, 'platform' => getPlatformClass($build->platform)]) }}">
+                        <div class="row">
                             <div class="col-5 build"><span class="pr-1">{!! getPlatformIcon($build->platform) !!}</span> {{ $build->build }}.{{ $build->delta }}</div>
                             <div class="col-3 ring">
                                 <span class="label {{ $build->class }}">{{ $build->flight }}</span>
@@ -115,7 +115,7 @@
                             <div class="col-4 date">
                                 <span class="date">{{ $build->date->format('j M Y') }}</span>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 @endforeach
                 <div class="timeline-row">
