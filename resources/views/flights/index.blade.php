@@ -30,19 +30,13 @@
                                 @foreach ($rings as $ring)
                                     <div class="col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
                                         <div class="flight-set">
-                                            <a class="flight" href="{{ route('showRelease', ['build' => $build, 'platform' => $platform]) }}">
+                                            <a class="flight" href="{{ route('editFlight', $ring->id) }}">
                                                 <div class="img">{!! getPlatformIcon($platform) !!}</div>
                                                 <div class="data">
                                                     <p class="build">{{ $build }}.{{ $delta }}</p>
                                                     <p class="ring"><span class="label {{ $ring->class }}">{{ $ring->flight }}</span></p>
                                                 </div>
                                             </a>
-                                            <form method="POST" action="{{ route('destroyFlight', ['id' => $ring->id]) }}" class="d-inline">
-                                                {{ method_field('DELETE') }}
-                                                {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-outline-danger"><i class="far fa-fw fa-trash-alt"></i></button>
-                                            </form>
-                                            <a href="{{ route('editFlight', $ring->id) }}" class="btn btn-outline-primary"><i class="far fa-fw fa-pencil"></i> Edit</a>
                                         </div>
                                     </div>
                                 @endforeach

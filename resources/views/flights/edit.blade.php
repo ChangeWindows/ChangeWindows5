@@ -15,19 +15,25 @@
     {{ csrf_field() }}
     <div class="col-12">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
+                <h4>
+                    Flight settings
+                    <button type="submit" class="btn btn-primary float-right"><i class="far fa-fw fa-check"></i> Save</button>
+                </h4>
+            </div>
+            <div class="col-6">
                 <div class="form-group">
                     <label for="build_string">String</label>
                     <input type="text" class="form-control" id="build_string" name="build_string" aria-describedby="build_string" placeholder="Build string" value="{{ $flight->major }}.{{ $flight->minor }}.{{ $flight->build }}.{{ $flight->delta }}">
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-group">
                     <label for="release">Date</label>
                     <input type="date" class="form-control" id="release" name="release" aria-describedby="release" placeholder="Date" value={{ $flight->date }}>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-group">
                     <label for="milestone">Milestone</label>
                     <select class="form-control" id="milestone" name="milestone" aria-describedby="milestone">
@@ -37,7 +43,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-group">
                     <label for="platform">Platform</label>
                     <select class="form-control" id="platform" name="platform" aria-describedby="platform">
@@ -55,7 +61,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-6">
                 <div class="form-group">
                     <label for="ring">Ring</label>
                     <select class="form-control" id="ring" name="ring" aria-describedby="ring">
@@ -72,7 +78,15 @@
                 </div>
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block"><i class="far fa-fw fa-check"></i> Save</button>
+            </div>
+            <div class="col-12">
+                <h4 class="mt-4">Danger zone</h4>
+                <p>Removing a flight is permanent and cannot be undone.</p>
+                <form method="POST" action="{{ route('destroyFlight', ['id' => $flight->id]) }}" class="d-inline">
+                    {{ method_field('DELETE') }}
+                    {{ csrf_field() }}
+                    <button type="submit" class="btn btn-danger"><i class="far fa-fw fa-trash-alt"></i> Remove flight</button>
+                </form>
             </div>
         </div>
     </div>
