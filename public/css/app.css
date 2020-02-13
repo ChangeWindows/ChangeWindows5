@@ -10897,14 +10897,12 @@ h1 {
 }
 
 .changelog-content h2 {
-  font-size: 1.75rem;
-  padding-bottom: .25rem;
-  margin-bottom: 1rem;
+  padding-bottom: .2rem;
+  margin-bottom: .75rem;
 }
 
 .changelog-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
 }
 
 .container {
@@ -11188,12 +11186,12 @@ h1 {
 }
 
 .changelog h2 {
-  font-size: 32px;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 .changelog h3 {
-  font-size: 26px;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
