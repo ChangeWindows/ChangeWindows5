@@ -142,7 +142,12 @@
                             <a href="https://studio384.be" class="h4 f-gilroy font-weight-bold">.<span class="luna">384</span></a>
                         </div>
                         <div class="col-12 text-right">
-                            <span class="m-0"><a href="https://github.com/changewindows"><i class="fab fa-fw fa-twitter"></i></a> <a href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium"></i></a> <a href="https://twitter.com/changewindows"><i class="fab fa-fw fa-github"></i></a></span>
+                            <span class="m-0">
+                                <a href="https://patreon.com/changewindows"><i class="fab fa-fw fa-patreon"></i></a>
+                                <a href="https://github.com/changewindows"><i class="fab fa-fw fa-twitter"></i></a>
+                                <a href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium"></i></a>
+                                <a href="https://twitter.com/changewindows"><i class="fab fa-fw fa-github"></i></a>
+                            </span>
                         </div>
                     </div>
                 </div>
