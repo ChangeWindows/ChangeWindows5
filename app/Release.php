@@ -148,47 +148,34 @@ class Release extends Model implements Feedable
         $major = $string['major'];
 
         // DO NOT HARDCODE DO NOT HARDCODE DO NOT HARDCODE
-        if ( $major == 7 ) {
-            if ( $build < 7500 )
-                $milestone = 'photon';
+        if ( $build < 10250 )
+            return 'threshold1';
+        else if ( $build < 10600 )
+            return 'threshold2';
+        else if ( $build < 14400 )
+            return 'redstone1';
+        else if ( $build < 16000 )
+            return 'redstone2';
+        else if ( $build < 16300 )
+            return 'redstone3';
+        else if ( $build < 17200 )
+            return 'redstone4';
+        else if ( $build < 17900 )
+            return 'redstone5';
+        else if ( $build < 18363 ) {
+            if ( $delta < 7000 )
+                return '19h1';
             else
-                $milestone = 'mango';
-        } else {
-            if ( $build < 9250 )
-                $milestone = 'eight';
-            else if ( $build < 9700 )
-                $milestone = 'blue';
-            else if ( $build < 10250 )
-                $milestone = 'threshold1';
-            else if ( $build < 10600 )
-                $milestone = 'threshold2';
-            else if ( $build < 14400 )
-                $milestone = 'redstone1';
-            else if ( $build < 16000 )
-                $milestone = 'redstone2';
-            else if ( $build < 16300 )
-                $milestone = 'redstone3';
-            else if ( $build < 17200 )
-                $milestone = 'redstone4';
-            else if ( $build < 17900 )
-                $milestone = 'redstone5';
-            else if ( $build < 18363 ) {
-                if ( $delta < 7000 )
-                    $milestone = '19h1';
-                else
-                    $milestone = '19h2';
-            }
-            else if ( $build < 18501 )
-                $milestone = '19h2';
-            else if ( $build < 19100 )
-                $milestone = '20h1';
-            else if ( $build < 19800 )
-                $milestone = '21h1';
-            else
-                $milestone = '21h1';
+                return '19h2';
         }
-
-        return $milestone;
+        else if ( $build < 18501 )
+            return '19h2';
+        else if ( $build < 19100 )
+            return '20h1';
+        else if ( $build < 19800 )
+            return '21h1';
+        else
+            return '21h1';
 
         // Damn it.
         // In all fairness, this needs a bottom and top range for which build should be in which milestone
