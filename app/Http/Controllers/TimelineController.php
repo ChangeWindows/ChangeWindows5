@@ -73,8 +73,8 @@ class TimelineController extends Controller
         return view('timeline', compact('releases', 'flights', 'timeline', 'request'));
     }
 
-    public function release($build, $platform = null) {
-        // TODO: Properly implement redirect to milestone page here
-        return redirect('/milestones');
+    public function redirect($build, $platform = null) {
+        $release = Release::where('build', '=', $build)->first();
+        return redirect()->route('platformMilestone', ['id' => $release->milestone, 'platform' => $platform]);
     }
 }
