@@ -8,6 +8,7 @@ $themes: (
         background-content: #fff,
         background-content-2: #f8f8f8,
         background-content-hover: #f0f0f0,
+        light-border: #eee,
         border: #ddd,
         highlight-color: rgba(0,0,0,.1),
         transparency: rgba(234,234,234,.8),
@@ -24,6 +25,7 @@ $themes: (
         background-content: #e6e6e6,
         background-content-2: #ddd,
         background-content-hover: #d6d6d6,
+        light-border: #ddd,
         border: #ccc,
         highlight-color: rgba(0,0,0,.1),
         transparency: rgba(210,210,210,.8),
@@ -40,6 +42,7 @@ $themes: (
         background-content: #292929,
         background-content-2: #212121,
         background-content-hover: #2f2f2f,
+        light-border: #444,
         border: #363636,
         highlight-color: rgba(255,255,255,.1),
         transparency: rgba(29,29,29,.8),
@@ -56,6 +59,7 @@ $themes: (
         background-content: #000,
         background-content-2: #101010,
         background-content-hover: #1d1d1d,
+        light-border: #333,
         border: #222,
         highlight-color: rgba(255,255,255,.1),
         transparency: rgba(21,21,21,.8),
@@ -97,13 +101,7 @@ $themes: (
 
         .navbar {
             &.bg-cw {
-                @supports ((backdrop-filter: blur(30px))) {
-                    background-color: map-get($color, transparency) !important;
-                }
-
-                @supports not ((backdrop-filter: blur(30px))) {
-                    background-color: map-get($color, background-header) !important;
-                }
+                background-color: map-get($color, background-header) !important;
             }
 
             .navbar-brand {
@@ -132,15 +130,8 @@ $themes: (
         }
 
         .dropdown-menu {
-            box-shadow: 0 0 24px 0 map-get($color, shadow);
-
-            @supports ((backdrop-filter: blur(30px))) {
-                background-color: map-get($color, transparency);
-            }
-
-            @supports not ((backdrop-filter: blur(30px))) {
-                background-color: map-get($color, background-header);
-            }
+            box-shadow: 0 0 15px 0 map-get($color, shadow);
+            background-color: map-get($color, background-header);
 
             .dropdown-divider {
                 border-top-color: map-get($color, highlight-color);
@@ -300,13 +291,7 @@ $themes: (
                 box-shadow: 0 0 24px 0 map-get($color, shadow);
 
                 .modal-header {
-                    @supports ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, transparency);
-                    }
-
-                    @supports not ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, background-header);
-                    }
+                    background: map-get($color, background-header);
 
                     .close {
                         color: map-get($color, text) !important;
@@ -314,13 +299,7 @@ $themes: (
                 }
 
                 .modal-body {
-                    @supports ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, transparency-content);
-                    }
-
-                    @supports not ((backdrop-filter: blur(30px))) {
-                        background: map-get($color, background-content);
-                    }
+                    background: map-get($color, background-content);
                 }
             }
         }
@@ -374,6 +353,12 @@ $themes: (
 
         hr {
             border-color: map-get($color, border);
+        }
+
+        .changelog-content {
+            h2 {
+                border-bottom: 1px solid map-get($color, light-border);
+            }
         }
     }
 }

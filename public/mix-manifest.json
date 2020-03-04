@@ -1,17 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/webfonts/fa-duotone-900.eot": "/webfonts/fa-duotone-900.eot",
-    "/webfonts/fa-duotone-900.svg": "/webfonts/fa-duotone-900.svg",
-    "/webfonts/fa-duotone-900.ttf": "/webfonts/fa-duotone-900.ttf",
-    "/webfonts/fa-duotone-900.woff": "/webfonts/fa-duotone-900.woff",
-    "/webfonts/fa-duotone-900.woff2": "/webfonts/fa-duotone-900.woff2",
-    "/webfonts/fa-brands-400.eot": "/webfonts/fa-brands-400.eot",
-    "/webfonts/fa-brands-400.svg": "/webfonts/fa-brands-400.svg",
-    "/webfonts/fa-brands-400.ttf": "/webfonts/fa-brands-400.ttf",
-    "/webfonts/fa-brands-400.woff": "/webfonts/fa-brands-400.woff",
-    "/webfonts/fa-brands-400.woff2": "/webfonts/fa-brands-400.woff2",
-    "/css/duotone.min.css": "/css/duotone.min.css",
-    "/css/brands.min.css": "/css/brands.min.css",
-    "/css/fontawesome.min.css": "/css/fontawesome.min.css"
+    "/js/regular.min.js": "/js/regular.min.js",
+    "/js/brands.min.js": "/js/brands.min.js",
+    "/js/fontawesome.min.js": "/js/fontawesome.min.js",
+    "/js/jquery.min.js": "/js/jquery.min.js"
 }

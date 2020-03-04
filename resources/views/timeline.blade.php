@@ -6,7 +6,7 @@
 @endphp
 
 @section('toolset')
-<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fad fa-fw fa-plus"></i> New flight</a>
+<a class="dropdown-item" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="far fa-fw fa-plus"></i> New flight</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -33,20 +33,22 @@
             </div>
         </div>
 -->
-        <div class="nav-scroll">
-            <nav class="nav">
-                <a class="nav-link {{ $request->platform == '' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => null, 'ring' => $request->ring]) }}">All</a>
-                <a class="nav-link {{ $request->platform == 'pc' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'pc', 'ring' => $request->ring]) }}">PC</a>
-                <a class="nav-link {{ $request->platform == 'xbox' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'xbox', 'ring' => $request->ring]) }}">Xbox</a>
-                <a class="nav-link {{ $request->platform == 'iot' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iot', 'ring' => $request->ring]) }}">IoT</a>
-                <a class="nav-link {{ $request->platform == 'server' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'server', 'ring' => $request->ring]) }}">Server</a>
-                <a class="nav-link {{ $request->platform == 'holographic' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'holographic', 'ring' => $request->ring]) }}">Holographic</a>
-                <a class="nav-link {{ $request->platform == 'team' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'team', 'ring' => $request->ring]) }}">Team</a>
-                <a class="nav-link {{ $request->platform == 'mobile' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'mobile', 'ring' => $request->ring]) }}">Mobile</a>
-                <a class="nav-link {{ $request->platform == 'sdk' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'sdk', 'ring' => $request->ring]) }}">SDK</a>
-                <a class="nav-link {{ $request->platform == 'iso' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iso', 'ring' => $request->ring]) }}">ISO</a>
-            </ul>
-        </div>
+        <nav class="nav">
+            <a class="nav-link {{ $request->platform == '' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => null, 'ring' => $request->ring]) }}">All</a>
+            <a class="nav-link {{ $request->platform == 'pc' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'pc', 'ring' => $request->ring]) }}">PC</a>
+            <a class="nav-link {{ $request->platform == 'xbox' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'xbox', 'ring' => $request->ring]) }}">Xbox</a>
+            <a class="nav-link {{ $request->platform == 'server' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'server', 'ring' => $request->ring]) }}">Server</a>
+            <a class="nav-link {{ $request->platform == 'tenx' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'tenx', 'ring' => $request->ring]) }}">10X</a>
+            <a class="nav-link {{ $request->platform == 'holographic' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'holographic', 'ring' => $request->ring]) }}">Holographic</a>
+            <a class="nav-link {{ $request->platform == 'team' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'team', 'ring' => $request->ring]) }}">Team</a>
+            <a class="nav-link {{ $request->platform == 'iot' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iot', 'ring' => $request->ring]) }}">IoT</a>
+            <a class="nav-link {{ $request->platform == 'sdk' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'sdk', 'ring' => $request->ring]) }}">SDK</a>
+            <a class="nav-link {{ $request->platform == 'iso' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iso', 'ring' => $request->ring]) }}">ISO</a>
+            <a class="nav-link dropdown {{ $request->platform == 'mobile' ? 'active' : '' }}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-ellipsis-h"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="{{ route('timeline', ['platform' => 'mobile', 'ring' => $request->ring]) }}"><i class="far fa-fw fa-mobile"></i> Mobile</a>
+            </div>
+        </nav>
     </div>
 </div>
 @endsection
@@ -72,7 +74,7 @@
                 </div>
                 @auth
                     @if (Auth::user()->hasAnyRole(['Admin']))
-                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="fad text-primary fa-fw fa-plus"></i> Flight</span></a>
+                        <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="far text-primary fa-fw fa-plus"></i> Flight</span></a>
                     @endif
                 @endauth
             </div>
@@ -86,13 +88,18 @@
                         @foreach ($deltas as $delta => $platforms)
                             @foreach ($platforms as $platform => $rings)
                                 <div class="timeline-row">
-                                    <a class="row" href="{{ route('showRelease', ['build' => $build, 'platform' => getPlatformClass($platform)]) }}">
-                                        <div class="col-6 col-md-4 build"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-platform img-jump" alt="{{ getPlatformById($platform) }}" />{{ $build }}.{{ $delta }}</div>
+                                    <a class="row" href="{{ route('platformMilestone', ['id' => $rings['default']->milestone, 'platform' => getPlatformClass($platform)]) }}">
+                                        <div class="col-6 col-md-4 build"><span class="pr-2 platform-icon">{!! getPlatformIcon($platform) !!}</span> {{ $build }}.{{ $delta }}</div>
                                         <div class="col-6 col-md-8 ring">
-                                            @foreach ($rings as $ring)
-                                                <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
+                                            @foreach ($rings as $name => $ring)
+                                                @if ($name !== 'default')
+                                                    <span class="label {{ $ring->class }}">{{ $ring->flight }}</span>
+                                                @endif
                                             @endforeach
                                         </div>
+                                    </a>
+                                    <a class="dot-container" data-toggle="tooltip" data-placement="left" title="Version {{ $rings['default']->version }}">
+                                        <span class="dot" style="background-color: #{{ $rings['default']->color }}"></span>
                                     </a>
                                 </div>
                             @endforeach
@@ -109,31 +116,12 @@
         {{ $releases->links() }}
     </div>
     <div class="d-none d-lg-block col-lg-5">
-        @if ($ua)
-            <div class="row row-gutter">
-                <div class="col">
-                    <a href="{{ route('showVNext', ['platform_id' => $ua['platform']]) }}" class="tile leak">
-                        <span class="ring">Next public release</span>
-                        <span class="build">vNext</span>
-                        <span class="date">Tomorrow</span>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="{{ route('showRelease', ['build' => $ua['build'], 'platform' => $ua['platform']]) }}" class="tile leak">
-                        <span class="ring">This device</span>
-                        <span class="build"><?php echo $ua['build'] ?></span>
-                        <span class="date">Running now</span>
-                    </a>
-                </div>
+        <div class="row row-gutter">
+            <div class="col">
+                <a href="{{ route('showVNext') }}" class="btn btn-vnext btn-block">The changelog for the next public release</a>
             </div>
-        @else
-            <div class="row row-gutter">
-                <div class="col">
-                    <a href="{{ route('showVNext') }}" class="btn btn-vnext btn-block">The changelog for the next public release</a>
-                </div>
-            </div>
-        @endif
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> PC</p>
+        </div>
+        <p class="h3 font-weight-bold pc">{!! getPlatformIconNoStyle(1) !!} PC</p>
         <div class="row row-gutter">
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['fast'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['slow'] ) ?></div>
@@ -142,7 +130,7 @@
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['broad'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['pc']['ltsc'] ) ?></div>
         </div>
-        <p class="h3"><i class="fab fa-fw fa-xbox"></i> Xbox</p>
+        <p class="h3 font-weight-bold xbox">{!! getPlatformIconNoStyle(3) !!} Xbox</p>
         <div class="row row-gutter">
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['skip'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['fast'] ) ?></div>
@@ -151,18 +139,22 @@
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['release'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['xbox']['targeted'] ) ?></div>
         </div>
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> IoT</p>
+        <p class="h3 font-weight-bold iot">{!! getPlatformIconNoStyle(6) !!} IoT</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['iot']['targeted'] ) ?></div>
             <div class="col"><?php getTile( $flights['iot']['broad'] ) ?></div>
         </div>
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Server</p>
+        <p class="h3 font-weight-bold server">{!! getPlatformIconNoStyle(4) !!} Server</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['server']['slow'] ) ?></div>
             <div class="col"><?php getTile( $flights['server']['targeted'] ) ?></div>
             <div class="col"><?php getTile( $flights['server']['ltsc'] ) ?></div>
         </div>
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Holographic</p>
+        <p class="h3 font-weight-bold tenx">{!! getPlatformIconNoStyle(10) !!} 10X</p>
+        <div class="row row-gutter">
+            <div class="col"><?php getTile( $flights['tenx']['slow'] ) ?></div>
+        </div>
+        <p class="h3 font-weight-bold holographic">{!! getPlatformIconNoStyle(5) !!} Holographic</p>
         <div class="row row-gutter">
             <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['fast'] ) ?></div>
             <div class="col-xl-6 col-lg-6 col-sm-6 col-6"><?php getTile( $flights['holo']['slow'] ) ?></div>
@@ -170,20 +162,26 @@
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['broad'] ) ?></div>
             <div class="col-xl-4 col-lg-6 col-sm-4 col-6"><?php getTile( $flights['holo']['ltsc'] ) ?></div>
         </div>
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> Team</p>
+        <p class="h3 font-weight-bold team">{!! getPlatformIconNoStyle(7) !!} Team</p>
         <div class="row row-gutter">
             <div class="col-6"><?php getTile( $flights['team']['fast'] ) ?></div>
             <div class="col-6"><?php getTile( $flights['team']['slow'] ) ?></div>
             <div class="col-6"><?php getTile( $flights['team']['targeted'] ) ?></div>
             <div class="col-6"><?php getTile( $flights['team']['broad'] ) ?></div>
         </div>
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> SDK</p>
-        <div class="row row-gutter">
-            <div class="col"><?php getTile( $flights['sdk']['targeted'] ) ?></div>
-        </div>
-        <p class="h3"><i class="fab fa-fw fa-windows"></i> ISO</p>
-        <div class="row row-gutter">
-            <div class="col"><?php getTile( $flights['iso']['targeted'] ) ?></div>
+        <div class="row no-gutters mt-2">
+            <div class="col">
+                <p class="h3 font-weight-bold sdk">{!! getPlatformIconNoStyle(9) !!} SDK</p>
+                <div class="row row-gutter">
+                    <div class="col"><?php getTile( $flights['sdk']['targeted'] ) ?></div>
+                </div>
+            </div>
+            <div class="col">
+                <p class="h3 font-weight-bold iso">{!! getPlatformIconNoStyle(8) !!} ISO</p>
+                <div class="row row-gutter">
+                    <div class="col"><?php getTile( $flights['iso']['targeted'] ) ?></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -198,7 +196,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title">New build</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
+                            <span aria-hidden="true"><i class="far fa-fw fa-times"></i></span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -244,6 +242,10 @@
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f48" name="flight[4][8]" value="8"><label class="custom-control-label" for="f48"><span class="label ltsc">LTSC</span></label></label></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
+                                <label for="ring" class="control-label">10X</label>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f103" name="flight[10][3]" value="3"><label class="custom-control-label" for="f103"><span class="label slow">Preview</span></label></label></div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Holographic</label>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f52" name="flight[5][2]" value="2"><label class="custom-control-label" for="f52"><span class="label fast">Fast Ring</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f53" name="flight[5][3]" value="3"><label class="custom-control-label" for="f53"><span class="label slow">Slow Ring</span></label></label></div>
@@ -273,7 +275,7 @@
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Public</span></label></label></div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>
+                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="far fa-fw fa-plus"></i> Add</button>
                             </div>
                         </form>
                     </div>

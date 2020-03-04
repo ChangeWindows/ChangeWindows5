@@ -36,11 +36,10 @@
             font-weight: 700;
             text-transform: uppercase;
         }
-                
+
         .btn:hover {
             color: #fff;
             text-decoration: none;
-            transform: translate(0, -3px);
         }
 
         html {

@@ -15,13 +15,13 @@ Auth::routes();
 Route::feeds();
 
 Route::get('/', 'TimelineController@index')->name('timeline');
-Route::get('/build/{build}/{platform?}', 'TimelineController@show')->name('showRelease');
+Route::get('/build/{build}/{platform?}', 'TimelineController@redirect')->name('showRelease');
 
-Route::get('/changelog/new', 'ChangelogController@create')->name('createChangelog');
-Route::get('/changelog/{id}/edit', 'ChangelogController@edit')->name('editChangelog');
-Route::get('/changelog/{platform?}/{build?}', 'ChangelogController@index')->name('showChangelogs');
-Route::patch('/changelog/{id}', 'ChangelogController@update')->name('updateChangelogs');
-Route::post('/changelog', 'ChangelogController@store')->name('storeChangelogs');
+Route::get('/log/new', 'LogController@create')->name('createLog');
+Route::get('/log/{id}/edit', 'LogController@edit')->name('editLog');
+Route::get('/log/{platform?}/{build?}', 'LogController@index')->name('showLogs');
+Route::patch('/log/{id}', 'LogController@update')->name('updateLogs');
+Route::post('/log', 'LogController@store')->name('storeLogs');
 
 Route::get('/milestones', 'MilestoneController@index')->name('milestones');
 Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone');

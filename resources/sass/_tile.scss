@@ -8,7 +8,6 @@
     border-radius: 3px;
 
     &:hover {
-        transform: translate(0, -1px);
         box-shadow: 0 4px 18px 0 rgba(0,0,0,.2);
         color: #fff;
         text-decoration: none;
@@ -38,11 +37,11 @@
     &.vnext, &.leak {
         background-color: $leak;
     }
-    
+
     &.skip {
         background-color: $skip;
     }
-    
+
     &.fast {
         background-color: $fast;
     }
@@ -83,55 +82,55 @@
                 color: $leak;
             }
         }
-        
+
         &.skip {
             .ring {
                 color: $skip;
             }
         }
-        
+
         &.fast {
             .ring {
                 color: $fast;
             }
         }
-    
+
         &.slow {
             .ring {
                 color: $slow;
             }
         }
-    
+
         &.preview {
             .ring {
                 color: $preview;
             }
         }
-    
+
         &.release {
             .ring {
                 color: $release;
             }
         }
-    
+
         &.targeted {
             .ring {
                 color: $targeted;
             }
         }
-    
+
         &.broad {
             .ring {
                 color: $broad;
             }
         }
-    
+
         &.ltsc {
             .ring {
                 color: $ltsc;
             }
         }
-    
+
         &.none {
             .ring {
                 color: $accent;

@@ -10,7 +10,7 @@
     <div class="container">
         <h2>Flights</h2>
         <div class="btn-toolbar">
-            <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="fad fa-fw fa-plus"></i> New flight</a>
+            <a class="btn btn-primary" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><i class="far fa-fw fa-plus"></i> New flight</a>
         </div>
     </div>
 </div>
@@ -30,19 +30,13 @@
                                 @foreach ($rings as $ring)
                                     <div class="col-xl-2 col-md-3 col-sm-4 col-xs-6 flight-block">
                                         <div class="flight-set">
-                                            <a class="flight" href="{{ route('showRelease', ['build' => $build, 'platform' => $platform]) }}">
-                                                <div class="img"><img src="{{ asset('img/platform/'.getPlatformImage($platform)) }}" class="img-fluid" alt="{{ getPlatformById($platform) }}" /></div>
+                                            <a class="flight" href="{{ route('editFlight', $ring->id) }}">
+                                                <div class="img">{!! getPlatformIcon($platform) !!}</div>
                                                 <div class="data">
                                                     <p class="build">{{ $build }}.{{ $delta }}</p>
                                                     <p class="ring"><span class="label {{ $ring->class }}">{{ $ring->flight }}</span></p>
                                                 </div>
                                             </a>
-                                            <form method="POST" action="{{ route('destroyFlight', ['id' => $ring->id]) }}" class="d-inline">
-                                                {{ method_field('DELETE') }}
-                                                {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-outline-danger"><i class="fad fa-fw fa-trash-alt"></i></button>
-                                            </form>
-                                            <a href="{{ route('editFlight', $ring->id) }}" class="btn btn-outline-primary"><i class="fad fa-fw fa-pencil"></i> Edit</a>
                                         </div>
                                     </div>
                                 @endforeach
@@ -64,7 +58,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">New build</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
+                    <span aria-hidden="true"><i class="far fa-fw fa-times"></i></span>
                 </button>
             </div>
             <div class="modal-body">
@@ -110,6 +104,10 @@
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f48" name="flight[4][8]" value="8"><label class="custom-control-label" for="f48"><span class="label ltsc">LTSC</span></label></label></div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm">
+                        <label for="ring" class="control-label">10X</label>
+                        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f103" name="flight[10][3]" value="3"><label class="custom-control-label" for="f103"><span class="label slow">Preview</span></label></label></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm">
                         <label for="ring" class="control-label">Holographic</label>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f52" name="flight[5][2]" value="2"><label class="custom-control-label" for="f52"><span class="label fast">Fast Ring</span></label></label></div>
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f53" name="flight[5][3]" value="3"><label class="custom-control-label" for="f53"><span class="label slow">Slow Ring</span></label></label></div>
@@ -139,7 +137,7 @@
                         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f96" name="flight[9][6]" value="6"><label class="custom-control-label" for="f96"><span class="label targeted">Public</span></label></label></div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block  mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>
+                        <button type="submit" class="btn btn-primary btn-block  mt-3"><i class="far fa-fw fa-plus"></i> Add</button>
                     </div>
                 </form>
             </div>

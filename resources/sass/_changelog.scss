@@ -1,18 +1,18 @@
-.changelog {    
+.changelog {
     a + h3 {
         margin-top: 10px;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 1.6rem;
         font-weight: 700;
     }
-    
+
     h3 {
-        font-size: 26px;
+        font-size: 1.2rem;
         font-weight: 700;
     }
-    
+
     h4 {
         font-size: 20px;
         font-weight: 700;
@@ -55,12 +55,12 @@
             text-transform: uppercase;
         }
     }
-    
+
     .date-box {
         margin: -4px 0 5px;
         color: #aaa;
         padding-bottom: 10px;
-        
+
         .label {
             margin: 0 3px !important;
             font-weight: 600;
@@ -78,28 +78,28 @@
 
     section {
         padding-bottom: 10px;
-    
+
         .date-heading {
             padding-bottom: 0;
         }
-    
+
         .date-box {
             margin: -4px 0 5px;
             color: #aaa;
-            
+
             .label {
                 margin: 0 5px !important;
-    
+
                 &:first-child {
                     margin-left: 0 !important;
                 }
-    
+
                 &:last-child {
                     margin-right: 0 !important;
                 }
             }
         }
-    
+
         &:last-child {
             padding-bottom: 0;
         }

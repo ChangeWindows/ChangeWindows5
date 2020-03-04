@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Release;
-use App\Changelog;
 use Parsedown;
 
 class TimelineController extends Controller
@@ -14,11 +13,13 @@ class TimelineController extends Controller
         $ring_id = getRingIdByClass($request->ring);
         $timeline = [];
 
-        $releases = Release::when(request('ring', false), function ($query, $ring_id) {
+        $releases = Release::select('releases.*', 'milestones.color', 'milestones.version')
+                            ->when(request('ring', false), function ($query, $ring_id) {
                                 return $query->where('ring', getRingIdByClass($ring_id));
                             })->when(request('platform', false), function ($query, $platform_id) {
                                 return $query->where('platform', getPlatformIdByClass($platform_id));
-                            })->orderBy('date', 'desc')
+                            })->join('milestones', 'milestones.id', '=', 'releases.milestone')
+                            ->orderBy('date', 'desc')
                             ->orderBy('build', 'desc')
                             ->orderBy('platform', 'asc')
                             ->orderBy('delta', 'desc')
@@ -26,8 +27,10 @@ class TimelineController extends Controller
                             ->paginate(75)
                             ->onEachSide(1);
 
+        // TODO: This is probably the crappiest piece of code in all of Viv
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
+            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform]['default'] = $release;
         }
 
         $flights['pc']['fast'] = Release::pc()->active()->latestFlight()->first();
@@ -62,77 +65,16 @@ class TimelineController extends Controller
         $flights['team']['targeted'] = Release::team()->targeted()->latestFlight()->first();
         $flights['team']['broad'] = Release::team()->broad()->latestFlight()->first();
 
+        $flights['tenx']['slow'] = Release::tenX()->slow()->latestFlight()->first();
+
         $flights['sdk']['targeted'] = Release::sdk()->targeted()->latestFlight()->first();
         $flights['iso']['targeted'] = Release::iso()->targeted()->latestFlight()->first();
 
-        $user_agent = $request->server('HTTP_USER_AGENT');
-
-        if ( strpos( $user_agent, 'Edge/' ) ) {
-            $edge_agent = substr($user_agent, strrpos($user_agent, 'Edge/'));
-            $ua['build'] = substr($edge_agent, strrpos($edge_agent, '.') + 1);
-
-            if ( strpos( $user_agent, 'Xbox' ) ) {
-                $ua['platform'] = 'xbox';
-            } else if ( strpos( $user_agent, 'Windows Phone' ) ) {
-                $ua['platform'] = 'mobile';
-            } else if ( strpos( $user_agent, 'Windows IoT' ) ) {
-                $ua['platform'] = 'iot';
-            } else {
-                $ua['platform'] = 'pc';
-            }
-        } else {
-            $ua = false;
-        }
-
-        return view('timeline', compact('releases', 'flights', 'timeline', 'ua', 'request'));
+        return view('timeline', compact('releases', 'flights', 'timeline', 'request'));
     }
 
-    public function show($build, $platform = null) {
-        $cur_build = $build;
-        $platform_id = $platform === null ? 1 : getPlatformIdByClass($platform);
-
-        $platforms = Release::select('platform')->where('build', $cur_build)->orderBy('platform', 'asc')->distinct()->get();
-
-        if ($platforms->count() < 1) {
-            abort(404);
-        }
-
-        if ($platform) {
-            $releases = Release::where('build', $cur_build)->where('platform', $platform_id)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->get();
-
-            if ($releases->count() < 1) {
-                $platform_id = $platforms[0]->platform;
-                $releases = Release::where('build', $cur_build)->where('platform', $platforms[0]->platform)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
-            }
-        } else {
-            $platform_id = $platforms[0]->platform;
-            $releases = Release::where('build', $cur_build)->orderBy('date', 'asc')->orderBy('delta', 'asc')->orderBy('ring', 'asc')->paginate(50);
-        }
-
-        $milestone = $releases[0]->ms;
-
-        $changelogs = Changelog::where('build', $cur_build)->where('platform', $platform_id)->orWhere('build', $cur_build)->where('platform', '0')->orderBy('platform', 'desc')->get()->keyBy('delta');
-
-        $meta = Release::where('build', $cur_build)->where('platform', $platform_id)->first();
-
-        foreach ($releases as $release) {
-            $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
-            $notes[$release->delta]['rings'][$release->ring] = $release;
-        }
-
-        foreach ($changelogs as $changelog) {
-            if (array_key_exists($changelog->delta, $notes)) {
-                $notes[$changelog->delta]['changelog'] = $changelog->changelog;
-                $notes[$changelog->delta]['created'] = $changelog->created_at;
-                $notes[$changelog->delta]['new'] = $changelog->created_at->addDay();
-            }
-        }
-
-        $previous = Release::where('build', '<', $cur_build)->orderBy('build', 'desc')->first();
-        $next = Release::where('build', '>', $cur_build)->orderBy('build', 'asc')->first();
-
-        $parsedown = new Parsedown();
-
-        return view('build', compact('timeline', 'platforms', 'notes', 'meta', 'cur_build', 'parsedown', 'milestone', 'next', 'previous'));
+    public function redirect($build, $platform = null) {
+        $release = Release::where('build', '=', $build)->first();
+        return redirect()->route('platformMilestone', ['id' => $release->milestone, 'platform' => $platform]);
     }
 }

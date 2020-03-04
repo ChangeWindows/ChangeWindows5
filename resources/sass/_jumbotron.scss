@@ -1,11 +1,11 @@
 .jumbotron {
     border-radius: 0;
-    padding: 10px 20px 20px;
+    padding: 10px 20px;
     margin-bottom: 0;
 
     &.highlights {
         &.tabs {
-            padding-bottom: 10px;
+            padding-bottom: 0;
 
             .nav {
                 margin-top: 10px;
@@ -14,7 +14,8 @@
     }
 
     &.tabs {
-        padding-bottom: 4px;
+        padding-bottom: 0;
+        padding-top: 0;
     }
 
     h1 {
@@ -73,7 +74,6 @@
         }
 
         h6 {
-            margin-bottom: 20px;
             margin-left: 48px;
         }
     }
@@ -99,19 +99,19 @@
         .row {
             margin-top: 15px;
         }
-        
+
         &.platinum {
             background-color: #bdcfd4  !important;
         }
-        
+
         &.gold {
             background-color: $yellow !important;
         }
-        
+
         &.silver {
             background-color: #9eacbd !important;
         }
-        
+
         &.bronze {
             background-color: #cd7f32 !important;
         }

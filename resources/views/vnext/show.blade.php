@@ -2,14 +2,14 @@
 @section('title') vNext @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="{{ route('editVNext', ['platform_id' => $changelog->id]) }}"><i class="fad fa-fw fa-pencil"></i> Edit vNext</a>
+<a class="dropdown-item" href="{{ route('editVNext', ['platform_id' => $changelog->id]) }}"><i class="far fa-fw fa-pencil"></i> Edit vNext</a>
 <div class="dropdown-divider"></div>
 @endsection
 
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2 class="mb-4"><i class="fab fa-fw fa-windows"></i> vNext</h2>
+        <h2 class="pt-2 mb-2"><i class="fab fa-fw fa-windows"></i> vNext</h2>
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link {{ Request::is('vnext') || Request::is('vnext/pc') ? 'active' : '' }}" href="{{ route('showVNext', ['platform' => 'pc']) }}">PC</a>

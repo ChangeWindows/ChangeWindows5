@@ -51,12 +51,6 @@
             <input type="text" class="form-control" id="color" name="color" aria-describedby="color" placeholder="Color" value="{{ $milestone->color }}">
         </div>
     </div>
-    <div class="col-12">
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description" aria-describedby="description" placeholder="Description">{{ $milestone->description }}</textarea>
-        </div>
-    </div>
     <div class="col-12"><hr /></div>
     <div class="col-md-4 col-12">
         <div class="form-group">
@@ -99,14 +93,6 @@
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="pcLTS" name="pcLTS" {{ $milestone->pcLTS == '1' ? 'checked' : '' }} value="8"><label class="custom-control-label" for="pcLTS"><span class="label ltsc">Long-Term Servicing Channel</span></label></label></div>
     </div>
     <div class="col-lg-4 col-md-6 col-sm">
-        <label for="ring" class="control-label">Mobile</label>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileFast" name="mobileFast" {{ $milestone->mobileFast == '1' ? 'checked' : '' }} value="2"><label class="custom-control-label" for="mobileFast"><span class="label fast">Fast Ring</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileSlow" name="mobileSlow" {{ $milestone->mobileSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="mobileSlow"><span class="label slow">Slow Ring</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileReleasePreview" name="mobileReleasePreview" {{ $milestone->mobileReleasePreview == '1' ? 'checked' : '' }} value="5"><label class="custom-control-label" for="mobileReleasePreview"><span class="label release">Release Preview</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileTargeted" name="mobileTargeted" {{ $milestone->mobileTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="mobileTargeted"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
-        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="mobileBroad" name="mobileBroad" {{ $milestone->mobileBroad == '1' ? 'checked' : '' }} value="7"><label class="custom-control-label" for="mobileBroad"><span class="label broad">Semi-Annual Broad</span></label></label></div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm">
         <label for="ring" class="control-label">Xbox</label>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="xboxSkip" name="xboxSkip" {{ $milestone->xboxSkip == '1' ? 'checked' : '' }} value="1"><label class="custom-control-label" for="xboxSkip"><span class="label skip">Alpha Skip Ahead Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="xboxFast" name="xboxFast" {{ $milestone->xboxFast == '1' ? 'checked' : '' }} value="2"><label class="custom-control-label" for="xboxFast"><span class="label fast">Alpha Ring</span></label></label></div>
@@ -114,6 +100,10 @@
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="xboxPreview" name="xboxPreview" {{ $milestone->xboxPreview == '1' ? 'checked' : '' }} value="4"><label class="custom-control-label" for="xboxPreview"><span class="label preview">Delta Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="xboxReleasePreview" name="xboxReleasePreview" {{ $milestone->xboxReleasePreview == '1' ? 'checked' : '' }} value="5"><label class="custom-control-label" for="xboxReleasePreview"><span class="label release">Omega Ring</span></label></label></div>
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="xboxTargeted" name="xboxTargeted" {{ $milestone->xboxTargeted == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="xboxTargeted"><span class="label targeted">Production</span></label></label></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm">
+        <label for="ring" class="control-label">10X</label>
+        <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="tenXSlow" name="tenXSlow" {{ $milestone->tenXSlow == '1' ? 'checked' : '' }} value="3"><label class="custom-control-label" for="tenXSlow"><span class="label slow">Preview</span></label></label></div>
     </div>
     <div class="col-lg-4 col-md-6 col-sm">
         <label for="ring" class="control-label">Server</label>
@@ -149,7 +139,16 @@
         <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="sdk" name="sdk" {{ $milestone->sdk == '1' ? 'checked' : '' }} value="6"><label class="custom-control-label" for="sdk"><span class="label targeted">Public</span></label></label></div>
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-save"></i> Save</button>
+        <button type="submit" class="btn btn-primary btn-block mt-3"><i class="far fa-fw fa-save"></i> Save</button>
     </div>
+</form>
+
+<form method="POST" class="mt-4" action="{{ route('destroyMilestone', ['id' => $milestone->id]) }}">
+    <h2 class="text-danger">Danger zone</h2>
+    <p>Deleting a milestone cannot be undone. Clicking the button is a direct action.</p>
+
+    {{ method_field('DELETE') }}
+    {{ csrf_field() }}
+    <button type="submit" class="btn btn-danger"><i class="far fa-fw fa-trash-alt"></i> Delete milestone</button>
 </form>
 @endsection

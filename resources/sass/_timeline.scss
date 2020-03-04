@@ -17,11 +17,11 @@
     .timeline-row {
         padding-left: 5px;
         padding-right: 5px;
-        transition: .2s ease-in-out;
-        z-index: 9700;
+        transition: all .2s ease-in-out;
+        position: relative;
 
         .row {
-            padding: 8px 5px;
+            padding: 7px 5px;
             font-size: 100%;
 
             &:hover {
@@ -32,10 +32,8 @@
                 text-decoration: none;
             }
 
-            .img-platform {
-                width: 24px;
-                height: 24px;
-                margin: -10px 10px -5px 0;
+            .platform-icon {
+                font-size: .9rem;
             }
 
             .ring {
@@ -46,6 +44,25 @@
                 .label {
                     margin-right: 3px;
                 }
+            }
+        }
+
+        .dot-container {
+            position: absolute;
+            width: 39px;
+            height: 39px;
+            top: 0;
+            right: 0;
+
+            .dot {
+                background: $accent;
+                border-radius: 8px;
+                width: 8px;
+                height: 8px;
+                position: relative;
+                top: 5px;
+                left: 14px;
+                display: inline-block;
             }
         }
     }

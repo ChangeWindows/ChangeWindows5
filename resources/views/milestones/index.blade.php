@@ -2,7 +2,7 @@
 @section('title') Milestones @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="fad fa-fw fa-plus"></i> New milestone</a>
+<a class="dropdown-item" href="#newMilestoneModal" data-toggle="modal" data-target="#newMilestoneModal"><i class="far fa-fw fa-plus"></i> New milestone</a>
 <div class="dropdown-divider"></div>
 @endsection
 
@@ -44,7 +44,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title">New build</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="fad fa-fw fa-times"></i></span>
+                            <span aria-hidden="true"><i class="far fa-fw fa-times"></i></span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -86,12 +86,6 @@
                                     <input type="text" class="form-control" id="color" name="color" aria-describedby="color" placeholder="Color">
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <textarea class="form-control" id="description" name="description" aria-describedby="description" placeholder="Description"></textarea>
-                                </div>
-                            </div>
                             <div class="col-12"><hr /></div>
                             <div class="col-md-4 col-12">
                                 <div class="form-group">
@@ -131,15 +125,7 @@
                                 <div class="checkbox"><input type="checkbox" name="pcReleasePreview" value="5"> <span class="label release">Release Preview</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
                                 <div class="checkbox"><input type="checkbox" name="pcBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
-                                <div class="checkbox"><input type="checkbox" name="pcLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm">
-                                <label for="ring" class="control-label">Mobile</label>
-                                <div class="checkbox"><input type="checkbox" name="mobileFast" value="2"> <span class="label fast">Fast Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileSlow" value="3"> <span class="label slow">Slow Ring</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileReleasePreview" value="5"> <span class="label release">Release Preview</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="mobileBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
+                                <div class="checkbox"><input type="checkbox" name="pcLTS" value="8"> <span class="label ltsc">LTSC</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Xbox</label>
@@ -154,13 +140,17 @@
                                 <label for="ring" class="control-label">Server</label>
                                 <div class="checkbox"><input type="checkbox" name="serverSlow" value="3"> <span class="label slow">Preview</span></div>
                                 <div class="checkbox"><input type="checkbox" name="serverTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
-                                <div class="checkbox"><input type="checkbox" name="serverLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
+                                <div class="checkbox"><input type="checkbox" name="serverLTS" value="8"> <span class="label ltsc">LTSC</span></div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm">
+                                <label for="ring" class="control-label">10X</label>
+                                <div class="checkbox"><input type="checkbox" name="tenXSlow" value="3"> <span class="label slow">Preview</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">Holographic</label>
                                 <div class="checkbox"><input type="checkbox" name="holographicTargeted" value="6"> <span class="label targeted">Semi-Annual Targeted</span></div>
                                 <div class="checkbox"><input type="checkbox" name="holographicBroad" value="7"> <span class="label broad">Semi-Annual Broad</span></div>
-                                <div class="checkbox"><input type="checkbox" name="holographicLTS" value="8"> <span class="label ltsc">Long-Term Servicing Channel</span></div>
+                                <div class="checkbox"><input type="checkbox" name="holographicLTS" value="8"> <span class="label ltsc">LTSC</span></div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">IoT</label>
@@ -182,7 +172,7 @@
                                 <div class="checkbox"><input type="checkbox" name="sdk" value="6"> <span class="label targeted">Public</span></div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="fad fa-fw fa-plus"></i> Add</button>
+                                <button type="submit" class="btn btn-primary btn-block mt-3"><i class="far fa-fw fa-plus"></i> Add</button>
                             </div>
                         </form>
                     </div>

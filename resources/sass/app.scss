@@ -1,5 +1,5 @@
 /*
- * ChangeWindows (c) 2014-2019
+ * ChangeWindows (c) 2014-2020
  * Licensed under AGPL
  */
 
@@ -38,6 +38,15 @@
 // Themes
 @import 'themes';
 
+body {
+    min-height: 100vh;
+}
+
+// Utils
+.bg-g-primary {
+    background-image: linear-gradient(90deg, #0078d7 0%, #0059be 100%) !important;
+}
+
 // Hero
 .hero {
     background-repeat: no-repeat;
@@ -60,7 +69,6 @@
     }
 
     &:hover {
-        transform: translate(0, -3px);
         box-shadow: 0 8px 18px 0 rgba(0,0,0,.3);
     }
 
@@ -108,7 +116,7 @@
 .row {
     margin-right: -5px;
     margin-left: -5px;
-  
+
     > .col,
     > [class*="col-"] {
       padding-right: 5px;
@@ -134,7 +142,24 @@
 
 // Footer
 footer {
-    padding-bottom: 20px;
+    a {
+        color: #222;
+
+        &:hover {
+            text-decoration: none;
+            color: #222;
+        }
+    }
+
+    .f-gilroy {
+    font-family: Gilroy, "Segoe UI";
+    }
+
+    .luna {
+    background-image: linear-gradient( -45deg, #0053a0 0%, #00b8a2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 }
 
 // Login
@@ -146,9 +171,9 @@ footer {
 
     .login-logo {
         display: block;
-        width: 84px;
+        width: 56px;
         height: auto;
-        margin: 20px auto;
+        margin: 56px 32px;
     }
 
     .btn {

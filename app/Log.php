@@ -4,21 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Changelog extends Model
+class Log extends Model
 {
-    protected $table = 'changelogs';
+    protected $table = 'logs';
 
     protected $dates = ['created_at', 'updated_at'];
 
-    protected $fillable = array('build', 'delta', 'platform', 'changelog');
+    protected $fillable = array('milestone_id', 'platform', 'changelog');
 
-    static function splitString( $build_string ) {
-        $temp = explode('.', $build_string);
-
-        $string['build'] = $temp[0];
-        $string['delta'] = $temp[1];
-
-        return $string;
+    public function milestone() {
+        return $this->hasOne('App\Milestone', 'id', 'milestone_id');
     }
 
     public function getDeviceAttribute() {
@@ -32,6 +27,7 @@ class Changelog extends Model
             case 7:     return 'Team';
             case 8:     return 'ISO';
             case 9:     return 'SDK';
+            case 10:    return '10X';
             default:    return;
         }
     }

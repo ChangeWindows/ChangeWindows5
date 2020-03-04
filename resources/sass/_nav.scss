@@ -1,49 +1,41 @@
 .nav {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    margin-top: 0 !important;
 
     .nav-link {
         border: none;
-        border-bottom: 2px solid transparent;
-        padding: 6px 0;
-        margin: 0 10px 4px;
+        padding: 7px 12px;
+        margin: 0;
         opacity: .8;
-        transition: all .2s ease-in;
-
-        &:first-child {
-            margin-left: 0;
-        }
-    
-        &:last-child {
-            margin-right: 0;
-        }
+        transition: all .2s ease-in-out;
+        display: inline-block;
 
         &.active {
-            border-bottom-color: $accent;
-            box-shadow: 0 5px 8px -7px $accent;
-            background: transparent;
-            opacity: 1;
+            position: relative;
+
+            &::after {
+                background-color: $accent;
+                width: calc(100% - (12px * 2));
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 12px;
+                content: "";
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
         }
 
         &:hover {
             opacity: 1;
+            background: rgba(170,170,170,.2);
         }
-    }
-}
-
-.nav-scroll {
-    position: relative;
-    z-index: 2;
-    height: 53px;
-    overflow-y: hidden;
-
-    nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
     }
 }

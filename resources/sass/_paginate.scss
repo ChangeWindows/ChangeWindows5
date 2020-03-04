@@ -6,19 +6,44 @@
         .page-link {
             background-color: transparent;
             border: none;
-            border-bottom: 2px solid transparent;
             border-radius: 0;
             text-align: center;
             color: #fff;
+            margin: 0;
+            padding: 7px 12px;
+
+            &:focus {
+                box-shadow: none;
+            }
         }
 
         &:not(.disabled) {
+            &.active {
+                position: relative;
+
+                &::after {
+                    background-color: $accent;
+                    width: calc(100% - (12px * 2));
+                    height: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 12px;
+                    content: "";
+                    transition: all .2s ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+
             &.active,
             &:hover {
                 .page-link {
                     background-color: transparent;
-                    border-bottom: 2px solid $accent;
-                    box-shadow: 0 5px 8px -7px $accent;
                     color: #fff;
                 }
             }
@@ -28,6 +53,11 @@
             .page-link {
                 color: #666;
             }
+        }
+
+        &:hover {
+            opacity: 1;
+            background: rgba(170,170,170,.2);
         }
     }
 }
