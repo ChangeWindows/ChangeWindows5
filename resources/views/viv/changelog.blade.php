@@ -4,6 +4,11 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.1.0 <small>4 March 2020</small></h3>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>Changes the version number</p>
+</section>
+<section class="release-notes">
     <h3>5.1-beta.1 <small>18 February 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>The old build-specific links will now redirect to the milestone-specific pages</p>
