@@ -13,12 +13,12 @@
         "@fortawesome/fontawesome-pro": "5.12.1",
         "axios": "0.19.2",
         "bootstrap": "4.4.1",
-        "cross-env": "7.0.0",
+        "cross-env": "7.0.2",
         "jquery": "^3.4.1",
-        "laravel-mix": "5.0.1",
+        "laravel-mix": "5.0.4",
         "lodash": "4.17.15",
         "popper.js": "1.16.1",
-        "sass": "1.25.0",
+        "sass": "1.26.3",
         "sass-loader": "8.0.2",
         "vue-template-compiler": "^2.6.11"
     }
