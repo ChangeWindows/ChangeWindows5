@@ -22,7 +22,7 @@ This repository is a big shift for ChangeWindows from the previous 4 major versi
 ## Using
 To run ChangeWindows, you'll need the following:
 
-* PHP 7.1.3 or higher, including extensions required by Laravel 5.7
+* PHP 7.2.0 or higher, including extensions required by Laravel 6.x
 * MySQL
 * Composer
 * NPM
