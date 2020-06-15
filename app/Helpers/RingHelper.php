@@ -23,6 +23,8 @@ function getTweetRingById($id, $platform) {
             return 'Skip Ahead';
         case 2:
             switch ($platform) {
+                case 1:
+                    return 'Dev';
                 case 3:
                     return 'Alpha';
                 default:
@@ -30,9 +32,9 @@ function getTweetRingById($id, $platform) {
             }
         case 3:
             switch ($platform) {
+                case 1:
                 case 3:
                     return 'Beta';
-                case 1:
                 case 2:
                 case 5:
                     return 'Slow';
@@ -56,7 +58,7 @@ function getTweetRingById($id, $platform) {
                 case 9:
                     return 'Public';
                 default:
-                    return 'SAC Targeted';
+                    return 'SAC';
             }
         case 7:
             return 'SAC Broad';

@@ -64,7 +64,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => null]) }}">All</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'skip']) }}">Fast Skip Ahead/Alpha Skip Ahead</a>
-                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'fast']) }}">Fast Active/ Alpha Active/Fast</a>
+                    <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'fast']) }}">Fast Active/Alpha Active/Fast/Dev</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'slow']) }}">Slow/Beta/Preview</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'preview']) }}">Delta</a>
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'release']) }}">Release Preview/Omega</a>
@@ -219,9 +219,9 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm">
                                 <label for="ring" class="control-label">PC</label>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f12" name="flight[1][2]" value="2"><label class="custom-control-label" for="f12"><span class="label fast">Fast Ring</span></label></label></div>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f13" name="flight[1][3]" value="3"><label class="custom-control-label" for="f13"><span class="label slow">Slow Ring</span></label></label></div>
-                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f15" name="flight[1][5]" value="5"><label class="custom-control-label" for="f15"><span class="label release">Release Preview Ring</span></label></label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f12" name="flight[1][2]" value="2"><label class="custom-control-label" for="f12"><span class="label fast">Dev</span></label></label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f13" name="flight[1][3]" value="3"><label class="custom-control-label" for="f13"><span class="label slow">Beta</span></label></label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f15" name="flight[1][5]" value="5"><label class="custom-control-label" for="f15"><span class="label release">Release Preview</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f16" name="flight[1][6]" value="6"><label class="custom-control-label" for="f16"><span class="label targeted">Semi-Annual Targeted</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f17" name="flight[1][7]" value="7"><label class="custom-control-label" for="f17"><span class="label broad">Semi-Annual Broad</span></label></label></div>
                                 <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="f18" name="flight[1][8]" value="8"><label class="custom-control-label" for="f18"><span class="label ltsc">LTSC</span></label></label></div>
