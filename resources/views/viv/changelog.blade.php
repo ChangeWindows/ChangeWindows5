@@ -4,6 +4,23 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.1.0 <small>4 March 2020</small></h3>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>Changes the version number</p>
+</section>
+<section class="release-notes">
+    <h3>5.1-beta.1 <small>18 February 2020</small></h3>
+    <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>The old build-specific links will now redirect to the milestone-specific pages</p>
+    <p>Adds a Patreon link to the footer</p>
+    <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
+    <p>Updates the URLs included in automated tweets</p>
+    <h4><i class="far fa-fw fa-trash-alt"></i> Removed</h4>
+    <p>Removes support for Windows 8.x and Windows Phone 7.x and 8.x</p>
+    <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where new logs could not be made</p>
+</section>
+<section class="release-notes">
     <h3>5.1-alpha.3 <small>13 February 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Starts adding logic to track Windows 10X builds</p>
