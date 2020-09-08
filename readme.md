@@ -22,7 +22,7 @@ This repository is a big shift for ChangeWindows from the previous 4 major versi
 ## Using
 To run ChangeWindows, you'll need the following:
 
-* PHP 7.1.3 or higher, including extensions required by Laravel 5.7
+* PHP 7.2.0 or higher, including extensions required by Laravel 6.x
 * MySQL
 * Composer
 * NPM
@@ -68,19 +68,3 @@ If you discover a security vulnerability within ChangeWindows, please contact us
 
 ## License
 The ChangeWindows website is open-sourced software licensed under the [AGPL license](LICENSE). Note however that the content on our website isn't unless stated otherwise.
-
-## 5.1 migration notes
-```sql
---Stable enabled
-alter table `milestones` drop `description`;
-alter table `milestones` drop `mobileFast`;
-alter table `milestones` drop `mobileSlow`;
-alter table `milestones` drop `mobileReleasePreview`;
-alter table `milestones` drop `mobileTargeted`;
-alter table `milestones` drop `mobileBroad`;
-delete from `releases` where `releases`.`build` >= 18362 and `releases`.`ring` = 7;
-
---Preview enabled
-create table `logs` (`id` int unsigned not null auto_increment primary key, `milestone_id` varchar(191) not null, `platform` int not null, `changelog` text not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
-alter table `milestones` add `tenXSlow` int unsigned not null after `holographicLTS`;
-```
