@@ -47,6 +47,8 @@ class Release extends Model implements Feedable
             return 'Skip';
         if ( $this->ring == 2 )
             switch ( $this->platform ) {
+                case 1:
+                    return 'Dev';
                 case 3:
                     return 'Alpha';
                 default:
@@ -55,11 +57,11 @@ class Release extends Model implements Feedable
         if ( $this->ring == 3 )
             switch ( $this->platform ) {
                 case 1:
+                    case 3:
+                    return 'Beta';
                 case 2:
                 case 5:
                     return 'Slow';
-                case 3:
-                    return 'Beta';
                 default:
                     return 'Preview';
             }
@@ -72,6 +74,8 @@ class Release extends Model implements Feedable
             }
         if ( $this->ring == 5 )
             switch ( $this->platform ) {
+                case 1:
+                    return 'Release Preview';
                 case 3:
                     return 'Omega';
                 default:

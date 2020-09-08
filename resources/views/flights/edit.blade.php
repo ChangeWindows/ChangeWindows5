@@ -66,7 +66,7 @@
                 <option value="0" {{ $flight->ring == 0 ? 'selected' : ''}}>vNext</option>
                 <option value="1" {{ $flight->ring == 1 ? 'selected' : ''}}>Fast Ring Skip Ahead</option>
                 <option value="2" {{ $flight->ring == 2 ? 'selected' : ''}}>Fast Ring Active/Alpha</option>
-                <option value="3" {{ $flight->ring == 3 ? 'selected' : ''}}>Slow Ring/Beta/Preview</option>
+                <option value="3" {{ $flight->ring == 3 ? 'selected' : ''}}>Slow Ring/Beta/Preview/Dev</option>
                 <option value="4" {{ $flight->ring == 4 ? 'selected' : ''}}>Delta</option>
                 <option value="5" {{ $flight->ring == 5 ? 'selected' : ''}}>Release Preview Ring/Omega Ring</option>
                 <option value="6" {{ $flight->ring == 6 ? 'selected' : ''}}>Semi-Annual Channel Targeted/Release</option>
