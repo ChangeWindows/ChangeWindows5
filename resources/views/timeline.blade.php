@@ -113,7 +113,7 @@
                 </div>
             @endif
         </div>
-        {{ $releases->links() }}
+        {{ $releases->appends(['platform' => $request->platform, 'ring' => $request->ring])->links() }}
     </div>
     <div class="d-none d-lg-block col-lg-5">
         <div class="row row-gutter">
