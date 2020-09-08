@@ -4,6 +4,17 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.1.1 <small>8 September 2020</small></h3>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>Update ring names to match the latest terminology from Microsoft</p>
+    <h4><i class="far fa-fw fa-server"></i> System</h4>
+    <p>Update to Laravel 6.18</p>
+    <p>Update to Font Awesome 5.14</p>
+    <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
+    <p>Fixes an issue where the pagination wouldn't remember the filter parameters</p>
+    <p>Fixes an issue where the social links for GitHub and Twitter didn't match their icon</p>
+</section>
+<section class="release-notes">
     <h3>5.1.0 <small>4 March 2020</small></h3>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
     <p>Changes the version number</p>
