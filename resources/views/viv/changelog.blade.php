@@ -4,6 +4,15 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.3.0 <small>19 October 2020</small></h3>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>Updates the error page design to use the new ChangeWindows logo</p>
+    <p>Updated Studio 384 branding</p>
+    <h4><i class="far fa-fw fa-server"></i> System</h4>
+    <p>Update to Laravel 8.10</p>
+    <p>Update to Font Awesome 5.15</p>
+</section>
+<section class="release-notes">
     <h3>5.2.0 <small>8 September 2020</small></h3>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
     <p>Update ring names to match the latest terminology from Microsoft</p>

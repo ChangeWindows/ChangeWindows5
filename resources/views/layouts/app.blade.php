@@ -136,10 +136,10 @@
                     <div class="row mt-4 mb-4">
                         <div class="col-6">
                             <span class="h4 mb-2"><span class="font-weight-bold">ChangeWindows</span></span>
-                            <p class="mb-0">{{ config('app.viv') }} &middot; 2014-2020 &copy; <a href="https://studio384.be">.384</a></p>
+                            <p class="mb-0">{{ config('app.viv') }} &middot; 2014-2020 &copy; <a href="https://studio384.be">Studio 384</a></p>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="https://studio384.be" class="h4 f-gilroy font-weight-bold">.<span class="luna">384</span></a>
+                            <a href="https://studio384.be" class="h4 f-384 font-weight-bold">.<span class="luna">384</span></a>
                         </div>
                         <div class="col-12 text-right">
                             <span class="m-0">

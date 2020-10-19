@@ -51,6 +51,13 @@ npm run watch
 
 This will compile various files, mostly SCSS and keep an eye out for changes.
 
+For a production build, execute the following commands:
+
+```
+composer install --prefer-dist --no-scripts --no-dev -o
+npm install --production
+```
+
 ### Login details
 After migrating and seeding the database, there will be 3 accounts from the start.
 

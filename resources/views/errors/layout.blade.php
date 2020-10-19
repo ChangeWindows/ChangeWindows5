@@ -6,10 +6,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Fonts -->
-        <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
         <!-- Styles -->
         <style>
         html {
@@ -30,7 +26,7 @@
             transition: all .5s;
             border-radius: 3px;
             color: #fff;
-            background: #ff4355;
+            background: #0078d7;
             text-decoration: none;
             font-size: 18px;
             font-weight: 700;
@@ -56,7 +52,7 @@
         }
 
         .bg-line {
-            background-color: #ff4355;
+            background-color: #0078d7;
         }
 
         .bg-no-repeat {
