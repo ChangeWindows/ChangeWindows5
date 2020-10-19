@@ -16,7 +16,7 @@ class Release extends Model implements Feedable
 
     protected $fillable = array('major', 'minor', 'build', 'delta', 'milestone', 'platform', 'ring', 'date');
 
-    public function toFeedItem()
+    public function toFeedItem(): FeedItem
     {
         return FeedItem::create([
             'id' => $this->build,
