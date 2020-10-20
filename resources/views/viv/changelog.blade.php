@@ -4,6 +4,11 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.3.1 <small>20 October 2020</small></h3>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>Updates milestone build range definitions</p>
+</section>
+<section class="release-notes">
     <h3>5.3.0 <small>19 October 2020</small></h3>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
     <p>Updates the error page design to use the new ChangeWindows logo</p>
