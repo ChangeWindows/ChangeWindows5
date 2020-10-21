@@ -176,7 +176,9 @@ class Release extends Model implements Feedable
             return '19h2';
         else if ( $build < 19100 )
             return '20h1';
-        else if ( $build < 19800 )
+        else if ( $build < 19043 )
+            return '20h2';
+        else if ( $build < 20400 )
             return '21h1';
         else
             return '21h1';
