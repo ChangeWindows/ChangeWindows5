@@ -78,6 +78,19 @@ $themes: (
             background: map-get($color, background-header);
         }
 
+        footer {
+            background-color: map-get($color, background-header) !important;
+
+            a {
+            color: map-get($color, text);
+        
+                &:hover {
+                    text-decoration: none;
+                    color: map-get($color, text);
+                }
+            }
+        }
+
         .jumbotron {
             background-color: map-get($color, background-header) !important;
             color: map-get($color, text);
