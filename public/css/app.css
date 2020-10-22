@@ -11893,6 +11893,16 @@ span.CodeMirror-selectedtext {
 .white .navbg {
   background: #eaeaea;
 }
+.white footer {
+  background-color: #eaeaea !important;
+}
+.white footer a {
+  color: #222;
+}
+.white footer a:hover {
+  text-decoration: none;
+  color: #222;
+}
 .white .jumbotron {
   background-color: #eaeaea !important;
   color: #222;
@@ -12069,6 +12079,16 @@ span.CodeMirror-selectedtext {
 }
 .light .navbg {
   background: #d2d2d2;
+}
+.light footer {
+  background-color: #d2d2d2 !important;
+}
+.light footer a {
+  color: #000;
+}
+.light footer a:hover {
+  text-decoration: none;
+  color: #000;
 }
 .light .jumbotron {
   background-color: #d2d2d2 !important;
@@ -12247,6 +12267,16 @@ span.CodeMirror-selectedtext {
 .dark .navbg {
   background: #1d1d1d;
 }
+.dark footer {
+  background-color: #1d1d1d !important;
+}
+.dark footer a {
+  color: #fff;
+}
+.dark footer a:hover {
+  text-decoration: none;
+  color: #fff;
+}
 .dark .jumbotron {
   background-color: #1d1d1d !important;
   color: #fff;
@@ -12423,6 +12453,16 @@ span.CodeMirror-selectedtext {
 }
 .black .navbg {
   background: #151515;
+}
+.black footer {
+  background-color: #151515 !important;
+}
+.black footer a {
+  color: #fff;
+}
+.black footer a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 .black .jumbotron {
   background-color: #151515 !important;
