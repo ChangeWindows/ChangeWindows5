@@ -11,15 +11,15 @@
     },
     "devDependencies": {
         "@fortawesome/fontawesome-pro": "5.15.1",
-        "axios": "0.20.0",
+        "axios": "0.21.0",
         "bootstrap": "4.5.3",
         "cross-env": "7.0.2",
         "jquery": "3.5.1",
-        "laravel-mix": "5.0.7",
+        "laravel-mix": "5.0.9",
         "lodash": "4.17.20",
         "popper.js": "1.16.1",
-        "sass": "1.27.0",
-        "sass-loader": "10.0.3",
+        "sass": "1.29.0",
+        "sass-loader": "10.1.0",
         "vue-template-compiler": "2.6.12"
     }
 }
