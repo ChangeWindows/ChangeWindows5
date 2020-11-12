@@ -1,0 +1,48 @@
+.nav {
+    &.nav-underline {
+        margin: .5rem 0;
+
+        .nav-link {
+            padding: 0;
+            color: #000;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: -8px;
+                    left: 0;
+                    transition: all .2s ease-in-out;
+                    background-color: $primary;
+                }
+            }
+
+            &.active {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: -8px;
+                    left: 0;
+                    transition: all .2s ease-in-out;
+                    background-color: $primary;
+                }
+
+                &:hover {
+                    &::after {
+                        width: calc(100% + 10px);
+                        left: -5px;
+                    }
+                }
+            }
+        }
+    }
+}

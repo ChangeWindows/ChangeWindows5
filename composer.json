@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.2.0",
         "barryvdh/laravel-cors": "^2.0",
+        "blade-ui-kit/blade-ui-kit": "^0.2",
         "erusev/parsedown": "^1.7",
         "facade/ignition": "^2.3.6",
         "fideloper/proxy": "^4.0",
@@ -16,7 +17,8 @@
         "laravel/ui": "^3.0",
         "spatie/laravel-feed": "^3.0",
         "thujohn/twitter": "^2.2",
-        "tymon/jwt-auth": "^1.0"
+        "tymon/jwt-auth": "^1.0",
+        "spatie/laravel-searchable": "^1.7"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

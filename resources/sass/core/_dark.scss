@@ -1,0 +1,202 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: darken($dark, 12);
+        color: #fff;
+    }
+
+    .content {
+        background-color: darken($dark, 6);
+    }
+
+    .acrylic-20-light {
+        background-color: rgba(0,0,0,.6);
+        backdrop-filter: blur(20px);
+    }
+
+    .avatar-bar {
+        &.default {
+            .icon-avatar {
+                border-color: $dark;
+            }
+        }
+    }
+
+    .card {
+        background-color: $dark;
+
+        .card-img-top {
+            background-color: lighten($dark, 3);
+        }
+
+        .card-body {
+            &.bg-light {
+                background-color: lighten($dark, 2) !important;
+            }
+        }
+    }
+
+    .nav {
+        &.nav-underline {
+            .nav-link {
+                color: #fff;
+            }
+        }
+    }
+
+    .navbar {
+        &.bg-light {
+            background-color: darken($dark, 9) !important;
+        }
+
+        .nav-item {
+            .nav-link,
+            .nav-link:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .dropdown {
+        .dropdown-menu {
+            background-color: darken($dark, 6);
+
+            .dropdown-item {
+                color: #fff;
+
+                &.disabled {
+                    color: rgba(255,255,255,.6);
+                }
+
+                &:focus {
+                    background-color: darken($dark, 6);
+                }
+            }
+        }
+    }
+
+    .page-bar {
+        background-color: rgba(darken($dark, 6), .9);
+    }
+
+    .form-control,
+    .form-select {
+        color: #fff;
+        background-color: lighten($dark, 3);
+        border-color: lighten($dark, 9);
+
+        &:active,
+        &:focus {
+            background-color: lighten($dark, 3);
+            border-color: $primary;
+        }
+
+        &::file-selector-button,
+        &::-webkit-file-upload-button {
+            border-color: lighten($dark, 9);
+            background-color: lighten($dark, 3);
+        }
+    }
+
+    .editor-toolbar {
+        border-color: lighten($dark, 9) !important;
+
+        button {
+            color: #fff !important;
+
+            &:hover {
+                background-color: darken($dark, 3) !important;
+                border-color: darken($dark, 6) !important;
+            }
+        }
+
+        .separator {
+            border-left-color: darken($dark, 6) !important;
+            border-right: none !important;
+        }
+    }
+
+    .CodeMirror {
+        background-color: lighten($dark, 3) !important;
+        border-color: lighten($dark, 9) !important;
+        color: #fff !important;
+    }
+
+    .navbar-light .navbar-toggler {
+        color: rgba(255,255,255,.55);
+        border-color: rgba(255,255,255,.1);
+    }
+
+    .link-dark {
+        color: #fff;
+
+        &:hover {
+            color: darken(#fff, 15);
+        }
+    }
+
+    .text-muted {
+        color: $gray-400 !important;
+    }
+
+    .stats {
+        .count {
+            small {
+                color: $gray-400;
+            }
+        }
+    }
+
+    .table {
+        color: #fff !important;
+
+        &.table-striped {
+            tbody {
+                tr:nth-of-type(odd) {
+                    color: #fff !important;
+                }
+            }
+        }
+
+        thead {
+            th {
+                border-bottom: 2px solid darken($dark, 6) !important;
+            }
+        }
+
+        td {
+            border-bottom-color: darken($dark, 6);
+        }
+    }
+    
+    .f-384 {
+        color: #fff;
+    
+        &:hover {
+            color: #ddd !important;
+        }
+    }
+
+    .modal-content {
+        background: $dark;
+    }
+
+    body {
+        scrollbar-color: lighten($dark, 6) $dark;
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: lighten($dark, 6);
+        }
+    }
+
+    .btn-close {
+        color: #fff !important;
+    }
+
+    .input-group-prepend {
+        .input-group-text {
+            color: $light;
+            background-color: $dark;
+            border-color: lighten($dark, 9);
+        }
+    }
+}

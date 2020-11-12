@@ -1,0 +1,18 @@
+.modal {
+    .modal-header {
+        border-bottom: none;
+
+        .modal-title {
+            font-size: $h6-font-size;
+        }
+
+        .close {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+
+    .modal-footer {
+        border-top: none;
+    }
+}

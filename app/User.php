@@ -11,31 +11,15 @@ class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
-    protected $fillable = [ 'name', 'email', 'password', 'theme' ];
-    protected $hidden = [ 'password', 'remember_token', ];
+    protected $fillable = ['name', 'email', 'password', 'theme'];
+    protected $hidden = ['password', 'remember_token'];
 
-    public function roles() {
-        return $this->belongsToMany(Role::class);
+    public function role() {
+        return $this->belongsTo(Role::class);
     }
 
-    public function authorizeRoles($roles) {
-        if (is_array($roles)) {
-            return $this->hasAnyRole($roles) || abort(401, 'This action is unauthorized.');
-        }
-
-        return $this->hasRole($roles) || abort(401, 'This action is unauthorized.');
-    }
-
-    public function hasAnyRole($roles) {
-        return null !== $this->roles()->whereIn('name', $roles)->first();
-    }
-
-    public function hasRole($role) {
-        return null !== $this->roles()->where('name', $role)->first();
-    }
-
-    public function getRoles() {
-        return $this->roles()->firstOrFail();
+    public function abilities() {
+        return $this->role->abilities->flatten()->pluck('name')->unique();
     }
     
     public function getJWTIdentifier() {
@@ -46,9 +30,17 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
-    public function setPasswordAttribute($password){
+    public function setPasswordAttribute($password) {
         if (!empty($password)) {
             $this->attributes['password'] = bcrypt($password);
+        }
+    }
+
+    public function getAvatarAttribute() {
+        if ($this->media_id) {
+            return $this->media->path();
+        } else {
+            return asset('img/models/user.png');
         }
     }
 }

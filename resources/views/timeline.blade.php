@@ -73,9 +73,9 @@
                     <a class="dropdown-item" href="{{ route('timeline', ['platform' => $request->platform, 'ring' => 'lts']) }}">Long-Term Servicing</a>
                 </div>
                 @auth
-                    @if (Auth::user()->hasAnyRole(['Admin']))
+                    @can('create_flight')
                         <a class="btn btn-light btn-filter" href="#newBuildModal" data-toggle="modal" data-target="#newBuildModal"><span class="filter-title"><i class="far text-primary fa-fw fa-plus"></i> Flight</span></a>
-                    @endif
+                    @endcan
                 @endauth
             </div>
         </div>
@@ -189,7 +189,7 @@
 
 @section('modals')
 @auth
-    @if (Auth::user()->hasAnyRole(['Admin']))
+    @can('create_flight')
         <div class="modal fade" id="newBuildModal" tabindex="-1" role="dialog" aria-labelledby="newBuildModal" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -282,6 +282,6 @@
                 </div>
             </div>
         </div>
-    @endif
+    @endcan
 @endauth
 @endsection

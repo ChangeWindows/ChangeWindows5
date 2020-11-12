@@ -75,3 +75,15 @@ If you discover a security vulnerability within ChangeWindows, please contact us
 
 ## License
 The ChangeWindows website is open-sourced software licensed under the [AGPL license](LICENSE). Note however that the content on our website isn't unless stated otherwise.
+
+## Version 6.0 migraiton
+```sql
+alter table `roles` add `is_default` int not null default '0' after `description`;
+alter table `users` add `onboarding` varchar(191) null after `email`, add `role_id` bigint unsigned not null;
+alter table `users` add constraint `users_role_id_foreign` foreign key (`role_id`) references `roles` (`id`);
+create table `abilities` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `label` varchar(191) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+create table `ability_role` (`role_id` bigint unsigned not null, `ability_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `ability_role` add primary key `ability_role_role_id_ability_id_primary`(`role_id`, `ability_id`);
+alter table `ability_role` add constraint `ability_role_role_id_foreign` foreign key (`role_id`) references `roles` (`id`) on delete cascade;
+alter table `ability_role` add constraint `ability_role_ability_id_foreign` foreign key (`ability_id`) references `abilities` (`id`) on delete cascade;
+```

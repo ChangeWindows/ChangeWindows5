@@ -96,14 +96,16 @@
                                     <i class="far fa-fw fa-user-circle"></i><span class="d-none d-md-inline"> {{ Auth::user()->name }}<span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @if (Auth::user()->hasAnyRole(['Admin']))
+                                    @can('view_backstage')
+                                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-seedling"></i> Backstage</a>
+                                        <div class="dropdown-divider"></div>
                                         @yield('toolset')
                                         <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="far fa-fw fa-plane"></i> Flights</a>
                                         <a class="dropdown-item" href="{{ route('showLogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>
                                         <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="far fa-fw fa-users"></i> Users</a>
                                         <a class="dropdown-item" href="{{ route('showPatreon') }}"><i class="fab fa-fw fa-patreon"></i> Patrons</a>
                                         <div class="dropdown-divider"></div>
-                                    @endif
+                                    @endcan
                                     <a class="dropdown-item" href="{{ route('profile') }}"><i class="far fa-fw fa-cog"></i> Settings</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="far fa-fw fa-sign-out"></i> Log out</a>

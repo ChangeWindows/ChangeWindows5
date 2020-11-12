@@ -67,3 +67,56 @@ Route::get('/patreons/{id}/edit', 'PatreonController@edit')->name('editPatreon')
 Route::post('/patreons', 'PatreonController@store')->name('storePatreon');
 Route::patch('/patreons/{id}', 'PatreonController@update')->name('updatePatreon');
 Route::delete('/patreons/{id}', 'PatreonController@destroy')->name('deletePatreon');
+
+Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
+    // Dashboard
+    Route::get('', 'Admin\DashboardController@index');
+
+    Route::prefix('dashboard')->name('.dashboard')->group(function() {
+        Route::get('', 'Admin\DashboardController@index')->name('');
+        Route::put('/onboarding', 'Admin\DashboardController@onboarding')->name('.onboarding');
+    });
+
+    // Search
+    Route::prefix('search')->name('.search')->group(function() {
+        Route::get('', 'Admin\SearchController@index')->name('');
+        Route::post('', 'Admin\SearchController@results')->name('.find');
+    });
+
+    // About
+    Route::get('/about', 'Admin\AboutController@index')->name('.about');
+
+    // Settings
+    Route::prefix('settings')->name('.settings')->group(function() {
+        Route::get('', 'Admin\SettingsController@indexGeneral')->name('');
+        Route::get('/general', 'Admin\SettingsController@indexGeneral')->name('.general');
+        Route::patch('/general',  'Admin\SettingsController@updateGeneral')->name('.general.update');
+    });
+
+    // Accounts
+    Route::prefix('accounts')->name('.accounts')->group(function() {
+        Route::get('', 'Admin\AccountController@index')->name('');
+        Route::get('/{user}', 'Admin\AccountController@edit')->name('.edit');
+        Route::patch('/{user}', 'Admin\AccountController@update')->name('.update');
+        Route::delete('/{user}', 'Admin\AccountController@destroy')->name('.delete');
+    });
+
+    // Permissions
+    Route::prefix('roles')->name('.roles')->group(function() {
+        Route::get('', 'Admin\RoleController@index')->name('');
+        Route::get('/{role}/edit', 'Admin\RoleController@edit')->name('.edit');
+        Route::patch('/{role}', 'Admin\RoleController@update')->name('.update');
+        Route::post('', 'Admin\RoleController@store')->name('.store');
+        Route::delete('/{role}', 'Admin\RoleController@destroy')->name('.delete');
+        Route::put('/{role}/toggle/{ability}', 'Admin\RoleController@toggle')->name('.toggle');
+        Route::patch('/{role}/active', 'Admin\RoleController@default')->name('.default');
+    });
+
+    Route::prefix('abilities')->name('.abilities')->group(function() {
+        Route::get('', 'Admin\AbilityController@index')->name('');
+        Route::get('/{ability}/edit', 'Admin\AbilityController@edit')->name('.edit');
+        Route::patch('/{ability}', 'Admin\AbilityController@update')->name('.update');
+        Route::post('', 'Admin\AbilityController@store')->name('.store');
+        Route::delete('/{ability}', 'Admin\AbilityController@destroy')->name('.delete');
+    });
+});

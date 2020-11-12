@@ -11,10 +11,11 @@
     },
     "devDependencies": {
         "@fortawesome/fontawesome-pro": "5.15.1",
+        "alpinejs": "2.7.3",
         "axios": "0.21.0",
-        "bootstrap": "4.5.3",
+        "bootstrap": "5.0.0-alpha3",
         "cross-env": "7.0.2",
-        "jquery": "3.5.1",
+        "easymde": "2.12.1",
         "laravel-mix": "5.0.9",
         "lodash": "4.17.20",
         "popper.js": "1.16.1",
