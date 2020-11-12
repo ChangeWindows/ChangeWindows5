@@ -36,7 +36,7 @@ class RoleController extends Controller {
             $role->allowTo($ability);
         }
 
-        return redirect()->route('admin.roles.edit', $role)->with('status', 'De rol <b>'.$role->name.'</b> heeft nu de <b>'.$ability->name.'</b>-permissie.');
+        return redirect()->route('admin.roles.edit', $role)->with('status', 'The role <b>'.$role->name.'</b> now has the <b>'.$ability->name.'</b>-permission.');
     }
 
     /**
@@ -51,9 +51,6 @@ class RoleController extends Controller {
         $this->validate(request(), [
             'name' => ['required'],
             'description' => ['required']
-        ], [
-            'name.required' => 'De rol moet een naam hebben.',
-            'description.required' => 'De rol moet een beschrijving hebben.'
         ]);
 
         $role = Role::create([
@@ -61,7 +58,7 @@ class RoleController extends Controller {
             'description' => request('description')
         ]);
 
-        return redirect()->route('admin.roles.edit', $role)->with('status', 'De rol <b>'.$role->name.'</b> is aangemaakt, je kan het nu bewerken.');
+        return redirect()->route('admin.roles.edit', $role)->with('status', 'The role <b>'.$role->name.'</b> has been created.');
     }
 
     /**
@@ -91,9 +88,6 @@ class RoleController extends Controller {
         $this->validate(request(), [
             'name' => ['required'],
             'description' => ['required']
-        ], [
-            'name.required' => 'De rol moet een naam hebben.',
-            'description.required' => 'De rol moet een beschrijving hebben.'
         ]);
 
         $role->update([
@@ -101,7 +95,7 @@ class RoleController extends Controller {
             'description' => request('description')
         ]);
 
-        return redirect()->route('admin.roles')->with('status', 'De wijzigingen voor <b>'.$role->name.'</b> zijn opgeslagen.');
+        return redirect()->route('admin.roles')->with('status', 'The changes for <b>'.$role->name.'</b> have been stored.');
     }
 
     /**
@@ -115,7 +109,7 @@ class RoleController extends Controller {
 
         $role->delete();
 
-        return redirect()->route('admin.roles')->with('status', 'De rol <b>'.$role->title.'</b> is verwijderd.');
+        return redirect()->route('admin.roles')->with('status', 'The role <b>'.$role->title.'</b> has been removed.');
     }
 
     public function default(Role $role) {
@@ -124,11 +118,11 @@ class RoleController extends Controller {
         $default_roles = Role::where('is_default', 1)->get();
 
         foreach ($default_roles as $default_role) {
-            $default_role->update([ 'is_default' => 0 ]);
+            $default_role->update(['is_default' => 0]);
         }
 
-        $role->update([ 'is_default' => 1 ]);
+        $role->update(['is_default' => 1]);
 
-        return redirect()->route('admin.roles')->with('status', '<b>'.$role->name.'</b> is nu de standaard rol voor nieuwe gebruikers.');
+        return redirect()->route('admin.roles')->with('status', '<b>'.$role->name.'</b> is now the default role for new users.');
     }
 }

@@ -48,24 +48,16 @@ class AccountController extends Controller {
         $this->validate(request(), [
             'name' => ['required'],
             'role_id' => ['required'],
-            'phone' => ['required'],
             'email' => ['required', 'email']
-        ], [
-            'name.required' => 'De achternaam is vereist.',
-            'role_id.required' => 'De permissie is vereist.',
-            'phone.required' => 'Het telefoonnummer is vereist.',
-            'email.required' => 'Het e-mail adres is vereist.',
-            'email.email' => 'Het gegeven e-mail adres is niet geldig.',
         ]);
 
         $user->update([
             'name' => request('name'),
             'role_id' => request('role_id'),
-            'email' => request('email'),
-            'phone' => request('phone')
+            'email' => request('email')
         ]);
 
-        return redirect()->route('admin.accounts')->with('status', 'De wijzigingen voor <b>'.$user->name.'</b> zijn opgeslagen.');
+        return redirect()->route('admin.accounts')->with('status', 'The changes for <b>'.$user->name.'</b> have been saved.');
     }
 
     /**
@@ -79,6 +71,6 @@ class AccountController extends Controller {
 
         $user->delete();
 
-        return redirect()->route('admin.users')->with('status', 'De gebruiker <b>'.$user->name.'</b> is verwijderd.');
+        return redirect()->route('admin.users')->with('status', 'The account <b>'.$user->name.'</b> has been removed.');
     }
 }

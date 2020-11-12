@@ -66,8 +66,9 @@
                                         Content <i class="far fa-angle-down ml-1"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="websiteDropdown">
-                                        @can('show_milestones')<a class="dropdown-item {{ request()->routeIs('admin.milestones*') ? 'active' : '' }}" href="{{ route('admin.milestones') }}"><i class="far fa-fw fa-sun"></i> Milestones</a>@endcan
-                                        @can('show_flights')<a class="dropdown-item {{ request()->routeIs('admin.flights*') ? 'active' : '' }}" href="{{ route('admin.flights') }}"><i class="far fa-fw fa-sun"></i> Flights</a>@endcan
+                                        @can('show_milestones')<a class="dropdown-item {{ request()->routeIs('admin.milestones*') ? 'active' : '' }}" href="{{ route('admin.milestones') }}"><i class="far fa-fw fa-map-signs"></i> Milestones</a>@endcan
+                                        @can('show_flights')<a class="dropdown-item {{ request()->routeIs('admin.flights*') ? 'active' : '' }}" href="{{ route('admin.flights') }}"><i class="far fa-fw fa-plane"></i> Flights</a>@endcan
+                                        @can('show_logs')<a class="dropdown-item {{ request()->routeIs('admin.logs*') ? 'active' : '' }}" href="{{ route('admin.logs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>@endcan
                                     </div>
                                 </li>
                             @endcanany

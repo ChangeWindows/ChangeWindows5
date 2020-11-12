@@ -22,6 +22,6 @@ class SettingsController extends Controller {
         Setting::where('name', 'short_name')->update(['value' => request('short_name')]);
         Setting::where('name', 'slogan')->update(['value' => request('slogan')]);
 
-        return redirect()->route('admin.settings.general')->with('status', 'All changes have been stored.');
+        return redirect()->route('admin.settings.general')->with('status', 'All changes have been saved.');
     }
 }

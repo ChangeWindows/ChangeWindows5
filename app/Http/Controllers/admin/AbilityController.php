@@ -32,9 +32,6 @@ class AbilityController extends Controller {
         $this->validate(request(), [
             'name' => ['required'],
             'label' => ['required']
-        ], [
-            'name.required' => 'De permissie moet een naam hebben.',
-            'label.required' => 'De permissie moet een label hebben.'
         ]);
 
         $ability = Ability::create([
@@ -42,7 +39,7 @@ class AbilityController extends Controller {
             'label' => request('label')
         ]);
 
-        return redirect()->route('admin.abilities.edit', $ability)->with('status', 'De permissie <b>'.$ability->name.'</b> is aangemaakt, je kan het nu bewerken.');
+        return redirect()->route('admin.abilities.edit', $ability)->with('status', 'The permission <b>'.$ability->name.'</b> has been added.');
     }
 
     /**
@@ -68,9 +65,6 @@ class AbilityController extends Controller {
         $this->validate(request(), [
             'name' => ['required'],
             'label' => ['required']
-        ], [
-            'name.required' => 'De permissie moet een naam hebben.',
-            'label.required' => 'De permissie moet een label hebben.'
         ]);
 
         $ability->update([
@@ -78,7 +72,7 @@ class AbilityController extends Controller {
             'label' => request('label')
         ]);
 
-        return redirect()->route('admin.abilities')->with('status', 'De wijzigingen voor <b>'.$ability->name.'</b> zijn opgeslagen.');
+        return redirect()->route('admin.abilities')->with('status', 'The changes for <b>'.$ability->name.'</b> have been saved.');
     }
 
     /**
