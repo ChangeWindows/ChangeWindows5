@@ -1,13 +1,13 @@
 @extends('core.layouts.app')
-@section('title') {{ $ability->name }} &middot; Permissies @endsection
+@section('title') {{ $ability->name }} &middot; Permissions @endsection
 
 @section('content')
 <div class="page-bar d-flex flex-md-row flex-column align-items-baseline p-3">
     <h1 class="h4 d-none d-md-inline-block m-0">{{ $ability->name }}</h1>
     <ol class="breadcrumb pt-2 pt-md-0">
         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-home"></i></a></li>
-        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Gebruikers</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('admin.abilities') }}">Permissies</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Users</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('admin.abilities') }}">Permissions</a></li>
         <li class="breadcrumb-item active">{{ $ability->name }}</li>
     </ol>
 </div>
@@ -29,13 +29,13 @@
                 {{ csrf_field() }}
                 <div class="card border-0 shadow p-3">
                     <h3 class="h6">
-                        Algemeen
-                        <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Opslaan</button>
+                        General
+                        <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <label class="form-label" for="name">Naam</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $ability->name) }}" name="name" id="name" required placeholder="Titel">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $ability->name) }}" name="name" id="name" required placeholder="Name">
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror

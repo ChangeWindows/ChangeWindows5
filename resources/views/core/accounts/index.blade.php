@@ -6,7 +6,7 @@
     <h1 class="h4 d-none d-md-inline-block m-0">Accounts</h1>
     <ol class="breadcrumb pt-2 pt-md-0">
         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-home"></i></a></li>
-        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Gebruikers</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Users</a></li>
         <li class="breadcrumb-item active">Accounts</li>
     </ol>
 </div>
@@ -29,8 +29,8 @@
                     @include('core.search._account', ['account' => $user])
                 @empty
                     <div class="col-12 text-center my-5">
-                        <h6>Geen accounts beschikbaar...</h6>
-                        <p>Als je dit ziet is er iets serieus mis.</p>
+                        <h6>No accounts available...</h6>
+                        <p>If you see this, something went wrong.</p>
                     </div>
                 @endforelse
             </div>

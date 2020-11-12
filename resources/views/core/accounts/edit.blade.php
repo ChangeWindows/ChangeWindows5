@@ -41,7 +41,7 @@
                             @enderror
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label" for="role">Gebruikersrol</label>
+                            <label class="form-label" for="role">Role</label>
                             <select class="form-select" @error('role') is-invalid @enderror" id="role" name="role_id" aria-describedby="roleHelp" required>
                                 @foreach ($roles as $role)
                                     <option value="{{ $role->id }}" {{ old('role_id', $user->role->id) == $role->id ? 'selected' : ''}}>{{ $role->name }}</option>
@@ -52,20 +52,11 @@
                             @enderror
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label" for="email">E-mail</label>
-                            <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $user->email) }}" id="email" name="email" aria-describedby="emailHelp" required placeholder="E-mail">
+                            <label class="form-label" for="email">Email address</label>
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $user->email) }}" id="email" name="email" aria-describedby="emailHelp" required placeholder="Email address">
                             @error('email')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                            <small id="emailHelp" class="form-text">Niet zichtbaar.</small>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label" for="phone">Telefoonnummer</label>
-                            <input type="text" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone', $user->phone) }}" id="phone" name="phone" aria-describedby="phoneHelp" placeholder="Telefoonnummer">
-                            @error('phone')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                            <small id="phoneHelp" class="form-text">Niet zichtbaar.</small>
                         </div>
                     </div>
                 </div>
@@ -81,9 +72,9 @@
                 <form method="POST" class="card border-0 shadow p-3 d-block" action="{{ route('admin.accounts.delete', $user) }}">
                     {{ method_field('DELETE') }}
                     {{ csrf_field() }}
-                    <h3 class="h6">Account verwijderen</h3>
-                    <button type="submit" class="btn btn-danger btn-sm mt-2"><i class="far fa-fw fa-trash-alt"></i> Account verwijderen</button>
-                    <small class="form-text">Verwijder de gebruiker. Deze actie is direct en onomkeerbaar. Voor een leidingsaccount zou deze optie nooit nodig moeten zijn.</small>
+                    <h3 class="h6">Delete account</h3>
+                    <button type="submit" class="btn btn-danger btn-sm mt-2"><i class="far fa-fw fa-trash-alt"></i> Delete account</button>
+                    <small class="form-text">Delete this account, removing an account is irreversable.</small>
                 </form>
             </div>
         @endcan

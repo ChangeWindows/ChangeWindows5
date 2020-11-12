@@ -1,13 +1,13 @@
 @extends('core.layouts.app')
-@section('title') Rollen @endsection
+@section('title') Roles @endsection
 
 @section('content')
 <div class="page-bar d-flex flex-md-row flex-column align-items-baseline p-3">
-    <h1 class="h4 d-none d-md-inline-block m-0">Rollen</h1>
+    <h1 class="h4 d-none d-md-inline-block m-0">Roles</h1>
     <ol class="breadcrumb pt-2 pt-md-0">
         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-home"></i></a></li>
-        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Gebruikers</a></li>
-        <li class="breadcrumb-item active">Rollen</li>
+        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Users</a></li>
+        <li class="breadcrumb-item active">Roles</li>
     </ol>
 </div>
 <div class="content-box">
@@ -25,20 +25,20 @@
                 <form method="POST" class="card border-0 shadow p-3" action="{{ route('admin.roles.store') }}">
                     {{ csrf_field() }}
                     <h3 class="h6">
-                        Nieuwe rol
-                        <button type="submit" class="btn btn-primary float-right btn-sm"><i class="far fa-fw fa-plus"></i> Toevoegen</button>
+                        New role
+                        <button type="submit" class="btn btn-primary float-right btn-sm"><i class="far fa-fw fa-plus"></i> Add</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-sm-6 col-12">
-                            <label class="form-label" for="name">Naam</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" aria-describedby="name" placeholder="Naam" value="{{ old('name') }}">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" aria-describedby="name" placeholder="Name" value="{{ old('name') }}">
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-sm-6 col-12">
-                            <label class="form-label" for="description">Beschrijving</label>
-                            <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" aria-describedby="description" placeholder="Beschrijving" value="{{ old('description') }}">
+                            <label class="form-label" for="description">Description</label>
+                            <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" aria-describedby="description" placeholder="Description" value="{{ old('description') }}">
                             @error('description')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -48,7 +48,7 @@
             </div>
         @endcan
         <div class="col-12">
-            <h3 class="h5 title">Rollen</h3>
+            <h3 class="h5 title">Roles</h3>
         </div>
         <div class="col-12 card-set">
             <div class="row">
@@ -69,7 +69,7 @@
                                     @foreach ($role->users as $user)
                                         <a href="{{ route('admin.accounts.edit', $user) }}" class="icon-avatar" data-toggle="tooltip" data-placement="top" title="{{ $user->name }}"><img src="{{ $user->avatar }}" /></a>
                                         @if ($loop->iteration === 7 && $loop->remaining > 1)
-                                            <div class="icon-avatar" data-toggle="tooltip" data-placement="top" title="En {{ $loop->remaining }} andere"><small>+{{ $loop->remaining }}</small></div>
+                                            <div class="icon-avatar" data-toggle="tooltip" data-placement="top" title="And {{ $loop->remaining }} more"><small>+{{ $loop->remaining }}</small></div>
                                         @endif
                                         @break($loop->iteration === 7 && $loop->remaining > 1)
                                     @endforeach
@@ -77,7 +77,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <a href="{{ route('admin.roles.edit', $role) }}" class="btn btn-primary btn-sm">
                                         @can('assign_ability')
-                                            <i class="far fa-fw fa-pencil"></i> Beheer</a>
+                                            <i class="far fa-fw fa-pencil"></i> Edit</a>
                                         @else
                                             <i class="far fa-fw fa-info-circle"></i> Details</a>
                                         @endcan
@@ -107,8 +107,8 @@
                     </div>
                 @empty
                     <div class="col-12 text-center my-5">
-                        <h4>Geen rollen beschikbaar...</h4>
-                        <p>Maak er een om te beginnen!</p>
+                        <h4>No roles available...</h4>
+                        <p>Create one to get started.</p>
                     </div>
                 @endforelse
             </div>

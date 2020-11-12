@@ -14,7 +14,7 @@ class SearchController extends Controller {
 
     public function results(Request $request) {
         $search_results = (new Search())
-            ->registerModel(User::class, 'username')
+            ->registerModel(User::class, 'name')
             ->perform($request->input('search'));
 
         return view('core.search.results', compact('search_results'));

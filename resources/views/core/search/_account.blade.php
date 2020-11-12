@@ -11,7 +11,7 @@
             @can('edit_user')
                 <div class="d-flex justify-content-between align-items-center mt-4">
                     <div class="btn-group">
-                        <a href="{{ route('admin.accounts.edit', $account) }}" class="btn btn-primary btn-sm"><i class="far fa-fw fa-pencil"></i> Bewerk</a>
+                        <a href="{{ route('admin.accounts.edit', $account) }}" class="btn btn-primary btn-sm"><i class="far fa-fw fa-pencil"></i> Edit</a>
                     </div>
                 </div>
             @endcan

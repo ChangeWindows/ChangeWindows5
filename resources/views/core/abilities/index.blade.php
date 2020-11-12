@@ -1,21 +1,21 @@
 @extends('core.layouts.app')
-@section('title') Permissies @endsection
+@section('title') Permissions @endsection
 
 @section('hero')
 <div class="jumbotron bg-dark text-white">
     <div class="container">
-        <h2>Permissies</h2>
+        <h2>Permissions</h2>
     </div>
 </div>
 @endsection
 
 @section('content')
 <div class="page-bar d-flex flex-md-row flex-column align-items-baseline p-3">
-    <h1 class="h4 d-none d-md-inline-block m-0">Permissies</h1>
+    <h1 class="h4 d-none d-md-inline-block m-0">Permissions</h1>
     <ol class="breadcrumb pt-2 pt-md-0">
         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-home"></i></a></li>
-        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Gebruikers</a></li>
-        <li class="breadcrumb-item active">Permissies</li>
+        <li class="breadcrumb-item"><a href="{{ route('admin.accounts') }}">Users</a></li>
+        <li class="breadcrumb-item active">Permissions</li>
     </ol>
 </div>
 <div class="content-box">
@@ -33,19 +33,19 @@
                 <form method="POST" class="card border-0 shadow p-3" action="{{ route('admin.abilities.store') }}">
                     {{ csrf_field() }}
                     <h3 class="h6">
-                        Nieuwe permissie
-                        <button type="submit" class="btn btn-primary float-right btn-sm"><i class="far fa-fw fa-plus"></i> Toevoegen</button>
+                        New permission
+                        <button type="submit" class="btn btn-primary float-right btn-sm"><i class="far fa-fw fa-plus"></i> Add</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-sm-6 col-12">
-                            <label class="form-label" for="name">Naam</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" aria-describedby="name" placeholder="Naam" value="{{ old('name') }}">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" aria-describedby="name" placeholder="Name" value="{{ old('name') }}">
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-sm-6 col-12">
-                            <label class="form-label" for="label">Beschrijving</label>
+                            <label class="form-label" for="label">Label</label>
                             <input type="text" class="form-control @error('label') is-invalid @enderror" id="label" name="label" aria-describedby="label" placeholder="Label" value="{{ old('label') }}">
                             @error('label')
                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -56,7 +56,7 @@
             </div>
         @endcan
         <div class="col-12">
-            <h3 class="h5 title">Permissies</h3>
+            <h3 class="h5 title">Permissions</h3>
         </div>
         <div class="col-12 card-set">
             <div class="row">
@@ -73,7 +73,7 @@
                                 <div class="flex-grow-1"></div>
                                 @can('edit_ability')
                                  <div class="d-flex justify-content-between align-items-center mt-4">
-                                        <a href="{{ route('admin.abilities.edit', $ability) }}" class="btn btn-primary btn-sm"><i class="far fa-fw fa-pencil"></i> Beheer</a>
+                                        <a href="{{ route('admin.abilities.edit', $ability) }}" class="btn btn-primary btn-sm"><i class="far fa-fw fa-pencil"></i> Edit</a>
                                     </div>
                                 @endcan
                             </div>
@@ -81,8 +81,8 @@
                     </div>
                 @empty
                     <div class="col-12 text-center my-5">
-                        <h4>Geen permissies beschikbaar...</h4>
-                        <p>Maak er een om te beginnen!</p>
+                        <h4>No permissions available...</h4>
+                        <p>Create one to get started.</p>
                     </div>
                 @endforelse
             </div>
