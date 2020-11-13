@@ -4,6 +4,14 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>6.0.0-alpha.1 <small>2020</small></h3>
+    <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>Introduces major revamp the the admin panel</p>
+    <p>Revamps account permissions system</p>
+    <h4><i class="far fa-fw fa-server"></i> System</h4>
+    <p>Update to Bootstrap 5.0.0 alpha 3</p>
+</section>
+<section class="release-notes">
     <h3>5.3.2 <small>22 October 2020</small></h3>
     <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes footer not following the user theme</p>

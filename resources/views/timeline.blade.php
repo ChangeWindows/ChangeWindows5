@@ -118,7 +118,9 @@
     <div class="d-none d-lg-block col-lg-5">
         <div class="row row-gutter">
             <div class="col">
-                <a href="{{ route('showVNext') }}" class="btn btn-vnext btn-block">The changelog for the next public release</a>
+                <div class="d-grid gap-2">
+                    <a href="{{ route('showVNext') }}" class="btn btn-vnext">The changelog for the next public release</a>
+                </div>
             </div>
         </div>
         <p class="h3 font-weight-bold pc">{!! getPlatformIconNoStyle(1) !!} PC</p>

@@ -13,7 +13,7 @@ class User extends Authenticatable implements JWTSubject, Searchable
 {
     use Notifiable;
 
-    protected $fillable = ['name', 'email', 'password', 'theme', 'role_id'];
+    protected $fillable = ['name', 'email', 'password', 'theme', 'role_id', 'onboarding'];
     protected $hidden = ['password', 'remember_token'];
 
     public function role() {
