@@ -18,6 +18,10 @@ class Milestone extends Model
         return $this->hasMany(Release::class, 'milestone');
     }
 
+    public function getBgColorAttribute() {
+        return 'background-color: #'.$this->color;
+    }
+
     public function getSupport() {
         $now = Carbon::now();
 

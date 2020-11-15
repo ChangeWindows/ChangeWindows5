@@ -105,6 +105,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
     Route::prefix('milestones')->name('.milestones')->group(function() {
         Route::get('', 'Admin\MilestoneController@index')->name('');
         Route::get('/{milestone}', 'Admin\MilestoneController@edit')->name('.edit');
+        Route::post('', 'Admin\MilestoneController@store')->name('.store');
         Route::patch('/{milestone}', 'Admin\MilestoneController@update')->name('.update');
         Route::delete('/{milestone}', 'Admin\MilestoneController@destroy')->name('.delete');
     });
@@ -113,16 +114,18 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
     Route::prefix('flights')->name('.flights')->group(function() {
         Route::get('', 'Admin\FlightController@index')->name('');
         Route::get('/{flight}', 'Admin\FlightController@edit')->name('.edit');
+        Route::post('', 'Admin\FlightController@store')->name('.store');
         Route::patch('/{flight}', 'Admin\FlightController@update')->name('.update');
         Route::delete('/{flight}', 'Admin\FlightController@destroy')->name('.delete');
     });
 
     // Logs
     Route::prefix('logs')->name('.logs')->group(function() {
-        Route::get('', 'Admin\LogController@index')->name('');
-        Route::get('/{log}', 'Admin\LogController@edit')->name('.edit');
-        Route::patch('/{log}', 'Admin\LogController@update')->name('.update');
-        Route::delete('/{log}', 'Admin\LogController@destroy')->name('.delete');
+        Route::get('', 'Admin\ChangelogController@index')->name('');
+        Route::get('/{log}', 'Admin\ChangelogController@edit')->name('.edit');
+        Route::post('', 'Admin\ChangelogController@store')->name('.store');
+        Route::patch('/{log}', 'Admin\ChangelogController@update')->name('.update');
+        Route::delete('/{log}', 'Admin\ChangelogController@destroy')->name('.delete');
     });
 
     // Permissions
