@@ -66,7 +66,10 @@
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="color">Color</label>
-                            <input type="text" class="form-control @error('color') is-invalid @enderror" name="color" id="color" value="{{ old('color') }}" required placeholder="OS name">
+                            <div class="input-group @error('color') is-invalid @enderror">
+                                <div class="input-group-prepend"><span class="input-group-text">#</span></div>
+                                <input type="text" class="form-control @error('color') is-invalid @enderror" name="color" id="color" value="{{ old('color') }}" required placeholder="OS name">
+                            </div>
                             @error('color')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
