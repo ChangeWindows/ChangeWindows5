@@ -15,7 +15,7 @@
         "axios": "0.21.0",
         "bootstrap": "5.0.0-alpha3",
         "cross-env": "7.0.2",
-        "easymde": "2.12.1",
+        "easymde": "2.13.0",
         "laravel-mix": "5.0.9",
         "lodash": "4.17.20",
         "popper.js": "1.16.1",
