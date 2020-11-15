@@ -72,7 +72,7 @@ class FlightController extends Controller
      */
     public function edit(Release $release) {
         $this->authorize('edit_flight');
-        $milestones = Milestone::orderBy('version', 'DESC')->get();
+        $milestones = Milestone::orderBy('version', 'desc')->get();
 
         return view('core.flights.edit', compact('release', 'milestones'));
     }

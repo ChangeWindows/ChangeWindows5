@@ -113,10 +113,10 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
     // Flights
     Route::prefix('flights')->name('.flights')->group(function() {
         Route::get('', 'Admin\FlightController@index')->name('');
-        Route::get('/{flight}', 'Admin\FlightController@edit')->name('.edit');
+        Route::get('/{release}', 'Admin\FlightController@edit')->name('.edit');
         Route::post('', 'Admin\FlightController@store')->name('.store');
-        Route::patch('/{flight}', 'Admin\FlightController@update')->name('.update');
-        Route::delete('/{flight}', 'Admin\FlightController@destroy')->name('.delete');
+        Route::patch('/{release}', 'Admin\FlightController@update')->name('.update');
+        Route::delete('/{release}', 'Admin\FlightController@destroy')->name('.delete');
     });
 
     // Logs
