@@ -116,11 +116,11 @@ class MilestoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id) {
-        $request->user()->authorizeRoles('Admin');
+    public function destroy(Milestone $milestone) {
+        $this->authorize('delete_milestone');
 
-        $milestone = Milestone::destroy($id);
+        $milestone->destroy($id);
 
-        return redirect()->route('admin.activities')->with('status', 'Milestone <b>'.$milestone->osname.' version '.$milestone->version.'</b> has been removed.');
+        return redirect()->route('admin.milestones')->with('status', 'Milestone <b>'.$milestone->osname.' version '.$milestone->version.'</b> has been removed.');
     }
 }

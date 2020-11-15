@@ -11615,6 +11615,10 @@ textarea.form-control-lg {
 .card > .table tbody > tr > td:last-child {
   padding-right: 1rem;
 }
+.card .card-footer {
+  padding: 1rem;
+  border: none;
+}
 
 .modal .modal-header {
   border-bottom: none;
@@ -11980,6 +11984,46 @@ a:hover {
   color: #0098df;
 }
 
+.mobile {
+  color: #00bcf2;
+}
+
+.iso {
+  color: #00cea6;
+}
+
+.iot {
+  color: #f7630c;
+}
+
+.holographic {
+  color: #ff4343;
+}
+
+.pc {
+  color: #0078d7;
+}
+
+.tenx {
+  color: #9ad93a;
+}
+
+.xbox {
+  color: #107c10;
+}
+
+.team {
+  color: #e3008c;
+}
+
+.server {
+  color: #ffb900;
+}
+
+.sdk {
+  color: #886ce4;
+}
+
 .pb-g {
   padding-bottom: 1rem;
 }
@@ -12011,6 +12055,11 @@ a:hover {
 .input-group-prepend .input-group-text {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.form-control,
+.input-group-text {
+  border-width: 1.5px;
 }
 
 .action-close {
@@ -12138,6 +12187,9 @@ body::-webkit-scrollbar-thumb {
   }
   .card .card-body.bg-light {
     background-color: #383838 !important;
+  }
+  .card .card-footer {
+    background-color: #2b2b2b;
   }
 
   .nav.nav-underline .nav-link {

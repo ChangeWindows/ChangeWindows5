@@ -22,7 +22,7 @@
         @endif
         <div class="col-12">
             @can('create_milestone')
-                <form method="POST" class="card border-0 shadow p-3" action="{{ route('admin.milestones.store') }}" enctype="multipart/form-data">
+                <form method="POST" class="card border-0 shadow p-3" action="{{ route('admin.milestones.store') }}">
                     {{ csrf_field() }}
                     <h3 class="h6">
                         New milestone

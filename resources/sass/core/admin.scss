@@ -153,6 +153,46 @@ a {
     }
 }
 
+.mobile {
+    color: $mobile;
+}
+
+.iso {
+    color: $iso;
+}
+
+.iot {
+    color: $iot;
+}
+
+.holographic {
+    color: $holographic;
+}
+
+.pc {
+    color: $pc;
+}
+
+.tenx {
+    color: $tenx;
+}
+
+.xbox {
+    color: $xbox;
+}
+
+.team {
+    color: $team;
+}
+
+.server {
+    color: $server;
+}
+
+.sdk {
+    color: $sdk;
+}
+
 
 // Utility
 .pb-g {
@@ -190,6 +230,11 @@ a {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
+}
+
+.form-control,
+.input-group-text {
+    border-width: 1.5px;
 }
 
 // Jumbotron

@@ -33,6 +33,10 @@
                 background-color: lighten($dark, 2) !important;
             }
         }
+
+        .card-footer {
+            background-color: darken($dark, 3);
+        }
     }
 
     .nav {
