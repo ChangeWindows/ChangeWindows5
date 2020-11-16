@@ -210,7 +210,7 @@ a {
 }
 
 .bg-top {
-    background-image: url('../img/topography.svg'), linear-gradient(90deg, $accent 0%, $primary 100%) !important;
+    background-image: linear-gradient(90deg, $accent 0%, $primary 100%) !important;
 }
 
 .acrylic-20-light {
