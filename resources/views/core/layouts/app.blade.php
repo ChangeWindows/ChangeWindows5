@@ -10,7 +10,7 @@
         <link href="{{ asset('css/admin.css?v'.config('app.viv')) }}" rel="stylesheet">
         <link href="{{ asset('css/easymde.min.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="{{ asset('img/guide.png?v'.config('app.viv')) }}">
+        <link rel="shortcut icon" href="{{ asset('img/logo.png?v'.config('app.viv')) }}">
     </head>
     <body>
         <header class="bg-top">

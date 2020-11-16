@@ -39,7 +39,7 @@
         })
         </script>
 
-        <link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
+        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}">
 
         <meta name="format-detection" content="telephone=no">
 
