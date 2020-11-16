@@ -12024,6 +12024,46 @@ a:hover {
   color: #886ce4;
 }
 
+.bg-mobile {
+  background-color: #00bcf2;
+}
+
+.bg-iso {
+  background-color: #00cea6;
+}
+
+.bg-iot {
+  background-color: #f7630c;
+}
+
+.bg-holographic {
+  background-color: #ff4343;
+}
+
+.bg-pc {
+  background-color: #0078d7;
+}
+
+.bg-tenx {
+  background-color: #9ad93a;
+}
+
+.bg-xbox {
+  background-color: #107c10;
+}
+
+.bg-team {
+  background-color: #e3008c;
+}
+
+.bg-server {
+  background-color: #ffb900;
+}
+
+.bg-sdk {
+  background-color: #886ce4;
+}
+
 .pb-g {
   padding-bottom: 1rem;
 }

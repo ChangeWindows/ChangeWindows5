@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="milestone">Milestone</label>
-                            <select class="form-select" @error('milestone') is-invalid @enderror" id="milestone" name="milestone" required>
+                            <select class="form-select @error('milestone') is-invalid @enderror" id="milestone" name="milestone" required>
                                 @foreach ($milestones as $milestone)
                                     <option value="{{ $milestone->id }}" {{ old('milestone', $release->milestone) == $milestone->id ? 'selected' : ''}}>{{ $milestone->osname }} version {{ $milestone->version }}</option>
                                 @endforeach
@@ -62,7 +62,7 @@
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="platform">Platform</label>
-                            <select class="form-select" @error('platform') is-invalid @enderror" id="platform" name="platform" required>
+                            <select class="form-select @error('platform') is-invalid @enderror" id="platform" name="platform" required>
                                 <option value="0" {{ old('platform', $release->platform) == 0 ? 'selected' : ''}}>Generic</option>
                                 <option value="1" {{ old('platform', $release->platform) == 1 ? 'selected' : ''}}>PC</option>
                                 <option value="2" {{ old('platform', $release->platform) == 2 ? 'selected' : ''}}>Mobile</option>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="ring">Ring</label>
-                            <select class="form-select" @error('ring') is-invalid @enderror" id="ring" name="ring" required>
+                            <select class="form-select @error('ring') is-invalid @enderror" id="ring" name="ring" required>
                                 <option value="0" {{ old('ring', $release->ring) == 0 ? 'selected' : ''}}>vNext</option>
                                 <option value="1" {{ old('ring', $release->ring) == 1 ? 'selected' : ''}}>Fast Ring Skip Ahead</option>
                                 <option value="2" {{ old('ring', $release->ring) == 2 ? 'selected' : ''}}>Fast Ring Active/Alpha</option>

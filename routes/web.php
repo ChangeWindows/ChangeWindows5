@@ -120,7 +120,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
     });
 
     // Logs
-    Route::prefix('logs')->name('.logs')->group(function() {
+    Route::prefix('changelogs')->name('.changelogs')->group(function() {
         Route::get('', 'Admin\ChangelogController@index')->name('');
         Route::get('/{log}', 'Admin\ChangelogController@edit')->name('.edit');
         Route::post('', 'Admin\ChangelogController@store')->name('.store');
