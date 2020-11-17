@@ -60,9 +60,9 @@
                             @enderror
                         </div>
                         <div class="col-12">
-                            <label class="form-label" for="description">Changelog</label>
-                            <x-easy-mde name="description" class="form-control @error('description') is-invalid @enderror" placeholder="Changelog">{{ old('description') }}</x-easy-mde>
-                            @error('description')
+                            <label class="form-label" for="changelog">Changelog</label>
+                            <x-easy-mde name="changelog" class="form-control @error('changelog') is-invalid @enderror" placeholder="Changelog">{{ old('changelog') }}</x-easy-mde>
+                            @error('changelog')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
