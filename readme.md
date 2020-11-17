@@ -86,4 +86,5 @@ create table `ability_role` (`role_id` bigint unsigned not null, `ability_id` bi
 alter table `ability_role` add primary key `ability_role_role_id_ability_id_primary`(`role_id`, `ability_id`);
 alter table `ability_role` add constraint `ability_role_role_id_foreign` foreign key (`role_id`) references `roles` (`id`) on delete cascade;
 alter table `ability_role` add constraint `ability_role_ability_id_foreign` foreign key (`ability_id`) references `abilities` (`id`) on delete cascade;
+alter table `users` add `avatar` varchar(191) null after `email`;
 ```

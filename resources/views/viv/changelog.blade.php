@@ -8,6 +8,9 @@
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Introduces major revamp the the admin panel</p>
     <p>Revamps account permissions system</p>
+    <p>You can now edit your email address and password, as well as upload a profile picture</p>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>The Light and Black themes are temporarily available for all account-holders</p>
     <h4><i class="far fa-fw fa-server"></i> System</h4>
     <p>Update to Bootstrap 5.0.0 alpha 3</p>
 </section>

@@ -13,7 +13,7 @@ class User extends Authenticatable implements JWTSubject, Searchable
 {
     use Notifiable;
 
-    protected $fillable = ['name', 'email', 'password', 'theme', 'role_id', 'onboarding'];
+    protected $fillable = ['name', 'email', 'password', 'theme', 'role_id', 'onboarding', 'avatar_path'];
     protected $hidden = ['password', 'remember_token'];
 
     public function role() {
@@ -32,15 +32,17 @@ class User extends Authenticatable implements JWTSubject, Searchable
         return [];
     }
 
-    public function setPasswordAttribute($password) {
-        if (!empty($password)) {
-            $this->attributes['password'] = bcrypt($password);
+    public function setPasswordAttribute($value) {
+        if (Hash::needsRehash($value)) {
+            return $this->attributes['password'] = bcrypt($value);
+        } else {
+            return $this->attributes['password'] = $value;
         }
     }
 
     public function getAvatarAttribute() {
-        if ($this->media_id) {
-            return $this->media->path();
+        if ($this->avatar_path) {
+            return asset('storage/'.$this->avatar_path);
         } else {
             return asset('img/models/user.png');
         }

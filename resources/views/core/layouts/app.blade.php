@@ -37,7 +37,7 @@
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('timeline') }}"><i class="far fa-fw fa-home"></i> Home</a>
                                 <a class="dropdown-item d-block d-sm-none" href="http://changewindows.org/stats/index.php"><i class="far fa-fw fa-chart-pie"></i> Stats</a>
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('admin.search') }}"><i class="far fa-fw fa-search"></i> Search</a>
-                                <a class="dropdown-item" href="{{ route('profile') }}"><i class="far fa-fw fa-user-cog"></i> Profile</a>
+                                <a class="dropdown-item" href="{{ route('front.profile') }}"><i class="far fa-fw fa-user-cog"></i> Profile</a>
                                 <x-logout class="dropdown-item"><i class="far fa-fw fa-sign-out"></i> Sign out</x-logout>
                             </div>
                         </div>

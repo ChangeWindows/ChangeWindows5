@@ -58,9 +58,6 @@ Route::get('/viv/terms', 'VivController@terms')->name('vivTerms');
 Route::get('/viv/changelog', 'VivController@changelog')->name('vivChangelog');
 Route::get('/viv/privacy', 'VivController@privacy')->name('vivPrivacy');
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::patch('/profile/{id}', 'ProfileController@edit')->name('updateProfile');
-
 Route::get('/patreons', 'PatreonController@index')->name('showPatreon');
 Route::get('/patreons/new', 'PatreonController@create')->name('createPatreon');
 Route::get('/patreons/{id}/edit', 'PatreonController@edit')->name('editPatreon');
@@ -68,6 +65,17 @@ Route::post('/patreons', 'PatreonController@store')->name('storePatreon');
 Route::patch('/patreons/{id}', 'PatreonController@update')->name('updatePatreon');
 Route::delete('/patreons/{id}', 'PatreonController@destroy')->name('deletePatreon');
 
+// Frontend
+Route::name('front')->group(function() {
+    Route::middleware(['auth'])->prefix('profile')->name('.profile')->group(function() {
+        Route::get('', 'ProfileController@index')->name('');
+        Route::get('/password', 'ProfileController@password')->name('.password');
+        Route::patch('/{user}', 'ProfileController@update')->name('.update');
+        Route::patch('/{user}/password', 'ProfileController@changePassword')->name('.changePassword');
+    });
+});
+
+// Backstage
 Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
     // Dashboard
     Route::get('', 'Admin\DashboardController@index');
