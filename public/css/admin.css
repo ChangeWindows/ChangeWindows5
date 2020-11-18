@@ -12270,6 +12270,7 @@ body::-webkit-scrollbar-thumb {
   .form-control:active, .form-control:focus,
 .form-select:active,
 .form-select:focus {
+    color: #fff;
     background-color: #3b3b3b;
     border-color: #005dc5;
   }

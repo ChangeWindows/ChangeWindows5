@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <h3 class="mt-0">ChangeWindows 6.0</h3>
                     <h5 class="mt-3">What's new in ChangeWindows 6.0-alpha.1? <small class="text-muted">2020</small></h5>
-                    <p><i class="fab fa-fw fa-laravel"></i> Laravel 8.14.0 &middot; <i class="fab fa-fw fa-bootstrap"></i> Bootstrap 5.0.0-alpha3 &middot; <i class="fab fa-fw fa-font-awesome"></i> Font Awesome 5.15.1</p>
+                    <p><i class="fab fa-fw fa-laravel"></i> Laravel 8.15.0 &middot; <i class="fab fa-fw fa-bootstrap"></i> Bootstrap 5.0.0-alpha3 &middot; <i class="fab fa-fw fa-font-awesome"></i> Font Awesome 5.15.1</p>
                     <p class="mb-1"><b>Backstage</b></p>
                     <ul>
                         <li><span class="badge bg-success">new</span> Alpha 1 is the start of building out an entirely new Backstage.</li>
@@ -36,6 +36,7 @@
                     <p class="mb-1"><b>Other changes</b></p>
                     <ul>
                         <li><span class="badge bg-dark">system</span> Upgraded various components.</li>
+                        <li><span class="badge bg-danger">removed</span> Temporarily removed Patron list from About.</li>
                     </ul>
                 </div>
             </div>

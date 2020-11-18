@@ -1,13 +1,12 @@
 @extends('core.layouts.app')
-@section('title') General &middot; Settings @endsection
+@section('title') Settings @endsection
 
 @section('content')
 <div class="page-bar d-flex flex-md-row flex-column align-items-baseline p-3">
-    <h1 class="h4 d-none d-md-inline-block m-0">General</h1>
+    <h1 class="h4 d-none d-md-inline-block m-0">Settings</h1>
     <ol class="breadcrumb pt-2 pt-md-0">
         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-home"></i></a></li>
-        <li class="breadcrumb-item"><a href="{{ route('admin.settings.general') }}">Settings</a></li>
-        <li class="breadcrumb-item active">General</li>
+        <li class="breadcrumb-item active">Settings</li>
     </ol>
 </div>
 <div class="content-box">
@@ -21,7 +20,7 @@
             </div>
         </div>
     @endif
-    <form method="POST" action="{{ route('admin.settings.general.update') }}">
+    <form method="POST" action="{{ route('admin.settings.update') }}">
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
         <fieldset class="row" @cannot('edit_settings') disabled @endcannot>

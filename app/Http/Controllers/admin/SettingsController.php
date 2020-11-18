@@ -9,19 +9,19 @@ use App\Timeline;
 use App\Highlight;
 
 class SettingsController extends Controller {
-    public function indexGeneral() {
+    public function index() {
         $this->authorize('view_settings');
 
-        return view('core.settings.general');
+        return view('core.settings.index');
     }
 
-    public function updateGeneral() {
+    public function update() {
         $this->authorize('edit_settings');
 
         Setting::where('name', 'name')->update(['value' => request('name')]);
         Setting::where('name', 'short_name')->update(['value' => request('short_name')]);
         Setting::where('name', 'slogan')->update(['value' => request('slogan')]);
 
-        return redirect()->route('admin.settings.general')->with('status', 'All changes have been saved.');
+        return redirect()->route('admin.settings')->with('status', 'All changes have been saved.');
     }
 }

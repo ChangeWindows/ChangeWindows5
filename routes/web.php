@@ -96,9 +96,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
 
     // Settings
     Route::prefix('settings')->name('.settings')->group(function() {
-        Route::get('', 'Admin\SettingsController@indexGeneral')->name('');
-        Route::get('/general', 'Admin\SettingsController@indexGeneral')->name('.general');
-        Route::patch('/general',  'Admin\SettingsController@updateGeneral')->name('.general.update');
+        Route::get('', 'Admin\SettingsController@index')->name('');
+        Route::patch('',  'Admin\SettingsController@update')->name('.update');
     });
 
     // Accounts

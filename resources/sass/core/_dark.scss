@@ -90,6 +90,7 @@
 
         &:active,
         &:focus {
+            color: #fff;
             background-color: lighten($dark, 3);
             border-color: $primary;
         }

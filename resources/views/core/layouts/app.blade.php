@@ -60,7 +60,7 @@
                             <li class="nav-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
-                            @canany (['show_milestones', 'show_flights'])
+                            @canany (['show_milestones', 'show_flights', 'show_logs'])
                                 <li class="nav-item dropdown {{ request()->routeIs('admin.milestones*') || request()->routeIs('admin.flights*') ? 'active' : '' }}">
                                     <a class="nav-link dropdown-toggle" href="#" id="websiteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Content <i class="far fa-angle-down ml-1"></i>
@@ -86,13 +86,8 @@
                                 </li>
                             @endcanany
                             @canany (['view_settings'])
-                                <li class="nav-item dropdown {{ request()->routeIs('admin.settings*') ? 'active' : '' }}">
-                                    <a class="nav-link dropdown-toggle" href="#" id="websiteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Settings <i class="far fa-angle-down ml-1"></i>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="websiteDropdown">
-                                        <a class="dropdown-item {{ request()->routeIs('admin.settings.general*') ? 'active' : '' }}" href="{{ route('admin.settings.general') }}"><i class="far fa-fw fa-cog"></i> General</a>
-                                    </div>
+                                <li class="nav-item {{ request()->routeIs('admin.settings') ? 'active' : '' }}">
+                                    <a class="nav-link" href="{{ route('admin.settings') }}">Settings</a>
                                 </li>
                             @endcanany
                             <li class="nav-item {{ request()->routeIs('admin.about') ? 'active' : '' }}">
