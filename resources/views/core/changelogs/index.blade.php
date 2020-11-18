@@ -33,7 +33,7 @@
                             <label class="form-label" for="milestone">Milestone</label>
                             <select class="form-select" @error('milestone') is-invalid @enderror" id="milestone" name="milestone" required>
                                 @foreach ($milestones as $milestone)
-                                    <option value="{{ $milestone->id }}" {{ old('milestone') == $milestone->id ? 'selected' : ''}}>{{ $milestone->osname }} version {{ $milestone->version }}</option>
+                                    <option value="{{ $milestone->id }}" {{ old('milestone', request()->milestone) == $milestone->id ? 'selected' : ''}}>{{ $milestone->osname }} version {{ $milestone->version }}</option>
                                 @endforeach
                             </select>
                             @error('milestone')
@@ -43,17 +43,17 @@
                         <div class="col-sm-6">
                             <label class="form-label" for="platform">Platform</label>
                             <select class="form-select @error('platform') is-invalid @enderror" id="platform" name="platform" required>
-                                <option value="0" {{ old('platform') == 0 ? 'selected' : ''}}>Generic</option>
-                                <option value="1" {{ old('platform') == 1 ? 'selected' : ''}}>PC</option>
-                                <option value="2" {{ old('platform') == 2 ? 'selected' : ''}}>Mobile</option>
-                                <option value="3" {{ old('platform') == 3 ? 'selected' : ''}}>Xbox</option>
-                                <option value="4" {{ old('platform') == 4 ? 'selected' : ''}}>Server</option>
-                                <option value="10" {{ old('platform') == 10 ? 'selected' : ''}}>10X</option>
-                                <option value="5" {{ old('platform') == 5 ? 'selected' : ''}}>Holographic</option>
-                                <option value="6" {{ old('platform') == 6 ? 'selected' : ''}}>IoT</option>
-                                <option value="7" {{ old('platform') == 7 ? 'selected' : ''}}>Team</option>
-                                <option value="8" {{ old('platform') == 8 ? 'selected' : ''}}>ISO</option>
-                                <option value="9" {{ old('platform') == 9 ? 'selected' : ''}}>SDK</option>
+                                <option value="0" {{ old('platform', request()->platform) == 0 ? 'selected' : ''}}>Generic</option>
+                                <option value="1" {{ old('platform', request()->platform) == 1 ? 'selected' : ''}}>PC</option>
+                                <option value="2" {{ old('platform', request()->platform) == 2 ? 'selected' : ''}}>Mobile</option>
+                                <option value="3" {{ old('platform', request()->platform) == 3 ? 'selected' : ''}}>Xbox</option>
+                                <option value="4" {{ old('platform', request()->platform) == 4 ? 'selected' : ''}}>Server</option>
+                                <option value="10" {{ old('platform', request()->platform) == 10 ? 'selected' : ''}}>10X</option>
+                                <option value="5" {{ old('platform', request()->platform) == 5 ? 'selected' : ''}}>Holographic</option>
+                                <option value="6" {{ old('platform', request()->platform) == 6 ? 'selected' : ''}}>IoT</option>
+                                <option value="7" {{ old('platform', request()->platform) == 7 ? 'selected' : ''}}>Team</option>
+                                <option value="8" {{ old('platform', request()->platform) == 8 ? 'selected' : ''}}>ISO</option>
+                                <option value="9" {{ old('platform', request()->platform) == 9 ? 'selected' : ''}}>SDK</option>
                             </select>
                             @error('platform')
                                 <div class="invalid-feedback">{{ $message }}</div>

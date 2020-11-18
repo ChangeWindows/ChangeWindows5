@@ -36,13 +36,13 @@
                 </div>
             </div>
         @else
-            @if (Auth::user() && Auth::user()->hasAnyRole(['Admin']))
+            @can('create_log')
                 <h4>No changelog yet, create one...</h4>
-                <a href="{{ route('createLog', ['milestone' => $milestone->id, 'platform' => $platform_id]) }}" class="btn btn-primary"><i class="far fa-fw fa-pencil"></i> Write a changelog</a>
+                <a href="{{ route('admin.changelogs', ['milestone' => $milestone->id, 'platform' => $platform_id]) }}" class="btn btn-primary"><i class="far fa-fw fa-pencil"></i> Write a changelog</a>
             @else
                 <h4>No changelog available just yet</h4>
                 <p>This means that this is or a very recent milestone or we just didn't yet get around writing it. Stay tuned, we're working on it.</p>
-            @endif
+            @endcan
         @endif
     </div>
     <div class="col-lg-3 col-md-4 col-12">

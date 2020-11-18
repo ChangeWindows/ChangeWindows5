@@ -16,14 +16,12 @@
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 @endforeach
-                @auth
-                    @if (Auth::user()->hasAnyRole(['Admin']))
-                        <div class="flex-grow-1"></div>
-                        <a class="nav-link" href="{{ route('editMilestone', ['id' => $milestone->id]) }}">
-                            <i class="far fa-fw fa-pencil"></i>
-                        </a>
-                    @endif
-                @endauth
+                @can('edit_milestone')
+                    <div class="flex-grow-1"></div>
+                    <a class="nav-link" href="{{ route('admin.milestones.edit', $milestone) }}">
+                        <i class="far fa-fw fa-pencil"></i>
+                    </a>
+                @endcan
             </nav>
         </div>
     </div>
