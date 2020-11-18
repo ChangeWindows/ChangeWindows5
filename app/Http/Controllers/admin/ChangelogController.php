@@ -41,13 +41,13 @@ class ChangelogController extends Controller
     public function store(Request $request) {
         $this->authorize('create_log');
 
-        $changelog = Log::create([
+        $log = Log::create([
             'milestone_id' => request()->get('milestone'),
             'platform' => request()->get('platform'),
             'changelog' => request()->get('changelog')
         ]);
 
-        return redirect()->route('admin.changelogs', $flight)->with('status', 'The changelog for <b>'.getPlatformById($log->platform).' version '.$log->milestone->version.'</b> has been created.');
+        return redirect()->route('admin.changelogs.edit', $log)->with('status', 'The changelog for <b>'.getPlatformById($log->platform).' version '.$log->milestone->version.'</b> has been created.');
     }
 
     /**
@@ -56,14 +56,12 @@ class ChangelogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $id) {
+    public function edit(Log $log) {
         $this->authorize('edit_log');
-
-        $changelog = Log::find($id);
 
         $milestones = Milestone::orderBy('version', 'DESC')->get();
 
-        return view('core.changelogs.edit', compact('changelog', 'milestones'));
+        return view('core.changelogs.edit', compact('log', 'milestones'));
     }
 
     /**

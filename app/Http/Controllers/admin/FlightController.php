@@ -48,7 +48,7 @@ class FlightController extends Controller
                     'milestone' => $milestone,
                     'platform' => $platform,
                     'ring' => $value,
-                    'date' => request()->get('release')
+                    'date' => request()->get('date')
                 ]);
 
                 array_push($rings, getTweetRingById($value, $platform));
@@ -61,7 +61,7 @@ class FlightController extends Controller
             }
         }
 
-        return redirect()->route('admin.flights.index', $flight)->with('status', 'Flight <b>'.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).'</b> has been created.');
+        return redirect()->route('admin.flights')->with('status', 'Flight <b>'.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).'</b> has been created.');
     }
 
     /**
@@ -97,10 +97,10 @@ class FlightController extends Controller
             'milestone' => request()->get('milestone'),
             'platform' => request()->get('platform'),
             'ring' => request()->get('ring'),
-            'date' => request()->get('release')
+            'date' => request()->get('date')
         ]);
 
-        return redirect()->route('admin.milestones')->with('status', 'The changes to <b>'.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).'</b> have been saved.');
+        return redirect()->route('admin.flights')->with('status', 'The changes to <b>'.$release->build.'.'.$release->delta.' for '.getPlatformById($release->platform).'</b> have been saved.');
     }
 
     /**
@@ -114,6 +114,6 @@ class FlightController extends Controller
 
         $release->destroy($id);
 
-        return redirect()->route('admin.flights')->with('status', 'Flight <b>'.$string['build'].'.'.$string['delta'].' for '.getPlatformById($platform).'</b> has been removed.');
+        return redirect()->route('admin.flights')->with('status', 'Flight <b>'.$release->build.'.'.$release->delta.' for '.getPlatformById($platform).'</b> has been removed.');
     }
 }

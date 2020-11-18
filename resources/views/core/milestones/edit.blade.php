@@ -92,35 +92,35 @@
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="preview">Preview</label>
-                            <input type="date" class="form-control @error('preview') is-invalid @enderror" name="preview" id="preview" required placeholder="Preview" value="{{ old('preview', $milestone->preview->format('Y-m-d')) }}">
+                            <input type="date" class="form-control @error('preview') is-invalid @enderror" name="preview" id="preview" placeholder="Preview" value="{{ old('preview', $milestone->preview->format('Y-m-d')) }}">
                             @error('preview')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="public">Public</label>
-                            <input type="date" class="form-control @error('public') is-invalid @enderror" name="public" id="public" required placeholder="Public" value="{{ old('public', $milestone->public->format('Y-m-d')) }}">
+                            <input type="date" class="form-control @error('public') is-invalid @enderror" name="public" id="public" placeholder="Public" value="{{ old('public', $milestone->public->format('Y-m-d')) }}">
                             @error('public')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="mainEol">Main end</label>
-                            <input type="date" class="form-control @error('mainEol') is-invalid @enderror" name="mainEol" id="mainEol" required placeholder="Main end" value="{{ old('mainEol', $milestone->mainEol->format('Y-m-d')) }}">
+                            <input type="date" class="form-control @error('mainEol') is-invalid @enderror" name="mainEol" id="mainEol" placeholder="Main end" value="{{ old('mainEol', $milestone->mainEol->format('Y-m-d')) }}">
                             @error('mainEol')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="mainXol">Extended end</label>
-                            <input type="date" class="form-control @error('mainXol') is-invalid @enderror" name="mainXol" id="mainXol" required placeholder="Extended end" value="{{ old('mainXol', $milestone->mainXol->format('Y-m-d')) }}">
+                            <input type="date" class="form-control @error('mainXol') is-invalid @enderror" name="mainXol" id="mainXol" placeholder="Extended end" value="{{ old('mainXol', $milestone->mainXol->format('Y-m-d')) }}">
                             @error('mainXol')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="ltsEol">LTSC end</label>
-                            <input type="date" class="form-control @error('ltsEol') is-invalid @enderror" name="ltsEol" id="ltsEol" required placeholder="LTSC end" value="{{ old('ltsEol', $milestone->ltsEol->format('Y-m-d')) }}">
+                            <input type="date" class="form-control @error('ltsEol') is-invalid @enderror" name="ltsEol" id="ltsEol" placeholder="LTSC end" value="{{ old('ltsEol', $milestone->ltsEol->format('Y-m-d')) }}">
                             @error('ltsEol')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
