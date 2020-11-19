@@ -166,22 +166,18 @@ class Release extends Model implements Feedable
             return 'redstone4';
         else if ( $build < 17900 )
             return 'redstone5';
-        else if ( $build < 18363 ) {
-            if ( $delta < 7000 )
-                return '19h1';
-            else
-                return '19h2';
-        }
-        else if ( $build < 18501 )
+        else if ( $build < 18363 )
+            return '19h1';
+        else if ( $build < 18364 )
             return '19h2';
-        else if ( $build < 19100 )
+        else if ( $build < 19042 )
             return '20h1';
         else if ( $build < 19043 )
             return '20h2';
-        else if ( $build < 20400 )
+        else if ( $build < 20500 )
             return '21h1';
         else
-            return '21h1';
+            return '21h2';
 
         // Damn it.
         // In all fairness, this needs a bottom and top range for which build should be in which milestone
