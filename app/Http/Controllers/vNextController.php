@@ -18,15 +18,17 @@ class vNextController extends Controller
     }
 
     public function edit(Request $request, $platform) {
-        $request->user()->authorizeRoles('Admin');
+        $this->authorize('edit_log');
+        
+        $platform_id = $platform === null ? 1 : getPlatformIdByClass($platform);
 
-        $changelog = VNext::findOrFail($platform);
+        $changelog = VNext::findOrFail($platform_id);
 
         return view('vnext.edit', compact('changelog'));
     }
 
     public function update(Request $request, $platform) {
-        $request->user()->authorizeRoles('Admin');
+        $this->authorize('edit_log');
 
         $changelog = VNext::find($platform);
         

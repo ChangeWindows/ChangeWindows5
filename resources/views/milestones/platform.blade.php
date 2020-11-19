@@ -17,7 +17,7 @@
                     </a>
                 @endforeach
                 <div class="flex-grow-1"></div>
-                <a class="nav-link" href="{{ route('editMilestone', ['id' => $milestone->id]) }}">
+                <a class="nav-link" href="{{ route('admin.milestones.edit', $milestone) }}">
                     <i class="far fa-fw fa-pencil"></i>
                 </a>
             </nav>

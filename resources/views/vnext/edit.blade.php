@@ -13,7 +13,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("changelog") })
         <h2>
             vNext
             <small>
-                <a href="{{ route('showChangelogs') }}">vNext</a>
+                <a href="{{ route('admin.changelogs') }}">vNext</a>
                 <i class="far fa-fw fa-angle-right"></i>
                 <a href="{{ route('showVNext', $changelog->id) }}">{{ getPlatformById($changelog->id) }}</a>
             </small>
