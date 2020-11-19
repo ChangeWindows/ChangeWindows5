@@ -31,14 +31,14 @@
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="build_string">String</label>
-                            <input type="text" class="form-control @error('build_string') is-invalid @enderror" name="build_string" id="build_string" value="{{ old('build_string') }}" required placeholder="String">
+                            <input type="text" class="form-control @error('build_string') is-invalid @enderror" name="build_string" id="build_string" value="{{ old('build_string', '10.0.') }}" required placeholder="String">
                             @error('build_string')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="date">Date</label>
-                            <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" id="date" value="{{ old('date') }}" required placeholder="Date">
+                            <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" id="date" value="{{ old('date', date('Y-m-d')) }}" required placeholder="Date">
                             @error('date')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
