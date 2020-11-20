@@ -40,21 +40,21 @@
                 </div>
                 <div class="col-12">
                     <label class="form-label" for="theme">Theme</label>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="theme-white" name="theme" value="0" {{ Auth::user()->theme == 0 ? 'checked' : '' }}>
-                        <label class="custom-control-label" for="theme-white">White</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="theme-white" name="theme" value="0" {{ Auth::user()->theme == 0 ? 'checked' : '' }}>
+                        <label class="form-check-label" for="theme-white">White</label>
                     </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="theme-light" name="theme" value="1" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
-                        <label class="custom-control-label" for="theme-light">Light</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="theme-light" name="theme" value="1" {{ Auth::user()->theme == 1 ? 'checked' : '' }}>
+                        <label class="form-check-label" for="theme-light">Light</label>
                     </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="theme-dark" name="theme" value="2" {{ Auth::user()->theme == 2 ? 'checked' : '' }}>
-                        <label class="custom-control-label" for="theme-dark">Dark</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="theme-dark" name="theme" value="2" {{ Auth::user()->theme == 2 ? 'checked' : '' }}>
+                        <label class="form-check-label" for="theme-dark">Dark</label>
                     </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="theme-black" name="theme" value="3" {{ Auth::user()->theme == 3 ? 'checked' : '' }}>
-                        <label class="custom-control-label" for="theme-black">Black</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="theme-black" name="theme" value="3" {{ Auth::user()->theme == 3 ? 'checked' : '' }}>
+                        <label class="form-check-label" for="theme-black">Black</label>
                     </div>
                 </div>
             </div>
