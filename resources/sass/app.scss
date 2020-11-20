@@ -184,3 +184,21 @@ footer {
         margin-top: 15px;
     }
 }
+
+// Scrollbar
+body {
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+
+    scrollbar-width: thin;
+}
