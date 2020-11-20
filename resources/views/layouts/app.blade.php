@@ -71,17 +71,17 @@
                         <li class="nav-item {{ Request::is('rings*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('rings') }}">Rings</a>
                         </li>
+                        <li class="nav-item {{ Request::is('viv*') ? 'active' : '' }} d-none d-md-block">
+                            <a class="nav-link" href="{{ route('viv') }}">About</a>
+                        </li>
                         <li class="nav-item dropdown {{ Request::is('buildfeed*') || Request::is('viv*') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                More <i class="far fa-fw fa-angle-down"></i>
+                                More <i class="far fa-angle-down ml-1"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
-                                <a class="dropdown-item" href="{{ route('viv') }}"><i class="far fa-fw fa-alicorn"></i> About</a>
+                                <a class="dropdown-item d-md-none" href="{{ route('viv') }}"><i class="far fa-fw fa-alicorn"></i> About</a>
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="far fa-fw fa-rss"></i> BuildFeed</a>
-                                <div class="dropdown-divider"></div>
-                                <h6 class="dropdown-header">RSS</h6>
-                                <a class="dropdown-item" href="/feed"><i class="far fa-fw fa-rss-square"></i> Flight feed</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="https://github.com/ChangeWindows/Viv/"><i class="fab fa-fw fa-github"></i> GitHub</a>
                                 <a class="dropdown-item" href="https://twitter.com/changewindows"><i class="fab fa-fw fa-twitter"></i> @ChangeWindows</a>
@@ -92,8 +92,8 @@
                     <ul class="navbar-nav">
                         @auth
                             <li class="nav-item dropdown {{ Request::is('front.profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="far fa-fw fa-user-circle"></i><span class="d-none d-md-inline"> {{ Auth::user()->name }}<span>
+                                <a class="nav-link dropdown-toggle nav-link-profile" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="avatar" src="{{ Auth::user()->avatar }}" /><span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @can('view_backstage')
@@ -136,10 +136,11 @@
                             <p class="mb-0">{{ config('app.viv') }} &middot; 2014-2020 &copy; <a href="https://studio384.be">Studio 384</a></p>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="https://studio384.be" class="h4 f-384 font-weight-bold">.<span class="luna">384</span></a>
+                            <a href="https://studio384.be" class="h4 f-384 font-weight-bold">Studio <span class="luna">384</span></a>
                         </div>
                         <div class="col-12 text-right">
                             <span class="m-0">
+                                <a href="/feed"><i class="far fa-fw fa-rss-square"></i></a>
                                 <a href="https://patreon.com/changewindows"><i class="fab fa-fw fa-patreon"></i></a>
                                 <a href="https://github.com/changewindows"><i class="fab fa-fw fa-github"></i></a>
                                 <a href="https://medium.com/changewindows"><i class="fab fa-fw fa-medium"></i></a>
