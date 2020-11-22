@@ -38,6 +38,9 @@
                         <div class="col-12 h6 text-primary mb-3">{{ ucfirst($type) }}</div>
                         @foreach($model as $search_result)
                             @includeWhen(get_class($search_result->searchable) === 'App\User', 'core.search._account', ['account' => $search_result->searchable])
+                            @includeWhen(get_class($search_result->searchable) === 'App\Log', 'core.search._changelog', ['changelog' => $search_result->searchable])
+                            @includeWhen(get_class($search_result->searchable) === 'App\Release', 'core.search._flight', ['platform' => $search_result->searchable->platform, 'ring' => $search_result->searchable, 'build' => $search_result->searchable->build, 'delta' => $search_result->searchable->delta])
+                            @includeWhen(get_class($search_result->searchable) === 'App\Milestone', 'core.search._milestone', ['milestone' => $search_result->searchable])
                         @endforeach
                     @endforeach
                 </div>

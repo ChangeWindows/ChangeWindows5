@@ -3,14 +3,26 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Log extends Model
+class Log extends Model implements Searchable
 {
     protected $table = 'logs';
 
     protected $dates = ['created_at', 'updated_at'];
 
     protected $fillable = array('milestone_id', 'platform', 'changelog');
+
+    public function getSearchResult(): SearchResult {
+        $url = route('admin.changelogs.edit', $this);
+
+        return new SearchResult(
+            $this,
+            $this->changelog,
+            $url
+        );
+    }
 
     public function milestone() {
         return $this->hasOne('App\Milestone', 'id', 'milestone_id');

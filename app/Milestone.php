@@ -4,8 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Milestone extends Model
+class Milestone extends Model implements Searchable
 {
     protected $table = 'milestones';
     public $incrementing = false;
@@ -20,6 +22,16 @@ class Milestone extends Model
 
     public function getBgColorAttribute() {
         return 'background-color: #'.$this->color;
+    }
+
+    public function getSearchResult(): SearchResult {
+        $url = route('admin.milestones.edit', $this);
+
+        return new SearchResult(
+            $this,
+            $this->version,
+            $url
+        );
     }
 
     public function getSupport() {

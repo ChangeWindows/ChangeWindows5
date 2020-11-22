@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 use Carbon\Carbon;
 use App\Milestone;
 
-class Release extends Model implements Feedable
+class Release extends Model implements Feedable, Searchable
 {
     protected $table = 'releases';
 
@@ -38,6 +40,16 @@ class Release extends Model implements Feedable
 
     public function getFormatAttribute() {
         return $this->date->format('d M Y');
+    }
+
+    public function getSearchResult(): SearchResult {
+        $url = route('admin.flights.edit', $this);
+
+        return new SearchResult(
+            $this,
+            $this->build.'.'.$this->delta,
+            $url
+        );
     }
 
     public function getFlightAttribute() {
