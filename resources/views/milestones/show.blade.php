@@ -19,7 +19,7 @@
                 @auth
                     @if (Auth::user()->hasAnyRole(['Admin']))
                         <div class="flex-grow-1"></div>
-                        <a class="nav-link" href="{{ route('editMilestone', ['id' => $milestone->id]) }}">
+                        <a class="nav-link" href="https://viv.changewindows.org/admin/milestones">
                             <i class="far fa-fw fa-pencil"></i>
                         </a>
                     @endif

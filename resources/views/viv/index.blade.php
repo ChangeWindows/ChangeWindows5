@@ -22,55 +22,10 @@
         </p>
         <p class="text-center"><a href="https://www.patreon.com/bePatron?c=1028298" class="btn btn-primary btn-patreon"><i class="fab fa-fw fa-patreon"></i> Become a Patron</a></p>
         <p class="lead text-center about-intro">These are our patrons, they help us make ChangeWindows a reality. If you like what we do, feel free to join them.</p>
-        <div class="jumbotron insider platinum">
-            <h1 class="text-center text-lowercase"><span class="font-weight-light">Platinum</span>Insider</h1>
-            <div class="row justify-content-md-center">
-                @foreach ($platinum as $patron)
-                    <div class="col-3">
-                        <div class="patron">
-                            <i class="far fa-fw fa-user-circle"></i>
-                            <div class="name">{{ $patron->name }}</div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="jumbotron insider gold">
-            <h1 class="text-center text-lowercase"><span class="font-weight-light">Gold</span>Insider</h1>
-            <div class="row justify-content-md-center">
-                @foreach ($gold as $patron)
-                    <div class="col-3">
-                        <div class="patron">
-                            <i class="far fa-fw fa-user-circle"></i>
-                            <div class="name">{{ $patron->name }}</div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="jumbotron insider silver">
-            <h1 class="text-center text-lowercase"><span class="font-weight-light">Silver</span>Insider</h1>
-            <div class="row justify-content-md-center">
-                @foreach ($silver as $patron)
-                    <div class="col-3">
-                        <div class="patron">
-                            <div class="name">{{ $patron->name }}</div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="jumbotron insider bronze">
-            <h1 class="text-center text-lowercase"><span class="font-weight-light">Bronze</span>Insider</h1>
-            <div class="row justify-content-md-center">
-                @foreach ($bronze as $patron)
-                    <div class="col-3">
-                        <div class="patron">
-                            <div class="name">{{ $patron->name }}</div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+        <div class="alert alert-info mt-4">
+            <h5>While we're working on version 6, we'll not be able to display our Patrons here...</h5>
+            <p>Developing ChangeWindows takes a while and we're currently working on our first big update since ChangeWindows 5. We call it - and this will surprise you - ChangeWindows 6. However, this means that we didn't have time to update or re-implement some features and showing our Patrons here was one of them.</p>
+            <p class="m-0">Stick with us, tho, it will be back before version 6 is done.</p>
         </div>
     </div>
 </div>

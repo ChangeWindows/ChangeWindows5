@@ -1,11 +1,6 @@
 @extends('layouts.app')
 @section('title') vNext @endsection
 
-@section('toolset')
-<a class="dropdown-item" href="{{ route('editVNext', ['platform_id' => $changelog->id]) }}"><i class="far fa-fw fa-pencil"></i> Edit vNext</a>
-<div class="dropdown-divider"></div>
-@endsection
-
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
@@ -32,8 +27,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('modals')
-
 @endsection
