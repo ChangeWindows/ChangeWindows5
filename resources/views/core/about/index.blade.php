@@ -31,10 +31,18 @@
                     <p><i class="fab fa-fw fa-laravel"></i> Laravel 8.15.0 &middot; <i class="fab fa-fw fa-bootstrap"></i> Bootstrap 5.0.0-alpha3 &middot; <i class="fab fa-fw fa-font-awesome"></i> Font Awesome 5.15.1</p>
                     <p class="mb-1"><b>Backstage</b></p>
                     <ul>
-                        <li><span class="badge bg-success">new</span> Alpha 1 is the start of building out an entirely new Backstage.</li>
+                        <li><span class="badge bg-success">new</span> Introduces the Backstage, a new admin panel for ChangeWindows.</li>
+                        <li><span class="badge bg-success">new</span> You can now search for milestones, flights, changelogs and users in the Backstage.</li>
+                    </ul>
+                    <p class="mb-1"><b>Accounts, profile and settings</b></p>
+                    <ul>
+                        <li>The Light and Black themes are now available for all users.</li>
+                        <li><span class="badge bg-success">new</span> Users can now change their email address and password from within their profile.</li>
+                        <li><span class="badge bg-success">new</span> Accounts can now add an avatar.</li>
                     </ul>
                     <p class="mb-1"><b>Other changes</b></p>
                     <ul>
+                        <li>Minor enhancements to the front-end theme, including better spacing, custom scrollbar design and an updated navigation.</li>
                         <li><span class="badge bg-dark">system</span> Upgraded various components.</li>
                         <li><span class="badge bg-danger">removed</span> Temporarily removed Patron list from About.</li>
                     </ul>

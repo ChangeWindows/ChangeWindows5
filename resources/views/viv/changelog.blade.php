@@ -6,7 +6,7 @@
 <section class="release-notes">
     <h3>6.0.0-alpha.1 <small>2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
-    <p>Introduces major revamp the the admin panel</p>
+    <p>Introduces major revamp of the admin panel</p>
     <p>Revamps account permissions system</p>
     <p>You can now edit your email address and password, as well as upload a profile picture</p>
     <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
