@@ -77,6 +77,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                                <a class="dropdown-item" href="https://viv.changewindows.org" target="_blank"><i class="far fa-fw fa-sparkles"></i> ChangeWindows 6 Preview</a>
                                 <a class="dropdown-item" href="{{ route('viv') }}"><i class="far fa-fw fa-alicorn"></i> About</a>
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="far fa-fw fa-rss"></i> BuildFeed</a>
                                 <div class="dropdown-divider"></div>
@@ -98,10 +99,10 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->hasAnyRole(['Admin']))
                                         @yield('toolset')
-                                        <a class="dropdown-item" href="{{ route('showFlights') }}"><i class="far fa-fw fa-plane"></i> Flights</a>
-                                        <a class="dropdown-item" href="{{ route('showLogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>
-                                        <a class="dropdown-item" href="{{ route('showUsers') }}"><i class="far fa-fw fa-users"></i> Users</a>
-                                        <a class="dropdown-item" href="{{ route('showPatreon') }}"><i class="fab fa-fw fa-patreon"></i> Patrons</a>
+                                        <a class="dropdown-item" href="https://viv.changewindows.org/admin"><i class="far fa-fw fa-seedling"></i> Backstage</a>
+                                        <a class="dropdown-item" href="https://viv.changewindows.org/admin/flights"><i class="far fa-fw fa-plane"></i> Flights</a>
+                                        <a class="dropdown-item" href="https://viv.changewindows.org/admin/changelogs"><i class="far fa-fw fa-align-left"></i> Changelogs</a>
+                                        <a class="dropdown-item" href="https://viv.changewindows.org/admin/accounts"><i class="far fa-fw fa-users"></i> Users</a>
                                         <div class="dropdown-divider"></div>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('profile') }}"><i class="far fa-fw fa-cog"></i> Settings</a>
@@ -136,10 +137,10 @@
                     <div class="row mt-4 mb-4">
                         <div class="col-6">
                             <span class="h4 mb-2"><span class="font-weight-bold">ChangeWindows</span></span>
-                            <p class="mb-0">{{ config('app.viv') }} &middot; 2014-2020 &copy; <a href="https://studio384.be">Studio 384</a></p>
+                            <p class="mb-0"><a href="{{ route('vivChangelog') }}">{{ config('app.viv') }}</a> &middot; 2014-2020 &copy; <a href="https://studio384.be">Studio 384</a></p>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="https://studio384.be" class="h4 f-384 font-weight-bold">.<span class="luna">384</span></a>
+                            <a href="https://studio384.be" class="h4 f-384 font-weight-bold">Studio <span class="luna">384</span></a>
                         </div>
                         <div class="col-12 text-right">
                             <span class="m-0">

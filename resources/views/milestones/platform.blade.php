@@ -17,7 +17,7 @@
                     </a>
                 @endforeach
                 <div class="flex-grow-1"></div>
-                <a class="nav-link" href="{{ route('editMilestone', ['id' => $milestone->id]) }}">
+                <a class="nav-link" href="https://viv.changewindows.org/admin/milestones">
                     <i class="far fa-fw fa-pencil"></i>
                 </a>
             </nav>
@@ -38,7 +38,7 @@
         @else
             @if (Auth::user() && Auth::user()->hasAnyRole(['Admin']))
                 <h4>No changelog yet, create one...</h4>
-                <a href="{{ route('createLog', ['milestone' => $milestone->id, 'platform' => $platform_id]) }}" class="btn btn-primary"><i class="far fa-fw fa-pencil"></i> Write a changelog</a>
+                <a href="https://viv.changewindows.org/admin/changelogs" class="btn btn-primary"><i class="far fa-fw fa-pencil"></i> Write a changelog</a>
             @else
                 <h4>No changelog available just yet</h4>
                 <p>This means that this is or a very recent milestone or we just didn't yet get around writing it. Stay tuned, we're working on it.</p>

@@ -16,23 +16,4 @@ class vNextController extends Controller
 
         return view('vnext.show', compact('changelog', 'parsedown'));
     }
-
-    public function edit(Request $request, $platform) {
-        $request->user()->authorizeRoles('Admin');
-
-        $changelog = VNext::findOrFail($platform);
-
-        return view('vnext.edit', compact('changelog'));
-    }
-
-    public function update(Request $request, $platform) {
-        $request->user()->authorizeRoles('Admin');
-
-        $changelog = VNext::find($platform);
-        
-        $changelog->changelog = request()->get('changelog');
-        $changelog->save();
-
-        return redirect('/vnext/'.getPlatformClass($platform));
-    }
 }

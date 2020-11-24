@@ -4,6 +4,14 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.4.0 <small>23 November 2020</small></h3>
+    <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>Adds link to ChangeWindows 6 Preview under the "More" menu</p>
+    <h4><i class="far fa-fw fa-trash-alt"></i> Removed</h4>
+    <p>Temporarily removes the Patrons from the about page in preparation for ChangeWindows 6</p>
+    <p>Removes all administrative tools from ChangeWindows 5</p>
+</section>
+<section class="release-notes">
     <h3>5.3.2 <small>22 October 2020</small></h3>
     <h4><i class="far fa-fw fa-band-aid"></i> Fixed</h4>
     <p>Fixes footer not following the user theme</p>
