@@ -29,8 +29,6 @@ Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
 Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');
 Route::get('/buildfeed/{id}', 'BuildfeedController@show')->name('showBuildfeed');
 
-Route::get('/flight', 'FlightController@index')->name('showFlights');
-
 Route::get('/vnext/{platform?}', 'vNextController@index')->name('showVNext');
 Route::get('/vnext/{platform}/edit', 'vNextController@edit')->name('editVNext');
 Route::patch('/vnext/{platform?}', 'vNextController@update')->name('updateVNext');

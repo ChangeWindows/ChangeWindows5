@@ -33,7 +33,3 @@
     </div>
 </div>
 @endsection
-
-@section('modals')
-
-@endsection
