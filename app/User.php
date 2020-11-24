@@ -42,7 +42,7 @@ class User extends Authenticatable implements JWTSubject, Searchable
 
     public function getAvatarAttribute() {
         if ($this->avatar_path) {
-            return asset('storage/'.$this->avatar_path);
+            return asset($this->avatar_path);
         } else {
             return asset('img/models/user.png');
         }

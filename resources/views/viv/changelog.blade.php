@@ -4,7 +4,7 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>6.0.0-alpha.1 <small>2020</small></h3>
+    <h3>6.0.0-alpha.1 <small>24 November 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Introduces major revamp of the admin panel</p>
     <p>Revamps account permissions system</p>

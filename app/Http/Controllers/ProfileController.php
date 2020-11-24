@@ -75,10 +75,11 @@ class ProfileController extends Controller
         ];
 
         if (request('avatar')) {
-            $media = request()->file('avatar');
-            $storage_location = $media->store('avatars');
+            $avatar = request()->file('avatar');
+            $avatar_name = $user->id.'.'.$avatar->getClientOriginalExtension();
+            $avatar->move(public_path('img/avatars'), $avatar_name);
 
-            $updateable['avatar_path'] = $storage_location;
+            $updateable['avatar_path'] = 'img/avatars/'.$avatar_name;
         }
 
         $user->update($updateable);

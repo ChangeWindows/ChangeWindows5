@@ -21,4 +21,5 @@ yarn-error.log
 /public/css/brands.min.css
 /public/css/duotone.min.css
 /public/css/fontawesome.min.css
+/public/img/avatars
 .npmrc

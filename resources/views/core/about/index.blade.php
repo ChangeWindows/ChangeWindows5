@@ -27,7 +27,7 @@
                 <h3 class="h6 m-3">What's new?</h3>
                 <div class="card-body">
                     <h3 class="mt-0">ChangeWindows 6.0</h3>
-                    <h5 class="mt-3">What's new in ChangeWindows 6.0-alpha.1? <small class="text-muted">2020</small></h5>
+                    <h5 class="mt-3">What's new in ChangeWindows 6.0-alpha.1? <small class="text-muted">24 November 2020</small></h5>
                     <p><i class="fab fa-fw fa-laravel"></i> Laravel 8.15.0 &middot; <i class="fab fa-fw fa-bootstrap"></i> Bootstrap 5.0.0-alpha3 &middot; <i class="fab fa-fw fa-font-awesome"></i> Font Awesome 5.15.1</p>
                     <p class="mb-1"><b>Backstage</b></p>
                     <ul>
