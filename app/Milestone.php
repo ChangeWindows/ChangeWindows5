@@ -14,7 +14,7 @@ class Milestone extends Model implements Searchable
 
     protected $dates = ['created_at', 'updated_at', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol'];
 
-    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcBroad', 'pcLTS', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'iotBroad', 'teamTargeted', 'teamBroad', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicBroad', 'holographicLTS', 'tenXSlow', 'sdk', 'iso'];
+    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'start_build', 'start_delta', 'end_build', 'end_delta', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcBroad', 'pcLTS', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'iotBroad', 'teamTargeted', 'teamBroad', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicBroad', 'holographicLTS', 'tenXSlow', 'sdk', 'iso'];
 
     public function releases() {
         return $this->hasMany(Release::class, 'milestone');
@@ -32,6 +32,20 @@ class Milestone extends Model implements Searchable
             $this->version,
             $url
         );
+    }
+    
+    static function splitMetaBuild($build_string) {
+        if (substr_count($build_string, '.') !== 1) {
+            return false;
+        }
+
+        // Figure out the location of dots
+        $dot = strpos($build_string, '.', 0) + 1;
+
+        $string['build'] = substr($build_string, 0, $dot - 1);
+        $string['delta'] = substr($build_string, $dot);
+
+        return $string;
     }
 
     public function getSupport() {

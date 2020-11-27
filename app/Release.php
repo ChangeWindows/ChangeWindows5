@@ -161,39 +161,12 @@ class Release extends Model implements Feedable, Searchable
     static function getMilestoneByString($string) {
         $delta = $string['delta'];
         $build = $string['build'];
-        $major = $string['major'];
 
-        // DO NOT HARDCODE DO NOT HARDCODE DO NOT HARDCODE
-        if ( $build < 10250 )
-            return 'threshold1';
-        else if ( $build < 10600 )
-            return 'threshold2';
-        else if ( $build < 14400 )
-            return 'redstone1';
-        else if ( $build < 16000 )
-            return 'redstone2';
-        else if ( $build < 16300 )
-            return 'redstone3';
-        else if ( $build < 17200 )
-            return 'redstone4';
-        else if ( $build < 17900 )
-            return 'redstone5';
-        else if ( $build < 18363 )
-            return '19h1';
-        else if ( $build < 18364 )
-            return '19h2';
-        else if ( $build < 19042 )
-            return '20h1';
-        else if ( $build < 19043 )
-            return '20h2';
-        else if ( $build < 20500 )
-            return '21h1';
-        else
-            return '21h2';
+        $milestone = Milestone::where('start_build', '<=', $build)->orderBy('start_build', 'desc')->first();
 
-        // Damn it.
-        // In all fairness, this needs a bottom and top range for which build should be in which milestone
-        // additionally, the create build form should have an override for the early skip ahead builds
+        dd($build, $delta, $milestone->id);
+
+        return $milestone->id;
     }
 
     // Release scopes

@@ -63,6 +63,9 @@ class MilestoneController extends Controller
     public function update(Milestone $milestone) {
         $this->authorize('edit_milestone');
 
+        $start = Milestone::splitMetaBuild(request()->get('start_string'));
+        $end = Milestone::splitMetaBuild(request()->get('end_string'));
+
         $milestone->update([
             'id' => request()->get('id'),
             'osname' => request()->get('osname'),
@@ -70,6 +73,10 @@ class MilestoneController extends Controller
             'codename' => request()->get('codename'),
             'version' => request()->get('version'),
             'color' => request()->get('color'),
+            'start_build' => $start['build'],
+            'start_delta' => $start['delta'],
+            'end_build' => $end['build'],
+            'end_delta' => $end['delta'],
             'preview' => request()->get('preview') === null ? '0000-01-01' : request()->get('preview'),
             'public' => request()->get('public') === null ? '0000-01-01' : request()->get('public'),
             'mainEol' => request()->get('mainEol') === null ? '0000-01-01' : request()->get('mainEol'),

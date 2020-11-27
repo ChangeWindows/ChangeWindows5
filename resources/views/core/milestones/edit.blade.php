@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="name">Name</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" required placeholder="Name" value="{{ old('name', $milestone->name) }}">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name" value="{{ old('name', $milestone->name) }}">
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -77,6 +77,30 @@
                                 <input type="text" class="form-control @error('color') is-invalid @enderror" name="color" id="color" required placeholder="Color" value="{{ old('color', $milestone->color) }}">
                             </div>
                             @error('color')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card border-0 shadow p-3">
+                    <h3 class="h6">
+                        Flights
+                        <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
+                    </h3>
+                    <div class="row g-3">
+                        <div class="col-md-4 col-sm-6">
+                            <label class="form-label" for="start_string">Start build string</label>
+                            <input type="text" class="form-control @error('start_string') is-invalid @enderror" name="start_string" id="start_string" required placeholder="Start build" value="{{ old('start_string', $milestone->start_build.'.'.$milestone->start_delta) }}">
+                            @error('start_string')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <label class="form-label" for="end_string">End build string</label>
+                            <input type="text" class="form-control @error('end_string') is-invalid @enderror" name="end_string" id="end_string" required placeholder="End build" value="{{ old('end_string', $milestone->end_build.'.'.$milestone->end_delta) }}">
+                            @error('end_string')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>

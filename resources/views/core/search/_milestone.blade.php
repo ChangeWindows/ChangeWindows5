@@ -6,8 +6,9 @@
         <div class="card-body d-flex flex-column">
             <div class="d-flex flex-row">
                 <div class="flex-grow-1">
-                    <h3 class="card-title h6 mb-0">{{ $milestone->osname }} version {{ $milestone->version }}</h3>
-                    <p class="text-muted m-0"><small>{{ $milestone->name }}</small></p>
+                    <h3 class="card-title h6 mb-0">{{ $milestone->name }}</h3>
+                    <p class="text-muted m-0"><small>{{ $milestone->start_build.'.'.$milestone->start_delta }} - {{ $milestone->end_build.'.'.$milestone->end_delta }}</small></p>
+                    
                 </div>
             </div>
             <div class="flex-grow-1"></div>

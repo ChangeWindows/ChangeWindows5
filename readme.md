@@ -76,7 +76,8 @@ If you discover a security vulnerability within ChangeWindows, please contact us
 ## License
 The ChangeWindows website is open-sourced software licensed under the [AGPL license](LICENSE). Note however that the content on our website isn't unless stated otherwise.
 
-## Version 6.0 migraiton
+## Version 6.0 migration
+### Alpha 1
 ```sql
 alter table `roles` add `is_default` int not null default '0' after `description`;
 alter table `users` add `onboarding` varchar(191) null after `email`, add `role_id` bigint unsigned not null;
@@ -87,4 +88,9 @@ alter table `ability_role` add primary key `ability_role_role_id_ability_id_prim
 alter table `ability_role` add constraint `ability_role_role_id_foreign` foreign key (`role_id`) references `roles` (`id`) on delete cascade;
 alter table `ability_role` add constraint `ability_role_ability_id_foreign` foreign key (`ability_id`) references `abilities` (`id`) on delete cascade;
 alter table `users` add `avatar` varchar(191) null after `email`;
+```
+
+### Alpha 2
+```sql
+alter table `milestones` add `start_build` int unsigned null after `color`, add `start_delta` int unsigned null after `color`, add `end_build` int unsigned null after `color`, add `end_delta` int unsigned null after `color`;
 ```
