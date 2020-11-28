@@ -91,16 +91,9 @@
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="start_string">Start build string</label>
-                            <input type="text" class="form-control @error('start_string') is-invalid @enderror" name="start_string" id="start_string" required placeholder="Start build" value="{{ old('start_string', $milestone->start_build.'.'.$milestone->start_delta) }}">
-                            @error('start_string')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="end_string">End build string</label>
-                            <input type="text" class="form-control @error('end_string') is-invalid @enderror" name="end_string" id="end_string" required placeholder="End build" value="{{ old('end_string', $milestone->end_build.'.'.$milestone->end_delta) }}">
-                            @error('end_string')
+                            <label class="form-label" for="start_build">Start build</label>
+                            <input type="text" class="form-control @error('start_build') is-invalid @enderror" name="start_build" id="start_build" required placeholder="Start build" value="{{ old('start_build', $milestone->start_build.'.'.$milestone->start_delta) }}">
+                            @error('start_build')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>

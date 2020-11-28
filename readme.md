@@ -92,5 +92,5 @@ alter table `users` add `avatar` varchar(191) null after `email`;
 
 ### Alpha 2
 ```sql
-alter table `milestones` add `start_build` int unsigned null after `color`, add `start_delta` int unsigned null after `color`, add `end_build` int unsigned null after `color`, add `end_delta` int unsigned null after `color`;
+alter table `milestones` add `start_build` int unsigned null after `color`;
 ```
