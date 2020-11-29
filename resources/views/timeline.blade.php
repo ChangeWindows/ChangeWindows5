@@ -87,8 +87,8 @@
                     @foreach ($builds as $build => $deltas)
                         @foreach ($deltas as $delta => $platforms)
                             @foreach ($platforms as $platform => $rings)
-                                <div class="timeline-row">
-                                    <a class="row" href="{{ route('platformMilestone', ['id' => $rings['default']->milestone, 'platform' => getPlatformClass($platform)]) }}">
+                                <div class="timeline-row d-flex">
+                                    <a class="flex-grow-1 row stretched-link" href="{{ route('platformMilestone', ['id' => $rings['default']->milestone, 'platform' => getPlatformClass($platform)]) }}">
                                         <div class="col-6 col-md-4 build"><span class="pr-2 platform-icon">{!! getPlatformIcon($platform) !!}</span> {{ $build }}.{{ $delta }}</div>
                                         <div class="col-6 col-md-8 ring">
                                             @foreach ($rings as $name => $ring)
@@ -98,9 +98,9 @@
                                             @endforeach
                                         </div>
                                     </a>
-                                    <a class="dot-container" data-toggle="tooltip" data-placement="left" title="Version {{ $rings['default']->version }}">
-                                        <span class="dot" style="background-color: #{{ $rings['default']->color }}"></span>
-                                    </a>
+                                    <div class="version-tag flex-grow-0">
+                                        <small class="text-muted">{{ $rings['default']->version }}</small>
+                                    </div>
                                 </div>
                             @endforeach
                         @endforeach

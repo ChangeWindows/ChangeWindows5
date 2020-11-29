@@ -10429,22 +10429,10 @@ h1, .h1 {
 .timeline .timeline-row .row .ring .label {
   margin-right: 3px;
 }
-.timeline .timeline-row .dot-container {
-  position: absolute;
-  width: 39px;
-  height: 39px;
-  top: 0;
-  right: 0;
-}
-.timeline .timeline-row .dot-container .dot {
-  background: #005dc5;
-  border-radius: 8px;
-  width: 8px;
-  height: 8px;
-  position: relative;
-  top: 5px;
-  left: 14px;
-  display: inline-block;
+.timeline .timeline-row .version-tag {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
 }
 
 .tile, .light .tile, .white .tile {
