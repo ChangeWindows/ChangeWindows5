@@ -161,6 +161,26 @@ class RoleTableSeeder extends Seeder {
             'label' => 'Can remove log.'
         ]);
 
+        $show_platforms = Ability::create([
+            'name' => 'show_platforms',
+            'label' => 'Can view platforms.'
+        ]);
+
+        $create_platform = Ability::create([
+            'name' => 'create_platform',
+            'label' => 'Can create platform.'
+        ]);
+
+        $edit_platform = Ability::create([
+            'name' => 'edit_platform',
+            'label' => 'Can edit platform.'
+        ]);
+
+        $delete_platform = Ability::create([
+            'name' => 'delete_platform',
+            'label' => 'Can remove platform.'
+        ]);
+
         $edit_settings = Ability::create([
             'name' => 'edit_settings',
             'label' => 'Can edit settings.'
@@ -197,6 +217,10 @@ class RoleTableSeeder extends Seeder {
         $admin->abilities()->attach($create_log);
         $admin->abilities()->attach($edit_log);
         $admin->abilities()->attach($delete_log);
+        $admin->abilities()->attach($show_platforms);
+        $admin->abilities()->attach($create_platform);
+        $admin->abilities()->attach($edit_platform);
+        $admin->abilities()->attach($delete_platform);
 
         $editor->abilities()->attach($view_backstage->id);
         $editor->abilities()->attach($show_users->id);
@@ -213,5 +237,7 @@ class RoleTableSeeder extends Seeder {
         $editor->abilities()->attach($show_logs);
         $editor->abilities()->attach($create_log);
         $editor->abilities()->attach($edit_log);
+        $editor->abilities()->attach($show_platforms);
+        $editor->abilities()->attach($edit_platform);
     }
 }

@@ -108,6 +108,16 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
         Route::delete('/{log}', 'Admin\ChangelogController@destroy')->name('.delete');
     });
 
+    // Platforms
+    Route::prefix('platforms')->name('.platforms')->group(function() {
+        Route::get('', 'Admin\PlatformController@index')->name('');
+        Route::get('/create', 'Admin\PlatformController@create')->name('.create');
+        Route::get('/{platform}/edit', 'Admin\PlatformController@edit')->name('.edit');
+        Route::post('', 'Admin\PlatformController@store')->name('.store');
+        Route::patch('/{platform}', 'Admin\PlatformController@update')->name('.update');
+        Route::delete('/{platform}', 'Admin\PlatformController@destroy')->name('.delete');
+    });
+
     // Permissions
     Route::prefix('roles')->name('.roles')->group(function() {
         Route::get('', 'Admin\RoleController@index')->name('');

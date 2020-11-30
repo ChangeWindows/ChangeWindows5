@@ -61,7 +61,7 @@
                                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
                             @canany (['show_milestones', 'show_flights', 'show_logs'])
-                                <li class="nav-item dropdown {{ request()->routeIs('admin.milestones*') || request()->routeIs('admin.flights*') ? 'active' : '' }}">
+                                <li class="nav-item dropdown {{ request()->routeIs('admin.milestones*') || request()->routeIs('admin.flights*') || request()->routeIs('admin.changelogs*') || request()->routeIs('admin.platforms*') ? 'active' : '' }}">
                                     <a class="nav-link dropdown-toggle" href="#" id="websiteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Content <i class="far fa-angle-down ml-1"></i>
                                     </a>
@@ -69,6 +69,7 @@
                                         @can('show_milestones')<a class="dropdown-item {{ request()->routeIs('admin.milestones*') ? 'active' : '' }}" href="{{ route('admin.milestones') }}"><i class="far fa-fw fa-map-signs"></i> Milestones</a>@endcan
                                         @can('show_flights')<a class="dropdown-item {{ request()->routeIs('admin.flights*') ? 'active' : '' }}" href="{{ route('admin.flights') }}"><i class="far fa-fw fa-plane"></i> Flights</a>@endcan
                                         @can('show_logs')<a class="dropdown-item {{ request()->routeIs('admin.changelogs*') ? 'active' : '' }}" href="{{ route('admin.changelogs') }}"><i class="far fa-fw fa-align-left"></i> Changelogs</a>@endcan
+                                        @can('show_platforms')<a class="dropdown-item {{ request()->routeIs('admin.platforms*') ? 'active' : '' }}" href="{{ route('admin.platforms') }}"><i class="far fa-fw fa-phone-laptop"></i> Platforms</a>@endcan
                                     </div>
                                 </li>
                             @endcanany
