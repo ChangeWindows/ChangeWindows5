@@ -120,7 +120,7 @@ class MilestoneController extends Controller
     public function destroy(Milestone $milestone) {
         $this->authorize('delete_milestone');
 
-        $milestone->destroy($id);
+        $milestone->delete();
 
         return redirect()->route('admin.milestones')->with('status', 'Milestone <b>'.$milestone->osname.' version '.$milestone->version.'</b> has been removed.');
     }

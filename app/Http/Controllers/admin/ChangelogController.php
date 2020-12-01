@@ -92,7 +92,7 @@ class ChangelogController extends Controller
     public function destroy(Log $log) {
         $this->authorize('delete_log');
 
-        $log->destroy();
+        $log->delete();
 
         return redirect()->route('admin.changelogs')->with('status', 'The changelog for <b>'.getPlatformById($log->platform).' version '.$log->milestone->version.'</b> has been deleted.');
     }

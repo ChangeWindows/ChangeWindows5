@@ -112,8 +112,8 @@ class FlightController extends Controller
     public function destroy(Release $release) {
         $this->authorize('delete_flight');
 
-        $release->destroy($id);
+        $release->delete();
 
-        return redirect()->route('admin.flights')->with('status', 'Flight <b>'.$release->build.'.'.$release->delta.' for '.getPlatformById($platform).'</b> has been removed.');
+        return redirect()->route('admin.flights')->with('status', 'Flight <b>'.$release->build.'.'.$release->delta.' for '.getPlatformById($release->platform).'</b> has been removed.');
     }
 }
