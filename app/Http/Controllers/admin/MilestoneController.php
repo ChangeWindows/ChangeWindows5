@@ -50,6 +50,7 @@ class MilestoneController extends Controller
      */
     public function edit(Milestone $milestone) {
         $this->authorize('edit_milestone');
+        
         return view('core.milestones.edit', compact('milestone'));
     }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Release;
+use App\Platform;
 use App\Milestone;
 use Twitter;
 
@@ -17,12 +18,13 @@ class FlightController extends Controller
      */
     public function index() {
         $releases = Release::orderBy('date', 'desc')->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'desc')->paginate(100);
+        $platforms = Platform::where('active', 1)->get();
 
         foreach ($releases as $release) {
             $timeline[$release->date->format('j F Y')][$release->build][$release->delta][$release->platform][$release->ring] = $release;
         }
 
-        return view('core.flights.index', compact('releases', 'timeline'));
+        return view('core.flights.index', compact('releases', 'platforms', 'timeline'));
     }
 
     /**

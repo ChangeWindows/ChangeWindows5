@@ -21,6 +21,10 @@ class Channel extends Model implements Searchable {
         return 'background-color: '.$this->color;
     }
 
+    public function getTextColorAttribute() {
+        return 'color: '.$this->color;
+    }
+
     public function getRouteKeyName() {
         return 'slug';
     }

@@ -164,8 +164,6 @@ class Release extends Model implements Feedable, Searchable
 
         $milestone = Milestone::where('start_build', '<=', $build)->orderBy('start_build', 'desc')->first();
 
-        dd($build, $delta, $milestone->id);
-
         return $milestone->id;
     }
 
