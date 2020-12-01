@@ -29,8 +29,14 @@
                     <h3 class="mt-0">ChangeWindows 6.0</h3>
                     <h5 class="mt-3">What's new in ChangeWindows 6.0-alpha.2? <small class="text-muted">December 2020</small></h5>
                     <p><i class="fab fa-fw fa-laravel"></i> Laravel 8.16.1 &middot; <i class="fab fa-fw fa-bootstrap"></i> Bootstrap 5.0.0-alpha3 &middot; <i class="fab fa-fw fa-font-awesome"></i> Font Awesome 5.15.1</p>
+                    <p class="mb-1"><b>Front-end</b></p>
+                    <ul>
+                        <li>The timeline will now show the milestone version directly rather than a hoverable dot.</li>
+                    </ul>
                     <p class="mb-1"><b>Backstage</b></p>
                     <ul>
+                        <li><span class="badge bg-success">new</span> Introduces platform management for dynamically managing the available platforms on ChangeWindows.</li>
+                        <li><span class="badge bg-success">new</span> Introduces channel management for dynamically managing the available channels on ChangeWindows.</li>
                         <li>Milestones now track the start and end build to match the correct milestone to a new flight.</li>
                     </ul>
                     <h5 class="mt-3">What's new in ChangeWindows 6.0-alpha.1? <small class="text-muted">24 November 2020</small></h5>

@@ -4,6 +4,14 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>6.0.0-alpha.2 <small>December 2020</small></h3>
+    <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>Platforms are now stored in the database rather than hardcoded</p>
+    <p>Channels are now stored in the database rather than hardcoded</p>
+    <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
+    <p>The timeline now shows version numbers for each build directly rather than a hoverable dot</p>
+</section>
+<section class="release-notes">
     <h3>6.0.0-alpha.1 <small>24 November 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Introduces major revamp of the admin panel</p>
