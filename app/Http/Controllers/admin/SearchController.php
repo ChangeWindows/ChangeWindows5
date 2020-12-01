@@ -7,6 +7,8 @@ use App\User;
 use App\Release;
 use App\Log;
 use App\Milestone;
+use App\Platform;
+use App\Channel;
 use Illuminate\Http\Request;
 use Spatie\Searchable\Search;
 
@@ -21,6 +23,8 @@ class SearchController extends Controller {
             ->registerModel(Release::class, 'build', 'delta')
             ->registerModel(Log::class, 'changelog')
             ->registerModel(Milestone::class, 'version')
+            ->registerModel(Platform::class, 'name')
+            ->registerModel(Channel::class, 'name')
             ->perform($request->input('search'));
 
         return view('core.search.results', compact('search_results'));
