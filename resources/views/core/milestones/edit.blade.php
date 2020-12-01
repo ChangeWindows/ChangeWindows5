@@ -92,7 +92,7 @@
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="start_build">Start build</label>
-                            <input type="text" class="form-control @error('start_build') is-invalid @enderror" name="start_build" id="start_build" required placeholder="Start build" value="{{ old('start_build', $milestone->start_build.'.'.$milestone->start_delta) }}">
+                            <input type="text" class="form-control @error('start_build') is-invalid @enderror" name="start_build" id="start_build" required placeholder="Start build" value="{{ old('start_build', $milestone->start_build) }}">
                             @error('start_build')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror

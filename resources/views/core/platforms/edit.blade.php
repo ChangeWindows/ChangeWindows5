@@ -33,14 +33,14 @@
                         <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
                     </h3>
                     <div class="row g-3">
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="name">Name</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $platform->name) }}" name="name" id="name" required placeholder="Titel">
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="position">Position</label>
                             <input type="text" class="form-control @error('position') is-invalid @enderror" id="position" name="position" aria-describedby="position" placeholder="Position" value="{{ old('position', $platform->position) }}">
                             @error('position')
@@ -57,7 +57,7 @@
                         <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
                     </h3>
                     <div class="row g-3">
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="description">Color</label>
                             <div class="input-group @error('color') is-invalid @enderror">
                                 <div class="input-group-prepend"><span class="input-group-text">#</span></div>
@@ -67,7 +67,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-sm-6">
                             <label class="form-label" for="description">Icon</label>
                             <div class="input-group @error('icon') is-invalid @enderror">
                                 <div class="input-group-prepend"><span class="input-group-text">far fa-fw fa-</span></div>
@@ -88,7 +88,7 @@
                         <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
                     </h3>
                     <div class="row g-3">
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-sm-6">
                             <div class="mb-2">
                                 <div class="form-check">
                                     <input type="checkbox" id="active" name="active" class="form-check-input" value="1" {{ old('active', $platform->active) == 1 ? 'checked="checked"' : ''}}>
