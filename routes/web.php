@@ -117,6 +117,11 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
         Route::patch('/{platform}', 'Admin\PlatformController@update')->name('.update');
         Route::delete('/{platform}', 'Admin\PlatformController@destroy')->name('.delete');
     });
+    
+    Route::prefix('channelPlatforms')->name('.channelPlatforms')->group(function() {
+        Route::post('', 'Admin\ChannelPlatformController@store')->name('.store');
+        Route::delete('/{channel_platform}', 'Admin\ChannelPlatformController@destroy')->name('.delete');
+    });
 
     // Channels
     Route::prefix('channels')->name('.channels')->group(function() {

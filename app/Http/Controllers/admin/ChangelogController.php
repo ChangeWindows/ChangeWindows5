@@ -59,7 +59,7 @@ class ChangelogController extends Controller
     public function edit(Log $log) {
         $this->authorize('edit_log');
 
-        $milestones = Milestone::orderBy('version', 'DESC')->get();
+        $milestones = Milestone::orderBy('version', 'desc')->get();
 
         return view('core.changelogs.edit', compact('log', 'milestones'));
     }

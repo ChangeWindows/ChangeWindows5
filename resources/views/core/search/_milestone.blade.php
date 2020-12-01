@@ -8,7 +8,6 @@
                 <div class="flex-grow-1">
                     <h3 class="card-title h6 mb-0">{{ $milestone->name }}</h3>
                     <p class="text-muted m-0"><small>Build {{ $milestone->start_build }} and up</small></p>
-                    
                 </div>
             </div>
             <div class="flex-grow-1"></div>

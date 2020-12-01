@@ -16,7 +16,7 @@ class ChannelController extends Controller {
     public function index() {
         $this->authorize('show_channels');
 
-        $channels = Channel::all();
+        $channels = Channel::orderBy('position')->get();
 
         return view('core.channels.index', compact('channels'));
     }

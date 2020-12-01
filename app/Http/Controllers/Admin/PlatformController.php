@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Platform;
+use App\Channel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -16,7 +17,7 @@ class PlatformController extends Controller {
     public function index() {
         $this->authorize('show_platforms');
 
-        $platforms = Platform::all();
+        $platforms = Platform::orderBy('position')->get();
 
         return view('core.platforms.index', compact('platforms'));
     }
@@ -33,16 +34,19 @@ class PlatformController extends Controller {
         $this->validate(request(), [
             'name' => ['required'],
             'color' => ['required'],
+            'position' => ['required'],
             'icon' => ['required']
         ], [
             'name.required' => 'The name is required.',
             'color.required' => 'The color is required.',
+            'position.required' => 'The position is required.',
             'icon.required' => 'The icon is required.'
         ]);
 
         $platform = Platform::create([
             'name' => request('name'),
             'color' => '#'.request('color'),
+            'position' => request('position'),
             'icon' => request('icon')
         ]);
 
@@ -58,7 +62,9 @@ class PlatformController extends Controller {
     public function edit(Platform $platform) {
         $this->authorize('edit_platform');
 
-        return view('core.platforms.edit', compact('platform'));
+        $channels = Channel::all();
+
+        return view('core.platforms.edit', compact('platform', 'channels'));
     }
 
     /**
@@ -74,16 +80,19 @@ class PlatformController extends Controller {
         $this->validate(request(), [
             'name' => ['required'],
             'color' => ['required'],
+            'position' => ['required'],
             'icon' => ['required']
         ], [
             'name.required' => 'The name is required.',
             'color.required' => 'The color is required.',
+            'position.required' => 'The position is required.',
             'icon.required' => 'The icon is required.'
         ]);
 
         $platform->update([
             'name' => request('name'),
             'color' => '#'.request('color'),
+            'position' => request('position'),
             'icon' => request('icon'),
             'active' => request('active') !== null ? 1 : 0
         ]);

@@ -7,6 +7,7 @@
             <div class="d-flex flex-row">
                 <div class="flex-grow-1 text-break">
                     <h3 class="card-title h6 mb-1">{{ $platform->name }}</h3>
+                    <p class="text-muted m-0"><small>{{ $platform->channelPlatforms->count() }} channels</small></p>
                 </div>
             </div>
             <div class="flex-grow-1"></div>

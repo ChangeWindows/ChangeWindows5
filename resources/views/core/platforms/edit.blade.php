@@ -40,6 +40,13 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="position">Position</label>
+                            <input type="text" class="form-control @error('position') is-invalid @enderror" id="position" name="position" aria-describedby="position" placeholder="Position" value="{{ old('position', $platform->position) }}">
+                            @error('position')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,13 +94,58 @@
                                     <input type="checkbox" id="active" name="active" class="form-check-input" value="1" {{ old('active', $platform->active) == 1 ? 'checked="checked"' : ''}}>
                                     <label class="form-check-label" for="active">Platform is active</label>
                                 </div>
-                                <small id="activeHelp" class="form-text">Inactive platforms will be shown less prominently.</small>
+                                <small id="activeHelp" class="form-text">Inactive platforms will be shown less prominently and be excluded from the Flight form.</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </fieldset>
+        <div class="row mt-3">
+            <div class="col-12">
+                <h3 class="h5 title">
+                    Channels
+                    @can('edit_platform')
+                        <div class="btn-group float-right">
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#channelModal">
+                                <i class="far fa-plus"></i> Add channel
+                            </button>
+                        </div>
+                    @endcan
+                </h3>
+            </div>
+            <div class="col-12 card-set">
+                <div class="row mt-3">
+                    @foreach($platform->channelPlatforms as $channelPlatforms)
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
+                            <div class="card shadow border-0 h-100 overflow-hidden">
+                                <div class="p-3 text-white" style="{{ $channelPlatforms->channel->bg_color }}">
+                                    <i class="fab fa-fw fa-windows"></i> {{ $channelPlatforms->channel->name }}
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex flex-row">
+                                        <div class="flex-grow-1">
+                                            <h3 class="card-title h6 mb-0">{{ $channelPlatforms->name }}</h3>
+                                            <p class="text-muted m-0"><small>{{ $channelPlatforms->short_name }}</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1"></div>
+                                </div>
+                                @can('edit_channel')
+                                    <div class="d-flex justify-content-between align-items-center card-footer">
+                                        <form method="POST" action="{{ route('admin.channelPlatforms.delete', $channelPlatforms) }}">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-danger btn-sm float-right"><i class="far fa-trash-alt"></i> Delete</button>
+                                        </form>
+                                    </div>
+                                @endcan
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
     </form>
     @can('delete_theme')
         <div class="row">
@@ -111,5 +163,53 @@
             </div>
         </div>
     @endcan
+</div>
+
+<div class="modal fade" id="channelModal" tabindex="-1" role="dialog" aria-labelledby="channelModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form method="POST" action="{{ route('admin.channelPlatforms.store') }}" class="modal-content row">
+            {{ csrf_field() }}
+            <div class="modal-header">
+                <h5 class="modal-title" id="channelModalLabel">Add channel</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Sluiten"><i class="far fa-fw fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <input type="hidden" name="platform" value="{{ $platform->id }}" />
+                    <div class="col-12">
+                        <label class="form-label" for="channel">Channel</label>
+                        <select class="form-select" @error('channel') is-invalid @enderror" id="channel" name="channel" aria-describedby="channelHelp" required>
+                            @foreach ($channels as $channel)
+                                @if (!$platform->channelPlatforms->pluck('channel.id')->contains($channel->id))
+                                    <option value="{{ $channel->id }}" {{ old('channel') === $channel->id ? 'selected' : ''}}>{{ $channel->name }}</option>
+                                @endif
+                            @endforeach
+                        </select>
+                        @error('channel')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" id="name" required placeholder="Name">
+                        @error('name')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label" for="short_name">Short name</label>
+                        <input type="text" class="form-control @error('short_name') is-invalid @enderror" value="{{ old('short_name') }}" name="short_name" id="short_name" required placeholder="Short name">
+                        @error('short_name')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary btn-sm" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary btn-sm"><i class="far fa-fw fa-plus"></i> Add</button>
+            </div>
+        </form>
+    </div>
 </div>
 @endsection

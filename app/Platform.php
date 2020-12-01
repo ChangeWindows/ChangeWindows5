@@ -15,8 +15,12 @@ class Platform extends Model implements Searchable {
     public $searchableType = 'Platforms';
 
     protected $table = 'platforms';
-    protected $fillable = ['name', 'color', 'icon', 'active', 'slug'];
+    protected $fillable = ['name', 'color', 'icon', 'position', 'active', 'slug'];
     protected $appends = ['plain_icon', 'colored_icon'];
+
+    public function channelPlatforms() {
+        return $this->hasMany(ChannelPlatform::class);
+    }
 
     public function getPlainIconAttribute() {
         return '<i class="far fa-fw fa-'.$this->icon.' '.$this->icon_modifiers.'"></i>';

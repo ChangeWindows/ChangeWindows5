@@ -105,4 +105,7 @@ alter table `channels` add unique `channels_slug_unique`(`slug`);
 create table `channel_platforms` (`id` bigint unsigned not null auto_increment primary key, `platform_id` bigint unsigned not null, `channel_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
 alter table `channel_platforms` add constraint `channel_platforms_platform_id_foreign` foreign key (`platform_id`) references `platforms` (`id`);
 alter table `channel_platforms` add constraint `channel_platforms_channel_id_foreign` foreign key (`channel_id`) references `channels` (`id`);
+
+alter table `channel_platforms` add `short_name` varchar(191) not null after `channel_id`, `name` varchar(191) not null after `channel_id`;
+alter table `platforms` add `position` int not null default '1' after `icon`;
 ```
