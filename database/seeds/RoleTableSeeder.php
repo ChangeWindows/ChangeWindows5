@@ -181,6 +181,26 @@ class RoleTableSeeder extends Seeder {
             'label' => 'Can remove platform.'
         ]);
 
+        $show_channels = Ability::create([
+            'name' => 'show_channels',
+            'label' => 'Can view channels.'
+        ]);
+
+        $create_channel = Ability::create([
+            'name' => 'create_channel',
+            'label' => 'Can create channel.'
+        ]);
+
+        $edit_channel = Ability::create([
+            'name' => 'edit_channel',
+            'label' => 'Can edit channel.'
+        ]);
+
+        $delete_channel = Ability::create([
+            'name' => 'delete_channel',
+            'label' => 'Can remove channel.'
+        ]);
+
         $edit_settings = Ability::create([
             'name' => 'edit_settings',
             'label' => 'Can edit settings.'
@@ -221,6 +241,10 @@ class RoleTableSeeder extends Seeder {
         $admin->abilities()->attach($create_platform);
         $admin->abilities()->attach($edit_platform);
         $admin->abilities()->attach($delete_platform);
+        $admin->abilities()->attach($show_channels);
+        $admin->abilities()->attach($create_channel);
+        $admin->abilities()->attach($edit_channel);
+        $admin->abilities()->attach($delete_channel);
 
         $editor->abilities()->attach($view_backstage->id);
         $editor->abilities()->attach($show_users->id);
@@ -239,5 +263,7 @@ class RoleTableSeeder extends Seeder {
         $editor->abilities()->attach($edit_log);
         $editor->abilities()->attach($show_platforms);
         $editor->abilities()->attach($edit_platform);
+        $editor->abilities()->attach($show_channels);
+        $editor->abilities()->attach($edit_channel);
     }
 }

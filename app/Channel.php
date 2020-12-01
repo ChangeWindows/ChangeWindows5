@@ -8,26 +8,17 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Spatie\Searchable\Searchable;
 use Spatie\Searchable\SearchResult;
 
-class Platform extends Model implements Searchable {
+class Channel extends Model implements Searchable {
     use Sluggable;
     use HasFactory;
 
-    public $searchableType = 'Platforms';
+    public $searchableType = 'Channels';
 
-    protected $table = 'platforms';
-    protected $fillable = ['name', 'color', 'icon', 'active', 'slug'];
-    protected $appends = ['plain_icon', 'colored_icon'];
-
-    public function getPlainIconAttribute() {
-        return '<i class="far fa-fw fa-'.$this->icon.' '.$this->icon_modifiers.'"></i>';
-    }
-
-    public function getColoredIconAttribute() {
-        return '<i style="color: '.$this->color.'" class="far fa-fw fa-'.$this->icon.' '.$this->icon_modifiers.'"></i>';
-    }
+    protected $table = 'channels';
+    protected $fillable = ['name', 'color', 'position', 'slug'];
 
     public function getBgColorAttribute() {
-        return 'background-color: #'.$this->color;
+        return 'background-color: '.$this->color;
     }
 
     public function getRouteKeyName() {
@@ -43,7 +34,7 @@ class Platform extends Model implements Searchable {
     }
 
     public function getSearchResult(): SearchResult {
-        $url = route('admin.platforms.edit', $this);
+        $url = route('admin.channels.edit', $this);
 
         return new SearchResult(
             $this,

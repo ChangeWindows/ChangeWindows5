@@ -99,4 +99,10 @@ alter table `platforms` add unique `platforms_slug_unique`(`slug`);
 create table `milestone_platforms` (`id` bigint unsigned not null auto_increment primary key, `platform_id` bigint unsigned not null, `milestone_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
 alter table `milestone_platforms` add constraint `milestone_platforms_platform_id_foreign` foreign key (`platform_id`) references `platforms` (`id`);
 alter table `milestone_platforms` add constraint `milestone_platforms_milestone_id_foreign` foreign key (`milestone_id`) references `milestones` (`id`);
+
+create table `channels` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `color` varchar(191) not null, `position` int not null, `slug` varchar(191) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `channels` add unique `channels_slug_unique`(`slug`);
+create table `channel_platforms` (`id` bigint unsigned not null auto_increment primary key, `platform_id` bigint unsigned not null, `channel_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `channel_platforms` add constraint `channel_platforms_platform_id_foreign` foreign key (`platform_id`) references `platforms` (`id`);
+alter table `channel_platforms` add constraint `channel_platforms_channel_id_foreign` foreign key (`channel_id`) references `channels` (`id`);
 ```

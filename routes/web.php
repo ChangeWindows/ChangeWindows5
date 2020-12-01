@@ -118,6 +118,16 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
         Route::delete('/{platform}', 'Admin\PlatformController@destroy')->name('.delete');
     });
 
+    // Channels
+    Route::prefix('channels')->name('.channels')->group(function() {
+        Route::get('', 'Admin\ChannelController@index')->name('');
+        Route::get('/create', 'Admin\ChannelController@create')->name('.create');
+        Route::get('/{channel}/edit', 'Admin\ChannelController@edit')->name('.edit');
+        Route::post('', 'Admin\ChannelController@store')->name('.store');
+        Route::patch('/{channel}', 'Admin\ChannelController@update')->name('.update');
+        Route::delete('/{channel}', 'Admin\ChannelController@destroy')->name('.delete');
+    });
+
     // Permissions
     Route::prefix('roles')->name('.roles')->group(function() {
         Route::get('', 'Admin\RoleController@index')->name('');
