@@ -89,6 +89,17 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
         Route::patch('/{milestone}', 'Admin\MilestoneController@update')->name('.update');
         Route::delete('/{milestone}', 'Admin\MilestoneController@destroy')->name('.delete');
     });
+    
+    Route::prefix('milestonePlatforms')->name('.milestonePlatforms')->group(function() {
+        Route::post('/{milestone}/{platform}', 'Admin\MilestonePlatformController@store')->name('.store');
+        Route::delete('/{milestone_platform}', 'Admin\MilestonePlatformController@destroy')->name('.delete');
+    });
+    
+    Route::prefix('channelMilestonePlatforms')->name('.channelMilestonePlatforms')->group(function() {
+        Route::post('/{milestone_platform}/{channel_platform}', 'Admin\ChannelMilestonePlatformController@store')->name('.store');
+        Route::patch('/{channel_milestone_platform}', 'Admin\ChannelMilestonePlatformController@toggle')->name('.toggle');
+        Route::delete('/{channel_milestone_platform}', 'Admin\ChannelMilestonePlatformController@destroy')->name('.delete');
+    });
 
     // Flights
     Route::prefix('flights')->name('.flights')->group(function() {

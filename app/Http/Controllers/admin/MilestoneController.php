@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Milestone;
+use App\Platform;
+use App\MilestonePlatform;
+use App\ChannelMilestonePlatform;
 use Twitter;
 
 class MilestoneController extends Controller
@@ -50,8 +53,10 @@ class MilestoneController extends Controller
      */
     public function edit(Milestone $milestone) {
         $this->authorize('edit_milestone');
+
+        $platforms = Platform::all();
         
-        return view('core.milestones.edit', compact('milestone'));
+        return view('core.milestones.edit', compact('milestone', 'platforms'));
     }
 
     /**

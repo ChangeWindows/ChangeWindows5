@@ -211,6 +211,110 @@
                 </div>
             </div>
         </fieldset>
+        <div class="row mt-3">
+            <div class="col-12">
+                <h3 class="h5 title">
+                    Platforms and channels
+                    @can('edit_milestone')
+                        <div class="btn-group float-right">
+                            <div class="dropdown">
+                                <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="far fa-plus"></i> Add platfrom
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                    @foreach ($platforms as $platform)
+                                        @if (!$milestone->milestonePlatforms->pluck('platform.id')->contains($platform->id))
+                                            <li>
+                                                <form method="POST" action="{{ route('admin.milestonePlatforms.store', ['milestone' => $milestone, 'platform' => $platform]) }}">
+                                                    {{ csrf_field() }}
+                                                    <button type="submit" class="dropdown-item">{!! $platform->colored_icon !!} {{ $platform->name }}</button>
+                                                </form>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    @endcan
+                </h3>
+            </div>
+            <div class="col-12 card-set">
+                <div class="row mt-3">
+                    @foreach($milestone->milestonePlatforms as $milestonePlatform)
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
+                            <div class="card shadow border-0 h-100">
+                                <div class="p-3 text-white d-flex align-items-center justify-content-between" style="{{ $milestonePlatform->platform->bg_color }}">
+                                    <span>{!! $milestonePlatform->platform->plain_icon !!} {{ $milestonePlatform->platform->name }}</span>
+                                    @can('edit_milestone')
+                                        <div class="dropdown">
+                                            <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                                <i class="far fa-plus"></i> Add channel
+                                            </a>
+
+                                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                                @foreach($milestonePlatform->platform->channelPlatforms as $channelPlatform)
+                                                    @if (!$milestonePlatform->channelMilestonePlatform->pluck('channel_platform_id')->contains($channelPlatform->id))
+                                                        <li>
+                                                            <form method="POST" action="{{ route('admin.channelMilestonePlatforms.store', [$milestonePlatform, $channelPlatform]) }}">
+                                                                {{ csrf_field() }}
+                                                                <button type="submit" class="dropdown-item d-flex align-items-center">
+                                                                    <div class="dot" style="background-color: {{ $channelPlatform->channel->color }}"></div>
+                                                                    {{ $channelPlatform->name }}
+                                                                </button>
+                                                            </form>
+                                                        <li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endcan
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex flex-row">
+                                        <div class="flex-grow-1">
+                                            @foreach($milestonePlatform->channelMilestonePlatform as $cmp)
+                                                <div class="d-flex align-items-center justify-content-between @if (!$loop->first) mt-2 @endif">
+                                                    <div class="dot" style="background-color: {{ $cmp->channelPlatform->channel->color }}"></div>
+                                                    <span>{{ $cmp->channelPlatform->name }}</span>
+                                                    <div class="flex-grow-1"></div>
+                                                    <div class="btn-toolbar @loop">
+                                                        <form method="POST" action="{{ route('admin.channelMilestonePlatforms.toggle', $cmp) }}">
+                                                            {{ method_field('PATCH') }}
+                                                            {{ csrf_field() }}
+                                                            @if ($cmp->active)
+                                                                <button type="submit" class="btn btn-success btn-sm mr-2"><i class="far fa-fw fa-check"></i></button>
+                                                            @else
+                                                                <button type="submit" class="btn btn-danger btn-sm mr-2"><i class="far fa-fw fa-times"></i></button>
+                                                            @endif
+                                                        </form>
+                                                        <form method="POST" action="{{ route('admin.channelMilestonePlatforms.delete', $cmp) }}">
+                                                            {{ method_field('DELETE') }}
+                                                            {{ csrf_field() }}
+                                                            <button type="submit" class="btn btn-danger btn-sm"><i class="far fa-fw fa-trash-alt"></i></button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1"></div>
+                                </div>
+                                @can('edit_milestone')
+                                    <div class="d-flex justify-content-between align-items-center card-footer">
+                                        <form method="POST" action="{{ route('admin.milestonePlatforms.delete', $milestonePlatform) }}">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-danger btn-sm float-right"><i class="far fa-trash-alt"></i> Delete</button>
+                                        </form>
+                                    </div>
+                                @endcan
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
     </form>
     @can('delete_milestone')
         <div class="row">

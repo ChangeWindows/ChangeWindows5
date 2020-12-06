@@ -277,6 +277,29 @@ a {
     border-width: 1.5px;
 }
 
+// Dropdowns
+.dropdown-item {
+    height: 2.25rem;
+    
+    > svg[style] {
+        transition: $transition-base;
+    }
+
+    &:hover {
+        > svg[style] {
+            color: #fff !important;
+        }
+    }
+}
+
+// Dots
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px !important;
+    margin-right: .5rem;
+}
+
 // Jumbotron
 .action-close {
     background-color: transparent;

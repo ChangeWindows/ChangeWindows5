@@ -11593,6 +11593,9 @@ textarea.form-control-lg {
 .card .card-header + .card-body {
   padding: 0 1rem 1rem;
 }
+.card :first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
 .card .card-description-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -12100,6 +12103,23 @@ a:hover {
 .form-control,
 .input-group-text {
   border-width: 1.5px;
+}
+
+.dropdown-item {
+  height: 2.25rem;
+}
+.dropdown-item > svg[style] {
+  transition: all 0.2s ease-in-out;
+}
+.dropdown-item:hover > svg[style] {
+  color: #fff !important;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px !important;
+  margin-right: 0.5rem;
 }
 
 .action-close {

@@ -31,7 +31,7 @@ class Platform extends Model implements Searchable {
     }
 
     public function getBgColorAttribute() {
-        return 'background-color: #'.$this->color;
+        return 'background-color: '.$this->color;
     }
 
     public function getRouteKeyName() {

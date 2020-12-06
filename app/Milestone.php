@@ -20,6 +20,10 @@ class Milestone extends Model implements Searchable
         return $this->hasMany(Release::class, 'milestone');
     }
 
+    public function milestonePlatforms() {
+        return $this->hasMany(MilestonePlatform::class);
+    }
+
     public function getBgColorAttribute() {
         return 'background-color: #'.$this->color;
     }

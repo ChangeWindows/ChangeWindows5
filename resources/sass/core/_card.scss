@@ -12,6 +12,10 @@
         padding: 0 1rem 1rem;
     }
 
+    :first-child {
+        border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+    }
+
     .card-description-overflow {
         overflow: hidden;
         text-overflow: ellipsis;
