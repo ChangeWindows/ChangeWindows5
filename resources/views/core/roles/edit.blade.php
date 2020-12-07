@@ -16,7 +16,7 @@
         <div class="row mb-3">
             <div class="col-12">
                 <div class='alert alert-success d-flex flex-row m-0'>
-                    <div class="mr-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
+                    <div class="me-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
                     <p class="m-0">{!! session('status') !!}</p>
                 </div>
             </div>
@@ -59,7 +59,7 @@
         <div class="col-12">
             <div class="avatar-bar avatar-bar-sm flex-wrap default m-0">
                 @foreach ($role->users as $user)
-                    <a href="{{ route('admin.accounts.edit', $user) }}" class="icon-avatar" data-toggle="tooltip" data-placement="top" title="{{ $user->name }}"><img src="{{ $user->avatar }}" /></a>
+                    <a href="{{ route('admin.accounts.edit', $user) }}" class="icon-avatar" data-bs-toggle="tooltip" data-placement="top" title="{{ $user->name }}"><img src="{{ $user->avatar }}" /></a>
                 @endforeach
             </div>
         </div>

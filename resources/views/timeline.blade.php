@@ -44,8 +44,8 @@
             <a class="nav-link {{ $request->platform == 'iot' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iot', 'ring' => $request->ring]) }}">IoT</a>
             <a class="nav-link {{ $request->platform == 'sdk' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'sdk', 'ring' => $request->ring]) }}">SDK</a>
             <a class="nav-link {{ $request->platform == 'iso' ? 'active' : '' }}" href="{{ route('timeline', ['platform' => 'iso', 'ring' => $request->ring]) }}">ISO</a>
-            <a class="nav-link dropdown {{ $request->platform == 'mobile' ? 'active' : '' }}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-ellipsis-h"></i></a>
-            <div class="dropdown-menu dropdown-menu-right">
+            <a class="nav-link dropdown {{ $request->platform == 'mobile' ? 'active' : '' }}" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-ellipsis-h"></i></a>
+            <div class="dropdown-menu dropdown-menu-end">
                 <a class="dropdown-item" href="{{ route('timeline', ['platform' => 'mobile', 'ring' => $request->ring]) }}"><i class="far fa-fw fa-mobile"></i> Mobile</a>
             </div>
         </nav>
@@ -58,7 +58,7 @@
     <div class="col-lg-7">
         <div class="text-center">
             <div class="btn-group">
-                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="filter-title">Ring:</span> {{ getRingByClass($request->ring) }}
                 </button>
                 <div class="dropdown-menu">
@@ -89,7 +89,7 @@
                             @foreach ($platforms as $platform => $rings)
                                 <div class="timeline-row d-flex">
                                     <a class="flex-grow-1 row stretched-link" href="{{ route('platformMilestone', ['id' => $rings['default']->milestone, 'platform' => getPlatformClass($platform)]) }}">
-                                        <div class="col-6 col-md-4 build"><span class="pr-2 platform-icon">{!! getPlatformIcon($platform) !!}</span> {{ $build }}.{{ $delta }}</div>
+                                        <div class="col-6 col-md-4 build"><span class="pe-2 platform-icon">{!! getPlatformIcon($platform) !!}</span> {{ $build }}.{{ $delta }}</div>
                                         <div class="col-6 col-md-8 ring">
                                             @foreach ($rings as $name => $ring)
                                                 @if ($name !== 'default')

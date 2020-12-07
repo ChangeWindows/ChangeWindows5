@@ -6,7 +6,7 @@
     <div class="col">
         <div class="text-center">
             <div class="btn-group mb-2">
-                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="filter-title">Lab:</span> {{ $request->lab ? $request->lab : 'All' }}
                 </button>
                 <div class="dropdown-menu dropdown-small">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="btn-group mb-2">
-                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="filter-title">Family:</span> {!! $request->family ? getFamily($request->family) : 'All' !!}
                 </button>
                 <div class="dropdown-menu dropdown-small">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="btn-group mb-2">
-                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-light btn-filter dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="filter-title">Source:</span> {!! $request->sourcetype ? getSource($request->sourcetype) : 'All' !!}
                 </button>
                 <div class="dropdown-menu dropdown-small">

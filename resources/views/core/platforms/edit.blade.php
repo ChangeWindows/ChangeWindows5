@@ -16,7 +16,7 @@
         <div class="row mb-3">
             <div class="col-12">
                 <div class='alert alert-success d-flex flex-row m-0'>
-                    <div class="mr-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
+                    <div class="me-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
                     <p class="m-0">{!! session('status') !!}</p>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                     Channels
                     @can('edit_platform')
                         <div class="btn-group float-right">
-                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#channelModal">
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-target="#channelModal">
                                 <i class="far fa-plus"></i> Add channel
                             </button>
                         </div>

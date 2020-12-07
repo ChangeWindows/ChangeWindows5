@@ -15,7 +15,7 @@
         @if (session('status'))
             <div class="col-12">
                 <div class='alert alert-success d-flex flex-row m-0'>
-                    <div class="mr-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
+                    <div class="me-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
                     <p class="m-0">{!! session('status') !!}</p>
                 </div>
             </div>

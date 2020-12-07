@@ -6,6 +6,7 @@
 
         <title>@yield('title') &middot; ChangeWindows</title>
 
+        <script src="{{ asset('js/bootstrap.bundle.min.js?v5.2.0') }}" defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link href="{{ asset('css/admin.css?v'.config('app.viv')) }}" rel="stylesheet">
         <link href="{{ asset('css/easymde.min.css') }}" rel="stylesheet">
@@ -29,11 +30,11 @@
                             <i class="far fa-fw fa-search"></i>
                         </a>
                         <div class="dropdown">
-                            <a class="core-bar-action core-bar-action-account dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="core-bar-action core-bar-action-account dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <p>{{ Auth::user()->name }}</p>
                                 <img class="rounded-circle" src="{{ Auth::user()->avatar }}" />
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('timeline') }}"><i class="far fa-fw fa-home"></i> Home</a>
                                 <a class="dropdown-item d-block d-sm-none" href="http://changewindows.org/stats/index.php"><i class="far fa-fw fa-chart-pie"></i> Stats</a>
                                 <a class="dropdown-item d-block d-sm-none" href="{{ route('admin.search') }}"><i class="far fa-fw fa-search"></i> Search</a>
@@ -44,7 +45,7 @@
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="far fa-fw fa-bars"></i>
                     </button>
 
@@ -56,14 +57,14 @@
                         </div>
                     </form>
                     <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav me-auto">
                             <li class="nav-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
                             @canany (['show_milestones', 'show_flights', 'show_logs'])
                                 <li class="nav-item dropdown {{ request()->routeIs('admin.milestones*') || request()->routeIs('admin.flights*') || request()->routeIs('admin.changelogs*') || request()->routeIs('admin.platforms*') || request()->routeIs('admin.channels*') ? 'active' : '' }}">
-                                    <a class="nav-link dropdown-toggle" href="#" id="websiteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Content <i class="far fa-angle-down ml-1"></i>
+                                    <a class="nav-link dropdown-toggle" href="#" id="websiteDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Content <i class="far fa-angle-down ms-1"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="websiteDropdown">
                                         @can('show_milestones')<a class="dropdown-item {{ request()->routeIs('admin.milestones*') ? 'active' : '' }}" href="{{ route('admin.milestones') }}"><i class="far fa-fw fa-map-signs"></i> Milestones</a>@endcan
@@ -76,8 +77,8 @@
                             @endcanany
                             @canany (['show_users', 'show_roles', 'show_abilities'])
                                 <li class="nav-item dropdown {{ request()->routeIs('admin.accounts*') || request()->routeIs('admin.members*') || request()->routeIs('admin.accounts*') || request()->routeIs('admin.roles*') || request()->routeIs('admin.abilities*') ? 'active' : '' }}">
-                                    <a class="nav-link dropdown-toggle" href="#" id="websiteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Users <i class="far fa-angle-down ml-1"></i>
+                                    <a class="nav-link dropdown-toggle" href="#" id="websiteDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Users <i class="far fa-angle-down ms-1"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="websiteDropdown">
                                         @can('show_users')<a class="dropdown-item {{ request()->routeIs('admin.accounts*') ? 'active' : '' }}" href="{{ route('admin.accounts') }}"><i class="far fa-fw fa-user-friends"></i> Accounts</a>@endcan

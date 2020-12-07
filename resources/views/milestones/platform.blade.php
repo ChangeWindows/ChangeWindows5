@@ -57,9 +57,9 @@
                             @endphp
                             @foreach ($rings as $ring => $release)
                                 @if ($first)
-                                    <i class="far fa-angle-right mr-1"></i>
+                                    <i class="far fa-angle-right me-1"></i>
                                 @endif
-                                <span class="label mr-1 {{ getRingClassById($ring) }}">{{ $release }}</span>
+                                <span class="label me-1 {{ getRingClassById($ring) }}">{{ $release }}</span>
                                 @if (!$first)
                                     @php
                                         $first = true;

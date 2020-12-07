@@ -25,19 +25,13 @@
         <title>@yield('title') &middot; ChangeWindows</title>
         @include('feed::links')
 
-        <script src="{{ asset('js/jquery.min.js?v5.2.0') }}"></script>
+        <script src="{{ asset('js/bootstrap.bundle.min.js?v5.2.0') }}" defer></script>
         <script src="{{ asset('js/app.js?v5.2.0') }}" defer></script>
         <link href="{{ asset('css/app.css?v5.2.0') }}" rel="stylesheet">
         <script src="{{ asset('js/brands.min.js?v5.2.0') }}" defer></script>
         <script src="{{ asset('js/regular.min.js?v5.2.0') }}" defer></script>
         <script src="{{ asset('js/fontawesome.min.js?v5.2.0') }}" defer></script>
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-
-        <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-        </script>
 
         <link rel="shortcut icon" href="{{ asset('img/logo.png') }}">
 
@@ -64,7 +58,7 @@
                     <img src="{{ asset('img/logo.png') }}" />
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item {{ Request::is('milestones*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('milestones') }}">Milestones</a>
                         </li>
@@ -75,10 +69,10 @@
                             <a class="nav-link" href="{{ route('viv') }}">About</a>
                         </li>
                         <li class="nav-item dropdown {{ Request::is('buildfeed*') || Request::is('viv*') ? 'active' : '' }}">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                More <i class="far fa-angle-down ml-1"></i>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                More <i class="far fa-angle-down ms-1"></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                                 <a class="dropdown-item d-md-none" href="{{ route('viv') }}"><i class="far fa-fw fa-alicorn"></i> About</a>
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="far fa-fw fa-rss"></i> BuildFeed</a>
@@ -92,10 +86,10 @@
                     <ul class="navbar-nav">
                         @auth
                             <li class="nav-item dropdown {{ Request::is('front.profile') || Request::is('register') || Request::is('login') || Request::is('password*') ? 'active' : '' }}">
-                                <a class="nav-link dropdown-toggle nav-link-profile" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle nav-link-profile" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img class="avatar" src="{{ Auth::user()->avatar }}" /><span>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     @can('view_backstage')
                                         @yield('toolset')
                                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-seedling"></i> Backstage</a>

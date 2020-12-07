@@ -7,5 +7,6 @@
     "/js/fontawesome.min.js": "/js/fontawesome.min.js",
     "/js/alpine.js": "/js/alpine.js",
     "/js/easymde.min.js": "/js/easymde.min.js",
-    "/css/easymde.min.css": "/css/easymde.min.css"
+    "/css/easymde.min.css": "/css/easymde.min.css",
+    "/js/bootstrap.bundle.min.js": "/js/bootstrap.bundle.min.js"
 }

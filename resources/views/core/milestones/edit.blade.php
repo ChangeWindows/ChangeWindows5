@@ -18,7 +18,7 @@
         <div class="row mb-3">
             <div class="col-12">
                 <div class='alert alert-success d-flex flex-row m-0'>
-                    <div class="mr-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
+                    <div class="me-2"><p class="m-0"><i class="far fa-fw fa-check"></i></p></div>
                     <p class="m-0">{!! session('status') !!}</p>
                 </div>
             </div>
@@ -218,11 +218,11 @@
                     @can('edit_milestone')
                         <div class="btn-group float-right">
                             <div class="dropdown">
-                                <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="far fa-plus"></i> Add platfrom
                                 </a>
 
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                     @foreach ($platforms as $platform)
                                         @if (!$milestone->milestonePlatforms->pluck('platform.id')->contains($platform->id))
                                             <li>
@@ -248,13 +248,13 @@
                                     <span>{!! $milestonePlatform->platform->plain_icon !!} {{ $milestonePlatform->platform->name }}</span>
                                     @can('edit_milestone')
                                         <div class="dropdown">
-                                            <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                            <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="far fa-plus"></i> Add channel
                                             </a>
 
-                                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                                 @foreach($milestonePlatform->platform->channelPlatforms as $channelPlatform)
-                                                    @if (!$milestonePlatform->channelMilestonePlatform->pluck('channel_platform_id')->contains($channelPlatform->id))
+                                                    @if (!$milestonePlatform->channelMilestonePlatforms->pluck('channel_platform_id')->contains($channelPlatform->id))
                                                         <li>
                                                             <form method="POST" action="{{ route('admin.channelMilestonePlatforms.store', [$milestonePlatform, $channelPlatform]) }}">
                                                                 {{ csrf_field() }}
@@ -273,7 +273,7 @@
                                 <div class="card-body d-flex flex-column">
                                     <div class="d-flex flex-row">
                                         <div class="flex-grow-1">
-                                            @foreach($milestonePlatform->channelMilestonePlatform as $cmp)
+                                            @foreach($milestonePlatform->channelMilestonePlatforms as $cmp)
                                                 <div class="d-flex align-items-center justify-content-between @if (!$loop->first) mt-2 @endif">
                                                     <div class="dot" style="background-color: {{ $cmp->channelPlatform->channel->color }}"></div>
                                                     <span>{{ $cmp->channelPlatform->name }}</span>
@@ -283,9 +283,9 @@
                                                             {{ method_field('PATCH') }}
                                                             {{ csrf_field() }}
                                                             @if ($cmp->active)
-                                                                <button type="submit" class="btn btn-success btn-sm mr-2"><i class="far fa-fw fa-check"></i></button>
+                                                                <button type="submit" class="btn btn-success btn-sm me-2"><i class="far fa-fw fa-check"></i></button>
                                                             @else
-                                                                <button type="submit" class="btn btn-danger btn-sm mr-2"><i class="far fa-fw fa-times"></i></button>
+                                                                <button type="submit" class="btn btn-danger btn-sm me-2"><i class="far fa-fw fa-times"></i></button>
                                                             @endif
                                                         </form>
                                                         <form method="POST" action="{{ route('admin.channelMilestonePlatforms.delete', $cmp) }}">
