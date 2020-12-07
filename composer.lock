@@ -2891,16 +2891,16 @@
         },
         {
             "name": "spatie/laravel-feed",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "83b6c9db955b5dee285e25d9b53847a048fbf6a9"
+                "reference": "3a6477e9ef195ea14b818264856a63f5de209511"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/83b6c9db955b5dee285e25d9b53847a048fbf6a9",
-                "reference": "83b6c9db955b5dee285e25d9b53847a048fbf6a9",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/3a6477e9ef195ea14b818264856a63f5de209511",
+                "reference": "3a6477e9ef195ea14b818264856a63f5de209511",
                 "shasum": ""
             },
             "require": {
@@ -2966,7 +2966,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-27T08:15:00+00:00"
+            "time": "2020-12-06T19:18:30+00:00"
         },
         {
             "name": "spatie/laravel-searchable",
