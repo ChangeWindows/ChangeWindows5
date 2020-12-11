@@ -10488,6 +10488,10 @@ h1, .h1 {
   color: #fff;
   text-decoration: none;
 }
+.tile.channel-inactive, .light .tile.channel-inactive, .white .tile.channel-inactive {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
 .tile .ring, .light .tile .ring, .white .tile .ring {
   font-weight: 700;
   text-transform: uppercase;

@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('title') Rings @endsection
+@section('title') Channels @endsection
 
 @section('hero')
 <div class="jumbotron tabs">
     <div class="container">
-        <h2 class="pt-2 mb-2">Rings</h2>
+        <h2 class="pt-2 mb-2">Channels</h2>
         <div class="nav-scroll">
             <nav class="nav">
                 <a class="nav-link {{ Request::is('rings') ? 'active' : '' }}" href="{{ route('rings') }}">Overview</a>

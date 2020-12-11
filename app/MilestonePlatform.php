@@ -19,7 +19,7 @@ class MilestonePlatform extends Model {
         return $this->belongsTo(Platform::class);
     }
 
-    public function channelMilestonePlatform() {
+    public function channelMilestonePlatforms() {
         return $this->hasMany(ChannelMilestonePlatform::class);
     }
 }

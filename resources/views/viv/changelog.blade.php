@@ -9,6 +9,7 @@
     <p>Platforms are now stored in the database rather than hardcoded</p>
     <p>Channels are now stored in the database rather than hardcoded</p>
     <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
+    <p>All channels for all milestones are now always visible on the Rings page by platform, inactive rings will be grayed out</p>
     <p>The timeline now shows version numbers for each build directly rather than a hoverable dot</p>
 </section>
 <section class="release-notes">

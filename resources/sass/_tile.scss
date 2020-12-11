@@ -12,6 +12,11 @@
         color: #fff;
         text-decoration: none;
     }
+    
+    &.channel-inactive {
+        opacity: .5;
+        filter: grayscale(1);
+    }
 
     .ring {
         font-weight: 700;
