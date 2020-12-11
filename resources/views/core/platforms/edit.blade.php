@@ -30,7 +30,7 @@
                 <div class="card border-0 shadow p-3">
                     <h3 class="h6">
                         General
-                        <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
+                        <button type="submit" class="btn btn-sm btn-primary float-end"><i class="far fa-save"></i> Save</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
@@ -54,7 +54,7 @@
                 <div class="card border-0 shadow p-3">
                     <h3 class="h6">
                         Icon
-                        <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
+                        <button type="submit" class="btn btn-sm btn-primary float-end"><i class="far fa-save"></i> Save</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
@@ -85,7 +85,7 @@
                 <div class="card border-0 shadow p-3">
                     <h3 class="h6">
                         Status
-                        <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Save</button>
+                        <button type="submit" class="btn btn-sm btn-primary float-end"><i class="far fa-save"></i> Save</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
@@ -106,8 +106,8 @@
                 <h3 class="h5 title">
                     Channels
                     @can('edit_platform')
-                        <div class="btn-group float-right">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-target="#channelModal">
+                        <div class="btn-group float-end">
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#channelModal">
                                 <i class="far fa-plus"></i> Add channel
                             </button>
                         </div>
@@ -136,7 +136,7 @@
                                         <form method="POST" action="{{ route('admin.channelPlatforms.delete', $channelPlatforms) }}">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger btn-sm float-right"><i class="far fa-trash-alt"></i> Delete</button>
+                                            <button type="submit" class="btn btn-danger btn-sm float-end"><i class="far fa-trash-alt"></i> Delete</button>
                                         </form>
                                     </div>
                                 @endcan

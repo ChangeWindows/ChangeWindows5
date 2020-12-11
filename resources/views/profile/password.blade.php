@@ -17,7 +17,7 @@
             {{ method_field('PATCH') }}
             <div class="row">
                 <div class="col-12">
-                    <h3 class="h2">Password <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-fw fa-save"></i> Save</button></h3>
+                    <h3 class="h2">Password <button type="submit" class="btn btn-sm btn-primary float-end"><i class="far fa-fw fa-save"></i> Save</button></h3>
                 </div>
             </div>
             <div class="row g-3">

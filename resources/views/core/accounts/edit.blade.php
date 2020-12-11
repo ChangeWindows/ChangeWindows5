@@ -30,7 +30,7 @@
                 <div class="card border-0 shadow p-3">
                     <h3 class="h6">
                         General
-                        <button type="submit" class="btn btn-sm btn-primary float-right"><i class="far fa-save"></i> Opslaan</button>
+                        <button type="submit" class="btn btn-sm btn-primary float-end"><i class="far fa-save"></i> Opslaan</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-6">

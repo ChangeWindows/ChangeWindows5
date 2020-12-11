@@ -33,7 +33,7 @@
             <div class="card border-0 shadow p-3">
                 <h3 class="h6">
                     Timeline
-                    <a class="btn btn-primary btn-sm float-right" href="{{ route('admin.settings') }}">
+                    <a class="btn btn-primary btn-sm float-end" href="{{ route('admin.settings') }}">
                         <i class="far fa-cog"></i> Settings
                     </a>
                 </h3>

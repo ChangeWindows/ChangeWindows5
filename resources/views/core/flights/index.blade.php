@@ -26,7 +26,7 @@
                     {{ csrf_field() }}
                     <h3 class="h6">
                         New flight
-                        <button type="submit" class="btn btn-primary float-right btn-sm"><i class="far fa-fw fa-plus"></i> Add</button>
+                        <button type="submit" class="btn btn-primary float-end btn-sm"><i class="far fa-fw fa-plus"></i> Add</button>
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
