@@ -112,4 +112,6 @@ alter table `platforms` add `position` int not null default '1' after `icon`;
 create table `channel_milestone_platforms` (`id` bigint unsigned not null auto_increment primary key, `channel_platform_id` bigint unsigned not null, `milestone_platform_id` bigint unsigned not null, `active` int not null default '1', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
 alter table `channel_milestone_platforms` add constraint `channel_milestone_platforms_channel_platform_id_foreign` foreign key (`channel_platform_id`) references `channel_platforms` (`id`);
 alter table `channel_milestone_platforms` add constraint `channel_milestone_platforms_milestone_platform_id_foreign` foreign key (`milestone_platform_id`) references `milestone_platforms` (`id`);
+
+ALTER TABLE `milestones` CHANGE `version` `version` VARCHAR(10) NOT NULL;
 ```
