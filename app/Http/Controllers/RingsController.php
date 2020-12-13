@@ -64,10 +64,10 @@ class RingsController extends Controller
                             ->get();
 
         foreach($mps as $mp) {
-            $set[$mp->milestone->version]['milestone'] = $mp->milestone;
+            $set[$mp->milestone->start_build]['milestone'] = $mp->milestone;
             
             foreach($cps as $cp) {
-                $set[$mp->milestone->version]['flights'][$cp->channel_id] = null;
+                $set[$mp->milestone->start_build]['flights'][$cp->channel_id] = null;
             }
 
             foreach($mp->channelMilestonePlatforms as $cmp) {
@@ -77,8 +77,8 @@ class RingsController extends Controller
                                 ->orderBy('date', 'desc')
                                 ->first();
 
-                $set[$mp->milestone->version]['flights'][$cmp->channelPlatform->channel_id]['flight'] = $release;
-                $set[$mp->milestone->version]['flights'][$cmp->channelPlatform->channel_id]['channel'] = $cmp;
+                $set[$mp->milestone->start_build]['flights'][$cmp->channelPlatform->channel_id]['flight'] = $release;
+                $set[$mp->milestone->start_build]['flights'][$cmp->channelPlatform->channel_id]['channel'] = $cmp;
             }
         }
 
