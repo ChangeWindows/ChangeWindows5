@@ -65,6 +65,9 @@
                         <li class="nav-item {{ Request::is('rings*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('rings') }}">Channels</a>
                         </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="https://medium.com/changewindows" target="_blank">Blog</a>
+                        </li>
                         <li class="nav-item {{ Request::is('viv*') ? 'active' : '' }} d-none d-md-block">
                             <a class="nav-link" href="{{ route('viv') }}">About</a>
                         </li>
@@ -73,7 +76,7 @@
                                 More <i class="far fa-angle-down ms-1"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
+                                <a class="dropdown-item d-md-none" href="https://medium.com/changewindows" target="_blank"><i class="fab fa-fw fa-medium-m"></i> Blog</a>
                                 <a class="dropdown-item d-md-none" href="{{ route('viv') }}"><i class="far fa-fw fa-alicorn"></i> About</a>
                                 <a class="dropdown-item" href="{{ route('buildfeed') }}"><i class="far fa-fw fa-rss"></i> BuildFeed</a>
                                 <div class="dropdown-divider"></div>
