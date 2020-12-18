@@ -131,6 +131,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
     
     Route::prefix('channelPlatforms')->name('.channelPlatforms')->group(function() {
         Route::post('', 'Admin\ChannelPlatformController@store')->name('.store');
+        Route::patch('/{channel_platform}', 'Admin\ChannelPlatformController@toggle')->name('.toggle');
         Route::delete('/{channel_platform}', 'Admin\ChannelPlatformController@destroy')->name('.delete');
     });
 

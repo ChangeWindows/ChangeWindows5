@@ -101,52 +101,61 @@
                 </div>
             </div>
         </fieldset>
-        <div class="row mt-3">
-            <div class="col-12">
-                <h3 class="h5 title">
-                    Channels
-                    @can('edit_platform')
-                        <div class="btn-group float-end">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#channelModal">
-                                <i class="far fa-plus"></i> Add channel
-                            </button>
-                        </div>
-                    @endcan
-                </h3>
-            </div>
-            <div class="col-12 card-set">
-                <div class="row mt-3">
-                    @foreach($platform->channelPlatforms as $channelPlatforms)
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
-                            <div class="card shadow border-0 h-100 overflow-hidden">
-                                <div class="p-3 text-white" style="{{ $channelPlatforms->channel->bg_color }}">
-                                    <i class="fab fa-fw fa-windows"></i> {{ $channelPlatforms->channel->name }}
-                                </div>
-                                <div class="card-body d-flex flex-column">
-                                    <div class="d-flex flex-row">
-                                        <div class="flex-grow-1">
-                                            <h3 class="card-title h6 mb-0">{{ $channelPlatforms->name }}</h3>
-                                            <p class="text-muted m-0"><small>{{ $channelPlatforms->short_name }}</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1"></div>
-                                </div>
-                                @can('edit_channel')
-                                    <div class="d-flex justify-content-between align-items-center card-footer">
-                                        <form method="POST" action="{{ route('admin.channelPlatforms.delete', $channelPlatforms) }}">
-                                            {{ method_field('DELETE') }}
-                                            {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger btn-sm float-end"><i class="far fa-trash-alt"></i> Delete</button>
-                                        </form>
-                                    </div>
-                                @endcan
+    </form>
+    <div class="row">
+        <div class="col-12">
+            <h3 class="h5 title">
+                Channels
+                @can('edit_platform')
+                    <div class="btn-group float-end">
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#channelModal">
+                            <i class="far fa-plus"></i> Add channel
+                        </button>
+                    </div>
+                @endcan
+            </h3>
+        </div>
+        <div class="col-12 card-set">
+            <div class="row">
+                @foreach($platform->channelPlatforms as $channelPlatforms)
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
+                        <div class="card shadow border-0 h-100 overflow-hidden">
+                            <div class="p-3 text-white" style="{{ $channelPlatforms->channel->bg_color }}">
+                                <i class="fab fa-fw fa-windows"></i> {{ $channelPlatforms->channel->name }}
                             </div>
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex flex-row">
+                                    <div class="flex-grow-1">
+                                        <h3 class="card-title h6 mb-0">{{ $channelPlatforms->name }}</h3>
+                                        <p class="text-muted m-0"><small>{{ $channelPlatforms->short_name }}</small></p>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1"></div>
+                            </div>
+                            @can('edit_channel')
+                                <div class="d-flex justify-content-between align-items-center card-footer">
+                                    <form method="POST" action="{{ route('admin.channelPlatforms.toggle', $channelPlatforms) }}">
+                                        {{ method_field('PATCH') }}
+                                        {{ csrf_field() }}
+                                        @if ($channelPlatforms->active)
+                                            <button type="submit" class="btn btn-success btn-sm me-2"><i class="far fa-fw fa-check"></i> Active</button>
+                                        @else
+                                            <button type="submit" class="btn btn-danger btn-sm me-2"><i class="far fa-fw fa-times"></i> Inactive</button>
+                                        @endif
+                                    </form>
+                                    <form method="POST" action="{{ route('admin.channelPlatforms.delete', $channelPlatforms) }}">
+                                        {{ method_field('DELETE') }}
+                                        {{ csrf_field() }}
+                                        <button type="submit" class="btn btn-danger btn-sm float-end"><i class="far fa-trash-alt"></i> Delete</button>
+                                    </form>
+                                </div>
+                            @endcan
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
         </div>
-    </form>
+    </div>
     @can('delete_theme')
         <div class="row">
             <div class="col-12">

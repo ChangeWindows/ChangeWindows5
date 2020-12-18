@@ -212,7 +212,7 @@
             </div>
         </fieldset>
     </form>
-    <div class="row mt-3">
+    <div class="row">
         <div class="col-12">
             <h3 class="h5 title">
                 Platforms and channels
@@ -241,7 +241,7 @@
             </h3>
         </div>
         <div class="col-12 card-set">
-            <div class="row mt-3">
+            <div class="row">
                 @foreach($milestone->milestonePlatforms as $milestonePlatform)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
                         <div class="card shadow border-0 h-100">

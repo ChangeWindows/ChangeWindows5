@@ -9,7 +9,7 @@ class ChannelPlatform extends Model {
     use HasFactory;
 
     protected $table = 'channel_platforms';
-    protected $fillable = ['channel_id', 'platform_id', 'name', 'short_name'];
+    protected $fillable = ['channel_id', 'platform_id', 'name', 'short_name', 'active'];
 
     public function channel() {
         return $this->belongsTo(Channel::class);

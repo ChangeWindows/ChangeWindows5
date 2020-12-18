@@ -32,6 +32,16 @@ class ChannelPlatformController extends Controller {
         return redirect()->back()->with('status', '<b>'.$channelPlatform->channel->name.'</b> has been added to <b>'.$channelPlatform->platform->name.'</b>.');
     }
 
+    public function toggle(ChannelPlatform $channelPlatform) {
+        $this->authorize('edit_platform');
+
+        $channelPlatform->update([
+            'active' => $channelPlatform->active === 1 ? 0 : 1
+        ]);
+
+        return redirect()->back()->with('status', '<b>'.$channelPlatform->channel->name.'</b> has been toggled.');
+    }
+
     public function destroy(ChannelPlatform $channelPlatform) {
         $this->authorize('edit_platform');
 

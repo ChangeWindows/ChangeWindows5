@@ -114,4 +114,6 @@ alter table `channel_milestone_platforms` add constraint `channel_milestone_plat
 alter table `channel_milestone_platforms` add constraint `channel_milestone_platforms_milestone_platform_id_foreign` foreign key (`milestone_platform_id`) references `milestone_platforms` (`id`);
 
 ALTER TABLE `milestones` CHANGE `version` `version` VARCHAR(10) NOT NULL;
+
+alter table `channel_platforms` add `active` int not null default '1' after `short_name`;
 ```
