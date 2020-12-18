@@ -11633,7 +11633,7 @@ textarea.form-control-lg {
 .card .card-header + .card-body {
   padding: 0 1rem 1rem;
 }
-.card :first-child {
+.card > :first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 .card .card-description-overflow {
