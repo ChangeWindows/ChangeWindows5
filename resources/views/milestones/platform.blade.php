@@ -47,7 +47,7 @@
     </div>
     <div class="col-lg-3 col-md-4 col-12">
         <div class="timeline">
-            @foreach ($timeline as $build => $rings)
+            @foreach ($timeline as $build => $channels)
                 <div class="timeline-row">
                     <div class="row">
                         <div class="col-12">
@@ -55,11 +55,11 @@
                             @php
                                 $first = false;
                             @endphp
-                            @foreach ($rings as $ring => $release)
+                            @foreach ($channels as $channel => $release)
                                 @if ($first)
                                     <i class="far fa-angle-right me-1"></i>
                                 @endif
-                                <span class="label me-1 {{ getRingClassById($ring) }}">{{ $release }}</span>
+                                <span class="label me-1 {{ getRingClassById($channel) }}">{{ $release }}</span>
                                 @if (!$first)
                                     @php
                                         $first = true;

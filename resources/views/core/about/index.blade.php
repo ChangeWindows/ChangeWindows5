@@ -32,7 +32,8 @@
                     <p class="mb-1"><b>Front-end</b></p>
                     <ul>
                         <li>The timeline will now show the milestone version directly rather than a hoverable dot.</li>
-                        <li>Revamped Rings platform overview with inactive channels.</li>
+                        <li>Renames "Rings" to "Channels".</li>
+                        <li>Revamped Channels platform overview with inactive channels.</li>
                     </ul>
                     <p class="mb-1"><b>Backstage</b></p>
                     <ul>

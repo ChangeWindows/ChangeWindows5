@@ -62,8 +62,8 @@
                         <li class="nav-item {{ Request::is('milestones*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('milestones') }}">Milestones</a>
                         </li>
-                        <li class="nav-item {{ Request::is('rings*') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('rings') }}">Channels</a>
+                        <li class="nav-item {{ Request::is('channels*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('channels') }}">Channels</a>
                         </li>
                         <li class="nav-item d-none d-md-block">
                             <a class="nav-link" href="https://medium.com/changewindows" target="_blank">Blog</a>

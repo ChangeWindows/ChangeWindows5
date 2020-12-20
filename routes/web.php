@@ -22,8 +22,8 @@ Route::get('/milestones', 'MilestoneController@index')->name('milestones');
 Route::get('/milestones/{id}', 'MilestoneController@show')->name('showMilestone');
 Route::get('/milestones/{id}/{platform}', 'MilestoneController@platform')->name('platformMilestone');
 
-Route::get('/rings', 'RingsController@index')->name('rings');
-Route::get('/rings/{platform}', 'RingsController@platform')->name('platformRings');
+Route::get('/channels', 'RingsController@index')->name('channels');
+Route::get('/channels/{platform}', 'RingsController@platform')->name('platformChannels');
 
 Route::get('/buildfeed', 'BuildfeedController@index')->name('buildfeed');
 Route::get('/buildfeed/about', 'BuildfeedController@about')->name('aboutBuildfeed');
