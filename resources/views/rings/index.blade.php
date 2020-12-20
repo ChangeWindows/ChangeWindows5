@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="col-lg-2" id="10x">
-        <p class="h3 10x">{!! getPlatformIconNoStyle(10) !!} 10X</p>
+        <p class="h3 tenx">{!! getPlatformIconNoStyle(10) !!} 10X</p>
         <div class="row row-gutter">
             <div class="col"><?php getTile( $flights['10x']['beta'] ) ?></div>
         </div>
