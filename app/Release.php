@@ -166,47 +166,4 @@ class Release extends Model implements Feedable, Searchable
 
         return $milestone->id;
     }
-
-    // Release scopes
-    public function scopePc($query) { return $query->where('platform', '1'); }
-    public function scopeMobile($query) { return $query->where('platform', '2'); }
-    public function scopeXbox($query) { return $query->where('platform', '3'); }
-    public function scopeServer($query) { return $query->where('platform', '4'); }
-    public function scopeHolographic($query) { return $query->where('platform', '5'); }
-    public function scopeIot($query) { return $query->where('platform', '6'); }
-    public function scopeTeam($query) { return $query->where('platform', '7'); }
-    public function scopeIso($query) { return $query->where('platform', '8'); }
-    public function scopeSdk($query) { return $query->where('platform', '9'); }
-    public function scopeTenX($query) { return $query->where('platform', '10'); }
-
-    public function scopeLeak($query) { return $query->where('ring', '0'); }
-    public function scopeSkip($query) { return $query->where('ring', '1'); }
-    public function scopeActive($query) { return $query->where('ring', '2'); }
-    public function scopeSlow($query) { return $query->where('ring', '3'); }
-    public function scopePreview($query) { return $query->where('ring', '4'); }
-    public function scopeRelease($query) { return $query->where('ring', '5'); }
-    public function scopeTargeted($query) { return $query->where('ring', '6'); }
-    public function scopeBroad($query) { return $query->where('ring', '7'); }
-    public function scopeLtsc($query) { return $query->where('ring', '8'); }
-
-    public function scopeLatestFlight($query) { return $query->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc'); }
-    public function scopeAllRings($query) { return $query->groupBy('ring')->get()->keyBy('ring'); }
-
-    public function scopePlatformRings($query, $platform) {
-        switch ($platform) {
-            case 1:     $rings = array(1, 2, 3, 5, 6, 7, 8); break;
-            case 2:     $rings = array(6, 7); break;
-            case 3:     $rings = array(1, 2, 3, 4, 5, 6); break;
-            case 4:     $rings = array(3, 6, 8); break;
-            case 5:     $rings = array(2, 3, 6, 7, 8); break;
-            case 6:     $rings = array(3, 6, 7); break;
-            case 7:     $rings = array(6, 7); break;
-            case 8:     $rings = array(6); break;
-            case 9:     $rings = array(6); break;
-            case 10:    $rings = array(3); break;
-            default:    return;
-        }
-
-        return $query->where('platform', $platform)->whereIn('ring', $rings);
-    }
 }
