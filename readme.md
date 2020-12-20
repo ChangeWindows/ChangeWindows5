@@ -116,4 +116,37 @@ alter table `channel_milestone_platforms` add constraint `channel_milestone_plat
 ALTER TABLE `milestones` CHANGE `version` `version` VARCHAR(10) NOT NULL;
 
 alter table `channel_platforms` add `active` int not null default '1' after `short_name`;
+
+alter table `milestones` drop `isLts`;
+alter table `milestones` drop `pcSkip`;
+alter table `milestones` drop `pcFast`;
+alter table `milestones` drop `pcSlow`;
+alter table `milestones` drop `pcReleasePreview`;
+alter table `milestones` drop `pcTargeted`;
+alter table `milestones` drop `pcBroad`;
+alter table `milestones` drop `pcLTS`;
+alter table `milestones` drop `xboxSkip`;
+alter table `milestones` drop `xboxFast`;
+alter table `milestones` drop `xboxSlow`;
+alter table `milestones` drop `xboxPreview`;
+alter table `milestones` drop `xboxReleasePreview`;
+alter table `milestones` drop `xboxTargeted`;
+alter table `milestones` drop `serverSlow`;
+alter table `milestones` drop `serverTargeted`;
+alter table `milestones` drop `serverLTS`;
+alter table `milestones` drop `iotSlow`;
+alter table `milestones` drop `iotTargeted`;
+alter table `milestones` drop `iotBroad`;
+alter table `milestones` drop `teamFast`;
+alter table `milestones` drop `teamSlow`;
+alter table `milestones` drop `teamTargeted`;
+alter table `milestones` drop `teamBroad`;
+alter table `milestones` drop `holographicFast`;
+alter table `milestones` drop `holographicSlow`;
+alter table `milestones` drop `holographicTargeted`;
+alter table `milestones` drop `holographicBroad`;
+alter table `milestones` drop `holographicLTS`;
+alter table `milestones` drop `tenXSlow`;
+alter table `milestones` drop `sdk`;
+alter table `milestones` drop `iso`;
 ```
