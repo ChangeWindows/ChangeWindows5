@@ -4,7 +4,7 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>6.0.0-alpha.2 <small>December 2020</small></h3>
+    <h3>6.0.0-alpha.2 <small>21 December 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Channels will now show inactive channels, they will appear grayed-out, providing an overview of what build is the last on a certain milestone's channels.</p>
     <p>Platforms and channels are now stored in the database rather than hardcoded</p>
