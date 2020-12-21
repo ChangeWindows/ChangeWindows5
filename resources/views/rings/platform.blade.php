@@ -23,6 +23,11 @@
 
 @section('content')
 <div class="row row-gutter">
+    <div class="col">
+        <h3 class="mt-4">We're working on it...</h3>
+        <p>We can't show you this information right now. Not here at least. You can go to the ChangeWindows Preview and view it there.</p>
+        <a href="https://viv.changewindows.org/channels" class="btn btn-primary"><i class="far fa-fw fa-arrow-right"></i> Channels (Preview)</a>
+    </div>
     @foreach ($set as $group => $content)
         <div class="col-12 ring-milestones">
             <a href="{{ route('showMilestone', ['id' => $content['milestone']->id]) }}" class="h3" style="color: #{{ $content['milestone']->color }}">

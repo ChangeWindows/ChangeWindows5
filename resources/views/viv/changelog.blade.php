@@ -4,6 +4,11 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
+    <h3>5.5.0 <small>21 December 2020</small></h3>
+    <h4><i class="far fa-fw fa-trash-alt"></i> Removed</h4>
+    <p>Removes rings by platform details in preparation for ChangeWindows 6</p>
+</section>
+<section class="release-notes">
     <h3>5.4.0 <small>23 November 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Adds link to ChangeWindows 6 Preview under the "More" menu</p>
