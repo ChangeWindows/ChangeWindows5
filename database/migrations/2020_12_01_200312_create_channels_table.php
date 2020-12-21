@@ -26,6 +26,17 @@ class CreateChannelsTable extends Migration
             $table->id();
             $table->foreignId('platform_id')->references('id')->on('platforms');
             $table->foreignId('channel_id')->references('id')->on('channels');
+            $table->string('name');
+            $table->string('short_name');
+            $table->integer('active')->default(1);
+            $table->timestamps();
+        });
+            
+        Schema::create('channel_milestone_platforms', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('channel_platform_id')->references('id')->on('channel_platforms');
+            $table->foreignId('milestone_platform_id')->references('id')->on('milestone_platforms');
+            $table->integer('active')->required()->default(1);
             $table->timestamps();
         });
     }
@@ -37,6 +48,7 @@ class CreateChannelsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('channel_milestone_platforms');
         Schema::dropIfExists('channel_platforms');
         Schema::dropIfExists('channels');
     }

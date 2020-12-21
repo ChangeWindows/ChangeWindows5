@@ -18,6 +18,7 @@ class CreatePlatformsTable extends Migration
             $table->string('name');
             $table->string('color');
             $table->string('icon');
+            $table->integer('position')->default(1);
             $table->integer('active')->default(1);
             $table->string('slug')->unique();
             $table->timestamps();
