@@ -40,7 +40,7 @@ class TimelineController extends Controller
 
         foreach($platforms as $platform) {
             foreach($platform->channelPlatforms as $channelPlatform) {
-                if ($channelPlatform->active === 1) {
+                if ($channelPlatform->active === "1") {
                     $flights[$platform->slug][$channelPlatform->channel->slug] = Release::where('platform', '=', $platform->id)
                                             ->where('ring', '=', $channelPlatform->channel->id)
                                             ->orderBy('build', 'desc')

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class MilestonePlatform extends Model {
     use HasFactory;
 
-    protected $table = 'milestone_platforms';
+    protected $table = 'milestone_platform';
     protected $fillable = ['milestone_id', 'platform_id'];
 
     public function milestone() {
