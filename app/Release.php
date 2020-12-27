@@ -38,9 +38,6 @@ class Release extends Model implements Feedable, Searchable
         return $this->belongsTo('App\Milestone', 'milestone');
     }
 
-    public function getFormatAttribute() {
-        return $this->date->format('d M Y');
-    }
 
     public function getSearchResult(): SearchResult {
         $url = route('admin.flights.edit', $this);
