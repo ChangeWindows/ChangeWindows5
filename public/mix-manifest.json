@@ -1,4 +1,6 @@
 {
+    "/js/app.js": "/js/app.js",
+    "/css/admin.css": "/css/admin.css",
     "/js/regular.min.js": "/js/regular.min.js",
     "/js/brands.min.js": "/js/brands.min.js",
     "/js/fontawesome.min.js": "/js/fontawesome.min.js",

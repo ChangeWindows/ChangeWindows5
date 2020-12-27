@@ -12,13 +12,13 @@
     "devDependencies": {
         "@fortawesome/fontawesome-pro": "5.15.1",
         "alpinejs": "2.8.0",
-        "axios": "0.21.0",
+        "axios": "0.21.1",
         "bootstrap": "5.0.0-beta1",
         "cross-env": "7.0.3",
         "easymde": "2.13.0",
-        "laravel-mix": "6.0.0",
+        "laravel-mix": "6.0.5",
         "lodash": "4.17.20",
-        "postcss": "^8.1.14",
+        "postcss": "8.2.1",
         "sass": "1.30.0",
         "sass-loader": "10.1.0",
         "vue-template-compiler": "2.6.12"
