@@ -84,10 +84,10 @@ Route::middleware(['auth'])->prefix('admin')->name('admin')->group(function() {
     // Milestones
     Route::prefix('milestones')->name('.milestones')->group(function() {
         Route::get('', 'Admin\MilestoneController@index')->name('');
-        Route::get('/{milestone}', 'Admin\MilestoneController@edit')->name('.edit');
+        Route::get('/{horizon_milestone}', 'Admin\MilestoneController@edit')->name('.edit');
         Route::post('', 'Admin\MilestoneController@store')->name('.store');
-        Route::patch('/{milestone}', 'Admin\MilestoneController@update')->name('.update');
-        Route::delete('/{milestone}', 'Admin\MilestoneController@destroy')->name('.delete');
+        Route::patch('/{horizon_milestone}', 'Admin\MilestoneController@update')->name('.update');
+        Route::delete('/{horizon_milestone}', 'Admin\MilestoneController@destroy')->name('.delete');
     });
     
     Route::prefix('milestonePlatforms')->name('.milestonePlatforms')->group(function() {

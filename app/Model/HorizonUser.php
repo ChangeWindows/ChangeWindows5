@@ -29,6 +29,10 @@ class HorizonUser extends Authenticatable implements JWTSubject, Searchable {
         return $this->belongsTo(HorizonRole::class, 'role_id');
     }
 
+    public function flights() {
+        return $this->hasMany(HorizonFlights::class);
+    }
+
     public function abilities() {
         return $this->role->abilities->flatten()->pluck('name')->unique();
     }

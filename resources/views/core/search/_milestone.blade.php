@@ -1,7 +1,7 @@
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
     <div class="card shadow border-0 h-100 overflow-hidden">
         <div class="p-3 text-white" style="{{ $milestone->bg_color }}">
-            <i class="fab fa-fw fa-windows"></i> {{ $milestone->osname }} version {{ $milestone->version }}
+            <i class="fab fa-fw fa-windows"></i> {{ $milestone->product_name }} version {{ $milestone->version }}
         </div>
         <div class="card-body d-flex flex-column">
             <div class="d-flex flex-row">

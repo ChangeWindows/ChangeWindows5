@@ -1,15 +1,15 @@
 @extends('core.layouts.app')
-@section('title') {{ $milestone->osname }} version {{ $milestone->version }} @endsection
+@section('title') {{ $milestone->product_name }} version {{ $milestone->version }} @endsection
 
 @section('content')
 <div class="page-bar">
     <div class="d-flex flex-md-row flex-column align-items-end">
-        <h1 class="h4 d-none d-md-inline-block m-0">{{ $milestone->osname }} version {{ $milestone->version }}</h1>
+        <h1 class="h4 d-none d-md-inline-block m-0">{{ $milestone->product_name }} version {{ $milestone->version }}</h1>
         <ol class="breadcrumb pt-2 pt-md-0">
             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="far fa-fw fa-home"></i></a></li>
             <li class="breadcrumb-item"><a href="{{ route('admin.milestones') }}">Content</a></li>
             <li class="breadcrumb-item"><a href="{{ route('admin.milestones') }}">Milestone</a></li>
-            <li class="breadcrumb-item active">{{ $milestone->osname }} version {{ $milestone->version }}</li>
+            <li class="breadcrumb-item active">{{ $milestone->product_name }} version {{ $milestone->version }}</li>
         </ol>
     </div>
 </div>
@@ -36,16 +36,9 @@
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="id">ID</label>
-                            <input type="text" class="form-control @error('id') is-invalid @enderror" name="id" id="id" required placeholder="ID" value="{{ old('id', $milestone->id) }}">
-                            @error('id')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="osname">OS name</label>
-                            <input type="text" class="form-control @error('osname') is-invalid @enderror" name="osname" id="osname" required placeholder="OS name" value="{{ old('osname', $milestone->osname) }}">
-                            @error('osname')
+                            <label class="form-label" for="product_name">Product name</label>
+                            <input type="text" class="form-control @error('product_name') is-invalid @enderror" name="product_name" id="product_name" required placeholder="Product name" value="{{ old('product_name', $milestone->product_name) }}">
+                            @error('product_name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -67,6 +60,13 @@
                             <label class="form-label" for="version">Version</label>
                             <input type="text" class="form-control @error('version') is-invalid @enderror" name="version" id="version" required placeholder="Version" value="{{ old('version', $milestone->version) }}">
                             @error('version')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <label class="form-label" for="canonical_version">Canonical version</label>
+                            <input type="text" class="form-control @error('canonical_version') is-invalid @enderror" name="canonical_version" id="canonical_version" required placeholder="Canonical version" value="{{ old('canonical_version', $milestone->canonical_version) }}">
+                            @error('canonical_version')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -108,37 +108,37 @@
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="preview">Preview</label>
-                            <input type="date" class="form-control @error('preview') is-invalid @enderror" name="preview" id="preview" placeholder="Preview" value="{{ old('preview', $milestone->preview->format('Y-m-d')) }}">
-                            @error('preview')
+                            <label class="form-label" for="start_preview">Start preview</label>
+                            <input type="date" class="form-control @error('start_preview') is-invalid @enderror" name="start_preview" id="start_preview" placeholder="Start preview" value="{{ old('start_preview', $milestone->start_preview->format('Y-m-d')) }}">
+                            @error('start_preview')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="public">Public</label>
-                            <input type="date" class="form-control @error('public') is-invalid @enderror" name="public" id="public" placeholder="Public" value="{{ old('public', $milestone->public->format('Y-m-d')) }}">
-                            @error('public')
+                            <label class="form-label" for="start_public">Start public</label>
+                            <input type="date" class="form-control @error('start_public') is-invalid @enderror" name="start_public" id="start_public" placeholder="Start public" value="{{ old('start_public', $milestone->start_public->format('Y-m-d')) }}">
+                            @error('start_public')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="mainEol">Main end</label>
-                            <input type="date" class="form-control @error('mainEol') is-invalid @enderror" name="mainEol" id="mainEol" placeholder="Main end" value="{{ old('mainEol', $milestone->mainEol->format('Y-m-d')) }}">
-                            @error('mainEol')
+                            <label class="form-label" for="start_extended">Start extended</label>
+                            <input type="date" class="form-control @error('start_extended') is-invalid @enderror" name="start_extended" id="start_extended" placeholder="Start extended" value="{{ old('start_extended', $milestone->start_extended->format('Y-m-d')) }}">
+                            @error('start_extended')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="mainXol">Extended end</label>
-                            <input type="date" class="form-control @error('mainXol') is-invalid @enderror" name="mainXol" id="mainXol" placeholder="Extended end" value="{{ old('mainXol', $milestone->mainXol->format('Y-m-d')) }}">
-                            @error('mainXol')
+                            <label class="form-label" for="start_lts">Start LTS</label>
+                            <input type="date" class="form-control @error('start_lts') is-invalid @enderror" name="start_lts" id="start_lts" placeholder="Start LTS" value="{{ old('start_lts', $milestone->start_lts->format('Y-m-d')) }}">
+                            @error('start_lts')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="ltsEol">LTSC end</label>
-                            <input type="date" class="form-control @error('ltsEol') is-invalid @enderror" name="ltsEol" id="ltsEol" placeholder="LTSC end" value="{{ old('ltsEol', $milestone->ltsEol->format('Y-m-d')) }}">
-                            @error('ltsEol')
+                            <label class="form-label" for="end_lts">End LTS</label>
+                            <input type="date" class="form-control @error('end_lts') is-invalid @enderror" name="end_lts" id="end_lts" placeholder="End LTS" value="{{ old('end_lts', $milestone->end_lts->format('Y-m-d')) }}">
+                            @error('end_lts')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -160,7 +160,7 @@
 
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                 @foreach ($platforms as $platform)
-                                    @if (!$milestone->milestonePlatforms->pluck('platform.id')->contains($platform->id))
+                                    @if (!$milestone->platforms->pluck('platform.id')->contains($platform->id))
                                         <li>
                                             <form method="POST" action="{{ route('admin.milestonePlatforms.store', ['milestone' => $milestone, 'platform' => $platform]) }}">
                                                 {{ csrf_field() }}
@@ -177,11 +177,12 @@
         </div>
         <div class="col-12 card-set">
             <div class="row">
-                @foreach($milestone->milestonePlatforms as $milestonePlatform)
+                @foreach($milestone->milestonePlatforms as $platform)
+                    {{ dd($platform)}}
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
                         <div class="card shadow border-0 h-100">
-                            <div class="p-3 text-white d-flex align-items-center justify-content-between" style="{{ $milestonePlatform->platform->bg_color }}">
-                                <span>{!! $milestonePlatform->platform->plain_icon !!} {{ $milestonePlatform->platform->name }}</span>
+                            <div class="p-3 text-white d-flex align-items-center justify-content-between" style="{{ $platform->platform->bg_color }}">
+                                <span>{!! $platform->platform->plain_icon !!} {{ $platform->platform->name }}</span>
                                 @can('edit_milestone')
                                     <div class="dropdown">
                                         <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -189,18 +190,16 @@
                                         </a>
 
                                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                                            @foreach($milestonePlatform->platform->channelPlatforms as $channelPlatform)
-                                                @if (!$milestonePlatform->channelMilestonePlatforms->pluck('channel_platform_id')->contains($channelPlatform->id))
-                                                    <li>
-                                                        <form method="POST" action="{{ route('admin.channelMilestonePlatforms.store', [$milestonePlatform, $channelPlatform]) }}">
-                                                            {{ csrf_field() }}
-                                                            <button type="submit" class="dropdown-item d-flex align-items-center">
-                                                                <div class="dot" style="background-color: {{ $channelPlatform->channel->color }}"></div>
-                                                                {{ $channelPlatform->name }}
-                                                            </button>
-                                                        </form>
-                                                    <li>
-                                                @endif
+                                            @foreach($platform->platform->channels as $channel)
+                                                <li>
+                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.store', [$platform->platform, $channel]) }}">
+                                                        {{ csrf_field() }}
+                                                        <button type="submit" class="dropdown-item d-flex align-items-center">
+                                                            <div class="dot" style="background-color: {{ $channel->color }}"></div>
+                                                            {{ $channel->name }}
+                                                        </button>
+                                                    </form>
+                                                <li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -209,22 +208,22 @@
                             <div class="card-body d-flex flex-column">
                                 <div class="d-flex flex-row">
                                     <div class="flex-grow-1">
-                                        @foreach($milestonePlatform->channelMilestonePlatforms as $cmp)
+                                        @foreach($platform->channels as $channel)
                                             <div class="d-flex align-items-center justify-content-between @if (!$loop->first) mt-2 @endif">
-                                                <div class="dot" style="background-color: {{ $cmp->channelPlatform->channel->color }}"></div>
-                                                <span>{{ $cmp->channelPlatform->name }}</span>
+                                                <div class="dot" style="background-color: {{ $channel->color }}"></div>
+                                                <span>{{ $channel->pivot->name }}</span>
                                                 <div class="flex-grow-1"></div>
                                                 <div class="btn-toolbar @loop">
-                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.toggle', $cmp) }}">
+                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.toggle', $channel) }}">
                                                         {{ method_field('PATCH') }}
                                                         {{ csrf_field() }}
-                                                        @if ($cmp->active)
+                                                        @if ($channel->pivot->active)
                                                             <button type="submit" class="btn btn-success btn-sm me-2"><i class="far fa-fw fa-check"></i></button>
                                                         @else
                                                             <button type="submit" class="btn btn-danger btn-sm me-2"><i class="far fa-fw fa-times"></i></button>
                                                         @endif
                                                     </form>
-                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.delete', $cmp) }}">
+                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.delete', $channel) }}">
                                                         {{ method_field('DELETE') }}
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-danger btn-sm"><i class="far fa-fw fa-trash-alt"></i></button>
@@ -238,7 +237,7 @@
                             </div>
                             @can('edit_milestone')
                                 <div class="d-flex justify-content-between align-items-center card-footer">
-                                    <form method="POST" action="{{ route('admin.milestonePlatforms.delete', $milestonePlatform) }}">
+                                    <form method="POST" action="{{ route('admin.milestonePlatforms.delete', $platform) }}">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger btn-sm float-end"><i class="far fa-trash-alt"></i> Delete</button>

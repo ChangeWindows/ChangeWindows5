@@ -14,6 +14,14 @@ class HorizonMilestonePlatform extends Model {
 
     // Relations
     public function changelog() {
-        return $this->hasOne(Changelog::class, 'milestone_platform_id');
+        return $this->hasOne(HorizonChangelog::class, 'milestone_platform_id');
+    }
+
+    public function milestone() {
+        return $this->belongsTo(HorizonMilestone::class, 'milestone_platform_id');
+    }
+
+    public function mpcs() {
+        return $this->belongsToMany(HorizonMilestonePlatformChannel::class);
     }
 }

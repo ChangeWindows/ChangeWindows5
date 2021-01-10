@@ -21,9 +21,8 @@ class HorizonPlatform extends Model {
 
     // Relations
     public function channels() {
-        return $this->belongsToMany(HorizonPlatforms::class, 'h_platform_channels', 'platform_id', 'channel_id')
+        return $this->belongsToMany(HorizonChannel::class, 'h_platform_channels', 'platform_id', 'channel_id')
             ->using(HorizonPlatformChannel::class)
-            ->as('channels')
             ->withPivot('name', 'short_name', 'active')
             ->withTimestamps();
     }
@@ -31,7 +30,6 @@ class HorizonPlatform extends Model {
     public function milestones() {
         return $this->belongsToMany(HorizonChannel::class, 'h_milestone_platforms', 'platform_id', 'platform_id')
             ->using(HorizonPlatformChannel::class)
-            ->as('milestones')
             ->withTimestamps();
     }
 

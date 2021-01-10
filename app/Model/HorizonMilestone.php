@@ -21,10 +21,14 @@ class HorizonMilestone extends Model implements Searchable {
 
     // Relations
     public function platforms() {
-        return $this->belongsToMany(HorizonChannel::class, 'h_milestone_platforms', 'platform_id', 'milestone_id')
+        return $this->belongsToMany(HorizonPlatform::class, 'h_milestone_platforms', 'platform_id', 'milestone_id')
             ->using(HorizonPlatformChannel::class)
             ->as('platforms')
             ->withTimestamps();
+    }
+
+    public function milestonePlatforms() {
+        return $this->hasMany(HorizonMilestonePlatform::class, 'milestone_id');
     }
 
     public function flights() {
@@ -33,11 +37,11 @@ class HorizonMilestone extends Model implements Searchable {
 
     // Additional attributes
     public function getBgColorAttribute() {
-        return 'background-color: '.$this->color;
+        return 'background-color: #'.$this->color;
     }
 
     public function getTextColorAttribute() {
-        return 'color: '.$this->color;
+        return 'color: #'.$this->color;
     }
 
     public function getSupportAttribute() {

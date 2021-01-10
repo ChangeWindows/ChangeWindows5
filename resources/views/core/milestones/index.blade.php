@@ -30,16 +30,9 @@
                     </h3>
                     <div class="row g-3">
                         <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="id">ID</label>
-                            <input type="text" class="form-control @error('id') is-invalid @enderror" name="id" id="id" value="{{ old('id') }}" required placeholder="ID">
-                            @error('id')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <label class="form-label" for="osname">OS name</label>
-                            <input type="text" class="form-control @error('osname') is-invalid @enderror" name="osname" id="osname" value="{{ old('osname') }}" required placeholder="OS name">
-                            @error('osname')
+                            <label class="form-label" for="product_name">Product name</label>
+                            <input type="text" class="form-control @error('product_name') is-invalid @enderror" name="product_name" id="product_name" value="{{ old('product_name') }}" required placeholder="OS name">
+                            @error('product_name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -61,6 +54,13 @@
                             <label class="form-label" for="version">Version</label>
                             <input type="text" class="form-control @error('version') is-invalid @enderror" name="version" id="version" value="{{ old('version') }}" required placeholder="Version">
                             @error('version')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <label class="form-label" for="canonical_version">Canonical version</label>
+                            <input type="text" class="form-control @error('canonical_version') is-invalid @enderror" name="canonical_version" id="canonical_version" value="{{ old('canonical_version') }}" required placeholder="Canonical version">
+                            @error('canonical_version')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>

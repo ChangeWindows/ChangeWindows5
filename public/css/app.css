@@ -565,7 +565,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "\2014\A0";
+  content: "— ";
 }
 
 .img-fluid {
@@ -6978,7 +6978,6 @@ textarea.form-control-lg {
 .user-select-all {
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
-      -ms-user-select: all !important;
           user-select: all !important;
 }
 
@@ -11537,11 +11536,11 @@ span.CodeMirror-selectedtext {
 }
 
 .editor-toolbar a.fa-header-bigger:after {
-  content: "\25B2";
+  content: "▲";
 }
 
 .editor-toolbar a.fa-header-smaller:after {
-  content: "\25BC";
+  content: "▼";
 }
 
 .editor-toolbar.disabled-for-preview a:not(.no-disable) {
