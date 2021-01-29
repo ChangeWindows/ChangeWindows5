@@ -177,12 +177,11 @@
         </div>
         <div class="col-12 card-set">
             <div class="row">
-                @foreach($milestone->milestonePlatforms as $platform)
-                    {{ dd($platform)}}
+                @foreach($milestone->milestonePlatforms as $milestonePlatform)
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-g">
                         <div class="card shadow border-0 h-100">
-                            <div class="p-3 text-white d-flex align-items-center justify-content-between" style="{{ $platform->platform->bg_color }}">
-                                <span>{!! $platform->platform->plain_icon !!} {{ $platform->platform->name }}</span>
+                            <div class="p-3 text-white d-flex align-items-center justify-content-between" style="{{ $milestonePlatform->platform->bg_color }}">
+                                <span>{!! $milestonePlatform->platform->plain_icon !!} {{ $milestonePlatform->platform->name }}</span>
                                 @can('edit_milestone')
                                     <div class="dropdown">
                                         <a class="btn btn-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -190,9 +189,9 @@
                                         </a>
 
                                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                                            @foreach($platform->platform->channels as $channel)
+                                            @foreach($milestonePlatform->platform->channels as $channel)
                                                 <li>
-                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.store', [$platform->platform, $channel]) }}">
+                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.store', [$milestonePlatform->platform, $channel]) }}">
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="dropdown-item d-flex align-items-center">
                                                             <div class="dot" style="background-color: {{ $channel->color }}"></div>
@@ -208,22 +207,22 @@
                             <div class="card-body d-flex flex-column">
                                 <div class="d-flex flex-row">
                                     <div class="flex-grow-1">
-                                        @foreach($platform->channels as $channel)
+                                        @foreach($milestonePlatform->mpcs as $mpc)
                                             <div class="d-flex align-items-center justify-content-between @if (!$loop->first) mt-2 @endif">
-                                                <div class="dot" style="background-color: {{ $channel->color }}"></div>
-                                                <span>{{ $channel->pivot->name }}</span>
+                                                <div class="dot" style="background-color: {{ $mpc->platformChannel->channel->color }}"></div>
+                                                <span>{{ $mpc->platformChannel->name }}</span>
                                                 <div class="flex-grow-1"></div>
                                                 <div class="btn-toolbar @loop">
-                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.toggle', $channel) }}">
+                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.toggle', $mpc->platformChannel) }}">
                                                         {{ method_field('PATCH') }}
                                                         {{ csrf_field() }}
-                                                        @if ($channel->pivot->active)
+                                                        @if ($mpc->active)
                                                             <button type="submit" class="btn btn-success btn-sm me-2"><i class="far fa-fw fa-check"></i></button>
                                                         @else
                                                             <button type="submit" class="btn btn-danger btn-sm me-2"><i class="far fa-fw fa-times"></i></button>
                                                         @endif
                                                     </form>
-                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.delete', $channel) }}">
+                                                    <form method="POST" action="{{ route('admin.channelMilestonePlatforms.delete', $mpc->platformChannel) }}">
                                                         {{ method_field('DELETE') }}
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-danger btn-sm"><i class="far fa-fw fa-trash-alt"></i></button>
@@ -237,7 +236,7 @@
                             </div>
                             @can('edit_milestone')
                                 <div class="d-flex justify-content-between align-items-center card-footer">
-                                    <form method="POST" action="{{ route('admin.milestonePlatforms.delete', $platform) }}">
+                                    <form method="POST" action="{{ route('admin.milestonePlatforms.delete', $milestonePlatform) }}">
                                         {{ method_field('DELETE') }}
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger btn-sm float-end"><i class="far fa-trash-alt"></i> Delete</button>

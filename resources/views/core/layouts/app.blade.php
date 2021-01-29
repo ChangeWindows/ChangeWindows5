@@ -106,7 +106,7 @@
                 @yield('content')
             </div>
             <footer>
-                <span class="text-guide">ChangeWindows</span> {{ config('app.viv') }} &copy; 2014-2020
+                <span class="text-guide">ChangeWindows</span> {{ config('app.viv') }} &copy; 2014-2021
             </footer>
         </div>
         @yield('scripts')

@@ -18,10 +18,14 @@ class HorizonMilestonePlatform extends Model {
     }
 
     public function milestone() {
-        return $this->belongsTo(HorizonMilestone::class, 'milestone_platform_id');
+        return $this->belongsTo(HorizonMilestone::class);
+    }
+
+    public function platform() {
+        return $this->belongsTo(HorizonPlatform::class);
     }
 
     public function mpcs() {
-        return $this->belongsToMany(HorizonMilestonePlatformChannel::class);
+        return $this->hasMany(HorizonMilestonePlatformChannel::class, 'milestone_platform_id');
     }
 }
