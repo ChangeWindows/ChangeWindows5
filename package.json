@@ -1,25 +1,26 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
+        "development": "mix",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "mix --production",
+        "start": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "watch": "mix watch"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-pro": "5.15.1",
-        "axios": "0.20.0",
-        "bootstrap": "4.5.3",
-        "cross-env": "7.0.2",
-        "jquery": "3.5.1",
-        "laravel-mix": "5.0.7",
+        "alpinejs": "2.8.0",
+        "axios": "0.21.1",
+        "bootstrap": "5.0.0-beta1",
+        "cross-env": "7.0.3",
+        "easymde": "2.13.0",
+        "laravel-mix": "6.0.5",
         "lodash": "4.17.20",
-        "popper.js": "1.16.1",
-        "sass": "1.27.0",
-        "sass-loader": "10.0.3",
+        "postcss": "8.2.1",
+        "sass": "1.30.0",
+        "sass-loader": "10.1.0",
         "vue-template-compiler": "2.6.12"
     }
 }

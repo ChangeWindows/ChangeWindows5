@@ -2,8 +2,10 @@
 @section('title') Milestones @endsection
 
 @section('toolset')
-<a class="dropdown-item" href="https://viv.changewindows.org/admin/milestones"><i class="far fa-fw fa-plus"></i> New milestone</a>
+@can('create_milestone')
+<a class="dropdown-item" href="{{ route('admin.milestones') }}"><i class="far fa-fw fa-plus"></i> New milestone</a>
 <div class="dropdown-divider"></div>
+@endcan
 @endsection
 
 @section('hero')

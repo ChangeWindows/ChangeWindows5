@@ -70,9 +70,15 @@ $themes: (
 );
 
 @each $theme, $color in $themes {
+
     .#{$theme} {
         background: map-get($color, background-content);
         color: map-get($color, text);
+        scrollbar-color: map-get($color, background-header) map-get($color, background-content);
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: map-get($color, background-header);
+        }
 
         .navbg {
             background: map-get($color, background-header);

@@ -47,23 +47,10 @@
             }
         }
 
-        .dot-container {
-            position: absolute;
-            width: 39px;
-            height: 39px;
-            top: 0;
-            right: 0;
-
-            .dot {
-                background: $accent;
-                border-radius: 8px;
-                width: 8px;
-                height: 8px;
-                position: relative;
-                top: 5px;
-                left: 14px;
-                display: inline-block;
-            }
+        .version-tag {
+            display: flex;
+            align-items: center;
+            margin-right: .5rem;
         }
     }
 }

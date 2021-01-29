@@ -12,11 +12,14 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .copy('node_modules/@fortawesome/fontawesome-pro/js/regular.min.js', 'public/js/')
-    .copy('node_modules/@fortawesome/fontawesome-pro/js/brands.min.js', 'public/js/')
-    .copy('node_modules/@fortawesome/fontawesome-pro/js/fontawesome.min.js', 'public/js/')
-    .copy('node_modules/jquery/dist/jquery.min.js', 'public/js/')
+    .copy('node_modules/@fortawesome/fontawesome-pro/js/regular.min.js', 'public/js')
+    .copy('node_modules/@fortawesome/fontawesome-pro/js/brands.min.js', 'public/js')
+    .copy('node_modules/@fortawesome/fontawesome-pro/js/fontawesome.min.js', 'public/js')
+    .copy('node_modules/alpinejs/dist/alpine.js', 'public/js')
+    .copy('node_modules/easymde/dist/easymde.min.js', 'public/js')
+    .copy('node_modules/easymde/dist/easymde.min.css', 'public/css')
+    .copy('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-        .options({
-            processCssUrls: false
-        });
+        .options({ processCssUrls: false })
+    .sass('resources/sass/core/admin.scss', 'public/css')
+        .options({ processCssUrls: false });

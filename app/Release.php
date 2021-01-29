@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 use Carbon\Carbon;
 use App\Milestone;
 
-class Release extends Model implements Feedable
+class Release extends Model implements Feedable, Searchable
 {
     protected $table = 'releases';
 
@@ -36,8 +38,15 @@ class Release extends Model implements Feedable
         return $this->belongsTo('App\Milestone', 'milestone');
     }
 
-    public function getFormatAttribute() {
-        return $this->date->format('d M Y');
+
+    public function getSearchResult(): SearchResult {
+        $url = route('admin.flights.edit', $this);
+
+        return new SearchResult(
+            $this,
+            $this->build.'.'.$this->delta,
+            $url
+        );
     }
 
     public function getFlightAttribute() {
@@ -149,85 +158,9 @@ class Release extends Model implements Feedable
     static function getMilestoneByString($string) {
         $delta = $string['delta'];
         $build = $string['build'];
-        $major = $string['major'];
 
-        // DO NOT HARDCODE DO NOT HARDCODE DO NOT HARDCODE
-        if ( $build < 10250 )
-            return 'threshold1';
-        else if ( $build < 10600 )
-            return 'threshold2';
-        else if ( $build < 14400 )
-            return 'redstone1';
-        else if ( $build < 16000 )
-            return 'redstone2';
-        else if ( $build < 16300 )
-            return 'redstone3';
-        else if ( $build < 17200 )
-            return 'redstone4';
-        else if ( $build < 17900 )
-            return 'redstone5';
-        else if ( $build < 18363 ) {
-            if ( $delta < 7000 )
-                return '19h1';
-            else
-                return '19h2';
-        }
-        else if ( $build < 18501 )
-            return '19h2';
-        else if ( $build < 19100 )
-            return '20h1';
-        else if ( $build < 19043 )
-            return '20h2';
-        else if ( $build < 20400 )
-            return '21h1';
-        else
-            return '21h1';
+        $milestone = Milestone::where('start_build', '<=', $build)->orderBy('start_build', 'desc')->first();
 
-        // Damn it.
-        // In all fairness, this needs a bottom and top range for which build should be in which milestone
-        // additionally, the create build form should have an override for the early skip ahead builds
-    }
-
-    // Release scopes
-    public function scopePc($query) { return $query->where('platform', '1'); }
-    public function scopeMobile($query) { return $query->where('platform', '2'); }
-    public function scopeXbox($query) { return $query->where('platform', '3'); }
-    public function scopeServer($query) { return $query->where('platform', '4'); }
-    public function scopeHolographic($query) { return $query->where('platform', '5'); }
-    public function scopeIot($query) { return $query->where('platform', '6'); }
-    public function scopeTeam($query) { return $query->where('platform', '7'); }
-    public function scopeIso($query) { return $query->where('platform', '8'); }
-    public function scopeSdk($query) { return $query->where('platform', '9'); }
-    public function scopeTenX($query) { return $query->where('platform', '10'); }
-
-    public function scopeLeak($query) { return $query->where('ring', '0'); }
-    public function scopeSkip($query) { return $query->where('ring', '1'); }
-    public function scopeActive($query) { return $query->where('ring', '2'); }
-    public function scopeSlow($query) { return $query->where('ring', '3'); }
-    public function scopePreview($query) { return $query->where('ring', '4'); }
-    public function scopeRelease($query) { return $query->where('ring', '5'); }
-    public function scopeTargeted($query) { return $query->where('ring', '6'); }
-    public function scopeBroad($query) { return $query->where('ring', '7'); }
-    public function scopeLtsc($query) { return $query->where('ring', '8'); }
-
-    public function scopeLatestFlight($query) { return $query->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('date', 'desc'); }
-    public function scopeAllRings($query) { return $query->groupBy('ring')->get()->keyBy('ring'); }
-
-    public function scopePlatformRings($query, $platform) {
-        switch ($platform) {
-            case 1:     $rings = array(1, 2, 3, 5, 6, 7, 8); break;
-            case 2:     $rings = array(6, 7); break;
-            case 3:     $rings = array(1, 2, 3, 4, 5, 6); break;
-            case 4:     $rings = array(3, 6, 8); break;
-            case 5:     $rings = array(2, 3, 6, 7, 8); break;
-            case 6:     $rings = array(3, 6, 7); break;
-            case 7:     $rings = array(6, 7); break;
-            case 8:     $rings = array(6); break;
-            case 9:     $rings = array(6); break;
-            case 10:    $rings = array(3); break;
-            default:    return;
-        }
-
-        return $query->where('platform', $platform)->whereIn('ring', $rings);
+        return $milestone->id;
     }
 }

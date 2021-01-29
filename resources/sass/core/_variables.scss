@@ -1,0 +1,91 @@
+
+// Body
+$body-bg: #fff;
+$btn-focus-box-shadow: none !important;
+$input-focus-box-shadow: none;
+
+// background-image: linear-gradient(-45deg, #00b573 0%, #78b500 100%);
+
+// Colors
+$primary: #005dc5;
+$accent: #00abfa;
+$secondary: #ffc000;
+
+$blue: #0467c4;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #e52262;
+$red: #e74018;
+$orange: #fb8009;
+$yellow: #ffc000;
+$green: #97c800;
+$teal: #10b08f;
+$cyan: #0098df;
+$brown: #b66e1c;
+
+$leak: #e52262;
+$skip: #e74018;
+$fast: #fb8009;
+$slow: #ffc000;
+$preview: #c0d700;
+$release: #97c800;
+$targeted: #46c429;
+$broad: #10b08f;
+$ltsc: #0098df;
+
+$mobile: #00bcf2;
+$iso: #00cea6;
+$iot: #f7630c;
+$holographic: #ff4343;
+$pc: #0078d7;
+$tenx: #9ad93a;
+$xbox: #107c10;
+$team: #e3008c;
+$server: #ffb900;
+$sdk: #886ce4;
+
+$dark: #333;
+
+// Features
+$enable-caret: false;
+$enable-negative-margins: true;
+$enable-smooth-scroll: true;
+
+// Grid
+$grid-gutter-width: 1rem;
+
+// Container
+$container-padding-x: 0;
+
+// Typography
+$headings-font-weight: 600;
+
+$lead-font-weight: 600;
+
+$link-decoration: none;
+
+$form-text-font-size: .8rem;
+
+// Shadows
+$box-shadow-sm: 0 0 .2px rgba(0,0,0,.014), 0 0 .5px rgba(0,0,0,.02), 0 0 1px rgba(0,0,0,.025), 0 0 1.8px rgba(0,0,0,.03), 0 0 3.3px rgba(0,0,0,.036), 0 0 8px rgba(0,0,0,.05);
+$box-shadow: 0 0 .4px rgba(0,0,0,.02), 0 0 .9px rgba(0,0,0,.028), 0 0 1.8px rgba(0,0,0,.035), 0 0 3.1px rgba(0,0,0,.042), 0 0 5.8px rgba(0,0,0,.05), 0 0 14px rgba(0,0,0,.07);
+$box-shadow-lg: 0 0 .7px rgba(0,0,0,.028), 0 0 1.7px rgba(0,0,0,.04), 0 0 3.3px rgba(0,0,0,.05), 0 0 5.8px rgba(0,0,0,.06), 0 0 10.9px rgba(0,0,0,.072), 0 0 26px rgba(0,0,0,.1);
+
+// Navs
+$nav-pills-link-active-bg: $secondary;
+
+// Grid
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Extra extra large screen / super-wide desktop
+  xxl: 1400px
+);

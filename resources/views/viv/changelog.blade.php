@@ -4,7 +4,30 @@
 @section('content')
 <h2>What's new</h2>
 <section class="release-notes">
-    <h3>5.4.0 <small>23 November 2020</small></h3>
+    <h3>6.0.0-alpha.2 <small>21 December 2020</small></h3>
+    <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>Channels will now show inactive channels, they will appear grayed-out, providing an overview of what build is the last on a certain milestone's channels.</p>
+    <p>Platforms and channels are now stored in the database rather than hardcoded</p>
+    <h4><i class="far fa-fw fa-wrench"></i> Improved</h4>
+    <p>Rings have been renamed to Channels</p>
+    <p>All channels for all milestones are now always visible on the Rings page by platform, inactive rings will be grayed out</p>
+    <p>The timeline now shows version numbers for each build directly rather than a hoverable dot</p>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>Blog has been promoted to the main menu</p>
+</section>
+<section class="release-notes">
+    <h3>6.0.0-alpha.1 <small>24 November 2020</small></h3>
+    <h4><i class="far fa-fw fa-plus"></i> New</h4>
+    <p>Introduces major revamp of the admin panel</p>
+    <p>Revamps account permissions system</p>
+    <p>You can now edit your email address and password, as well as upload a profile picture</p>
+    <h4><i class="far fa-fw fa-exchange"></i> Changed</h4>
+    <p>The Light and Black themes are temporarily available for all account-holders</p>
+    <h4><i class="far fa-fw fa-server"></i> System</h4>
+    <p>Update to Bootstrap 5.0.0 alpha 3</p>
+</section>
+<section class="release-notes">
+    <h3>5.4.0 <small>24 November 2020</small></h3>
     <h4><i class="far fa-fw fa-plus"></i> New</h4>
     <p>Adds link to ChangeWindows 6 Preview under the "More" menu</p>
     <h4><i class="far fa-fw fa-trash-alt"></i> Removed</h4>

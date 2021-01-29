@@ -75,3 +75,78 @@ If you discover a security vulnerability within ChangeWindows, please contact us
 
 ## License
 The ChangeWindows website is open-sourced software licensed under the [AGPL license](LICENSE). Note however that the content on our website isn't unless stated otherwise.
+
+## Version 6.0 migration
+### Alpha 1
+```sql
+alter table `roles` add `is_default` int not null default '0' after `description`;
+alter table `users` add `onboarding` varchar(191) null after `email`, add `role_id` bigint unsigned not null;
+alter table `users` add constraint `users_role_id_foreign` foreign key (`role_id`) references `roles` (`id`);
+create table `abilities` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `label` varchar(191) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+create table `ability_role` (`role_id` bigint unsigned not null, `ability_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `ability_role` add primary key `ability_role_role_id_ability_id_primary`(`role_id`, `ability_id`);
+alter table `ability_role` add constraint `ability_role_role_id_foreign` foreign key (`role_id`) references `roles` (`id`) on delete cascade;
+alter table `ability_role` add constraint `ability_role_ability_id_foreign` foreign key (`ability_id`) references `abilities` (`id`) on delete cascade;
+alter table `users` add `avatar` varchar(191) null after `email`;
+```
+
+### Alpha 2
+```sql
+alter table `milestones` add `start_build` int unsigned null after `color`;
+
+create table `platforms` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `color` varchar(191) not null, `icon` varchar(191) not null, `active` int not null default '1', `slug` varchar(191) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `platforms` add unique `platforms_slug_unique`(`slug`);
+create table `milestone_platforms` (`id` bigint unsigned not null auto_increment primary key, `platform_id` bigint unsigned not null, `milestone_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `milestone_platforms` add constraint `milestone_platforms_platform_id_foreign` foreign key (`platform_id`) references `platforms` (`id`);
+alter table `milestone_platforms` add constraint `milestone_platforms_milestone_id_foreign` foreign key (`milestone_id`) references `milestones` (`id`);
+
+create table `channels` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `color` varchar(191) not null, `position` int not null, `slug` varchar(191) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `channels` add unique `channels_slug_unique`(`slug`);
+create table `channel_platforms` (`id` bigint unsigned not null auto_increment primary key, `platform_id` bigint unsigned not null, `channel_id` bigint unsigned not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `channel_platforms` add constraint `channel_platforms_platform_id_foreign` foreign key (`platform_id`) references `platforms` (`id`);
+alter table `channel_platforms` add constraint `channel_platforms_channel_id_foreign` foreign key (`channel_id`) references `channels` (`id`);
+
+alter table `channel_platforms` add `short_name` varchar(191) not null after `channel_id`, `name` varchar(191) not null after `channel_id`;
+alter table `platforms` add `position` int not null default '1' after `icon`;
+
+create table `channel_milestone_platforms` (`id` bigint unsigned not null auto_increment primary key, `channel_platform_id` bigint unsigned not null, `milestone_platform_id` bigint unsigned not null, `active` int not null default '1', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci';
+alter table `channel_milestone_platforms` add constraint `channel_milestone_platforms_channel_platform_id_foreign` foreign key (`channel_platform_id`) references `channel_platforms` (`id`);
+alter table `channel_milestone_platforms` add constraint `channel_milestone_platforms_milestone_platform_id_foreign` foreign key (`milestone_platform_id`) references `milestone_platforms` (`id`);
+
+ALTER TABLE `milestones` CHANGE `version` `version` VARCHAR(10) NOT NULL;
+
+alter table `channel_platforms` add `active` int not null default '1' after `short_name`;
+
+alter table `milestones` drop `isLts`;
+alter table `milestones` drop `pcSkip`;
+alter table `milestones` drop `pcFast`;
+alter table `milestones` drop `pcSlow`;
+alter table `milestones` drop `pcReleasePreview`;
+alter table `milestones` drop `pcTargeted`;
+alter table `milestones` drop `pcBroad`;
+alter table `milestones` drop `pcLTS`;
+alter table `milestones` drop `xboxSkip`;
+alter table `milestones` drop `xboxFast`;
+alter table `milestones` drop `xboxSlow`;
+alter table `milestones` drop `xboxPreview`;
+alter table `milestones` drop `xboxReleasePreview`;
+alter table `milestones` drop `xboxTargeted`;
+alter table `milestones` drop `serverSlow`;
+alter table `milestones` drop `serverTargeted`;
+alter table `milestones` drop `serverLTS`;
+alter table `milestones` drop `iotSlow`;
+alter table `milestones` drop `iotTargeted`;
+alter table `milestones` drop `iotBroad`;
+alter table `milestones` drop `teamFast`;
+alter table `milestones` drop `teamSlow`;
+alter table `milestones` drop `teamTargeted`;
+alter table `milestones` drop `teamBroad`;
+alter table `milestones` drop `holographicFast`;
+alter table `milestones` drop `holographicSlow`;
+alter table `milestones` drop `holographicTargeted`;
+alter table `milestones` drop `holographicBroad`;
+alter table `milestones` drop `holographicLTS`;
+alter table `milestones` drop `tenXSlow`;
+alter table `milestones` drop `sdk`;
+alter table `milestones` drop `iso`;
+```

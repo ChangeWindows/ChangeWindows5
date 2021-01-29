@@ -1,0 +1,49 @@
+header {
+    color: #fff;
+
+    .header-bar {
+        transition: $transition-base;
+
+        @media (max-width: 575px) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .core-bar {
+        & > :not(:last-child) {
+            margin-right: .5rem;
+        }
+
+        .core-bar-action {
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid rgba(255,255,255,.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            transition: $transition-base;
+            border-radius: 100px;
+
+            &:hover {
+                border-color: $secondary;
+                color: #fff;
+            }
+
+            &.core-bar-action-account {
+                width: auto;
+
+                p {
+                    display: inline-block;
+                    margin: 0 .5rem 0 .75rem;
+                }
+
+                img {
+                    height: 37px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.btn-block {
+    & + & {
+        margin-top: 0;
+    }
+}
+
+.btn-notification-badge {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 6px;
+        top: -4px;
+        right: -4px;
+        background-color: $yellow;
+        content: "";
+    }
+}

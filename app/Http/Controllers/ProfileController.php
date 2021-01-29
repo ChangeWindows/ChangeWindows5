@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\User;
+use Illuminate\Support\Facades\Auth;
+use App\User;
+use Illuminate\Validation\Rule;
 
 class ProfileController extends Controller
 {
@@ -23,19 +25,20 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
-        $request->user()->authorizeRoles(['Admin', 'Insider', 'User']);
+        $user = Auth::user();
 
-        return view('profile');
+        return view('profile.index', compact('user'));
     }
 
     /**
-     * Display the specified resource.
+     * Display a listing of the resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        //
+    public function password() {
+        $user = Auth::user();
+
+        return view('profile.password', compact('user'));
     }
 
     /**
@@ -45,15 +48,6 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request, $id) {
-        $request->user()->authorizeRoles(['Admin', 'Insider', 'User']);
-
-        $user = User::find($id);
-
-        $user->theme = request()->get('theme');
-
-        $user->save();
-
-        return redirect()->route('profile');
     }
 
     /**
@@ -63,18 +57,56 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) {
-        //
+    public function update(User $user) {
+        $attributes = request()->validate([
+            'email' => ['string', 'required', 'email', 'max:255', Rule::unique('users')->ignore($user)],
+            'avatar' => ['nullable', 'mimes:png', 'max:40960', 'dimensions:min_width=400,min_height=400,max_width=400,max_height=400'],
+        ], [
+            'email.required' => 'Email is required.',
+            'email.max' => 'Email cannot be longer than 255 characters.',
+            'email.email' => 'Email is not a valid address.',
+            'avatar.mimes' => 'Avatar is not a png-file.',
+            'avatar.dimensions' => 'Avatar must be 400x400 pixels in size.'
+        ]);
+
+        $updateable = [
+            'email' => request('email'),
+            'theme' => request('theme')
+        ];
+
+        if (request('avatar')) {
+            $avatar = request()->file('avatar');
+            $avatar_name = $user->id.'.'.$avatar->getClientOriginalExtension();
+            $avatar->move(public_path('img/avatars'), $avatar_name);
+
+            $updateable['avatar_path'] = 'img/avatars/'.$avatar_name;
+        }
+
+        $user->update($updateable);
+
+        return redirect()->route('front.profile')->with('status', 'Your changes have been saved.');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Update the specified resource in storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) {
-        $request->user()->authorizeRoles('Admin');
-        //
+    public function changePassword(User $user) {
+        $attributes = request()->validate([
+            'password' => ['nullable', 'string', 'min:8', 'max:255', 'confirmed']
+        ], [
+            'password.min' => 'Wachtwoord moet minstens 8 tekens bevatten.',
+            'password.max' => 'Wachtwoord mag maximum 255 tekens bevatten.',
+            'password.confirmed' => 'Wachtwoord komt niet overeen.'
+        ]);
+
+        $user->update([
+            'password' => request('password')
+        ]);
+
+        return redirect()->route('front.profile')->with('status', 'Your password has been updated.');
     }
 }

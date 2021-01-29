@@ -5,35 +5,56 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject, Searchable
 {
     use Notifiable;
 
-    protected $fillable = [ 'name', 'email', 'password', 'theme' ];
-    protected $hidden = [ 'password', 'remember_token', ];
+    protected $fillable = ['name', 'email', 'password', 'theme', 'role_id', 'onboarding', 'avatar_path'];
+    protected $hidden = ['password', 'remember_token'];
 
-    public function roles() {
-        return $this->belongsToMany(Role::class);
+    public function role() {
+        return $this->belongsTo(Role::class);
     }
 
-    public function authorizeRoles($roles) {
-        if (is_array($roles)) {
-            return $this->hasAnyRole($roles) || abort(401, 'This action is unauthorized.');
+    public function abilities() {
+        return $this->role->abilities->flatten()->pluck('name')->unique();
+    }
+    
+    public function getJWTIdentifier() {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims() {
+        return [];
+    }
+
+    public function setPasswordAttribute($value) {
+        if (Hash::needsRehash($value)) {
+            return $this->attributes['password'] = bcrypt($value);
+        } else {
+            return $this->attributes['password'] = $value;
         }
-
-        return $this->hasRole($roles) || abort(401, 'This action is unauthorized.');
     }
 
-    public function hasAnyRole($roles) {
-        return null !== $this->roles()->whereIn('name', $roles)->first();
+    public function getAvatarAttribute() {
+        if ($this->avatar_path) {
+            return asset($this->avatar_path);
+        } else {
+            return asset('img/models/user.png');
+        }
     }
 
-    public function hasRole($role) {
-        return null !== $this->roles()->where('name', $role)->first();
-    }
+    public function getSearchResult(): SearchResult {
+        $url = route('admin.accounts.edit', $this);
 
-    public function getRoles() {
-        return $this->roles()->firstOrFail();
+        return new SearchResult(
+            $this,
+            $this->name,
+            $url
+        );
     }
 }

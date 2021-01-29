@@ -1,8 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
+    "/css/admin.css": "/css/admin.css",
     "/js/regular.min.js": "/js/regular.min.js",
     "/js/brands.min.js": "/js/brands.min.js",
     "/js/fontawesome.min.js": "/js/fontawesome.min.js",
-    "/js/jquery.min.js": "/js/jquery.min.js"
+    "/js/alpine.js": "/js/alpine.js",
+    "/js/easymde.min.js": "/js/easymde.min.js",
+    "/css/easymde.min.css": "/css/easymde.min.css",
+    "/js/bootstrap.bundle.min.js": "/js/bootstrap.bundle.min.js"
 }

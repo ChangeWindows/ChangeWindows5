@@ -1,5 +1,5 @@
 /*
- * ChangeWindows (c) 2014-2020
+ * ChangeWindows (c) 2014-2021
  * Licensed under AGPL
  */
 
@@ -45,6 +45,10 @@ body {
 // Utils
 .bg-g-primary {
     background-image: linear-gradient(90deg, #0078d7 0%, #0059be 100%) !important;
+}
+
+a {
+    text-decoration: none;
 }
 
 // Hero
@@ -179,4 +183,22 @@ footer {
     .btn {
         margin-top: 15px;
     }
+}
+
+// Scrollbar
+body {
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+
+    scrollbar-width: thin;
 }

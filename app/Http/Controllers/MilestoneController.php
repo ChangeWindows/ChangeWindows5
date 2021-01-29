@@ -8,7 +8,6 @@ use App\Release;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Parsedown;
-use Twitter;
 
 class MilestoneController extends Controller
 {
@@ -27,7 +26,7 @@ class MilestoneController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $milestones = Milestone::orderBy('version', 'DESC')->get();
+        $milestones = Milestone::orderBy('version', 'desc')->get();
 
         return view('milestones.index', compact('milestones'));
     }
@@ -40,15 +39,15 @@ class MilestoneController extends Controller
      */
     public function show(Request $request, $id) {
         $milestone = Milestone::findOrFail($id);
-        $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'DESC')->first();
-        $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'ASC')->first();
+        $previous = Milestone::where('version', '<', $milestone->version)->orderBy('version', 'desc')->first();
+        $next = Milestone::where('version', '>', $milestone->version)->orderBy('version', 'asc')->first();
 
         $progress = $milestone->getSupport();
 
         $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->groupBy('platform')->orderBy('platform')->get();
 
         foreach ($platforms as $platform) {
-            $platform->builds = Release::where('milestone', $milestone->id)->where('platform', $platform->platform)->orderBy('date', 'DESC')->orderBy('delta', 'DESC')->limit(7)->get();
+            $platform->builds = Release::where('milestone', $milestone->id)->where('platform', $platform->platform)->orderBy('date', 'desc')->orderBy('delta', 'desc')->limit(7)->get();
         }
 
         return view('milestones.show', compact('milestone', 'previous', 'next', 'platforms', 'progress'));
@@ -71,7 +70,7 @@ class MilestoneController extends Controller
 
         $platforms = Release::select('platform', \DB::raw('count(build) as count'))->where('milestone', $milestone->id)->groupBy('platform')->orderBy('platform')->get();
 
-        $releases = Release::where('milestone', $id)->where('platform', $platform_id)->orderBy('build', 'DESC')->orderBy('delta', 'DESC')->orderBy('ring', 'ASC')->get();
+        $releases = Release::where('milestone', $id)->where('platform', $platform_id)->orderBy('build', 'desc')->orderBy('delta', 'desc')->orderBy('ring', 'asc')->get();
 
         foreach ($releases as $release) {
             $timeline[$release->build.'.'.$release->delta][$release->ring] = $release->date->format('j M \'y');

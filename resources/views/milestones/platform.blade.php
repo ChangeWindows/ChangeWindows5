@@ -17,7 +17,7 @@
                     </a>
                 @endforeach
                 <div class="flex-grow-1"></div>
-                <a class="nav-link" href="https://viv.changewindows.org/admin/milestones">
+                <a class="nav-link" href="{{ route('admin.milestones.edit', $milestone) }}">
                     <i class="far fa-fw fa-pencil"></i>
                 </a>
             </nav>
@@ -36,18 +36,18 @@
                 </div>
             </div>
         @else
-            @if (Auth::user() && Auth::user()->hasAnyRole(['Admin']))
+            @can('create_log')
                 <h4>No changelog yet, create one...</h4>
-                <a href="https://viv.changewindows.org/admin/changelogs" class="btn btn-primary"><i class="far fa-fw fa-pencil"></i> Write a changelog</a>
+                <a href="{{ route('admin.changelogs', ['milestone' => $milestone->id, 'platform' => $platform_id]) }}" class="btn btn-primary"><i class="far fa-fw fa-pencil"></i> Write a changelog</a>
             @else
                 <h4>No changelog available just yet</h4>
                 <p>This means that this is or a very recent milestone or we just didn't yet get around writing it. Stay tuned, we're working on it.</p>
-            @endif
+            @endcan
         @endif
     </div>
     <div class="col-lg-3 col-md-4 col-12">
         <div class="timeline">
-            @foreach ($timeline as $build => $rings)
+            @foreach ($timeline as $build => $channels)
                 <div class="timeline-row">
                     <div class="row">
                         <div class="col-12">
@@ -55,11 +55,11 @@
                             @php
                                 $first = false;
                             @endphp
-                            @foreach ($rings as $ring => $release)
+                            @foreach ($channels as $channel => $release)
                                 @if ($first)
-                                    <i class="far fa-angle-right mr-1"></i>
+                                    <i class="far fa-angle-right me-1"></i>
                                 @endif
-                                <span class="label mr-1 {{ getRingClassById($ring) }}">{{ $release }}</span>
+                                <span class="label me-1 {{ getRingClassById($channel) }}">{{ $release }}</span>
                                 @if (!$first)
                                     @php
                                         $first = true;

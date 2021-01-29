@@ -33,6 +33,22 @@ function getPlatformIcon($id) {
     }
 }
 
+function getPlatformIconAdmin($id) {
+    switch ($id) {
+        case 1:     return '<i class="far fa-fw fa-desktop pc"></i>';
+        case 2:     return '<i class="far fa-fw fa-mobile mobile"></i>';
+        case 3:     return '<i class="far fa-fw fa-gamepad-alt xbox"></i>';
+        case 4:     return '<i class="far fa-fw fa-server server"></i>';
+        case 5:     return '<i class="far fa-fw fa-head-vr holographic"></i>';
+        case 6:     return '<i class="far fa-fw fa-microchip iot"></i>';
+        case 7:     return '<i class="far fa-fw fa-tv-alt team"></i>';
+        case 8:     return '<i class="far fa-fw fa-compact-disc iso"></i>';
+        case 9:     return '<i class="far fa-fw fa-code sdk"></i>';
+        case 10:     return '<i class="far fa-fw fa-tablet-android tenx"></i>';
+        default:    return '<i class="fab fa-fw fa-windows generic"></i>';
+    }
+}
+
 function getPlatformIconNoStyle($id) {
     switch ($id) {
         case 1:     return '<i class="far fa-fw fa-desktop"></i>';

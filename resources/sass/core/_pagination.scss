@@ -1,0 +1,58 @@
+.pagination {
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 21px;
+    box-shadow: $box-shadow;
+
+    .page-item {
+        margin: 0 3px;
+        border: none;
+        font-weight: bold;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0
+        }
+
+        .page-link {
+            line-height: .7;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            width: 34px;
+            height: 34px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:not(.disabled) {
+            &.active {
+                .page-link {
+                    background-color: $primary;
+                    color: #fff;
+                }
+            }
+
+            &:hover:not(.active) {
+                .page-link {
+                    border: 1.5px solid $primary;
+                    color: $primary;
+                }
+            }
+        }
+
+        &.disabled {
+            .page-link {
+                color: #aaa;
+            }
+        }
+    }
+}

@@ -1,0 +1,424 @@
+/*
+ * ChangeWindows (c) 2014-2021
+ * Licensed under AGPL
+ */
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import 'navbar';
+@import 'card';
+@import 'modal';
+@import 'btn';
+@import 'pagination';
+
+@import 'pagebar';
+@import 'header';
+@import 'avatar';
+@import 'nav';
+
+// Core
+body {
+    background-color: #f8f8f8;
+}
+
+hr {
+    background-color: darken($light, 20);
+    margin: .5rem 0;
+}
+
+.content {
+    background-color: #fff;
+    box-shadow: $box-shadow;
+
+    @media (min-width: 576px) {
+        border-radius: 0 0 .5rem .5rem;
+    }
+
+    .content-box {
+        padding: 0 1rem 1rem;
+
+        .col-12 {
+            &.card-set {
+                margin-bottom: -1rem;
+            }
+        }
+
+        & > .row {
+            & > div {
+                &:not(:first-child) {
+                    margin-top: 1rem;
+                }
+
+                &.card-set {
+                    margin-bottom: -1rem;
+                }
+            }
+        }
+
+        & > .row:not(:first-child) {
+            & > div {
+                margin-top: 1rem;
+            }
+        }
+
+        fieldset.row {
+            & > div {
+                &:not(:first-child) {
+                    margin-top: 1rem;
+                }
+
+                &.card-set {
+                    margin-bottom: -1rem;
+                }
+            }
+        }
+    }
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.table {
+    thead {
+        th {
+            border-bottom: 2px solid $border-color !important;
+        }
+    }
+}
+
+// Fonts
+.form-text {
+    display: block;
+}
+
+// Close button
+.btn-close {
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+// Labels
+.label {
+    font-size: 100%;
+    font-weight: 600;
+    padding: 1px 0 2px 0 !important;
+    margin-right: 10px;
+
+    & + & {
+        margin-left: 4px;
+    }
+
+    &.vnext, &.leak {
+        color: $leak;
+    }
+
+    &.skip {
+        color: $skip;
+    }
+
+    &.fast {
+        color: $fast;
+    }
+
+    &.slow {
+        color: $slow;
+    }
+
+    &.preview {
+        color: $preview;
+    }
+
+    &.release {
+        color: $release;
+    }
+
+    &.targeted {
+        color: $targeted;
+    }
+
+    &.broad {
+        color: $broad;
+    }
+
+    &.ltsc {
+        color: $ltsc;
+    }
+}
+
+.mobile {
+    color: $mobile;
+}
+
+.iso {
+    color: $iso;
+}
+
+.iot {
+    color: $iot;
+}
+
+.holographic {
+    color: $holographic;
+}
+
+.pc {
+    color: $pc;
+}
+
+.tenx {
+    color: $tenx;
+}
+
+.xbox {
+    color: $xbox;
+}
+
+.team {
+    color: $team;
+}
+
+.server {
+    color: $server;
+}
+
+.sdk {
+    color: $sdk;
+}
+
+.bg-mobile {
+    background-color: $mobile;
+}
+
+.bg-iso {
+    background-color: $iso;
+}
+
+.bg-iot {
+    background-color: $iot;
+}
+
+.bg-holographic {
+    background-color: $holographic;
+}
+
+.bg-pc {
+    background-color: $pc;
+}
+
+.bg-tenx {
+    background-color: $tenx;
+}
+
+.bg-xbox {
+    background-color: $xbox;
+}
+
+.bg-team {
+    background-color: $team;
+}
+
+.bg-server {
+    background-color: $server;
+}
+
+.bg-sdk {
+    background-color: $sdk;
+}
+
+
+// Utility
+.pb-g {
+    padding-bottom: 1rem;
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-primary-g {
+    background-image: linear-gradient(90deg, $accent 0%, $primary 100%) !important;
+}
+
+.bg-top {
+    background-image: linear-gradient(90deg, $accent 0%, $primary 100%) !important;
+}
+
+.acrylic-20-light {
+    background-color: rgba(255,255,255,.6);
+    backdrop-filter: blur(20px);
+}
+
+// Forms
+.form-group {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.input-group-prepend {
+    .input-group-text {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.form-control,
+.input-group-text {
+    border-width: 1.5px;
+}
+
+// Dropdowns
+.dropdown-item {
+    height: 2.25rem;
+    
+    > svg[style] {
+        transition: $transition-base;
+    }
+
+    &:hover {
+        > svg[style] {
+            color: #fff !important;
+        }
+    }
+}
+
+// Dots
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px !important;
+    margin-right: .5rem;
+}
+
+// Jumbotron
+.action-close {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid rgba(255,255,255,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all .2s ease-in-out;
+    border-radius: 100px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+
+    &:hover {
+        border-color: $secondary;
+        color: #fff;
+    }
+}
+
+// Page title
+.h5 {
+    &.title {
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+    }
+}
+
+// Statistics
+.stats {
+    .count {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0 0 -.5rem 0;
+        
+        @media (max-width: 575px) {
+            font-size: 1rem;
+        }
+
+        small {
+            font-size: 1rem;
+            color: $gray-600;
+        
+            @media (max-width: 575px) {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .description {
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+}
+
+// Tables
+.table {
+    .td-btn {
+        padding: .3rem .5rem;
+    }
+
+    tbody {
+        tr:last-child {
+            td {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    margin: 1rem;
+    text-align: center;
+}
+
+.text-guide {
+    font-family: $headings-font-family;
+    font-weight: 700;
+}
+
+// Scrollbar
+body {
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 10px;
+    }
+
+    scrollbar-color: #ccc #fff;
+    scrollbar-width: thin;
+}
+
+// 384
+.f-384 {
+    font-family: "Century Gothic", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #222;
+
+    &:hover {
+        color: #444 !important;
+    }
+}
+
+.studio-384 {
+    background-image: linear-gradient(-45deg, #00b573 0%, #78b500 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Dark mode
+@import 'dark';

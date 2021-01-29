@@ -16,14 +16,12 @@
                         {{ getPlatformById($platform->platform) }}
                     </a>
                 @endforeach
-                @auth
-                    @if (Auth::user()->hasAnyRole(['Admin']))
-                        <div class="flex-grow-1"></div>
-                        <a class="nav-link" href="https://viv.changewindows.org/admin/milestones">
-                            <i class="far fa-fw fa-pencil"></i>
-                        </a>
-                    @endif
-                @endauth
+                @can('edit_milestone')
+                    <div class="flex-grow-1"></div>
+                    <a class="nav-link" href="{{ route('admin.milestones.edit', $milestone) }}">
+                        <i class="far fa-fw fa-pencil"></i>
+                    </a>
+                @endcan
             </nav>
         </div>
     </div>
@@ -108,7 +106,7 @@
                 @foreach ($platform->builds as $build)
                     <div class="timeline-row">
                         <div class="row">
-                            <div class="col-5 build"><span class="pr-1">{!! getPlatformIcon($build->platform) !!}</span> {{ $build->build }}.{{ $build->delta }}</div>
+                            <div class="col-5 build"><span class="pe-1">{!! getPlatformIcon($build->platform) !!}</span> {{ $build->build }}.{{ $build->delta }}</div>
                             <div class="col-3 ring">
                                 <span class="label {{ $build->class }}">{{ $build->flight }}</span>
                             </div>

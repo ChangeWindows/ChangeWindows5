@@ -1,5 +1,5 @@
 .navbar {
-    padding: 0 20px;
+    padding: 0 10px;
 
     @media all and (min-width:1200px) {
         padding: 0;
@@ -49,6 +49,21 @@
             &:hover {
                 opacity: 1;
                 background: rgba(170,170,170,.2);
+            }
+
+            &.nav-link-profile {
+                height: 50.67px;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+        
+                .avatar {
+                    height: 30px;
+                    width: auto;
+                    border-radius: 99px;
+                }
             }
         }
     }

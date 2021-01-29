@@ -9,3 +9,16 @@ function getTile( $flight ) {
     </a>
     <?php
 }
+
+function getChannelTile($flight, $channelMilestonePlatform) {
+    ?>
+    <a
+        href="<?php echo '/milestones/'.$flight->milestone.'/'.$channelMilestonePlatform->channelPlatform->platform->slug ?>"
+        class="tile <?php echo $flight->class ?> <?php echo $channelMilestonePlatform->active === "0" ? 'channel-inactive' : '' ?>"
+    >
+        <span class="ring"><?php echo $channelMilestonePlatform->channelPlatform->name ?></span>
+        <span class="build"><?php echo $flight->build ?>.<?php echo $flight->delta ?></span>
+        <span class="date"><?php echo $flight->format ?></span>
+    </a>
+    <?php
+}

@@ -4,15 +4,39 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Milestone extends Model
+class Milestone extends Model implements Searchable
 {
     protected $table = 'milestones';
     public $incrementing = false;
 
     protected $dates = ['created_at', 'updated_at', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol'];
 
-    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol', 'isLts', 'pcFast', 'pcSlow', 'pcReleasePreview', 'pcTargeted', 'pcBroad', 'pcLTS', 'xboxSkip', 'xboxFast', 'xboxSlow', 'xboxPreview', 'xboxReleasePreview', 'xboxTargeted', 'serverSlow', 'serverTargeted', 'serverLTS', 'iotSlow', 'iotTargeted', 'iotBroad', 'teamTargeted', 'teamBroad', 'holographicFast', 'holographicSlow', 'holographicTargeted', 'holographicBroad', 'holographicLTS', 'tenXSlow', 'sdk', 'iso'];
+    protected $fillable = ['id', 'osname', 'name', 'codename', 'version', 'color', 'start_build', 'preview', 'public', 'mainEol', 'mainXol', 'ltsEol'];
+
+    public function releases() {
+        return $this->hasMany(Release::class, 'milestone');
+    }
+
+    public function milestonePlatforms() {
+        return $this->hasMany(MilestonePlatform::class);
+    }
+
+    public function getBgColorAttribute() {
+        return 'background-color: #'.$this->color;
+    }
+
+    public function getSearchResult(): SearchResult {
+        $url = route('admin.milestones.edit', $this);
+
+        return new SearchResult(
+            $this,
+            $this->version,
+            $url
+        );
+    }
 
     public function getSupport() {
         $now = Carbon::now();
@@ -79,100 +103,5 @@ class Milestone extends Model
         } else {
             return false;
         }
-    }
-
-    public function getFlights() {
-        return array(
-            'pc' => array(
-                'skip' => -1,
-                'fast' => $this->pcFast,
-                'slow' => $this->pcSlow,
-                'preview' => -1,
-                'release' => $this->pcReleasePreview,
-                'targeted' => $this->pcTargeted,
-                'broad' => $this->pcBroad,
-                'ltsc' => $this->pcLTS
-            ),
-            'xbox' => array(
-                'skip' => $this->xboxSkip,
-                'fast' => $this->xboxFast,
-                'slow' => $this->xboxSlow,
-                'preview' => $this->xboxPreview,
-                'release' => $this->xboxReleasePreview,
-                'targeted' => $this->xboxTargeted,
-                'broad' => -1,
-                'ltsc' => -1
-            ),
-            'server' => array(
-                'skip' => -1,
-                'fast' => -1,
-                'slow' => $this->serverSlow,
-                'preview' => -1,
-                'release' => -1,
-                'targeted' => $this->serverTargeted,
-                'broad' => -1,
-                'ltsc' => $this->serverLTS
-            ),
-            'tenx' => array(
-                'skip' => -1,
-                'fast' => -1,
-                'slow' => $this->tenXSlow,
-                'preview' => -1,
-                'release' => -1,
-                'targeted' => -1,
-                'broad' => -1,
-                'ltsc' => -1
-            ),
-            'holographic' => array(
-                'skip' => -1,
-                'fast' => $this->holographicFast,
-                'slow' => $this->holographicSlow,
-                'preview' => -1,
-                'release' => -1,
-                'targeted' => $this->holographicTargeted,
-                'broad' => $this->holographicBroad,
-                'ltsc' => $this->holographicLTS
-            ),
-            'iot' => array(
-                'skip' => -1,
-                'fast' => -1,
-                'slow' => $this->iotSlow,
-                'preview' => -1,
-                'release' => -1,
-                'targeted' => $this->iotTargeted,
-                'broad' => $this->iotBroad,
-                'ltsc' => -1
-            ),
-            'team' => array(
-                'skip' => -1,
-                'fast' => $this->teamFast,
-                'slow' => $this->teamSlow,
-                'preview' => -1,
-                'release' => -1,
-                'targeted' => $this->teamTargeted,
-                'broad' => $this->teamBroad,
-                'ltsc' => -1
-            ),
-            'sdk' => array(
-                'skip' => -1,
-                'fast' => -1,
-                'slow' => -1,
-                'preview' => -1,
-                'release' => -1,
-                'targeted' => $this->sdk,
-                'broad' => -1,
-                'ltsc' => -1
-            ),
-            'iso' => array(
-                'skip' => -1,
-                'fast' => -1,
-                'slow' => -1,
-                'preview' => -1,
-                'release' => -1,
-                'targeted' => $this->iso,
-                'broad' => -1,
-                'ltsc' => -1
-            )
-        );
     }
 }
